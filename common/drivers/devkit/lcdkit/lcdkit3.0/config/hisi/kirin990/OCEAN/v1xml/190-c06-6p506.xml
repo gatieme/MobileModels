@@ -1,0 +1,11 @@
+<hwlcd>
+	<PanelEntry>
+		<!--Fps fuction-->
+		<PanelFpsUpdtSupport>1</PanelFpsUpdtSupport>
+		<PanelFpsNeedUpdateOn>1</PanelFpsNeedUpdateOn>
+		<!--AodLcdDetectTpye:0-need config compatible in sensorhub, 1: no need coonfig compatible-->
+		<AodLcdDetectTpye>1</AodLcdDetectTpye>
+		<AodExpIcRegValue>0x9C</AodExpIcRegValue>
+		<AodIcRegValueMask>0xFF</AodIcRegValueMask>
+	</PanelEntry>
+</hwlcd>

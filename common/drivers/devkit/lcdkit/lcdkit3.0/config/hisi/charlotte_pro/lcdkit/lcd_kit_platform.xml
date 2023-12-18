@@ -1,0 +1,96 @@
+<hwlcd>
+	<Version>1.1</Version>
+
+	<!-- any supported lcd Panel, add it here! very important -->
+	<lcdlist>
+		<!-- format: -->
+		<!-- panel-name, gpio, brdid(product_id), product_name, product_floder, version_floder -->
+		<!-- panel-name : must same with panel xml file name 								                   -->
+		<!-- product & version folder: must same with the folder name or 'def'   	             -->
+
+		<lcd>auo-otm1901a-5p2-1080p-video-default,          0x0A,   0,      DEFAULT,   DEFAULT,   def     </lcd>
+	</lcdlist>
+
+	<PanelEntry>
+		<!-- Panel information config start -->
+		<!-- panel orietation -->
+		<PanelOrientation>1</PanelOrientation>
+		<!--panel bpp:0-rgb888, 1-rgb1010101, 2-rgb565-->
+		<PanelBpp>0</PanelBpp>
+		<!--panel rgb order:0-rgb, 1-bgr-->
+		<PanelBgrfmt>0</PanelBgrfmt>
+
+		<!--Mipi config start-->
+		<MipiDsiVersion>0</MipiDsiVersion>
+		<!--Mipi lane number:c-phy:0-1port, 1-2port, 2-3port d-phy:0-1lane, 1-2lane, 2-3lane, 3-4lane-->
+		<MipiLaneNums>3</MipiLaneNums>
+		<!--Mipi color mode:0-16bit_1, 1-16bit_2, 2-16bit_3, 3-18bit_1, 4-18bit_2, 5-24bit_1, 6-24bit_2, 7-24bit_3-->
+		<MipiColorMode>5</MipiColorMode>
+		<!--Mipi virtual channel-->
+		<MipiVc>0</MipiVc>
+		<!--Mipi burst mode:0-non burst sync pulse, 1-non burst sync event, 2-burst sync pulse1, 3-burst sync pulse2-->
+		<MipiBurstMode>2</MipiBurstMode>
+		<!--Mipi escape mode clock-->
+		<MipiMaxTxEscClk>10</MipiMaxTxEscClk>
+		<!--Mipi non continue enable:0-continue mode, 1-non continue mode-->
+		<MipiNonContinueEnable>1</MipiNonContinueEnable>
+		<!--Check panel power status test support-->
+		<PanelCheckRegSupport>0</PanelCheckRegSupport>
+		<PanelCheckRegOnSupport>1</PanelCheckRegOnSupport>
+		<PanelCheckRegOnSupportDsmReport>0</PanelCheckRegOnSupportDsmReport>
+		<PanelCheckRegOffSupport>1</PanelCheckRegOffSupport>
+		<PanelCheckRegOffSupportDsmReport>0</PanelCheckRegOffSupportDsmReport>
+		<!-- for mipi check reg on -->
+		<PanelCheckRegOnCommand>"0x06, 0x01, 0x00, 0x00, 0x0a, 0x00, 0x01, 0x0a"</PanelCheckRegOnCommand>
+		<PanelCheckRegOnValue>"0x9c"</PanelCheckRegOnValue>
+		<!-- for mipi check reg off -->
+		<PanelCheckRegOffCommand>"0x06, 0x01, 0x00, 0x00, 0x0a, 0x00, 0x01, 0x0a"</PanelCheckRegOffCommand>
+		<PanelCheckRegOffValue>"0x08"</PanelCheckRegOffValue>
+		<!-- for support safe frame info -->
+		<PanelSafeFrameInfo>"120, 90, 60, 30, 10, 1"</PanelSafeFrameInfo>
+		<!--Power timming config start-->
+		<!--event define
+		mode, number, amplitude
+		mode:0-none, 1-regulator, 2-gpio
+		number:gpio num or ldo num
+		amplitude:3100000-3.1v, 1850000-1.85v, 5500000-5.5v
+		-->
+		<LcdVci>"1, 0, 0"</LcdVci>
+		<LcdIovcc>"1, 0, 0"</LcdIovcc>
+		<LcdVdd>"1, 0, 0"</LcdVdd>
+		<LcdVsp>"2, 0, 5500000"</LcdVsp>
+		<LcdVsn>"2, 0, 5500000"</LcdVsn>
+		<LcdReset>"2, 0, 0"</LcdReset>
+		<TpReset>"2, 0, 0"</TpReset>
+		<LcdTe0>"2, 0, 0"</LcdTe0>
+		<LcdBacklight>"2, 0, 0"</LcdBacklight>
+		<LcdAod>"2, 0, 0"</LcdAod>
+		<LcdMipiSwitch>"2, 0, 0"</LcdMipiSwitch>
+		<LdiDpi01SetChange>0</LdiDpi01SetChange>
+		<PxlClkToPll2>0</PxlClkToPll2>
+		<PxlClkToPll0>0</PxlClkToPll0>
+		<!--Power off performance optimize-->
+		<PwrOffTimeOptimizeSupport>0</PwrOffTimeOptimizeSupport>
+		<PwrOffTimeWorkDelay>120</PwrOffTimeWorkDelay>
+		<!--event send
+		event, data, delay/sync, no-sync
+		event:0-NONE, 1-VCI, 2-IOVCC, 3-VSP, 4-VSN, 5-RESET, 6-MIPI init code, 7-TS early-event, 8-TS later-event, 9-vdd
+		data:0-power off, 1-power on
+		delay:ms/TS:0-no-sync 1-sync
+		-->
+		<!--Power on timming-->
+		<PowerOnStage>"3, 1, 0
+				4, 1, 0"</PowerOnStage>
+		<LPOnStage>"0, 0, 0"</LPOnStage>
+		<HSOnStage>"0, 0, 0"</HSOnStage>
+
+		<!--Power off timming-->
+		<HSOffStage>"0, 0, 0"</HSOffStage>
+		<LPOffStage>"0, 0, 0"</LPOffStage>
+		<PowerOffStage>"4, 0, 0
+				3, 0, 0"</PowerOffStage>
+		<!--Power timming config end-->
+		<!--support aod ltpo-->
+		<LtpoAodSupport>1</LtpoAodSupport>
+	</PanelEntry>
+</hwlcd>

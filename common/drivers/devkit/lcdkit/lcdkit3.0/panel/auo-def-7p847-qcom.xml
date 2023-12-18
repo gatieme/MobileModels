@@ -1,0 +1,17 @@
+<hwlcd>
+<PanelEntry>
+	<PanelCompatible>"auo_def_7p847"</PanelCompatible>
+	<PanelName>"auo_def_ALTA 7'847 CMD 2496 x 2224"</PanelName>
+	<!--lcdtype: amoled_2, lcd_1-->
+	<PanelType>0x02</PanelType>
+
+	<!-- Panel Command information -->
+	<PanelOnCommand0>""</PanelOnCommand0>
+	<PanelOnCommandState0>"dsi_lp_mode"</PanelOnCommandState0>
+	<PanelOffCommand0>""</PanelOffCommand0>
+	<PanelOffCommandState0>"dsi_lp_mode"</PanelOffCommandState0>
+
+	<DCSBacklightCommand>""</DCSBacklightCommand>
+	<DCSBacklightCommandState>"dsi_lp_mode"</DCSBacklightCommandState>
+</PanelEntry>
+</hwlcd>

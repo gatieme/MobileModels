@@ -1,0 +1,361 @@
+<hwlcd>
+	<Version>1.1</Version>
+
+	<!-- any supported lcd Panel, add it here! very important -->
+	<lcdlist>
+		<!-- format: -->
+		<!-- panel-name, gpio, brdid(product_id), product_name, product_floder, version_floder -->
+		<!-- panel-name : must same with panel xml file name 								                   -->
+		<!-- product & version folder: must same with the folder name or 'def'   	             -->
+
+		<lcd>auo-otm1901a-5p2-1080p-video-default,          0x0A,   0,      DEFAULT,   DEFAULT,   def     </lcd>
+		<lcd>190-c07-7p847-udp,                             0x00,   1000,   UDP,     UDP,     def     </lcd>
+		<lcd>190-c07-6p39-udp,                              0x01,   1000,   UDP,     UDP,     def     </lcd>
+		<lcd>190-c07-7p847,                                 0x00,   2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-c07-7p847,                                 0x01,   2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-c07-7p847,                                 0x02,   2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-c07-7p847,                                 0x03,   2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-7p847,                                 0x04,   2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-c07-7p847,                                 0x05,   2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-c07-7p847,                                 0x06,   2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-c07-7p847,                                 0x07,   2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-c07-7p847,                                 0x08,   2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-c07-7p847,                                 0x09,   2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-c07-7p847,                                 0x0A,   2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-h01-7p847,                                 0x10,   2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-c07-1-7p847,                               0x40,   2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-1-7p847,                               0x44,   2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-c07-7p847,                                 0x80,   2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-h01-1-7p847,                               0x90,   2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-h01-1-7p847,                               0x50,   2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-h01-1-7p847,                               0x90,   3000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-h01-1-7p847,                               0x50,   3000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-7p847,                                 0x84,   2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-c07-6p39,                                  0x100,  2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-6p39,                                  0x101,  2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-6p39,                                  0x102,  2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-6p39,                                  0x103,  2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-6p39,                                  0x104,  2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-6p39,                                  0x105,  2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-6p39,                                  0x106,  2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-6p39,                                  0x107,  2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-6p39,                                  0x108,  2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-6p39,                                  0x109,  2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-6p39,                                  0x10A,  2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-6p39,                                  0x10B,  2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-6p39,                                  0x10C,  2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-6p39,                                  0x10D,  2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-6p39,                                  0x10E,  2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-6p39,                                  0x10F,  2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-6p39,                                  0x110,  2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-h02-6p39,                                  0x111,  2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-6p39,                                  0x112,  2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-6p39,                                  0x113,  2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-6p39,                                  0x114,  2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>auo-6p39-default,                              0x115,  2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-c07-1-7p847,                               0x00,   3000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-h01-7p847,                                 0x10,   3000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-1-7p847,                               0x04,   3000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-c07-1-7p847,                               0x40,   3000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-1-7p847,                               0x44,   3000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-c07-1-7p847,                               0x80,   3000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-1-7p847,                               0x84,   3000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-h01-7p847,                                 0x90,   3000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-c07-6p39,                                  0x100,  3000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-6p39,                                  0x101,  3000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-6p39,                                  0x102,  3000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-6p39,                                  0x103,  3000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-6p39,                                  0x104,  3000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-6p39,                                  0x105,  3000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-6p39,                                  0x106,  3000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-6p39,                                  0x107,  3000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-6p39,                                  0x108,  3000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-6p39,                                  0x109,  3000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-6p39,                                  0x10A,  3000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-6p39,                                  0x10B,  3000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-6p39,                                  0x10C,  3000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-6p39,                                  0x10D,  3000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-6p39,                                  0x10E,  3000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-6p39,                                  0x10F,  3000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-6p39,                                  0x110,  3000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-h02-6p39,                                  0x111,  3000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-6p39,                                  0x112,  3000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-6p39,                                  0x113,  3000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-6p39,                                  0x114,  3000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>auo-6p39-default,                              0x115,  3000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-c09-7p847,                                 0x14,   2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-c09-1-7p847,                               0x54,   2000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-c09-7p847,                                 0x14,   3000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-c09-1-7p847,                               0x54,   3000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>auo-7p847-default,                             0xA0,   3000,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-c07-7p847,                                 0x00,   3001,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-7p847,                                 0x04,   3001,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-c09-7p847,                                 0x14,   3001,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-c07-7p847,                                 0x15,   3001,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-c07-1-7p847,                               0x40,   3001,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-1-7p847,                               0x44,   3001,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-c09-1-7p847,                               0x54,   3001,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-c07-1-7p847,                               0x55,   3001,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-c07-1-6p39,                                0x100,  3001,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-1-6p39,                                0x104,  3001,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-h02-1-6p39,                                0x111,  3001,   ALTB,    ALTB,    def     </lcd>
+		<lcd>auo-6p39-default,                              0x115,  3001,   ALTB,    ALTB,    def     </lcd>
+		<lcd>auo-7p847-default,                             0xA0,   3001,   ALTB,    ALTB,    def     </lcd>
+		<!-- add Alta-B VN1 begin -->
+		<lcd>190-c07-7p847,                                 0x00,   3002,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-c07-1-7p847,                               0x40,   3002,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-7p847,                                 0x04,   3002,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-1-7p847,                               0x44,   3002,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-c09-vn1-7p847,                             0x14,   3002,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-c09-vn1-1-7p847,                           0x54,   3002,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-c07-1-6p39,                                0x100,  3002,   ALTB,    ALTB,    def     </lcd>
+		<lcd>310-c07-1-6p39,                                0x104,  3002,   ALTB,    ALTB,    def     </lcd>
+		<lcd>190-h02-1-6p39,                                0x111,  3002,   ALTB,    ALTB,    def     </lcd>
+		<lcd>auo-6p39-default,                              0x115,  3002,   ALTB,    ALTB,    def     </lcd>
+		<lcd>auo-7p847-default,                             0x15,   3002,   ALTB,    ALTB,    def     </lcd>
+		<lcd>auo-7p847-default,                             0x55,   3002,   ALTB,    ALTB,    def     </lcd>
+		<lcd>auo-7p847-default,                             0xA0,   3002,   ALTB,    ALTB,    def     </lcd>
+		<!-- add Alta-B VN1 end -->
+		<lcd>190-c08-6p69,                                  0x00,   4000,   BRA,    BRA,    def     </lcd>
+		<lcd>190-h00-6p74,                                  0x01,   4000,   BRA,    BRA,    def     </lcd>
+		<lcd>190-h00-6p74,                                  0x02,   4000,   BRA,    BRA,    def     </lcd>
+		<lcd>190-h00-6p74,                                  0x03,   4000,   BRA,    BRA,    def     </lcd>
+		<lcd>310-c08-6p69,                                  0x04,   4000,   BRA,    BRA,    def     </lcd>
+		<lcd>190-h00-6p74,                                  0x05,   4000,   BRA,    BRA,    def     </lcd>
+		<lcd>310-h01-6p69,                                  0x06,   4000,   BRA,    BRA,    def     </lcd>
+		<lcd>190-h00-6p74,                                  0x07,   4000,   BRA,    BRA,    def     </lcd>
+		<lcd>190-h01-6p69,                                  0x08,   4000,   BRA,    BRA,    def     </lcd>
+		<lcd>190-h00-6p74,                                  0x09,   4000,   BRA,    BRA,    def     </lcd>
+		<lcd>auo-6p69-default,                              0x0A,   4000,   BRA,    BRA,    def     </lcd>
+		<lcd>190-h00-6p74,                                  0x0B,   4000,   BRA,    BRA,    def     </lcd>
+		<lcd>190-h00-6p74,                                  0x0C,   4000,   BRA,    BRA,    def     </lcd>
+		<lcd>190-h00-6p74,                                  0x0D,   4000,   BRA,    BRA,    def     </lcd>
+		<lcd>190-c08-1-6p69,                                0x00,   4100,   BRA,    BRA,    def     </lcd>
+		<lcd>190-h01-1-6p69,                                0x01,   4100,   BRA,    BRA,    def     </lcd>
+		<lcd>190-h01-1-6p69,                                0x02,   4100,   BRA,    BRA,    def     </lcd>
+		<lcd>190-h01-1-6p69,                                0x03,   4100,   BRA,    BRA,    def     </lcd>
+		<lcd>310-c08-1-6p69,                                0x04,   4100,   BRA,    BRA,    def     </lcd>
+		<lcd>190-h01-1-6p69,                                0x05,   4100,   BRA,    BRA,    def     </lcd>
+		<lcd>310-h01-1-6p69,                                0x06,   4100,   BRA,    BRA,    def     </lcd>
+		<lcd>190-h01-1-6p69,                                0x07,   4100,   BRA,    BRA,    def     </lcd>
+		<lcd>190-h01-1-6p69,                                0x08,   4100,   BRA,    BRA,    def     </lcd>
+		<lcd>190-h01-1-6p69,                                0x09,   4100,   BRA,    BRA,    def     </lcd>
+		<lcd>auo-6p69-default,                              0x0A,   4100,   BRA,    BRA,    def     </lcd>
+		<lcd>190-h01-1-6p69,                                0x0B,   4100,   BRA,    BRA,    def     </lcd>
+		<lcd>190-h01-1-6p69,                                0x0C,   4100,   BRA,    BRA,    def     </lcd>
+		<lcd>190-h01-1-6p69,                                0x0D,   4100,   BRA,    BRA,    def     </lcd>
+		<lcd>190-c08-2-6p69,                                0x00,   4200,   BRA,    BRA,    def     </lcd>
+		<lcd>190-h01-2-6p69,                                0x01,   4200,   BRA,    BRA,    def     </lcd>
+		<lcd>190-h01-2-6p69,                                0x02,   4200,   BRA,    BRA,    def     </lcd>
+		<lcd>190-h01-2-6p69,                                0x03,   4200,   BRA,    BRA,    def     </lcd>
+		<lcd>310-c08-2-6p69,                                0x04,   4200,   BRA,    BRA,    def     </lcd>
+		<lcd>190-h01-2-6p69,                                0x05,   4200,   BRA,    BRA,    def     </lcd>
+		<lcd>310-h01-2-6p69,                                0x06,   4200,   BRA,    BRA,    def     </lcd>
+		<lcd>190-h01-2-6p69,                                0x07,   4200,   BRA,    BRA,    def     </lcd>
+		<lcd>190-h01-2-6p69,                                0x08,   4200,   BRA,    BRA,    def     </lcd>
+		<lcd>190-h01-2-6p69,                                0x09,   4200,   BRA,    BRA,    def     </lcd>
+		<lcd>auo-6p69-default,                              0x0A,   4200,   BRA,    BRA,    def     </lcd>
+		<lcd>190-h01-2-6p69,                                0x0B,   4200,   BRA,    BRA,    def     </lcd>
+		<lcd>190-h01-2-6p69,                                0x0C,   4200,   BRA,    BRA,    def     </lcd>
+		<lcd>190-h01-2-6p69,                                0x0D,   4200,   BRA,    BRA,    def     </lcd>
+		<lcd>190-c08-6p82,                                  0x00,   5000,   ALN,    ALN,    def     </lcd>
+		<lcd>190-h00-1-6p74,                                0x01,   5000,   ALN,    ALN,    def     </lcd>
+		<lcd>190-h00-1-6p74,                                0x02,   5000,   ALN,    ALN,    def     </lcd>
+		<lcd>190-h00-1-6p74,                                0x03,   5000,   ALN,    ALN,    def     </lcd>
+		<lcd>310-c08-6p82,                                  0x04,   5000,   ALN,    ALN,    def     </lcd>
+		<lcd>190-h00-1-6p74,                                0x05,   5000,   ALN,    ALN,    def     </lcd>
+		<lcd>310-h01-6p82,                                  0x06,   5000,   ALN,    ALN,    def     </lcd>
+		<lcd>190-h00-1-6p74,                                0x07,   5000,   ALN,    ALN,    def     </lcd>
+		<lcd>190-h01-6p82,                                  0x08,   5000,   ALN,    ALN,    def     </lcd>
+		<lcd>190-h00-1-6p74,                                0x09,   5000,   ALN,    ALN,    def     </lcd>
+		<lcd>auo-6p82-default,                              0x0A,   5000,   ALN,    ALN,    def     </lcd>
+		<lcd>190-h00-1-6p74,                                0x0B,   5000,   ALN,    ALN,    def     </lcd>
+		<lcd>190-h00-1-6p74,                                0x0C,   5000,   ALN,    ALN,    def     </lcd>
+		<lcd>190-h00-1-6p74,                                0x0D,   5000,   ALN,    ALN,    def     </lcd>
+		<lcd>190-c08-1-6p82,                                0x00,   5100,   ALN,    ALN,    def     </lcd>
+		<lcd>190-h01-1-6p82,                                0x01,   5100,   ALN,    ALN,    def     </lcd>
+		<lcd>190-h01-1-6p82,                                0x02,   5100,   ALN,    ALN,    def     </lcd>
+		<lcd>190-h01-1-6p82,                                0x03,   5100,   ALN,    ALN,    def     </lcd>
+		<lcd>310-c08-1-6p82,                                0x04,   5100,   ALN,    ALN,    def     </lcd>
+		<lcd>190-h01-1-6p82,                                0x05,   5100,   ALN,    ALN,    def     </lcd>
+		<lcd>310-h01-1-6p82,                                0x06,   5100,   ALN,    ALN,    def     </lcd>
+		<lcd>190-h01-1-6p82,                                0x07,   5100,   ALN,    ALN,    def     </lcd>
+		<lcd>190-h01-1-6p82,                                0x08,   5100,   ALN,    ALN,    def     </lcd>
+		<lcd>190-h01-1-6p82,                                0x09,   5100,   ALN,    ALN,    def     </lcd>
+		<lcd>auo-6p82-default,                              0x0A,   5100,   ALN,    ALN,    def     </lcd>
+		<lcd>190-h01-1-6p82,                                0x0B,   5100,   ALN,    ALN,    def     </lcd>
+		<lcd>190-h01-1-6p82,                                0x0C,   5100,   ALN,    ALN,    def     </lcd>
+		<lcd>190-h01-1-6p82,                                0x0D,   5100,   ALN,    ALN,    def     </lcd>
+		<lcd>190-c08-2-6p82,                                0x00,   5200,   ALN,    ALN,    def     </lcd>
+		<lcd>190-h01-2-6p82,                                0x01,   5200,   ALN,    ALN,    def     </lcd>
+		<lcd>190-h01-2-6p82,                                0x02,   5200,   ALN,    ALN,    def     </lcd>
+		<lcd>190-h01-2-6p82,                                0x03,   5200,   ALN,    ALN,    def     </lcd>
+		<lcd>310-c08-2-6p82,                                0x04,   5200,   ALN,    ALN,    def     </lcd>
+		<lcd>190-h01-2-6p82,                                0x05,   5200,   ALN,    ALN,    def     </lcd>
+		<lcd>310-h01-2-6p82,                                0x06,   5200,   ALN,    ALN,    def     </lcd>
+		<lcd>190-h01-2-6p82,                                0x07,   5200,   ALN,    ALN,    def     </lcd>
+		<lcd>190-h01-2-6p82,                                0x08,   5200,   ALN,    ALN,    def     </lcd>
+		<lcd>190-h01-2-6p82,                                0x09,   5200,   ALN,    ALN,    def     </lcd>
+		<lcd>auo-6p82-default,                              0x0A,   5200,   ALN,    ALN,    def     </lcd>
+		<lcd>190-h01-2-6p82,                                0x0B,   5200,   ALN,    ALN,    def     </lcd>
+		<lcd>190-h01-2-6p82,                                0x0C,   5200,   ALN,    ALN,    def     </lcd>
+		<lcd>190-h01-2-6p82,                                0x0D,   5200,   ALN,    ALN,    def     </lcd>
+		<lcd>190-h01-13p2,                                  0x01,   6000,   PCE,    PCE,    def     </lcd>
+		<lcd>310-h01-13p2,                                  0x00,   6000,   PCE,    PCE,    def     </lcd>
+		<lcd>auo-13p2-default,                              0x0A,   6000,   PCE,    PCE,    def     </lcd>
+		<lcd>190-h01-1-13p2,                                0x01,   6100,   PCE,    PCE,    def     </lcd>
+		<lcd>310-h01-1-13p2,                                0x00,   6100,   PCE,    PCE,    def     </lcd>
+		<lcd>auo-13p2-default,                              0x0A,   6100,   PCE,    PCE,    def     </lcd>
+		<lcd>190-c08-6p94,                                  0x00,   7000,   LEM,    LEM,    def     </lcd>
+		<lcd>190-h02-6p94,                                  0x01,   7000,   LEM,    LEM,    def     </lcd>
+		<lcd>310-h02-6p94,                                  0x02,   7000,   LEM,    LEM,    def     </lcd>
+		<lcd>auo-def-6p94,                                  0x03,   7000,   LEM,    LEM,    def     </lcd>
+		<lcd>192-c08-6p94,                                  0x04,   7000,   LEM,    LEM,    def     </lcd>
+		<lcd>192-h02-6p94,                                  0x05,   7000,   LEM,    LEM,    def     </lcd>
+		<lcd>auo-def-6p94,                                  0x06,   7000,   LEM,    LEM,    def     </lcd>
+		<lcd>auo-def-6p94,                                  0x07,   7000,   LEM,    LEM,    def     </lcd>
+		<lcd>310-c08-6p94,                                  0x08,   7000,   LEM,    LEM,    def     </lcd>
+		<lcd>auo-def-6p94,                                  0x09,   7000,   LEM,    LEM,    def     </lcd>
+		<lcd>auo-def-6p94,                                  0x0A,   7000,   LEM,    LEM,    def     </lcd>
+		<lcd>190-c10-1p15,                                  0x10,   7000,   LEM,    LEM,    def     </lcd>
+		<lcd>auo-def-1p15,                                  0x11,   7000,   LEM,    LEM,    def     </lcd>
+		<lcd>auo-def-1p15,                                  0x12,   7000,   LEM,    LEM,    def     </lcd>
+		<lcd>auo-def-1p15,                                  0x13,   7000,   LEM,    LEM,    def     </lcd>
+		<lcd>310-c10-1p15,                                  0x14,   7000,   LEM,    LEM,    def     </lcd>
+		<lcd>auo-def-1p15,                                  0x15,   7000,   LEM,    LEM,    def     </lcd>
+		<lcd>auo-def-1p15,                                  0x16,   7000,   LEM,    LEM,    def     </lcd>
+		<lcd>auo-def-1p15,                                  0x17,   7000,   LEM,    LEM,    def     </lcd>
+		<lcd>auo-def-1p15,                                  0x18,   7000,   LEM,    LEM,    def     </lcd>
+		<lcd>auo-def-1p15,                                  0x19,   7000,   LEM,    LEM,    def     </lcd>
+		<lcd>auo-def-1p15,                                  0x1A,   7000,   LEM,    LEM,    def     </lcd>
+		<lcd>190-c08-1-6p94,                                0x00,   7100,   LEM,    LEM,    def     </lcd>
+		<lcd>190-h02-1-6p94,                                0x01,   7100,   LEM,    LEM,    def     </lcd>
+		<lcd>310-h02-1-6p94,                                0x02,   7100,   LEM,    LEM,    def     </lcd>
+		<lcd>auo-def-6p94,                                  0x03,   7100,   LEM,    LEM,    def     </lcd>
+		<lcd>192-c08-1-6p94,                                0x04,   7100,   LEM,    LEM,    def     </lcd>
+		<lcd>192-h02-1-6p94,                                0x05,   7100,   LEM,    LEM,    def     </lcd>
+		<lcd>auo-def-6p94,                                  0x06,   7100,   LEM,    LEM,    def     </lcd>
+		<lcd>auo-def-6p94,                                  0x07,   7100,   LEM,    LEM,    def     </lcd>
+		<lcd>310-c08-1-6p94,                                0x08,   7100,   LEM,    LEM,    def     </lcd>
+		<lcd>auo-def-6p94,                                  0x09,   7100,   LEM,    LEM,    def     </lcd>
+		<lcd>auo-def-6p94,                                  0x0A,   7100,   LEM,    LEM,    def     </lcd>
+		<lcd>190-c10-1-1p15,                                0x10,   7100,   LEM,    LEM,    def     </lcd>
+		<lcd>auo-def-1p15,                                  0x11,   7100,   LEM,    LEM,    def     </lcd>
+		<lcd>auo-def-1p15,                                  0x12,   7100,   LEM,    LEM,    def     </lcd>
+		<lcd>auo-def-1p15,                                  0x13,   7100,   LEM,    LEM,    def     </lcd>
+		<lcd>310-c10-1-1p15,                                0x14,   7100,   LEM,    LEM,    def     </lcd>
+		<lcd>auo-def-1p15,                                  0x15,   7100,   LEM,    LEM,    def     </lcd>
+		<lcd>auo-def-1p15,                                  0x16,   7100,   LEM,    LEM,    def     </lcd>
+		<lcd>auo-def-1p15,                                  0x17,   7100,   LEM,    LEM,    def     </lcd>
+		<lcd>auo-def-1p15,                                  0x18,   7100,   LEM,    LEM,    def     </lcd>
+		<lcd>auo-def-1p15,                                  0x19,   7100,   LEM,    LEM,    def     </lcd>
+		<lcd>auo-def-1p15,                                  0x1A,   7100,   LEM,    LEM,    def     </lcd>
+		<lcd>auo-10p2-default,                              0x02,   8000,   GRL,    GRL,    def     </lcd>
+		<lcd>auo-10p2-default,                              0x03,   8000,   GRL,    GRL,    def     </lcd>
+		<lcd>auo-10p2-default,                              0x04,   8000,   GRL,    GRL,    def     </lcd>
+		<lcd>auo-10p2-default,                              0x05,   8000,   GRL,    GRL,    def     </lcd>
+		<lcd>auo-10p2-default,                              0x06,   8000,   GRL,    GRL,    def     </lcd>
+		<lcd>auo-10p2-default,                              0x07,   8000,   GRL,    GRL,    def     </lcd>
+		<lcd>auo-10p2-default,                              0x08,   8000,   GRL,    GRL,    def     </lcd>
+		<lcd>auo-10p2-default,                              0x09,   8000,   GRL,    GRL,    def     </lcd>
+		<lcd>auo-10p2-default,                              0x0A,   8000,   GRL,    GRL,    def     </lcd>
+		<lcd>190-c08-10p2,                                  0x01,   8000,   GRL,    GRL,    def     </lcd>
+	</lcdlist>
+
+	<PanelEntry>
+		<!-- Panel information config start -->
+		<!-- panel orietation -->
+		<PanelOrientation>1</PanelOrientation>
+		<!--panel bpp:0-rgb888, 1-rgb1010101, 2-rgb565-->
+		<PanelBpp>0</PanelBpp>
+		<!--panel rgb order:0-rgb, 1-bgr-->
+		<PanelBgrfmt>0</PanelBgrfmt>
+
+		<!--Mipi config start-->
+		<MipiDsiVersion>0</MipiDsiVersion>
+		<!--Mipi lane number:c-phy:0-1port, 1-2port, 2-3port d-phy:0-1lane, 1-2lane, 2-3lane, 3-4lane-->
+		<MipiLaneNums>3</MipiLaneNums>
+		<!--Mipi color mode:0-16bit_1, 1-16bit_2, 2-16bit_3, 3-18bit_1, 4-18bit_2, 5-24bit_1, 6-24bit_2, 7-24bit_3-->
+		<MipiColorMode>5</MipiColorMode>
+		<!--Mipi virtual channel-->
+		<MipiVc>0</MipiVc>
+		<!--Mipi burst mode:0-non burst sync pulse, 1-non burst sync event, 2-burst sync pulse1, 3-burst sync pulse2-->
+		<MipiBurstMode>2</MipiBurstMode>
+		<!--Mipi escape mode clock-->
+		<MipiMaxTxEscClk>10</MipiMaxTxEscClk>
+		<!--Mipi non continue enable:0-continue mode, 1-non continue mode-->
+		<MipiNonContinueEnable>1</MipiNonContinueEnable>
+		<!--Check panel power status test support-->
+		<PanelCheckRegSupport>0</PanelCheckRegSupport>
+		<PanelCheckRegOnSupport>1</PanelCheckRegOnSupport>
+		<PanelCheckRegOnSupportDsmReport>0</PanelCheckRegOnSupportDsmReport>
+		<PanelCheckRegOffSupport>1</PanelCheckRegOffSupport>
+		<PanelCheckRegOffSupportDsmReport>0</PanelCheckRegOffSupportDsmReport>
+		<!-- for mipi check reg on -->
+		<PanelCheckRegOnCommand>"0x06, 0x01, 0x00, 0x00, 0x0a, 0x00, 0x01, 0x0a"</PanelCheckRegOnCommand>
+		<PanelCheckRegOnValue>"0x9c"</PanelCheckRegOnValue>
+		<!-- for mipi check reg off -->
+		<PanelCheckRegOffCommand>"0x06, 0x01, 0x00, 0x00, 0x0a, 0x00, 0x01, 0x0a"</PanelCheckRegOffCommand>
+		<PanelCheckRegOffValue>"0x08"</PanelCheckRegOffValue>
+		<!-- for support safe frame info -->
+		<PanelSafeFrameInfo>"120, 90, 60, 30, 10, 1"</PanelSafeFrameInfo>
+		<!--Power timming config start-->
+		<!--event define
+		mode, number, amplitude
+		mode:0-none, 1-regulator, 2-gpio
+		number:gpio num or ldo num
+		amplitude:3100000-3.1v, 1850000-1.85v, 5500000-5.5v
+		-->
+		<LcdVci>"1, 0, 0"</LcdVci>
+		<LcdIovcc>"1, 0, 0"</LcdIovcc>
+		<LcdVdd>"1, 0, 0"</LcdVdd>
+		<LcdVsp>"2, 0, 5500000"</LcdVsp>
+		<LcdVsn>"2, 0, 5500000"</LcdVsn>
+		<LcdReset>"2, 0, 0"</LcdReset>
+		<TpReset>"2, 0, 0"</TpReset>
+		<LcdTe0>"2, 0, 0"</LcdTe0>
+		<LcdBacklight>"2, 0, 0"</LcdBacklight>
+		<LcdAod>"2, 0, 0"</LcdAod>
+		<LcdMipiSwitch>"2, 0, 0"</LcdMipiSwitch>
+		<LdiDpi01SetChange>0</LdiDpi01SetChange>
+		<PxlClkToPll2>0</PxlClkToPll2>
+		<PxlClkToPll0>0</PxlClkToPll0>
+		<LcdPmicCtrl>"1, 0, 0"</LcdPmicCtrl>
+		<LcdPmicReset>"1, 0, 0"</LcdPmicReset>
+		<LcdPmicInit>"1, 0, 0"</LcdPmicInit>
+		<LcdBoostEnable>"1, 0, 0"</LcdBoostEnable>
+		<LcdBoostCtrl>"1, 0, 0"</LcdBoostCtrl>
+		<LcdBoostBypass>"1, 0, 0"</LcdBoostBypass>
+		<!--Power off performance optimize-->
+		<PwrOffTimeOptimizeSupport>0</PwrOffTimeOptimizeSupport>
+		<PwrOffTimeWorkDelay>120</PwrOffTimeWorkDelay>
+		<!--event send
+		event, data, delay/sync, no-sync
+		event:0-NONE, 1-VCI, 2-IOVCC, 3-VSP, 4-VSN, 5-RESET, 6-MIPI init code, 7-TS early-event, 8-TS later-event, 9-vdd
+		event:10-EVENT_AOD,11-EVENT_BIAS, 12-EVENT_AOD_MIPI, 13-EVENT_MIPI_SWITCH, 14-EVENT_AVDD_MIPI, 15-EVENT_2ND_POWER_OFF_TS, 16-EVENT_BLOCK_TS
+		event:17-EVENT_PMIC_CTRL, 18-EVENT_PMIC_RESET, 19-EVENT_PMIC_INIT, 21-EVENT_BOOST_ENABLE, 22-EVENT_BOOST_CTRL, 23-EVENT_BOOST_BYPASS
+		data:0-power off, 1-power on
+		delay:ms/TS:0-no-sync 1-sync
+		-->
+		<!--Power on timming-->
+		<PowerOnStage>"3, 1, 0
+				4, 1, 0"</PowerOnStage>
+		<LPOnStage>"0, 0, 0"</LPOnStage>
+		<HSOnStage>"0, 0, 0"</HSOnStage>
+
+		<!--Power off timming-->
+		<HSOffStage>"0, 0, 0"</HSOffStage>
+		<LPOffStage>"0, 0, 0"</LPOffStage>
+		<PowerOffStage>"4, 0, 0
+				3, 0, 0"</PowerOffStage>
+		<!--Power timming config end-->
+		<!--support aod ltpo-->
+		<LtpoAodSupport>1</LtpoAodSupport>
+		<!--sensorhub enter exit ulps-->
+		<SensorhubUlps>0</SensorhubUlps>
+		<!--Project id support-->
+		<PanelProjectIdSupport>0</PanelProjectIdSupport>
+		<!--Tp Project Id-->
+		<PanelDefaultTpProjectId>"P374B02900"</PanelDefaultTpProjectId>
+	</PanelEntry>
+</hwlcd>

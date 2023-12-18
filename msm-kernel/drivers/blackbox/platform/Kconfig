@@ -1,0 +1,7 @@
+# SPDX-License-Identifier: GPL-2.0
+config DFX_RAINBOW_HIMNTN
+	depends on BLACKBOX
+	default n
+		bool "rainbow_himntn"
+	help
+		rainbow himntn control kernel mntn.

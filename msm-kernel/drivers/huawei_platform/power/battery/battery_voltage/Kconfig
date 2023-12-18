@@ -1,0 +1,11 @@
+# SPDX-License-Identifier: GPL-2.0+
+#
+# battery voltage driver
+#
+
+config HUAWEI_BATTERY_VOLTAGE
+	bool "huawei BATTERY VOLTAGE"
+	default n
+	help
+	  Say Y here to enable battery voltage driver
+

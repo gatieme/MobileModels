@@ -1,0 +1,15 @@
+# SPDX-License-Identifier: GPL-2.0
+config HUAWEI_POWER_GLINK
+	tristate "huawei power glink"
+	depends on QTI_PMIC_GLINK
+	default n
+	help
+	  Say Y here to enable power glink driver.
+	  Say M here to compile the driver as a module.
+
+config HUAWEI_POWER_GLINK_INTERFACE
+	bool "huawei power glink interface"
+	default n
+	help
+	  Say Y here to enable power glink interface driver.
+

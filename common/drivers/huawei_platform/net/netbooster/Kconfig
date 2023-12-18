@@ -1,0 +1,16 @@
+config HW_NETBOOSTER_MODULE
+    tristate "netbooster:video acceleration and net ai change"
+    default n
+    help
+    This module adds netbooster kernel suport for kirin chipset.
+
+config APP_QOE_AI_PREDICT
+    tristate "hidata app qoe"
+    default n
+    help
+    This module add app qoe function suport for kirin chipset.
+config HW_BOOSTER_QCOM
+    tristate "booster_qcome:build for qcom platform"
+    default n
+    help
+    This module adds CONFIG_HW_BOOSTER_QCOM suport for kirin chipset.

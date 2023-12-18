@@ -1,0 +1,3 @@
+obj-$(CONFIG_SND_SOC_AW882XX) += aw882xx/
+obj-$(CONFIG_SND_SOC_CS35LXX) += cs35lxx/
+obj-$(CONFIG_SND_SOC_TFA98XX) += tfa98xx/

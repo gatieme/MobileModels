@@ -1,0 +1,7 @@
+<hwlcd>
+	<PanelEntry>
+	<PanelCompatible>"auo_otm1901a_5p2_1080p_video_default"</PanelCompatible>
+	<PanelXres>1872</PanelXres>
+	<PanelYres>1404</PanelYres>
+	</PanelEntry>
+</hwlcd>

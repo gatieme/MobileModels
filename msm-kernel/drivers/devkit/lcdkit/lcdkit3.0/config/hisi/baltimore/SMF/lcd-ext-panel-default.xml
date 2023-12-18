@@ -1,0 +1,12 @@
+<hwlcd>
+	<PanelEntry>
+	<PanelCompatible>"lcd_ext_panel_default"</PanelCompatible>
+	<!--Product type:0-normal type(1 panel), 1-folder type(2 panel) -->
+	<PanelXres>1188</PanelXres>
+	<PanelYres>2790</PanelYres>
+	<DualLcdSupport>1</DualLcdSupport>
+	<PanelCmdType>8</PanelCmdType>
+	<MipiDsiTeType>2</MipiDsiTeType>
+	<UseDsi1>1</UseDsi1>
+</PanelEntry>
+</hwlcd>

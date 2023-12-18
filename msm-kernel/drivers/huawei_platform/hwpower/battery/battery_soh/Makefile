@@ -1,0 +1,4 @@
+# SPDX-License-Identifier: GPL-2.0
+obj-$(CONFIG_HUAWEI_BATTERY_SOH) += battery_basp.o
+obj-$(CONFIG_HUAWEI_BATTERY_SOH) += battery_iscd.o
+obj-$(CONFIG_HUAWEI_BATTERY_SOH) += battery_iscd_algo.o

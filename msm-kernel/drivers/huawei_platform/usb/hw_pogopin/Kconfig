@@ -1,0 +1,16 @@
+#
+# huawei pogopin drivers
+#
+
+config POGO_PIN
+	bool "huawei pogopin support"
+	default n
+	help
+	  Say Y here to enable pogopin driver.
+
+
+config POGOPIN_EXTCON
+	bool "pogopin extcon support"
+	default n
+	help
+	  Say Y here to enable pogopin extcon driver.

@@ -1,0 +1,188 @@
+<hwlcd>
+	<PanelEntry>
+		<!--Panel type:dsi_video_mode-video mode, dsi_cmd_mode-command mode-->
+		<PanelTypeMode>"dsi_video_mode"</PanelTypeMode>
+		<PanelModeSwitch>0</PanelModeSwitch>
+		<!--active area size-->
+		<PanelPhyWidth>66</PanelPhyWidth>
+		<PanelPhyHeight>153</PanelPhyHeight>
+
+		<!--Dsi ctrl number:1-one dsi ctrl, 2-two dsi ctrl-->
+		<DsiCtrlNum>1</DsiCtrlNum>
+		<!--Dsi phy number:1-one dsi phy, 2-two dsi phy-->
+		<DsiPhyNum>1</DsiPhyNum>
+		<PanelSupplyEntries>"dsi_panel_pwr_supply_extvdd"</PanelSupplyEntries>
+
+		<!-- Lane Config -->
+		<PanelDSILaneMap>"lane_map_0123"</PanelDSILaneMap>
+		<PanelLane0State>1</PanelLane0State>
+		<PanelLane1State>1</PanelLane1State>
+		<PanelLane2State>0</PanelLane2State>
+		<PanelLane3State>0</PanelLane3State>
+
+		<!-- MIPI Host Config -->
+		<DsiSelectClocks>"pll_byte_clk1", "pll_dsi_clk1"</DsiSelectClocks>
+
+		<!-- Display dsi timming config -->
+		<DisplayDsiTimmingBegin>1</DisplayDsiTimmingBegin>
+		<DisplayDsiTimming0Begin>1</DisplayDsiTimming0Begin>
+		<DisplayDsiTimming0End>1</DisplayDsiTimming0End>
+		<DisplayDsiTimmingEnd>1</DisplayDsiTimmingEnd>
+
+		<!-- Display dsi timming0 config -->
+		<PanelXres0>1080</PanelXres0>
+		<PanelYres0>2504</PanelYres0>
+		<HFrontPorch0>32</HFrontPorch0>
+		<HBackPorch0>32</HBackPorch0>
+		<HPulseWidth0>32</HPulseWidth0>
+		<VFrontPorch0>16</VFrontPorch0>
+		<VBackPorch0>12</VBackPorch0>
+		<VPulseWidth0>4</VPulseWidth0>
+		<HSyncSkew0>0</HSyncSkew0>
+		<PanelFrameRate0>90</PanelFrameRate0>
+		<PanelPhyTimings0>"00 00 00 00 1F 1A 05
+			19 04 02 04 00 00 00"</PanelPhyTimings0>
+		<DisplayTopology0>1 0 1</DisplayTopology0>
+		<DefaultTopologyIndex0>0</DefaultTopologyIndex0>		
+
+		<!-- Backlight ctrl config -->
+		<BlPmicControlType>"bl_ctrl_external"</BlPmicControlType>
+		<MdssDsiBlMinLevel>1</MdssDsiBlMinLevel>
+		<MdssDsiBlMaxLevel>4095</MdssDsiBlMaxLevel>
+		<DsiPanelCphyMode>1</DsiPanelCphyMode>
+
+		<!--OemInfo support-->
+		<OemInfoSupport>0</OemInfoSupport>
+		<!--OemBarcode2DSupport support-->
+		<OemBarcode2DSupport>0</OemBarcode2DSupport>
+		<!--OemBarcode2DNumOffset-->
+		<OemBarcode2DNumOffset>0</OemBarcode2DNumOffset>
+		<!--sn code support-->
+		<PanelSnCodeSupport>0</PanelSnCodeSupport>
+
+		<!--Lcdkit fps support -->
+		<PanelFpsUpdtSupport>0</PanelFpsUpdtSupport>
+		<!--Lcdkit default fps -->
+		<PanelDefaultFps>90</PanelDefaultFps>
+		<!--Lcdkit fps support list -->
+		<PanelSupportFpsList>"90, 120"</PanelSupportFpsList>
+		<!--qcom fps config -->
+		<DsiPanelDynamicModeSwitchEnabled>0</DsiPanelDynamicModeSwitchEnabled>
+		<DsiPanelDynamicModeSwitchType>"dynamic-resolution-switch-immediate"</DsiPanelDynamicModeSwitchType>
+		<PanelFPS60CMD>""</PanelFPS60CMD>
+		<PanelFPS90CMD>"vndservice call display.qservice 25 i32 0 i32 0"</PanelFPS90CMD>
+		<PanelFPS120CMD>"vndservice call display.qservice 25 i32 1 i32 0"</PanelFPS120CMD>
+
+		<!--bl min brightness setting-->
+		<PanelBlmin>3</PanelBlmin>
+		<!--bl max brightness setting-->
+		<PanelBlmax>10000</PanelBlmax>
+		<!--bl def brightness setting-->
+		<PanelBldef>2047</PanelBldef>
+		<!--Running test config start-->
+		<!--Check panel power status test support-->
+		<FactoryCheckRegSupport>0</FactoryCheckRegSupport>
+		<!--Pt station test support-->
+		<PanelPtTestSupport>0</PanelPtTestSupport>
+		<!--gpio offset number setting-->
+		<PanelGpioOffset>301</PanelGpioOffset>
+
+		<!-- If LP11_INIT is set, panel will be powered up during prepare() , -->
+		<!-- If not set, will be powered up during pre_prepare()-->
+		<DsiLp11Init>0</DsiLp11Init>
+		<!-- if ThreeStagePowerOn is set,poweron sequence: PowerOnStage LPOnStage HSOnStage-->
+		<!-- if not set,poweron sequence: PowerOnStage LPOnStage-->
+		<ThreeStagePowerOn>1</ThreeStagePowerOn>
+		<!--event send
+		event, data, delay
+		event:0-NONE, 1-VCI, 2-IOVCC, 3-VSP, 4-VSN, 5-RESET, 6-MIPI, 7-TS early event, 8-TS later event, 9-vdd 10-AOD, 11-BIAS
+		data:0-power off, 1-power on
+		delay:ms/TS:0-no-sync 1-sync
+		-->
+		<!--Power on timming-->
+		<PowerOnStage>"13, 1, 5
+			2, 1, 1
+			9, 1, 2
+			1, 1, 10"</PowerOnStage>
+		<LPOnStage>"5, 1, 2
+			5, 0, 2
+			5, 1, 32
+			7, 1, 0
+			6, 1, 0
+			8, 1, 0"</LPOnStage>
+		<HSOnStage>"0, 0, 0"</HSOnStage>
+
+		<!--Power off timming-->
+		<LPOffStage>"0, 0, 0"</LPOffStage>
+		<PowerOffStage>"7, 0, 0
+			6, 0, 0
+			8, 0, 5
+			5, 0, 2
+			1, 0, 2
+			9, 0, 2
+			2, 0, 5"</PowerOffStage>
+		<OnlyPowerOffStage>"0, 0, 0"</OnlyPowerOffStage>
+		<!--Power timming config end-->
+		<!--Tp color support-->
+		<TpColorSupport>0</TpColorSupport>
+		<!--Backlight max nit-->
+		<!--Power timming config start-->
+		<!--event define
+		when mode is regulate to set min voltage, max voltage, enable load, disable load
+		mode, number, amplitude, min voltage, max voltage, enable load, disable load
+		mode:0-none, 1-regulator, 2-gpio
+		number:gpio num or ldo num
+		amplitude:3100000-3.1v, 1850000-1.85v, 5500000-5.5v
+		min voltage:1850000-1.85v
+		max voltage:5500000-5.5v
+		enable load:62000
+		disable load:80
+		-->
+		<LcdReset>"2, 187, 0"</LcdReset>
+		<LcdIovcc>"2, 121, 1800000"</LcdIovcc>
+		<LcdVci>"2, 42, 3100000"</LcdVci>
+		<LcdVdd>"2, 186, 1200000"</LcdVdd>
+		<LcdMipiSwitch>"2, 127, 0"</LcdMipiSwitch>
+		<!--Ap aod support-->
+		<ApAodSupport>0</ApAodSupport>
+		<!--oneside driver mode detect test-->
+		<OnesideModeSupport>0</OnesideModeSupport>
+		<!--color aod detect-->
+		<ColorAodDetectSupport>0</ColorAodDetectSupport>
+		<!--pcd errflag check support-->
+		<GpioPcdErrflag>0</GpioPcdErrflag>
+		<PanelPcdErrflagCheckSupport>0</PanelPcdErrflagCheckSupport>
+		<PcdCmdsSupport>0</PcdCmdsSupport>
+		<!--Pcd reg-value compare mode:
+		0: == NG, != ok
+		1: >= NG, < ok
+		-->
+		<PcdCmdsSupportCompareMode>0</PcdCmdsSupportCompareMode>
+		<!--ddic low voltage detect test-->
+		<DdicLVDetectSupport>0</DdicLVDetectSupport>
+		<!--horizontal/vertical line test-->
+		<VtcLineSupport>0</VtcLineSupport>
+		<HorLineSupport>0</HorLineSupport>
+		<HorLineDuration>600</HorLineDuration>
+		<!--elvdd detect-->
+		<PanelElvddDetectSupport>0</PanelElvddDetectSupport>
+		<!--elvdd detect type-->
+		<ElvddDetectType>2</ElvddDetectType>
+		<ElvddDetectGpio>104</ElvddDetectGpio>
+		<ElvddDetectValue>1</ElvddDetectValue>
+		<ElvddDelay>50</ElvddDelay>
+		<!--checksum support-->
+		<PanelLogoChecksumSupport>0</PanelLogoChecksumSupport>
+		<PanelChecksumSupport>0</PanelChecksumSupport>
+		<ChecksumStressTestSupport>0</ChecksumStressTestSupport>
+		<ChecksumStressTestVdd>1280000</ChecksumStressTestVdd>
+		<ChecksumStressTestMipi>550</ChecksumStressTestMipi>
+
+		<!--finger unlock state support-->
+		<PanelFingerUnlockStateSupport>0</PanelFingerUnlockStateSupport>
+		<!--Fp Delay Threshold-->
+		<LeftTimeThUs>25667</LeftTimeThUs>
+		<RightTimeThUs>26167</RightTimeThUs>
+		<TeInervalTimeUs>16667</TeInervalTimeUs>
+	</PanelEntry>
+</hwlcd>

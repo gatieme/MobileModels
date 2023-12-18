@@ -1,0 +1,7 @@
+#
+# Huawei modem interface
+#
+config HUAWEI_MODEM_CRASH_LOG
+	tristate "modem crash exception for apr"
+	help
+	  say yes here to mean enable HUAWEI_MODEM_CRASH_LOG dump

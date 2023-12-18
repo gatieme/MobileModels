@@ -1,0 +1,36 @@
+# SPDX-License-Identifier: GPL-2.0
+menu "Blackbox Options"
+
+config BLACKBOX
+	bool "Support for blackbox"
+	default y
+	help
+		The blackbox is a fault log collecting framework for registered modules
+		of chips. When a fault occurs, blackbox will invoke the registered
+		function to save the log and reset the module.
+
+config BLACKBOX_LOG_ROOT_PATH
+	string "root path of the blackbox log"
+	depends on BLACKBOX
+	help
+		define the root path of the blackbox log
+
+config BLACKBOX_LOG_PART_REPRESENTATIVE
+	string "representative of the blackbox log part"
+	depends on BLACKBOX
+	help
+		define the representative of the blackbox log part
+
+config BLACKBOX_EXPAND_EVENT
+	bool "Support expand event"
+	depends on BLACKBOX
+	help
+		define the expand event info for blackbox
+
+if BLACKBOX
+
+source "drivers/blackbox/platform/Kconfig"
+
+endif
+
+endmenu

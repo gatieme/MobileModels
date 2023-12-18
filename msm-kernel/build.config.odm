@@ -1,0 +1,7 @@
+GKI_GKI_DEFCONFIG_FRAGMENT=${KERNEL_DIR}/build.config.odm.aarch64
+
+if [ "${VARIANT}" = gki ]; then
+    apply_defconfig_fragment ${KERNEL_DIR}/arch/${ARCH}/configs/odm-product-config.fragment vendor/${MSM_ARCH}-gki_defconfig
+else
+    apply_defconfig_fragment ${KERNEL_DIR}/arch/${ARCH}/configs/odm-product-config.fragment vendor/${MSM_ARCH}-consolidate_defconfig
+fi

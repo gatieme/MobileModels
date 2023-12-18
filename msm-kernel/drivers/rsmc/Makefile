@@ -1,0 +1,16 @@
+obj-m += rsmc_driver.o
+rsmc_driver-y :=
+rsmc_driver-y += rsmc_chiptype_select.o
+rsmc_driver-y += x801/rsmc_start_x801.o
+rsmc_driver-y += x801/rsmc_msg_loop_x801.o
+rsmc_driver-y += x801/rsmc_spi_x801.o
+rsmc_driver-y += x801/rsmc_device_x801.o
+rsmc_driver-y += x800/rsmc_start_x800.o
+rsmc_driver-y += x800/rsmc_msg_loop.o
+rsmc_driver-y += x800/rsmc_spi_drv.o
+rsmc_driver-y += x800/rsmc_x800_device.o
+rsmc_driver-y += x800/rsmc_rx_ctrl.o
+rsmc_driver-y += x800/rsmc_tx_ctrl.o
+rsmc_driver-y += x800/rsmc_spi_ctrl.o
+rsmc_driver-y += x800/rsmc_test.o
+rsmc_driver-y += x800/track.o

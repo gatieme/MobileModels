@@ -1,0 +1,20 @@
+# SPDX-License-Identifier: GPL-2.0
+config ANDROID_LOW_MEMORY_KILLER
+	bool "Android Low Memory Killer"
+	help
+	  Registers processes to be killed when low memory conditions, this is useful
+	  as there is no particular swap space on android.
+	  The registered process will kill according to the priorities in android init
+	  scripts (/init.rc), and it defines priority values with minimum free memory size
+	  for each priority.
+
+config HUAWEI_LMK_DBG
+	bool "HUAWEI Low Memory Killer debug"
+	default n
+	depends on ANDROID_LOW_MEMORY_KILLER
+	help
+	  print processes info when lmk happen per several seconds
+
+config HW_LOWMEM_DBG
+	bool "enable lmkd_dbg_trigger"
+	default n

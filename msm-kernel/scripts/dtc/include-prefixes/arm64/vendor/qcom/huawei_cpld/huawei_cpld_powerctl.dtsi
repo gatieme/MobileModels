@@ -1,0 +1,6 @@
+/ {
+    huawei_cpld_powerctl: huawei_cpld_powerctl {
+        compatible = "huawei,cpld_powerctl";
+        status = "disabled";
+    };
+};

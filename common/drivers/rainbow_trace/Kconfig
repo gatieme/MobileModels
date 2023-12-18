@@ -1,0 +1,6 @@
+# SPDX-License-Identifier: GPL-2.0
+config DFX_RAINBOW_TRACE
+	tristate "Support for trace record"
+	depends on BLACKBOX && QCOM_MINIDUMP
+	help
+	  rainbow trace will record irq and schedule trace log.

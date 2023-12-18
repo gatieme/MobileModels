@@ -1,0 +1,7 @@
+config HUAWEI_GET_FUSE
+	tristate "get_fuse module governor"
+	default n
+	help
+	  This get_fuse helps read efuse register for voltage bias.
+	  To compile this driver as a module, choose M here: the
+	  module will be called get_fuse.

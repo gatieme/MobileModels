@@ -1,0 +1,5 @@
+config HW_SHUTDOWN_WDT
+	tristate "for SHUTDOWN WDT"
+	default n
+	help
+	  This Macro is set y when the compile instruction has HW_SHUTDOWN_WDT param

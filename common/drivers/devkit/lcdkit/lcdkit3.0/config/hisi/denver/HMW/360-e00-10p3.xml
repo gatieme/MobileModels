@@ -1,0 +1,149 @@
+<hwlcd>
+	<PanelEntry>
+		<!--Ldi config start-->
+		<MipiDsiTimingSupport>1</MipiDsiTimingSupport>
+		<!--Mipi Horizontal sync area -->
+		<MipiHSyncArea>34</MipiHSyncArea>
+		<!--Mipi Horizontal back porch -->
+		<MipiHBackPorch>30</MipiHBackPorch>
+		<!--Mipi Horizontal line time -->
+		<MipiHLineTime>1500</MipiHLineTime>
+		<!--Mipi Dpi horizontal size -->
+		<MipiDpiHSize>1406</MipiDpiHSize>
+		<!--Mipi Vertical sync area -->
+		<MipiVSyncArea>34</MipiVSyncArea>
+		<!--Mipi Vertical back porch -->
+		<MipiVBackPorch>28</MipiVBackPorch>
+		<!--Mipi Vertical front porch -->
+		<MipiVFrontPorch>34</MipiVFrontPorch>
+
+		<!--Panel Model-->
+		<PanelModel>"HMW_360 e00 EINK 10.3' 1872 x 1404"</PanelModel>
+
+		<RefreshDireCtrl>1</RefreshDireCtrl>
+		<MipiLp11Flag>2</MipiLp11Flag>
+		<PanelBlmin>0</PanelBlmin>
+		<PanelBlmax>1392</PanelBlmax>
+		<!--bl default brightness setting-->
+		<PanelBlDef>520</PanelBlDef>
+		<PanelBlBoot>47</PanelBlBoot>
+		<AdjustUnlockPosY>350</AdjustUnlockPosY>
+		<!-- <PanelScanSupport>1</PanelScanSupport> -->
+		<!-- <PanelPtTestSupport>1</PanelPtTestSupport> -->
+		<PanelPxlClk>120</PanelPxlClk>
+		<!--Pixel clock division ratio-->
+		<PanelPxlClkDiv>1</PanelPxlClkDiv>
+		<!--Esd enable-->
+		<PanelEsdSupport>1</PanelEsdSupport>
+		<PanelFacEsdSupport>0</PanelFacEsdSupport>
+		<PanelEsdCheckMaxCount>1</PanelEsdCheckMaxCount>
+		<!--Panel type:8-video mode, 16-command mode-->
+		<PanelCmdType>8</PanelCmdType>
+		<!-- mipi check -->
+		<PanelMipiCheckSupport>0</PanelMipiCheckSupport>
+		<!--mipi dsi support-->
+		<MipiDsiUptSupport>0</MipiDsiUptSupport>
+		<!--Mipi dsi default clock-->
+		<MipiDsiBitClk>360</MipiDsiBitClk>
+		<!--Mipi dynamic clk_1-->
+		<MipiDsiBitClkValA>360</MipiDsiBitClkValA>
+		<!--Mipi dynamic clk_2-->
+		<MipiDsiBitClkValB>360</MipiDsiBitClkValB>
+		<!-- <MipiDataTHsTrailAdjust>8</MipiDataTHsTrailAdjust>  -->
+		<!--Mipi lane number:c-phy:0-1port, 1-2port, 2-3port d-phy:0-1lane, 1-2lane, 2-3lane, 3-4lane-->
+		<MipiLaneNums>3</MipiLaneNums>
+		<!--Mipi phy mode:0-D-phy, 1-C-phy-->
+		<MipiPhyMode>0</MipiPhyMode>
+		<!--Mipi clk post adjust-->
+		<MipiClkPostAdjust>0</MipiClkPostAdjust>
+		<!--Full screen set to 0-->
+		<MipiNonContinueEnable>0</MipiNonContinueEnable>
+		<!--Mipi vcm adjust:data&clk hs amplitude-->
+		<MipiDataTLpxAdjust>0xFFFFFFF0</MipiDataTLpxAdjust>
+		<MipiDataTHsZeroAdjust>0xFFFFFFF0</MipiDataTHsZeroAdjust>
+		<MipiDataTHsTrailAdjust>0xFFFFFFEB</MipiDataTHsTrailAdjust>
+		<MipiDataTHsPrepareAdjust>11</MipiDataTHsPrepareAdjust>
+		<MipiRgVcmAdjust>6</MipiRgVcmAdjust>
+		<MipiClkThsPrepareAdjust>1</MipiClkThsPrepareAdjust>
+		<MipiClkThsExitAdjust>1</MipiClkThsExitAdjust>
+		<LcdType>1</LcdType>
+		<UseGpioBlPower>1</UseGpioBlPower>
+		<PanelBlPwmPreciType>3</PanelBlPwmPreciType>
+		<BlPwmInputDisable>1</BlPwmInputDisable>
+		<BypassDeviceCompose>1</BypassDeviceCompose>
+		<!-- Eink Lcd: 1-Eink type lcd, 0-Other type lcd -->
+		<EinkLcd>1</EinkLcd>
+		<!--event send
+		event, data, delay
+		event:0-NONE, 1-VCI, 2-IOVCC, 3-VSP, 4-VSN, 5-RESET, 6-MIPI, 7-TS early-event, 8-TS later-event, 9-vdd, 10-AOD, 11-bias
+		data:0-power off, 1-power on
+		delay:ms/TS:0-no-sync 1-sync
+		-->
+		<!--Power on timming-->
+		<PowerOnStage>"101, 0, 10
+				101, 1, 0
+				3, 1, 0
+				11, 1, 0
+				2, 1, 1
+				102, 1, 2
+				100, 0, 0
+				103, 1, 0
+				105, 1, 1
+				7, 1 , 2
+				106, 1, 1
+				106, 0, 1
+				104, 1, 2500"</PowerOnStage>
+		<LPOnStage>"6, 1, 0"</LPOnStage>
+		<HSOnStage>"8, 1, 0"</HSOnStage>
+		<HSOffStage>"7, 0, 0
+				100, 1, 2
+				6, 0, 0
+				8, 0, 0
+				2, 0, 0
+				11, 0, 0
+				3, 0, 0"</HSOffStage>
+		<LPOffStage>"0, 0, 0"</LPOffStage>
+		<PowerOffStage>"0, 0, 0"</PowerOffStage>
+		<!--Power timming config end-->
+		<!--event define
+		mode, number, amplitude
+		mode:0-none, 1-regulator, 2-gpio
+		number:gpio num or ldo num
+		amplitude:3100000-3.1v, 1850000-1.85v, 5500000-5.5v
+		-->
+		<LcdIovcc>"1, 4, 1900000"</LcdIovcc>
+		<LcdEinkVsys>"2, 52, 0"</LcdEinkVsys>
+		<LcdEinkReady>"2, 227, 0"</LcdEinkReady>
+		<LcdEinkMcu>"2, 40, 0"</LcdEinkMcu>
+		<LcdEinkReset>"2, 41, 0"</LcdEinkReset>
+		<LcdEinkFastboot>"2, 224, 0"</LcdEinkFastboot>
+		<LcdEinkCfg>"2, 42, 0"</LcdEinkCfg>
+		<LcdBacklight>"2, 69, 0"</LcdBacklight>
+		<!--event send-->
+
+		<!--Effect config start-->
+		<!--Cabc support-->
+		<PanelCabcSupport>0</PanelCabcSupport>
+		<!--Gamma support-->
+		<GammaSupport>0</GammaSupport>
+		<!--Gmp support-->
+		<GmpSupport>0</GmpSupport>
+		<!--Gamma calibration support-->
+		<PanelDynamicGammaSupport>0</PanelDynamicGammaSupport>
+		<!--ComformMode support-->
+		<ComformModeSupport>0</ComformModeSupport>
+		<!--Color temperature support-->
+		<ColorTempSupport>0</ColorTempSupport>
+		<!--for hiace parameter-->
+		<HiaceSupport>0</HiaceSupport>
+		<!--Xcc support-->
+		<XccSupport>0</XccSupport>
+		<Arsr1pSharpnessSupport>0</Arsr1pSharpnessSupport>
+		<!--Post Xcc support-->
+		<PostXccSupport>0</PostXccSupport>
+		<!--prefix 2D sharpness support-->
+		<PrefixSharpTwoDSupport>0</PrefixSharpTwoDSupport>
+		<!--Effect config end-->
+	</PanelEntry>
+
+</hwlcd>

@@ -1,0 +1,137 @@
+<hwlcd>
+	<PanelEntry>
+		<HBackPorch>40</HBackPorch>
+		<HFrontPorch>40</HFrontPorch>
+		<HPulseWidth>10</HPulseWidth>
+
+		<VBackPorch>40</VBackPorch>
+		<VFrontPorch>40</VFrontPorch>
+		<VPulseWidth>4</VPulseWidth>
+		<!--Panel information config start-->
+		<!--Panel type:8-video mode, 16-command mode, 32-daul mipi video mode, 64-daul mipi cmd mode-->
+		<PanelCmdType>16</PanelCmdType>
+		<!--Pixel clock-->
+		<PanelPxlClk>20</PanelPxlClk>
+		<!--Pixel clock division ratio-->
+		<PanelPxlClkDiv>1</PanelPxlClkDiv>
+		<DualLcdSupport>1</DualLcdSupport>
+		<SimSerialBacklight>1</SimSerialBacklight>
+		<SimSerialPowerRefCount>1</SimSerialPowerRefCount>
+		<AlpmSupport>1</AlpmSupport>
+		<GammaSupport>1</GammaSupport>
+
+		<!--<LdiDpi01SetChange>1</LdiDpi01SetChange>-->
+		<!--<PxlClkToPll2>1</PxlClkToPll2>-->
+		<!--Ifbc type:0-none, 1-orise2x, 2-orise3x, 3-himax2x,
+		4-rsp2x, 5-rsp3x, 6-vesa2x single, 7-vesa3x single
+		8-vesa2x dual, 9-vesa3x dual, 10-vesa3.75x dual-->
+		<PanelIfbcType>0</PanelIfbcType>
+		<!--<VesaSliceWidth>719</VesaSliceWidth>
+		<VesaSliceHeight>7</VesaSliceHeight>-->
+
+		<PanelCheckRegSupport>0</PanelCheckRegSupport>
+		<PanelLvDetectSupport>0</PanelLvDetectSupport>
+		<PanelCurrentDetectSupport>0</PanelCurrentDetectSupport>
+
+		<PanelProjectIdSupport>0</PanelProjectIdSupport>
+		<PanelChecksumSecondPartSupport>0</PanelChecksumSecondPartSupport>
+
+		<PanelFpsUpdtOnly>0</PanelFpsUpdtOnly>
+		<PanelFpsFuncSwitch>0</PanelFpsFuncSwitch>
+		<PanelFpsTscallSupport>0</PanelFpsTscallSupport>
+		<PanelDsiUptSupport>0</PanelDsiUptSupport>
+		<PanelVsynCtrType>0</PanelVsynCtrType>
+		<PanelPtTestSupport>0</PanelPtTestSupport>
+		<PanelDisplayOnEffectSupport>0</PanelDisplayOnEffectSupport>
+		<PanelFpsUpdtSupport>0</PanelFpsUpdtSupport>
+		<PanelCabcSwitchSupport>0</PanelCabcSwitchSupport>
+
+		<!--1:Regulator 2:GPIO 4:IC 16:None-->
+		<BiasPowerCtrlMode>16</BiasPowerCtrlMode>
+		<BlPowerCtrlMode>16</BlPowerCtrlMode>
+		<!--PanelCheckMode>"bl_open_short:1"</PanelCheckMode-->
+		<PanelBrightnessColorUniformSupport>0</PanelBrightnessColorUniformSupport>
+
+		<PanelRgbwSupport>0</PanelRgbwSupport>
+		<PanelEsdSupport>0</PanelEsdSupport>
+
+		<!--bl type:1-none, 2-pwm, 4-blpwm, 8-mipi, 16-sh blpwm-->
+		<PanelBlType>8</PanelBlType>
+		<!--bl ic type:1-reg only, 2-pwm only, 3-muti-ramp, 4-ramp-muti, 6-i2c only, 7-blpwm-cabc-->
+		<PanelBlIcCtrlType>1</PanelBlIcCtrlType>
+		<PanelBlmin>1</PanelBlmin>
+		<PanelBlmax>255</PanelBlmax>
+		<PanelBlDef>200</PanelBlDef>
+
+		<!--dynamic gamma support-->
+		<PanelDynamicGammaSupport>0</PanelDynamicGammaSupport>
+
+		<!--mipi config-->
+		<MipiLaneNums>0</MipiLaneNums>
+		<MipiBurstMode>2</MipiBurstMode>
+		<MipiDsiUptSupport>0</MipiDsiUptSupport>
+		<MipiDsiBitClk>240</MipiDsiBitClk>
+		<MipiPhyMode>0</MipiPhyMode>
+		<MipiDsiBitClkUpt>240</MipiDsiBitClkUpt>
+		<!-- JDI panel otp-->
+		<PanelOTPSupport>0</PanelOTPSupport>
+		<PanelChecksumSupport>0</PanelChecksumSupport>
+
+		<PanelDsi1SndCmdPanelSupport>0</PanelDsi1SndCmdPanelSupport>
+
+		<!--event send
+		event, data, delay
+		event:0-NONE, 1-VCI, 2-IOVCC, 3-VSP, 4-VSN, 5-RESET, 6-MIPI, 7-TS early-event, 8-TS later-event, 9-VDD, 10-AOD
+		data:0-power off, 1-power on
+		delay:ms/TS:0-no-sync 1-sync
+		-->
+		<!--Power on timming-->
+		<PowerOnStage>"2, 1, 10
+			1, 1, 10
+			9, 1, 10
+			5, 1, 6
+			5, 0, 15
+			5, 1, 15
+			"</PowerOnStage>
+		<LPOnStage>"7, 1, 0
+			6, 1, 0
+			8, 1, 0"</LPOnStage>
+		<HSOnStage>"0, 0, 0"</HSOnStage>
+		<!--Power off timming-->
+		<HSOffStage>"10, 0, 0
+			7, 0, 0
+			6, 0, 0
+			8, 0, 0"</HSOffStage>
+		<LPOffStage>"0, 0, 0"</LPOffStage>
+		<PowerOffStage>"5, 0, 10
+			9, 0, 10
+			1, 0, 10
+			2, 0, 10"</PowerOffStage>
+		<!--Power timming config end-->
+		<!--Tp color support-->
+		<TpColorSupport>0</TpColorSupport>
+		<!--Backlight max nit-->
+		<!--Power timming config start-->
+		<!--event define
+		mode, number, amplitude
+		mode:0-none, 1-regulator, 2-gpio
+		number:gpio num or ldo num
+		amplitude:3100000-3.1v, 1850000-1.85v, 5500000-5.5v
+		-->
+		<LcdVci>"2, 183, 0"</LcdVci>
+		<LcdIovcc>"2, 237, 0"</LcdIovcc>
+		<LcdVdd>"2, 0, 0"</LcdVdd>
+		<LcdVsp>"2, 0, 5500000"</LcdVsp>
+		<LcdVsn>"2, 0, 5500000"</LcdVsn>
+		<LcdReset>"2, 238, 0"</LcdReset>
+		<TpReset>"2, 0, 0"</TpReset>
+		<LcdTe0>"2, 3, 0"</LcdTe0>
+		<LcdBacklight>"0, 0, 0"</LcdBacklight>
+		<LcdAod>"0, 0, 0"</LcdAod>
+		<!-- hisi esd config-->
+		<PanelCabcSupport>0</PanelCabcSupport>
+		<GammaSupport>0</GammaSupport>
+		<CeSupport>0</CeSupport>
+
+	</PanelEntry>
+</hwlcd>

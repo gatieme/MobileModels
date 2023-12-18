@@ -1,0 +1,29 @@
+<hwlcd>
+	<PanelEntry>
+		<!--bl ic type:1-reg only, 2-pwm only, 3-muti-ramp, 4-ramp-muti, 6-i2c only, 7-blpwm-cabc-->
+                <PanelBlIcCtrlType>7</PanelBlIcCtrlType>
+		<BlPwmOutDiv>10</BlPwmOutDiv>
+		<PowerOnStage>"2, 1, 0
+				9, 1, 5
+				11, 1, 0
+				3, 1, 4
+				4, 1, 5"</PowerOnStage>
+		<LPOnStage>"7, 1, 5
+				5, 1, 2
+				5, 0, 2
+				5, 1, 55
+				6, 1, 0"</LPOnStage>
+		<HSOnStage>"8, 1, 0"</HSOnStage>
+		<HSOffStage>"7, 0, 0
+				6, 0, 0
+				8, 0, 0"</HSOffStage>
+		<LPOffStage>"0, 0, 0"</LPOffStage>
+		<PowerOffStage>"5, 0, 2
+				11, 0, 5
+				4, 0, 2
+				3, 0, 2
+				9, 0, 0
+				2, 0, 0"</PowerOffStage>
+	</PanelEntry>
+
+</hwlcd>

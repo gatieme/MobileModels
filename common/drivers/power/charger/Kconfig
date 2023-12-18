@@ -1,0 +1,10 @@
+config HUAWEI_DSM
+	bool "huawei power dsm"
+
+config HUAWEI_BATT
+	bool "huawei batt"
+
+config HUAWEI_BUCK_CHARGER
+        bool "huawei buck charger"
+        default n
+

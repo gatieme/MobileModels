@@ -1,0 +1,9 @@
+<hwlcd>
+	<PanelEntry>
+	<PanelCompatible>"bali_tugl_auo_otm1901a_5p2_1080p_video_default"</PanelCompatible>
+	<!--Product type:0-normal type(1 panel), 1-folder type(2 panel) -->
+	<ProductType>1</ProductType>
+	<PanelXres>1188</PanelXres>
+	<PanelYres>2790</PanelYres>
+</PanelEntry>
+</hwlcd>

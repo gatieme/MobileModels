@@ -1,0 +1,11 @@
+config HUAWEI_VIBRATOR
+	tristate "huawei vibrator driver"
+	default y
+	help
+		If you yes here to support the huawei vibrator driver.
+
+config HUAWEI_PMI_LDO_VIBRATOR
+	tristate "huawei pmi ldo vibrator driver"
+	default y
+	help
+		If you yes here to support the pmi vibrator driver.

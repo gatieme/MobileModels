@@ -1,0 +1,4 @@
+config HUAWEI_DP_AUX
+	tristate "huawei dp aux driver"
+	help
+	  Enable this option to enable the dp aux

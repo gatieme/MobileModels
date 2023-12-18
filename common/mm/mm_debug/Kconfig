@@ -1,0 +1,6 @@
+# SPDX-License-Identifier: GPL-2.0
+config HUAWEI_SLOW_PATH_COUNT
+	bool "page alloc enter slow path count"
+	default n
+	help
+	  Say 'Y' here is you want to count page alloc slow path.

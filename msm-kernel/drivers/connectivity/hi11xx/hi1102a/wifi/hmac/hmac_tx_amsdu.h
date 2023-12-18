@@ -1,0 +1,149 @@
+/*
+ * 版权所有 (c) 华为技术有限公司 2013-2018
+ * 功能说明 : STA侧管理面处理
+ * 作    者 : zhangheng
+ * 创建日期 : 2013年6月18日
+ */
+
+#ifndef __HMAC_TX_AMSDU_H__
+#define __HMAC_TX_AMSDU_H__
+
+/*****************************************************************************
+  1 其他头文件包含
+*****************************************************************************/
+#include "oal_ext_if.h"
+#include "frw_ext_if.h"
+#include "hmac_tx_data.h"
+#include "hmac_main.h"
+
+#ifdef __cplusplus
+#if __cplusplus
+extern "C" {
+#endif
+#endif
+
+#undef  THIS_FILE_ID
+#define THIS_FILE_ID OAM_FILE_ID_HMAC_TX_AMSDU_H
+/*****************************************************************************
+  2 宏定义
+*****************************************************************************/
+/* HT控制信息的amsdu能力位 */
+#define HT_CAP_AMSDU_LEN 0x0800
+
+/* 1102 amsdu生命周期15ms FPGA 1500,1103改为5ms，1102a也是5ms */
+#define HMAC_AMSDU_LIFE_TIME    5
+
+#define hmac_amsdu_init_msdu_head(_pst_amsdu) do {\
+    (_pst_amsdu)->st_msdu_head.pst_next = (oal_netbuf_stru *)&((_pst_amsdu)->st_msdu_head);\
+    (_pst_amsdu)->st_msdu_head.pst_prev = (oal_netbuf_stru *)&((_pst_amsdu)->st_msdu_head);\
+} while (0)
+
+/* 短包聚合最大个数 */
+#define HMAC_AMSDU_SHORT_PACKET_NUM     0x02
+
+/* 小于500字节的包为短包    */
+#define HMAC_AMSDU_SHORT_PACKET_LEN     500
+/*****************************************************************************
+  3 枚举定义
+*****************************************************************************/
+/*****************************************************************************
+  4 全局变量声明
+*****************************************************************************/
+/*****************************************************************************
+  5 消息头定义
+*****************************************************************************/
+/*****************************************************************************
+  6 消息定义
+*****************************************************************************/
+/*****************************************************************************
+  7 STRUCT定义
+*****************************************************************************/
+/*****************************************************************************
+  8 UNION定义
+*****************************************************************************/
+/*****************************************************************************
+  9 OTHERS定义
+*****************************************************************************/
+/*
+ * 函 数 名  : hmac_amsdu_set_maxnum
+ * 功能描述  : 配置amsdu子帧最大个数
+ * 修改历史  :
+ * 1.日    期  : 2013年2月16日
+ *   作    者  : t00231215
+ *   修改内容  : 新生成函数
+ */
+OAL_STATIC OAL_INLINE oal_void  hmac_amsdu_set_maxnum(hmac_amsdu_stru *pst_amsdu, oal_uint8 uc_max_num)
+{
+    if (uc_max_num > WLAN_AMSDU_MAX_NUM) {
+        pst_amsdu->uc_amsdu_maxnum = WLAN_AMSDU_MAX_NUM;
+    } else {
+        pst_amsdu->uc_amsdu_maxnum = uc_max_num;
+    }
+}
+
+/*
+ * 函 数 名  : hmac_amsdu_set_start
+ * 功能描述  : 配置amsdu最大长度
+ * 修改历史  :
+ * 1.日    期  : 2013年2月16日
+ *   作    者  : t00231215
+ *   修改内容  : 新生成函数
+ */
+OAL_STATIC OAL_INLINE oal_void  hmac_amsdu_set_maxsize(
+    hmac_amsdu_stru *pst_amsdu, hmac_user_stru *pst_hmac_user, oal_uint16 us_max_size)
+{
+    if (us_max_size > pst_hmac_user->us_amsdu_maxsize) {
+        pst_amsdu->us_amsdu_maxsize = pst_hmac_user->us_amsdu_maxsize;
+    } else {
+        pst_amsdu->us_amsdu_maxsize = us_max_size;
+    }
+
+    if (pst_hmac_user->st_user_base_info.st_ht_hdl.uc_htc_support == 1) {
+        /* Account for HT-MAC Header(30), FCS(4) & Security headers(16) */
+        pst_amsdu->us_amsdu_maxsize -= (30 + 4 + 16);
+    } else {
+        /* Account for QoS-MAC Header(26), FCS(4) & Security headers(16) */
+        pst_amsdu->us_amsdu_maxsize -= (26 + 4 + 16);
+    }
+
+    if (pst_hmac_user->uc_is_wds == 1) {
+        /* Account for the 4th address in WDS-MAC Header(6) */
+        pst_amsdu->us_amsdu_maxsize -= (6);
+    }
+}
+
+/*
+ * 函 数 名  : hmac_amsdu_is_short_pkt
+ * 功能描述  : amsdu判断是否短包
+ * 修改历史  :
+ * 1.日    期  : 2015年9月17日
+ *   作    者  : ywx282918
+ *   修改内容  : 新生成函数
+ */
+OAL_STATIC OAL_INLINE oal_bool_enum_uint8 hmac_amsdu_is_short_pkt(oal_uint32 ul_frame_len)
+{
+    if (ul_frame_len < HMAC_AMSDU_SHORT_PACKET_LEN) {
+        return OAL_TRUE;
+    }
+
+    return OAL_FALSE;
+}
+
+/*****************************************************************************
+  10 函数声明
+*****************************************************************************/
+extern oal_uint32  hmac_amsdu_notify(hmac_vap_stru *pst_vap, hmac_user_stru *pst_user, oal_netbuf_stru *pst_buf);
+extern oal_void    hmac_amsdu_init_user(hmac_user_stru *pst_hmac_user_sta);
+#ifdef _PRE_WLAN_FEATURE_MULTI_NETBUF_AMSDU
+extern oal_void hmac_tx_encap_large_skb_amsdu(
+    hmac_vap_stru *pst_vap, hmac_user_stru *pst_user, oal_netbuf_stru *pst_buf, mac_tx_ctl_stru *pst_tx_ctl);
+#endif
+
+
+#ifdef __cplusplus
+#if __cplusplus
+}
+#endif
+#endif
+
+#endif /* end of hmac_tx_amsdu.h */

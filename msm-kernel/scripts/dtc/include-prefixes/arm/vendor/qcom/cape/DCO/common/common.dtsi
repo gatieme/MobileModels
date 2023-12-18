@@ -1,0 +1,10 @@
+#include "../../common/common.dtsi"
+#include "../../../../../display-devicetree/display/cape-sde-display-qrd.dtsi"
+#include "../../../../../audio-devicetree/cape-audio-qrd.dtsi"
+#include "huawei_charger.dtsi"
+#include "../../../../../camera-devicetree/custom/taro/DCO/camera-sensor-v1.dtsi"
+
+#include "huawei_fac.dtsi"
+#include "huawei_sensor.dtsi"
+#include "huawei-lcd.dtsi"
+#include "huawei_fp.dtsi"

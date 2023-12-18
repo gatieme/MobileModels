@@ -1,0 +1,5 @@
+config HW_RSMC
+	tristate "kernel space communicate with user space use netlink socket."
+    default n
+    help
+	  BeiDou short packet kernel driver, used to adapt to the short packet chip.

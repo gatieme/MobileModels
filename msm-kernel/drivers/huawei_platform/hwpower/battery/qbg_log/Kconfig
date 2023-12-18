@@ -1,0 +1,5 @@
+config HUAWEI_QBG_LOG
+	tristate "huawei qbg adsp log driver"
+	default n
+	help
+	  Enable this option to qbg adsp log.

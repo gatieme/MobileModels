@@ -1,0 +1,27 @@
+/*
+ * Copyright (c) Huawei Technologies Co., Ltd. 2020. All rights reserved.
+ * Description: this file is used for huawei wifi ext events reporting
+ * Author: y00445093
+ * Create: 2020-9-24
+ */
+
+#ifndef __WIFI_EXT_EVENT_H__
+#define __WIFI_EXT_EVENT_H__
+
+#include <linux/etherdevice.h>
+
+typedef enum {
+	NETLINK_REG_TO_KERNEL = 0,
+	NETLINK_UNREG_TO_KERNEL,
+	NETLINK_CMM_TO_KERNEL,
+	NETLINK_SET_RULE_TO_KERNEL,
+	NETLINK_STOP_MARK,
+	NETLINK_START_MARK,
+	NETLINK_MPLK_BIND_NETWORK,
+	NETLINK_MPLK_UNBIND_NETWORK,
+	NETLINK_MPLK_RESET_SOCKET,
+	NETLINK_MPLK_CLOSE_SOCKET,
+	NETLINK_HID2D_TYPE,
+} ntl_cmd_type_t;
+
+#endif /* __WIFI_EXT_EVENT_H__ */

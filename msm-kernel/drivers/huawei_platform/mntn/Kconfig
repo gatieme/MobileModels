@@ -1,0 +1,25 @@
+config HUAWEI_PLATFORM_MAINTAIN
+	bool "Huawei platform maintain module support"
+	default n
+	help
+	  Say yes here to support the huawei platform maintain module
+
+config MNTN_FULLDUMP
+	bool "Support Maintainance Fulldump"
+	default n
+	help
+	  This driver supports maintainance fulldump, etc.
+
+config HW_MNTN_FACOTORY
+	bool "Huawei Factory Model"
+	default n
+	help
+	  This tran factory to kernel.
+
+config DFX_FUSE_DUMP_SWITCH
+	bool "fuse dump switch"
+	default n
+	help
+	  This support dump switch for fuse device
+
+source "drivers/huawei_platform/mntn/blackbox/Kconfig"

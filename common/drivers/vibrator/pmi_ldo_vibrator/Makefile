@@ -1,0 +1,1 @@
+obj-$(CONFIG_HUAWEI_PMI_LDO_VIBRATOR) += pmi_ldo_vibrator.o

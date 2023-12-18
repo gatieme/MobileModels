@@ -1,0 +1,14 @@
+# SPDX-License-Identifier: GPL-2.0
+source "drivers/huawei_platform/usb/pd/richtek/Kconfig"
+config HUAWEI_PD
+        bool "huawei_pd"
+        default n
+        help
+          Say Y here to enable huawei_pd driver.
+
+config HUAWEI_PD_THIRDPARTY
+        bool "huawei_pd_thirdparty"
+        default n
+        help
+          Say Y here to enable huawei_pd_thirdparty driver.
+

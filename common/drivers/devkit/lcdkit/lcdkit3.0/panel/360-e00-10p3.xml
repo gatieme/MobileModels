@@ -1,0 +1,19 @@
+<hwlcd>
+	<PanelEntry>
+	<PanelCompatible>"360_e00_10p3"</PanelCompatible>
+	<PanelName>"HMW_360 e00 10.3' 1872 x 1404"</PanelName>
+	<PanelType>0x01</PanelType>
+
+	<PanelXres>1872</PanelXres>
+	<PanelYres>1404</PanelYres>
+	<PanelWidth>209</PanelWidth>
+	<PanelHeight>157</PanelHeight>
+
+	<!-- Panel Command information -->
+	<PanelOnCommand>"0x05, 0x01, 0x00, 0x00, 0x0A, 0x00, 0x01, 0x00"</PanelOnCommand>
+	<PanelOnCommandState>0</PanelOnCommandState>
+	<PanelOffCommand>"0x15, 0x01, 0x00, 0x00, 0x20, 0x01, 0x02, 0x28, 0x00
+			0x15, 0x01, 0x00, 0x00, 0x96, 0x01, 0x02, 0x10, 0x00"</PanelOffCommand>
+	<PanelOffCommandState>0</PanelOffCommandState>
+</PanelEntry>
+</hwlcd>

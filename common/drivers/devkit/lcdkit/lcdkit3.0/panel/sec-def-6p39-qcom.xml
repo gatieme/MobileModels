@@ -1,0 +1,20 @@
+<hwlcd>
+<PanelEntry>
+	<PanelCompatible>"sec_def_6p39"</PanelCompatible>
+	<PanelName>"sec_def_ALTA 6'39 CMD 1080 x 2504"</PanelName>
+	<!--lcdtype: amoled_2, lcd_1-->
+	<PanelType>0x02</PanelType>
+
+	<!-- Panel Command information -->
+	<PanelOnCommand0>""</PanelOnCommand0>
+	<PanelOnCommandState0>"dsi_lp_mode"</PanelOnCommandState0>
+	<PanelOffCommand0>""</PanelOffCommand0>
+	<PanelOffCommandState0>"dsi_lp_mode"</PanelOffCommandState0>
+
+	<PanelTimingSwitchCommand0>""</PanelTimingSwitchCommand0>
+	<PanelTimingSwitchCommandState0>"dsi_lp_mode"</PanelTimingSwitchCommandState0>
+
+	<DCSBacklightCommand>""</DCSBacklightCommand>
+	<DCSBacklightCommandState>"dsi_lp_mode"</DCSBacklightCommandState>
+</PanelEntry>
+</hwlcd>

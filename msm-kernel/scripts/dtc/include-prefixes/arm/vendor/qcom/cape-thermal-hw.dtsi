@@ -1,0 +1,337 @@
+#include <dt-bindings/thermal/thermal_qti.h>
+/{
+	hw_weights: weights@0 {
+		compatible = "hw,weights";
+		/* IPA_CLUSTER0, IPA_CLUSTER1, IPA_CLUSTER2, GPU */
+		hw,weights-default-cfg = <768 256 256 256>;
+		hw,weights-boost-cfg = <768 256 256 768>;
+	};
+
+	tz_info {
+		huawei,battery_tz_name = "battery";
+		huawei,system_h_tz_name = "system_h";
+		huawei,cluster0_tz_num = <4>;
+		huawei,cluster0_tz_name = "cpu-0-0","cpu-0-1","cpu-0-2","cpu-0-3";
+		huawei,cluster1_tz_num = <6>;
+		huawei,cluster1_tz_name = "cpu-1-0","cpu-1-1","cpu-1-2","cpu-1-3","cpu-1-4","cpu-1-5";
+		huawei,cluster2_tz_num = <3>;
+		huawei,cluster2_tz_name = "cpu-1-6","cpu-1-7","cpu-1-8";
+		huawei,gpu_tz_num = <2>;
+		huawei,gpu_tz_name = "gpuss-0","gpuss-1";
+		huawei,tz_num = <15>;
+		huawei,all_tz_name = "cpu-0-0","cpu-0-1","cpu-0-2","cpu-0-3","cpu-1-0","cpu-1-1","cpu-1-2","cpu-1-3","cpu-1-4","cpu-1-5","cpu-1-6","cpu-1-7", "cpu-1-8", "gpuss-0","gpuss-1";
+	};
+
+	ipa_sensors_info {
+		huawei,cluster_num = <3>;
+		huawei,ipa_cpufreq_table_index = <0 4 7>;/*little middle big*/
+		huawei,ipa_actor_num = <4>;
+		huawei,ipa_actor_name = "cluster0","cluster1","cluster2","gpu";
+		huawei,ipa_actor_index = <0 1 2 3>;
+	};
+
+	ipa_cluster_state_limit {
+		huawei,ipa_cluster_state_limit = <8 THERMAL_NO_LIMIT THERMAL_NO_LIMIT THERMAL_NO_LIMIT>;
+	};
+
+	cluster_idle_power {
+		huawei,cluster0_idle_power = <1228800 7
+					      556800 5>;
+		huawei,cluster1_idle_power = <2457600 26
+					      1996800 20
+					      1440000 14
+					      633600 9>;
+		huawei,cluster2_idle_power = <3187200 105
+					      2918400 90
+					      2707200 80
+					      2476800 67
+					      2131200 53
+					      1766400 40
+					      1401600 30
+					      787200 24>;
+	};
+
+	capacitances {
+		huawei,cluster0_dyn_capacitance = <1440000 1968895
+						   0 1714184>;
+		huawei,cluster1_dyn_capacitance = <1996800 2644921
+						   0 2157461>;
+		huawei,cluster2_dyn_capacitance = <2361600 4254682
+						   0 4038566>;
+		huawei,cluster_static_cap_item_num = <10>;
+		huawei,cluster_static_capacitance = "-49342","61270","-17682","17645","-33559",
+						    "10000","10000","1000","100","1",  /* little */
+						    "25880","-14682","35823","-58257","70311",
+						    "10000","1000","1000","1000","1",  /* middle */
+						    "14021","-89571","20492","-22107","148620",
+						    "1000","10000","1000","100","1";  /* big */
+		huawei,temperature_scale_capacitance = "-35","1","0","0","1"; /*temperature_scale_capacitance*/
+		huawei,gpu_voltage_scale_num = <5>;
+		huawei,gpu_voltage_scale = "-206250","153170","-1871","9","557";
+		huawei,gpu_dyn_cap_item_num = <8>;
+		huawei,gpu_dyn_capacitance = "-442159","925637","-549305","146990","100","100","100","1";
+		huawei,gpu_temp_scale_capacitance = "1291200","-59715","707","0","557";
+		huawei,cache_capacitance = <0 0 0>;/*little middle big*/
+	};
+
+	gpu_opp {
+		huawei,gpu_opp_num = <13>;
+		huawei,gpu_opp_0 = <900000000 776000>;
+		huawei,gpu_opp_1 = <862000000 749000>;
+		huawei,gpu_opp_2 = <815000000 741000>;
+		huawei,gpu_opp_3 = <765000000 709000>;
+		huawei,gpu_opp_4 = <710000000 687000>;
+		huawei,gpu_opp_5 = <645000000 662000>;
+		huawei,gpu_opp_6 = <580000000 655000>;
+		huawei,gpu_opp_7 = <515000000 606000>;
+		huawei,gpu_opp_8 = <439000000 607000>;
+		huawei,gpu_opp_9 = <364000000 583000>;
+		huawei,gpu_opp_10 = <324000000 568000>;
+		huawei,gpu_opp_11 = <285000000 556000>;
+		huawei,gpu_opp_12 = <220000000 557000>;
+	};
+
+	ipa_control_optimization {
+		huawei,control_optimization = <1>;
+		huawei,req_power_num = <4>;
+		huawei,moving_average_beta = <80>;
+		huawei,power_range_bucket = <100>;
+		huawei,token_proportion = <110>;
+	};
+
+	hw_shell: shell_frame@0 {
+		compatible = "hw,shell-temp";
+		is_framework = <1>;
+		interval = <5000>;
+		bias = <0>;
+		count = <8>;
+		shell_temp_step = <200>;
+		shell_temp_step_range = <400>;
+		tsensor_para = "4000","100000","0";
+		ntc_para = "2000","80000","-20000";
+		status = "ok";
+		sensors {
+			sensor0 {
+				type = "battery";
+				coef = "0","0","0","0","0","0","0","0";
+			};
+		};
+	};
+
+	shell_front: shell_front@0 {
+		compatible = "hw,shell-temp";
+		is_framework = <1>;
+		interval = <5000>;
+		bias = <0>;
+		count = <8>;
+		shell_temp_step = <200>;
+		shell_temp_step_range = <400>;
+		tsensor_para = "4000","100000","0";
+		ntc_para = "2000","80000","-20000";
+		status = "ok";
+		sensors {
+			sensor0 {
+				type = "system_h";
+				coef = "0","0","0","0","0","0","0","0";
+			};
+		};
+	};
+
+	shell_back: shell_back@0 {
+		compatible = "hw,shell-temp";
+		is_framework = <1>;
+		interval = <5000>;
+		bias = <0>;
+		count = <8>;
+		shell_temp_step = <200>;
+		shell_temp_step_range = <400>;
+		tsensor_para = "4000","100000","0";
+		ntc_para = "2000","80000","-20000";
+		status = "ok";
+		sensors {
+			sensor0 {
+				type = "system_h";
+				coef = "0","0","0","0","0","0","0","0";
+			};
+		};
+	};
+
+	shell_cover: shell_cover@0 {
+		compatible = "hw,shell-temp";
+		is_framework = <2>;
+		interval = <5000>;
+		bias = <0>;
+		count = <8>;
+		shell_temp_step = <200>;
+		shell_temp_step_range = <10>;
+		tsensor_para = "4000","100000","0";
+		ntc_para = "2000","80000","-20000";
+		status = "ok";
+		sensors {
+			sensor0 {
+				type = "system_h";
+				coef = "0","0","0","0","0","0","0","0";
+			};
+		};
+	};
+
+	shell_level: shell_level@0 {
+		compatible = "hw,shell-temp";
+		is_framework = <1>;
+		interval = <5000>;
+		bias = <0>;
+		count = <8>;
+		shell_temp_step = <2>;
+		shell_temp_step_range = <10>;
+		tsensor_para = "1","10","0";
+		ntc_para = "1","10","0";
+		status = "ok";
+		sensors {
+			sensor0 {
+				type = "system_h";
+				coef = "0","0","0","0","0","0","0","0";
+			};
+		};
+	};
+
+	shell_stat: shell_stat@0 {
+		compatible = "hw,shell-temp";
+		is_transfer = <1>;
+		node_type = <1>;
+	};
+
+	shell_ibu: shell_ibu@0 {
+		compatible = "hw,shell-temp";
+		is_transfer = <1>;
+		node_type = <2>;
+	};
+
+	shell_vbu: shell_vbu@0 {
+		compatible = "hw,shell-temp";
+		is_transfer = <1>;
+		node_type = <3>;
+	};
+
+	shell_iba: shell_iba@0 {
+		compatible = "hw,shell-temp";
+		is_transfer = <1>;
+		node_type = <4>;
+	};
+
+	shell_vba: shell_vba@0 {
+		compatible = "hw,shell-temp";
+		is_transfer = <1>;
+		node_type = <5>;
+	};
+
+	ipa_sensor0: ipa-sensor@0 {
+		type = "tsens_max";
+		compatible = "arm,ipa-thermal0";
+		#thermal-sensor-cells = <1>;
+		status = "ok";
+	};
+
+	ipa_sensor1: ipa-sensor@1 {
+		type = "system_h";
+		compatible = "arm,ipa-thermal1";
+		#thermal-sensor-cells = <1>;
+		status = "ok";
+	};
+};
+
+&thermal_zones {
+	soc_thermal {
+		disable-thermal-zone;
+		thermal-governor = "power_allocator";
+		polling-delay = <200>;
+		polling-delay-passive = <50>;
+		sustainable-power = <9000>;
+		k_po = <0>;
+		k_pu = <0>;
+		k_i = <10>;
+		integral_cutoff = <8>;
+		thermal-sensors = <&ipa_sensor0 255>;
+		trips {
+			threshold: trip-point@0 {
+				temperature = <55000>;
+				hysteresis = <1000>;
+				type = "passive";
+			};
+			target: trip-point@1 {
+				temperature = <80000>;
+				hysteresis = <1000>;
+				type = "passive";
+			};
+		};
+
+		cooling-maps {
+			map0 {
+				trip = <&target>;
+				cooling-device = <&cluster0 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>;
+				contribution = <768>;
+			};
+			map1 {
+				trip = <&target>;
+				cooling-device = <&cluster1 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>;
+				contribution = <256>;
+			};
+			map2 {
+				trip = <&target>;
+				cooling-device = <&cluster2 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>;
+				contribution = <256>;
+			};
+			map3 {
+				trip = <&target>;
+				cooling-device = <&msm_gpu THERMAL_NO_LIMIT THERMAL_NO_LIMIT>;
+				contribution = <256>;
+			};
+		};
+	};
+
+	board_thermal {
+		thermal-governor = "power_allocator";
+		polling-delay = <1500>;
+		polling-delay-passive = <1000>;
+		sustainable-power = <9000>;
+		k_po = <1>;
+		k_pu = <1>;
+		k_i = <1>;
+		integral_cutoff = <8>;
+		thermal-sensors = <&ipa_sensor1 0>;
+		trips {
+			board_threshold: trip-point@0 {
+				temperature = <30000>;
+				hysteresis = <1000>;
+				type = "passive";
+			};
+			board_target: trip-point@1 {
+				temperature = <75000>;
+				hysteresis = <1000>;
+				type = "passive";
+			};
+		};
+
+		cooling-maps {
+			map0 {
+				trip = <&board_target>;
+				cooling-device = <&cluster0 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>;
+				contribution = <768>;
+			};
+			map1 {
+				trip = <&board_target>;
+				cooling-device = <&cluster1 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>;
+				contribution = <256>;
+			};
+			map2 {
+				trip = <&board_target>;
+				cooling-device = <&cluster2 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>;
+				contribution = <256>;
+			};
+			map3 {
+				trip = <&board_target>;
+				cooling-device = <&msm_gpu THERMAL_NO_LIMIT THERMAL_NO_LIMIT>;
+				contribution = <256>;
+			};
+		};
+	};
+};

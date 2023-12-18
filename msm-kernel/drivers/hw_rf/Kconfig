@@ -1,0 +1,3 @@
+config HW_RF_DRIVER
+     bool "huawei rf driver"
+	 default y

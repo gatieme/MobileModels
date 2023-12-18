@@ -1,0 +1,407 @@
+<hwlcd>
+	<PanelEntry>
+		<!--/* 0:DSI0 1:DSI1 2:DSI2 */ -->
+		<ConnectorId0>0</ConnectorId0>
+		<!--/* Max connector number is 2 */ -->
+		<ConnectorNum>1</ConnectorNum>
+		<!--Ldi config start-->
+		<MipiDsiTimingSupport>1</MipiDsiTimingSupport>
+		<!--Mipi Horizontal sync area -->
+		<MipiHSyncArea>4</MipiHSyncArea>
+		<!--Mipi Horizontal back porch -->
+		<MipiHBackPorch>16</MipiHBackPorch>
+		<!--Mipi Horizontal line time -->
+		<MipiHLineTime>342</MipiHLineTime>
+		<!--Mipi Dpi horizontal size -->
+		<MipiDpiHSize>306</MipiDpiHSize>
+		<!--Mipi Vertical sync area -->
+		<MipiVSyncArea>8</MipiVSyncArea>
+		<!--Mipi Vertical back porch -->
+		<MipiVBackPorch>92</MipiVBackPorch>
+		<!--Mipi Vertical front porch -->
+		<MipiVFrontPorch>80</MipiVFrontPorch>
+		<!--Panel information config start-->
+		<!--Panel type:8-video mode, 16-command mode-->
+		<PanelCmdType>16</PanelCmdType>
+		<!--Pixel clock-->
+		<PanelPxlClk>192</PanelPxlClk>
+		<!--Panel fps-->
+		<PanelFps>120</PanelFps>
+		<!--Pixel clock division ratio-->
+		<PanelPxlClkDiv>1</PanelPxlClkDiv>
+		<!--Ifbc type:0-none, 1-orise2x, 2-orise3x, 3-himax2x,
+		4-rsp2x, 5-rsp3x, 6-vesa2x single, 7-vesa3x single
+		8-vesa2x dual, 9-vesa3x dual, 10-vesa3.75x dual-->
+		<PanelIfbcType>9</PanelIfbcType>
+		<VesaSliceWidth>608</VesaSliceWidth>
+		<VesaSliceHeight>32</VesaSliceHeight>
+		<!--0-ver1.1, 1-ver1.2-->
+		<VesaDscVersion>1</VesaDscVersion>
+		<!--0-RGB, 1-YUV, 2-YUV420, 3-YUV422, 4-YUV-444-->
+		<VesaDscFormat>3</VesaDscFormat>
+		<!--bit per pixel-->
+		<VesaDscBpp>16</VesaDscBpp>
+		<!--bit per component-->
+		<VesaDscBpc>10</VesaDscBpc>
+		<!--block pred enable-->
+		<VesaDscBlkPredEn>1</VesaDscBlkPredEn>
+		<!--line buff depth-->
+		<VesaDscLineBuffDepth>11</VesaDscLineBuffDepth>
+		<!--GENERATE_RC_PARAMETERS:0-default, 1-calculate-->
+		<VesaDscGenRcParams>0</VesaDscGenRcParams>
+		<!--DSS low power setting:0-close(video mode), 7-open(command mode)-->
+		<PanelVsynCtrType>7</PanelVsynCtrType>
+		<!--Pt station test support-->
+		<PanelPtTestSupport>1</PanelPtTestSupport>
+		<!--check reg support-->
+		<PanelCheckRegSupport>1</PanelCheckRegSupport>
+		<!--Project id support-->
+		<PanelProjectIdSupport>0</PanelProjectIdSupport>
+		<!--sn code support-->
+		<PanelSnCodeSupport>1</PanelSnCodeSupport>
+		<!--sn code reprocess-->
+		<PanelSnCodeReprocessSupport>1</PanelSnCodeReprocessSupport>
+		<!--Oem info-->
+		<OemInfoSupport>1</OemInfoSupport>
+		<OemBarcode2DSupport>1</OemBarcode2DSupport>
+		<!--Esd enable-->
+		<PanelEsdSupport>1</PanelEsdSupport>
+		<PanelFacEsdSupport>0</PanelFacEsdSupport>
+		<!--bl type:1-none, 2-pwm, 4-blpwm, 8-mipi, 16-sh blpwm-->
+		<PanelBlType>8</PanelBlType>
+		<!--bl min brightness setting-->
+		<PanelBlmin>3</PanelBlmin>
+		<!--bl max brightness setting-->
+		<PanelBlmax>4095</PanelBlmax>
+		<!--bl default brightness setting-->
+		<PanelBlDef>1605</PanelBlDef>
+		<!--Mipi lane number:c-phy:0-1port, 1-2port, 2-3port d-phy:0-1lane, 1-2lane, 2-3lane, 3-4lane-->
+		<MipiLaneNums>3</MipiLaneNums>
+		<!--mipi dsi support-->
+		<MipiDsiUptSupport>0</MipiDsiUptSupport>
+		<!--Mipi dsi default clock-->
+		<MipiDsiBitClk>499</MipiDsiBitClk>
+		<!--Mipi phy mode:0-D-phy, 1-C-phy-->
+		<MipiPhyMode>0</MipiPhyMode>
+		<MipiClkPostAdjust>16</MipiClkPostAdjust>
+		<MipiMaxTxEscClk>10</MipiMaxTxEscClk>
+		<MipiDataTHsPrepareAdjust>18</MipiDataTHsPrepareAdjust>
+		<!--Mipi color mode:0-16bit_1, 1-16bit_2, 2-16bit_3, 3-18bit_1, 4-18bit_2, 5-24bit_1, 6-24bit_2, 7-24bit_3-->
+		<MipiColorMode>15</MipiColorMode>
+		<StandbyCurrentDetSupport>1</StandbyCurrentDetSupport>
+		<StandbyCurrentChannelId>12</StandbyCurrentChannelId>
+		<FacCheckIovccId>"ldo4"</FacCheckIovccId>
+		<FacCheckVciId>"ldo17"</FacCheckVciId>
+		<!-- fac mbist -->
+		<LcdMbistDetectSupport>1</LcdMbistDetectSupport>
+		<LcdMbistDetectThreshold>1</LcdMbistDetectThreshold>
+		<!-- fac check sum2 -->
+		<LCDCheckSum2DetSupport>1</LCDCheckSum2DetSupport>
+		<LCDCheckSum2DetThreshold>1</LCDCheckSum2DetThreshold>
+		<LCDCheckSum2DetDelay>500</LCDCheckSum2DetDelay>
+		<LCDCheckSum2DetMinute>30</LCDCheckSum2DetMinute>
+		<!-- PCD support -->
+		<PcdCmdsSupport>1</PcdCmdsSupport>
+		<!--Pcd reg-value compare mode:
+		0: == NG, != ok
+		1: >= NG, < ok
+		-->
+		<PcdCmdsSupportCompareMode>0</PcdCmdsSupportCompareMode>
+		<!-- for dieid read  -->
+		<LcdPanelDieidSupport>1</LcdPanelDieidSupport>
+		<!--sensorhub aod support-->
+		<SensorhubAodSupport>1</SensorhubAodSupport>
+		<!--sensorhub enter exit ulps-->
+		<SensorhubUlps>1</SensorhubUlps>
+		<!--AodBlLevel:0-two level, 1-three level, 2-four level-->
+		<AodBlLevel>1</AodBlLevel>
+		<!--AodNormalBlLevel:0-two level, 1-three level, 2-four level-->
+		<AodNormalBlLevel>1</AodNormalBlLevel>
+		<!--event send
+		event, data, delay
+		event:0-NONE, 1-VCI, 2-IOVCC, 3-VSP, 4-VSN, 5-RESET, 6-MIPI, 7-TS early-event, 8-TS later-event, 9-vdd
+		data:0-power off, 1-power on
+		delay:ms/TS:0-no-sync 1-sync
+		-->
+		<!--Power on timming-->
+		<PowerOnStage>"2, 1, 5
+			9, 1, 5
+			1, 1, 20"</PowerOnStage>
+		<LPOnStage>"5, 1, 5
+			5, 0, 5
+			5, 1, 70
+			7, 1, 0
+			6, 1, 0
+			8, 1, 0"</LPOnStage>
+		<HSOnStage>"0, 0, 0"</HSOnStage>
+
+		<!--Power off timming-->
+		<HSOffStage>"7, 0, 0
+			8, 0, 0
+			6, 0, 0"</HSOffStage>
+		<LPOffStage>"0, 0, 0"</LPOffStage>
+		<PowerOffStage>"5, 0, 1
+			1, 0, 10
+			9, 0, 10
+			2, 0, 5"</PowerOffStage>
+		<!--Power timming config end-->
+		<!--Tp color support-->
+		<TpColorSupport>0</TpColorSupport>
+		<!--Backlight max nit-->
+		<!--Power timming config start-->
+		<!--event define
+		mode, number, amplitude
+		mode:0-none, 1-regulator, 2-gpio
+		number:gpio num or ldo num
+		amplitude:3100000-3.1v, 1850000-1.85v, 5500000-5.5v
+		-->
+		<IOVccRegulator>ldo4</IOVccRegulator>
+		<VciRegulator>ldo17</VciRegulator>
+		<VddRegulator>hi6563v300_buck0</VddRegulator>
+		<LcdVci>"1, 17, 3100000"</LcdVci>
+		<LcdIovcc>"1, 4, 1850000"</LcdIovcc>
+		<LcdVdd>"1, 0, 1220000"</LcdVdd>
+		<LcdVsp>"0, 0, 0"</LcdVsp>
+		<LcdVsn>"0, 0, 0"</LcdVsn>
+		<LcdReset>"2, 354, 0"</LcdReset>
+		<LcdTe0>"2, 65, 0"</LcdTe0>
+		<LcdBacklight>"0, 0, 0"</LcdBacklight>
+		<!--event send-->
+		<!--ltpo begin-->
+		<PanelFpsUpdtSupport>1</PanelFpsUpdtSupport>
+		<!--oled type:0-ltps, 1-ltpo1, 2-ltpo2-->
+		<OledType>1</OledType>
+		<!--ltpo version:0-ltpo1, 1-ltpo2-->
+		<LtpoVersion>1</LtpoVersion>
+		<!--dfr mode:0-CONSTANT, 1-LONG_V, 2-LONG_H, 3-TE_SKIP_BY_MCU, 4-TE_SKIP_BY_ACPU-->
+		<DFRMode>3</DFRMode>
+		<!--panel ddic type:0-rd, 1-xhs-->
+		<PanelDDICType>0</PanelDDICType>
+		<!--support te freq info-->
+		<PanelTEFreqInfo>"360"</PanelTEFreqInfo>
+		<!--panel downframe dimming sequence-->
+		<PanelDimmingSeq>"60, 30, 10, 5, 1"</PanelDimmingSeq>
+		<!--panel downframe dimming sequence repeat time-->
+		<PanelRepeatNum>"1, 2, 6, 1, 1"</PanelRepeatNum>
+		<!--panel downframe dimming sequence-->
+		<PanelDimmingSeq90Hz>"45, 30, 10, 5, 1"</PanelDimmingSeq90Hz>
+		<!--panel downframe dimming sequence repeat time-->
+		<PanelRepeatNum90Hz>"1, 2, 6, 1, 1"</PanelRepeatNum90Hz>
+		<!--support aod te freq info-->
+		<PanelAodTEFreqInfo>"30, 360"</PanelAodTEFreqInfo>
+		<!--panel aod downframe dimming sequence-->
+		<PanelAodDimmingSeq>"30, 10, 1"</PanelAodDimmingSeq>
+		<!--panel aod downframe dimming sequence repeat time-->
+		<PanelAodRepeatNum>"2, 5, 1"</PanelAodRepeatNum>
+		<PanelBlTo1Hz>773</PanelBlTo1Hz>
+		<PanelAodBlTo1Hz>1</PanelAodBlTo1Hz>
+		<PanelDefaultFps>120</PanelDefaultFps>
+		<PanelSupportFpsList>"30, 60, 90, 120"</PanelSupportFpsList>
+		<PanelFPS60CMD>"service call AGPService 102 i32 60 i32 3"</PanelFPS60CMD>
+		<PanelFPS90CMD>"service call AGPService 102 i32 90 i32 3"</PanelFPS90CMD>
+		<PanelFPS120CMD>"service call AGPService 102 i32 120 i32 3"</PanelFPS120CMD>
+		<PanelFPS45CMD>"service call AGPService 102 i32 45 i32 3"</PanelFPS45CMD>
+		<PanelFPS30CMD>"service call AGPService 102 i32 30 i32 3"</PanelFPS30CMD>
+		<PanelFPS24CMD>"service call AGPService 102 i32 24 i32 3"</PanelFPS24CMD>
+		<PanelFPS10CMD>"service call AGPService 102 i32 10 i32 3"</PanelFPS10CMD>
+		<PanelFPS1CMD>"service call AGPService 102 i32 1 i32 3"</PanelFPS1CMD>
+
+		<!--Hbm support-->
+		<LocalHBMSupport>1</LocalHBMSupport>
+		<LocalHBMThreshold>"2749, 4095"</LocalHBMThreshold>
+		<LocalHBMDdic>0</LocalHBMDdic>
+		<!--Panel version support-->
+		<PanelVersionSupport>1</PanelVersionSupport>
+		<!-- Fac Check Mipi -->
+		<PanelCheckMipiSupport>1</PanelCheckMipiSupport>
+		<PanelCheckMipiMaxNum>3</PanelCheckMipiMaxNum>
+
+		<!-- spr  -->
+		<SprSupport>1</SprSupport>
+		<!-- lcd_kit_parse_spr_info -->
+		<SprCtrlValue>5219</SprCtrlValue>
+		<SprPixEvenValue>21520</SprPixEvenValue>
+		<SprPixOddValue>17185</SprPixOddValue>
+		<SprPixPanelValue>136</SprPixPanelValue>
+		<!-- lcd_kit_spr_core_coeffs_r_set -->
+		<SprCoeffV0h0R0Value>1052672</SprCoeffV0h0R0Value>
+		<SprCoeffV0h0R1Value>4112</SprCoeffV0h0R1Value>
+		<SprCoeffV0h1R0Value>0</SprCoeffV0h1R0Value>
+		<SprCoeffV0h1R1Value>0</SprCoeffV0h1R1Value>
+		<SprCoeffV1h0R0Value>0</SprCoeffV1h0R0Value>
+		<SprCoeffV1h0R1Value>0</SprCoeffV1h0R1Value>
+		<SprCoeffV1h1R0Value>1052672</SprCoeffV1h1R0Value>
+		<SprCoeffV1h1R1Value>4112</SprCoeffV1h1R1Value>
+		<!-- lcd_kit_spr_core_coeffs_g_set -->
+		<SprCoeffV0h0G0Value>7936</SprCoeffV0h0G0Value>
+		<SprCoeffV0h0G1Value>7936</SprCoeffV0h0G1Value>
+		<SprCoeffV0h1G0Value>7936</SprCoeffV0h1G0Value>
+		<SprCoeffV0h1G1Value>7936</SprCoeffV0h1G1Value>
+		<SprCoeffV1h0G0Value>7936</SprCoeffV1h0G0Value>
+		<SprCoeffV1h0G1Value>7936</SprCoeffV1h0G1Value>
+		<SprCoeffV1h1G0Value>7936</SprCoeffV1h1G0Value>
+		<SprCoeffV1h1G1Value>7936</SprCoeffV1h1G1Value>
+		<!-- lcd_kit_spr_core_coeffs_b_set -->
+		<SprCoeffV0h0B0Value>0</SprCoeffV0h0B0Value>
+		<SprCoeffV0h0B1Value>0</SprCoeffV0h0B1Value>
+		<SprCoeffV0h1B0Value>1052672</SprCoeffV0h1B0Value>
+		<SprCoeffV0h1B1Value>4112</SprCoeffV0h1B1Value>
+		<SprCoeffV1h0B0Value>1052672</SprCoeffV1h0B0Value>
+		<SprCoeffV1h0B1Value>4112</SprCoeffV1h0B1Value>
+		<SprCoeffV1h1B0Value>0</SprCoeffV1h1B0Value>
+		<SprCoeffV1h1B1Value>0</SprCoeffV1h1B1Value>
+		<!-- lcd_kit_spr_core_larea_set -->
+		<SprLareaStartValue>26214600</SprLareaStartValue>
+		<SprLareaEndValue>39322000</SprLareaEndValue>
+		<SprLareaoOffsetValue>65537</SprLareaoOffsetValue>
+		<SprLareaGainValue>8421504</SprLareaGainValue>
+		<SprLareaBorderRValue>2155905152</SprLareaBorderRValue>
+		<SprLareaBorderGValue>2155905152</SprLareaBorderGValue>
+		<SprLareaBorderBValue>2155905152</SprLareaBorderBValue>
+
+		<SprBorDerlrValueR>8388736</SprBorDerlrValueR>
+		<SprBordertbValueR>4194432</SprBordertbValueR>
+		<SprBorDerlrValueG>4194432</SprBorDerlrValueG>
+		<SprBordertbValueG>8388672</SprBordertbValueG>
+		<SprBorDerlrValueB>8388736</SprBorDerlrValueB>
+		<SprBordertbValueB>8388736</SprBordertbValueB>
+		<SprPixgainRegValue>8388736</SprPixgainRegValue>
+		<SprPixgainReg1Value>128</SprPixgainReg1Value>
+		<SprP0BorderValue>0</SprP0BorderValue>
+		<SprP1BorderValue>4977855</SprP1BorderValue>
+		<SprP2BorderValue>0</SprP2BorderValue>
+		<SprP3BorderValue>11008639</SprP3BorderValue>
+		<!-- lcd_kit_spr_core_blend_set -->
+		<SprBlendValue>2031648</SprBlendValue>
+		<SprWeightValue>268435488</SprWeightValue>
+		<SprEdgestrRValue>272629888</SprEdgestrRValue>
+		<SprEdgestrGValue>272629888</SprEdgestrGValue>
+		<SprEdgestrBValue>272629888</SprEdgestrBValue>
+		<SprDirMinValue>0</SprDirMinValue>
+		<SprDirMaxValue>67240192</SprDirMaxValue>
+		<!-- lcd_kit_spr_core_diffdirgain_set -->
+		<SprDiffR0Value>0</SprDiffR0Value>
+		<SprDiffR1Value>687865856</SprDiffR1Value>
+		<SprDiffG0Value>687865856</SprDiffG0Value>
+		<SprDiffG1Value>0</SprDiffG1Value>
+		<SprDiffB0Value>0</SprDiffB0Value>
+		<SprDiffB1Value>687865856</SprDiffB1Value>
+		<!-- lcd_kit_spr_core_bd_set -->
+		<SprHorzgradblendValue>4112</SprHorzgradblendValue>
+		<SprHorzbdbldValue>268959776</SprHorzbdbldValue>
+		<SprHorzbdweightValue>256</SprHorzbdweightValue>
+		<SprVertbdbldValue>268959776</SprVertbdbldValue>
+		<SprVertbdweightValue>256</SprVertbdweightValue>
+		<SprVertbdGainRValue>12800</SprVertbdGainRValue>
+		<SprVertbdGainGValue>40</SprVertbdGainGValue>
+		<SprVertbdGainBValue>12800</SprVertbdGainBValue>
+		<!-- lcd_kit_spr_degamma_gamma_set -->
+		<SprGammaEnValue>1</SprGammaEnValue>
+		<SprGammaShiftenValue>1</SprGammaShiftenValue>
+		<SprDegammaEnValue>1</SprDegammaEnValue>
+		<!-- lcd_kit_spr_datapack_set -->
+		<SprDatapackCtrlValue>5</SprDatapackCtrlValue>
+		<!-- lcd_kit_spr_txip_set -->
+		<SprTxipCtrlValue>0</SprTxipCtrlValue>
+		<SprTxipCoef0Value>0</SprTxipCoef0Value>
+		<SprTxipCoef1Value>0</SprTxipCoef1Value>
+		<SprTxipCoef2Value>0</SprTxipCoef2Value>
+		<SprTxipCoef3Value>0</SprTxipCoef3Value>
+		<SprTxipOffset0Value>0</SprTxipOffset0Value>
+		<SprTxipOffset1Value>0</SprTxipOffset1Value>
+		<SprTxipClipValue>0</SprTxipClipValue>
+
+		<!-- uefi AP SPR -->
+		<LcdKitSprSize>176096447</LcdKitSprSize>
+		<LcdKitSprCtrl>5219</LcdKitSprCtrl>
+		<LcdKitSprPixEven>21520</LcdKitSprPixEven>
+		<LcdKitSprPixOdd>17185</LcdKitSprPixOdd>
+		<LcdKitSprPixPanel>136</LcdKitSprPixPanel>
+
+		<LcdKitSprCoeffV0h0R0>1052672</LcdKitSprCoeffV0h0R0>
+		<LcdKitSprCoeffV0h0R1>4112</LcdKitSprCoeffV0h0R1>
+		<LcdKitSprCoeffV0h1R0>0</LcdKitSprCoeffV0h1R0>
+		<LcdKitSprCoeffV0h1R1>0</LcdKitSprCoeffV0h1R1>
+		<LcdKitSprCoeffV1h0R0>0</LcdKitSprCoeffV1h0R0>
+		<LcdKitSprCoeffV1h0R1>0</LcdKitSprCoeffV1h0R1>
+		<LcdKitSprCoeffV1h1R0>1052672</LcdKitSprCoeffV1h1R0>
+		<LcdKitSprCoeffV1h1R1>4112</LcdKitSprCoeffV1h1R1>
+		<LcdKitSprCoeffV0h0G0>7936</LcdKitSprCoeffV0h0G0>
+		<LcdKitSprCoeffV0h0G1>7936</LcdKitSprCoeffV0h0G1>
+
+		<LcdKitSprCoeffV0h1G0>7936</LcdKitSprCoeffV0h1G0>
+		<LcdKitSprCoeffV0h1G1>7936</LcdKitSprCoeffV0h1G1>
+		<LcdKitSprCoeffV1h0G0>7936</LcdKitSprCoeffV1h0G0>
+		<LcdKitSprCoeffV1h0G1>7936</LcdKitSprCoeffV1h0G1>
+		<LcdKitSprCoeffV1h1G0>7936</LcdKitSprCoeffV1h1G0>
+
+		<LcdKitSprCoeffV1h1G1>7936</LcdKitSprCoeffV1h1G1>
+		<LcdKitSprCoeffV0h0B1>0</LcdKitSprCoeffV0h0B1>
+		<LcdKitSprCoeffV0h0B0>0</LcdKitSprCoeffV0h0B0>
+		<LcdKitSprCoeffV0h1B0>1052672</LcdKitSprCoeffV0h1B0>
+		<LcdKitSprCoeffV0h1B1>4112</LcdKitSprCoeffV0h1B1>
+
+		<LcdKitSprCoeffV1h0B0>1052672</LcdKitSprCoeffV1h0B0>
+		<LcdKitSprCoeffV1h0B1>4112</LcdKitSprCoeffV1h0B1>
+		<LcdKitSprCoeffV1h1B0>0</LcdKitSprCoeffV1h1B0>
+		<LcdKitSprCoeffV1h1B1>0</LcdKitSprCoeffV1h1B1>
+		<LcdKitSprLareaStart>26214600</LcdKitSprLareaStart>
+
+		<LcdKitSprLareaEnd>39322000</LcdKitSprLareaEnd>
+		<LcdKitSprLareaOffset>65537</LcdKitSprLareaOffset>
+		<LcdKitSprLareaGain>8421504</LcdKitSprLareaGain>
+		<LcdKitSprLareaBorderR>2155905152</LcdKitSprLareaBorderR>
+		<LcdKitSprLareaBorderG>2155905152</LcdKitSprLareaBorderG>
+
+		<LcdKitSprLareaBorderB>2155905152</LcdKitSprLareaBorderB>
+		<LcdKitSprRBorderlr>8388736</LcdKitSprRBorderlr>
+		<LcdKitSprRBordertb>4194432</LcdKitSprRBordertb>
+
+		<LcdKitSprGBorderlr>4194432</LcdKitSprGBorderlr>
+		<LcdKitSprGBordertb>8388672</LcdKitSprGBordertb>
+		<LcdKitSprBBorderlr>8388736</LcdKitSprBBorderlr>
+
+		<LcdKitSprBBordertb>8388736</LcdKitSprBBordertb>
+		<LcdKitSprPixgainReg>8388736</LcdKitSprPixgainReg>
+		<LcdKitSprPixgainReg1>128</LcdKitSprPixgainReg1>
+
+		<LcdKitSprP0Border>0</LcdKitSprP0Border>
+		<LcdKitSprP1Border>4977855</LcdKitSprP1Border>
+		<LcdKitSprP2Border>0</LcdKitSprP2Border>
+
+		<LcdKitSprP3Border>11008639</LcdKitSprP3Border>
+		<LcdKitSprBlend>2031648</LcdKitSprBlend>
+		<LcdKitSprWeight>268435488</LcdKitSprWeight>
+
+		<!-- lcd_kit_spr_core_larea_set -->
+		<LcdKitSprEdgestrR>272629888</LcdKitSprEdgestrR>
+		<LcdKitSprEdgestrG>272629888</LcdKitSprEdgestrG>
+		<LcdKitSprEdgestrB>272629888</LcdKitSprEdgestrB>
+
+		<LcdKitSprDirMin>0</LcdKitSprDirMin>
+		<LcdKitSprDirMax>67240192</LcdKitSprDirMax>
+		<LcdKitSprDiffR0>0</LcdKitSprDiffR0>
+
+		<LcdKitSprDiffR1>687865856</LcdKitSprDiffR1>
+		<LcdKitSprDiffG0>687865856</LcdKitSprDiffG0>
+		<LcdKitSprDiffG1>0</LcdKitSprDiffG1>
+
+		<LcdKitSprDiffB0>0</LcdKitSprDiffB0>
+		<LcdKitSprDiffB1>687865856</LcdKitSprDiffB1>
+		<LcdKitSprHorzgradblend>4112</LcdKitSprHorzgradblend>
+		<LcdKitSprHorzbdbld>268959776</LcdKitSprHorzbdbld>
+
+		<LcdKitSprHorzbdweight>256</LcdKitSprHorzbdweight>
+		<LcdKitSprVertbdbld>268959776</LcdKitSprVertbdbld>
+		<LcdKitSprVertbdweight>256</LcdKitSprVertbdweight>
+		<LcdKitSprVertbdGainR>12800</LcdKitSprVertbdGainR>
+		<LcdKitSprVertbdGainG>40</LcdKitSprVertbdGainG>
+
+		<LcdKitSprVertbdGainB>12800</LcdKitSprVertbdGainB>
+		<LcdKitSprGammaEn>1</LcdKitSprGammaEn>
+		<LcdKitSprGammaShiften>1</LcdKitSprGammaShiften>
+		<LcdKitSprDegammaEn>1</LcdKitSprDegammaEn>
+		<LcdKitSprDatapackCtrl>5</LcdKitSprDatapackCtrl>
+		<LcdKitSprDatapackSize>79628927</LcdKitSprDatapackSize>
+	</PanelEntry>
+</hwlcd>

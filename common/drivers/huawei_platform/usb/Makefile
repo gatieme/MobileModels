@@ -1,0 +1,9 @@
+# SPDX-License-Identifier: GPL-2.0
+obj-$(CONFIG_HUAWEI_PD) += pd/
+obj-$(CONFIG_USB_SWITCH) += switch/
+obj-$(CONFIG_ULOG_TRACE) += ulog_trace/
+obj-$(CONFIG_CUST_ATTR_GLINK) += cust_attr/
+obj-$(CONFIG_HWUSB_EXT_FUNC) += function-huawei/
+obj-$(CONFIG_USB_EXTRA_MODEM) += usb_extra_modem/
+obj-$(CONFIG_POGO_PIN) += hw_pogopin/
+obj-$(CONFIG_HWUSB_MISC) += misc/

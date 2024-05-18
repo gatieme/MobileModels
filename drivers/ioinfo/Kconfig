@@ -1,0 +1,22 @@
+config PROC_IO_INFO
+	tristate "/proc/ioinfo support"
+	default n
+	help
+	  get IO information, include disk io stat, io top, io wait.
+config HONOR_HOTFILE_DETECT
+	bool "detect and protect hot files"
+	depends on TRACING && MEMCG_PROTECT_LRU
+	default n
+	help
+	  detect and protect hot files for system and top application
+config HONOR_HOTFILE_DETECT_DEBUG
+	bool "detect and protect hot files"
+	depends on HONOR_HOTFILE_DETECT
+	default n
+	help
+	  debug information for hot files detect
+config HONOR_IO_INFO_DEBUG
+	bool "for io info debug"
+	default n
+	help
+	  debug io info incluing io_stat and pgcache_stat

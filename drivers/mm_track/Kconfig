@@ -1,0 +1,9 @@
+config HN_MM_TRACK
+	bool "Honor memory tracker driver"
+	default n
+	help
+	  This feature support to track kernel memory, including tracking slub
+	  allocation and free, slub detail memory, vmalloc detail memory. More
+	  fuctions to be continued.
+
+source "drivers/mm_track/test_case/Kconfig"

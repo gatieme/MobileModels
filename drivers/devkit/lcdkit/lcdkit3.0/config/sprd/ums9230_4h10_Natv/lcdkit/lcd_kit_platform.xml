@@ -1,0 +1,143 @@
+<hwlcd>
+	<Version>1.1</Version>
+
+	<!-- any supported lcd Panel, add it here! very important -->
+	<lcdlist>
+		<!-- format: -->
+		<!-- panel-name, gpio, brdid(product_id), product_name, product_floder, version_floder -->
+		<!-- panel-name : must same with panel xml file name -->
+		<!-- product & version folder: must same with the folder name or 'def' -->
+		<lcd>auo-otm1901a-5p2-1080p-video-default,      0x0A,   1000,    cma,    cma,  def     </lcd>
+		<lcd>170-520-6p745,                             0x04,   1000,    cma,    cma,  def     </lcd>
+		<lcd>150-520-6p745,                             0x01,   1000,    cma,    cma,  def     </lcd>
+		<lcd>140-520-6p745,                             0x00,   1000,    cma,    cma,  def     </lcd>
+	</lcdlist>
+
+	<PanelEntry>
+		<!--mipi config start-->
+		<!-- 0:MCU,1:RGB,2:DSI,3:SPI,4:LVDS -->
+		<PanelInterface>2</PanelInterface>
+		<!-- 0:cmd,1:burst-vdo,2:event-vdo,3:plus-vdo -->
+		<PanelDsiMode>1</PanelDsiMode>
+		<!--Mipi Phy Mode 0:Dphy 1:Cphy-->
+		<MipiPhyMode>0</MipiPhyMode>
+		<!--Pixel clock :Hz-->
+		<PanelPxlClk>96000000</PanelPxlClk>
+		<!--mipi data rate :kbps -->
+		<PanelDataRate>921000</PanelDataRate>
+		<!--mipi escape clock :kHz -->
+		<MipiEscapeClk>20000</MipiEscapeClk>
+		<!--Vrefresh setting-->
+		<VReFresh>60</VReFresh>
+		<!--Mipi lane number:c-phy:0-1port, 1-2port, 2-3port d-phy:1-1lane, 2-2lane, 3-3lane, 4-4lane-->
+		<MipiLaneNums>4</MipiLaneNums>
+		<!--Mipi non continue enable:0-continue mode, 1-non continue mode-->
+		<MipiNonContinueEnable>0</MipiNonContinueEnable>
+		<!--Mipi wirte:0-gerneric mode, 1-DCS mode-->
+		<MipiUseDcsWrite>1</MipiUseDcsWrite>
+		<!--0:RGB888,1:RGB666, 2:RGB666-packed,3:RGB565 -->
+		<DsiColorFormat>0</DsiColorFormat>
+
+		<!--Esd enable-->
+		<PanelEsdSupport>0</PanelEsdSupport>
+		<!--Esd check mode: 0:reg 1:TE-->
+		<PanelEsdCheckMode>0</PanelEsdCheckMode>
+		<EsdCheckTimePeriod>5000</EsdCheckTimePeriod>
+
+		<!--Mipi read cmd:0-DCS, 1-gerneric and DCS-->
+		<MipiReadGcsSupport>1</MipiReadGcsSupport>
+
+		<!--rgbw support-->
+		<PanelRgbwSupport>0</PanelRgbwSupport>
+
+		<!--bl max type:0-not support, 1-ddic ytpe-->
+		<PanelGetBlMaxNitType>0</PanelGetBlMaxNitType>
+		<PanelGetBlMaxNitOffset>400</PanelGetBlMaxNitOffset>
+		<!--bl max nit adjust:0-not support, 1- suport refer value-->
+		<PanelMaxNitAdjust>0</PanelMaxNitAdjust>
+		<PanelMaxNitRefer>530</PanelMaxNitRefer>
+		<!--bl max nit-->
+		<PanelBlMaxnit>0</PanelBlMaxnit>
+		<!--bl min brightness setting-->
+		<PanelBlmin>4</PanelBlmin>
+		<!--bl max brightness setting-->
+		<PanelBlmax>255</PanelBlmax>
+		<!--lk bl max brightness setting-->
+		<PanelBlBoot>255</PanelBlBoot>
+        <!--bl type: 0-pwm, 1-dcs, 2-backlight ic, 3-backlight ic and dcs-->
+        <PanelBlType>1</PanelBlType>
+		<!--bl ctrl type setting-->
+		<PanelBlIcCtrlType>0</PanelBlIcCtrlType>
+		<!--bias ctrl type setting-->
+		<PanelBiasIcCtrlType>0</PanelBiasIcCtrlType>
+		<!--gpio offset number setting-->
+		<PanelGpioOffset>0</PanelGpioOffset>
+		<!--backlight order-->
+		<BacklightOrder>0</BacklightOrder>
+
+		<!--Panel quickly sleep out support-->
+		<PanelQuicklySleepOutSupport>0</PanelQuicklySleepOutSupport>
+		<PanelQuicklySleepOutInterval>0</PanelQuicklySleepOutInterval>
+		<IMaxLcdLuminance>500</IMaxLcdLuminance>
+		<IMinLcdLuminance>3</IMinLcdLuminance>
+
+		<!--Thp Proximity support-->
+		<PanelThpProximitySupport>0</PanelThpProximitySupport>
+		<ThpProximityResetDelayMin>0</ThpProximityResetDelayMin>
+
+		<!--Tp color support-->
+		<TpColorSupport>0</TpColorSupport>
+
+		<!--sn code support-->
+		<PanelSnCodeSupport>0</PanelSnCodeSupport>
+
+		<!--Fps fuction-->
+		<PanelFpsUpdtSupport>0</PanelFpsUpdtSupport>
+		<DoesLcdPowerOnTp>0</DoesLcdPowerOnTp>
+
+		<!--BTB check Support-->
+		<LcdBtbSupport>0</LcdBtbSupport>
+		<LcdBtbCheckType>0</LcdBtbCheckType>
+		<LcdBtbGpio>"73, 76"</LcdBtbGpio>
+
+		<!--Project id support-->
+		<PanelProjectIdSupport>0</PanelProjectIdSupport>
+		<!--PanelOnAlwaysNeedReset-->
+		<PanelOnAlwaysNeedReset>0</PanelOnAlwaysNeedReset>
+
+		<!--OemInfo support-->
+		<OemInfoSupport>0</OemInfoSupport>
+		<!--OemBarcode2DSupport support-->
+		<OemBarcode2DSupport>0</OemBarcode2DSupport>
+		<!--OemBarcode2DNumOffset-->
+		<OemBarcode2DNumOffset>0</OemBarcode2DNumOffset>
+
+		<!--Running test config start-->
+		<!--Pt station test support-->
+		<PanelPtTestSupport>0</PanelPtTestSupport>
+		<!--Dot/column inversion test support-->
+		<PanelInversionSupport>0</PanelInversionSupport>
+		<!--Check panel power status test support-->
+		<PanelCheckRegSupport>0</PanelCheckRegSupport>
+
+		<!--event send
+		event, data, delay/sync, no-sync
+		event:0-NONE, 1-VCI, 2-IOVCC, 3-VSP, 4-VSN, 5-RESET, 6-MIPI init code, 7-TS early-event, 8-TS later-event, 9-VDD, 10-AOD, 11-BIAS
+		data:0-power off, 1-power on
+		delay:ms/TS:0-no-sync 1-sync
+		-->
+		<!--Power on timming-->
+		<PowerOnStage>"3, 1, 0
+				4, 1, 0
+				11, 1, 0"</PowerOnStage>
+		<LPOnStage>"0, 0, 0"</LPOnStage>
+		<HSOnStage>"0, 0, 0"</HSOnStage>
+
+		<!--Power off timming-->
+		<HSOffStage>"0, 0, 0"</HSOffStage>
+		<LPOffStage>"0, 0, 0"</LPOffStage>
+		<PowerOffStage>"4, 0, 0
+				3, 0, 0"</PowerOffStage>
+
+	</PanelEntry>
+</hwlcd>

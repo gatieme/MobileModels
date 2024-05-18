@@ -1,0 +1,8 @@
+menuconfig HN_EMCOM_NSTACK
+	bool "Honor Emcom Nstack"
+	depends on HONOR_EMCOM
+	default n
+
+if HN_EMCOM_NSTACK
+source "drivers/emcom/nstack/fi/Kconfig"
+endif # if HN_EMCOM_NSTACK

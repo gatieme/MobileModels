@@ -1,0 +1,3 @@
+config HONOR_OPMP
+	bool "Honor opmp heartbeat feature support"
+	default n

@@ -1,0 +1,12 @@
+# SPDX-License-Identifier: GPL-2.0-only
+config HONOR_DUBAI_COMMON
+	bool "Honor DUBAI Common Part"
+	default n
+	help
+	  Control DUBAI to insert code in kernel
+
+config HONOR_DUBAI_GPU_COMMON
+	bool "Honor DUBAI Gpu Common Part"
+	default n
+	help
+	  Control DUBAI to insert Code of gpu part in kernel

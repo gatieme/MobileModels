@@ -1,0 +1,61 @@
+# SPDX-License-Identifier: GPL-2.0
+# Hyperhold container backend device configuration
+
+# Selected when system need hyperhold container
+config HYPERHOLD_CORE
+	bool "Hyperhold container device support"
+#	depends on ZRAM && HYPERHOLD && ZS_MALLOC_EXT
+    depends on HYPERHOLD && ZS_MALLOC_EXT
+	default n
+	help
+	  Say Y here if you want to use the hyperhold
+	  as the backend device in ZRAM.
+	  If unsure, say N here.
+	  This module can't be compiled as a module,
+	  the module is as one part of the ZRAM driver.
+
+config HYPERHOLD_DEBUG_FS
+	bool "Hyperhold debug fs proc"
+	depends on HYPERHOLD
+	default n
+	help
+	  Say Y here if you want to use debug proc of
+	  hyperhold
+
+config MAS_BLK
+	bool "Hyperhold block"
+	depends on HYPERHOLD
+	default n
+	help
+	  Say Y here if you want to use interfaces
+	  provided by the storage
+
+config HYPERHOLD_UFS
+	bool "hyperhold ufs health query"
+	depends on HYPERHOLD_CORE && !MAS_BLK
+	default n
+	help
+	  Say Y here if MAS_BLK not implemnted.
+config HYPERHOLD_GKI
+	bool "hyperhold gki"
+	default n
+	help
+	  This feature supports hyperhold gki
+config HYPERHOLD_GKI_DEBUG
+	bool "hyperhold gki debug"
+	depends on HYPERHOLD_GKI
+	default n
+	help
+	  This feature supports hyperhold gki debug
+config ZSWAPD_GKI
+	bool "hyperhold gki zswapd"
+	default n
+	help
+	  This feature supports hyperhold gki zswapd
+
+config RECLAIM_OPT
+        bool "To optimize the reclaim"
+        default n
+        help
+	  To optimize the reclaim.set reclaim thread cpus_allowed.
+

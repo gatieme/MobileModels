@@ -1,0 +1,15 @@
+#
+# honor hitrace interface support in kernel
+#
+
+config HONOR_HITRACE
+	tristate "honor HITRACE"
+	default n
+	help
+	  This driver support for honor hitrace solution.
+
+config HONOR_HITRACE_DEBUG
+	tristate "honor HITRACE debug"
+	default n
+	help
+	  It only used to test hitrace driver

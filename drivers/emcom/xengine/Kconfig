@@ -1,0 +1,8 @@
+config HONOR_XENGINE
+	bool "Honor xengine feature support"
+	default n
+
+config HONOR_EMCOM_CHANNEL
+	bool "Honor emcom channel feature support"
+	default n
+

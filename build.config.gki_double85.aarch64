@@ -1,0 +1,7 @@
+DEFCONFIG=double85_defconfig
+FRAGMENT_CONFIG_1=${KERNEL_DIR}/arch/arm64/configs/perf.fragment
+FRAGMENT_CONFIG_2=${KERNEL_DIR}/arch/arm64/configs/consolidate.fragment
+FRAGMENT_CONFIG_3=${KERNEL_DIR}/arch/arm64/configs/factory.fragment
+FRAGMENT_CONFIG_4=${KERNEL_DIR}/arch/arm64/configs/double85.fragment
+PRE_DEFCONFIG_CMDS="KCONFIG_CONFIG=${ROOT_DIR}/${KERNEL_DIR}/arch/arm64/configs/${DEFCONFIG} ${ROOT_DIR}/${KERNEL_DIR}/scripts/kconfig/merge_config.sh -m -r ${ROOT_DIR}/${KERNEL_DIR}/arch/arm64/configs/gki_defconfig ${ROOT_DIR}/${FRAGMENT_CONFIG_1} ${ROOT_DIR}/${FRAGMENT_CONFIG_2} ${ROOT_DIR}/${FRAGMENT_CONFIG_3} ${ROOT_DIR}/${FRAGMENT_CONFIG_4}"
+POST_DEFCONFIG_CMDS="rm ${ROOT_DIR}/${KERNEL_DIR}/arch/arm64/configs/${DEFCONFIG}"

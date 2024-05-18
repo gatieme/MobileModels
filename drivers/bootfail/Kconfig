@@ -1,0 +1,52 @@
+#
+# honor device state monitor configuration
+#
+
+config BOOT_DETECTOR
+	tristate "boot detector"
+	default n
+	select BOOT_RECOVERY
+	select BOOT_DETECTOR_GKI if BOOT_DETECTOR=m
+	help
+	  If you say yes here you get support for honor Boot Detector solution.
+
+config BOOT_DETECTOR_GKI
+	bool "Boot Detector for GKI"
+	depends on BOOT_DETECTOR
+	default n
+
+config BOOT_DETECTOR_QCOM
+	bool "Boot Detector for qcom"
+	depends on BOOT_DETECTOR
+	default n
+	help
+	  If you say yes here you get support for honor Boot Detector solution on qcom.
+
+config BOOT_DETECTOR_MTK
+	bool "Boot Detector for mtk"
+	depends on BOOT_DETECTOR
+	default n
+	help
+	  If you say yes here you get support for honor Boot Detector solution on mtk.
+
+config BOOT_DETECTOR_MSTAR
+	bool "Boot Detector for mstar"
+	depends on BOOT_DETECTOR
+	default n
+	help
+	  If you say yes here you get support for honor Boot Detector solution on mstar.
+
+config BOOT_DETECTOR_SPRD
+	bool "Boot Detector for sprd"
+	depends on BOOT_DETECTOR
+	default n
+	help
+	  If you say yes here you get support for honor Boot Detector solution on mtk-4g.
+
+config BOOT_RECOVERY
+	bool "use Boot Recovery"
+	depends on BOOT_DETECTOR
+	default n
+	help
+	  If you say yes here you get support for honor Boot Recovery solution
+

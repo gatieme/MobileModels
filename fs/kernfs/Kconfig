@@ -1,0 +1,14 @@
+# SPDX-License-Identifier: GPL-2.0-only
+#
+# KERNFS should be selected by its users
+#
+
+config KERNFS
+	bool
+	default n
+
+config KERNFS_RWSEM
+	bool "for kernfs rwsem"
+	default n
+	help
+	  switches the global kernfs_rwsem to per-fs lock

@@ -1,0 +1,42 @@
+# Copyright (c) Honor Device Co., Ltd. 2017-2020. All rights reserved.
+#
+# MAGIC Integrity Measurement Architecture(EIMA) configuration
+#
+
+config HONOR_EIMA
+	bool "enables HONOR MAGIC Integrity Measurement Architecture"
+	default n
+	help
+	  The MAGIC Integrity Measurement Architecture (EIMA)
+	  framework is composed of a set of subsystems that
+	  are needed to measure the integrity of the platform
+	  and inform the decision on platform integrity to
+	  clients who seek such services.
+config HONOR_ENG_EIMA
+	bool "Honor MAGIC for engineering mode debug"
+	depends on HONOR_EIMA
+	default n
+	help
+	  This option should only be enabled for engineering mode & debug test.
+	  In engineering mode, EIMA will be turnoff(default) after init,
+	  tester can use supported interface to turn it on, and do debug test.
+config HONOR_EIMA_ACCESS_CONTROL
+	bool "enables one process access control by verifying the integrity of other processes"
+	depends on HONOR_EIMA
+	default n
+	help
+	  If the option is on, one process can request EIMA
+	  to verify the integrity of other processes by including libeima.
+	  The signature of the RE segment of the other process is generated on
+	  the Signature Center of Honor CBG and sent to EIMA as an input.
+	  The signature is verified through libeima with the corresponding public
+	  key. After successful verification, the hash is compared with the hash
+	  data computed by EIMA. Then EIMA returns the result to the process.
+config HONOR_EIMA_GKI
+	bool "Honor MAGIC for GKI"
+	depends on HONOR_EIMA
+	default n
+	help
+	  This option should only be enabled for engineering mode & debug test.
+	  In engineering mode, EIMA will be turnoff(default) after init,
+	  tester can use supported interface to turn it on, and do debug test.

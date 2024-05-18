@@ -1,0 +1,68 @@
+#
+# Logger configuration
+#
+menu "LOGGER support"
+
+config LOGGER
+	tristate "log driver"
+	default n
+	select LOG_EXCEPTION
+	select LOG_JANK
+	select LOG_KERNEL
+	help
+	  This adds support for system-wide logging using two log buffers.
+	  Plus adds reboot watchdog for triggering logcat and xlogcat flush.
+	  These are:
+	      1: hwlog_exception, fault detection.
+	      2: hwlog_jank,  performance detection.
+	      3: hwlog_dubai, power detection.
+
+config LOGGER_EXTEND
+	bool "Logger extend support"
+	depends on LOGGER
+	default n
+	help
+	  Enable support for logger extend
+
+config LOG_EXCEPTION
+	bool "log exception feature support"
+	depends on LOGGER
+	default n
+	help
+	  Say Y here to enable log exception feature support. This allows
+	  user to send log to remote server by net.
+
+config LOG_JANK
+	bool "log jank feature support"
+	depends on LOGGER
+	default n
+	help
+	  Say Y here to enable log jank feature support. This allows
+	  user to send log to remote server by net.
+
+config LOG_KERNEL
+	bool "log feature support"
+	depends on LOGGER
+	default n
+	help
+	  Say Y here to enable log kernel feature support. This allows
+	  user to send log to remote server by net.
+
+config HIVIEW_SELINUX
+	bool "hiview selinux support"
+	depends on SECURITY && SECURITY_SELINUX
+	default n
+	help
+	  Say Y here to enable log switch feature support. This allows
+	  user to collect selinux log to hiview.
+
+config LOGGER_LEGACY
+	bool "logger legacy support"
+	depends on LOGGER
+	default n
+	help
+	  Say Y here to enable log operation with file.
+
+source "drivers/log/module_test/Kconfig"
+
+endmenu

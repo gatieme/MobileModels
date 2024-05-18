@@ -1,0 +1,4 @@
+config HN_SMARTCARE_FI
+	bool "Honor Smartcare FI"
+	depends on HN_NETWORK_MEASUREMENT
+	default n

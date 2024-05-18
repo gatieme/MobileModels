@@ -1,0 +1,27 @@
+#
+# Copyright (c) Honor Device Co., Ltd. 2021-2021. All rights reserved.
+# Description: Honor kernel stp selftest configuration
+# Author: jiayunlong <jiayunlong@hihonor.com>
+# Cryptographic API Configuration
+# Create: 2021-08-30
+#
+
+menu "Honor KERNEL STP"
+
+config HN_KERNEL_STP
+	tristate "enables Honor KERNEL STP"
+	default n
+	help
+	  This option enables support for Honor kernel stp in kernel space.
+	  Honor kernel stp is a security threat perception module at kernel.
+	  each source of threat can report the risk info to native throught the kernel stp
+
+config HN_KERNEL_STP_ENG_DEBUG
+	bool "Honor KERNEL STP for engineering mode debug"
+	depends on HN_KERNEL_STP
+	default n
+	help
+	  This option should only be enabled for engineering mode & debug test.
+	  In engineering mode, more debug info can be print for tester.
+
+endmenu

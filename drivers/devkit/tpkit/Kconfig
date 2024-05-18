@@ -1,0 +1,69 @@
+#
+# honor touchscreen driver configuration
+#
+
+menuconfig HONOR_HOST_TS_KIT
+	tristate "honor HOST_TS_KIT touchscreen"
+	default n
+	help
+	  If you say yes here you get support for hostprocessing touchscreen.
+menuconfig HONOR_TS_KIT_TEST
+	bool "honor TS_KIT test"
+	default n
+	help
+	  If you say yes here you get support for honor touchscreen.
+menuconfig HONOR_TS_KIT_COMMON
+	bool "honor TS_KIT common"
+	default n
+	help
+	  If you say yes here you get support for honor touchscreen.
+menuconfig HONOR_DEVKIT_HONOR
+	tristate "honor CONFIG_DEVKIT_HONOR"
+	default n
+	help
+	  If you say yes here you get support for honor touchscreen.
+menuconfig HONOR_DEVKIT_QCOM
+	tristate "honor CONFIG_DEVKIT_QCOM"
+	default n
+	help
+	  If you say yes here you get support for honor touchscreen.
+
+menuconfig HONOR_THP_QCOM
+	tristate "honor CONFIG_THP_QCOM"
+	default n
+	help
+	  If you say yes here you get support for honor touchscreen.
+
+menuconfig HONOR_THP_MTK
+	tristate "honor CONFIG_THP_MTK"
+	default n
+	help
+	  If you say yes here you get support for honor touchscreen.
+
+menuconfig TP_QCOM_8450
+	tristate "honor TP_QCOM_8450"
+	default n
+	help
+	  If you say yes here you get support for honor touchscreen.
+
+menuconfig TP_QCOM_8550
+	tristate "honor TP_QCOM_8550"
+	default n
+	help
+	If you say yes here you get support for honor touchscreen.
+
+menuconfig TPKIT
+	tristate "honor TPKIT"
+	default n
+	help
+		If you say yes here you get support for honor touchscreen.
+
+source "drivers/devkit/tpkit/hostprocessing/Kconfig"
+source "drivers/devkit/tpkit/3_0/Kconfig"
+
+#sensor unification for differ platform
+menuconfig HONOR_TP_KIT_COLOR_INFO
+	tristate "honor TS_KIT tp color info"
+	default n
+	help
+		get the honor TS_KIT tp color information.

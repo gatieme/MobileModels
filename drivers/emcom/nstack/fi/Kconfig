@@ -1,0 +1,4 @@
+config HN_NSTACK_FI
+	bool "Honor NSTACK FI"
+	depends on HN_EMCOM_NSTACK
+	default n

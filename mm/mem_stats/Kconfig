@@ -1,0 +1,44 @@
+config MEM_STATS
+	bool "Enable mem stats"
+	default n
+
+config MEM_REPORT
+	bool "Enable mem report"
+	depends on MEM_STATS
+	default n
+
+config CMA_REPORT
+	bool "CMA alloc timeout or fail report event"
+	depends on MEM_REPORT
+	default n
+
+config DMA_BUF_REPORT
+	bool "DMA-BUF alloc timeout or fail report event"
+	depends on MEM_REPORT
+	default n
+
+config GPU_MEM_REPORT
+	bool "GPU alloc timeout or fail report event"
+	depends on MEM_REPORT
+	default n
+
+config KMALLOC_REPORT
+	bool "KMALLOC alloc fail report event"
+	depends on MEM_REPORT
+	default n
+
+config BUDDY_INFO_REPORT
+	bool "Enable buddy info event report"
+	depends on MEM_REPORT
+	default n
+
+config MEM_DETECT
+	bool "if free page、file page、anon page anomal, event report"
+	depends on MEM_STATS
+	default n
+
+config ISOLATED_DETECT
+	bool "if isolated anomal, event report"
+	depends on MEM_DETECT
+	default n
+

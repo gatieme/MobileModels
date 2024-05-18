@@ -1,0 +1,11 @@
+config HONOR_DEVICEBOX_AUDIO
+	tristate "device boxid driver"
+	default n
+	help
+		Say Y to enable device boxid driver support
+
+config AUDIO_BOXID_USE_ADC
+	tristate "device boxid driver to support adc"
+	default n
+	help
+		Say Y to enable device boxid driver to support adc

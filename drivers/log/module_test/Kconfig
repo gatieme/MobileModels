@@ -1,0 +1,10 @@
+#
+# Logger test configuration
+#
+
+config LOGGER_TEST
+	tristate "logger test support"
+	depends on LOGGER
+	default n
+	help
+	  Say m here to enable logger module test,enable with rphone.

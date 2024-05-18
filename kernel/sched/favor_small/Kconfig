@@ -1,0 +1,7 @@
+config HW_FAVOR_SMALL_CAP
+	bool "Honor config favor small capacity"
+	default n
+	help
+	  users turn on or off the switch through ioctrl, when
+	  the switch is turned on, the task witch TIF_FAVOR_SMALL_CAP
+	  will select little core.

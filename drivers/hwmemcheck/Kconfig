@@ -1,0 +1,5 @@
+config HN_MEMCHECK
+	bool "Honor memory checker driver"
+	default n
+	help
+	  This feature support to memory leak check

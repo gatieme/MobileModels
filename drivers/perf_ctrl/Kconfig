@@ -1,0 +1,51 @@
+menu "Honor Performace Control"
+
+config HONOR_PERF_CTRL
+	tristate "Honor Performance Control Drivers"
+	default n
+	help
+	  Honor Performance Control Drivers
+
+config HONOR_DDR_PERF_CTRL
+	bool "ddr perf ctrl"
+	depends on HONOR_PERF_CTRL
+	default n
+
+config HONOR_THERMAL_PERF_CTRL
+	bool "thermal perf ctrl"
+	depends on HONOR_PERF_CTRL
+	default n
+
+config RENDER_RT
+	bool "render realted thread"
+	default n
+	help
+	  Render Related Thread
+
+config RENDER_RT_DEBUG
+	bool "render realted thread test"
+	depends on RENDER_RT
+	depends on DEBUG_FS
+	default n
+	help
+	  Render Related Thread debug trace
+
+config SCHED_TASK_UTIL_CLAMP
+	bool "Support userspace constraints on a task's min/max util use"
+	default n
+
+config SCHED_PERF_CTRL
+	bool "Perf ctrl interface of sched"
+	depends on HONOR_PERF_CTRL
+	default n
+
+config HONOR_TASK_RAVG_SUM                                                                                                                                                                                       
+        bool "Honor task normalized running time sum"
+        default n
+        help
+          Sum all normalized running time for each task.
+
+config HONOR_SCHED_STAT_YIELD
+        bool "Honor yield task time statistics"
+        default n
+endmenu

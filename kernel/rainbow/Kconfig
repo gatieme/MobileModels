@@ -1,0 +1,33 @@
+config RAINBOW
+	tristate "rainbow"
+	default n
+	help
+	  rainbow framework.
+
+config RAINBOW_GKI
+	bool "rainbow for gki"
+	depends on RAINBOW
+	default n
+	help
+	  rainbow framework for gki.
+
+config RAINBOW_REASON
+	bool "rainbow_reason"
+	depends on RAINBOW
+	default n
+	help
+	  rainbow reason record reset reason.
+
+config RAINBOW_HIMNTN
+	bool "rainbow_himntn"
+	depends on RAINBOW
+	default n
+	help
+	  rainbow himntn control kernel mntn.
+
+config RAINBOW_TRACE
+	bool "rainbow_reason"
+	depends on RAINBOW
+	default n
+	help
+	  rainbow trace will record irq and schedule trace log.

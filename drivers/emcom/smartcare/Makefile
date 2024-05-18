@@ -1,0 +1,2 @@
+obj-$(CONFIG_HN_NETWORK_MEASUREMENT) += smartcare.o
+obj-$(CONFIG_HN_NETWORK_MEASUREMENT) += fi/

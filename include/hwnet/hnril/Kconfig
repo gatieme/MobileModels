@@ -1,0 +1,5 @@
+config HN_VSIM
+    tristate "send vsim statistics to RIL via netlink."
+    default n
+    help
+      This module send vsim statistics to RIL via netlink.

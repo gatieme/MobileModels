@@ -1,0 +1,5 @@
+config BOOT_TIME
+	tristate "Boot Time Recoder"
+	default n
+	help
+	  A driver to record boot time.

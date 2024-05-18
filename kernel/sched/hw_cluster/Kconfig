@@ -1,0 +1,11 @@
+config HW_SCHED_CLUSTER
+	bool "Honor related thread group"
+	default n
+	help
+	  set real time scheduler for dedicated thread
+
+config HW_SCHED_CLUSTER_DEBUG
+	bool "Honor related thread group debug"
+	default n
+	help
+	  set real time scheduler for dedicated thread

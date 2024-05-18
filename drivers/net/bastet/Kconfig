@@ -1,0 +1,8 @@
+#menu "Honor Bastet Support"
+#	depends on INET && NETFILTER
+
+config HONOR_BASTET_QCOM
+	bool "Bastet QCOM data accelerate support"
+	default n
+	help
+	  This driver provides QCOM platform data accelerate for Honor Bastet.

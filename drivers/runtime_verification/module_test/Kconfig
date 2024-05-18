@@ -1,0 +1,7 @@
+
+config RUNTIME_VERIFICATION_TEST
+	tristate "runtime verification test support"
+	depends on RUNTIME_VERIFICATION
+	default n
+	help
+	  Say m here to enable runtime verification module test.

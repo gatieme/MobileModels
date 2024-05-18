@@ -1,0 +1,219 @@
+<hwlcd>
+	<PanelEntry>
+		<PanelName>"110_506 11p1 VIDEO 1600 x 2560 project_TC822 ver_000"</PanelName>
+		<!--Ldi config start-->
+		<!--HBP setting-->
+		<HBackPorch>20</HBackPorch>
+		<!--HFP setting-->
+		<HFrontPorch>140</HFrontPorch>
+		<!--HS setting-->
+		<HPulseWidth>40</HPulseWidth>
+		<!--VBP setting-->
+		<VBackPorch>8</VBackPorch>
+		<!--VFP setting-->
+		<VFrontPorch>120</VFrontPorch>
+		<!--VS setting-->
+		<VPulseWidth>4</VPulseWidth>
+
+		<!--VReFresh setting-->
+		<VReFresh>60</VReFresh>
+		<!--Fps fuction-->
+		<FpsCmdNullPktEn>0</FpsCmdNullPktEn>
+		<FpsCmdNullPktLen>0</FpsCmdNullPktLen>
+		<PanelFpsUpdtSupport>0</PanelFpsUpdtSupport>
+		<FpsSwitchDelayMs>0</FpsSwitchDelayMs>
+		<!-- 0-60hz, 1-H60hz, 2-90hz, 3-120hz, first is default -->
+		<PanelSupportFpsList>"0"</PanelSupportFpsList>
+		<!-- HFP-HBP-HS-VFP-VBP-VS-VRE-RATE-LOWER -->
+		<FpsToHigh60DsiTimming>"60, 32, 24, 80, 60, 32, 60, 980, 0, 0"</FpsToHigh60DsiTimming>
+		<!-- HFP-HBP-HS-VFP-VBP-VS-VRE -->
+		<FpsTo90DsiTimming>"60, 32, 24, 80, 60, 32, 90, 980, 0, 32"</FpsTo90DsiTimming>
+		<!-- HFP-HBP-HS-VFP-VBP-VS-VRE -->
+		<FpsTo120DsiTimming>"60, 32, 24, 80, 60, 32, 120, 980, 0, 32"</FpsTo120DsiTimming>
+		<!--Mipi hopping support-->
+		<MipiHoppingSupport>0</MipiHoppingSupport>
+
+		<!-- 0:cmd,1:plus-vdo,2:event-mode,3:burst-vdo -->
+		<LdiDsiMode>3</LdiDsiMode>
+		<!--Mipi Phy Mode 0:Dphy 1:Cphy-->
+		<MipiPhyMode>1</MipiPhyMode>
+		<!--Mipi lane number:c-phy:0-1port, 1-2port, 2-3port d-phy:1-1lane, 2-2lane, 3-3lane, 4-4lane-->
+		<MipiLaneNums>3</MipiLaneNums>
+		<!--Panel information config start-->
+		<!--Panel type:8-video mode, 16-command mode-->
+		<PanelCmdType>8</PanelCmdType>
+		<!--Pixel clock-->
+		<PanelPxlClk>227</PanelPxlClk>
+		<!--Pixel clock division ratio-->
+		<PanelPxlClkDiv>0</PanelPxlClkDiv>
+		<!--mipi data rate pixel clock * 2-->
+		<PanelDataRate>454</PanelDataRate>
+		<PanelDataRateKhz>454000</PanelDataRateKhz>
+		<!--Mipi non continue enable:0-continue mode, 1-non continue mode-->
+		<MipiNonContinueEnable>1</MipiNonContinueEnable>
+
+		<!--Esd enable-->
+		<PanelEsdSupport>0</PanelEsdSupport>
+		<!-- Esd recovery backlight -->
+		<PanelEsdRecoveryBlSupport>0</PanelEsdRecoveryBlSupport>
+		<PanelSkipPowerOnEsdCheck>0</PanelSkipPowerOnEsdCheck>
+
+		<!--bl max type:0-not support, 1-ddic ytpe-->
+		<PanelGetBlMaxNitType>0</PanelGetBlMaxNitType>
+		<!--bl max nit-->
+		<PanelBlMaxnit>1000</PanelBlMaxnit>
+		<!--bl min brightness setting-->
+		<PanelBlmin>3</PanelBlmin>
+		<!--bl max brightness setting-->
+		<PanelBlmax>4095</PanelBlmax>
+		<!--lk bl max brightness setting-->
+		<PanelBlBoot>90</PanelBlBoot>
+		<!--bl ctrl type setting-->
+		<PanelBlIcCtrlType>3</PanelBlIcCtrlType>
+		<!--bias ctrl type setting-->
+		<PanelBiasIcCtrlType>3</PanelBiasIcCtrlType>
+
+		<!--Running test config start-->
+		<!--Dot/column inversion test support-->
+		<PanelInversionSupport>0</PanelInversionSupport>
+		<!--Check panel power status test support-->
+		<PanelCheckRegSupport>1</PanelCheckRegSupport>
+		<!--Project id support-->
+		<PanelProjectIdSupport>1</PanelProjectIdSupport>
+		<!--Tp color support-->
+		<TpColorSupport>0</TpColorSupport>
+		<!--Pt station test support-->
+		<PanelPtTestSupport>0</PanelPtTestSupport>
+		<!--characters offset of Lk fulldump display-->
+		<LkFullDumpOffset>50</LkFullDumpOffset>
+
+		<!--OemInfo support-->
+		<OemInfoSupport>0</OemInfoSupport>
+		<!--OemBarcode2DSupport support-->
+		<OemBarcode2DSupport>0</OemBarcode2DSupport>
+		<!--OemBarcode2DNumOffset-->
+		<OemBarcode2DNumOffset>0</OemBarcode2DNumOffset>
+		<!--sn code support-->
+		<PanelSnCodeSupport>0</PanelSnCodeSupport>
+
+		<!--DoesLcdPowerOnTp-->
+		<DoesLcdPowerOnTp>0</DoesLcdPowerOnTp>
+
+		<!--PanelOnAlwaysNeedReset-->
+		<PanelOnAlwaysNeedReset>0</PanelOnAlwaysNeedReset>
+
+		<!--Tp Project Id-->
+		<PanelDefaultTpProjectId>"W273AS270"</PanelDefaultTpProjectId>
+
+		<!--DSC Params-->
+		<DSCEnable>1</DSCEnable>
+		<DSCVer>17</DSCVer>
+		<DSCSliceMode>1</DSCSliceMode>
+		<DSCRgbSwap>0</DSCRgbSwap>
+		<DSCCfg>34</DSCCfg>
+		<DSCRctOn>1</DSCRctOn>
+		<DSCBitPerChannel>8</DSCBitPerChannel>
+		<DSCLineBufDepth>9</DSCLineBufDepth>
+		<DSCBpEnable>1</DSCBpEnable>
+		<DSCBitPerPixel>128</DSCBitPerPixel>
+		<DSCPicHeight>2560</DSCPicHeight>
+		<DSCPicWidth>1600</DSCPicWidth>
+		<DSCSliceHeight>20</DSCSliceHeight>
+		<DSCSliceWidth>800</DSCSliceWidth>
+		<DSCChunkSize>800</DSCChunkSize>
+		<DSCXmitDelay>512</DSCXmitDelay>
+		<DSCDecDelay>657</DSCDecDelay>
+		<DSCScaleValue>32</DSCScaleValue>
+		<DSCIncrementInterval>583</DSCIncrementInterval>
+		<DSCDecrementInterval>11</DSCDecrementInterval>
+		<DSCLineBpgOffset>12</DSCLineBpgOffset>
+		<DSCNflBpgOffset>1294</DSCNflBpgOffset>
+		<DSCSliceBpgOffset>872</DSCSliceBpgOffset>
+		<DSCInitialOffset>6144</DSCInitialOffset>
+		<DSCFinalOffset>4320</DSCFinalOffset>
+		<DSCFlatnessMinqp>3</DSCFlatnessMinqp>
+		<DSCFlatnessMaxqp>12</DSCFlatnessMaxqp>
+		<DSCRcModelSize>8192</DSCRcModelSize>
+		<DSCRcEdgeFactor>6</DSCRcEdgeFactor>
+		<DSCRcQuantIncrLimit0>11</DSCRcQuantIncrLimit0>
+		<DSCRcQuantIncrLimit1>11</DSCRcQuantIncrLimit1>
+		<DSCRcTgtOffsetHi>3</DSCRcTgtOffsetHi>
+		<DSCRcTgtOffsetLo>3</DSCRcTgtOffsetLo>
+
+		<PanelDsiDetectSupport>1</PanelDsiDetectSupport>
+		<!--lcm_if is used to distinguish for Panel Cmd single or dual Port -->
+		<PanelInterface>1</PanelInterface>
+		<!--MTK_PANEL_OUTPUT_MODE-->
+		<PanelOutputMode>0</PanelOutputMode>
+		<!--lcm_cmd_if is used to distinguish for Panel Cmd single or dual Port -->
+		<PanelCmdInterface>1</PanelCmdInterface>
+
+		<!--gpio offset number setting-->
+		<PanelGpioOffset>265</PanelGpioOffset>
+		<!--PanelOnAlwaysNeedReset-->
+		<PanelOnAlwaysNeedReset>1</PanelOnAlwaysNeedReset>
+		<!--event send
+		event, data, delay
+		event:0-NONE, 1-VCI, 2-IOVCC, 3-VSP, 4-VSN, 5-RESET, 6-MIPI, 7-TS early event, 8-TS later event, 9-vdd 10-AOD, 11-BIAS, 16-EXT-LDO-EN
+		data:0-power off, 1-power on
+		delay:ms/TS:0-no-sync 1-sync
+		-->
+		<!--Power on timming-->
+		<PowerOnStage>"2, 1, 100
+			       3, 1, 2
+			       4, 1, 2
+			      11, 1, 3
+			       5, 1, 7
+			       5, 2, 7
+			       5, 1, 51
+			       7, 1, 2
+			       6, 1, 0
+			       8, 1, 0"</PowerOnStage>
+		<LPOnStage>"0, 0, 0"</LPOnStage>
+		<HSOnStage>"0, 0, 0"</HSOnStage>
+		<LkPowerOnEarly>0</LkPowerOnEarly>
+		<LkPowerOnEarlySeq>"2, 1, 2
+                                    1, 1, 11"</LkPowerOnEarlySeq>
+
+		<!--Power off timming-->
+		<HSOffStage>"7, 0, 0
+		             8, 0, 0"</HSOffStage>
+		<LPOffStage>"0, 0, 0"</LPOffStage>
+		<PowerOffStage>"6, 0, 0
+				5, 0, 2
+			       11, 0, 5
+				4, 0, 2
+				3, 0, 5
+				2, 0, 1"</PowerOffStage>
+		<!--Power timming config end-->
+		<!--Power timming config start-->
+		<!--event define
+		mode, number, amplitude
+		mode:0-none, 1-regulator, 2-gpio
+		number:gpio num or ldo num
+		amplitude:3100000-3.1v, 1850000-1.85v, 5500000-5.5v
+		-->
+		<!--IOVccRegulator>ldo4</IOVccRegulator-->
+		<LcdIovcc>"2, 213, 1850000"</LcdIovcc>
+		<LcdReset>"2, 3, 0"</LcdReset>
+		<LcdVsp>"2, 216, 6000000"</LcdVsp>
+		<LcdVsn>"2, 212, 6000000"</LcdVsn>
+		<PowerDownVsp>"2, 216, 5500000"</PowerDownVsp>
+		<PowerDownVsn>"2, 212, 5500000"</PowerDownVsn>
+
+		<!--event send-->
+		<!--Mipi clk post adjust-->
+		<MipiClkPostAdjust>0</MipiClkPostAdjust>
+		<!--bl max nit-->
+		<PanelBlMaxNitCommand>"0x06, 0x01, 0x00, 0x00, 0x0a, 0x00, 0x01, 0xdb"</PanelBlMaxNitCommand>
+		<PanelBlMaxNitCommandState>0</PanelBlMaxNitCommandState>
+		<PanelBacklightCommand>"0x39, 0x01, 0x00, 0x00, 0x00, 0x00, 0x03, 0x61, 0x00, 0x00"</PanelBacklightCommand>
+		<PanelBlMaxNitCommandState>0</PanelBlMaxNitCommandState>
+
+		<!--hs setting-->
+		<PanelDsiHSTrail>12</PanelDsiHSTrail>
+		<PanelDsiHSZero>35</PanelDsiHSZero>
+		<PanelDsiHSPrpr>0xa</PanelDsiHSPrpr>
+
+	</PanelEntry>
+</hwlcd>

@@ -1,0 +1,36 @@
+#
+# CFI configuration
+#
+
+config HONOR_CFI_TAG
+	hex "honor cfi tag"
+	default "0x0035c000"
+	depends on HONOR_CFI_DEBUG
+	help
+	  It configs the 4-byte value used to tag function entry.
+	  Note, for ARM architecture, not all integer constants can be encoded in one instruction.
+	  Refer to "Flexible second operand" in ARM Instruction Reference for more info.
+
+config HONOR_CFI
+	bool "HONOR CFI support"
+	default n
+	help
+	  Say yes here to support the HONOR CFI feature
+	  which adds a word to the head of a function and checks the word when jump to the function,to
+	  avoid jop attack.
+	  If you are unsure, say N.
+
+config HONOR_CFI_DEBUG
+	bool "HONOR CFI test support"
+	default n
+	help
+	  Say yes here to support the HONOR CFI debug
+	  debugfs is /proc/.
+	  which give a debugfs to simulate jop attack.
+	  If you are unsure, say N.
+
+config HONOR_CFI_POINTER_INFO
+	bool "HONOR CFI POINTER INFO support"
+	default n
+	help
+	  The same config as CFI_PERMISSIVE for report.

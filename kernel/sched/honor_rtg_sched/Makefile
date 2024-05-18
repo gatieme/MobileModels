@@ -1,0 +1,15 @@
+obj-$(CONFIG_HONOR_RTG) += rtg_sched.o
+obj-$(CONFIG_HONOR_RTG_FRAME) += trans_rtg.o
+obj-$(CONFIG_HONOR_RTG_FRAME) += iaware_rtg.o
+obj-$(CONFIG_HONOR_RTG_FRAME) += proc_state.o
+obj-$(CONFIG_HONOR_RTG_FRAME) += set_rtg.o
+obj-$(CONFIG_HONOR_RTG_FRAME) += frame_timer.o
+obj-$(CONFIG_HONOR_RTG_FRAME) += frame_info.o
+obj-$(CONFIG_HONOR_RTG_FRAME) += frame_perf_ctrl.o
+obj-$(CONFIG_HONOR_RTG_AUX) += aux_info.o
+obj-$(CONFIG_HONOR_RTG_FRAME_RME) += frame_rme.o
+obj-$(CONFIG_HONOR_RTG_DEBUG) += rtg_debug.o
+obj-$(CONFIG_HONOR_RTG_DEBUG) += aux_debug.o
+obj-$(CONFIG_HONOR_RTG_DEBUG) += frame_debug.o
+obj-$(CONFIG_HONOR_RTG_PERF_CTRL) += rtg_perf_ctrl.o
+obj-$(CONFIG_HONOR_RTG_PSEUDO_TICK) += rtg_pseudo.o

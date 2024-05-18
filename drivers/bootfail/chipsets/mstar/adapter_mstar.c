@@ -1,0 +1,499 @@
+/*
+ * Copyright (c) Honor Device Co., Ltd. 2020-2023. All rights reserved.
+ * Description: implement the platform interface for boot fail
+ * Author: zhanghao
+ * Create: 2023-3-17
+ */
+
+#include "adapter_mstar.h"
+#include <linux/fs.h>
+#include <linux/io.h>
+#include <linux/slab.h>
+#include <linux/mm.h>
+#include <linux/reboot.h>
+#include <securec.h>
+#include <linux/of_address.h>
+#include <linux/platform_device.h>
+#include <linux/of_fdt.h>
+#include <linux/kernel.h>
+#include <linux/types.h>
+#include <linux/thread_info.h>
+#include <linux/uaccess.h>
+#include <linux/vmalloc.h>
+#include <linux/syscalls.h>
+#include <linux/version.h>
+#include <bootfail/core/boot_interface.h>
+#include <bootfail/chipsets/common/bootfail_common.h>
+#include <bootfail/chipsets/common/adapter_common.h>
+#include <bootfail/chipsets/common/bootfail_chipsets.h>
+
+/* bootfail reserve ddr region */
+static void *g_bf_rmem_addr;
+static unsigned long g_bf_rmem_size;
+
+#define APP_LOG_PATH "/data/log/hilogs/hiapplogcat-log"
+#define APP_LOG_PATH_MAX_LENGTH 128
+
+#define BF_BL_LOG_NAME_SIZE 16
+#define BF_KERNEL_LOG_NAME_SIZE 16
+
+#define FASTBOOTLOG_TYPE 0
+#define KMSGLOG_TYPE     1
+#define APPLOG_TYPE      2
+
+#define MBOOT_LOG_OFFSET     (4 * BF_SIZE_1K)
+
+/* ---------------------------------------
+*  |-------reserved phymem in mstar-------|
+*  | bootfail panic dump | bootfail info |
+*  |-------1K byte-------|----1K byte----|
+*  boot fail stage is in the bootfail into
+*/
+static const unsigned long boot_stage_offset = offsetof(struct bootfail_proc_param, binfo) + offsetof(struct bootfail_basic_info, stage);
+static const unsigned long kmsg_info_offset = sizeof(struct bootfail_proc_param);
+
+struct every_number_info {
+	u64 rtc_time;
+	u64 boot_time;
+	u64 bootup_keypoint;
+	u64 reboot_type;
+	u64 exce_subtype;
+	u64 fastbootlog_start_addr;
+	u64 fastbootlog_size;
+	u64 last_kmsg_start_addr;
+	u64 last_kmsg_size;
+	u64 last_applog_start_addr;
+	u64 last_applog_size;
+};
+
+void *get_bf_mem_addr(void)
+{
+	return g_bf_rmem_addr;
+}
+
+unsigned long get_bf_mem_size(void)
+{
+	return g_bf_rmem_size;
+}
+
+static int mstar_read_from_phys_mem(unsigned long dst,
+	unsigned long dst_max,
+	void *phys_mem_addr,
+	unsigned long data_len)
+{
+	unsigned long i;
+	unsigned long bytes_to_read;
+	char *pdst = NULL;
+
+	if (phys_mem_addr == NULL || dst == 0 ||
+		dst_max == 0 || data_len == 0) {
+		print_invalid_params("bootfail: dst: %u, dst_max: %u, data_len: %u\n",
+			dst, dst_max, data_len);
+		return -1;
+	}
+
+	bytes_to_read = min(dst_max, data_len);
+	pdst = (char *)(uintptr_t)dst;
+	for (i = 0; i < bytes_to_read; i++) {
+		*pdst = readb(phys_mem_addr);
+		pdst++;
+		phys_mem_addr++;
+	}
+
+	return 0;
+}
+
+static int mstar_write_to_phys_mem(unsigned long dst,
+	unsigned long dst_max,
+	void *src,
+	unsigned long src_len)
+{
+	unsigned long i;
+	unsigned long bytes_to_write;
+	char *psrc = NULL;
+	char *pdst = NULL;
+
+	if (src == NULL || dst == 0 || dst_max == 0 || src_len == 0) {
+		print_invalid_params("bootfail: dst: %u, dst_max: %u, src_len: %u\n",
+			dst, dst_max, src_len);
+		return -1;
+	}
+
+	bytes_to_write = min(dst_max, src_len);
+	pdst = (char *)(uintptr_t)dst;
+	psrc = (char *)src;
+	for (i = 0; i < bytes_to_write; i++) {
+		writeb(*psrc, pdst);
+		psrc++;
+		pdst++;
+	}
+
+	return 0;
+}
+
+static int mstar_save_kmsg_info(void)
+{
+	unsigned long addr = (unsigned long)get_bf_mem_addr();
+	unsigned long max_size = get_bf_mem_size();
+	unsigned int kmsg_info_addr = 0;
+	unsigned int kmsg_info_size = 0;
+
+	kmsg_info_addr = virt_to_phys((void *)log_buf_addr_get());
+	kmsg_info_size = log_buf_len_get();
+
+	if (max_size < BF_SIZE_1K + kmsg_info_offset + 2*sizeof(int)) {
+		print_err("fail, reserve ddr region too short, please check\n");
+		return BF_PLATFORM_ERR;
+	}
+	addr += BF_SIZE_1K + kmsg_info_offset;
+	mstar_write_to_phys_mem(addr, sizeof(int), (char *)&kmsg_info_addr, sizeof(int));
+	addr += sizeof(int);
+	mstar_write_to_phys_mem(addr, sizeof(int), (char *)&kmsg_info_size, sizeof(int));
+	print_err("set boot kmsg info done addr:0x%x, size:0x%x\n", kmsg_info_addr, kmsg_info_size);
+	return BF_OK;
+}
+
+__weak long ksys_readlink(const char __user *path, char __user *buf, int bufsiz)
+{
+	print_err("please implement ksys_readlink\n");
+	return 0;
+}
+
+long bf_readlink(const char __user *path, char __user *buf, int bufsiz)
+{
+#ifndef CONFIG_ARCH_HAS_SYSCALL_WRAPPER
+	return sys_readlink(path, buf, bufsiz);
+#else
+	return ksys_readlink(path, buf, bufsiz);
+#endif
+}
+/**
+ * @brief Init reserve ddr region, get ddr info from dtsi.
+ * @param NONE.
+ * @return BF_OK on success.
+ * @since 1.0
+ * @version 1.0
+ */
+int bf_rmem_init(void)
+{
+	struct device_node *bootfail_node = NULL;
+	const u32 *bootfail_dts_addr = NULL;
+	unsigned long addr= 0;
+
+	bootfail_node = of_find_compatible_node(NULL,
+		NULL, "mboot_log_state");
+	if (bootfail_node == 0) {
+		print_err("bootfail_mem find fail in DTSI\n");
+		goto rmem_init_err;
+	}
+	bootfail_dts_addr = of_get_address(bootfail_node, 0,
+		(u64 *)(&g_bf_rmem_size), NULL);
+	if (bootfail_dts_addr == 0) {
+		print_err("can not find bootfail mem addr\n");
+		goto rmem_init_err;
+	}
+	addr = (unsigned long)of_translate_address(bootfail_node,
+		bootfail_dts_addr);
+	if (addr == 0) {
+		print_err("bootfail mem have wrong address[0x%x]", addr);
+		goto rmem_init_err;
+	}
+	g_bf_rmem_addr = (struct rb_header *)ioremap_cache(addr, g_bf_rmem_size);
+
+	if (g_bf_rmem_addr == NULL) {
+		print_err("bootfail mem ioremap fail\n");
+		goto rmem_init_err;
+	}
+	print_err("g_bf_rmem_addr:%p, size:%x\n", g_bf_rmem_addr, g_bf_rmem_size);
+	if (mstar_save_kmsg_info() != BF_OK) {
+		print_err("mstar_save_kmsg_info failed.\n");
+	}
+	return BF_OK;
+rmem_init_err:
+	g_bf_rmem_addr = NULL;
+	g_bf_rmem_size = 0;
+	return BF_NOT_INIT_SUCC;
+}
+
+static inline void bf_mstar_degrade(int excp_type)
+{
+	print_err("unsupported\n");
+}
+
+static inline void bf_mstar_bp(int excp_type)
+{
+	print_err("unsupported\n");
+}
+
+static inline void bf_mstar_load_backup(const char *part_name)
+{
+	print_err("unsupported\n");
+}
+
+static inline void bf_mstar_notify_storage_fault(unsigned long long bopd_mode)
+{
+	print_err("unsupported\n");
+}
+
+/* Set rrecord info to mstar adapter */
+static inline void get_rrecord_part_info(struct adapter *padp)
+{
+	padp->bfi_part.dev_path = BFI_DEV_PATH;
+	padp->bfi_part.part_size = BFI_PART_SIZE;
+}
+
+/* Set reserve ddr info to mstar adapter */
+static void get_phys_mem_info(struct adapter *padp)
+{
+	padp->pyhs_mem_info.base = (uintptr_t)get_bf_mem_addr();
+	if (padp->pyhs_mem_info.base == 0) {
+		print_err("rmem addr init fail\n");
+		goto rmem_err;
+	}
+	padp->pyhs_mem_info.size = get_bf_mem_size();
+	if (padp->pyhs_mem_info.size >= BF_SIZE_1K) {
+		padp->pyhs_mem_info.size = BF_SIZE_1K;
+	} else {
+		print_err("rmem size too short\n");
+		goto rmem_err;
+	}
+	padp->pyhs_mem_info.ops.read = mstar_read_from_phys_mem;
+	padp->pyhs_mem_info.ops.write = mstar_write_to_phys_mem;
+	print_err("pyhs_mem_info:%x, %x\n", padp->pyhs_mem_info.base,
+		padp->pyhs_mem_info.size);
+	return;
+rmem_err:
+	padp->pyhs_mem_info.base = 0;
+	padp->pyhs_mem_info.size = 0;
+	return;
+}
+
+/**
+ * @brief Get mboot log.
+ * @param pbuf - desc buffer.
+ * @param buf_size - copy size, actually limited by CONFIG_PRE_CON_BUF_SZ.
+ * @return NONE.
+ * @since 1.0
+ * @version 1.0
+ */
+static void capture_bl_log(char *pbuf, unsigned int buf_size)
+{
+	char *mboot_log_addr = NULL;
+	unsigned int mboot_log_size;
+	errno_t ret;
+
+	mboot_log_addr = (char*)g_bf_rmem_addr + MBOOT_LOG_OFFSET;
+	mboot_log_size = g_bf_rmem_size - MBOOT_LOG_OFFSET;
+
+	if (mboot_log_addr == NULL || mboot_log_size == 0) {
+		print_invalid_params("mboot_log_addr=%x, mboot_log_size=%d.\n", mboot_log_addr, mboot_log_size);
+		return;
+	}
+
+	ret = memcpy_s(pbuf, buf_size,
+		mboot_log_addr, min(mboot_log_size, buf_size));
+
+	if (ret != EOK)
+		print_err("memcpy_s failed, ret: %d\n", ret);
+}
+
+/**
+ * @brief Get kernel log.
+ * @param pbuf - desc buffer.
+ * @param buf_size - copy size, actually limited by kernel log buff size
+ * @return NONE.
+ * @since 1.0
+ * @version 1.0
+ */
+
+static unsigned int get_kmsg_buf_size(void)
+{
+#ifdef CONFIG_PRINTK
+#ifndef CONFIG_BOOT_DETECTOR_GKI
+	return min(log_buf_len_get(), (unsigned int)BF_SIZE_1M);
+#else
+	return (unsigned int)BF_SIZE_1M;
+#endif
+#else
+	return log_buf_len_get();
+#endif
+}
+
+static void capture_kernel_log(char *pbuf, unsigned int buf_size)
+{
+	if (pbuf == NULL || buf_size == 0) {
+		print_invalid_params("pbuf is null or buff size zero\n");
+		return;
+	}
+#ifdef CONFIG_PRINTK
+	get_kmsg_lock(pbuf, buf_size);
+#else
+#ifndef CONFIG_BOOT_DETECTOR_GKI
+	unsigned int kbuf_size = 0;
+	char *kbuf_addr = NULL;
+	errno_t ret = -1;
+	kbuf_size = get_kmsg_buf_size();
+	kbuf_addr = log_buf_addr_get();
+	if (kbuf_addr == NULL || kbuf_size == 0) {
+		print_invalid_params("kbuf_addr err\n");
+		return;
+	}
+	ret = memcpy_s(pbuf, buf_size, kbuf_addr, min(kbuf_size, buf_size));
+	if (ret != EOK)
+		print_err("memcpy_s failed, ret: %d\n", ret);
+#endif
+#endif
+}
+
+/**
+ * @brief Set get kernel log and fastboot log method to adapter.
+ * @param padp - bootfail mstar adapter pointer
+ * @return NONE.
+ * @since 1.0
+ * @version 1.0
+ */
+static void get_log_ops_info(struct adapter *padp)
+{
+	errno_t ret;
+	/* set bl log info */
+	ret = strncpy_s(padp->bl_log_ops.log_name,
+		BF_BL_LOG_NAME_SIZE,
+		BL_LOG_NAME, min(strlen(BL_LOG_NAME),
+		sizeof(padp->bl_log_ops.log_name) - 1));
+	if (ret != EOK)
+		print_err("bl log name strncpy_s failed, ret: %d\n", ret);
+
+	padp->bl_log_ops.log_size = (unsigned int)BL_LOG_MAX_LEN;
+	padp->bl_log_ops.capture_bl_log = capture_bl_log;
+
+	/* set kernel log info */
+	ret = strncpy_s(padp->kernel_log_ops.log_name,
+		BF_KERNEL_LOG_NAME_SIZE,
+		KERNEL_LOG_NAME, min(strlen(KERNEL_LOG_NAME),
+		sizeof(padp->kernel_log_ops.log_name) - 1));
+        if (ret != EOK)
+                print_err("kernel log name strncpy_s failed, ret: %d\n", ret);
+	padp->kernel_log_ops.log_size = get_kmsg_buf_size();
+	padp->kernel_log_ops.capture_kernel_log = capture_kernel_log;
+}
+
+static void mstar_shutdown(void)
+{
+	print_err("unsupported\n");
+}
+
+static void mstar_reboot(void)
+{
+	// if panic, pstore can be supported
+	panic("bootfail");
+}
+
+/* Set reboot and shutdown method to adapter */
+static void get_sysctl_ops(struct adapter *padp)
+{
+	padp->sys_ctl.reboot = mstar_reboot;
+	padp->sys_ctl.shutdown = mstar_shutdown;
+}
+
+static int mstar_set_boot_stage(int stage)
+{
+	unsigned long addr = (unsigned long)get_bf_mem_addr();
+	unsigned long max_size = get_bf_mem_size();
+
+	if (max_size < BF_SIZE_1K + boot_stage_offset + sizeof(int)) {
+		print_err("fail, reserve ddr region too short, please check\n");
+		return BF_PLATFORM_ERR;
+	}
+	addr += BF_SIZE_1K + boot_stage_offset;
+	mstar_write_to_phys_mem(addr, sizeof(int), (char *)&stage, sizeof(int));
+	print_err("set boot stage:%x, offset=%x\n", *(unsigned *)(uintptr_t)addr, boot_stage_offset);
+	return BF_OK;
+}
+
+static int mstar_get_boot_stage(int *stage)
+{
+	unsigned long addr = (unsigned long)get_bf_mem_addr();
+	unsigned long max_size = get_bf_mem_size();
+
+	if (max_size < BF_SIZE_1K + boot_stage_offset + sizeof(int)) {
+		print_err("fail, reserve ddr region too short, please check\n");
+		return BF_PLATFORM_ERR;
+	}
+	addr += BF_SIZE_1K + boot_stage_offset;
+	mstar_read_from_phys_mem((unsigned long)(stage), sizeof(int), (void *)addr, sizeof(int));
+	print_err("read boot stage:%x\n", *(unsigned *)(uintptr_t)addr);
+	return BF_OK;
+}
+
+/**
+ * @brief Set bootstage method to adapter.
+ *        record bootstage by mstar share memory function
+ * @param padp - bootfail mstar adapter pointer
+ * @return NONE.
+ * @since 1.0
+ * @version 1.0
+ */
+static void get_boot_stage_ops(struct adapter *padp)
+{
+	if (get_bf_mem_addr() == NULL || get_bf_mem_size() <= BF_SIZE_1K)
+		print_err("bootstage function err, please check\n");
+
+	padp->stage_ops.set_stage = mstar_set_boot_stage;
+	padp->stage_ops.get_stage = mstar_get_boot_stage;
+}
+
+/* mstar platform adapter init */
+static void platform_adapter_init(struct adapter *padp)
+{
+	if (padp == NULL) {
+		print_err("padp is NULL\n");
+		return;
+	}
+
+	get_rrecord_part_info(padp);
+	get_phys_mem_info(padp);
+	get_log_ops_info(padp);
+	get_sysctl_ops(padp);
+	get_boot_stage_ops(padp);
+	padp->prevent.degrade = bf_mstar_degrade;
+	padp->prevent.bypass = bf_mstar_bp;
+	padp->prevent.load_backup = bf_mstar_load_backup;
+	padp->notify_storage_fault = bf_mstar_notify_storage_fault;
+}
+
+static void capture_app_log(char *pbuf, unsigned int buf_size)
+{
+	int ret;
+
+#if (LINUX_VERSION_CODE < KERNEL_VERSION(5, 15, 0))
+	mm_segment_t oldfs;
+        oldfs = get_fs();
+        set_fs(KERNEL_DS);
+#endif
+
+	ret = bf_readlink(APP_LOG_PATH, pbuf, buf_size);
+
+	if (ret < 0)
+		print_err("read %s failed ,ret = %d\n", APP_LOG_PATH, ret);
+
+#if (LINUX_VERSION_CODE < KERNEL_VERSION(5, 15, 0))
+        set_fs(oldfs);
+#endif
+}
+
+/**
+ * @brief Init bootfail mstar adapter, include common init and platform init.
+ * @param padp - bootfail mstar adapter pointer
+ * @return 0 on success.
+ * @since 1.0
+ * @version 1.0
+ */
+int mstar_adapter_init(struct adapter *padp)
+{
+	if (common_adapter_init(padp) != 0) {
+		print_err("init adapter common failed\n");
+		return -1;
+	}
+	platform_adapter_init(padp);
+	return 0;
+}

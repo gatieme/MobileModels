@@ -1,0 +1,7 @@
+config HN_MM_TRACK_KUNIT_TEST
+	tristate "Kernel memory track test suite" if !KUNIT_ALL_TESTS
+	default KUNIT_ALL_TESTS
+	depends on KUNIT && HN_MM_TRACK
+	help
+	  Test suite for HN_MM_TRACK, testing custom slub allocation and free
+	  track.

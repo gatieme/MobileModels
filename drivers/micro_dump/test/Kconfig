@@ -1,0 +1,6 @@
+config HN_MICRODUMP_TEST
+	tristate "micro dump."
+	depends on HN_MICRODUMP
+	default n
+	help
+	  micro_dump functional test ko

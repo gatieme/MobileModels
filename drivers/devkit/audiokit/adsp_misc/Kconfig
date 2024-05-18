@@ -1,0 +1,9 @@
+config HONOR_ADSP_MISC
+    tristate "audio dsp driver for ipi adapter"
+    default n
+
+config ADSP_HONOR_SHARED_MEM
+    tristate "mtk shared mem between ap and adsp for honor params"
+    depends on HONOR_ADSP_MISC
+    default n
+

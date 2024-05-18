@@ -1,0 +1,5 @@
+config XRECLAIMER
+	bool "Fast process memory reclaimer implemented"
+	depends on MMU
+	help
+	  Say Y here if you want to support fast process memory reclaimer

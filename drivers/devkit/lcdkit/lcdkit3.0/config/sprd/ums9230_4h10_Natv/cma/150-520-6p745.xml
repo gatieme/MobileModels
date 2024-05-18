@@ -1,0 +1,139 @@
+<hwlcd>
+	<PanelEntry>
+		<!--VReFresh setting-->
+		<VReFresh>90</VReFresh>
+		<!--Fps fuction-->
+		<PanelFpsUpdtSupport>0</PanelFpsUpdtSupport>
+		<DoesLcdPowerOnTp>0</DoesLcdPowerOnTp>
+
+		<!--Tp Project Id-->
+		<PanelDefaultTpProjectId>"HCAZAI250"</PanelDefaultTpProjectId>
+		<!--Mipi Phy Mode 0:Dphy 1:Cphy-->
+		<MipiPhyMode>0</MipiPhyMode>
+		<!--Mipi lane number:c-phy:1-1lane, 2-2lane, 3-3lane d-phy:1-1lane, 2-2lane, 3-3lane, 4-4lane-->
+		<MipiLaneNums>4</MipiLaneNums>
+		<!--mipi data rate :kbps -->
+		<PanelDataRate>1060000</PanelDataRate>
+		<!--mipi escape clock :kHz -->
+		<MipiEscapeClk>20000</MipiEscapeClk>
+		<!--Mipi non continue enable:0-continue mode, 1-non continue mode-->
+		<MipiNonContinueEnable>0</MipiNonContinueEnable>
+		<!--Pt station test support-->
+		<PanelPtTestSupport>1</PanelPtTestSupport>
+		<!--Esd enable-->
+		<PanelEsdSupport>0</PanelEsdSupport>
+		<!--bl max type:0-not support, 1-ddic ytpe-->
+		<PanelGetBlMaxNitType>1</PanelGetBlMaxNitType>
+		<PanelThpProximitySupport>0</PanelThpProximitySupport>
+		<!--bl max nit-->
+		<PanelBlMaxnit>450</PanelBlMaxnit>
+		<!--bl min brightness setting-->
+		<PanelBlmin>18</PanelBlmin>
+		<!--bl max brightness setting-->
+		<PanelBlmax>10000</PanelBlmax>
+		<!--lk bl max brightness setting-->
+		<PanelBlBoot>234</PanelBlBoot>
+        <!--bl type: 0-pwm, 1-dcs, 2-backlight ic, 3-backlight ic and dcs-->
+        	<PanelBlType>2</PanelBlType>
+		<!--bl ctrl type setting-->
+		<PanelBlIcCtrlType>0</PanelBlIcCtrlType>
+		<!--bias ctrl type setting-->
+		<PanelBiasIcCtrlType>3</PanelBiasIcCtrlType>
+		<!--gpio offset number setting-->
+		<PanelGpioOffset>64</PanelGpioOffset>
+		<!--Running test config start-->
+		<!--Dot/column inversion test support-->
+		<PanelInversionSupport>1</PanelInversionSupport>
+		<!--Check panel power status test support-->
+		<PanelCheckRegSupport>1</PanelCheckRegSupport>
+		<!--Project id support-->
+		<PanelProjectIdSupport>1</PanelProjectIdSupport>
+		<!--PanelOnAlwaysNeedReset-->
+		<PanelOnAlwaysNeedReset>1</PanelOnAlwaysNeedReset>
+		<!--OemInfo support-->
+		<OemInfoSupport>1</OemInfoSupport>
+		<!--OemBarcode2DSupport support-->
+		<OemBarcode2DSupport>1</OemBarcode2DSupport>
+		<!--OemBarcode2DNumOffset-->
+		<OemBarcode2DNumOffset>0</OemBarcode2DNumOffset>
+		<!--sn code support-->
+		<PanelSnCodeSupport>0</PanelSnCodeSupport>
+		<!--Panel quickly sleep out support-->
+		<PanelQuicklySleepOutSupport>0</PanelQuicklySleepOutSupport>
+		<PanelQuicklySleepOutInterval>102</PanelQuicklySleepOutInterval>
+		<!--BTB check Support-->
+		<LcdBtbSupport>0</LcdBtbSupport>
+		<LcdBtbCheckType>1</LcdBtbCheckType>
+
+		<!-- Display dsi timming config -->
+		<DisplayDsiTimmingBegin>1</DisplayDsiTimmingBegin>
+		<DisplayDsiTimming0Begin>1</DisplayDsiTimming0Begin>
+		<DisplayDsiTimming0End>1</DisplayDsiTimming0End>
+		<DisplayDsiTimmingEnd>1</DisplayDsiTimmingEnd>
+
+		<!-- Display dsi timming0 config -->
+		<!--Pixel clock :Hz-->
+		<PanelPxlClk0>150000000</PanelPxlClk0>
+		<PanelXres0>720</PanelXres0>
+		<PanelYres0>1600</PanelYres0>
+		<HFrontPorch0>50</HFrontPorch0>
+		<HBackPorch0>50</HBackPorch0>
+		<HPulseWidth0>12</HPulseWidth0>
+		<VFrontPorch0>371</VFrontPorch0>
+		<VBackPorch0>30</VBackPorch0>
+		<VPulseWidth0>2</VPulseWidth0>
+
+		<!--event send
+		event, data, delay
+		event:0-NONE, 1-VCI, 2-IOVCC, 3-VSP, 4-VSN, 5-RESET, 6-MIPI, 7-TS early event, 8-TS later event, 9-vdd 10-AOD, 11-BIAS
+		data:0-power off, 1-power on
+		delay:ms/TS:0-no-sync 1-sync
+		-->
+		<!--Power on timming-->
+		<PowerOnStage>"5, 0, 0
+				3, 1, 5
+				4, 1, 5
+				11, 1, 5
+				5, 1, 20
+				5, 0, 5
+				5, 1, 20"</PowerOnStage>
+		<LPOnStage>"7, 1, 2
+			8, 1, 0
+			6, 1, 0"</LPOnStage>
+		<HSOnStage>"0, 0, 0"</HSOnStage>
+
+		<ThpProximityResetDelayMin>65</ThpProximityResetDelayMin>
+
+		<!--Power off timming-->
+		<HSOffStage>"0, 0, 0"</HSOffStage>
+		<LPOffStage>"7, 0, 0
+				8, 0, 0
+				6, 0, 0"</LPOffStage>
+		<PowerOffStage>"4, 0, 2
+				3, 0, 5"</PowerOffStage>
+		<OnlyPowerOffStage>"15, 0, 80
+				4, 0, 0
+				3, 0, 6"</OnlyPowerOffStage>
+		<!--Power timming config end-->
+		<!--Tp color support-->
+		<TpColorSupport>0</TpColorSupport>
+		<!--Backlight max nit-->
+		<!--Power timming config start-->
+		<!--event define
+		mode, number, amplitude
+		mode:0-none, 1-regulator, 2-gpio
+		number:gpio num or ldo num
+		amplitude:3100000-3.1v, 1850000-1.85v, 5500000-5.5v
+		-->
+		<LcdReset>"2, 50, 0"</LcdReset>
+		<LcdVsp>"2, 135, 6000000"</LcdVsp>
+		<LcdVsn>"2, 136, 6000000"</LcdVsn>
+		<PowerDownVsp>"2, 135, 4700000"</PowerDownVsp>
+		<PowerDownVsn>"2, 136, 4700000"</PowerDownVsn>
+		<!--event send-->
+		<!--bl max nit-->
+		<PanelGetBlMaxNitOffset>400</PanelGetBlMaxNitOffset>
+		<PanelBlMaxNitCommand>"0x06, 0x01, 0x00, 0x00, 0x0a, 0x00, 0x01, 0xdb"</PanelBlMaxNitCommand>
+		<PanelBlMaxNitCommandState>0</PanelBlMaxNitCommandState>
+	</PanelEntry>
+</hwlcd>

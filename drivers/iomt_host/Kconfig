@@ -1,0 +1,30 @@
+#
+# honor mmc/ufs host device state stat config
+#
+
+config STORAGE_DSM_IOMT_HOST
+	bool "dsm iomt host"
+	default n
+	help
+	  enable host state stat feature.
+
+config STORAGE_DSM_IOMT_EMMC_HOST
+	bool "dsm iomt emmc host"
+	depends on MMC != n && STORAGE_DSM_IOMT_HOST != n
+	default n
+	help
+	  enable emmc host state stat feature.
+
+config STORAGE_DSM_IOMT_UFS_HOST
+	bool "dsm iomt ufs host"
+	depends on SCSI != n && STORAGE_DSM_IOMT_HOST != n
+	default n
+	help
+	  enable ufs host state stat feature.
+
+config HONOR_IO_MEASURE
+	bool "measure io performence"
+	depends on TRACING
+	default n
+	help
+	  enable io measure feature.

@@ -1,0 +1,8 @@
+menuconfig HN_NETWORK_MEASUREMENT
+	bool "Honor Network Measurement System"
+	depends on HONOR_EMCOM
+	default n
+
+if HN_NETWORK_MEASUREMENT
+source "drivers/emcom/smartcare/fi/Kconfig"
+endif # if HN_NETWORK_MEASUREMENT

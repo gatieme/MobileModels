@@ -1,0 +1,30 @@
+config HN_WIFIPRO
+	bool "Honor wifipro tcp monitor support"
+	default n
+
+config HN_WIFIPRO_PROC
+	bool "Honor wifipro proc support"
+	depends on HN_WIFIPRO
+	default n
+
+config WIFI_DELAY_STATISTIC
+	bool "wifi delay statistic"
+	default n
+
+config HW_SNIFFER
+	bool "hw sniffer"
+	default n
+
+config HN_CHR_TCP_SMALL_WIN_PROC
+	bool "Honor tcp small window monitor proc support"
+	depends on HN_CHR_TCP_SMALL_WIN_MONITOR
+	default n
+
+config HN_WIFI_TEMP
+	bool "Honor wifi temperature upload"
+	default n
+
+config HONOR_MSS_AUTO_CHANGE
+	bool "Honor MSS auto change undecoupled function support"
+	default n
+

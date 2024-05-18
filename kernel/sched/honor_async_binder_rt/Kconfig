@@ -1,0 +1,6 @@
+# Add iAware async binder rt
+config HN_SET_ASYNC_BINDER_RT
+	bool "iaware 7.0 set async binder rt"
+	default n
+	help
+	  if set, the priority of opposite binder thread will be set to realtime

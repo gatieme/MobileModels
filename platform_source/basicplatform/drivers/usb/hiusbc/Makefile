@@ -1,0 +1,2 @@
+obj-$(CONFIG_USB_HIUSBC)			+= hiusbc_core.o hiusbc_debug.o hiusbc_debugfs.o hiusbc_drd.o hiusbc_setup.o hiusbc_transfer.o hiusbc_event.o hiusbc_gadget.o hiusbc_host.o
+obj-$(CONFIG_USB_HIUSB)       += hiusbc_hiusb.o

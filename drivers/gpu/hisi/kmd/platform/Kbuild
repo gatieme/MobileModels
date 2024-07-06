@@ -1,0 +1,18 @@
+#
+# Copyright (c) Hisilicon Technologies Co., Ltd. 2021-2021. All rights reserved.
+#
+
+INCLUDE_DIR += \
+	-I$(HVGR_PATH)/platform \
+	-I$(HVGR_PATH)/platform/$(HVGR_PLATFORM_NAME)
+
+SRC += \
+	$(HVGR_ROOT)/platform/hvgr_smc.c \
+	$(HVGR_ROOT)/platform/$(HVGR_PLATFORM_NAME)/hvgr_platform_map.c \
+	$(HVGR_ROOT)/platform/$(HVGR_PLATFORM_NAME)/hvgr_platform_reset.c \
+	$(HVGR_ROOT)/platform/$(HVGR_PLATFORM_NAME)/hvgr_platform_smc.c \
+	$(HVGR_ROOT)/platform/$(HVGR_PLATFORM_NAME)/hvgr_platform_dfx.c
+
+ifeq ($(HVGR_FEATURE_SYSTEM_CACHE), 1)
+	SRC += $(HVGR_ROOT)/platform/$(HVGR_PLATFORM_NAME)/hvgr_platform_mem_sc.c
+endif

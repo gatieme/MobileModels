@@ -1,0 +1,10 @@
+config NET_VENDOR_HISI_HIXGEMAC
+        bool "Hisilicon XGE MAC"
+        help
+          If you have a Hisilicon xGE MAC, say Y.
+
+config NET_VENDOR_HIXGEMAC_10CC
+        bool "Hisilicon XGE PMA 10CC"
+	depends on NET_VENDOR_HISI_HIXGEMAC
+        help
+          If XGE uses the 10CC PMA, say Y.

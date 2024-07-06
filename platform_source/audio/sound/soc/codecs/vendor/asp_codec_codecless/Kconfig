@@ -1,0 +1,65 @@
+config SND_SOC_ASP_CODEC_V1
+	tristate "HI Soc codecless series audio codec support for v1"
+
+config SND_SOC_ASP_CODEC_V2C
+	tristate "HI Soc codecless series audio codec support for v2c"
+
+config SND_SOC_ASP_CODEC_V2N
+	tristate "HI Soc codecless series audio codec support for v2n"
+
+config SND_SOC_ASP_CODEC_V2CP
+	tristate "HI Soc codecless series audio codec support for v2cp"
+
+config SND_SOC_ASP_CODEC_AXI2TDM
+	tristate
+	default y if SND_SOC_ASP_CODEC_V2N=y || SND_SOC_ASP_CODEC_V2C=y || SND_SOC_ASP_CODEC_V2CP=y
+	default m if SND_SOC_ASP_CODEC_V2N=m || SND_SOC_ASP_CODEC_V2C=m || SND_SOC_ASP_CODEC_V2CP=m
+
+config SND_SOC_ASP_CODEC_MAD_V2
+	tristate
+	default y if SND_SOC_ASP_CODEC_V2C=y
+
+config SND_SOC_ASP_CODEC_CONTROL
+	tristate
+	default y if SND_SOC_ASP_CODEC_V1=y
+	default m if SND_SOC_ASP_CODEC_V1=m
+
+config SND_SOC_ASP_CODEC_UTILS
+	tristate
+	default y if SND_SOC_ASP_CODEC_V1=y
+	default m if SND_SOC_ASP_CODEC_V1=m
+
+config SND_SOC_ASP_CODEC_STORE
+	tristate
+	default y if SND_SOC_ASP_CODEC_V1=y
+	default m if SND_SOC_ASP_CODEC_V1=m
+
+config SND_SOC_ASP_CODEC_PLAY_PATH
+	tristate
+	default y if SND_SOC_ASP_CODEC_V1=y
+	default m if SND_SOC_ASP_CODEC_V1=m
+
+config SND_SOC_ASP_CODEC_8PA_PATH
+	tristate
+	default y if SND_SOC_ASP_CODEC_V1=y
+	default m if SND_SOC_ASP_CODEC_V1=m
+
+config SND_SOC_ASP_CODEC_UPLINK_PATH
+	tristate
+	default y if SND_SOC_ASP_CODEC_V1=y
+	default m if SND_SOC_ASP_CODEC_V1=m
+
+config SND_SOC_ASP_CODEC_AU_PA_PATH
+	tristate
+	default y if SND_SOC_ASP_CODEC_V1=y
+	default m if SND_SOC_ASP_CODEC_V1=m
+
+config SND_SOC_ASP_CODEC_BTFM_PATH
+	tristate
+	default y if SND_SOC_ASP_CODEC_V1=y
+	default m if SND_SOC_ASP_CODEC_V1=m
+
+config SND_SOC_ASP_CODEC_SIDETONE_PATH
+	tristate
+	default y if SND_SOC_ASP_CODEC_V1=y
+	default m if SND_SOC_ASP_CODEC_V1=m

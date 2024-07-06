@@ -1,0 +1,48 @@
+#
+# Kirin PCIe driver configuration
+#
+
+config HIPCIE_CORE
+	bool "HiPCIe controller"
+	depends on PCI
+	depends on PCI_MSI_IRQ_DOMAIN
+	select PCIEPORTBUS
+	help
+	  Say Y here to enable PCIe controller support on Kirin SoCs.
+
+config HIPCIE_CTRL
+	tristate "HiPCIe ctrl"
+	depends on HIPCIE_CORE
+	help
+	  Say Y here to enable PCIe controller support on Kirin SoCs.
+
+config HIPCIE_PHY
+	tristate "HiPCIe phy"
+	depends on HIPCIE_CORE
+	help
+	  Say Y here to enable PCIe phy support on Kirin SoCs.
+
+config HIPCIE_IDLE
+	tristate "HiPCIe IDLE"
+	depends on HIPCIE_CORE
+	help
+	  Say Y here to enable PCIe Idle support on Kirin Soc.
+
+config HIPCIE_TEST
+	tristate "HiPCIe test"
+	depends on HIPCIE_CTRL
+	depends on HIPCIE_PHY
+	help
+	  Say Y here if you want to use testcases for PCIe controller on Kirin SoCs.
+
+config HIPCIE_SLT
+	tristate "HiPCIe slt"
+	depends on HIPCIE_CORE
+	help
+	  Say Y here to enable PCIe Slt test.
+
+config HIPCIE_TRAP_HOST
+	tristate "HiPCIe controller-guest communicate with host"
+	depends on HIPCIE_CORE
+
+source "platform_source/basicplatform/drivers/pci/controller/platform/Kconfig"

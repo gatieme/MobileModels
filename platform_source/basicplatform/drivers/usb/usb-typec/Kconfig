@@ -1,0 +1,24 @@
+config VENDOR_USB_TYPEC
+	bool "Hisilicon USB Typei-C Driver"
+	help
+	  Say Y to enable Hisilicon USB Typec Driver
+
+config HISI_USB_TYPEC_DBG
+	bool "Hisilicon USB Type-C driver verbost debug infomation."
+	depends on VENDOR_USB_TYPEC
+	help
+	  Say Y here if you want verbost debug infomation. If unsure, say N.
+
+config USB_VBUS_CTRL
+	bool "Hisilicon USB type-c rt1711 power controller"
+	depends on TCPC_CLASS
+	help
+	  Say Y to enable rt1711 vbus gpio control power
+
+config CS32G_USB_PD
+	bool "Cs32g050 Usb Pd Driver"
+	help
+	  Say Y to enable Cs32g050 Usb Pd Driver
+
+source "platform_source/basicplatform/drivers/usb/usb-typec/hisi-tcpc/Kconfig"
+

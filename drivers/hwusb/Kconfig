@@ -1,0 +1,3 @@
+source "drivers/hwusb/hw_gadget/Kconfig"
+source "drivers/hwusb/hw_usb/Kconfig"
+source "drivers/hwusb/hw_dp/Kconfig"

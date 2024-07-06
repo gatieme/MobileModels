@@ -1,0 +1,2 @@
+
+CFG_PRODUCT_PLATFORM_VERSION := charlotte

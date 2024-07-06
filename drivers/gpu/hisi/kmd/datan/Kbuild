@@ -1,0 +1,35 @@
+#
+# Copyright (c) Hisilicon Technologies Co., Ltd. 2022-2022. All rights reserved.
+#
+
+INCLUDE_DIR += \
+	-I$(HVGR_PATH)/datan/counter
+
+SRC += \
+	$(HVGR_ROOT)/datan/hvgr_datan.c \
+	$(HVGR_ROOT)/datan/counter/hvgr_datan_ct.c \
+	$(HVGR_ROOT)/datan/counter/hvgr_datan_ct_inner.c \
+	$(HVGR_ROOT)/datan/counter/hvgr_datan_ct_time.c \
+	$(HVGR_ROOT)/datan/counter/hvgr_datan_ct_hal.c \
+
+ifdef CONFIG_HVGR_DFX_DEBUG_BUS_DUMP
+INCLUDE_DIR += \
+	-I$(HVGR_PATH)/datan/debugbus
+SRC += \
+	$(HVGR_ROOT)/datan/debugbus/$(CHIP_VER_DIR)/hvgr_debug_bus_dump.c
+endif
+
+ifdef CONFIG_HVGR_DFX_MEM_DUMP
+SRC += \
+	$(HVGR_ROOT)/datan/memdump/hvgr_mem_dump.c
+endif
+
+ifdef CONFIG_HVGR_DFX_DATAN
+SRC += \
+	$(HVGR_ROOT)/datan/jobtrace/datan_jobtrace.c
+endif
+
+ifdef HVGR_DATAN_JOB_TIMELINE
+SRC += \
+	$(HVGR_ROOT)/datan/jobtimeline/hvgr_job_timeline.c
+endif

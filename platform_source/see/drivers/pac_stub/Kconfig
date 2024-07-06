@@ -1,0 +1,3 @@
+config PAC_FEATURE_STUB
+	bool "stub pac feacture"
+	default n

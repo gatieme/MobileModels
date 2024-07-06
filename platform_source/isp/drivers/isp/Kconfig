@@ -1,0 +1,42 @@
+config ISP
+    tristate "Histar ISP device"
+    depends on REMOTEPROC
+    depends on ARCH_HISI
+    depends on RPMSG
+
+config HISP_RPMSG
+    tristate "HISP RPMSG bus driver"
+    select RPMSG
+    select VIRTIO
+
+config HISP_DEBUG
+	bool "hisp debug"
+	default n
+	help
+		Say yes here to support hisp debug.
+
+config HISP_DPM
+	tristate "HISP DPM(digital power monitor) support"
+	depends on DPM_HWMON
+	default n
+	help
+		This framebuffer driver supports dpm function.
+
+config HISP_EXCLUDE_NOC_DEBUG
+	bool "hisp exclude noc modid debug"
+	default n
+	help
+		Say yes here to not support hisp noc modid debug.
+
+config HISP_FFA_SUPPORT
+	bool "hisp choose ffa support"
+	depends on FFA_SUPPORT
+	default n
+	help
+		Say yes here to support ffa.
+
+config ISP_BUF_PRIVATIZE
+	bool "hisp buffer privatize"
+	default n
+	help
+		Say yes here to support hisp buffer privatize.

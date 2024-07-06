@@ -1,0 +1,15 @@
+#
+# Kirin PCIe driver platform configuration
+#
+
+config HIPCIE_OCT
+	tristate "HiPCIe controller-Oct"
+	select HIPCIE_CORE
+	select HIPCIE_CTRL
+	select HIPCIE_PHY
+
+config HIPCIE_NSV
+	tristate "HiPCIe controller-Nsv"
+	select HIPCIE_CORE
+	select HIPCIE_CTRL
+	select HIPCIE_PHY

@@ -1,0 +1,26 @@
+/**
+ * Huawei Ltd.
+ * PhosphorV660
+ */
+
+
+/include/ "VICTORIA_LX9_V3_BACKLIGHT_config.dtsi"
+
+/{
+    hisi,boardid = <5 4 0 9>;
+    hisi,boardname = "VICTORIA_LX9_V4";
+    hisi,modem_id = <0x3A022000>;
+    hisi,camera_arch_v120 = "platform_v120";
+
+    /* UFS */
+    ufs: ufs@FF3b0000 {
+        ufs-kirin-linereset-check-disable;
+    };
+	sensorhub{
+		als_sensor:light{
+			als1{
+				als_phone_version = <11>;
+			};
+		};
+	};
+};

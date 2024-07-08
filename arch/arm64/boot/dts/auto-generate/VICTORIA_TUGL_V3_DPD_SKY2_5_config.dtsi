@@ -1,0 +1,13 @@
+/**
+ * Huawei Ltd.
+ * PhosphorV660
+ */
+
+
+/include/ "VICTORIA_TUGL_V3_config.dtsi"
+
+/{
+    hisi,boardid = <5 4 0 4>;
+    hisi,boardname = "VICTORIA_TUGL_V3_DPD_SKY2_5";
+    hisi,modem_id = <0x3A021800>;
+};

@@ -1,0 +1,26 @@
+/**
+ * Huawei Ltd.
+ * PhosphorV660
+ */
+
+/dts-v1/;
+
+/include/ "fastboot.dtsi"
+/include/ "VICTORIA_LX9_V4_config.dtsi"
+/include/ "VICTORIA_LX9_LV1_pin.dtsi"
+/include/ "VICTORIA_LX9_LV1_modem_pin.dtsi"
+/include/ "VICTORIA_LX9_LV1_hi6402_pin.dtsi"
+/include/ "VICTORIA_LX9_LV1_sec_pin.dtsi"
+
+/{
+    hisi,boardid = <5 4 2 1>;
+    hisi,boardname = "VICTORIA_LX9_LV1";
+    hisi,modem_id = <0x3A022800>;
+    sensorhub{
+		als_sensor:light{
+			als1{
+				als_phone_version = <12>;
+			};
+		};
+	};
+};

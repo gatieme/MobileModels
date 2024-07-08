@@ -1,0 +1,15 @@
+/**
+ * Huawei Ltd.
+ * PhosphorV660
+ */
+
+
+/include/ "VICTORIA_TUGL_V3_V101_config.dtsi"
+
+/{
+    hisi,boardid = <5 4 0 0>;
+    hisi,boardname = "VICTORIA_TUGL_V3";
+    hisi,modem_id = <0x3A020800>;
+    hisi,gpu_arch = "mimir";
+    hisi,camera_arch = "platform_v110";
+};

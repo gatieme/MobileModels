@@ -1,0 +1,25 @@
+/**
+ * Huawei Ltd.
+ * PhosphorV660
+ */
+
+/dts-v1/;
+
+/include/ "fastboot.dtsi"
+/include/ "VICTORIA_TUGL_V4_V110_config.dtsi"
+/include/ "VICTORIA_TUGL_V4_pin.dtsi"
+/include/ "VICTORIA_TUGL_V4_modem_pin.dtsi"
+/include/ "VICTORIA_TUGL_V4_hi6402_pin.dtsi"
+/include/ "VICTORIA_TUGL_V4_sec_pin.dtsi"
+
+/{
+    hisi,boardid = <5 4 0 8>;
+    hisi,boardname = "VICTORIA_TUGL_V4";
+    hisi,modem_id = <0x3A021C00>;
+    hisi,camera_arch_v120 = "platform_v120";
+
+    /* UFS */
+    ufs: ufs@FF3b0000 {
+        ufs-kirin-linereset-check-disable;
+    };
+};

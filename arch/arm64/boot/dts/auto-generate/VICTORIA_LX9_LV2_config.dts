@@ -1,0 +1,60 @@
+/**
+ * Huawei Ltd.
+ * PhosphorV660
+ */
+
+/dts-v1/;
+
+/include/ "fastboot.dtsi"
+/include/ "VICTORIA_LX9_LV1_config.dtsi"
+/include/ "VICTORIA_LX9_LV2_pin.dtsi"
+/include/ "VICTORIA_LX9_LV2_modem_pin.dtsi"
+/include/ "VICTORIA_LX9_LV2_hi6402_pin.dtsi"
+/include/ "VICTORIA_LX9_LV2_sec_pin.dtsi"
+
+/{
+    hisi,boardid = <5 4 2 3>;
+    hisi,boardname = "VICTORIA_LX9_LV2";
+    hisi,modem_id = <0x3A023000>;
+
+	direct_charger: direct_charger{
+		ovp_en = <&gpio18 4 0>;
+	};
+
+	fastboot_buckboost: fastboot_buckboost{
+		hw_buckboost_type = <1>;
+		status = "disabled";
+	};
+
+	amba {
+		i2c3: i2c@FDF0C000 {
+			max77813: max77813@18 {
+			compatible = "max77813";
+			gpio_pok = <&gpio18 4 0>;
+			reg = <0x18>;
+			status = "disabled";
+			};
+		};
+	};
+
+	devcheck: devcheck {
+		max77813 = <0>;
+	};
+
+	/* UFS */
+	ufs: ufs@FF3b0000 {
+		status = "disabled";
+	};
+
+	/* eMMC0 */
+	sdhci0: sdhci@FF3FB000 {
+		status = "ok";
+	};
+
+	/* Camera f2.2 */
+	camera_hw_config {
+		product_name = "VICTORIA";
+		lens_type = "true"; /* false f1.8, true f2.2*/
+	};
+
+};

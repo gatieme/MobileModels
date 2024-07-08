@@ -1,0 +1,21 @@
+/**
+ * Huawei Ltd.
+ * PhosphorV660
+ */
+
+
+/include/ "VICTORIA_TUGL_V4_config.dtsi"
+
+/{
+    hisi,boardid = <5 4 2 0>;
+    hisi,boardname = "VICTORIA_TUGL_LV1";
+    hisi,modem_id = <0x3A022400>;
+
+	sensorhub{
+		als_sensor:light{
+			als1{
+				als_phone_version = <12>;
+			};
+		};
+	};
+};

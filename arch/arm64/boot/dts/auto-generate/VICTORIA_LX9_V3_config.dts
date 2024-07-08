@@ -1,0 +1,21 @@
+/**
+ * Huawei Ltd.
+ * PhosphorV660
+ */
+
+/dts-v1/;
+
+/include/ "fastboot.dtsi"
+/include/ "VICTORIA_LX9_V3_V101_config.dtsi"
+/include/ "VICTORIA_LX9_V3_pin.dtsi"
+/include/ "VICTORIA_LX9_V3_modem_pin.dtsi"
+/include/ "VICTORIA_LX9_V3_hi6402_pin.dtsi"
+/include/ "VICTORIA_LX9_V3_sec_pin.dtsi"
+
+/{
+    hisi,boardid = <5 4 0 1>;
+    hisi,boardname = "VICTORIA_LX9_V3";
+    hisi,modem_id = <0x3A020C00>;
+    hisi,gpu_arch = "mimir";
+    hisi,camera_arch = "platform_v110";
+};

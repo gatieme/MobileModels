@@ -1,0 +1,124 @@
+/**
+ * Huawei Ltd.
+ * PhosphorV660
+ */
+
+/dts-v1/;
+
+/include/ "fastboot.dtsi"
+/include/ "VICTORIA_TUGL_V1_config.dtsi"
+/include/ "VICTORIA_LX9_V3_V101_pin.dtsi"
+/include/ "VICTORIA_LX9_V3_V101_modem_pin.dtsi"
+/include/ "VICTORIA_LX9_V3_V101_hi6402_pin.dtsi"
+
+/{
+    hisi,boardid = <5 4 0 3>;
+    hisi,boardname = "VICTORIA_LX9_V3_V101";
+    hisi,modem_id = <0x3A020C00>;
+
+    codec_controller: codec_controller@e82b9000 {
+        hi64xx_irq: hi64xx_irq@0 {
+            hi6403_codec: hi6403_codec@0{
+                status = "ok";
+            };
+            hi6403es_codec: hi6403es_codec@0{
+                status = "disabled";
+            };
+        };
+    };
+
+    sound {
+        compatible = "hisilicon,hi3xxx-hi6403";
+        status = "ok";
+    };
+
+	bcm_wifi {
+		wifi_nvram_name = "/vendor/firmware/nvram4359_hw_victoria_v3.txt";
+	};
+
+	huawei,imx386hybird{
+		compatible = "huawei,imx386hybird";
+		huawei,sensor_name = "IMX386HYBIRD";
+		huawei,sensor_index = <0>;
+		huawei,is_fpga = <0>;
+		huawei,pd_valid = <1>;
+		huawei,reset_valid = <1>;
+		huawei,vcmpd_valid = <0>;
+		huawei,csi_index = <0 2>;
+		huawei,i2c_index = <0 2>;
+		clocks = <&clk_gate_isp_snclk0 &clk_gate_isp_snclk2>;
+		clock-names = "clk_isp_snclk0", "clk_isp_snclk2";
+		huawei,mclk = <24000000>;
+		avdd0-supply = <&ldo19>;
+		avdd1-supply = <&ldo31>;
+		dvdd2-supply = <&ldo20>;
+		huawei,ldo-names = "avdd0", "avdd1", "dvdd2";
+		gpios = <&gpio6 4 0 &gpio2 5 0>;
+		huawei,gpio-ctrl-types = "reset", "reset2";
+		module_type = <0>;/*bit0=enable ,other bits=type*/
+		status = "ok";
+	};
+	huawei,imx486hybird{
+		compatible = "huawei,imx486hybird";
+		huawei,sensor_name = "IMX486HYBIRD";
+		huawei,sensor_index = <0>;
+		huawei,is_fpga = <0>;
+		huawei,pd_valid = <1>;
+		huawei,reset_valid = <1>;
+		huawei,vcmpd_valid = <0>;
+		huawei,csi_index = <0 2>;
+		huawei,i2c_index = <0 2>;
+		clocks = <&clk_gate_isp_snclk0 &clk_gate_isp_snclk2>;
+		clock-names = "clk_isp_snclk0", "clk_isp_snclk2";
+		huawei,mclk = <24000000>;
+		avdd0-supply = <&ldo19>;
+		avdd1-supply = <&ldo31>;
+		dvdd2-supply = <&ldo20>;
+		huawei,ldo-names = "avdd0", "avdd1", "dvdd2";
+		gpios = <&gpio6 4 0 &gpio2 5 0>;
+		huawei,gpio-ctrl-types = "reset", "reset2";
+		module_type = <0>;/*bit0=enable ,other bits=type*/
+		status = "ok";
+	};
+	amba {
+		i2c3: i2c@FDF0C000 {
+			fsa7830_1:fsa7830_1@43 {
+				huawei,fsa7830_exist_gpio = <&gpio13 4 0>;
+				pinctrl-names = "default", "idle";
+				pinctrl-0 = <&gpio108_cfg_func &gpio108_pmx_func>;
+				pinctrl-1 = <&gpio108_cfg_idle &gpio108_pmx_idle>;
+			};
+		};
+
+		i2c4: i2c@FDF0D000 {
+			max98925_smartpa_l:smartpa@31 {
+				status = "disabled";
+			};
+
+			tfa9872_smartpa_l:smartpa@35 {
+				status = "ok";
+				gain_incall = <0x0F>;
+				gain = <0x0F>;
+				gpio_irq = <&gpio18 6 0>;
+				gpio_reset = <&gpio5 1 0>;
+				dcie_cfg = <0>;
+			};
+		};
+	};
+
+	tfa98xx_ioctl {
+		status = "ok";
+	};
+
+	audio_hw_config {
+		spk_pa_name = "tfa9872";
+		codec_dsp_algo = "nxp|mad";
+		ear_pa_name = "none";
+	};
+
+	antenna_boardid_detect:antenna_boardid_detect{
+		expect_value = <0>;
+	};
+};
+
+

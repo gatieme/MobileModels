@@ -1,0 +1,59 @@
+/*
+ * da_separate_reg.h -- codec driver
+ *
+ * Copyright (c) 2019 Huawei Technologies Co., Ltd.
+ *
+ * This software is licensed under the terms of the GNU General Public
+ * License version 2, as published by the Free Software Foundation, and
+ * may be copied, distributed, and modified under those terms.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ */
+
+#ifndef __DA_SEPARATE_REG_H__
+#define __DA_SEPARATE_REG_H__
+#ifdef CONFIG_SND_SOC_CODEC_DA_SEPARATE_V3
+#include "da_separate_v3_asp_reg_def.h"
+#include "da_separate_v3_pmu_reg_def.h"
+#define CLASSD_MUTE_REG CTRL_REG_CLASSD_CTRL0_REG
+#define CLASSD_MUTE_OFFSET CTRL_REG_CLASSD_MUTE_OFFSET
+#define CLASSD_GAIN_REG CTRL_REG_CLASSD_CTRL0_REG
+#define CLASSD_GAIN_OFFSET CTRL_REG_CLASSD_GAIN_OFFSET
+#define CLASSD_EN_REG CTRL_REG_CLASSD_CTRL0_REG
+#define CLASSD_EN_OFFSET CTRL_REG_REG_CLASSD_EN_OFFSET
+#define CLASSD_DRV_EN_REG CTRL_REG_CLASSD_CTRL0_REG
+#define CLASSD_DRV_EN_OFFSET CTRL_REG_CLASSD_DRV_EN_OFFSET
+#define CLASSD_P_SEL_REG CTRL_REG_CLASSD_CTRL1_REG
+#define CLASSD_P_SEL_OFFSET CTRL_REG_CLASSD_P_SEL_OFFSET
+#define CLASSD_N_SEL_REG CTRL_REG_CLASSD_CTRL1_REG
+#define CLASSD_N_SEL_OFFSET CTRL_REG_CLASSD_N_SEL_OFFSET
+#define CLASSD_MIN_TN_REG CTRL_REG_CLASSD_CTRL2_REG
+#define CLASSD_MIN_TN_OFFSET CTRL_REG_CLASSD_RESERVE0_OFFSET
+
+#endif
+
+#if (defined(CONFIG_SND_SOC_CODEC_DA_SEPARATE_V5)) || (defined(CONFIG_SND_SOC_CODEC_DA_SEPARATE_V6L))
+#include "da_separate_v5_asp_reg_def.h"
+#include "da_separate_v5_pmu_reg_def.h"
+#define CLASSD_MUTE_REG CTRL_REGB_CLASSD_CTRL1_REG
+#define CLASSD_MUTE_OFFSET CTRL_REGB_CLASSD_MUTE_OFFSET
+#define CLASSD_GAIN_REG CTRL_REGB_CLASSD_CTRL0_REG
+#define CLASSD_GAIN_OFFSET CTRL_REGB_CLASSD_GAIN_OFFSET
+#define CLASSD_EN_REG CTRL_REGA_CLASSD_ONOFF_REG
+#define CLASSD_EN_OFFSET CTRL_REGA_REG_CLASSD_EN_OFFSET
+#define CLASSD_DRV_EN_REG CTRL_REGB_CLASSD_CTRL0_REG
+#define CLASSD_DRV_EN_OFFSET CTRL_REGB_CLASSD_DRV_EN_OFFSET
+#define CLASSD_P_SEL_REG CTRL_REGB_CLASSD_CTRL1_REG
+#define CLASSD_P_SEL_OFFSET CTRL_REGB_CLASSD_P_SEL_OFFSET
+#define CLASSD_N_SEL_REG CTRL_REGB_CLASSD_CTRL1_REG
+#define CLASSD_N_SEL_OFFSET CTRL_REGB_CLASSD_N_SEL_OFFSET
+#define CLASSD_MIN_TN_REG CTRL_REGB_CLASSD_CTRL2_REG
+#define CLASSD_MIN_TN_OFFSET CTRL_REGB_CLASSD_RESERVE0_OFFSET
+
+#endif
+
+#endif

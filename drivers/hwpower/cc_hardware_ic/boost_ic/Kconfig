@@ -1,0 +1,10 @@
+# SPDX-License-Identifier: GPL-2.0
+#
+# huawei boost drivers
+#
+
+config BOOST_SC8726
+	bool "boost sc8726"
+	default n
+	help
+	  Say Y here to enable boost sc8726 driver.

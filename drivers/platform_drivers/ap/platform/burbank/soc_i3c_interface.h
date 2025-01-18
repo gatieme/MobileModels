@@ -1,0 +1,1747 @@
+#ifndef __SOC_I3C_INTERFACE_H__
+#define __SOC_I3C_INTERFACE_H__ 
+#ifdef __cplusplus
+    #if __cplusplus
+        extern "C" {
+    #endif
+#endif
+#ifndef __SOC_H_FOR_ASM__
+#define SOC_I3C_DEVICE_CTRL_ADDR(base) ((base) + (0x0UL))
+#define SOC_I3C_DEVICE_ADDR_ADDR(base) ((base) + (0x4UL))
+#define SOC_I3C_HW_CAPABILITY_ADDR(base) ((base) + (0x8UL))
+#define SOC_I3C_COMMAND_QUEUE_PORT_ADDR_ASSGN_CMD_ADDR(base) ((base) + (0xCUL))
+#define SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_COMMAND_ADDR(base) ((base) + (0xCUL))
+#define SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_ARGUMENT_ADDR(base) ((base) + (0xCUL))
+#define SOC_I3C_COMMAND_QUEUE_PORT_SHORT_DATA_ARG_ADDR(base) ((base) + (0xCUL))
+#define SOC_I3C_RESPONSE_QUEUE_PORT_ADDR(base) ((base) + (0x10UL))
+#define SOC_I3C_RX_DATA_PORT_ADDR(base) ((base) + (0x14UL))
+#define SOC_I3C_TX_DATA_PORT_ADDR(base) ((base) + (0x14UL))
+#define SOC_I3C_IBI_QUEUE_DATA_ADDR(base) ((base) + (0x18UL))
+#define SOC_I3C_IBI_QUEUE_STATUS_ADDR(base) ((base) + (0x18UL))
+#define SOC_I3C_QUEUE_THLD_CTRL_ADDR(base) ((base) + (0x1CUL))
+#define SOC_I3C_DATA_BUFFER_THLD_CTRL_ADDR(base) ((base) + (0x20UL))
+#define SOC_I3C_IBI_QUEUE_CTRL_ADDR(base) ((base) + (0x24UL))
+#define SOC_I3C_IBI_MR_REQ_REJECT_ADDR(base) ((base) + (0x2CUL))
+#define SOC_I3C_IBI_SIR_REQ_REJECT_ADDR(base) ((base) + (0x30UL))
+#define SOC_I3C_RESET_CTRL_ADDR(base) ((base) + (0x34UL))
+#define SOC_I3C_INTR_STATUS_ADDR(base) ((base) + (0x3CUL))
+#define SOC_I3C_INTR_STATUS_EN_ADDR(base) ((base) + (0x40UL))
+#define SOC_I3C_INTR_SIGNAL_EN_ADDR(base) ((base) + (0x44UL))
+#define SOC_I3C_INTR_FORCE_ADDR(base) ((base) + (0x48UL))
+#define SOC_I3C_QUEUE_STATUS_LEVEL_ADDR(base) ((base) + (0x4CUL))
+#define SOC_I3C_DATA_BUFFER_STATUS_LEVEL_ADDR(base) ((base) + (0x50UL))
+#define SOC_I3C_PRESENT_STATE_ADDR(base) ((base) + (0x54UL))
+#define SOC_I3C_DEVICE_ADDR_TABLE_POINTER_ADDR(base) ((base) + (0x5CUL))
+#define SOC_I3C_DEV_CHAR_TABLE_POINTER_ADDR(base) ((base) + (0x60UL))
+#define SOC_I3C_VENDOR_SPECIFIC_REG_POINTER_ADDR(base) ((base) + (0x6CUL))
+#define SOC_I3C_DEVICE_CTRL_EXTENDED_ADDR(base) ((base) + (0xB0UL))
+#define SOC_I3C_SCL_HCNT_TIMING_ADDR(base) ((base) + (0xB4UL))
+#define SOC_I3C_SCL_LCNT_TIMING_ADDR(base) ((base) + (0xB8UL))
+#define SOC_I3C_SCL_EXT_LCNT_TIMING_ADDR(base) ((base) + (0xBCUL))
+#define SOC_I3C_BUS_FREE_TIMING_ADDR(base) ((base) + (0xC0UL))
+#define SOC_I3C_SCL_EXT_TERMN_LCNT_TIMING_ADDR(base) ((base) + (0xC8UL))
+#define SOC_I3C_VER_ID_ADDR(base) ((base) + (0xE0UL))
+#define SOC_I3C_VER_TYPE_ADDR(base) ((base) + (0xE4UL))
+#define SOC_I3C_EXTENDED_CAPABILITY_ADDR(base) ((base) + (0xE8UL))
+#define SOC_I3C_DEV_CHAR_TABLE1_LOC1_ADDR(base) ((base) + (0x200UL))
+#define SOC_I3C_DEV_CHAR_TABLE1_LOC2_ADDR(base) ((base) + (0x204UL))
+#define SOC_I3C_DEV_CHAR_TABLE1_LOC3_ADDR(base) ((base) + (0x208UL))
+#define SOC_I3C_DEV_CHAR_TABLE1_LOC4_ADDR(base) ((base) + (0x20CUL))
+#define SOC_I3C_DEV_CHAR_TABLE2_LOC1_ADDR(base) ((base) + (0x210UL))
+#define SOC_I3C_DEV_CHAR_TABLE2_LOC2_ADDR(base) ((base) + (0x214UL))
+#define SOC_I3C_DEV_CHAR_TABLE2_LOC3_ADDR(base) ((base) + (0x218UL))
+#define SOC_I3C_DEV_CHAR_TABLE2_LOC4_ADDR(base) ((base) + (0x21CUL))
+#define SOC_I3C_DEV_CHAR_TABLE3_LOC1_ADDR(base) ((base) + (0x220UL))
+#define SOC_I3C_DEV_CHAR_TABLE3_LOC2_ADDR(base) ((base) + (0x224UL))
+#define SOC_I3C_DEV_CHAR_TABLE3_LOC3_ADDR(base) ((base) + (0x228UL))
+#define SOC_I3C_DEV_CHAR_TABLE3_LOC4_ADDR(base) ((base) + (0x22CUL))
+#define SOC_I3C_DEV_CHAR_TABLE4_LOC1_ADDR(base) ((base) + (0x230UL))
+#define SOC_I3C_DEV_CHAR_TABLE4_LOC2_ADDR(base) ((base) + (0x234UL))
+#define SOC_I3C_DEV_CHAR_TABLE4_LOC3_ADDR(base) ((base) + (0x238UL))
+#define SOC_I3C_DEV_CHAR_TABLE4_LOC4_ADDR(base) ((base) + (0x23CUL))
+#define SOC_I3C_DEV_CHAR_TABLE5_LOC1_ADDR(base) ((base) + (0x240UL))
+#define SOC_I3C_DEV_CHAR_TABLE5_LOC2_ADDR(base) ((base) + (0x244UL))
+#define SOC_I3C_DEV_CHAR_TABLE5_LOC3_ADDR(base) ((base) + (0x248UL))
+#define SOC_I3C_DEV_CHAR_TABLE5_LOC4_ADDR(base) ((base) + (0x24CUL))
+#define SOC_I3C_DEV_CHAR_TABLE6_LOC1_ADDR(base) ((base) + (0x250UL))
+#define SOC_I3C_DEV_CHAR_TABLE6_LOC2_ADDR(base) ((base) + (0x254UL))
+#define SOC_I3C_DEV_CHAR_TABLE6_LOC3_ADDR(base) ((base) + (0x258UL))
+#define SOC_I3C_DEV_CHAR_TABLE6_LOC4_ADDR(base) ((base) + (0x25CUL))
+#define SOC_I3C_DEV_CHAR_TABLE7_LOC1_ADDR(base) ((base) + (0x260UL))
+#define SOC_I3C_DEV_CHAR_TABLE7_LOC2_ADDR(base) ((base) + (0x264UL))
+#define SOC_I3C_DEV_CHAR_TABLE7_LOC3_ADDR(base) ((base) + (0x268UL))
+#define SOC_I3C_DEV_CHAR_TABLE7_LOC4_ADDR(base) ((base) + (0x26CUL))
+#define SOC_I3C_DEV_CHAR_TABLE8_LOC1_ADDR(base) ((base) + (0x270UL))
+#define SOC_I3C_DEV_CHAR_TABLE8_LOC2_ADDR(base) ((base) + (0x274UL))
+#define SOC_I3C_DEV_CHAR_TABLE8_LOC3_ADDR(base) ((base) + (0x278UL))
+#define SOC_I3C_DEV_CHAR_TABLE8_LOC4_ADDR(base) ((base) + (0x27CUL))
+#define SOC_I3C_DEV_ADDR_TABLE_LOC1_ADDR(base) ((base) + (0x300UL))
+#define SOC_I3C_DEV_ADDR_TABLE_LOC2_ADDR(base) ((base) + (0x304UL))
+#define SOC_I3C_DEV_ADDR_TABLE_LOC3_ADDR(base) ((base) + (0x308UL))
+#define SOC_I3C_DEV_ADDR_TABLE_LOC4_ADDR(base) ((base) + (0x30CUL))
+#define SOC_I3C_DEV_ADDR_TABLE_LOC5_ADDR(base) ((base) + (0x310UL))
+#define SOC_I3C_DEV_ADDR_TABLE_LOC6_ADDR(base) ((base) + (0x314UL))
+#define SOC_I3C_DEV_ADDR_TABLE_LOC7_ADDR(base) ((base) + (0x318UL))
+#define SOC_I3C_DEV_ADDR_TABLE_LOC8_ADDR(base) ((base) + (0x31CUL))
+#else
+#define SOC_I3C_DEVICE_CTRL_ADDR(base) ((base) + (0x0))
+#define SOC_I3C_DEVICE_ADDR_ADDR(base) ((base) + (0x4))
+#define SOC_I3C_HW_CAPABILITY_ADDR(base) ((base) + (0x8))
+#define SOC_I3C_COMMAND_QUEUE_PORT_ADDR_ASSGN_CMD_ADDR(base) ((base) + (0xC))
+#define SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_COMMAND_ADDR(base) ((base) + (0xC))
+#define SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_ARGUMENT_ADDR(base) ((base) + (0xC))
+#define SOC_I3C_COMMAND_QUEUE_PORT_SHORT_DATA_ARG_ADDR(base) ((base) + (0xC))
+#define SOC_I3C_RESPONSE_QUEUE_PORT_ADDR(base) ((base) + (0x10))
+#define SOC_I3C_RX_DATA_PORT_ADDR(base) ((base) + (0x14))
+#define SOC_I3C_TX_DATA_PORT_ADDR(base) ((base) + (0x14))
+#define SOC_I3C_IBI_QUEUE_DATA_ADDR(base) ((base) + (0x18))
+#define SOC_I3C_IBI_QUEUE_STATUS_ADDR(base) ((base) + (0x18))
+#define SOC_I3C_QUEUE_THLD_CTRL_ADDR(base) ((base) + (0x1C))
+#define SOC_I3C_DATA_BUFFER_THLD_CTRL_ADDR(base) ((base) + (0x20))
+#define SOC_I3C_IBI_QUEUE_CTRL_ADDR(base) ((base) + (0x24))
+#define SOC_I3C_IBI_MR_REQ_REJECT_ADDR(base) ((base) + (0x2C))
+#define SOC_I3C_IBI_SIR_REQ_REJECT_ADDR(base) ((base) + (0x30))
+#define SOC_I3C_RESET_CTRL_ADDR(base) ((base) + (0x34))
+#define SOC_I3C_INTR_STATUS_ADDR(base) ((base) + (0x3C))
+#define SOC_I3C_INTR_STATUS_EN_ADDR(base) ((base) + (0x40))
+#define SOC_I3C_INTR_SIGNAL_EN_ADDR(base) ((base) + (0x44))
+#define SOC_I3C_INTR_FORCE_ADDR(base) ((base) + (0x48))
+#define SOC_I3C_QUEUE_STATUS_LEVEL_ADDR(base) ((base) + (0x4C))
+#define SOC_I3C_DATA_BUFFER_STATUS_LEVEL_ADDR(base) ((base) + (0x50))
+#define SOC_I3C_PRESENT_STATE_ADDR(base) ((base) + (0x54))
+#define SOC_I3C_DEVICE_ADDR_TABLE_POINTER_ADDR(base) ((base) + (0x5C))
+#define SOC_I3C_DEV_CHAR_TABLE_POINTER_ADDR(base) ((base) + (0x60))
+#define SOC_I3C_VENDOR_SPECIFIC_REG_POINTER_ADDR(base) ((base) + (0x6C))
+#define SOC_I3C_DEVICE_CTRL_EXTENDED_ADDR(base) ((base) + (0xB0))
+#define SOC_I3C_SCL_HCNT_TIMING_ADDR(base) ((base) + (0xB4))
+#define SOC_I3C_SCL_LCNT_TIMING_ADDR(base) ((base) + (0xB8))
+#define SOC_I3C_SCL_EXT_LCNT_TIMING_ADDR(base) ((base) + (0xBC))
+#define SOC_I3C_BUS_FREE_TIMING_ADDR(base) ((base) + (0xC0))
+#define SOC_I3C_SCL_EXT_TERMN_LCNT_TIMING_ADDR(base) ((base) + (0xC8))
+#define SOC_I3C_VER_ID_ADDR(base) ((base) + (0xE0))
+#define SOC_I3C_VER_TYPE_ADDR(base) ((base) + (0xE4))
+#define SOC_I3C_EXTENDED_CAPABILITY_ADDR(base) ((base) + (0xE8))
+#define SOC_I3C_DEV_CHAR_TABLE1_LOC1_ADDR(base) ((base) + (0x200))
+#define SOC_I3C_DEV_CHAR_TABLE1_LOC2_ADDR(base) ((base) + (0x204))
+#define SOC_I3C_DEV_CHAR_TABLE1_LOC3_ADDR(base) ((base) + (0x208))
+#define SOC_I3C_DEV_CHAR_TABLE1_LOC4_ADDR(base) ((base) + (0x20C))
+#define SOC_I3C_DEV_CHAR_TABLE2_LOC1_ADDR(base) ((base) + (0x210))
+#define SOC_I3C_DEV_CHAR_TABLE2_LOC2_ADDR(base) ((base) + (0x214))
+#define SOC_I3C_DEV_CHAR_TABLE2_LOC3_ADDR(base) ((base) + (0x218))
+#define SOC_I3C_DEV_CHAR_TABLE2_LOC4_ADDR(base) ((base) + (0x21C))
+#define SOC_I3C_DEV_CHAR_TABLE3_LOC1_ADDR(base) ((base) + (0x220))
+#define SOC_I3C_DEV_CHAR_TABLE3_LOC2_ADDR(base) ((base) + (0x224))
+#define SOC_I3C_DEV_CHAR_TABLE3_LOC3_ADDR(base) ((base) + (0x228))
+#define SOC_I3C_DEV_CHAR_TABLE3_LOC4_ADDR(base) ((base) + (0x22C))
+#define SOC_I3C_DEV_CHAR_TABLE4_LOC1_ADDR(base) ((base) + (0x230))
+#define SOC_I3C_DEV_CHAR_TABLE4_LOC2_ADDR(base) ((base) + (0x234))
+#define SOC_I3C_DEV_CHAR_TABLE4_LOC3_ADDR(base) ((base) + (0x238))
+#define SOC_I3C_DEV_CHAR_TABLE4_LOC4_ADDR(base) ((base) + (0x23C))
+#define SOC_I3C_DEV_CHAR_TABLE5_LOC1_ADDR(base) ((base) + (0x240))
+#define SOC_I3C_DEV_CHAR_TABLE5_LOC2_ADDR(base) ((base) + (0x244))
+#define SOC_I3C_DEV_CHAR_TABLE5_LOC3_ADDR(base) ((base) + (0x248))
+#define SOC_I3C_DEV_CHAR_TABLE5_LOC4_ADDR(base) ((base) + (0x24C))
+#define SOC_I3C_DEV_CHAR_TABLE6_LOC1_ADDR(base) ((base) + (0x250))
+#define SOC_I3C_DEV_CHAR_TABLE6_LOC2_ADDR(base) ((base) + (0x254))
+#define SOC_I3C_DEV_CHAR_TABLE6_LOC3_ADDR(base) ((base) + (0x258))
+#define SOC_I3C_DEV_CHAR_TABLE6_LOC4_ADDR(base) ((base) + (0x25C))
+#define SOC_I3C_DEV_CHAR_TABLE7_LOC1_ADDR(base) ((base) + (0x260))
+#define SOC_I3C_DEV_CHAR_TABLE7_LOC2_ADDR(base) ((base) + (0x264))
+#define SOC_I3C_DEV_CHAR_TABLE7_LOC3_ADDR(base) ((base) + (0x268))
+#define SOC_I3C_DEV_CHAR_TABLE7_LOC4_ADDR(base) ((base) + (0x26C))
+#define SOC_I3C_DEV_CHAR_TABLE8_LOC1_ADDR(base) ((base) + (0x270))
+#define SOC_I3C_DEV_CHAR_TABLE8_LOC2_ADDR(base) ((base) + (0x274))
+#define SOC_I3C_DEV_CHAR_TABLE8_LOC3_ADDR(base) ((base) + (0x278))
+#define SOC_I3C_DEV_CHAR_TABLE8_LOC4_ADDR(base) ((base) + (0x27C))
+#define SOC_I3C_DEV_ADDR_TABLE_LOC1_ADDR(base) ((base) + (0x300))
+#define SOC_I3C_DEV_ADDR_TABLE_LOC2_ADDR(base) ((base) + (0x304))
+#define SOC_I3C_DEV_ADDR_TABLE_LOC3_ADDR(base) ((base) + (0x308))
+#define SOC_I3C_DEV_ADDR_TABLE_LOC4_ADDR(base) ((base) + (0x30C))
+#define SOC_I3C_DEV_ADDR_TABLE_LOC5_ADDR(base) ((base) + (0x310))
+#define SOC_I3C_DEV_ADDR_TABLE_LOC6_ADDR(base) ((base) + (0x314))
+#define SOC_I3C_DEV_ADDR_TABLE_LOC7_ADDR(base) ((base) + (0x318))
+#define SOC_I3C_DEV_ADDR_TABLE_LOC8_ADDR(base) ((base) + (0x31C))
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int IBA_INCLUDE : 1;
+        unsigned int IBA_ARB_BITS : 3;
+        unsigned int reserved : 3;
+        unsigned int I2C_SLAVE_PRESENT : 1;
+        unsigned int HOT_JOIN_CTRL : 1;
+        unsigned int RSVD9_28 : 20;
+        unsigned int ABORT : 1;
+        unsigned int RESUME : 1;
+        unsigned int ENABLE : 1;
+    } reg;
+} SOC_I3C_DEVICE_CTRL_UNION;
+#endif
+#define SOC_I3C_DEVICE_CTRL_IBA_INCLUDE_START (0)
+#define SOC_I3C_DEVICE_CTRL_IBA_INCLUDE_END (0)
+#define SOC_I3C_DEVICE_CTRL_IBA_ARB_BITS_START (1)
+#define SOC_I3C_DEVICE_CTRL_IBA_ARB_BITS_END (3)
+#define SOC_I3C_DEVICE_CTRL_I2C_SLAVE_PRESENT_START (7)
+#define SOC_I3C_DEVICE_CTRL_I2C_SLAVE_PRESENT_END (7)
+#define SOC_I3C_DEVICE_CTRL_HOT_JOIN_CTRL_START (8)
+#define SOC_I3C_DEVICE_CTRL_HOT_JOIN_CTRL_END (8)
+#define SOC_I3C_DEVICE_CTRL_RSVD9_28_START (9)
+#define SOC_I3C_DEVICE_CTRL_RSVD9_28_END (28)
+#define SOC_I3C_DEVICE_CTRL_ABORT_START (29)
+#define SOC_I3C_DEVICE_CTRL_ABORT_END (29)
+#define SOC_I3C_DEVICE_CTRL_RESUME_START (30)
+#define SOC_I3C_DEVICE_CTRL_RESUME_END (30)
+#define SOC_I3C_DEVICE_CTRL_ENABLE_START (31)
+#define SOC_I3C_DEVICE_CTRL_ENABLE_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int RSVD_6_0 : 7;
+        unsigned int RSVD_14_7 : 8;
+        unsigned int RSVD_15 : 1;
+        unsigned int DYNAMIC_ADDR : 7;
+        unsigned int RSVD_30_23 : 8;
+        unsigned int DYNAMIC_ADDR_VALID : 1;
+    } reg;
+} SOC_I3C_DEVICE_ADDR_UNION;
+#endif
+#define SOC_I3C_DEVICE_ADDR_RSVD_6_0_START (0)
+#define SOC_I3C_DEVICE_ADDR_RSVD_6_0_END (6)
+#define SOC_I3C_DEVICE_ADDR_RSVD_14_7_START (7)
+#define SOC_I3C_DEVICE_ADDR_RSVD_14_7_END (14)
+#define SOC_I3C_DEVICE_ADDR_RSVD_15_START (15)
+#define SOC_I3C_DEVICE_ADDR_RSVD_15_END (15)
+#define SOC_I3C_DEVICE_ADDR_DYNAMIC_ADDR_START (16)
+#define SOC_I3C_DEVICE_ADDR_DYNAMIC_ADDR_END (22)
+#define SOC_I3C_DEVICE_ADDR_RSVD_30_23_START (23)
+#define SOC_I3C_DEVICE_ADDR_RSVD_30_23_END (30)
+#define SOC_I3C_DEVICE_ADDR_DYNAMIC_ADDR_VALID_START (31)
+#define SOC_I3C_DEVICE_ADDR_DYNAMIC_ADDR_VALID_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int DAA_EN : 1;
+        unsigned int RSVD_7_1 : 7;
+        unsigned int HDR_DDR_EN : 1;
+        unsigned int HDR_TS_EN : 1;
+        unsigned int RSVD : 22;
+    } reg;
+} SOC_I3C_HW_CAPABILITY_UNION;
+#endif
+#define SOC_I3C_HW_CAPABILITY_DAA_EN_START (0)
+#define SOC_I3C_HW_CAPABILITY_DAA_EN_END (0)
+#define SOC_I3C_HW_CAPABILITY_RSVD_7_1_START (1)
+#define SOC_I3C_HW_CAPABILITY_RSVD_7_1_END (7)
+#define SOC_I3C_HW_CAPABILITY_HDR_DDR_EN_START (8)
+#define SOC_I3C_HW_CAPABILITY_HDR_DDR_EN_END (8)
+#define SOC_I3C_HW_CAPABILITY_HDR_TS_EN_START (9)
+#define SOC_I3C_HW_CAPABILITY_HDR_TS_EN_END (9)
+#define SOC_I3C_HW_CAPABILITY_RSVD_START (10)
+#define SOC_I3C_HW_CAPABILITY_RSVD_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int CMD_ATTR : 3;
+        unsigned int TID : 4;
+        unsigned int CMD : 8;
+        unsigned int RSVD_15 : 1;
+        unsigned int DEV_INDX : 5;
+        unsigned int DEV_COUNT : 5;
+        unsigned int ROC : 1;
+        unsigned int RSVD_29_27 : 3;
+        unsigned int TOC : 1;
+        unsigned int RSVD_31 : 1;
+    } reg;
+} SOC_I3C_COMMAND_QUEUE_PORT_ADDR_ASSGN_CMD_UNION;
+#endif
+#define SOC_I3C_COMMAND_QUEUE_PORT_ADDR_ASSGN_CMD_CMD_ATTR_START (0)
+#define SOC_I3C_COMMAND_QUEUE_PORT_ADDR_ASSGN_CMD_CMD_ATTR_END (2)
+#define SOC_I3C_COMMAND_QUEUE_PORT_ADDR_ASSGN_CMD_TID_START (3)
+#define SOC_I3C_COMMAND_QUEUE_PORT_ADDR_ASSGN_CMD_TID_END (6)
+#define SOC_I3C_COMMAND_QUEUE_PORT_ADDR_ASSGN_CMD_CMD_START (7)
+#define SOC_I3C_COMMAND_QUEUE_PORT_ADDR_ASSGN_CMD_CMD_END (14)
+#define SOC_I3C_COMMAND_QUEUE_PORT_ADDR_ASSGN_CMD_RSVD_15_START (15)
+#define SOC_I3C_COMMAND_QUEUE_PORT_ADDR_ASSGN_CMD_RSVD_15_END (15)
+#define SOC_I3C_COMMAND_QUEUE_PORT_ADDR_ASSGN_CMD_DEV_INDX_START (16)
+#define SOC_I3C_COMMAND_QUEUE_PORT_ADDR_ASSGN_CMD_DEV_INDX_END (20)
+#define SOC_I3C_COMMAND_QUEUE_PORT_ADDR_ASSGN_CMD_DEV_COUNT_START (21)
+#define SOC_I3C_COMMAND_QUEUE_PORT_ADDR_ASSGN_CMD_DEV_COUNT_END (25)
+#define SOC_I3C_COMMAND_QUEUE_PORT_ADDR_ASSGN_CMD_ROC_START (26)
+#define SOC_I3C_COMMAND_QUEUE_PORT_ADDR_ASSGN_CMD_ROC_END (26)
+#define SOC_I3C_COMMAND_QUEUE_PORT_ADDR_ASSGN_CMD_RSVD_29_27_START (27)
+#define SOC_I3C_COMMAND_QUEUE_PORT_ADDR_ASSGN_CMD_RSVD_29_27_END (29)
+#define SOC_I3C_COMMAND_QUEUE_PORT_ADDR_ASSGN_CMD_TOC_START (30)
+#define SOC_I3C_COMMAND_QUEUE_PORT_ADDR_ASSGN_CMD_TOC_END (30)
+#define SOC_I3C_COMMAND_QUEUE_PORT_ADDR_ASSGN_CMD_RSVD_31_START (31)
+#define SOC_I3C_COMMAND_QUEUE_PORT_ADDR_ASSGN_CMD_RSVD_31_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int CMD_ATTR : 3;
+        unsigned int TID : 4;
+        unsigned int CMD : 8;
+        unsigned int CP : 1;
+        unsigned int DEV_INDX : 5;
+        unsigned int SPEED : 3;
+        unsigned int RSVD_25_24 : 2;
+        unsigned int ROC : 1;
+        unsigned int SDAP : 1;
+        unsigned int RnW : 1;
+        unsigned int RSVD_29 : 1;
+        unsigned int TOC : 1;
+        unsigned int RSVD_31 : 1;
+    } reg;
+} SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_COMMAND_UNION;
+#endif
+#define SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_COMMAND_CMD_ATTR_START (0)
+#define SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_COMMAND_CMD_ATTR_END (2)
+#define SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_COMMAND_TID_START (3)
+#define SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_COMMAND_TID_END (6)
+#define SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_COMMAND_CMD_START (7)
+#define SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_COMMAND_CMD_END (14)
+#define SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_COMMAND_CP_START (15)
+#define SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_COMMAND_CP_END (15)
+#define SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_COMMAND_DEV_INDX_START (16)
+#define SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_COMMAND_DEV_INDX_END (20)
+#define SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_COMMAND_SPEED_START (21)
+#define SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_COMMAND_SPEED_END (23)
+#define SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_COMMAND_RSVD_25_24_START (24)
+#define SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_COMMAND_RSVD_25_24_END (25)
+#define SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_COMMAND_ROC_START (26)
+#define SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_COMMAND_ROC_END (26)
+#define SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_COMMAND_SDAP_START (27)
+#define SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_COMMAND_SDAP_END (27)
+#define SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_COMMAND_RnW_START (28)
+#define SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_COMMAND_RnW_END (28)
+#define SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_COMMAND_RSVD_29_START (29)
+#define SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_COMMAND_RSVD_29_END (29)
+#define SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_COMMAND_TOC_START (30)
+#define SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_COMMAND_TOC_END (30)
+#define SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_COMMAND_RSVD_31_START (31)
+#define SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_COMMAND_RSVD_31_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int CMD_ATTR : 3;
+        unsigned int RSVD_14_3 : 12;
+        unsigned int DMA : 1;
+        unsigned int DATA_LENGTH : 16;
+    } reg;
+} SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_ARGUMENT_UNION;
+#endif
+#define SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_ARGUMENT_CMD_ATTR_START (0)
+#define SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_ARGUMENT_CMD_ATTR_END (2)
+#define SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_ARGUMENT_RSVD_14_3_START (3)
+#define SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_ARGUMENT_RSVD_14_3_END (14)
+#define SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_ARGUMENT_DMA_START (15)
+#define SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_ARGUMENT_DMA_END (15)
+#define SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_ARGUMENT_DATA_LENGTH_START (16)
+#define SOC_I3C_COMMAND_QUEUE_PORT_TRANSFER_ARGUMENT_DATA_LENGTH_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int CMD_ATTR : 3;
+        unsigned int BYTE_STRB : 3;
+        unsigned int RSVD_7_6 : 2;
+        unsigned int DATA_BYTE_1 : 8;
+        unsigned int DATA_BYTE_2 : 8;
+        unsigned int DATA_BYTE_3 : 8;
+    } reg;
+} SOC_I3C_COMMAND_QUEUE_PORT_SHORT_DATA_ARG_UNION;
+#endif
+#define SOC_I3C_COMMAND_QUEUE_PORT_SHORT_DATA_ARG_CMD_ATTR_START (0)
+#define SOC_I3C_COMMAND_QUEUE_PORT_SHORT_DATA_ARG_CMD_ATTR_END (2)
+#define SOC_I3C_COMMAND_QUEUE_PORT_SHORT_DATA_ARG_BYTE_STRB_START (3)
+#define SOC_I3C_COMMAND_QUEUE_PORT_SHORT_DATA_ARG_BYTE_STRB_END (5)
+#define SOC_I3C_COMMAND_QUEUE_PORT_SHORT_DATA_ARG_RSVD_7_6_START (6)
+#define SOC_I3C_COMMAND_QUEUE_PORT_SHORT_DATA_ARG_RSVD_7_6_END (7)
+#define SOC_I3C_COMMAND_QUEUE_PORT_SHORT_DATA_ARG_DATA_BYTE_1_START (8)
+#define SOC_I3C_COMMAND_QUEUE_PORT_SHORT_DATA_ARG_DATA_BYTE_1_END (15)
+#define SOC_I3C_COMMAND_QUEUE_PORT_SHORT_DATA_ARG_DATA_BYTE_2_START (16)
+#define SOC_I3C_COMMAND_QUEUE_PORT_SHORT_DATA_ARG_DATA_BYTE_2_END (23)
+#define SOC_I3C_COMMAND_QUEUE_PORT_SHORT_DATA_ARG_DATA_BYTE_3_START (24)
+#define SOC_I3C_COMMAND_QUEUE_PORT_SHORT_DATA_ARG_DATA_BYTE_3_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int DATA_LENGTH_OR_DEV_COUNT : 16;
+        unsigned int reserved : 8;
+        unsigned int TID : 4;
+        unsigned int ERR_STATUS : 4;
+    } reg;
+} SOC_I3C_RESPONSE_QUEUE_PORT_UNION;
+#endif
+#define SOC_I3C_RESPONSE_QUEUE_PORT_DATA_LENGTH_OR_DEV_COUNT_START (0)
+#define SOC_I3C_RESPONSE_QUEUE_PORT_DATA_LENGTH_OR_DEV_COUNT_END (15)
+#define SOC_I3C_RESPONSE_QUEUE_PORT_TID_START (24)
+#define SOC_I3C_RESPONSE_QUEUE_PORT_TID_END (27)
+#define SOC_I3C_RESPONSE_QUEUE_PORT_ERR_STATUS_START (28)
+#define SOC_I3C_RESPONSE_QUEUE_PORT_ERR_STATUS_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int RX_DATA_PORT : 32;
+    } reg;
+} SOC_I3C_RX_DATA_PORT_UNION;
+#endif
+#define SOC_I3C_RX_DATA_PORT_RX_DATA_PORT_START (0)
+#define SOC_I3C_RX_DATA_PORT_RX_DATA_PORT_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int TX_DATA_PORT : 32;
+    } reg;
+} SOC_I3C_TX_DATA_PORT_UNION;
+#endif
+#define SOC_I3C_TX_DATA_PORT_TX_DATA_PORT_START (0)
+#define SOC_I3C_TX_DATA_PORT_TX_DATA_PORT_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int IBI_DATA : 32;
+    } reg;
+} SOC_I3C_IBI_QUEUE_DATA_UNION;
+#endif
+#define SOC_I3C_IBI_QUEUE_DATA_IBI_DATA_START (0)
+#define SOC_I3C_IBI_QUEUE_DATA_IBI_DATA_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int DATA_LENGTH : 8;
+        unsigned int IBI_ID : 8;
+        unsigned int RSVD_27_16 : 12;
+        unsigned int IBI_STS : 4;
+    } reg;
+} SOC_I3C_IBI_QUEUE_STATUS_UNION;
+#endif
+#define SOC_I3C_IBI_QUEUE_STATUS_DATA_LENGTH_START (0)
+#define SOC_I3C_IBI_QUEUE_STATUS_DATA_LENGTH_END (7)
+#define SOC_I3C_IBI_QUEUE_STATUS_IBI_ID_START (8)
+#define SOC_I3C_IBI_QUEUE_STATUS_IBI_ID_END (15)
+#define SOC_I3C_IBI_QUEUE_STATUS_RSVD_27_16_START (16)
+#define SOC_I3C_IBI_QUEUE_STATUS_RSVD_27_16_END (27)
+#define SOC_I3C_IBI_QUEUE_STATUS_IBI_STS_START (28)
+#define SOC_I3C_IBI_QUEUE_STATUS_IBI_STS_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int CMD_EMPTY_BUF_THLD : 8;
+        unsigned int RESP_BUF_THLD : 8;
+        unsigned int RSVD_23_16 : 8;
+        unsigned int IBI_STATUS_THLD : 5;
+        unsigned int RSVD : 3;
+    } reg;
+} SOC_I3C_QUEUE_THLD_CTRL_UNION;
+#endif
+#define SOC_I3C_QUEUE_THLD_CTRL_CMD_EMPTY_BUF_THLD_START (0)
+#define SOC_I3C_QUEUE_THLD_CTRL_CMD_EMPTY_BUF_THLD_END (7)
+#define SOC_I3C_QUEUE_THLD_CTRL_RESP_BUF_THLD_START (8)
+#define SOC_I3C_QUEUE_THLD_CTRL_RESP_BUF_THLD_END (15)
+#define SOC_I3C_QUEUE_THLD_CTRL_RSVD_23_16_START (16)
+#define SOC_I3C_QUEUE_THLD_CTRL_RSVD_23_16_END (23)
+#define SOC_I3C_QUEUE_THLD_CTRL_IBI_STATUS_THLD_START (24)
+#define SOC_I3C_QUEUE_THLD_CTRL_IBI_STATUS_THLD_END (28)
+#define SOC_I3C_QUEUE_THLD_CTRL_RSVD_START (29)
+#define SOC_I3C_QUEUE_THLD_CTRL_RSVD_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int TX_EMPTY_BUF_THLD : 3;
+        unsigned int RSVD_7_3 : 5;
+        unsigned int RX_BUF_THLD : 3;
+        unsigned int RSVD_15_11 : 5;
+        unsigned int TX_START_THLD : 3;
+        unsigned int RSVD_23_19 : 5;
+        unsigned int RX_START_THLD : 3;
+        unsigned int RSVD_31_27 : 5;
+    } reg;
+} SOC_I3C_DATA_BUFFER_THLD_CTRL_UNION;
+#endif
+#define SOC_I3C_DATA_BUFFER_THLD_CTRL_TX_EMPTY_BUF_THLD_START (0)
+#define SOC_I3C_DATA_BUFFER_THLD_CTRL_TX_EMPTY_BUF_THLD_END (2)
+#define SOC_I3C_DATA_BUFFER_THLD_CTRL_RSVD_7_3_START (3)
+#define SOC_I3C_DATA_BUFFER_THLD_CTRL_RSVD_7_3_END (7)
+#define SOC_I3C_DATA_BUFFER_THLD_CTRL_RX_BUF_THLD_START (8)
+#define SOC_I3C_DATA_BUFFER_THLD_CTRL_RX_BUF_THLD_END (10)
+#define SOC_I3C_DATA_BUFFER_THLD_CTRL_RSVD_15_11_START (11)
+#define SOC_I3C_DATA_BUFFER_THLD_CTRL_RSVD_15_11_END (15)
+#define SOC_I3C_DATA_BUFFER_THLD_CTRL_TX_START_THLD_START (16)
+#define SOC_I3C_DATA_BUFFER_THLD_CTRL_TX_START_THLD_END (18)
+#define SOC_I3C_DATA_BUFFER_THLD_CTRL_RSVD_23_19_START (19)
+#define SOC_I3C_DATA_BUFFER_THLD_CTRL_RSVD_23_19_END (23)
+#define SOC_I3C_DATA_BUFFER_THLD_CTRL_RX_START_THLD_START (24)
+#define SOC_I3C_DATA_BUFFER_THLD_CTRL_RX_START_THLD_END (26)
+#define SOC_I3C_DATA_BUFFER_THLD_CTRL_RSVD_31_27_START (27)
+#define SOC_I3C_DATA_BUFFER_THLD_CTRL_RSVD_31_27_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int NOTIFY_HJ_REJECTED : 1;
+        unsigned int NOTIFY_MR_REJECTED : 1;
+        unsigned int RSVD_2 : 1;
+        unsigned int NOTIFY_SIR_REJECTED : 1;
+        unsigned int RSVD : 28;
+    } reg;
+} SOC_I3C_IBI_QUEUE_CTRL_UNION;
+#endif
+#define SOC_I3C_IBI_QUEUE_CTRL_NOTIFY_HJ_REJECTED_START (0)
+#define SOC_I3C_IBI_QUEUE_CTRL_NOTIFY_HJ_REJECTED_END (0)
+#define SOC_I3C_IBI_QUEUE_CTRL_NOTIFY_MR_REJECTED_START (1)
+#define SOC_I3C_IBI_QUEUE_CTRL_NOTIFY_MR_REJECTED_END (1)
+#define SOC_I3C_IBI_QUEUE_CTRL_RSVD_2_START (2)
+#define SOC_I3C_IBI_QUEUE_CTRL_RSVD_2_END (2)
+#define SOC_I3C_IBI_QUEUE_CTRL_NOTIFY_SIR_REJECTED_START (3)
+#define SOC_I3C_IBI_QUEUE_CTRL_NOTIFY_SIR_REJECTED_END (3)
+#define SOC_I3C_IBI_QUEUE_CTRL_RSVD_START (4)
+#define SOC_I3C_IBI_QUEUE_CTRL_RSVD_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int MR_REQ_REJECT : 32;
+    } reg;
+} SOC_I3C_IBI_MR_REQ_REJECT_UNION;
+#endif
+#define SOC_I3C_IBI_MR_REQ_REJECT_MR_REQ_REJECT_START (0)
+#define SOC_I3C_IBI_MR_REQ_REJECT_MR_REQ_REJECT_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int SIR_REQ_REJECT : 32;
+    } reg;
+} SOC_I3C_IBI_SIR_REQ_REJECT_UNION;
+#endif
+#define SOC_I3C_IBI_SIR_REQ_REJECT_SIR_REQ_REJECT_START (0)
+#define SOC_I3C_IBI_SIR_REQ_REJECT_SIR_REQ_REJECT_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int SOFT_RST : 1;
+        unsigned int CMD_QUEUE_RST : 1;
+        unsigned int RESP_QUEUE_RST : 1;
+        unsigned int TX_FIFO_RST : 1;
+        unsigned int RX_FIFO_RST : 1;
+        unsigned int IBI_QUEUE_RST : 1;
+        unsigned int RSVD : 26;
+    } reg;
+} SOC_I3C_RESET_CTRL_UNION;
+#endif
+#define SOC_I3C_RESET_CTRL_SOFT_RST_START (0)
+#define SOC_I3C_RESET_CTRL_SOFT_RST_END (0)
+#define SOC_I3C_RESET_CTRL_CMD_QUEUE_RST_START (1)
+#define SOC_I3C_RESET_CTRL_CMD_QUEUE_RST_END (1)
+#define SOC_I3C_RESET_CTRL_RESP_QUEUE_RST_START (2)
+#define SOC_I3C_RESET_CTRL_RESP_QUEUE_RST_END (2)
+#define SOC_I3C_RESET_CTRL_TX_FIFO_RST_START (3)
+#define SOC_I3C_RESET_CTRL_TX_FIFO_RST_END (3)
+#define SOC_I3C_RESET_CTRL_RX_FIFO_RST_START (4)
+#define SOC_I3C_RESET_CTRL_RX_FIFO_RST_END (4)
+#define SOC_I3C_RESET_CTRL_IBI_QUEUE_RST_START (5)
+#define SOC_I3C_RESET_CTRL_IBI_QUEUE_RST_END (5)
+#define SOC_I3C_RESET_CTRL_RSVD_START (6)
+#define SOC_I3C_RESET_CTRL_RSVD_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int TX_THLD_STAT : 1;
+        unsigned int RX_THLD_STAT : 1;
+        unsigned int IBI_THLD_STAT : 1;
+        unsigned int CMD_QUEUE_READY_STAT : 1;
+        unsigned int RESP_READY_STAT_INTR : 1;
+        unsigned int TRANSFER_ABORT_STAT : 1;
+        unsigned int RSVD_8_6 : 3;
+        unsigned int TRANSFER_ERR_STAT : 1;
+        unsigned int RSVD_10 : 1;
+        unsigned int RSVD : 21;
+    } reg;
+} SOC_I3C_INTR_STATUS_UNION;
+#endif
+#define SOC_I3C_INTR_STATUS_TX_THLD_STAT_START (0)
+#define SOC_I3C_INTR_STATUS_TX_THLD_STAT_END (0)
+#define SOC_I3C_INTR_STATUS_RX_THLD_STAT_START (1)
+#define SOC_I3C_INTR_STATUS_RX_THLD_STAT_END (1)
+#define SOC_I3C_INTR_STATUS_IBI_THLD_STAT_START (2)
+#define SOC_I3C_INTR_STATUS_IBI_THLD_STAT_END (2)
+#define SOC_I3C_INTR_STATUS_CMD_QUEUE_READY_STAT_START (3)
+#define SOC_I3C_INTR_STATUS_CMD_QUEUE_READY_STAT_END (3)
+#define SOC_I3C_INTR_STATUS_RESP_READY_STAT_INTR_START (4)
+#define SOC_I3C_INTR_STATUS_RESP_READY_STAT_INTR_END (4)
+#define SOC_I3C_INTR_STATUS_TRANSFER_ABORT_STAT_START (5)
+#define SOC_I3C_INTR_STATUS_TRANSFER_ABORT_STAT_END (5)
+#define SOC_I3C_INTR_STATUS_RSVD_8_6_START (6)
+#define SOC_I3C_INTR_STATUS_RSVD_8_6_END (8)
+#define SOC_I3C_INTR_STATUS_TRANSFER_ERR_STAT_START (9)
+#define SOC_I3C_INTR_STATUS_TRANSFER_ERR_STAT_END (9)
+#define SOC_I3C_INTR_STATUS_RSVD_10_START (10)
+#define SOC_I3C_INTR_STATUS_RSVD_10_END (10)
+#define SOC_I3C_INTR_STATUS_RSVD_START (11)
+#define SOC_I3C_INTR_STATUS_RSVD_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int TX_THLD_STAT_EN : 1;
+        unsigned int RX_THLD_STAT_EN : 1;
+        unsigned int IBI_THLD_STAT_EN : 1;
+        unsigned int CMD_QUEUE_READY_STAT_EN : 1;
+        unsigned int RESP_READY_STAT_INTR_EN : 1;
+        unsigned int TRANSFER_ABORT_STAT_EN : 1;
+        unsigned int RSVD_8_6 : 3;
+        unsigned int TRANSFER_ERR_STAT_EN : 1;
+        unsigned int RSVD_10 : 1;
+        unsigned int RSVD : 21;
+    } reg;
+} SOC_I3C_INTR_STATUS_EN_UNION;
+#endif
+#define SOC_I3C_INTR_STATUS_EN_TX_THLD_STAT_EN_START (0)
+#define SOC_I3C_INTR_STATUS_EN_TX_THLD_STAT_EN_END (0)
+#define SOC_I3C_INTR_STATUS_EN_RX_THLD_STAT_EN_START (1)
+#define SOC_I3C_INTR_STATUS_EN_RX_THLD_STAT_EN_END (1)
+#define SOC_I3C_INTR_STATUS_EN_IBI_THLD_STAT_EN_START (2)
+#define SOC_I3C_INTR_STATUS_EN_IBI_THLD_STAT_EN_END (2)
+#define SOC_I3C_INTR_STATUS_EN_CMD_QUEUE_READY_STAT_EN_START (3)
+#define SOC_I3C_INTR_STATUS_EN_CMD_QUEUE_READY_STAT_EN_END (3)
+#define SOC_I3C_INTR_STATUS_EN_RESP_READY_STAT_INTR_EN_START (4)
+#define SOC_I3C_INTR_STATUS_EN_RESP_READY_STAT_INTR_EN_END (4)
+#define SOC_I3C_INTR_STATUS_EN_TRANSFER_ABORT_STAT_EN_START (5)
+#define SOC_I3C_INTR_STATUS_EN_TRANSFER_ABORT_STAT_EN_END (5)
+#define SOC_I3C_INTR_STATUS_EN_RSVD_8_6_START (6)
+#define SOC_I3C_INTR_STATUS_EN_RSVD_8_6_END (8)
+#define SOC_I3C_INTR_STATUS_EN_TRANSFER_ERR_STAT_EN_START (9)
+#define SOC_I3C_INTR_STATUS_EN_TRANSFER_ERR_STAT_EN_END (9)
+#define SOC_I3C_INTR_STATUS_EN_RSVD_10_START (10)
+#define SOC_I3C_INTR_STATUS_EN_RSVD_10_END (10)
+#define SOC_I3C_INTR_STATUS_EN_RSVD_START (11)
+#define SOC_I3C_INTR_STATUS_EN_RSVD_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int TX_THLD_SIGNAL_EN : 1;
+        unsigned int RX_THLD_SIGNAL_EN : 1;
+        unsigned int IBI_THLD_SIGNAL_EN : 1;
+        unsigned int CMD_QUEUE_READY_SIGNAL_EN : 1;
+        unsigned int RESP_READY_SIGNAL_EN : 1;
+        unsigned int TRANSFER_ABORT_SIGNAL_EN : 1;
+        unsigned int RSVD_8_6 : 3;
+        unsigned int TRANSFER_ERR_SIGNAL_EN : 1;
+        unsigned int RSVD_10 : 1;
+        unsigned int RSVD : 21;
+    } reg;
+} SOC_I3C_INTR_SIGNAL_EN_UNION;
+#endif
+#define SOC_I3C_INTR_SIGNAL_EN_TX_THLD_SIGNAL_EN_START (0)
+#define SOC_I3C_INTR_SIGNAL_EN_TX_THLD_SIGNAL_EN_END (0)
+#define SOC_I3C_INTR_SIGNAL_EN_RX_THLD_SIGNAL_EN_START (1)
+#define SOC_I3C_INTR_SIGNAL_EN_RX_THLD_SIGNAL_EN_END (1)
+#define SOC_I3C_INTR_SIGNAL_EN_IBI_THLD_SIGNAL_EN_START (2)
+#define SOC_I3C_INTR_SIGNAL_EN_IBI_THLD_SIGNAL_EN_END (2)
+#define SOC_I3C_INTR_SIGNAL_EN_CMD_QUEUE_READY_SIGNAL_EN_START (3)
+#define SOC_I3C_INTR_SIGNAL_EN_CMD_QUEUE_READY_SIGNAL_EN_END (3)
+#define SOC_I3C_INTR_SIGNAL_EN_RESP_READY_SIGNAL_EN_START (4)
+#define SOC_I3C_INTR_SIGNAL_EN_RESP_READY_SIGNAL_EN_END (4)
+#define SOC_I3C_INTR_SIGNAL_EN_TRANSFER_ABORT_SIGNAL_EN_START (5)
+#define SOC_I3C_INTR_SIGNAL_EN_TRANSFER_ABORT_SIGNAL_EN_END (5)
+#define SOC_I3C_INTR_SIGNAL_EN_RSVD_8_6_START (6)
+#define SOC_I3C_INTR_SIGNAL_EN_RSVD_8_6_END (8)
+#define SOC_I3C_INTR_SIGNAL_EN_TRANSFER_ERR_SIGNAL_EN_START (9)
+#define SOC_I3C_INTR_SIGNAL_EN_TRANSFER_ERR_SIGNAL_EN_END (9)
+#define SOC_I3C_INTR_SIGNAL_EN_RSVD_10_START (10)
+#define SOC_I3C_INTR_SIGNAL_EN_RSVD_10_END (10)
+#define SOC_I3C_INTR_SIGNAL_EN_RSVD_START (11)
+#define SOC_I3C_INTR_SIGNAL_EN_RSVD_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int TX_THLD_FORCE_EN : 1;
+        unsigned int RX_THLD_FORCE_EN : 1;
+        unsigned int IBI_THLD_FORCE_EN : 1;
+        unsigned int CMD_QUEUE_READY_FORCE_EN : 1;
+        unsigned int RESP_READY_FORCE_EN : 1;
+        unsigned int TRANSFER_ABORT_FORCE_EN : 1;
+        unsigned int RSVD_8_6 : 3;
+        unsigned int TRANSFER_ERR_FORCE_EN : 1;
+        unsigned int RSVD_10 : 1;
+        unsigned int RSVD : 21;
+    } reg;
+} SOC_I3C_INTR_FORCE_UNION;
+#endif
+#define SOC_I3C_INTR_FORCE_TX_THLD_FORCE_EN_START (0)
+#define SOC_I3C_INTR_FORCE_TX_THLD_FORCE_EN_END (0)
+#define SOC_I3C_INTR_FORCE_RX_THLD_FORCE_EN_START (1)
+#define SOC_I3C_INTR_FORCE_RX_THLD_FORCE_EN_END (1)
+#define SOC_I3C_INTR_FORCE_IBI_THLD_FORCE_EN_START (2)
+#define SOC_I3C_INTR_FORCE_IBI_THLD_FORCE_EN_END (2)
+#define SOC_I3C_INTR_FORCE_CMD_QUEUE_READY_FORCE_EN_START (3)
+#define SOC_I3C_INTR_FORCE_CMD_QUEUE_READY_FORCE_EN_END (3)
+#define SOC_I3C_INTR_FORCE_RESP_READY_FORCE_EN_START (4)
+#define SOC_I3C_INTR_FORCE_RESP_READY_FORCE_EN_END (4)
+#define SOC_I3C_INTR_FORCE_TRANSFER_ABORT_FORCE_EN_START (5)
+#define SOC_I3C_INTR_FORCE_TRANSFER_ABORT_FORCE_EN_END (5)
+#define SOC_I3C_INTR_FORCE_RSVD_8_6_START (6)
+#define SOC_I3C_INTR_FORCE_RSVD_8_6_END (8)
+#define SOC_I3C_INTR_FORCE_TRANSFER_ERR_FORCE_EN_START (9)
+#define SOC_I3C_INTR_FORCE_TRANSFER_ERR_FORCE_EN_END (9)
+#define SOC_I3C_INTR_FORCE_RSVD_10_START (10)
+#define SOC_I3C_INTR_FORCE_RSVD_10_END (10)
+#define SOC_I3C_INTR_FORCE_RSVD_START (11)
+#define SOC_I3C_INTR_FORCE_RSVD_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int CMD_QUEUE_EMPTY_LOC : 8;
+        unsigned int RESP_BUF_BLR : 8;
+        unsigned int IBI_BUF_BLR : 8;
+        unsigned int IBI_STATUS_CNT : 5;
+        unsigned int RSVD : 3;
+    } reg;
+} SOC_I3C_QUEUE_STATUS_LEVEL_UNION;
+#endif
+#define SOC_I3C_QUEUE_STATUS_LEVEL_CMD_QUEUE_EMPTY_LOC_START (0)
+#define SOC_I3C_QUEUE_STATUS_LEVEL_CMD_QUEUE_EMPTY_LOC_END (7)
+#define SOC_I3C_QUEUE_STATUS_LEVEL_RESP_BUF_BLR_START (8)
+#define SOC_I3C_QUEUE_STATUS_LEVEL_RESP_BUF_BLR_END (15)
+#define SOC_I3C_QUEUE_STATUS_LEVEL_IBI_BUF_BLR_START (16)
+#define SOC_I3C_QUEUE_STATUS_LEVEL_IBI_BUF_BLR_END (23)
+#define SOC_I3C_QUEUE_STATUS_LEVEL_IBI_STATUS_CNT_START (24)
+#define SOC_I3C_QUEUE_STATUS_LEVEL_IBI_STATUS_CNT_END (28)
+#define SOC_I3C_QUEUE_STATUS_LEVEL_RSVD_START (29)
+#define SOC_I3C_QUEUE_STATUS_LEVEL_RSVD_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int TX_BUF_EMPTY_LOC : 8;
+        unsigned int RX_BUF_BLR : 8;
+        unsigned int RSVD : 16;
+    } reg;
+} SOC_I3C_DATA_BUFFER_STATUS_LEVEL_UNION;
+#endif
+#define SOC_I3C_DATA_BUFFER_STATUS_LEVEL_TX_BUF_EMPTY_LOC_START (0)
+#define SOC_I3C_DATA_BUFFER_STATUS_LEVEL_TX_BUF_EMPTY_LOC_END (7)
+#define SOC_I3C_DATA_BUFFER_STATUS_LEVEL_RX_BUF_BLR_START (8)
+#define SOC_I3C_DATA_BUFFER_STATUS_LEVEL_RX_BUF_BLR_END (15)
+#define SOC_I3C_DATA_BUFFER_STATUS_LEVEL_RSVD_START (16)
+#define SOC_I3C_DATA_BUFFER_STATUS_LEVEL_RSVD_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int SCL_LINE_SIGNAL_LEVEL : 1;
+        unsigned int SDA_LINE_SIGNAL_LEVEL : 1;
+        unsigned int CURRENT_MASTER : 1;
+        unsigned int RSVD3_7 : 5;
+        unsigned int CM_TFR_STATUS : 6;
+        unsigned int RSVD14_15 : 2;
+        unsigned int CM_TFR_ST_STATUS : 6;
+        unsigned int RSVD22_23 : 2;
+        unsigned int CMD_TID : 4;
+        unsigned int RSVD28_31 : 4;
+    } reg;
+} SOC_I3C_PRESENT_STATE_UNION;
+#endif
+#define SOC_I3C_PRESENT_STATE_SCL_LINE_SIGNAL_LEVEL_START (0)
+#define SOC_I3C_PRESENT_STATE_SCL_LINE_SIGNAL_LEVEL_END (0)
+#define SOC_I3C_PRESENT_STATE_SDA_LINE_SIGNAL_LEVEL_START (1)
+#define SOC_I3C_PRESENT_STATE_SDA_LINE_SIGNAL_LEVEL_END (1)
+#define SOC_I3C_PRESENT_STATE_CURRENT_MASTER_START (2)
+#define SOC_I3C_PRESENT_STATE_CURRENT_MASTER_END (2)
+#define SOC_I3C_PRESENT_STATE_RSVD3_7_START (3)
+#define SOC_I3C_PRESENT_STATE_RSVD3_7_END (7)
+#define SOC_I3C_PRESENT_STATE_CM_TFR_STATUS_START (8)
+#define SOC_I3C_PRESENT_STATE_CM_TFR_STATUS_END (13)
+#define SOC_I3C_PRESENT_STATE_RSVD14_15_START (14)
+#define SOC_I3C_PRESENT_STATE_RSVD14_15_END (15)
+#define SOC_I3C_PRESENT_STATE_CM_TFR_ST_STATUS_START (16)
+#define SOC_I3C_PRESENT_STATE_CM_TFR_ST_STATUS_END (21)
+#define SOC_I3C_PRESENT_STATE_RSVD22_23_START (22)
+#define SOC_I3C_PRESENT_STATE_RSVD22_23_END (23)
+#define SOC_I3C_PRESENT_STATE_CMD_TID_START (24)
+#define SOC_I3C_PRESENT_STATE_CMD_TID_END (27)
+#define SOC_I3C_PRESENT_STATE_RSVD28_31_START (28)
+#define SOC_I3C_PRESENT_STATE_RSVD28_31_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int P_DEV_ADDR_TABLE_START_ADDR : 16;
+        unsigned int DEV_ADDR_TABLE_DEPTH : 16;
+    } reg;
+} SOC_I3C_DEVICE_ADDR_TABLE_POINTER_UNION;
+#endif
+#define SOC_I3C_DEVICE_ADDR_TABLE_POINTER_P_DEV_ADDR_TABLE_START_ADDR_START (0)
+#define SOC_I3C_DEVICE_ADDR_TABLE_POINTER_P_DEV_ADDR_TABLE_START_ADDR_END (15)
+#define SOC_I3C_DEVICE_ADDR_TABLE_POINTER_DEV_ADDR_TABLE_DEPTH_START (16)
+#define SOC_I3C_DEVICE_ADDR_TABLE_POINTER_DEV_ADDR_TABLE_DEPTH_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int P_DEV_CHAR_TABLE_START_ADDR : 12;
+        unsigned int DEV_CHAR_TABLE_DEPTH : 7;
+        unsigned int PRESENT_DEV_CHAR_TABLE_INDX : 3;
+        unsigned int RSVD_31_24 : 10;
+    } reg;
+} SOC_I3C_DEV_CHAR_TABLE_POINTER_UNION;
+#endif
+#define SOC_I3C_DEV_CHAR_TABLE_POINTER_P_DEV_CHAR_TABLE_START_ADDR_START (0)
+#define SOC_I3C_DEV_CHAR_TABLE_POINTER_P_DEV_CHAR_TABLE_START_ADDR_END (11)
+#define SOC_I3C_DEV_CHAR_TABLE_POINTER_DEV_CHAR_TABLE_DEPTH_START (12)
+#define SOC_I3C_DEV_CHAR_TABLE_POINTER_DEV_CHAR_TABLE_DEPTH_END (18)
+#define SOC_I3C_DEV_CHAR_TABLE_POINTER_PRESENT_DEV_CHAR_TABLE_INDX_START (19)
+#define SOC_I3C_DEV_CHAR_TABLE_POINTER_PRESENT_DEV_CHAR_TABLE_INDX_END (21)
+#define SOC_I3C_DEV_CHAR_TABLE_POINTER_RSVD_31_24_START (22)
+#define SOC_I3C_DEV_CHAR_TABLE_POINTER_RSVD_31_24_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int P_VENDOR_REG_START_ADDR : 16;
+        unsigned int RSVD : 16;
+    } reg;
+} SOC_I3C_VENDOR_SPECIFIC_REG_POINTER_UNION;
+#endif
+#define SOC_I3C_VENDOR_SPECIFIC_REG_POINTER_P_VENDOR_REG_START_ADDR_START (0)
+#define SOC_I3C_VENDOR_SPECIFIC_REG_POINTER_P_VENDOR_REG_START_ADDR_END (15)
+#define SOC_I3C_VENDOR_SPECIFIC_REG_POINTER_RSVD_START (16)
+#define SOC_I3C_VENDOR_SPECIFIC_REG_POINTER_RSVD_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int DEV_OPERATION_MODE : 2;
+        unsigned int RSVD_3_2 : 2;
+        unsigned int RSVD : 28;
+    } reg;
+} SOC_I3C_DEVICE_CTRL_EXTENDED_UNION;
+#endif
+#define SOC_I3C_DEVICE_CTRL_EXTENDED_DEV_OPERATION_MODE_START (0)
+#define SOC_I3C_DEVICE_CTRL_EXTENDED_DEV_OPERATION_MODE_END (1)
+#define SOC_I3C_DEVICE_CTRL_EXTENDED_RSVD_3_2_START (2)
+#define SOC_I3C_DEVICE_CTRL_EXTENDED_RSVD_3_2_END (3)
+#define SOC_I3C_DEVICE_CTRL_EXTENDED_RSVD_START (4)
+#define SOC_I3C_DEVICE_CTRL_EXTENDED_RSVD_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int I2C_OD_HCNT : 8;
+        unsigned int I3C_OD_HCNT : 8;
+        unsigned int I3C_PP_HCNT : 8;
+        unsigned int RSVD_31_24 : 8;
+    } reg;
+} SOC_I3C_SCL_HCNT_TIMING_UNION;
+#endif
+#define SOC_I3C_SCL_HCNT_TIMING_I2C_OD_HCNT_START (0)
+#define SOC_I3C_SCL_HCNT_TIMING_I2C_OD_HCNT_END (7)
+#define SOC_I3C_SCL_HCNT_TIMING_I3C_OD_HCNT_START (8)
+#define SOC_I3C_SCL_HCNT_TIMING_I3C_OD_HCNT_END (15)
+#define SOC_I3C_SCL_HCNT_TIMING_I3C_PP_HCNT_START (16)
+#define SOC_I3C_SCL_HCNT_TIMING_I3C_PP_HCNT_END (23)
+#define SOC_I3C_SCL_HCNT_TIMING_RSVD_31_24_START (24)
+#define SOC_I3C_SCL_HCNT_TIMING_RSVD_31_24_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int I2C_OD_LCNT : 16;
+        unsigned int I3C_OD_LCNT : 8;
+        unsigned int I3C_PP_LCNT : 8;
+    } reg;
+} SOC_I3C_SCL_LCNT_TIMING_UNION;
+#endif
+#define SOC_I3C_SCL_LCNT_TIMING_I2C_OD_LCNT_START (0)
+#define SOC_I3C_SCL_LCNT_TIMING_I2C_OD_LCNT_END (15)
+#define SOC_I3C_SCL_LCNT_TIMING_I3C_OD_LCNT_START (16)
+#define SOC_I3C_SCL_LCNT_TIMING_I3C_OD_LCNT_END (23)
+#define SOC_I3C_SCL_LCNT_TIMING_I3C_PP_LCNT_START (24)
+#define SOC_I3C_SCL_LCNT_TIMING_I3C_PP_LCNT_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int I3C_EXT_LCNT_1 : 8;
+        unsigned int I3C_EXT_LCNT_2 : 8;
+        unsigned int I3C_EXT_LCNT_3 : 8;
+        unsigned int I3C_EXT_LCNT_4 : 8;
+    } reg;
+} SOC_I3C_SCL_EXT_LCNT_TIMING_UNION;
+#endif
+#define SOC_I3C_SCL_EXT_LCNT_TIMING_I3C_EXT_LCNT_1_START (0)
+#define SOC_I3C_SCL_EXT_LCNT_TIMING_I3C_EXT_LCNT_1_END (7)
+#define SOC_I3C_SCL_EXT_LCNT_TIMING_I3C_EXT_LCNT_2_START (8)
+#define SOC_I3C_SCL_EXT_LCNT_TIMING_I3C_EXT_LCNT_2_END (15)
+#define SOC_I3C_SCL_EXT_LCNT_TIMING_I3C_EXT_LCNT_3_START (16)
+#define SOC_I3C_SCL_EXT_LCNT_TIMING_I3C_EXT_LCNT_3_END (23)
+#define SOC_I3C_SCL_EXT_LCNT_TIMING_I3C_EXT_LCNT_4_START (24)
+#define SOC_I3C_SCL_EXT_LCNT_TIMING_I3C_EXT_LCNT_4_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int I3C_MST_FREE : 8;
+        unsigned int RSVD_15_8 : 8;
+        unsigned int RSVD_16_x : 7;
+        unsigned int RSVD : 9;
+    } reg;
+} SOC_I3C_BUS_FREE_TIMING_UNION;
+#endif
+#define SOC_I3C_BUS_FREE_TIMING_I3C_MST_FREE_START (0)
+#define SOC_I3C_BUS_FREE_TIMING_I3C_MST_FREE_END (7)
+#define SOC_I3C_BUS_FREE_TIMING_RSVD_15_8_START (8)
+#define SOC_I3C_BUS_FREE_TIMING_RSVD_15_8_END (15)
+#define SOC_I3C_BUS_FREE_TIMING_RSVD_16_x_START (16)
+#define SOC_I3C_BUS_FREE_TIMING_RSVD_16_x_END (22)
+#define SOC_I3C_BUS_FREE_TIMING_RSVD_START (23)
+#define SOC_I3C_BUS_FREE_TIMING_RSVD_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int I3C_EXT_TERMN_LCNT : 4;
+        unsigned int RSVD : 28;
+    } reg;
+} SOC_I3C_SCL_EXT_TERMN_LCNT_TIMING_UNION;
+#endif
+#define SOC_I3C_SCL_EXT_TERMN_LCNT_TIMING_I3C_EXT_TERMN_LCNT_START (0)
+#define SOC_I3C_SCL_EXT_TERMN_LCNT_TIMING_I3C_EXT_TERMN_LCNT_END (3)
+#define SOC_I3C_SCL_EXT_TERMN_LCNT_TIMING_RSVD_START (4)
+#define SOC_I3C_SCL_EXT_TERMN_LCNT_TIMING_RSVD_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int I3C_VER_ID : 32;
+    } reg;
+} SOC_I3C_VER_ID_UNION;
+#endif
+#define SOC_I3C_VER_ID_I3C_VER_ID_START (0)
+#define SOC_I3C_VER_ID_I3C_VER_ID_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int I3C_VER_TYPE : 32;
+    } reg;
+} SOC_I3C_VER_TYPE_UNION;
+#endif
+#define SOC_I3C_VER_TYPE_I3C_VER_TYPE_START (0)
+#define SOC_I3C_VER_TYPE_I3C_VER_TYPE_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int APP_IF_MODE : 2;
+        unsigned int APP_IF_DATA_WIDTH : 2;
+        unsigned int OPERATION_MODE : 2;
+        unsigned int CLK_PERIOD : 6;
+        unsigned int RSVD : 20;
+    } reg;
+} SOC_I3C_EXTENDED_CAPABILITY_UNION;
+#endif
+#define SOC_I3C_EXTENDED_CAPABILITY_APP_IF_MODE_START (0)
+#define SOC_I3C_EXTENDED_CAPABILITY_APP_IF_MODE_END (1)
+#define SOC_I3C_EXTENDED_CAPABILITY_APP_IF_DATA_WIDTH_START (2)
+#define SOC_I3C_EXTENDED_CAPABILITY_APP_IF_DATA_WIDTH_END (3)
+#define SOC_I3C_EXTENDED_CAPABILITY_OPERATION_MODE_START (4)
+#define SOC_I3C_EXTENDED_CAPABILITY_OPERATION_MODE_END (5)
+#define SOC_I3C_EXTENDED_CAPABILITY_CLK_PERIOD_START (6)
+#define SOC_I3C_EXTENDED_CAPABILITY_CLK_PERIOD_END (11)
+#define SOC_I3C_EXTENDED_CAPABILITY_RSVD_START (12)
+#define SOC_I3C_EXTENDED_CAPABILITY_RSVD_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int LSB_PROVISIONAL_ID : 32;
+    } reg;
+} SOC_I3C_DEV_CHAR_TABLE1_LOC1_UNION;
+#endif
+#define SOC_I3C_DEV_CHAR_TABLE1_LOC1_LSB_PROVISIONAL_ID_START (0)
+#define SOC_I3C_DEV_CHAR_TABLE1_LOC1_LSB_PROVISIONAL_ID_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int MSB_PROVISIONAL_ID : 16;
+        unsigned int RSVD : 16;
+    } reg;
+} SOC_I3C_DEV_CHAR_TABLE1_LOC2_UNION;
+#endif
+#define SOC_I3C_DEV_CHAR_TABLE1_LOC2_MSB_PROVISIONAL_ID_START (0)
+#define SOC_I3C_DEV_CHAR_TABLE1_LOC2_MSB_PROVISIONAL_ID_END (15)
+#define SOC_I3C_DEV_CHAR_TABLE1_LOC2_RSVD_START (16)
+#define SOC_I3C_DEV_CHAR_TABLE1_LOC2_RSVD_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int DCR : 8;
+        unsigned int BCR : 8;
+        unsigned int RSVD : 16;
+    } reg;
+} SOC_I3C_DEV_CHAR_TABLE1_LOC3_UNION;
+#endif
+#define SOC_I3C_DEV_CHAR_TABLE1_LOC3_DCR_START (0)
+#define SOC_I3C_DEV_CHAR_TABLE1_LOC3_DCR_END (7)
+#define SOC_I3C_DEV_CHAR_TABLE1_LOC3_BCR_START (8)
+#define SOC_I3C_DEV_CHAR_TABLE1_LOC3_BCR_END (15)
+#define SOC_I3C_DEV_CHAR_TABLE1_LOC3_RSVD_START (16)
+#define SOC_I3C_DEV_CHAR_TABLE1_LOC3_RSVD_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int DEV_DYNAMIC_ADDR : 8;
+        unsigned int RSVD : 24;
+    } reg;
+} SOC_I3C_DEV_CHAR_TABLE1_LOC4_UNION;
+#endif
+#define SOC_I3C_DEV_CHAR_TABLE1_LOC4_DEV_DYNAMIC_ADDR_START (0)
+#define SOC_I3C_DEV_CHAR_TABLE1_LOC4_DEV_DYNAMIC_ADDR_END (7)
+#define SOC_I3C_DEV_CHAR_TABLE1_LOC4_RSVD_START (8)
+#define SOC_I3C_DEV_CHAR_TABLE1_LOC4_RSVD_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int LSB_PROVISIONAL_ID : 32;
+    } reg;
+} SOC_I3C_DEV_CHAR_TABLE2_LOC1_UNION;
+#endif
+#define SOC_I3C_DEV_CHAR_TABLE2_LOC1_LSB_PROVISIONAL_ID_START (0)
+#define SOC_I3C_DEV_CHAR_TABLE2_LOC1_LSB_PROVISIONAL_ID_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int MSB_PROVISIONAL_ID : 16;
+        unsigned int RSVD : 16;
+    } reg;
+} SOC_I3C_DEV_CHAR_TABLE2_LOC2_UNION;
+#endif
+#define SOC_I3C_DEV_CHAR_TABLE2_LOC2_MSB_PROVISIONAL_ID_START (0)
+#define SOC_I3C_DEV_CHAR_TABLE2_LOC2_MSB_PROVISIONAL_ID_END (15)
+#define SOC_I3C_DEV_CHAR_TABLE2_LOC2_RSVD_START (16)
+#define SOC_I3C_DEV_CHAR_TABLE2_LOC2_RSVD_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int DCR : 8;
+        unsigned int BCR : 8;
+        unsigned int RSVD : 16;
+    } reg;
+} SOC_I3C_DEV_CHAR_TABLE2_LOC3_UNION;
+#endif
+#define SOC_I3C_DEV_CHAR_TABLE2_LOC3_DCR_START (0)
+#define SOC_I3C_DEV_CHAR_TABLE2_LOC3_DCR_END (7)
+#define SOC_I3C_DEV_CHAR_TABLE2_LOC3_BCR_START (8)
+#define SOC_I3C_DEV_CHAR_TABLE2_LOC3_BCR_END (15)
+#define SOC_I3C_DEV_CHAR_TABLE2_LOC3_RSVD_START (16)
+#define SOC_I3C_DEV_CHAR_TABLE2_LOC3_RSVD_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int DEV_DYNAMIC_ADDR : 8;
+        unsigned int RSVD : 24;
+    } reg;
+} SOC_I3C_DEV_CHAR_TABLE2_LOC4_UNION;
+#endif
+#define SOC_I3C_DEV_CHAR_TABLE2_LOC4_DEV_DYNAMIC_ADDR_START (0)
+#define SOC_I3C_DEV_CHAR_TABLE2_LOC4_DEV_DYNAMIC_ADDR_END (7)
+#define SOC_I3C_DEV_CHAR_TABLE2_LOC4_RSVD_START (8)
+#define SOC_I3C_DEV_CHAR_TABLE2_LOC4_RSVD_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int LSB_PROVISIONAL_ID : 32;
+    } reg;
+} SOC_I3C_DEV_CHAR_TABLE3_LOC1_UNION;
+#endif
+#define SOC_I3C_DEV_CHAR_TABLE3_LOC1_LSB_PROVISIONAL_ID_START (0)
+#define SOC_I3C_DEV_CHAR_TABLE3_LOC1_LSB_PROVISIONAL_ID_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int MSB_PROVISIONAL_ID : 16;
+        unsigned int RSVD : 16;
+    } reg;
+} SOC_I3C_DEV_CHAR_TABLE3_LOC2_UNION;
+#endif
+#define SOC_I3C_DEV_CHAR_TABLE3_LOC2_MSB_PROVISIONAL_ID_START (0)
+#define SOC_I3C_DEV_CHAR_TABLE3_LOC2_MSB_PROVISIONAL_ID_END (15)
+#define SOC_I3C_DEV_CHAR_TABLE3_LOC2_RSVD_START (16)
+#define SOC_I3C_DEV_CHAR_TABLE3_LOC2_RSVD_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int DCR : 8;
+        unsigned int BCR : 8;
+        unsigned int RSVD : 16;
+    } reg;
+} SOC_I3C_DEV_CHAR_TABLE3_LOC3_UNION;
+#endif
+#define SOC_I3C_DEV_CHAR_TABLE3_LOC3_DCR_START (0)
+#define SOC_I3C_DEV_CHAR_TABLE3_LOC3_DCR_END (7)
+#define SOC_I3C_DEV_CHAR_TABLE3_LOC3_BCR_START (8)
+#define SOC_I3C_DEV_CHAR_TABLE3_LOC3_BCR_END (15)
+#define SOC_I3C_DEV_CHAR_TABLE3_LOC3_RSVD_START (16)
+#define SOC_I3C_DEV_CHAR_TABLE3_LOC3_RSVD_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int DEV_DYNAMIC_ADDR : 8;
+        unsigned int RSVD : 24;
+    } reg;
+} SOC_I3C_DEV_CHAR_TABLE3_LOC4_UNION;
+#endif
+#define SOC_I3C_DEV_CHAR_TABLE3_LOC4_DEV_DYNAMIC_ADDR_START (0)
+#define SOC_I3C_DEV_CHAR_TABLE3_LOC4_DEV_DYNAMIC_ADDR_END (7)
+#define SOC_I3C_DEV_CHAR_TABLE3_LOC4_RSVD_START (8)
+#define SOC_I3C_DEV_CHAR_TABLE3_LOC4_RSVD_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int LSB_PROVISIONAL_ID : 32;
+    } reg;
+} SOC_I3C_DEV_CHAR_TABLE4_LOC1_UNION;
+#endif
+#define SOC_I3C_DEV_CHAR_TABLE4_LOC1_LSB_PROVISIONAL_ID_START (0)
+#define SOC_I3C_DEV_CHAR_TABLE4_LOC1_LSB_PROVISIONAL_ID_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int MSB_PROVISIONAL_ID : 16;
+        unsigned int RSVD : 16;
+    } reg;
+} SOC_I3C_DEV_CHAR_TABLE4_LOC2_UNION;
+#endif
+#define SOC_I3C_DEV_CHAR_TABLE4_LOC2_MSB_PROVISIONAL_ID_START (0)
+#define SOC_I3C_DEV_CHAR_TABLE4_LOC2_MSB_PROVISIONAL_ID_END (15)
+#define SOC_I3C_DEV_CHAR_TABLE4_LOC2_RSVD_START (16)
+#define SOC_I3C_DEV_CHAR_TABLE4_LOC2_RSVD_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int DCR : 8;
+        unsigned int BCR : 8;
+        unsigned int RSVD : 16;
+    } reg;
+} SOC_I3C_DEV_CHAR_TABLE4_LOC3_UNION;
+#endif
+#define SOC_I3C_DEV_CHAR_TABLE4_LOC3_DCR_START (0)
+#define SOC_I3C_DEV_CHAR_TABLE4_LOC3_DCR_END (7)
+#define SOC_I3C_DEV_CHAR_TABLE4_LOC3_BCR_START (8)
+#define SOC_I3C_DEV_CHAR_TABLE4_LOC3_BCR_END (15)
+#define SOC_I3C_DEV_CHAR_TABLE4_LOC3_RSVD_START (16)
+#define SOC_I3C_DEV_CHAR_TABLE4_LOC3_RSVD_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int DEV_DYNAMIC_ADDR : 8;
+        unsigned int RSVD : 24;
+    } reg;
+} SOC_I3C_DEV_CHAR_TABLE4_LOC4_UNION;
+#endif
+#define SOC_I3C_DEV_CHAR_TABLE4_LOC4_DEV_DYNAMIC_ADDR_START (0)
+#define SOC_I3C_DEV_CHAR_TABLE4_LOC4_DEV_DYNAMIC_ADDR_END (7)
+#define SOC_I3C_DEV_CHAR_TABLE4_LOC4_RSVD_START (8)
+#define SOC_I3C_DEV_CHAR_TABLE4_LOC4_RSVD_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int LSB_PROVISIONAL_ID : 32;
+    } reg;
+} SOC_I3C_DEV_CHAR_TABLE5_LOC1_UNION;
+#endif
+#define SOC_I3C_DEV_CHAR_TABLE5_LOC1_LSB_PROVISIONAL_ID_START (0)
+#define SOC_I3C_DEV_CHAR_TABLE5_LOC1_LSB_PROVISIONAL_ID_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int MSB_PROVISIONAL_ID : 16;
+        unsigned int RSVD : 16;
+    } reg;
+} SOC_I3C_DEV_CHAR_TABLE5_LOC2_UNION;
+#endif
+#define SOC_I3C_DEV_CHAR_TABLE5_LOC2_MSB_PROVISIONAL_ID_START (0)
+#define SOC_I3C_DEV_CHAR_TABLE5_LOC2_MSB_PROVISIONAL_ID_END (15)
+#define SOC_I3C_DEV_CHAR_TABLE5_LOC2_RSVD_START (16)
+#define SOC_I3C_DEV_CHAR_TABLE5_LOC2_RSVD_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int DCR : 8;
+        unsigned int BCR : 8;
+        unsigned int RSVD : 16;
+    } reg;
+} SOC_I3C_DEV_CHAR_TABLE5_LOC3_UNION;
+#endif
+#define SOC_I3C_DEV_CHAR_TABLE5_LOC3_DCR_START (0)
+#define SOC_I3C_DEV_CHAR_TABLE5_LOC3_DCR_END (7)
+#define SOC_I3C_DEV_CHAR_TABLE5_LOC3_BCR_START (8)
+#define SOC_I3C_DEV_CHAR_TABLE5_LOC3_BCR_END (15)
+#define SOC_I3C_DEV_CHAR_TABLE5_LOC3_RSVD_START (16)
+#define SOC_I3C_DEV_CHAR_TABLE5_LOC3_RSVD_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int DEV_DYNAMIC_ADDR : 8;
+        unsigned int RSVD : 24;
+    } reg;
+} SOC_I3C_DEV_CHAR_TABLE5_LOC4_UNION;
+#endif
+#define SOC_I3C_DEV_CHAR_TABLE5_LOC4_DEV_DYNAMIC_ADDR_START (0)
+#define SOC_I3C_DEV_CHAR_TABLE5_LOC4_DEV_DYNAMIC_ADDR_END (7)
+#define SOC_I3C_DEV_CHAR_TABLE5_LOC4_RSVD_START (8)
+#define SOC_I3C_DEV_CHAR_TABLE5_LOC4_RSVD_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int LSB_PROVISIONAL_ID : 32;
+    } reg;
+} SOC_I3C_DEV_CHAR_TABLE6_LOC1_UNION;
+#endif
+#define SOC_I3C_DEV_CHAR_TABLE6_LOC1_LSB_PROVISIONAL_ID_START (0)
+#define SOC_I3C_DEV_CHAR_TABLE6_LOC1_LSB_PROVISIONAL_ID_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int MSB_PROVISIONAL_ID : 16;
+        unsigned int RSVD : 16;
+    } reg;
+} SOC_I3C_DEV_CHAR_TABLE6_LOC2_UNION;
+#endif
+#define SOC_I3C_DEV_CHAR_TABLE6_LOC2_MSB_PROVISIONAL_ID_START (0)
+#define SOC_I3C_DEV_CHAR_TABLE6_LOC2_MSB_PROVISIONAL_ID_END (15)
+#define SOC_I3C_DEV_CHAR_TABLE6_LOC2_RSVD_START (16)
+#define SOC_I3C_DEV_CHAR_TABLE6_LOC2_RSVD_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int DCR : 8;
+        unsigned int BCR : 8;
+        unsigned int RSVD : 16;
+    } reg;
+} SOC_I3C_DEV_CHAR_TABLE6_LOC3_UNION;
+#endif
+#define SOC_I3C_DEV_CHAR_TABLE6_LOC3_DCR_START (0)
+#define SOC_I3C_DEV_CHAR_TABLE6_LOC3_DCR_END (7)
+#define SOC_I3C_DEV_CHAR_TABLE6_LOC3_BCR_START (8)
+#define SOC_I3C_DEV_CHAR_TABLE6_LOC3_BCR_END (15)
+#define SOC_I3C_DEV_CHAR_TABLE6_LOC3_RSVD_START (16)
+#define SOC_I3C_DEV_CHAR_TABLE6_LOC3_RSVD_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int DEV_DYNAMIC_ADDR : 8;
+        unsigned int RSVD : 24;
+    } reg;
+} SOC_I3C_DEV_CHAR_TABLE6_LOC4_UNION;
+#endif
+#define SOC_I3C_DEV_CHAR_TABLE6_LOC4_DEV_DYNAMIC_ADDR_START (0)
+#define SOC_I3C_DEV_CHAR_TABLE6_LOC4_DEV_DYNAMIC_ADDR_END (7)
+#define SOC_I3C_DEV_CHAR_TABLE6_LOC4_RSVD_START (8)
+#define SOC_I3C_DEV_CHAR_TABLE6_LOC4_RSVD_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int LSB_PROVISIONAL_ID : 32;
+    } reg;
+} SOC_I3C_DEV_CHAR_TABLE7_LOC1_UNION;
+#endif
+#define SOC_I3C_DEV_CHAR_TABLE7_LOC1_LSB_PROVISIONAL_ID_START (0)
+#define SOC_I3C_DEV_CHAR_TABLE7_LOC1_LSB_PROVISIONAL_ID_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int MSB_PROVISIONAL_ID : 16;
+        unsigned int RSVD : 16;
+    } reg;
+} SOC_I3C_DEV_CHAR_TABLE7_LOC2_UNION;
+#endif
+#define SOC_I3C_DEV_CHAR_TABLE7_LOC2_MSB_PROVISIONAL_ID_START (0)
+#define SOC_I3C_DEV_CHAR_TABLE7_LOC2_MSB_PROVISIONAL_ID_END (15)
+#define SOC_I3C_DEV_CHAR_TABLE7_LOC2_RSVD_START (16)
+#define SOC_I3C_DEV_CHAR_TABLE7_LOC2_RSVD_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int DCR : 8;
+        unsigned int BCR : 8;
+        unsigned int RSVD : 16;
+    } reg;
+} SOC_I3C_DEV_CHAR_TABLE7_LOC3_UNION;
+#endif
+#define SOC_I3C_DEV_CHAR_TABLE7_LOC3_DCR_START (0)
+#define SOC_I3C_DEV_CHAR_TABLE7_LOC3_DCR_END (7)
+#define SOC_I3C_DEV_CHAR_TABLE7_LOC3_BCR_START (8)
+#define SOC_I3C_DEV_CHAR_TABLE7_LOC3_BCR_END (15)
+#define SOC_I3C_DEV_CHAR_TABLE7_LOC3_RSVD_START (16)
+#define SOC_I3C_DEV_CHAR_TABLE7_LOC3_RSVD_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int DEV_DYNAMIC_ADDR : 8;
+        unsigned int RSVD : 24;
+    } reg;
+} SOC_I3C_DEV_CHAR_TABLE7_LOC4_UNION;
+#endif
+#define SOC_I3C_DEV_CHAR_TABLE7_LOC4_DEV_DYNAMIC_ADDR_START (0)
+#define SOC_I3C_DEV_CHAR_TABLE7_LOC4_DEV_DYNAMIC_ADDR_END (7)
+#define SOC_I3C_DEV_CHAR_TABLE7_LOC4_RSVD_START (8)
+#define SOC_I3C_DEV_CHAR_TABLE7_LOC4_RSVD_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int LSB_PROVISIONAL_ID : 32;
+    } reg;
+} SOC_I3C_DEV_CHAR_TABLE8_LOC1_UNION;
+#endif
+#define SOC_I3C_DEV_CHAR_TABLE8_LOC1_LSB_PROVISIONAL_ID_START (0)
+#define SOC_I3C_DEV_CHAR_TABLE8_LOC1_LSB_PROVISIONAL_ID_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int MSB_PROVISIONAL_ID : 16;
+        unsigned int RSVD : 16;
+    } reg;
+} SOC_I3C_DEV_CHAR_TABLE8_LOC2_UNION;
+#endif
+#define SOC_I3C_DEV_CHAR_TABLE8_LOC2_MSB_PROVISIONAL_ID_START (0)
+#define SOC_I3C_DEV_CHAR_TABLE8_LOC2_MSB_PROVISIONAL_ID_END (15)
+#define SOC_I3C_DEV_CHAR_TABLE8_LOC2_RSVD_START (16)
+#define SOC_I3C_DEV_CHAR_TABLE8_LOC2_RSVD_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int DCR : 8;
+        unsigned int BCR : 8;
+        unsigned int RSVD : 16;
+    } reg;
+} SOC_I3C_DEV_CHAR_TABLE8_LOC3_UNION;
+#endif
+#define SOC_I3C_DEV_CHAR_TABLE8_LOC3_DCR_START (0)
+#define SOC_I3C_DEV_CHAR_TABLE8_LOC3_DCR_END (7)
+#define SOC_I3C_DEV_CHAR_TABLE8_LOC3_BCR_START (8)
+#define SOC_I3C_DEV_CHAR_TABLE8_LOC3_BCR_END (15)
+#define SOC_I3C_DEV_CHAR_TABLE8_LOC3_RSVD_START (16)
+#define SOC_I3C_DEV_CHAR_TABLE8_LOC3_RSVD_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int DEV_DYNAMIC_ADDR : 8;
+        unsigned int RSVD : 24;
+    } reg;
+} SOC_I3C_DEV_CHAR_TABLE8_LOC4_UNION;
+#endif
+#define SOC_I3C_DEV_CHAR_TABLE8_LOC4_DEV_DYNAMIC_ADDR_START (0)
+#define SOC_I3C_DEV_CHAR_TABLE8_LOC4_DEV_DYNAMIC_ADDR_END (7)
+#define SOC_I3C_DEV_CHAR_TABLE8_LOC4_RSVD_START (8)
+#define SOC_I3C_DEV_CHAR_TABLE8_LOC4_RSVD_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int DEV_STATIC_ADDR : 7;
+        unsigned int RSVD_15_7 : 9;
+        unsigned int DEV_DYNAMIC_ADDR : 8;
+        unsigned int RSVD_28_24 : 5;
+        unsigned int DEV_NACK_RETRY_CNT : 2;
+        unsigned int LEGACY_I2C_DEVICE : 1;
+    } reg;
+} SOC_I3C_DEV_ADDR_TABLE_LOC1_UNION;
+#endif
+#define SOC_I3C_DEV_ADDR_TABLE_LOC1_DEV_STATIC_ADDR_START (0)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC1_DEV_STATIC_ADDR_END (6)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC1_RSVD_15_7_START (7)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC1_RSVD_15_7_END (15)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC1_DEV_DYNAMIC_ADDR_START (16)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC1_DEV_DYNAMIC_ADDR_END (23)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC1_RSVD_28_24_START (24)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC1_RSVD_28_24_END (28)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC1_DEV_NACK_RETRY_CNT_START (29)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC1_DEV_NACK_RETRY_CNT_END (30)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC1_LEGACY_I2C_DEVICE_START (31)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC1_LEGACY_I2C_DEVICE_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int DEV_STATIC_ADDR : 7;
+        unsigned int RSVD_15_7 : 9;
+        unsigned int DEV_DYNAMIC_ADDR : 8;
+        unsigned int RSVD_28_24 : 5;
+        unsigned int DEV_NACK_RETRY_CNT : 2;
+        unsigned int LEGACY_I2C_DEVICE : 1;
+    } reg;
+} SOC_I3C_DEV_ADDR_TABLE_LOC2_UNION;
+#endif
+#define SOC_I3C_DEV_ADDR_TABLE_LOC2_DEV_STATIC_ADDR_START (0)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC2_DEV_STATIC_ADDR_END (6)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC2_RSVD_15_7_START (7)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC2_RSVD_15_7_END (15)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC2_DEV_DYNAMIC_ADDR_START (16)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC2_DEV_DYNAMIC_ADDR_END (23)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC2_RSVD_28_24_START (24)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC2_RSVD_28_24_END (28)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC2_DEV_NACK_RETRY_CNT_START (29)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC2_DEV_NACK_RETRY_CNT_END (30)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC2_LEGACY_I2C_DEVICE_START (31)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC2_LEGACY_I2C_DEVICE_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int DEV_STATIC_ADDR : 7;
+        unsigned int RSVD_15_7 : 9;
+        unsigned int DEV_DYNAMIC_ADDR : 8;
+        unsigned int RSVD_28_24 : 5;
+        unsigned int DEV_NACK_RETRY_CNT : 2;
+        unsigned int LEGACY_I2C_DEVICE : 1;
+    } reg;
+} SOC_I3C_DEV_ADDR_TABLE_LOC3_UNION;
+#endif
+#define SOC_I3C_DEV_ADDR_TABLE_LOC3_DEV_STATIC_ADDR_START (0)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC3_DEV_STATIC_ADDR_END (6)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC3_RSVD_15_7_START (7)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC3_RSVD_15_7_END (15)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC3_DEV_DYNAMIC_ADDR_START (16)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC3_DEV_DYNAMIC_ADDR_END (23)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC3_RSVD_28_24_START (24)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC3_RSVD_28_24_END (28)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC3_DEV_NACK_RETRY_CNT_START (29)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC3_DEV_NACK_RETRY_CNT_END (30)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC3_LEGACY_I2C_DEVICE_START (31)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC3_LEGACY_I2C_DEVICE_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int DEV_STATIC_ADDR : 7;
+        unsigned int RSVD_15_7 : 9;
+        unsigned int DEV_DYNAMIC_ADDR : 8;
+        unsigned int RSVD_28_24 : 5;
+        unsigned int DEV_NACK_RETRY_CNT : 2;
+        unsigned int LEGACY_I2C_DEVICE : 1;
+    } reg;
+} SOC_I3C_DEV_ADDR_TABLE_LOC4_UNION;
+#endif
+#define SOC_I3C_DEV_ADDR_TABLE_LOC4_DEV_STATIC_ADDR_START (0)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC4_DEV_STATIC_ADDR_END (6)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC4_RSVD_15_7_START (7)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC4_RSVD_15_7_END (15)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC4_DEV_DYNAMIC_ADDR_START (16)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC4_DEV_DYNAMIC_ADDR_END (23)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC4_RSVD_28_24_START (24)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC4_RSVD_28_24_END (28)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC4_DEV_NACK_RETRY_CNT_START (29)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC4_DEV_NACK_RETRY_CNT_END (30)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC4_LEGACY_I2C_DEVICE_START (31)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC4_LEGACY_I2C_DEVICE_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int DEV_STATIC_ADDR : 7;
+        unsigned int RSVD_15_7 : 9;
+        unsigned int DEV_DYNAMIC_ADDR : 8;
+        unsigned int RSVD_28_24 : 5;
+        unsigned int DEV_NACK_RETRY_CNT : 2;
+        unsigned int LEGACY_I2C_DEVICE : 1;
+    } reg;
+} SOC_I3C_DEV_ADDR_TABLE_LOC5_UNION;
+#endif
+#define SOC_I3C_DEV_ADDR_TABLE_LOC5_DEV_STATIC_ADDR_START (0)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC5_DEV_STATIC_ADDR_END (6)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC5_RSVD_15_7_START (7)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC5_RSVD_15_7_END (15)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC5_DEV_DYNAMIC_ADDR_START (16)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC5_DEV_DYNAMIC_ADDR_END (23)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC5_RSVD_28_24_START (24)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC5_RSVD_28_24_END (28)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC5_DEV_NACK_RETRY_CNT_START (29)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC5_DEV_NACK_RETRY_CNT_END (30)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC5_LEGACY_I2C_DEVICE_START (31)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC5_LEGACY_I2C_DEVICE_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int DEV_STATIC_ADDR : 7;
+        unsigned int RSVD_15_7 : 9;
+        unsigned int DEV_DYNAMIC_ADDR : 8;
+        unsigned int RSVD_28_24 : 5;
+        unsigned int DEV_NACK_RETRY_CNT : 2;
+        unsigned int LEGACY_I2C_DEVICE : 1;
+    } reg;
+} SOC_I3C_DEV_ADDR_TABLE_LOC6_UNION;
+#endif
+#define SOC_I3C_DEV_ADDR_TABLE_LOC6_DEV_STATIC_ADDR_START (0)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC6_DEV_STATIC_ADDR_END (6)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC6_RSVD_15_7_START (7)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC6_RSVD_15_7_END (15)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC6_DEV_DYNAMIC_ADDR_START (16)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC6_DEV_DYNAMIC_ADDR_END (23)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC6_RSVD_28_24_START (24)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC6_RSVD_28_24_END (28)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC6_DEV_NACK_RETRY_CNT_START (29)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC6_DEV_NACK_RETRY_CNT_END (30)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC6_LEGACY_I2C_DEVICE_START (31)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC6_LEGACY_I2C_DEVICE_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int DEV_STATIC_ADDR : 7;
+        unsigned int RSVD_15_7 : 9;
+        unsigned int DEV_DYNAMIC_ADDR : 8;
+        unsigned int RSVD_28_24 : 5;
+        unsigned int DEV_NACK_RETRY_CNT : 2;
+        unsigned int LEGACY_I2C_DEVICE : 1;
+    } reg;
+} SOC_I3C_DEV_ADDR_TABLE_LOC7_UNION;
+#endif
+#define SOC_I3C_DEV_ADDR_TABLE_LOC7_DEV_STATIC_ADDR_START (0)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC7_DEV_STATIC_ADDR_END (6)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC7_RSVD_15_7_START (7)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC7_RSVD_15_7_END (15)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC7_DEV_DYNAMIC_ADDR_START (16)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC7_DEV_DYNAMIC_ADDR_END (23)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC7_RSVD_28_24_START (24)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC7_RSVD_28_24_END (28)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC7_DEV_NACK_RETRY_CNT_START (29)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC7_DEV_NACK_RETRY_CNT_END (30)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC7_LEGACY_I2C_DEVICE_START (31)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC7_LEGACY_I2C_DEVICE_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int DEV_STATIC_ADDR : 7;
+        unsigned int RSVD_15_7 : 9;
+        unsigned int DEV_DYNAMIC_ADDR : 8;
+        unsigned int RSVD_28_24 : 5;
+        unsigned int DEV_NACK_RETRY_CNT : 2;
+        unsigned int LEGACY_I2C_DEVICE : 1;
+    } reg;
+} SOC_I3C_DEV_ADDR_TABLE_LOC8_UNION;
+#endif
+#define SOC_I3C_DEV_ADDR_TABLE_LOC8_DEV_STATIC_ADDR_START (0)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC8_DEV_STATIC_ADDR_END (6)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC8_RSVD_15_7_START (7)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC8_RSVD_15_7_END (15)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC8_DEV_DYNAMIC_ADDR_START (16)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC8_DEV_DYNAMIC_ADDR_END (23)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC8_RSVD_28_24_START (24)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC8_RSVD_28_24_END (28)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC8_DEV_NACK_RETRY_CNT_START (29)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC8_DEV_NACK_RETRY_CNT_END (30)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC8_LEGACY_I2C_DEVICE_START (31)
+#define SOC_I3C_DEV_ADDR_TABLE_LOC8_LEGACY_I2C_DEVICE_END (31)
+#ifdef __cplusplus
+    #if __cplusplus
+        }
+    #endif
+#endif
+#endif

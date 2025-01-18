@@ -1,0 +1,6833 @@
+#ifndef __SOC_IOMCU_REMAPCTRL_INTERFACE_H__
+#define __SOC_IOMCU_REMAPCTRL_INTERFACE_H__ 
+#ifdef __cplusplus
+    #if __cplusplus
+        extern "C" {
+    #endif
+#endif
+#ifndef __SOC_H_FOR_ASM__
+#define SOC_IOMCU_RemapCtrl_REMAP_CFG_ADDR(base) ((base) + (0x000UL))
+#define SOC_IOMCU_RemapCtrl_MAP_TABLE_WP_ADDR(base) ((base) + (0x004UL))
+#define SOC_IOMCU_RemapCtrl_LP_CTRL_ADDR(base) ((base) + (0x008UL))
+#define SOC_IOMCU_RemapCtrl_LP_CTRL_1_ADDR(base) ((base) + (0x00CUL))
+#define SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY0_ADDR(base) ((base) + (0x010UL))
+#define SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY1_ADDR(base) ((base) + (0x014UL))
+#define SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY2_ADDR(base) ((base) + (0x018UL))
+#define SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY3_ADDR(base) ((base) + (0x01CUL))
+#define SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY4_ADDR(base) ((base) + (0x020UL))
+#define SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY5_ADDR(base) ((base) + (0x024UL))
+#define SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY6_ADDR(base) ((base) + (0x028UL))
+#define SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY7_ADDR(base) ((base) + (0x02CUL))
+#define SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY0_ADDR(base) ((base) + (0x030UL))
+#define SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY1_ADDR(base) ((base) + (0x034UL))
+#define SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY2_ADDR(base) ((base) + (0x038UL))
+#define SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY3_ADDR(base) ((base) + (0x03CUL))
+#define SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY4_ADDR(base) ((base) + (0x040UL))
+#define SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY5_ADDR(base) ((base) + (0x044UL))
+#define SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY6_ADDR(base) ((base) + (0x048UL))
+#define SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY7_ADDR(base) ((base) + (0x04CUL))
+#define SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY0_ADDR(base) ((base) + (0x050UL))
+#define SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY1_ADDR(base) ((base) + (0x054UL))
+#define SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY2_ADDR(base) ((base) + (0x058UL))
+#define SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY3_ADDR(base) ((base) + (0x05CUL))
+#define SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY4_ADDR(base) ((base) + (0x060UL))
+#define SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY5_ADDR(base) ((base) + (0x064UL))
+#define SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY6_ADDR(base) ((base) + (0x068UL))
+#define SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY7_ADDR(base) ((base) + (0x06CUL))
+#define SOC_IOMCU_RemapCtrl_ITCM_HIT_CNT_ADDR(base) ((base) + (0x070UL))
+#define SOC_IOMCU_RemapCtrl_ITCM_MISS_CNT_ADDR(base) ((base) + (0x074UL))
+#define SOC_IOMCU_RemapCtrl_D0TCM_HIT_CNT_ADDR(base) ((base) + (0x078UL))
+#define SOC_IOMCU_RemapCtrl_D0TCM_MISS_CNT_ADDR(base) ((base) + (0x07CUL))
+#define SOC_IOMCU_RemapCtrl_D1TCM_HIT_CNT_ADDR(base) ((base) + (0x080UL))
+#define SOC_IOMCU_RemapCtrl_D1TCM_MISS_CNT_ADDR(base) ((base) + (0x084UL))
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_ADDR(base) ((base) + (0x094UL))
+#define SOC_IOMCU_RemapCtrl_LP_CTRL_2_ADDR(base) ((base) + (0x098UL))
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_ADDR(base) ((base) + (0x09CUL))
+#define SOC_IOMCU_RemapCtrl_BANK_SEL_ADDR(base) ((base) + (0x0A0UL))
+#define SOC_IOMCU_RemapCtrl_ITCM_ERR_ADDR_ADDR(base) ((base) + (0x0A8UL))
+#define SOC_IOMCU_RemapCtrl_D0TCM_ERR_ADDR_ADDR(base) ((base) + (0x0ACUL))
+#define SOC_IOMCU_RemapCtrl_D1TCM_ERR_ADDR_ADDR(base) ((base) + (0x0B0UL))
+#define SOC_IOMCU_RemapCtrl_ITCM_ERR_CNT_ADDR(base) ((base) + (0x0B4UL))
+#define SOC_IOMCU_RemapCtrl_D0TCM_ERR_CNT_ADDR(base) ((base) + (0x0B8UL))
+#define SOC_IOMCU_RemapCtrl_D1TCM_ERR_CNT_ADDR(base) ((base) + (0x0BCUL))
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B0_ADDR(base) ((base) + (0x0C0UL))
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B1_ADDR(base) ((base) + (0x0C4UL))
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B2_ADDR(base) ((base) + (0x0C8UL))
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B3_ADDR(base) ((base) + (0x0CCUL))
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B4_ADDR(base) ((base) + (0x0D0UL))
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B5_ADDR(base) ((base) + (0x0D4UL))
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B6_ADDR(base) ((base) + (0x0D8UL))
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B7_ADDR(base) ((base) + (0x0DCUL))
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_EN_ADDR(base) ((base) + (0x0E0UL))
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_CLR_ADDR(base) ((base) + (0x0E4UL))
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT15_ADDR(base) ((base) + (0x100UL))
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT14_ADDR(base) ((base) + (0x104UL))
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT13_ADDR(base) ((base) + (0x108UL))
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT12_ADDR(base) ((base) + (0x10CUL))
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT11_ADDR(base) ((base) + (0x110UL))
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT10_ADDR(base) ((base) + (0x114UL))
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT9_ADDR(base) ((base) + (0x118UL))
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT8_ADDR(base) ((base) + (0x11CUL))
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT7_ADDR(base) ((base) + (0x120UL))
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT6_ADDR(base) ((base) + (0x124UL))
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT5_ADDR(base) ((base) + (0x128UL))
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT4_ADDR(base) ((base) + (0x12CUL))
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT3_ADDR(base) ((base) + (0x130UL))
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT2_ADDR(base) ((base) + (0x134UL))
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT1_ADDR(base) ((base) + (0x138UL))
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT0_ADDR(base) ((base) + (0x13CUL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD0_ADDR(base) ((base) + (0x140UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD1_ADDR(base) ((base) + (0x144UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD2_ADDR(base) ((base) + (0x148UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD3_ADDR(base) ((base) + (0x14CUL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD4_ADDR(base) ((base) + (0x150UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD5_ADDR(base) ((base) + (0x154UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD6_ADDR(base) ((base) + (0x158UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD7_ADDR(base) ((base) + (0x15CUL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD8_ADDR(base) ((base) + (0x160UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD9_ADDR(base) ((base) + (0x164UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD10_ADDR(base) ((base) + (0x168UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD11_ADDR(base) ((base) + (0x16CUL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD12_ADDR(base) ((base) + (0x170UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD13_ADDR(base) ((base) + (0x174UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD14_ADDR(base) ((base) + (0x178UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD15_ADDR(base) ((base) + (0x17CUL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD16_ADDR(base) ((base) + (0x180UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD17_ADDR(base) ((base) + (0x184UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD18_ADDR(base) ((base) + (0x188UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD19_ADDR(base) ((base) + (0x18CUL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD20_ADDR(base) ((base) + (0x190UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD21_ADDR(base) ((base) + (0x194UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD22_ADDR(base) ((base) + (0x198UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD23_ADDR(base) ((base) + (0x19CUL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD24_ADDR(base) ((base) + (0x1A0UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD25_ADDR(base) ((base) + (0x1A4UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD26_ADDR(base) ((base) + (0x1A8UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD27_ADDR(base) ((base) + (0x1ACUL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD28_ADDR(base) ((base) + (0x1B0UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD29_ADDR(base) ((base) + (0x1B4UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD30_ADDR(base) ((base) + (0x1B8UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD31_ADDR(base) ((base) + (0x1BCUL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD32_ADDR(base) ((base) + (0x1C0UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD33_ADDR(base) ((base) + (0x1C4UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD34_ADDR(base) ((base) + (0x1C8UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD35_ADDR(base) ((base) + (0x1CCUL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD36_ADDR(base) ((base) + (0x1D0UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD37_ADDR(base) ((base) + (0x1D4UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD38_ADDR(base) ((base) + (0x1D8UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD39_ADDR(base) ((base) + (0x1DCUL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD40_ADDR(base) ((base) + (0x1E0UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD41_ADDR(base) ((base) + (0x1E4UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD42_ADDR(base) ((base) + (0x1E8UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD43_ADDR(base) ((base) + (0x1ECUL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD44_ADDR(base) ((base) + (0x1F0UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD45_ADDR(base) ((base) + (0x1F4UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD46_ADDR(base) ((base) + (0x1F8UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD47_ADDR(base) ((base) + (0x1FCUL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD48_ADDR(base) ((base) + (0x200UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD49_ADDR(base) ((base) + (0x204UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD50_ADDR(base) ((base) + (0x208UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD51_ADDR(base) ((base) + (0x20CUL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD52_ADDR(base) ((base) + (0x210UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD53_ADDR(base) ((base) + (0x214UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID0_ADDR(base) ((base) + (0x218UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID1_ADDR(base) ((base) + (0x21CUL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID2_ADDR(base) ((base) + (0x220UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID3_ADDR(base) ((base) + (0x224UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID4_ADDR(base) ((base) + (0x228UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID5_ADDR(base) ((base) + (0x22CUL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID6_ADDR(base) ((base) + (0x230UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID7_ADDR(base) ((base) + (0x234UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID8_ADDR(base) ((base) + (0x238UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID9_ADDR(base) ((base) + (0x23CUL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID10_ADDR(base) ((base) + (0x240UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID11_ADDR(base) ((base) + (0x244UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID12_ADDR(base) ((base) + (0x248UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID13_ADDR(base) ((base) + (0x24CUL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID14_ADDR(base) ((base) + (0x250UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID15_ADDR(base) ((base) + (0x254UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID16_ADDR(base) ((base) + (0x258UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID17_ADDR(base) ((base) + (0x25CUL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID18_ADDR(base) ((base) + (0x260UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID19_ADDR(base) ((base) + (0x264UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID20_ADDR(base) ((base) + (0x268UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID21_ADDR(base) ((base) + (0x26CUL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID22_ADDR(base) ((base) + (0x270UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID23_ADDR(base) ((base) + (0x274UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID24_ADDR(base) ((base) + (0x278UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID25_ADDR(base) ((base) + (0x27CUL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID26_ADDR(base) ((base) + (0x280UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID27_ADDR(base) ((base) + (0x284UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID28_ADDR(base) ((base) + (0x288UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID29_ADDR(base) ((base) + (0x28CUL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID30_ADDR(base) ((base) + (0x290UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID31_ADDR(base) ((base) + (0x294UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID32_ADDR(base) ((base) + (0x298UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID33_ADDR(base) ((base) + (0x29CUL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID34_ADDR(base) ((base) + (0x2A0UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID35_ADDR(base) ((base) + (0x2A4UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID36_ADDR(base) ((base) + (0x2A8UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID37_ADDR(base) ((base) + (0x2ACUL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID38_ADDR(base) ((base) + (0x2B0UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID39_ADDR(base) ((base) + (0x2B4UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID40_ADDR(base) ((base) + (0x2B8UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID41_ADDR(base) ((base) + (0x2BCUL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID42_ADDR(base) ((base) + (0x2C0UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID43_ADDR(base) ((base) + (0x2C4UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID44_ADDR(base) ((base) + (0x2C8UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID45_ADDR(base) ((base) + (0x2CCUL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID46_ADDR(base) ((base) + (0x2D0UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID47_ADDR(base) ((base) + (0x2D4UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID48_ADDR(base) ((base) + (0x2D8UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID49_ADDR(base) ((base) + (0x2DCUL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID50_ADDR(base) ((base) + (0x2E0UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID51_ADDR(base) ((base) + (0x2E4UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID52_ADDR(base) ((base) + (0x2E8UL))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID53_ADDR(base) ((base) + (0x2ECUL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD0_ADDR(base) ((base) + (0x2F0UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD1_ADDR(base) ((base) + (0x2F4UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD2_ADDR(base) ((base) + (0x2F8UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD3_ADDR(base) ((base) + (0x2FCUL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD4_ADDR(base) ((base) + (0x300UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD5_ADDR(base) ((base) + (0x304UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD6_ADDR(base) ((base) + (0x308UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD7_ADDR(base) ((base) + (0x30CUL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD8_ADDR(base) ((base) + (0x310UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD9_ADDR(base) ((base) + (0x314UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD10_ADDR(base) ((base) + (0x318UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD11_ADDR(base) ((base) + (0x31CUL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD12_ADDR(base) ((base) + (0x320UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD13_ADDR(base) ((base) + (0x324UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD14_ADDR(base) ((base) + (0x328UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD15_ADDR(base) ((base) + (0x32CUL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD16_ADDR(base) ((base) + (0x330UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD17_ADDR(base) ((base) + (0x334UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD18_ADDR(base) ((base) + (0x338UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD19_ADDR(base) ((base) + (0x33CUL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD20_ADDR(base) ((base) + (0x340UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD21_ADDR(base) ((base) + (0x344UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD22_ADDR(base) ((base) + (0x348UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD23_ADDR(base) ((base) + (0x34CUL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD24_ADDR(base) ((base) + (0x350UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD25_ADDR(base) ((base) + (0x354UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD26_ADDR(base) ((base) + (0x358UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD27_ADDR(base) ((base) + (0x35CUL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD28_ADDR(base) ((base) + (0x360UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD29_ADDR(base) ((base) + (0x364UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD30_ADDR(base) ((base) + (0x368UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD31_ADDR(base) ((base) + (0x36CUL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD32_ADDR(base) ((base) + (0x370UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD33_ADDR(base) ((base) + (0x374UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD34_ADDR(base) ((base) + (0x378UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD35_ADDR(base) ((base) + (0x37CUL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD36_ADDR(base) ((base) + (0x380UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD37_ADDR(base) ((base) + (0x384UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD38_ADDR(base) ((base) + (0x388UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD39_ADDR(base) ((base) + (0x38CUL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD40_ADDR(base) ((base) + (0x390UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD41_ADDR(base) ((base) + (0x394UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD42_ADDR(base) ((base) + (0x398UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD43_ADDR(base) ((base) + (0x39CUL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD44_ADDR(base) ((base) + (0x3A0UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD45_ADDR(base) ((base) + (0x3A4UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD46_ADDR(base) ((base) + (0x3A8UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD47_ADDR(base) ((base) + (0x3ACUL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD48_ADDR(base) ((base) + (0x3B0UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD49_ADDR(base) ((base) + (0x3B4UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD50_ADDR(base) ((base) + (0x3B8UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD51_ADDR(base) ((base) + (0x3BCUL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD52_ADDR(base) ((base) + (0x3C0UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD53_ADDR(base) ((base) + (0x3C4UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID0_ADDR(base) ((base) + (0x3C8UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID1_ADDR(base) ((base) + (0x3CCUL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID2_ADDR(base) ((base) + (0x3D0UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID3_ADDR(base) ((base) + (0x3D4UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID4_ADDR(base) ((base) + (0x3D8UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID5_ADDR(base) ((base) + (0x3DCUL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID6_ADDR(base) ((base) + (0x3E0UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID7_ADDR(base) ((base) + (0x3E4UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID8_ADDR(base) ((base) + (0x3E8UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID9_ADDR(base) ((base) + (0x3ECUL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID10_ADDR(base) ((base) + (0x3F0UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID11_ADDR(base) ((base) + (0x3F4UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID12_ADDR(base) ((base) + (0x3F8UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID13_ADDR(base) ((base) + (0x3FCUL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID14_ADDR(base) ((base) + (0x400UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID15_ADDR(base) ((base) + (0x404UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID16_ADDR(base) ((base) + (0x408UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID17_ADDR(base) ((base) + (0x40CUL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID18_ADDR(base) ((base) + (0x410UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID19_ADDR(base) ((base) + (0x414UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID20_ADDR(base) ((base) + (0x418UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID21_ADDR(base) ((base) + (0x41CUL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID22_ADDR(base) ((base) + (0x420UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID23_ADDR(base) ((base) + (0x424UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID24_ADDR(base) ((base) + (0x428UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID25_ADDR(base) ((base) + (0x42CUL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID26_ADDR(base) ((base) + (0x430UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID27_ADDR(base) ((base) + (0x434UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID28_ADDR(base) ((base) + (0x438UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID29_ADDR(base) ((base) + (0x43CUL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID30_ADDR(base) ((base) + (0x440UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID31_ADDR(base) ((base) + (0x444UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID32_ADDR(base) ((base) + (0x448UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID33_ADDR(base) ((base) + (0x44CUL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID34_ADDR(base) ((base) + (0x450UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID35_ADDR(base) ((base) + (0x454UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID36_ADDR(base) ((base) + (0x458UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID37_ADDR(base) ((base) + (0x45CUL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID38_ADDR(base) ((base) + (0x460UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID39_ADDR(base) ((base) + (0x464UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID40_ADDR(base) ((base) + (0x468UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID41_ADDR(base) ((base) + (0x46CUL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID42_ADDR(base) ((base) + (0x470UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID43_ADDR(base) ((base) + (0x474UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID44_ADDR(base) ((base) + (0x478UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID45_ADDR(base) ((base) + (0x47CUL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID46_ADDR(base) ((base) + (0x480UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID47_ADDR(base) ((base) + (0x484UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID48_ADDR(base) ((base) + (0x488UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID49_ADDR(base) ((base) + (0x48CUL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID50_ADDR(base) ((base) + (0x490UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID51_ADDR(base) ((base) + (0x494UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID52_ADDR(base) ((base) + (0x498UL))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID53_ADDR(base) ((base) + (0x49CUL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD0_ADDR(base) ((base) + (0x4A0UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD1_ADDR(base) ((base) + (0x4A4UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD2_ADDR(base) ((base) + (0x4A8UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD3_ADDR(base) ((base) + (0x4ACUL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD4_ADDR(base) ((base) + (0x4B0UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD5_ADDR(base) ((base) + (0x4B4UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD6_ADDR(base) ((base) + (0x4B8UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD7_ADDR(base) ((base) + (0x4BCUL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD8_ADDR(base) ((base) + (0x4C0UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD9_ADDR(base) ((base) + (0x4C4UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD10_ADDR(base) ((base) + (0x4C8UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD11_ADDR(base) ((base) + (0x4CCUL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD12_ADDR(base) ((base) + (0x4D0UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD13_ADDR(base) ((base) + (0x4D4UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD14_ADDR(base) ((base) + (0x4D8UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD15_ADDR(base) ((base) + (0x4DCUL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD16_ADDR(base) ((base) + (0x4E0UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD17_ADDR(base) ((base) + (0x4E4UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD18_ADDR(base) ((base) + (0x4E8UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD19_ADDR(base) ((base) + (0x4ECUL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD20_ADDR(base) ((base) + (0x4F0UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD21_ADDR(base) ((base) + (0x4F4UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD22_ADDR(base) ((base) + (0x4F8UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD23_ADDR(base) ((base) + (0x4FCUL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD24_ADDR(base) ((base) + (0x500UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD25_ADDR(base) ((base) + (0x504UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD26_ADDR(base) ((base) + (0x508UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD27_ADDR(base) ((base) + (0x50CUL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD28_ADDR(base) ((base) + (0x510UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD29_ADDR(base) ((base) + (0x514UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD30_ADDR(base) ((base) + (0x518UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD31_ADDR(base) ((base) + (0x51CUL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD32_ADDR(base) ((base) + (0x520UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD33_ADDR(base) ((base) + (0x524UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD34_ADDR(base) ((base) + (0x528UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD35_ADDR(base) ((base) + (0x52CUL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD36_ADDR(base) ((base) + (0x530UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD37_ADDR(base) ((base) + (0x534UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD38_ADDR(base) ((base) + (0x538UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD39_ADDR(base) ((base) + (0x53CUL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD40_ADDR(base) ((base) + (0x540UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD41_ADDR(base) ((base) + (0x544UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD42_ADDR(base) ((base) + (0x548UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD43_ADDR(base) ((base) + (0x54CUL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD44_ADDR(base) ((base) + (0x550UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD45_ADDR(base) ((base) + (0x554UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD46_ADDR(base) ((base) + (0x558UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD47_ADDR(base) ((base) + (0x55CUL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD48_ADDR(base) ((base) + (0x560UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD49_ADDR(base) ((base) + (0x564UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD50_ADDR(base) ((base) + (0x568UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD51_ADDR(base) ((base) + (0x56CUL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD52_ADDR(base) ((base) + (0x570UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD53_ADDR(base) ((base) + (0x574UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD54_ADDR(base) ((base) + (0x578UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD55_ADDR(base) ((base) + (0x57CUL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD56_ADDR(base) ((base) + (0x580UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD57_ADDR(base) ((base) + (0x584UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD58_ADDR(base) ((base) + (0x588UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD59_ADDR(base) ((base) + (0x58CUL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD60_ADDR(base) ((base) + (0x590UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD61_ADDR(base) ((base) + (0x594UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD62_ADDR(base) ((base) + (0x598UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD63_ADDR(base) ((base) + (0x59CUL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD64_ADDR(base) ((base) + (0x5A0UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD65_ADDR(base) ((base) + (0x5A4UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD66_ADDR(base) ((base) + (0x5A8UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD67_ADDR(base) ((base) + (0x5ACUL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD68_ADDR(base) ((base) + (0x5B0UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD69_ADDR(base) ((base) + (0x5B4UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD70_ADDR(base) ((base) + (0x5B8UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD71_ADDR(base) ((base) + (0x5BCUL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD72_ADDR(base) ((base) + (0x5C0UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD73_ADDR(base) ((base) + (0x5C4UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD74_ADDR(base) ((base) + (0x5C8UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD75_ADDR(base) ((base) + (0x5CCUL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD76_ADDR(base) ((base) + (0x5D0UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD77_ADDR(base) ((base) + (0x5D4UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD78_ADDR(base) ((base) + (0x5D8UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD79_ADDR(base) ((base) + (0x5DCUL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD80_ADDR(base) ((base) + (0x5E0UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD81_ADDR(base) ((base) + (0x5E4UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD82_ADDR(base) ((base) + (0x5E8UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD83_ADDR(base) ((base) + (0x5ECUL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD84_ADDR(base) ((base) + (0x5F0UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD85_ADDR(base) ((base) + (0x5F4UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD86_ADDR(base) ((base) + (0x5F8UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD87_ADDR(base) ((base) + (0x5FCUL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD88_ADDR(base) ((base) + (0x600UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD89_ADDR(base) ((base) + (0x604UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD90_ADDR(base) ((base) + (0x608UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD91_ADDR(base) ((base) + (0x60CUL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD92_ADDR(base) ((base) + (0x610UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD93_ADDR(base) ((base) + (0x614UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD94_ADDR(base) ((base) + (0x618UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD95_ADDR(base) ((base) + (0x61CUL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD96_ADDR(base) ((base) + (0x620UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD97_ADDR(base) ((base) + (0x624UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD98_ADDR(base) ((base) + (0x628UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD99_ADDR(base) ((base) + (0x62CUL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD100_ADDR(base) ((base) + (0x630UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD101_ADDR(base) ((base) + (0x634UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD102_ADDR(base) ((base) + (0x638UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD103_ADDR(base) ((base) + (0x63CUL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD104_ADDR(base) ((base) + (0x640UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD105_ADDR(base) ((base) + (0x644UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD106_ADDR(base) ((base) + (0x648UL))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD107_ADDR(base) ((base) + (0x64CUL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID0_ADDR(base) ((base) + (0x650UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID1_ADDR(base) ((base) + (0x654UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID2_ADDR(base) ((base) + (0x658UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID3_ADDR(base) ((base) + (0x65CUL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID4_ADDR(base) ((base) + (0x660UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID5_ADDR(base) ((base) + (0x664UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID6_ADDR(base) ((base) + (0x668UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID7_ADDR(base) ((base) + (0x66CUL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID8_ADDR(base) ((base) + (0x670UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID9_ADDR(base) ((base) + (0x674UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID10_ADDR(base) ((base) + (0x678UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID11_ADDR(base) ((base) + (0x67CUL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID12_ADDR(base) ((base) + (0x680UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID13_ADDR(base) ((base) + (0x684UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID14_ADDR(base) ((base) + (0x688UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID15_ADDR(base) ((base) + (0x68CUL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID16_ADDR(base) ((base) + (0x690UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID17_ADDR(base) ((base) + (0x694UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID18_ADDR(base) ((base) + (0x698UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID19_ADDR(base) ((base) + (0x69CUL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID20_ADDR(base) ((base) + (0x6A0UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID21_ADDR(base) ((base) + (0x6A4UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID22_ADDR(base) ((base) + (0x6A8UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID23_ADDR(base) ((base) + (0x6ACUL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID24_ADDR(base) ((base) + (0x6B0UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID25_ADDR(base) ((base) + (0x6B4UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID26_ADDR(base) ((base) + (0x6B8UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID27_ADDR(base) ((base) + (0x6BCUL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID28_ADDR(base) ((base) + (0x6C0UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID29_ADDR(base) ((base) + (0x6C4UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID30_ADDR(base) ((base) + (0x6C8UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID31_ADDR(base) ((base) + (0x6CCUL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID32_ADDR(base) ((base) + (0x6D0UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID33_ADDR(base) ((base) + (0x6D4UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID34_ADDR(base) ((base) + (0x6D8UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID35_ADDR(base) ((base) + (0x6DCUL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID36_ADDR(base) ((base) + (0x6E0UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID37_ADDR(base) ((base) + (0x6E4UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID38_ADDR(base) ((base) + (0x6E8UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID39_ADDR(base) ((base) + (0x6ECUL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID40_ADDR(base) ((base) + (0x6F0UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID41_ADDR(base) ((base) + (0x6F4UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID42_ADDR(base) ((base) + (0x6F8UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID43_ADDR(base) ((base) + (0x6FCUL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID44_ADDR(base) ((base) + (0x700UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID45_ADDR(base) ((base) + (0x704UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID46_ADDR(base) ((base) + (0x708UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID47_ADDR(base) ((base) + (0x70CUL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID48_ADDR(base) ((base) + (0x710UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID49_ADDR(base) ((base) + (0x714UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID50_ADDR(base) ((base) + (0x718UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID51_ADDR(base) ((base) + (0x71CUL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID52_ADDR(base) ((base) + (0x720UL))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID53_ADDR(base) ((base) + (0x724UL))
+#define SOC_IOMCU_RemapCtrl_TCM_NMI_SOURCE_ADDR(base) ((base) + (0x728UL))
+#else
+#define SOC_IOMCU_RemapCtrl_REMAP_CFG_ADDR(base) ((base) + (0x000))
+#define SOC_IOMCU_RemapCtrl_MAP_TABLE_WP_ADDR(base) ((base) + (0x004))
+#define SOC_IOMCU_RemapCtrl_LP_CTRL_ADDR(base) ((base) + (0x008))
+#define SOC_IOMCU_RemapCtrl_LP_CTRL_1_ADDR(base) ((base) + (0x00C))
+#define SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY0_ADDR(base) ((base) + (0x010))
+#define SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY1_ADDR(base) ((base) + (0x014))
+#define SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY2_ADDR(base) ((base) + (0x018))
+#define SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY3_ADDR(base) ((base) + (0x01C))
+#define SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY4_ADDR(base) ((base) + (0x020))
+#define SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY5_ADDR(base) ((base) + (0x024))
+#define SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY6_ADDR(base) ((base) + (0x028))
+#define SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY7_ADDR(base) ((base) + (0x02C))
+#define SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY0_ADDR(base) ((base) + (0x030))
+#define SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY1_ADDR(base) ((base) + (0x034))
+#define SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY2_ADDR(base) ((base) + (0x038))
+#define SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY3_ADDR(base) ((base) + (0x03C))
+#define SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY4_ADDR(base) ((base) + (0x040))
+#define SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY5_ADDR(base) ((base) + (0x044))
+#define SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY6_ADDR(base) ((base) + (0x048))
+#define SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY7_ADDR(base) ((base) + (0x04C))
+#define SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY0_ADDR(base) ((base) + (0x050))
+#define SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY1_ADDR(base) ((base) + (0x054))
+#define SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY2_ADDR(base) ((base) + (0x058))
+#define SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY3_ADDR(base) ((base) + (0x05C))
+#define SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY4_ADDR(base) ((base) + (0x060))
+#define SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY5_ADDR(base) ((base) + (0x064))
+#define SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY6_ADDR(base) ((base) + (0x068))
+#define SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY7_ADDR(base) ((base) + (0x06C))
+#define SOC_IOMCU_RemapCtrl_ITCM_HIT_CNT_ADDR(base) ((base) + (0x070))
+#define SOC_IOMCU_RemapCtrl_ITCM_MISS_CNT_ADDR(base) ((base) + (0x074))
+#define SOC_IOMCU_RemapCtrl_D0TCM_HIT_CNT_ADDR(base) ((base) + (0x078))
+#define SOC_IOMCU_RemapCtrl_D0TCM_MISS_CNT_ADDR(base) ((base) + (0x07C))
+#define SOC_IOMCU_RemapCtrl_D1TCM_HIT_CNT_ADDR(base) ((base) + (0x080))
+#define SOC_IOMCU_RemapCtrl_D1TCM_MISS_CNT_ADDR(base) ((base) + (0x084))
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_ADDR(base) ((base) + (0x094))
+#define SOC_IOMCU_RemapCtrl_LP_CTRL_2_ADDR(base) ((base) + (0x098))
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_ADDR(base) ((base) + (0x09C))
+#define SOC_IOMCU_RemapCtrl_BANK_SEL_ADDR(base) ((base) + (0x0A0))
+#define SOC_IOMCU_RemapCtrl_ITCM_ERR_ADDR_ADDR(base) ((base) + (0x0A8))
+#define SOC_IOMCU_RemapCtrl_D0TCM_ERR_ADDR_ADDR(base) ((base) + (0x0AC))
+#define SOC_IOMCU_RemapCtrl_D1TCM_ERR_ADDR_ADDR(base) ((base) + (0x0B0))
+#define SOC_IOMCU_RemapCtrl_ITCM_ERR_CNT_ADDR(base) ((base) + (0x0B4))
+#define SOC_IOMCU_RemapCtrl_D0TCM_ERR_CNT_ADDR(base) ((base) + (0x0B8))
+#define SOC_IOMCU_RemapCtrl_D1TCM_ERR_CNT_ADDR(base) ((base) + (0x0BC))
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B0_ADDR(base) ((base) + (0x0C0))
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B1_ADDR(base) ((base) + (0x0C4))
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B2_ADDR(base) ((base) + (0x0C8))
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B3_ADDR(base) ((base) + (0x0CC))
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B4_ADDR(base) ((base) + (0x0D0))
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B5_ADDR(base) ((base) + (0x0D4))
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B6_ADDR(base) ((base) + (0x0D8))
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B7_ADDR(base) ((base) + (0x0DC))
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_EN_ADDR(base) ((base) + (0x0E0))
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_CLR_ADDR(base) ((base) + (0x0E4))
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT15_ADDR(base) ((base) + (0x100))
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT14_ADDR(base) ((base) + (0x104))
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT13_ADDR(base) ((base) + (0x108))
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT12_ADDR(base) ((base) + (0x10C))
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT11_ADDR(base) ((base) + (0x110))
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT10_ADDR(base) ((base) + (0x114))
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT9_ADDR(base) ((base) + (0x118))
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT8_ADDR(base) ((base) + (0x11C))
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT7_ADDR(base) ((base) + (0x120))
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT6_ADDR(base) ((base) + (0x124))
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT5_ADDR(base) ((base) + (0x128))
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT4_ADDR(base) ((base) + (0x12C))
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT3_ADDR(base) ((base) + (0x130))
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT2_ADDR(base) ((base) + (0x134))
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT1_ADDR(base) ((base) + (0x138))
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT0_ADDR(base) ((base) + (0x13C))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD0_ADDR(base) ((base) + (0x140))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD1_ADDR(base) ((base) + (0x144))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD2_ADDR(base) ((base) + (0x148))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD3_ADDR(base) ((base) + (0x14C))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD4_ADDR(base) ((base) + (0x150))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD5_ADDR(base) ((base) + (0x154))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD6_ADDR(base) ((base) + (0x158))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD7_ADDR(base) ((base) + (0x15C))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD8_ADDR(base) ((base) + (0x160))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD9_ADDR(base) ((base) + (0x164))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD10_ADDR(base) ((base) + (0x168))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD11_ADDR(base) ((base) + (0x16C))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD12_ADDR(base) ((base) + (0x170))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD13_ADDR(base) ((base) + (0x174))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD14_ADDR(base) ((base) + (0x178))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD15_ADDR(base) ((base) + (0x17C))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD16_ADDR(base) ((base) + (0x180))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD17_ADDR(base) ((base) + (0x184))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD18_ADDR(base) ((base) + (0x188))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD19_ADDR(base) ((base) + (0x18C))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD20_ADDR(base) ((base) + (0x190))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD21_ADDR(base) ((base) + (0x194))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD22_ADDR(base) ((base) + (0x198))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD23_ADDR(base) ((base) + (0x19C))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD24_ADDR(base) ((base) + (0x1A0))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD25_ADDR(base) ((base) + (0x1A4))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD26_ADDR(base) ((base) + (0x1A8))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD27_ADDR(base) ((base) + (0x1AC))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD28_ADDR(base) ((base) + (0x1B0))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD29_ADDR(base) ((base) + (0x1B4))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD30_ADDR(base) ((base) + (0x1B8))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD31_ADDR(base) ((base) + (0x1BC))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD32_ADDR(base) ((base) + (0x1C0))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD33_ADDR(base) ((base) + (0x1C4))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD34_ADDR(base) ((base) + (0x1C8))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD35_ADDR(base) ((base) + (0x1CC))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD36_ADDR(base) ((base) + (0x1D0))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD37_ADDR(base) ((base) + (0x1D4))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD38_ADDR(base) ((base) + (0x1D8))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD39_ADDR(base) ((base) + (0x1DC))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD40_ADDR(base) ((base) + (0x1E0))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD41_ADDR(base) ((base) + (0x1E4))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD42_ADDR(base) ((base) + (0x1E8))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD43_ADDR(base) ((base) + (0x1EC))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD44_ADDR(base) ((base) + (0x1F0))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD45_ADDR(base) ((base) + (0x1F4))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD46_ADDR(base) ((base) + (0x1F8))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD47_ADDR(base) ((base) + (0x1FC))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD48_ADDR(base) ((base) + (0x200))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD49_ADDR(base) ((base) + (0x204))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD50_ADDR(base) ((base) + (0x208))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD51_ADDR(base) ((base) + (0x20C))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD52_ADDR(base) ((base) + (0x210))
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD53_ADDR(base) ((base) + (0x214))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID0_ADDR(base) ((base) + (0x218))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID1_ADDR(base) ((base) + (0x21C))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID2_ADDR(base) ((base) + (0x220))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID3_ADDR(base) ((base) + (0x224))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID4_ADDR(base) ((base) + (0x228))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID5_ADDR(base) ((base) + (0x22C))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID6_ADDR(base) ((base) + (0x230))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID7_ADDR(base) ((base) + (0x234))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID8_ADDR(base) ((base) + (0x238))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID9_ADDR(base) ((base) + (0x23C))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID10_ADDR(base) ((base) + (0x240))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID11_ADDR(base) ((base) + (0x244))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID12_ADDR(base) ((base) + (0x248))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID13_ADDR(base) ((base) + (0x24C))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID14_ADDR(base) ((base) + (0x250))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID15_ADDR(base) ((base) + (0x254))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID16_ADDR(base) ((base) + (0x258))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID17_ADDR(base) ((base) + (0x25C))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID18_ADDR(base) ((base) + (0x260))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID19_ADDR(base) ((base) + (0x264))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID20_ADDR(base) ((base) + (0x268))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID21_ADDR(base) ((base) + (0x26C))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID22_ADDR(base) ((base) + (0x270))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID23_ADDR(base) ((base) + (0x274))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID24_ADDR(base) ((base) + (0x278))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID25_ADDR(base) ((base) + (0x27C))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID26_ADDR(base) ((base) + (0x280))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID27_ADDR(base) ((base) + (0x284))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID28_ADDR(base) ((base) + (0x288))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID29_ADDR(base) ((base) + (0x28C))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID30_ADDR(base) ((base) + (0x290))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID31_ADDR(base) ((base) + (0x294))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID32_ADDR(base) ((base) + (0x298))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID33_ADDR(base) ((base) + (0x29C))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID34_ADDR(base) ((base) + (0x2A0))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID35_ADDR(base) ((base) + (0x2A4))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID36_ADDR(base) ((base) + (0x2A8))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID37_ADDR(base) ((base) + (0x2AC))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID38_ADDR(base) ((base) + (0x2B0))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID39_ADDR(base) ((base) + (0x2B4))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID40_ADDR(base) ((base) + (0x2B8))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID41_ADDR(base) ((base) + (0x2BC))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID42_ADDR(base) ((base) + (0x2C0))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID43_ADDR(base) ((base) + (0x2C4))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID44_ADDR(base) ((base) + (0x2C8))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID45_ADDR(base) ((base) + (0x2CC))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID46_ADDR(base) ((base) + (0x2D0))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID47_ADDR(base) ((base) + (0x2D4))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID48_ADDR(base) ((base) + (0x2D8))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID49_ADDR(base) ((base) + (0x2DC))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID50_ADDR(base) ((base) + (0x2E0))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID51_ADDR(base) ((base) + (0x2E4))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID52_ADDR(base) ((base) + (0x2E8))
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID53_ADDR(base) ((base) + (0x2EC))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD0_ADDR(base) ((base) + (0x2F0))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD1_ADDR(base) ((base) + (0x2F4))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD2_ADDR(base) ((base) + (0x2F8))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD3_ADDR(base) ((base) + (0x2FC))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD4_ADDR(base) ((base) + (0x300))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD5_ADDR(base) ((base) + (0x304))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD6_ADDR(base) ((base) + (0x308))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD7_ADDR(base) ((base) + (0x30C))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD8_ADDR(base) ((base) + (0x310))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD9_ADDR(base) ((base) + (0x314))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD10_ADDR(base) ((base) + (0x318))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD11_ADDR(base) ((base) + (0x31C))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD12_ADDR(base) ((base) + (0x320))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD13_ADDR(base) ((base) + (0x324))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD14_ADDR(base) ((base) + (0x328))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD15_ADDR(base) ((base) + (0x32C))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD16_ADDR(base) ((base) + (0x330))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD17_ADDR(base) ((base) + (0x334))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD18_ADDR(base) ((base) + (0x338))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD19_ADDR(base) ((base) + (0x33C))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD20_ADDR(base) ((base) + (0x340))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD21_ADDR(base) ((base) + (0x344))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD22_ADDR(base) ((base) + (0x348))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD23_ADDR(base) ((base) + (0x34C))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD24_ADDR(base) ((base) + (0x350))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD25_ADDR(base) ((base) + (0x354))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD26_ADDR(base) ((base) + (0x358))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD27_ADDR(base) ((base) + (0x35C))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD28_ADDR(base) ((base) + (0x360))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD29_ADDR(base) ((base) + (0x364))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD30_ADDR(base) ((base) + (0x368))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD31_ADDR(base) ((base) + (0x36C))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD32_ADDR(base) ((base) + (0x370))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD33_ADDR(base) ((base) + (0x374))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD34_ADDR(base) ((base) + (0x378))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD35_ADDR(base) ((base) + (0x37C))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD36_ADDR(base) ((base) + (0x380))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD37_ADDR(base) ((base) + (0x384))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD38_ADDR(base) ((base) + (0x388))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD39_ADDR(base) ((base) + (0x38C))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD40_ADDR(base) ((base) + (0x390))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD41_ADDR(base) ((base) + (0x394))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD42_ADDR(base) ((base) + (0x398))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD43_ADDR(base) ((base) + (0x39C))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD44_ADDR(base) ((base) + (0x3A0))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD45_ADDR(base) ((base) + (0x3A4))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD46_ADDR(base) ((base) + (0x3A8))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD47_ADDR(base) ((base) + (0x3AC))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD48_ADDR(base) ((base) + (0x3B0))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD49_ADDR(base) ((base) + (0x3B4))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD50_ADDR(base) ((base) + (0x3B8))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD51_ADDR(base) ((base) + (0x3BC))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD52_ADDR(base) ((base) + (0x3C0))
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD53_ADDR(base) ((base) + (0x3C4))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID0_ADDR(base) ((base) + (0x3C8))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID1_ADDR(base) ((base) + (0x3CC))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID2_ADDR(base) ((base) + (0x3D0))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID3_ADDR(base) ((base) + (0x3D4))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID4_ADDR(base) ((base) + (0x3D8))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID5_ADDR(base) ((base) + (0x3DC))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID6_ADDR(base) ((base) + (0x3E0))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID7_ADDR(base) ((base) + (0x3E4))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID8_ADDR(base) ((base) + (0x3E8))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID9_ADDR(base) ((base) + (0x3EC))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID10_ADDR(base) ((base) + (0x3F0))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID11_ADDR(base) ((base) + (0x3F4))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID12_ADDR(base) ((base) + (0x3F8))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID13_ADDR(base) ((base) + (0x3FC))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID14_ADDR(base) ((base) + (0x400))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID15_ADDR(base) ((base) + (0x404))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID16_ADDR(base) ((base) + (0x408))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID17_ADDR(base) ((base) + (0x40C))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID18_ADDR(base) ((base) + (0x410))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID19_ADDR(base) ((base) + (0x414))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID20_ADDR(base) ((base) + (0x418))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID21_ADDR(base) ((base) + (0x41C))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID22_ADDR(base) ((base) + (0x420))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID23_ADDR(base) ((base) + (0x424))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID24_ADDR(base) ((base) + (0x428))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID25_ADDR(base) ((base) + (0x42C))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID26_ADDR(base) ((base) + (0x430))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID27_ADDR(base) ((base) + (0x434))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID28_ADDR(base) ((base) + (0x438))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID29_ADDR(base) ((base) + (0x43C))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID30_ADDR(base) ((base) + (0x440))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID31_ADDR(base) ((base) + (0x444))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID32_ADDR(base) ((base) + (0x448))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID33_ADDR(base) ((base) + (0x44C))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID34_ADDR(base) ((base) + (0x450))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID35_ADDR(base) ((base) + (0x454))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID36_ADDR(base) ((base) + (0x458))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID37_ADDR(base) ((base) + (0x45C))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID38_ADDR(base) ((base) + (0x460))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID39_ADDR(base) ((base) + (0x464))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID40_ADDR(base) ((base) + (0x468))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID41_ADDR(base) ((base) + (0x46C))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID42_ADDR(base) ((base) + (0x470))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID43_ADDR(base) ((base) + (0x474))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID44_ADDR(base) ((base) + (0x478))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID45_ADDR(base) ((base) + (0x47C))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID46_ADDR(base) ((base) + (0x480))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID47_ADDR(base) ((base) + (0x484))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID48_ADDR(base) ((base) + (0x488))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID49_ADDR(base) ((base) + (0x48C))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID50_ADDR(base) ((base) + (0x490))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID51_ADDR(base) ((base) + (0x494))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID52_ADDR(base) ((base) + (0x498))
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID53_ADDR(base) ((base) + (0x49C))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD0_ADDR(base) ((base) + (0x4A0))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD1_ADDR(base) ((base) + (0x4A4))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD2_ADDR(base) ((base) + (0x4A8))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD3_ADDR(base) ((base) + (0x4AC))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD4_ADDR(base) ((base) + (0x4B0))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD5_ADDR(base) ((base) + (0x4B4))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD6_ADDR(base) ((base) + (0x4B8))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD7_ADDR(base) ((base) + (0x4BC))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD8_ADDR(base) ((base) + (0x4C0))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD9_ADDR(base) ((base) + (0x4C4))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD10_ADDR(base) ((base) + (0x4C8))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD11_ADDR(base) ((base) + (0x4CC))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD12_ADDR(base) ((base) + (0x4D0))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD13_ADDR(base) ((base) + (0x4D4))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD14_ADDR(base) ((base) + (0x4D8))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD15_ADDR(base) ((base) + (0x4DC))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD16_ADDR(base) ((base) + (0x4E0))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD17_ADDR(base) ((base) + (0x4E4))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD18_ADDR(base) ((base) + (0x4E8))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD19_ADDR(base) ((base) + (0x4EC))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD20_ADDR(base) ((base) + (0x4F0))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD21_ADDR(base) ((base) + (0x4F4))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD22_ADDR(base) ((base) + (0x4F8))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD23_ADDR(base) ((base) + (0x4FC))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD24_ADDR(base) ((base) + (0x500))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD25_ADDR(base) ((base) + (0x504))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD26_ADDR(base) ((base) + (0x508))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD27_ADDR(base) ((base) + (0x50C))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD28_ADDR(base) ((base) + (0x510))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD29_ADDR(base) ((base) + (0x514))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD30_ADDR(base) ((base) + (0x518))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD31_ADDR(base) ((base) + (0x51C))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD32_ADDR(base) ((base) + (0x520))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD33_ADDR(base) ((base) + (0x524))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD34_ADDR(base) ((base) + (0x528))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD35_ADDR(base) ((base) + (0x52C))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD36_ADDR(base) ((base) + (0x530))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD37_ADDR(base) ((base) + (0x534))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD38_ADDR(base) ((base) + (0x538))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD39_ADDR(base) ((base) + (0x53C))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD40_ADDR(base) ((base) + (0x540))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD41_ADDR(base) ((base) + (0x544))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD42_ADDR(base) ((base) + (0x548))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD43_ADDR(base) ((base) + (0x54C))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD44_ADDR(base) ((base) + (0x550))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD45_ADDR(base) ((base) + (0x554))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD46_ADDR(base) ((base) + (0x558))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD47_ADDR(base) ((base) + (0x55C))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD48_ADDR(base) ((base) + (0x560))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD49_ADDR(base) ((base) + (0x564))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD50_ADDR(base) ((base) + (0x568))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD51_ADDR(base) ((base) + (0x56C))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD52_ADDR(base) ((base) + (0x570))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD53_ADDR(base) ((base) + (0x574))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD54_ADDR(base) ((base) + (0x578))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD55_ADDR(base) ((base) + (0x57C))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD56_ADDR(base) ((base) + (0x580))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD57_ADDR(base) ((base) + (0x584))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD58_ADDR(base) ((base) + (0x588))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD59_ADDR(base) ((base) + (0x58C))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD60_ADDR(base) ((base) + (0x590))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD61_ADDR(base) ((base) + (0x594))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD62_ADDR(base) ((base) + (0x598))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD63_ADDR(base) ((base) + (0x59C))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD64_ADDR(base) ((base) + (0x5A0))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD65_ADDR(base) ((base) + (0x5A4))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD66_ADDR(base) ((base) + (0x5A8))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD67_ADDR(base) ((base) + (0x5AC))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD68_ADDR(base) ((base) + (0x5B0))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD69_ADDR(base) ((base) + (0x5B4))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD70_ADDR(base) ((base) + (0x5B8))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD71_ADDR(base) ((base) + (0x5BC))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD72_ADDR(base) ((base) + (0x5C0))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD73_ADDR(base) ((base) + (0x5C4))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD74_ADDR(base) ((base) + (0x5C8))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD75_ADDR(base) ((base) + (0x5CC))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD76_ADDR(base) ((base) + (0x5D0))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD77_ADDR(base) ((base) + (0x5D4))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD78_ADDR(base) ((base) + (0x5D8))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD79_ADDR(base) ((base) + (0x5DC))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD80_ADDR(base) ((base) + (0x5E0))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD81_ADDR(base) ((base) + (0x5E4))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD82_ADDR(base) ((base) + (0x5E8))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD83_ADDR(base) ((base) + (0x5EC))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD84_ADDR(base) ((base) + (0x5F0))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD85_ADDR(base) ((base) + (0x5F4))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD86_ADDR(base) ((base) + (0x5F8))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD87_ADDR(base) ((base) + (0x5FC))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD88_ADDR(base) ((base) + (0x600))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD89_ADDR(base) ((base) + (0x604))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD90_ADDR(base) ((base) + (0x608))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD91_ADDR(base) ((base) + (0x60C))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD92_ADDR(base) ((base) + (0x610))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD93_ADDR(base) ((base) + (0x614))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD94_ADDR(base) ((base) + (0x618))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD95_ADDR(base) ((base) + (0x61C))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD96_ADDR(base) ((base) + (0x620))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD97_ADDR(base) ((base) + (0x624))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD98_ADDR(base) ((base) + (0x628))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD99_ADDR(base) ((base) + (0x62C))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD100_ADDR(base) ((base) + (0x630))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD101_ADDR(base) ((base) + (0x634))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD102_ADDR(base) ((base) + (0x638))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD103_ADDR(base) ((base) + (0x63C))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD104_ADDR(base) ((base) + (0x640))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD105_ADDR(base) ((base) + (0x644))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD106_ADDR(base) ((base) + (0x648))
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD107_ADDR(base) ((base) + (0x64C))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID0_ADDR(base) ((base) + (0x650))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID1_ADDR(base) ((base) + (0x654))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID2_ADDR(base) ((base) + (0x658))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID3_ADDR(base) ((base) + (0x65C))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID4_ADDR(base) ((base) + (0x660))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID5_ADDR(base) ((base) + (0x664))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID6_ADDR(base) ((base) + (0x668))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID7_ADDR(base) ((base) + (0x66C))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID8_ADDR(base) ((base) + (0x670))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID9_ADDR(base) ((base) + (0x674))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID10_ADDR(base) ((base) + (0x678))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID11_ADDR(base) ((base) + (0x67C))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID12_ADDR(base) ((base) + (0x680))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID13_ADDR(base) ((base) + (0x684))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID14_ADDR(base) ((base) + (0x688))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID15_ADDR(base) ((base) + (0x68C))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID16_ADDR(base) ((base) + (0x690))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID17_ADDR(base) ((base) + (0x694))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID18_ADDR(base) ((base) + (0x698))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID19_ADDR(base) ((base) + (0x69C))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID20_ADDR(base) ((base) + (0x6A0))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID21_ADDR(base) ((base) + (0x6A4))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID22_ADDR(base) ((base) + (0x6A8))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID23_ADDR(base) ((base) + (0x6AC))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID24_ADDR(base) ((base) + (0x6B0))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID25_ADDR(base) ((base) + (0x6B4))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID26_ADDR(base) ((base) + (0x6B8))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID27_ADDR(base) ((base) + (0x6BC))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID28_ADDR(base) ((base) + (0x6C0))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID29_ADDR(base) ((base) + (0x6C4))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID30_ADDR(base) ((base) + (0x6C8))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID31_ADDR(base) ((base) + (0x6CC))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID32_ADDR(base) ((base) + (0x6D0))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID33_ADDR(base) ((base) + (0x6D4))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID34_ADDR(base) ((base) + (0x6D8))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID35_ADDR(base) ((base) + (0x6DC))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID36_ADDR(base) ((base) + (0x6E0))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID37_ADDR(base) ((base) + (0x6E4))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID38_ADDR(base) ((base) + (0x6E8))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID39_ADDR(base) ((base) + (0x6EC))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID40_ADDR(base) ((base) + (0x6F0))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID41_ADDR(base) ((base) + (0x6F4))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID42_ADDR(base) ((base) + (0x6F8))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID43_ADDR(base) ((base) + (0x6FC))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID44_ADDR(base) ((base) + (0x700))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID45_ADDR(base) ((base) + (0x704))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID46_ADDR(base) ((base) + (0x708))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID47_ADDR(base) ((base) + (0x70C))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID48_ADDR(base) ((base) + (0x710))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID49_ADDR(base) ((base) + (0x714))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID50_ADDR(base) ((base) + (0x718))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID51_ADDR(base) ((base) + (0x71C))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID52_ADDR(base) ((base) + (0x720))
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID53_ADDR(base) ((base) + (0x724))
+#define SOC_IOMCU_RemapCtrl_TCM_NMI_SOURCE_ADDR(base) ((base) + (0x728))
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int bypass : 1;
+        unsigned int invalid : 1;
+        unsigned int itcm_cnt_clr : 1;
+        unsigned int d0tcm_cnt_clr : 1;
+        unsigned int d1tcm_cnt_clr : 1;
+        unsigned int itcm_err_cnt_clr : 1;
+        unsigned int d0tcm_err_cnt_clr : 1;
+        unsigned int d1tcm_err_cnt_clr : 1;
+        unsigned int itcm_err_clr : 1;
+        unsigned int d0tcm_err_clr : 1;
+        unsigned int d1tcm_err_clr : 1;
+        unsigned int tcmnmi_clear : 1;
+        unsigned int tcmwr_before_rd_clear : 1;
+        unsigned int tcmwr_buf_en : 1;
+        unsigned int reserved : 18;
+    } reg;
+} SOC_IOMCU_RemapCtrl_REMAP_CFG_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_REMAP_CFG_bypass_START (0)
+#define SOC_IOMCU_RemapCtrl_REMAP_CFG_bypass_END (0)
+#define SOC_IOMCU_RemapCtrl_REMAP_CFG_invalid_START (1)
+#define SOC_IOMCU_RemapCtrl_REMAP_CFG_invalid_END (1)
+#define SOC_IOMCU_RemapCtrl_REMAP_CFG_itcm_cnt_clr_START (2)
+#define SOC_IOMCU_RemapCtrl_REMAP_CFG_itcm_cnt_clr_END (2)
+#define SOC_IOMCU_RemapCtrl_REMAP_CFG_d0tcm_cnt_clr_START (3)
+#define SOC_IOMCU_RemapCtrl_REMAP_CFG_d0tcm_cnt_clr_END (3)
+#define SOC_IOMCU_RemapCtrl_REMAP_CFG_d1tcm_cnt_clr_START (4)
+#define SOC_IOMCU_RemapCtrl_REMAP_CFG_d1tcm_cnt_clr_END (4)
+#define SOC_IOMCU_RemapCtrl_REMAP_CFG_itcm_err_cnt_clr_START (5)
+#define SOC_IOMCU_RemapCtrl_REMAP_CFG_itcm_err_cnt_clr_END (5)
+#define SOC_IOMCU_RemapCtrl_REMAP_CFG_d0tcm_err_cnt_clr_START (6)
+#define SOC_IOMCU_RemapCtrl_REMAP_CFG_d0tcm_err_cnt_clr_END (6)
+#define SOC_IOMCU_RemapCtrl_REMAP_CFG_d1tcm_err_cnt_clr_START (7)
+#define SOC_IOMCU_RemapCtrl_REMAP_CFG_d1tcm_err_cnt_clr_END (7)
+#define SOC_IOMCU_RemapCtrl_REMAP_CFG_itcm_err_clr_START (8)
+#define SOC_IOMCU_RemapCtrl_REMAP_CFG_itcm_err_clr_END (8)
+#define SOC_IOMCU_RemapCtrl_REMAP_CFG_d0tcm_err_clr_START (9)
+#define SOC_IOMCU_RemapCtrl_REMAP_CFG_d0tcm_err_clr_END (9)
+#define SOC_IOMCU_RemapCtrl_REMAP_CFG_d1tcm_err_clr_START (10)
+#define SOC_IOMCU_RemapCtrl_REMAP_CFG_d1tcm_err_clr_END (10)
+#define SOC_IOMCU_RemapCtrl_REMAP_CFG_tcmnmi_clear_START (11)
+#define SOC_IOMCU_RemapCtrl_REMAP_CFG_tcmnmi_clear_END (11)
+#define SOC_IOMCU_RemapCtrl_REMAP_CFG_tcmwr_before_rd_clear_START (12)
+#define SOC_IOMCU_RemapCtrl_REMAP_CFG_tcmwr_before_rd_clear_END (12)
+#define SOC_IOMCU_RemapCtrl_REMAP_CFG_tcmwr_buf_en_START (13)
+#define SOC_IOMCU_RemapCtrl_REMAP_CFG_tcmwr_buf_en_END (13)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int mt_wp : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_MAP_TABLE_WP_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_MAP_TABLE_WP_mt_wp_START (0)
+#define SOC_IOMCU_RemapCtrl_MAP_TABLE_WP_mt_wp_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int auto_gate_en : 1;
+        unsigned int reserved_0 : 3;
+        unsigned int auto_gate_cnt : 8;
+        unsigned int reserved_1 : 20;
+    } reg;
+} SOC_IOMCU_RemapCtrl_LP_CTRL_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_LP_CTRL_auto_gate_en_START (0)
+#define SOC_IOMCU_RemapCtrl_LP_CTRL_auto_gate_en_END (0)
+#define SOC_IOMCU_RemapCtrl_LP_CTRL_auto_gate_cnt_START (4)
+#define SOC_IOMCU_RemapCtrl_LP_CTRL_auto_gate_cnt_END (11)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int tcm128_gate_en_soft : 1;
+        unsigned int reserved : 31;
+    } reg;
+} SOC_IOMCU_RemapCtrl_LP_CTRL_1_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_LP_CTRL_1_tcm128_gate_en_soft_START (0)
+#define SOC_IOMCU_RemapCtrl_LP_CTRL_1_tcm128_gate_en_soft_END (0)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcm_tlb_entry0 : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY0_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY0_itcm_tlb_entry0_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY0_itcm_tlb_entry0_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcm_tlb_entry1 : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY1_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY1_itcm_tlb_entry1_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY1_itcm_tlb_entry1_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcm_tlb_entry2 : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY2_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY2_itcm_tlb_entry2_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY2_itcm_tlb_entry2_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcm_tlb_entry3 : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY3_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY3_itcm_tlb_entry3_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY3_itcm_tlb_entry3_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcm_tlb_entry4 : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY4_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY4_itcm_tlb_entry4_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY4_itcm_tlb_entry4_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcm_tlb_entry5 : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY5_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY5_itcm_tlb_entry5_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY5_itcm_tlb_entry5_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcm_tlb_entry6 : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY6_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY6_itcm_tlb_entry6_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY6_itcm_tlb_entry6_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcm_tlb_entry7 : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY7_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY7_itcm_tlb_entry7_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCM_TLB_ENTRY7_itcm_tlb_entry7_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcm_tlb_entry0 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY0_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY0_d0tcm_tlb_entry0_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY0_d0tcm_tlb_entry0_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcm_tlb_entry1 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY1_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY1_d0tcm_tlb_entry1_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY1_d0tcm_tlb_entry1_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcm_tlb_entry2 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY2_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY2_d0tcm_tlb_entry2_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY2_d0tcm_tlb_entry2_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcm_tlb_entry3 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY3_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY3_d0tcm_tlb_entry3_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY3_d0tcm_tlb_entry3_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcm_tlb_entry4 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY4_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY4_d0tcm_tlb_entry4_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY4_d0tcm_tlb_entry4_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcm_tlb_entry5 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY5_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY5_d0tcm_tlb_entry5_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY5_d0tcm_tlb_entry5_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcm_tlb_entry6 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY6_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY6_d0tcm_tlb_entry6_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY6_d0tcm_tlb_entry6_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcm_tlb_entry7 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY7_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY7_d0tcm_tlb_entry7_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCM_TLB_ENTRY7_d0tcm_tlb_entry7_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcm_tlb_entry0 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY0_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY0_d1tcm_tlb_entry0_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY0_d1tcm_tlb_entry0_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcm_tlb_entry1 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY1_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY1_d1tcm_tlb_entry1_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY1_d1tcm_tlb_entry1_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcm_tlb_entry2 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY2_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY2_d1tcm_tlb_entry2_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY2_d1tcm_tlb_entry2_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcm_tlb_entry3 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY3_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY3_d1tcm_tlb_entry3_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY3_d1tcm_tlb_entry3_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcm_tlb_entry4 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY4_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY4_d1tcm_tlb_entry4_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY4_d1tcm_tlb_entry4_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcm_tlb_entry5 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY5_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY5_d1tcm_tlb_entry5_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY5_d1tcm_tlb_entry5_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcm_tlb_entry6 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY6_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY6_d1tcm_tlb_entry6_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY6_d1tcm_tlb_entry6_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcm_tlb_entry7 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY7_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY7_d1tcm_tlb_entry7_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCM_TLB_ENTRY7_d1tcm_tlb_entry7_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcm_hit_cnt : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCM_HIT_CNT_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCM_HIT_CNT_itcm_hit_cnt_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCM_HIT_CNT_itcm_hit_cnt_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcm_miss_cnt : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCM_MISS_CNT_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCM_MISS_CNT_itcm_miss_cnt_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCM_MISS_CNT_itcm_miss_cnt_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcm_hit_cnt : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCM_HIT_CNT_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCM_HIT_CNT_d0tcm_hit_cnt_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCM_HIT_CNT_d0tcm_hit_cnt_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcm_miss_cnt : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCM_MISS_CNT_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCM_MISS_CNT_d0tcm_miss_cnt_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCM_MISS_CNT_d0tcm_miss_cnt_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcm_hit_cnt : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCM_HIT_CNT_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCM_HIT_CNT_d1tcm_hit_cnt_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCM_HIT_CNT_d1tcm_hit_cnt_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcm_miss_cnt : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCM_MISS_CNT_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCM_MISS_CNT_d1tcm_miss_cnt_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCM_MISS_CNT_d1tcm_miss_cnt_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcm_err_bank7 : 1;
+        unsigned int itcm_err_bank8 : 1;
+        unsigned int itcm_err_bank9 : 1;
+        unsigned int itcm_err_bank10 : 1;
+        unsigned int d0tcm_err_bank7 : 1;
+        unsigned int d0tcm_err_bank8 : 1;
+        unsigned int d0tcm_err_bank9 : 1;
+        unsigned int d0tcm_err_bank10 : 1;
+        unsigned int d1tcm_err_bank7 : 1;
+        unsigned int d1tcm_err_bank8 : 1;
+        unsigned int d1tcm_err_bank9 : 1;
+        unsigned int d1tcm_err_bank10 : 1;
+        unsigned int itcm_err_bank11 : 1;
+        unsigned int d0tcm_err_bank11 : 1;
+        unsigned int d1tcm_err_bank11 : 1;
+        unsigned int itcm_err_bank12 : 1;
+        unsigned int d0tcm_err_bank12 : 1;
+        unsigned int d1tcm_err_bank12 : 1;
+        unsigned int itcm_err_bank13 : 1;
+        unsigned int d0tcm_err_bank13 : 1;
+        unsigned int d1tcm_err_bank13 : 1;
+        unsigned int itcm_err_bank14 : 1;
+        unsigned int d0tcm_err_bank14 : 1;
+        unsigned int d1tcm_err_bank14 : 1;
+        unsigned int itcm_err_bank15 : 1;
+        unsigned int d0tcm_err_bank15 : 1;
+        unsigned int d1tcm_err_bank15 : 1;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_itcm_err_bank7_START (0)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_itcm_err_bank7_END (0)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_itcm_err_bank8_START (1)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_itcm_err_bank8_END (1)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_itcm_err_bank9_START (2)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_itcm_err_bank9_END (2)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_itcm_err_bank10_START (3)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_itcm_err_bank10_END (3)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_d0tcm_err_bank7_START (4)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_d0tcm_err_bank7_END (4)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_d0tcm_err_bank8_START (5)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_d0tcm_err_bank8_END (5)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_d0tcm_err_bank9_START (6)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_d0tcm_err_bank9_END (6)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_d0tcm_err_bank10_START (7)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_d0tcm_err_bank10_END (7)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_d1tcm_err_bank7_START (8)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_d1tcm_err_bank7_END (8)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_d1tcm_err_bank8_START (9)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_d1tcm_err_bank8_END (9)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_d1tcm_err_bank9_START (10)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_d1tcm_err_bank9_END (10)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_d1tcm_err_bank10_START (11)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_d1tcm_err_bank10_END (11)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_itcm_err_bank11_START (12)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_itcm_err_bank11_END (12)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_d0tcm_err_bank11_START (13)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_d0tcm_err_bank11_END (13)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_d1tcm_err_bank11_START (14)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_d1tcm_err_bank11_END (14)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_itcm_err_bank12_START (15)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_itcm_err_bank12_END (15)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_d0tcm_err_bank12_START (16)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_d0tcm_err_bank12_END (16)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_d1tcm_err_bank12_START (17)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_d1tcm_err_bank12_END (17)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_itcm_err_bank13_START (18)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_itcm_err_bank13_END (18)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_d0tcm_err_bank13_START (19)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_d0tcm_err_bank13_END (19)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_d1tcm_err_bank13_START (20)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_d1tcm_err_bank13_END (20)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_itcm_err_bank14_START (21)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_itcm_err_bank14_END (21)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_d0tcm_err_bank14_START (22)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_d0tcm_err_bank14_END (22)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_d1tcm_err_bank14_START (23)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_d1tcm_err_bank14_END (23)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_itcm_err_bank15_START (24)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_itcm_err_bank15_END (24)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_d0tcm_err_bank15_START (25)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_d0tcm_err_bank15_END (25)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_d1tcm_err_bank15_START (26)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_1_d1tcm_err_bank15_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int tcmaddr_boundary_check_bypass : 1;
+        unsigned int bank_collision_check_bypass : 1;
+        unsigned int reserved : 30;
+    } reg;
+} SOC_IOMCU_RemapCtrl_LP_CTRL_2_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_LP_CTRL_2_tcmaddr_boundary_check_bypass_START (0)
+#define SOC_IOMCU_RemapCtrl_LP_CTRL_2_tcmaddr_boundary_check_bypass_END (0)
+#define SOC_IOMCU_RemapCtrl_LP_CTRL_2_bank_collision_check_bypass_START (1)
+#define SOC_IOMCU_RemapCtrl_LP_CTRL_2_bank_collision_check_bypass_END (1)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcm_page_err : 1;
+        unsigned int itcmaddr_out_576k_err : 1;
+        unsigned int reserved_0 : 2;
+        unsigned int d0tcm_page_err : 1;
+        unsigned int d0tcmaddr_out_576k_err : 1;
+        unsigned int reserved_1 : 2;
+        unsigned int d1tcm_page_err : 1;
+        unsigned int d1tcmaddr_out_576k_err : 1;
+        unsigned int itcm_err_bank0 : 1;
+        unsigned int itcm_err_bank1 : 1;
+        unsigned int itcm_err_bank2 : 1;
+        unsigned int itcm_err_bank3 : 1;
+        unsigned int itcm_err_bank4 : 1;
+        unsigned int itcm_err_bank5 : 1;
+        unsigned int itcm_err_bank6 : 1;
+        unsigned int d0tcm_err_bank0 : 1;
+        unsigned int d0tcm_err_bank1 : 1;
+        unsigned int d0tcm_err_bank2 : 1;
+        unsigned int d0tcm_err_bank3 : 1;
+        unsigned int d0tcm_err_bank4 : 1;
+        unsigned int d0tcm_err_bank5 : 1;
+        unsigned int d0tcm_err_bank6 : 1;
+        unsigned int d1tcm_err_bank0 : 1;
+        unsigned int d1tcm_err_bank1 : 1;
+        unsigned int d1tcm_err_bank2 : 1;
+        unsigned int d1tcm_err_bank3 : 1;
+        unsigned int d1tcm_err_bank4 : 1;
+        unsigned int d1tcm_err_bank5 : 1;
+        unsigned int d1tcm_err_bank6 : 1;
+        unsigned int reserved_2 : 1;
+    } reg;
+} SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_itcm_page_err_START (0)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_itcm_page_err_END (0)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_itcmaddr_out_576k_err_START (1)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_itcmaddr_out_576k_err_END (1)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_d0tcm_page_err_START (4)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_d0tcm_page_err_END (4)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_d0tcmaddr_out_576k_err_START (5)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_d0tcmaddr_out_576k_err_END (5)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_d1tcm_page_err_START (8)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_d1tcm_page_err_END (8)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_d1tcmaddr_out_576k_err_START (9)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_d1tcmaddr_out_576k_err_END (9)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_itcm_err_bank0_START (10)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_itcm_err_bank0_END (10)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_itcm_err_bank1_START (11)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_itcm_err_bank1_END (11)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_itcm_err_bank2_START (12)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_itcm_err_bank2_END (12)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_itcm_err_bank3_START (13)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_itcm_err_bank3_END (13)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_itcm_err_bank4_START (14)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_itcm_err_bank4_END (14)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_itcm_err_bank5_START (15)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_itcm_err_bank5_END (15)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_itcm_err_bank6_START (16)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_itcm_err_bank6_END (16)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_d0tcm_err_bank0_START (17)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_d0tcm_err_bank0_END (17)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_d0tcm_err_bank1_START (18)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_d0tcm_err_bank1_END (18)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_d0tcm_err_bank2_START (19)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_d0tcm_err_bank2_END (19)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_d0tcm_err_bank3_START (20)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_d0tcm_err_bank3_END (20)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_d0tcm_err_bank4_START (21)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_d0tcm_err_bank4_END (21)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_d0tcm_err_bank5_START (22)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_d0tcm_err_bank5_END (22)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_d0tcm_err_bank6_START (23)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_d0tcm_err_bank6_END (23)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_d1tcm_err_bank0_START (24)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_d1tcm_err_bank0_END (24)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_d1tcm_err_bank1_START (25)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_d1tcm_err_bank1_END (25)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_d1tcm_err_bank2_START (26)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_d1tcm_err_bank2_END (26)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_d1tcm_err_bank3_START (27)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_d1tcm_err_bank3_END (27)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_d1tcm_err_bank4_START (28)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_d1tcm_err_bank4_END (28)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_d1tcm_err_bank5_START (29)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_d1tcm_err_bank5_END (29)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_d1tcm_err_bank6_START (30)
+#define SOC_IOMCU_RemapCtrl_TCM_ERR_TYPE_d1tcm_err_bank6_END (30)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int bank0_sel : 1;
+        unsigned int bank1_sel : 1;
+        unsigned int bank2_sel : 1;
+        unsigned int bank3_sel : 1;
+        unsigned int bank4_sel : 1;
+        unsigned int bank5_sel : 1;
+        unsigned int bank6_sel : 1;
+        unsigned int bank7_sel : 1;
+        unsigned int bank8_sel : 1;
+        unsigned int bank9_sel : 1;
+        unsigned int bank10_sel : 1;
+        unsigned int bank11_sel : 1;
+        unsigned int bank12_sel : 1;
+        unsigned int bank13_sel : 1;
+        unsigned int bank14_sel : 1;
+        unsigned int bank15_sel : 1;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_IOMCU_RemapCtrl_BANK_SEL_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_BANK_SEL_bank0_sel_START (0)
+#define SOC_IOMCU_RemapCtrl_BANK_SEL_bank0_sel_END (0)
+#define SOC_IOMCU_RemapCtrl_BANK_SEL_bank1_sel_START (1)
+#define SOC_IOMCU_RemapCtrl_BANK_SEL_bank1_sel_END (1)
+#define SOC_IOMCU_RemapCtrl_BANK_SEL_bank2_sel_START (2)
+#define SOC_IOMCU_RemapCtrl_BANK_SEL_bank2_sel_END (2)
+#define SOC_IOMCU_RemapCtrl_BANK_SEL_bank3_sel_START (3)
+#define SOC_IOMCU_RemapCtrl_BANK_SEL_bank3_sel_END (3)
+#define SOC_IOMCU_RemapCtrl_BANK_SEL_bank4_sel_START (4)
+#define SOC_IOMCU_RemapCtrl_BANK_SEL_bank4_sel_END (4)
+#define SOC_IOMCU_RemapCtrl_BANK_SEL_bank5_sel_START (5)
+#define SOC_IOMCU_RemapCtrl_BANK_SEL_bank5_sel_END (5)
+#define SOC_IOMCU_RemapCtrl_BANK_SEL_bank6_sel_START (6)
+#define SOC_IOMCU_RemapCtrl_BANK_SEL_bank6_sel_END (6)
+#define SOC_IOMCU_RemapCtrl_BANK_SEL_bank7_sel_START (7)
+#define SOC_IOMCU_RemapCtrl_BANK_SEL_bank7_sel_END (7)
+#define SOC_IOMCU_RemapCtrl_BANK_SEL_bank8_sel_START (8)
+#define SOC_IOMCU_RemapCtrl_BANK_SEL_bank8_sel_END (8)
+#define SOC_IOMCU_RemapCtrl_BANK_SEL_bank9_sel_START (9)
+#define SOC_IOMCU_RemapCtrl_BANK_SEL_bank9_sel_END (9)
+#define SOC_IOMCU_RemapCtrl_BANK_SEL_bank10_sel_START (10)
+#define SOC_IOMCU_RemapCtrl_BANK_SEL_bank10_sel_END (10)
+#define SOC_IOMCU_RemapCtrl_BANK_SEL_bank11_sel_START (11)
+#define SOC_IOMCU_RemapCtrl_BANK_SEL_bank11_sel_END (11)
+#define SOC_IOMCU_RemapCtrl_BANK_SEL_bank12_sel_START (12)
+#define SOC_IOMCU_RemapCtrl_BANK_SEL_bank12_sel_END (12)
+#define SOC_IOMCU_RemapCtrl_BANK_SEL_bank13_sel_START (13)
+#define SOC_IOMCU_RemapCtrl_BANK_SEL_bank13_sel_END (13)
+#define SOC_IOMCU_RemapCtrl_BANK_SEL_bank14_sel_START (14)
+#define SOC_IOMCU_RemapCtrl_BANK_SEL_bank14_sel_END (14)
+#define SOC_IOMCU_RemapCtrl_BANK_SEL_bank15_sel_START (15)
+#define SOC_IOMCU_RemapCtrl_BANK_SEL_bank15_sel_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcm_err_addr : 23;
+        unsigned int reserved : 9;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCM_ERR_ADDR_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCM_ERR_ADDR_itcm_err_addr_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCM_ERR_ADDR_itcm_err_addr_END (22)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcm_err_addr : 22;
+        unsigned int reserved : 10;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCM_ERR_ADDR_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCM_ERR_ADDR_d0tcm_err_addr_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCM_ERR_ADDR_d0tcm_err_addr_END (21)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcm_err_addr : 22;
+        unsigned int reserved : 10;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCM_ERR_ADDR_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCM_ERR_ADDR_d1tcm_err_addr_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCM_ERR_ADDR_d1tcm_err_addr_END (21)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcm_err_cnt : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCM_ERR_CNT_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCM_ERR_CNT_itcm_err_cnt_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCM_ERR_CNT_itcm_err_cnt_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcm_err_cnt : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCM_ERR_CNT_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCM_ERR_CNT_d0tcm_err_cnt_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCM_ERR_CNT_d0tcm_err_cnt_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcm_err_cnt : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCM_ERR_CNT_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCM_ERR_CNT_d1tcm_err_cnt_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCM_ERR_CNT_d1tcm_err_cnt_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dy_load_addr0 : 11;
+        unsigned int dy_load_addr1 : 11;
+        unsigned int reserved : 10;
+    } reg;
+} SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B0_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B0_dy_load_addr0_START (0)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B0_dy_load_addr0_END (10)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B0_dy_load_addr1_START (11)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B0_dy_load_addr1_END (21)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dy_load_addr2 : 11;
+        unsigned int dy_load_addr3 : 11;
+        unsigned int reserved : 10;
+    } reg;
+} SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B1_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B1_dy_load_addr2_START (0)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B1_dy_load_addr2_END (10)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B1_dy_load_addr3_START (11)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B1_dy_load_addr3_END (21)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dy_load_addr4 : 11;
+        unsigned int dy_load_addr5 : 11;
+        unsigned int reserved : 10;
+    } reg;
+} SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B2_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B2_dy_load_addr4_START (0)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B2_dy_load_addr4_END (10)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B2_dy_load_addr5_START (11)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B2_dy_load_addr5_END (21)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dy_load_addr6 : 11;
+        unsigned int dy_load_addr7 : 11;
+        unsigned int reserved : 10;
+    } reg;
+} SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B3_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B3_dy_load_addr6_START (0)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B3_dy_load_addr6_END (10)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B3_dy_load_addr7_START (11)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B3_dy_load_addr7_END (21)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dy_load_addr8 : 11;
+        unsigned int dy_load_addr9 : 11;
+        unsigned int reserved : 10;
+    } reg;
+} SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B4_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B4_dy_load_addr8_START (0)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B4_dy_load_addr8_END (10)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B4_dy_load_addr9_START (11)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B4_dy_load_addr9_END (21)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dy_load_addr10 : 11;
+        unsigned int dy_load_addr11 : 11;
+        unsigned int reserved : 10;
+    } reg;
+} SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B5_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B5_dy_load_addr10_START (0)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B5_dy_load_addr10_END (10)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B5_dy_load_addr11_START (11)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B5_dy_load_addr11_END (21)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dy_load_addr12 : 11;
+        unsigned int dy_load_addr13 : 11;
+        unsigned int reserved : 10;
+    } reg;
+} SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B6_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B6_dy_load_addr12_START (0)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B6_dy_load_addr12_END (10)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B6_dy_load_addr13_START (11)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B6_dy_load_addr13_END (21)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dy_load_addr14 : 11;
+        unsigned int dy_load_addr15 : 11;
+        unsigned int reserved : 10;
+    } reg;
+} SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B7_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B7_dy_load_addr14_START (0)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B7_dy_load_addr14_END (10)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B7_dy_load_addr15_START (11)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_ADDR_B7_dy_load_addr15_END (21)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dy_load_en0 : 1;
+        unsigned int dy_load_en1 : 1;
+        unsigned int dy_load_en2 : 1;
+        unsigned int dy_load_en3 : 1;
+        unsigned int dy_load_en4 : 1;
+        unsigned int dy_load_en5 : 1;
+        unsigned int dy_load_en6 : 1;
+        unsigned int dy_load_en7 : 1;
+        unsigned int dy_load_en8 : 1;
+        unsigned int dy_load_en9 : 1;
+        unsigned int dy_load_en10 : 1;
+        unsigned int dy_load_en11 : 1;
+        unsigned int dy_load_en12 : 1;
+        unsigned int dy_load_en13 : 1;
+        unsigned int dy_load_en14 : 1;
+        unsigned int dy_load_en15 : 1;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_IOMCU_RemapCtrl_DY_LOAD_EN_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_EN_dy_load_en0_START (0)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_EN_dy_load_en0_END (0)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_EN_dy_load_en1_START (1)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_EN_dy_load_en1_END (1)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_EN_dy_load_en2_START (2)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_EN_dy_load_en2_END (2)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_EN_dy_load_en3_START (3)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_EN_dy_load_en3_END (3)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_EN_dy_load_en4_START (4)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_EN_dy_load_en4_END (4)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_EN_dy_load_en5_START (5)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_EN_dy_load_en5_END (5)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_EN_dy_load_en6_START (6)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_EN_dy_load_en6_END (6)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_EN_dy_load_en7_START (7)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_EN_dy_load_en7_END (7)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_EN_dy_load_en8_START (8)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_EN_dy_load_en8_END (8)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_EN_dy_load_en9_START (9)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_EN_dy_load_en9_END (9)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_EN_dy_load_en10_START (10)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_EN_dy_load_en10_END (10)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_EN_dy_load_en11_START (11)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_EN_dy_load_en11_END (11)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_EN_dy_load_en12_START (12)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_EN_dy_load_en12_END (12)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_EN_dy_load_en13_START (13)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_EN_dy_load_en13_END (13)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_EN_dy_load_en14_START (14)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_EN_dy_load_en14_END (14)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_EN_dy_load_en15_START (15)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_EN_dy_load_en15_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dy_load_clr0 : 1;
+        unsigned int dy_load_clr1 : 1;
+        unsigned int dy_load_clr2 : 1;
+        unsigned int dy_load_clr3 : 1;
+        unsigned int dy_load_clr4 : 1;
+        unsigned int dy_load_clr5 : 1;
+        unsigned int dy_load_clr6 : 1;
+        unsigned int dy_load_clr7 : 1;
+        unsigned int dy_load_clr8 : 1;
+        unsigned int dy_load_clr9 : 1;
+        unsigned int dy_load_clr10 : 1;
+        unsigned int dy_load_clr11 : 1;
+        unsigned int dy_load_clr12 : 1;
+        unsigned int dy_load_clr13 : 1;
+        unsigned int dy_load_clr14 : 1;
+        unsigned int dy_load_clr15 : 1;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_IOMCU_RemapCtrl_DY_LOAD_CLR_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_CLR_dy_load_clr0_START (0)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_CLR_dy_load_clr0_END (0)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_CLR_dy_load_clr1_START (1)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_CLR_dy_load_clr1_END (1)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_CLR_dy_load_clr2_START (2)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_CLR_dy_load_clr2_END (2)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_CLR_dy_load_clr3_START (3)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_CLR_dy_load_clr3_END (3)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_CLR_dy_load_clr4_START (4)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_CLR_dy_load_clr4_END (4)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_CLR_dy_load_clr5_START (5)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_CLR_dy_load_clr5_END (5)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_CLR_dy_load_clr6_START (6)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_CLR_dy_load_clr6_END (6)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_CLR_dy_load_clr7_START (7)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_CLR_dy_load_clr7_END (7)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_CLR_dy_load_clr8_START (8)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_CLR_dy_load_clr8_END (8)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_CLR_dy_load_clr9_START (9)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_CLR_dy_load_clr9_END (9)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_CLR_dy_load_clr10_START (10)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_CLR_dy_load_clr10_END (10)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_CLR_dy_load_clr11_START (11)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_CLR_dy_load_clr11_END (11)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_CLR_dy_load_clr12_START (12)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_CLR_dy_load_clr12_END (12)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_CLR_dy_load_clr13_START (13)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_CLR_dy_load_clr13_END (13)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_CLR_dy_load_clr14_START (14)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_CLR_dy_load_clr14_END (14)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_CLR_dy_load_clr15_START (15)
+#define SOC_IOMCU_RemapCtrl_DY_LOAD_CLR_dy_load_clr15_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int entry_cnt15 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ENTRY_CNT15_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT15_entry_cnt15_START (0)
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT15_entry_cnt15_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int entry_cnt14 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ENTRY_CNT14_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT14_entry_cnt14_START (0)
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT14_entry_cnt14_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int entry_cnt13 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ENTRY_CNT13_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT13_entry_cnt13_START (0)
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT13_entry_cnt13_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int entry_cnt12 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ENTRY_CNT12_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT12_entry_cnt12_START (0)
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT12_entry_cnt12_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int entry_cnt11 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ENTRY_CNT11_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT11_entry_cnt11_START (0)
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT11_entry_cnt11_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int entry_cnt10 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ENTRY_CNT10_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT10_entry_cnt10_START (0)
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT10_entry_cnt10_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int entry_cnt9 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ENTRY_CNT9_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT9_entry_cnt9_START (0)
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT9_entry_cnt9_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int entry_cnt8 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ENTRY_CNT8_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT8_entry_cnt8_START (0)
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT8_entry_cnt8_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int entry_cnt7 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ENTRY_CNT7_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT7_entry_cnt7_START (0)
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT7_entry_cnt7_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int entry_cnt6 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ENTRY_CNT6_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT6_entry_cnt6_START (0)
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT6_entry_cnt6_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int entry_cnt5 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ENTRY_CNT5_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT5_entry_cnt5_START (0)
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT5_entry_cnt5_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int entry_cnt4 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ENTRY_CNT4_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT4_entry_cnt4_START (0)
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT4_entry_cnt4_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int entry_cnt3 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ENTRY_CNT3_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT3_entry_cnt3_START (0)
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT3_entry_cnt3_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int entry_cnt2 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ENTRY_CNT2_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT2_entry_cnt2_START (0)
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT2_entry_cnt2_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int entry_cnt1 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ENTRY_CNT1_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT1_entry_cnt1_START (0)
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT1_entry_cnt1_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int entry_cnt0 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ENTRY_CNT0_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT0_entry_cnt0_START (0)
+#define SOC_IOMCU_RemapCtrl_ENTRY_CNT0_entry_cnt0_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record0 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD0_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD0_d0tcmdata_record0_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD0_d0tcmdata_record0_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record1 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD1_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD1_d0tcmdata_record1_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD1_d0tcmdata_record1_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record2 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD2_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD2_d0tcmdata_record2_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD2_d0tcmdata_record2_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record3 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD3_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD3_d0tcmdata_record3_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD3_d0tcmdata_record3_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record4 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD4_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD4_d0tcmdata_record4_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD4_d0tcmdata_record4_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record5 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD5_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD5_d0tcmdata_record5_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD5_d0tcmdata_record5_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record6 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD6_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD6_d0tcmdata_record6_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD6_d0tcmdata_record6_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record7 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD7_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD7_d0tcmdata_record7_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD7_d0tcmdata_record7_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record8 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD8_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD8_d0tcmdata_record8_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD8_d0tcmdata_record8_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record9 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD9_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD9_d0tcmdata_record9_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD9_d0tcmdata_record9_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record10 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD10_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD10_d0tcmdata_record10_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD10_d0tcmdata_record10_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record11 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD11_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD11_d0tcmdata_record11_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD11_d0tcmdata_record11_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record12 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD12_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD12_d0tcmdata_record12_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD12_d0tcmdata_record12_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record13 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD13_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD13_d0tcmdata_record13_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD13_d0tcmdata_record13_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record14 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD14_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD14_d0tcmdata_record14_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD14_d0tcmdata_record14_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record15 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD15_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD15_d0tcmdata_record15_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD15_d0tcmdata_record15_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record16 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD16_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD16_d0tcmdata_record16_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD16_d0tcmdata_record16_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record17 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD17_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD17_d0tcmdata_record17_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD17_d0tcmdata_record17_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record18 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD18_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD18_d0tcmdata_record18_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD18_d0tcmdata_record18_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record19 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD19_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD19_d0tcmdata_record19_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD19_d0tcmdata_record19_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record20 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD20_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD20_d0tcmdata_record20_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD20_d0tcmdata_record20_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record21 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD21_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD21_d0tcmdata_record21_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD21_d0tcmdata_record21_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record22 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD22_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD22_d0tcmdata_record22_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD22_d0tcmdata_record22_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record23 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD23_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD23_d0tcmdata_record23_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD23_d0tcmdata_record23_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record24 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD24_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD24_d0tcmdata_record24_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD24_d0tcmdata_record24_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record25 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD25_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD25_d0tcmdata_record25_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD25_d0tcmdata_record25_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record26 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD26_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD26_d0tcmdata_record26_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD26_d0tcmdata_record26_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record27 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD27_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD27_d0tcmdata_record27_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD27_d0tcmdata_record27_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record28 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD28_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD28_d0tcmdata_record28_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD28_d0tcmdata_record28_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record29 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD29_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD29_d0tcmdata_record29_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD29_d0tcmdata_record29_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record30 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD30_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD30_d0tcmdata_record30_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD30_d0tcmdata_record30_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record31 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD31_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD31_d0tcmdata_record31_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD31_d0tcmdata_record31_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record32 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD32_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD32_d0tcmdata_record32_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD32_d0tcmdata_record32_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record33 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD33_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD33_d0tcmdata_record33_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD33_d0tcmdata_record33_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record34 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD34_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD34_d0tcmdata_record34_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD34_d0tcmdata_record34_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record35 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD35_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD35_d0tcmdata_record35_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD35_d0tcmdata_record35_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record36 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD36_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD36_d0tcmdata_record36_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD36_d0tcmdata_record36_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record37 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD37_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD37_d0tcmdata_record37_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD37_d0tcmdata_record37_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record38 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD38_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD38_d0tcmdata_record38_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD38_d0tcmdata_record38_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record39 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD39_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD39_d0tcmdata_record39_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD39_d0tcmdata_record39_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record40 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD40_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD40_d0tcmdata_record40_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD40_d0tcmdata_record40_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record41 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD41_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD41_d0tcmdata_record41_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD41_d0tcmdata_record41_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record42 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD42_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD42_d0tcmdata_record42_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD42_d0tcmdata_record42_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record43 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD43_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD43_d0tcmdata_record43_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD43_d0tcmdata_record43_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record44 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD44_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD44_d0tcmdata_record44_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD44_d0tcmdata_record44_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record45 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD45_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD45_d0tcmdata_record45_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD45_d0tcmdata_record45_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record46 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD46_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD46_d0tcmdata_record46_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD46_d0tcmdata_record46_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record47 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD47_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD47_d0tcmdata_record47_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD47_d0tcmdata_record47_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record48 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD48_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD48_d0tcmdata_record48_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD48_d0tcmdata_record48_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record49 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD49_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD49_d0tcmdata_record49_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD49_d0tcmdata_record49_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record50 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD50_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD50_d0tcmdata_record50_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD50_d0tcmdata_record50_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record51 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD51_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD51_d0tcmdata_record51_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD51_d0tcmdata_record51_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record52 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD52_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD52_d0tcmdata_record52_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD52_d0tcmdata_record52_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmdata_record53 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD53_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD53_d0tcmdata_record53_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMDATA_RECORD53_d0tcmdata_record53_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid0 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID0_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID0_d0tcmaddr_bytewr_valid0_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID0_d0tcmaddr_bytewr_valid0_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid1 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID1_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID1_d0tcmaddr_bytewr_valid1_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID1_d0tcmaddr_bytewr_valid1_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid2 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID2_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID2_d0tcmaddr_bytewr_valid2_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID2_d0tcmaddr_bytewr_valid2_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid3 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID3_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID3_d0tcmaddr_bytewr_valid3_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID3_d0tcmaddr_bytewr_valid3_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid4 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID4_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID4_d0tcmaddr_bytewr_valid4_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID4_d0tcmaddr_bytewr_valid4_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid5 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID5_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID5_d0tcmaddr_bytewr_valid5_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID5_d0tcmaddr_bytewr_valid5_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid6 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID6_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID6_d0tcmaddr_bytewr_valid6_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID6_d0tcmaddr_bytewr_valid6_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid7 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID7_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID7_d0tcmaddr_bytewr_valid7_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID7_d0tcmaddr_bytewr_valid7_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid8 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID8_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID8_d0tcmaddr_bytewr_valid8_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID8_d0tcmaddr_bytewr_valid8_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid9 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID9_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID9_d0tcmaddr_bytewr_valid9_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID9_d0tcmaddr_bytewr_valid9_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid10 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID10_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID10_d0tcmaddr_bytewr_valid10_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID10_d0tcmaddr_bytewr_valid10_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid11 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID11_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID11_d0tcmaddr_bytewr_valid11_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID11_d0tcmaddr_bytewr_valid11_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid12 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID12_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID12_d0tcmaddr_bytewr_valid12_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID12_d0tcmaddr_bytewr_valid12_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid13 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID13_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID13_d0tcmaddr_bytewr_valid13_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID13_d0tcmaddr_bytewr_valid13_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid14 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID14_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID14_d0tcmaddr_bytewr_valid14_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID14_d0tcmaddr_bytewr_valid14_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid15 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID15_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID15_d0tcmaddr_bytewr_valid15_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID15_d0tcmaddr_bytewr_valid15_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid16 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID16_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID16_d0tcmaddr_bytewr_valid16_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID16_d0tcmaddr_bytewr_valid16_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid17 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID17_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID17_d0tcmaddr_bytewr_valid17_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID17_d0tcmaddr_bytewr_valid17_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid18 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID18_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID18_d0tcmaddr_bytewr_valid18_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID18_d0tcmaddr_bytewr_valid18_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid19 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID19_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID19_d0tcmaddr_bytewr_valid19_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID19_d0tcmaddr_bytewr_valid19_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid20 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID20_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID20_d0tcmaddr_bytewr_valid20_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID20_d0tcmaddr_bytewr_valid20_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid21 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID21_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID21_d0tcmaddr_bytewr_valid21_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID21_d0tcmaddr_bytewr_valid21_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid22 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID22_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID22_d0tcmaddr_bytewr_valid22_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID22_d0tcmaddr_bytewr_valid22_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid23 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID23_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID23_d0tcmaddr_bytewr_valid23_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID23_d0tcmaddr_bytewr_valid23_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid24 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID24_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID24_d0tcmaddr_bytewr_valid24_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID24_d0tcmaddr_bytewr_valid24_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid25 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID25_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID25_d0tcmaddr_bytewr_valid25_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID25_d0tcmaddr_bytewr_valid25_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid26 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID26_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID26_d0tcmaddr_bytewr_valid26_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID26_d0tcmaddr_bytewr_valid26_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid27 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID27_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID27_d0tcmaddr_bytewr_valid27_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID27_d0tcmaddr_bytewr_valid27_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid28 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID28_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID28_d0tcmaddr_bytewr_valid28_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID28_d0tcmaddr_bytewr_valid28_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid29 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID29_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID29_d0tcmaddr_bytewr_valid29_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID29_d0tcmaddr_bytewr_valid29_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid30 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID30_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID30_d0tcmaddr_bytewr_valid30_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID30_d0tcmaddr_bytewr_valid30_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid31 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID31_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID31_d0tcmaddr_bytewr_valid31_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID31_d0tcmaddr_bytewr_valid31_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid32 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID32_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID32_d0tcmaddr_bytewr_valid32_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID32_d0tcmaddr_bytewr_valid32_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid33 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID33_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID33_d0tcmaddr_bytewr_valid33_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID33_d0tcmaddr_bytewr_valid33_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid34 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID34_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID34_d0tcmaddr_bytewr_valid34_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID34_d0tcmaddr_bytewr_valid34_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid35 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID35_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID35_d0tcmaddr_bytewr_valid35_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID35_d0tcmaddr_bytewr_valid35_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid36 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID36_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID36_d0tcmaddr_bytewr_valid36_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID36_d0tcmaddr_bytewr_valid36_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid37 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID37_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID37_d0tcmaddr_bytewr_valid37_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID37_d0tcmaddr_bytewr_valid37_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid38 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID38_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID38_d0tcmaddr_bytewr_valid38_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID38_d0tcmaddr_bytewr_valid38_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid39 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID39_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID39_d0tcmaddr_bytewr_valid39_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID39_d0tcmaddr_bytewr_valid39_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid40 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID40_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID40_d0tcmaddr_bytewr_valid40_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID40_d0tcmaddr_bytewr_valid40_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid41 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID41_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID41_d0tcmaddr_bytewr_valid41_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID41_d0tcmaddr_bytewr_valid41_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid42 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID42_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID42_d0tcmaddr_bytewr_valid42_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID42_d0tcmaddr_bytewr_valid42_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid43 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID43_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID43_d0tcmaddr_bytewr_valid43_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID43_d0tcmaddr_bytewr_valid43_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid44 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID44_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID44_d0tcmaddr_bytewr_valid44_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID44_d0tcmaddr_bytewr_valid44_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid45 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID45_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID45_d0tcmaddr_bytewr_valid45_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID45_d0tcmaddr_bytewr_valid45_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid46 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID46_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID46_d0tcmaddr_bytewr_valid46_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID46_d0tcmaddr_bytewr_valid46_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid47 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID47_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID47_d0tcmaddr_bytewr_valid47_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID47_d0tcmaddr_bytewr_valid47_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid48 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID48_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID48_d0tcmaddr_bytewr_valid48_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID48_d0tcmaddr_bytewr_valid48_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid49 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID49_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID49_d0tcmaddr_bytewr_valid49_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID49_d0tcmaddr_bytewr_valid49_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid50 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID50_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID50_d0tcmaddr_bytewr_valid50_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID50_d0tcmaddr_bytewr_valid50_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid51 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID51_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID51_d0tcmaddr_bytewr_valid51_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID51_d0tcmaddr_bytewr_valid51_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid52 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID52_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID52_d0tcmaddr_bytewr_valid52_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID52_d0tcmaddr_bytewr_valid52_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcmaddr_bytewr_valid53 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID53_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID53_d0tcmaddr_bytewr_valid53_START (0)
+#define SOC_IOMCU_RemapCtrl_D0TCMADDR_BYTEWR_VALID53_d0tcmaddr_bytewr_valid53_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record0 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD0_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD0_d1tcmdata_record0_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD0_d1tcmdata_record0_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record1 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD1_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD1_d1tcmdata_record1_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD1_d1tcmdata_record1_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record2 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD2_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD2_d1tcmdata_record2_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD2_d1tcmdata_record2_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record3 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD3_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD3_d1tcmdata_record3_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD3_d1tcmdata_record3_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record4 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD4_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD4_d1tcmdata_record4_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD4_d1tcmdata_record4_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record5 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD5_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD5_d1tcmdata_record5_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD5_d1tcmdata_record5_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record6 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD6_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD6_d1tcmdata_record6_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD6_d1tcmdata_record6_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record7 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD7_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD7_d1tcmdata_record7_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD7_d1tcmdata_record7_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record8 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD8_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD8_d1tcmdata_record8_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD8_d1tcmdata_record8_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record9 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD9_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD9_d1tcmdata_record9_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD9_d1tcmdata_record9_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record10 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD10_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD10_d1tcmdata_record10_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD10_d1tcmdata_record10_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record11 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD11_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD11_d1tcmdata_record11_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD11_d1tcmdata_record11_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record12 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD12_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD12_d1tcmdata_record12_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD12_d1tcmdata_record12_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record13 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD13_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD13_d1tcmdata_record13_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD13_d1tcmdata_record13_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record14 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD14_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD14_d1tcmdata_record14_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD14_d1tcmdata_record14_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record15 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD15_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD15_d1tcmdata_record15_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD15_d1tcmdata_record15_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record16 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD16_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD16_d1tcmdata_record16_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD16_d1tcmdata_record16_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record17 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD17_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD17_d1tcmdata_record17_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD17_d1tcmdata_record17_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record18 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD18_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD18_d1tcmdata_record18_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD18_d1tcmdata_record18_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record19 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD19_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD19_d1tcmdata_record19_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD19_d1tcmdata_record19_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record20 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD20_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD20_d1tcmdata_record20_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD20_d1tcmdata_record20_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record21 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD21_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD21_d1tcmdata_record21_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD21_d1tcmdata_record21_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record22 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD22_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD22_d1tcmdata_record22_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD22_d1tcmdata_record22_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record23 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD23_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD23_d1tcmdata_record23_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD23_d1tcmdata_record23_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record24 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD24_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD24_d1tcmdata_record24_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD24_d1tcmdata_record24_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record25 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD25_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD25_d1tcmdata_record25_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD25_d1tcmdata_record25_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record26 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD26_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD26_d1tcmdata_record26_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD26_d1tcmdata_record26_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record27 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD27_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD27_d1tcmdata_record27_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD27_d1tcmdata_record27_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record28 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD28_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD28_d1tcmdata_record28_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD28_d1tcmdata_record28_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record29 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD29_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD29_d1tcmdata_record29_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD29_d1tcmdata_record29_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record30 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD30_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD30_d1tcmdata_record30_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD30_d1tcmdata_record30_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record31 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD31_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD31_d1tcmdata_record31_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD31_d1tcmdata_record31_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record32 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD32_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD32_d1tcmdata_record32_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD32_d1tcmdata_record32_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record33 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD33_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD33_d1tcmdata_record33_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD33_d1tcmdata_record33_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record34 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD34_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD34_d1tcmdata_record34_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD34_d1tcmdata_record34_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record35 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD35_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD35_d1tcmdata_record35_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD35_d1tcmdata_record35_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record36 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD36_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD36_d1tcmdata_record36_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD36_d1tcmdata_record36_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record37 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD37_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD37_d1tcmdata_record37_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD37_d1tcmdata_record37_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record38 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD38_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD38_d1tcmdata_record38_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD38_d1tcmdata_record38_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record39 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD39_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD39_d1tcmdata_record39_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD39_d1tcmdata_record39_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record40 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD40_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD40_d1tcmdata_record40_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD40_d1tcmdata_record40_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record41 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD41_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD41_d1tcmdata_record41_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD41_d1tcmdata_record41_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record42 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD42_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD42_d1tcmdata_record42_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD42_d1tcmdata_record42_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record43 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD43_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD43_d1tcmdata_record43_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD43_d1tcmdata_record43_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record44 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD44_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD44_d1tcmdata_record44_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD44_d1tcmdata_record44_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record45 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD45_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD45_d1tcmdata_record45_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD45_d1tcmdata_record45_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record46 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD46_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD46_d1tcmdata_record46_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD46_d1tcmdata_record46_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record47 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD47_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD47_d1tcmdata_record47_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD47_d1tcmdata_record47_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record48 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD48_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD48_d1tcmdata_record48_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD48_d1tcmdata_record48_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record49 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD49_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD49_d1tcmdata_record49_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD49_d1tcmdata_record49_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record50 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD50_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD50_d1tcmdata_record50_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD50_d1tcmdata_record50_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record51 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD51_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD51_d1tcmdata_record51_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD51_d1tcmdata_record51_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record52 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD52_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD52_d1tcmdata_record52_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD52_d1tcmdata_record52_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmdata_record53 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD53_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD53_d1tcmdata_record53_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMDATA_RECORD53_d1tcmdata_record53_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid0 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID0_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID0_d1tcmaddr_bytewr_valid0_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID0_d1tcmaddr_bytewr_valid0_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid1 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID1_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID1_d1tcmaddr_bytewr_valid1_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID1_d1tcmaddr_bytewr_valid1_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid2 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID2_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID2_d1tcmaddr_bytewr_valid2_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID2_d1tcmaddr_bytewr_valid2_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid3 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID3_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID3_d1tcmaddr_bytewr_valid3_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID3_d1tcmaddr_bytewr_valid3_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid4 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID4_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID4_d1tcmaddr_bytewr_valid4_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID4_d1tcmaddr_bytewr_valid4_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid5 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID5_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID5_d1tcmaddr_bytewr_valid5_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID5_d1tcmaddr_bytewr_valid5_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid6 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID6_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID6_d1tcmaddr_bytewr_valid6_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID6_d1tcmaddr_bytewr_valid6_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid7 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID7_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID7_d1tcmaddr_bytewr_valid7_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID7_d1tcmaddr_bytewr_valid7_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid8 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID8_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID8_d1tcmaddr_bytewr_valid8_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID8_d1tcmaddr_bytewr_valid8_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid9 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID9_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID9_d1tcmaddr_bytewr_valid9_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID9_d1tcmaddr_bytewr_valid9_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid10 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID10_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID10_d1tcmaddr_bytewr_valid10_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID10_d1tcmaddr_bytewr_valid10_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid11 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID11_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID11_d1tcmaddr_bytewr_valid11_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID11_d1tcmaddr_bytewr_valid11_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid12 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID12_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID12_d1tcmaddr_bytewr_valid12_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID12_d1tcmaddr_bytewr_valid12_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid13 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID13_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID13_d1tcmaddr_bytewr_valid13_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID13_d1tcmaddr_bytewr_valid13_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid14 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID14_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID14_d1tcmaddr_bytewr_valid14_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID14_d1tcmaddr_bytewr_valid14_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid15 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID15_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID15_d1tcmaddr_bytewr_valid15_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID15_d1tcmaddr_bytewr_valid15_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid16 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID16_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID16_d1tcmaddr_bytewr_valid16_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID16_d1tcmaddr_bytewr_valid16_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid17 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID17_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID17_d1tcmaddr_bytewr_valid17_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID17_d1tcmaddr_bytewr_valid17_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid18 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID18_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID18_d1tcmaddr_bytewr_valid18_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID18_d1tcmaddr_bytewr_valid18_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid19 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID19_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID19_d1tcmaddr_bytewr_valid19_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID19_d1tcmaddr_bytewr_valid19_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid20 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID20_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID20_d1tcmaddr_bytewr_valid20_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID20_d1tcmaddr_bytewr_valid20_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid21 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID21_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID21_d1tcmaddr_bytewr_valid21_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID21_d1tcmaddr_bytewr_valid21_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid22 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID22_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID22_d1tcmaddr_bytewr_valid22_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID22_d1tcmaddr_bytewr_valid22_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid23 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID23_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID23_d1tcmaddr_bytewr_valid23_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID23_d1tcmaddr_bytewr_valid23_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid24 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID24_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID24_d1tcmaddr_bytewr_valid24_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID24_d1tcmaddr_bytewr_valid24_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid25 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID25_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID25_d1tcmaddr_bytewr_valid25_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID25_d1tcmaddr_bytewr_valid25_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid26 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID26_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID26_d1tcmaddr_bytewr_valid26_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID26_d1tcmaddr_bytewr_valid26_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid27 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID27_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID27_d1tcmaddr_bytewr_valid27_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID27_d1tcmaddr_bytewr_valid27_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid28 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID28_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID28_d1tcmaddr_bytewr_valid28_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID28_d1tcmaddr_bytewr_valid28_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid29 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID29_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID29_d1tcmaddr_bytewr_valid29_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID29_d1tcmaddr_bytewr_valid29_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid30 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID30_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID30_d1tcmaddr_bytewr_valid30_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID30_d1tcmaddr_bytewr_valid30_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid31 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID31_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID31_d1tcmaddr_bytewr_valid31_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID31_d1tcmaddr_bytewr_valid31_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid32 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID32_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID32_d1tcmaddr_bytewr_valid32_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID32_d1tcmaddr_bytewr_valid32_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid33 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID33_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID33_d1tcmaddr_bytewr_valid33_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID33_d1tcmaddr_bytewr_valid33_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid34 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID34_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID34_d1tcmaddr_bytewr_valid34_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID34_d1tcmaddr_bytewr_valid34_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid35 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID35_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID35_d1tcmaddr_bytewr_valid35_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID35_d1tcmaddr_bytewr_valid35_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid36 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID36_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID36_d1tcmaddr_bytewr_valid36_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID36_d1tcmaddr_bytewr_valid36_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid37 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID37_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID37_d1tcmaddr_bytewr_valid37_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID37_d1tcmaddr_bytewr_valid37_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid38 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID38_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID38_d1tcmaddr_bytewr_valid38_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID38_d1tcmaddr_bytewr_valid38_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid39 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID39_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID39_d1tcmaddr_bytewr_valid39_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID39_d1tcmaddr_bytewr_valid39_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid40 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID40_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID40_d1tcmaddr_bytewr_valid40_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID40_d1tcmaddr_bytewr_valid40_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid41 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID41_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID41_d1tcmaddr_bytewr_valid41_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID41_d1tcmaddr_bytewr_valid41_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid42 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID42_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID42_d1tcmaddr_bytewr_valid42_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID42_d1tcmaddr_bytewr_valid42_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid43 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID43_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID43_d1tcmaddr_bytewr_valid43_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID43_d1tcmaddr_bytewr_valid43_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid44 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID44_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID44_d1tcmaddr_bytewr_valid44_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID44_d1tcmaddr_bytewr_valid44_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid45 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID45_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID45_d1tcmaddr_bytewr_valid45_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID45_d1tcmaddr_bytewr_valid45_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid46 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID46_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID46_d1tcmaddr_bytewr_valid46_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID46_d1tcmaddr_bytewr_valid46_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid47 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID47_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID47_d1tcmaddr_bytewr_valid47_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID47_d1tcmaddr_bytewr_valid47_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid48 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID48_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID48_d1tcmaddr_bytewr_valid48_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID48_d1tcmaddr_bytewr_valid48_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid49 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID49_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID49_d1tcmaddr_bytewr_valid49_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID49_d1tcmaddr_bytewr_valid49_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid50 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID50_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID50_d1tcmaddr_bytewr_valid50_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID50_d1tcmaddr_bytewr_valid50_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid51 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID51_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID51_d1tcmaddr_bytewr_valid51_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID51_d1tcmaddr_bytewr_valid51_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid52 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID52_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID52_d1tcmaddr_bytewr_valid52_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID52_d1tcmaddr_bytewr_valid52_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d1tcmaddr_bytewr_valid53 : 27;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID53_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID53_d1tcmaddr_bytewr_valid53_START (0)
+#define SOC_IOMCU_RemapCtrl_D1TCMADDR_BYTEWR_VALID53_d1tcmaddr_bytewr_valid53_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record0 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD0_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD0_itcmdata_record0_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD0_itcmdata_record0_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record1 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD1_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD1_itcmdata_record1_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD1_itcmdata_record1_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record2 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD2_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD2_itcmdata_record2_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD2_itcmdata_record2_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record3 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD3_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD3_itcmdata_record3_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD3_itcmdata_record3_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record4 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD4_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD4_itcmdata_record4_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD4_itcmdata_record4_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record5 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD5_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD5_itcmdata_record5_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD5_itcmdata_record5_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record6 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD6_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD6_itcmdata_record6_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD6_itcmdata_record6_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record7 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD7_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD7_itcmdata_record7_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD7_itcmdata_record7_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record8 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD8_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD8_itcmdata_record8_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD8_itcmdata_record8_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record9 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD9_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD9_itcmdata_record9_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD9_itcmdata_record9_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record10 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD10_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD10_itcmdata_record10_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD10_itcmdata_record10_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record11 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD11_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD11_itcmdata_record11_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD11_itcmdata_record11_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record12 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD12_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD12_itcmdata_record12_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD12_itcmdata_record12_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record13 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD13_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD13_itcmdata_record13_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD13_itcmdata_record13_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record14 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD14_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD14_itcmdata_record14_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD14_itcmdata_record14_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record15 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD15_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD15_itcmdata_record15_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD15_itcmdata_record15_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record16 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD16_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD16_itcmdata_record16_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD16_itcmdata_record16_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record17 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD17_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD17_itcmdata_record17_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD17_itcmdata_record17_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record18 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD18_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD18_itcmdata_record18_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD18_itcmdata_record18_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record19 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD19_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD19_itcmdata_record19_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD19_itcmdata_record19_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record20 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD20_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD20_itcmdata_record20_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD20_itcmdata_record20_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record21 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD21_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD21_itcmdata_record21_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD21_itcmdata_record21_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record22 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD22_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD22_itcmdata_record22_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD22_itcmdata_record22_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record23 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD23_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD23_itcmdata_record23_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD23_itcmdata_record23_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record24 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD24_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD24_itcmdata_record24_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD24_itcmdata_record24_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record25 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD25_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD25_itcmdata_record25_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD25_itcmdata_record25_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record26 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD26_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD26_itcmdata_record26_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD26_itcmdata_record26_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record27 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD27_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD27_itcmdata_record27_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD27_itcmdata_record27_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record28 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD28_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD28_itcmdata_record28_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD28_itcmdata_record28_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record29 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD29_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD29_itcmdata_record29_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD29_itcmdata_record29_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record30 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD30_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD30_itcmdata_record30_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD30_itcmdata_record30_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record31 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD31_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD31_itcmdata_record31_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD31_itcmdata_record31_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record32 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD32_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD32_itcmdata_record32_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD32_itcmdata_record32_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record33 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD33_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD33_itcmdata_record33_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD33_itcmdata_record33_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record34 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD34_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD34_itcmdata_record34_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD34_itcmdata_record34_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record35 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD35_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD35_itcmdata_record35_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD35_itcmdata_record35_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record36 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD36_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD36_itcmdata_record36_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD36_itcmdata_record36_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record37 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD37_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD37_itcmdata_record37_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD37_itcmdata_record37_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record38 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD38_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD38_itcmdata_record38_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD38_itcmdata_record38_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record39 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD39_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD39_itcmdata_record39_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD39_itcmdata_record39_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record40 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD40_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD40_itcmdata_record40_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD40_itcmdata_record40_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record41 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD41_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD41_itcmdata_record41_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD41_itcmdata_record41_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record42 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD42_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD42_itcmdata_record42_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD42_itcmdata_record42_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record43 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD43_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD43_itcmdata_record43_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD43_itcmdata_record43_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record44 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD44_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD44_itcmdata_record44_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD44_itcmdata_record44_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record45 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD45_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD45_itcmdata_record45_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD45_itcmdata_record45_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record46 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD46_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD46_itcmdata_record46_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD46_itcmdata_record46_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record47 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD47_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD47_itcmdata_record47_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD47_itcmdata_record47_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record48 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD48_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD48_itcmdata_record48_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD48_itcmdata_record48_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record49 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD49_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD49_itcmdata_record49_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD49_itcmdata_record49_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record50 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD50_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD50_itcmdata_record50_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD50_itcmdata_record50_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record51 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD51_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD51_itcmdata_record51_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD51_itcmdata_record51_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record52 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD52_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD52_itcmdata_record52_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD52_itcmdata_record52_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record53 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD53_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD53_itcmdata_record53_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD53_itcmdata_record53_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record54 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD54_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD54_itcmdata_record54_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD54_itcmdata_record54_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record55 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD55_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD55_itcmdata_record55_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD55_itcmdata_record55_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record56 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD56_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD56_itcmdata_record56_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD56_itcmdata_record56_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record57 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD57_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD57_itcmdata_record57_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD57_itcmdata_record57_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record58 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD58_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD58_itcmdata_record58_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD58_itcmdata_record58_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record59 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD59_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD59_itcmdata_record59_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD59_itcmdata_record59_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record60 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD60_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD60_itcmdata_record60_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD60_itcmdata_record60_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record61 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD61_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD61_itcmdata_record61_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD61_itcmdata_record61_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record62 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD62_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD62_itcmdata_record62_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD62_itcmdata_record62_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record63 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD63_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD63_itcmdata_record63_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD63_itcmdata_record63_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record64 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD64_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD64_itcmdata_record64_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD64_itcmdata_record64_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record65 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD65_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD65_itcmdata_record65_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD65_itcmdata_record65_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record66 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD66_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD66_itcmdata_record66_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD66_itcmdata_record66_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record67 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD67_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD67_itcmdata_record67_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD67_itcmdata_record67_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record68 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD68_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD68_itcmdata_record68_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD68_itcmdata_record68_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record69 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD69_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD69_itcmdata_record69_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD69_itcmdata_record69_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record70 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD70_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD70_itcmdata_record70_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD70_itcmdata_record70_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record71 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD71_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD71_itcmdata_record71_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD71_itcmdata_record71_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record72 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD72_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD72_itcmdata_record72_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD72_itcmdata_record72_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record73 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD73_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD73_itcmdata_record73_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD73_itcmdata_record73_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record74 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD74_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD74_itcmdata_record74_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD74_itcmdata_record74_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record75 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD75_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD75_itcmdata_record75_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD75_itcmdata_record75_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record76 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD76_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD76_itcmdata_record76_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD76_itcmdata_record76_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record77 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD77_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD77_itcmdata_record77_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD77_itcmdata_record77_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record78 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD78_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD78_itcmdata_record78_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD78_itcmdata_record78_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record79 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD79_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD79_itcmdata_record79_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD79_itcmdata_record79_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record80 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD80_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD80_itcmdata_record80_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD80_itcmdata_record80_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record81 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD81_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD81_itcmdata_record81_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD81_itcmdata_record81_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record82 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD82_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD82_itcmdata_record82_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD82_itcmdata_record82_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record83 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD83_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD83_itcmdata_record83_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD83_itcmdata_record83_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record84 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD84_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD84_itcmdata_record84_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD84_itcmdata_record84_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record85 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD85_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD85_itcmdata_record85_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD85_itcmdata_record85_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record86 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD86_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD86_itcmdata_record86_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD86_itcmdata_record86_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record87 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD87_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD87_itcmdata_record87_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD87_itcmdata_record87_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record88 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD88_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD88_itcmdata_record88_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD88_itcmdata_record88_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record89 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD89_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD89_itcmdata_record89_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD89_itcmdata_record89_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record90 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD90_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD90_itcmdata_record90_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD90_itcmdata_record90_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record91 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD91_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD91_itcmdata_record91_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD91_itcmdata_record91_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record92 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD92_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD92_itcmdata_record92_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD92_itcmdata_record92_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record93 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD93_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD93_itcmdata_record93_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD93_itcmdata_record93_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record94 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD94_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD94_itcmdata_record94_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD94_itcmdata_record94_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record95 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD95_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD95_itcmdata_record95_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD95_itcmdata_record95_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record96 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD96_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD96_itcmdata_record96_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD96_itcmdata_record96_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record97 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD97_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD97_itcmdata_record97_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD97_itcmdata_record97_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record98 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD98_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD98_itcmdata_record98_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD98_itcmdata_record98_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record99 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD99_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD99_itcmdata_record99_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD99_itcmdata_record99_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record100 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD100_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD100_itcmdata_record100_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD100_itcmdata_record100_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record101 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD101_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD101_itcmdata_record101_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD101_itcmdata_record101_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record102 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD102_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD102_itcmdata_record102_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD102_itcmdata_record102_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record103 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD103_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD103_itcmdata_record103_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD103_itcmdata_record103_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record104 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD104_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD104_itcmdata_record104_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD104_itcmdata_record104_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record105 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD105_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD105_itcmdata_record105_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD105_itcmdata_record105_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record106 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD106_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD106_itcmdata_record106_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD106_itcmdata_record106_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmdata_record107 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD107_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD107_itcmdata_record107_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMDATA_RECORD107_itcmdata_record107_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid0 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID0_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID0_itcmaddr_bytewr_valid0_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID0_itcmaddr_bytewr_valid0_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid1 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID1_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID1_itcmaddr_bytewr_valid1_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID1_itcmaddr_bytewr_valid1_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid2 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID2_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID2_itcmaddr_bytewr_valid2_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID2_itcmaddr_bytewr_valid2_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid3 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID3_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID3_itcmaddr_bytewr_valid3_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID3_itcmaddr_bytewr_valid3_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid4 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID4_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID4_itcmaddr_bytewr_valid4_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID4_itcmaddr_bytewr_valid4_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid5 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID5_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID5_itcmaddr_bytewr_valid5_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID5_itcmaddr_bytewr_valid5_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid6 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID6_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID6_itcmaddr_bytewr_valid6_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID6_itcmaddr_bytewr_valid6_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid7 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID7_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID7_itcmaddr_bytewr_valid7_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID7_itcmaddr_bytewr_valid7_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid8 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID8_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID8_itcmaddr_bytewr_valid8_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID8_itcmaddr_bytewr_valid8_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid9 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID9_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID9_itcmaddr_bytewr_valid9_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID9_itcmaddr_bytewr_valid9_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid10 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID10_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID10_itcmaddr_bytewr_valid10_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID10_itcmaddr_bytewr_valid10_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid11 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID11_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID11_itcmaddr_bytewr_valid11_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID11_itcmaddr_bytewr_valid11_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid12 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID12_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID12_itcmaddr_bytewr_valid12_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID12_itcmaddr_bytewr_valid12_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid13 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID13_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID13_itcmaddr_bytewr_valid13_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID13_itcmaddr_bytewr_valid13_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid14 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID14_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID14_itcmaddr_bytewr_valid14_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID14_itcmaddr_bytewr_valid14_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid15 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID15_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID15_itcmaddr_bytewr_valid15_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID15_itcmaddr_bytewr_valid15_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid16 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID16_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID16_itcmaddr_bytewr_valid16_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID16_itcmaddr_bytewr_valid16_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid17 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID17_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID17_itcmaddr_bytewr_valid17_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID17_itcmaddr_bytewr_valid17_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid18 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID18_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID18_itcmaddr_bytewr_valid18_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID18_itcmaddr_bytewr_valid18_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid19 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID19_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID19_itcmaddr_bytewr_valid19_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID19_itcmaddr_bytewr_valid19_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid20 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID20_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID20_itcmaddr_bytewr_valid20_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID20_itcmaddr_bytewr_valid20_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid21 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID21_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID21_itcmaddr_bytewr_valid21_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID21_itcmaddr_bytewr_valid21_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid22 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID22_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID22_itcmaddr_bytewr_valid22_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID22_itcmaddr_bytewr_valid22_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid23 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID23_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID23_itcmaddr_bytewr_valid23_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID23_itcmaddr_bytewr_valid23_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid24 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID24_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID24_itcmaddr_bytewr_valid24_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID24_itcmaddr_bytewr_valid24_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid25 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID25_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID25_itcmaddr_bytewr_valid25_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID25_itcmaddr_bytewr_valid25_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid26 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID26_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID26_itcmaddr_bytewr_valid26_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID26_itcmaddr_bytewr_valid26_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid27 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID27_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID27_itcmaddr_bytewr_valid27_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID27_itcmaddr_bytewr_valid27_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid28 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID28_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID28_itcmaddr_bytewr_valid28_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID28_itcmaddr_bytewr_valid28_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid29 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID29_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID29_itcmaddr_bytewr_valid29_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID29_itcmaddr_bytewr_valid29_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid30 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID30_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID30_itcmaddr_bytewr_valid30_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID30_itcmaddr_bytewr_valid30_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid31 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID31_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID31_itcmaddr_bytewr_valid31_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID31_itcmaddr_bytewr_valid31_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid32 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID32_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID32_itcmaddr_bytewr_valid32_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID32_itcmaddr_bytewr_valid32_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid33 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID33_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID33_itcmaddr_bytewr_valid33_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID33_itcmaddr_bytewr_valid33_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid34 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID34_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID34_itcmaddr_bytewr_valid34_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID34_itcmaddr_bytewr_valid34_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid35 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID35_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID35_itcmaddr_bytewr_valid35_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID35_itcmaddr_bytewr_valid35_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid36 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID36_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID36_itcmaddr_bytewr_valid36_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID36_itcmaddr_bytewr_valid36_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid37 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID37_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID37_itcmaddr_bytewr_valid37_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID37_itcmaddr_bytewr_valid37_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid38 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID38_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID38_itcmaddr_bytewr_valid38_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID38_itcmaddr_bytewr_valid38_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid39 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID39_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID39_itcmaddr_bytewr_valid39_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID39_itcmaddr_bytewr_valid39_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid40 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID40_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID40_itcmaddr_bytewr_valid40_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID40_itcmaddr_bytewr_valid40_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid41 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID41_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID41_itcmaddr_bytewr_valid41_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID41_itcmaddr_bytewr_valid41_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid42 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID42_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID42_itcmaddr_bytewr_valid42_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID42_itcmaddr_bytewr_valid42_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid43 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID43_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID43_itcmaddr_bytewr_valid43_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID43_itcmaddr_bytewr_valid43_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid44 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID44_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID44_itcmaddr_bytewr_valid44_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID44_itcmaddr_bytewr_valid44_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid45 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID45_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID45_itcmaddr_bytewr_valid45_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID45_itcmaddr_bytewr_valid45_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid46 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID46_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID46_itcmaddr_bytewr_valid46_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID46_itcmaddr_bytewr_valid46_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid47 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID47_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID47_itcmaddr_bytewr_valid47_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID47_itcmaddr_bytewr_valid47_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid48 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID48_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID48_itcmaddr_bytewr_valid48_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID48_itcmaddr_bytewr_valid48_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid49 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID49_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID49_itcmaddr_bytewr_valid49_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID49_itcmaddr_bytewr_valid49_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid50 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID50_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID50_itcmaddr_bytewr_valid50_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID50_itcmaddr_bytewr_valid50_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid51 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID51_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID51_itcmaddr_bytewr_valid51_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID51_itcmaddr_bytewr_valid51_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid52 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID52_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID52_itcmaddr_bytewr_valid52_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID52_itcmaddr_bytewr_valid52_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int itcmaddr_bytewr_valid53 : 32;
+    } reg;
+} SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID53_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID53_itcmaddr_bytewr_valid53_START (0)
+#define SOC_IOMCU_RemapCtrl_ITCMADDR_BYTEWR_VALID53_itcmaddr_bytewr_valid53_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int d0tcm_nmi : 1;
+        unsigned int d1tcm_nmi : 1;
+        unsigned int itcm_nmi : 1;
+        unsigned int d0tcmwr_before_rd : 1;
+        unsigned int d1tcmwr_before_rd : 1;
+        unsigned int itcmwr_before_rd : 1;
+        unsigned int reserved : 26;
+    } reg;
+} SOC_IOMCU_RemapCtrl_TCM_NMI_SOURCE_UNION;
+#endif
+#define SOC_IOMCU_RemapCtrl_TCM_NMI_SOURCE_d0tcm_nmi_START (0)
+#define SOC_IOMCU_RemapCtrl_TCM_NMI_SOURCE_d0tcm_nmi_END (0)
+#define SOC_IOMCU_RemapCtrl_TCM_NMI_SOURCE_d1tcm_nmi_START (1)
+#define SOC_IOMCU_RemapCtrl_TCM_NMI_SOURCE_d1tcm_nmi_END (1)
+#define SOC_IOMCU_RemapCtrl_TCM_NMI_SOURCE_itcm_nmi_START (2)
+#define SOC_IOMCU_RemapCtrl_TCM_NMI_SOURCE_itcm_nmi_END (2)
+#define SOC_IOMCU_RemapCtrl_TCM_NMI_SOURCE_d0tcmwr_before_rd_START (3)
+#define SOC_IOMCU_RemapCtrl_TCM_NMI_SOURCE_d0tcmwr_before_rd_END (3)
+#define SOC_IOMCU_RemapCtrl_TCM_NMI_SOURCE_d1tcmwr_before_rd_START (4)
+#define SOC_IOMCU_RemapCtrl_TCM_NMI_SOURCE_d1tcmwr_before_rd_END (4)
+#define SOC_IOMCU_RemapCtrl_TCM_NMI_SOURCE_itcmwr_before_rd_START (5)
+#define SOC_IOMCU_RemapCtrl_TCM_NMI_SOURCE_itcmwr_before_rd_END (5)
+#ifdef __cplusplus
+    #if __cplusplus
+        }
+    #endif
+#endif
+#endif

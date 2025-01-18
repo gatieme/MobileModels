@@ -1,0 +1,9 @@
+if SND_SOC_PLATFORM
+source "platform_source/audio/drivers/da_separate/Kconfig"
+endif
+
+source "platform_source/audio/drivers/hifi_dsp/Kconfig"
+source "platform_source/audio/drivers/hifi_mailbox/Kconfig"
+source "platform_source/audio/drivers/soundtrigger/Kconfig"
+source "platform_source/audio/drivers/soc_mad/Kconfig"
+source "platform_source/audio/drivers/rdr/Kconfig"

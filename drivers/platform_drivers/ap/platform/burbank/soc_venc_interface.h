@@ -1,0 +1,17575 @@
+#ifndef __SOC_VENC_INTERFACE_H__
+#define __SOC_VENC_INTERFACE_H__ 
+#ifdef __cplusplus
+    #if __cplusplus
+        extern "C" {
+    #endif
+#endif
+#ifndef __SOC_H_FOR_ASM__
+#define SOC_VENC_VEDU_VCPI_INTMASK_ADDR(base) ((base) + (0x0000UL))
+#define SOC_VENC_VEDU_VCPI_INTCLR_ADDR(base) ((base) + (0x0004UL))
+#define SOC_VENC_VEDU_VCPI_START_ADDR(base) ((base) + (0x0008UL))
+#define SOC_VENC_VEDU_BUS_IDLE_REQ_ADDR(base) ((base) + (0x000CUL))
+#define SOC_VENC_VEDU_VCPI_FRAMENO_ADDR(base) ((base) + (0x0010UL))
+#define SOC_VENC_VEDU_VCPI_TIMEOUT_ADDR(base) ((base) + (0x0014UL))
+#define SOC_VENC_VEDU_VCPI_MODE_ADDR(base) ((base) + (0x0018UL))
+#define SOC_VENC_VEDU_RESERVED_00_ADDR(base) ((base) + (0x001CUL))
+#define SOC_VENC_VEDU_RESERVED_01_ADDR(base) ((base) + (0x0020UL))
+#define SOC_VENC_VEDU_RESERVED_02_ADDR(base) ((base) + (0x0024UL))
+#define SOC_VENC_VEDU_RESERVED_03_ADDR(base) ((base) + (0x0028UL))
+#define SOC_VENC_VEDU_RESERVED_04_ADDR(base) ((base) + (0x002CUL))
+#define SOC_VENC_VEDU_EMAR_SCRAMBLE_TYPE_ADDR(base) ((base) + (0x0030UL))
+#define SOC_VENC_VEDU_VCPI_LLILD_ADDR_L_ADDR(base) ((base) + (0x0034UL))
+#define SOC_VENC_VEDU_VCPI_LLILD_ADDR_H_ADDR(base) ((base) + (0x0038UL))
+#define SOC_VENC_VEDU_VCPI_RC_ENABLE_ADDR(base) ((base) + (0x003CUL))
+#define SOC_VENC_VEDU_VLCST_PTBITS_EN_ADDR(base) ((base) + (0x0040UL))
+#define SOC_VENC_VEDU_VLCST_PTBITS_ADDR(base) ((base) + (0x0044UL))
+#define SOC_VENC_VEDU_PPFD_ST_CFG_ADDR(base) ((base) + (0x0048UL))
+#define SOC_VENC_VEDU_VCPI_QPCFG_ADDR(base) ((base) + (0x004CUL))
+#define SOC_VENC_VEDU_QPG_MAX_MIN_QP_ADDR(base) ((base) + (0x0050UL))
+#define SOC_VENC_VEDU_QPG_SMART_REG_ADDR(base) ((base) + (0x0054UL))
+#define SOC_VENC_VEDU_QPG_ROW_TARGET_BITS_ADDR(base) ((base) + (0x0058UL))
+#define SOC_VENC_VEDU_QPG_AVERAGE_LCU_BITS_ADDR(base) ((base) + (0x005CUL))
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG0_ADDR(base) ((base) + (0x0060UL))
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG1_ADDR(base) ((base) + (0x0064UL))
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG2_ADDR(base) ((base) + (0x0068UL))
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG3_ADDR(base) ((base) + (0x006CUL))
+#define SOC_VENC_VEDU_QPG_DELTA_LEVEL_ADDR(base) ((base) + (0x0070UL))
+#define SOC_VENC_VEDU_QPG_MADI_SWITCH_THR_ADDR(base) ((base) + (0x0074UL))
+#define SOC_VENC_VEDU_QPG_CURR_SAD_EN_ADDR(base) ((base) + (0x0078UL))
+#define SOC_VENC_VEDU_QPG_CURR_SAD_LEVEL_ADDR(base) ((base) + (0x007CUL))
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH0_ADDR(base) ((base) + (0x0080UL))
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH1_ADDR(base) ((base) + (0x0084UL))
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH2_ADDR(base) ((base) + (0x0088UL))
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH3_ADDR(base) ((base) + (0x008CUL))
+#define SOC_VENC_VEDU_LUMA_RC_ADDR(base) ((base) + (0x0090UL))
+#define SOC_VENC_VEDU_LUMA_LEVEL_ADDR(base) ((base) + (0x0094UL))
+#define SOC_VENC_VEDU_LUMA_THRESH0_ADDR(base) ((base) + (0x0098UL))
+#define SOC_VENC_VEDU_LUMA_THRESH1_ADDR(base) ((base) + (0x009CUL))
+#define SOC_VENC_VEDU_LUMA_THRESH2_ADDR(base) ((base) + (0x00A0UL))
+#define SOC_VENC_VEDU_LUMA_THRESH3_ADDR(base) ((base) + (0x00A4UL))
+#define SOC_VENC_VEDU_VCPI_BG_ENABLE_ADDR(base) ((base) + (0x00A8UL))
+#define SOC_VENC_VEDU_VCPI_BG_FLT_PARA0_ADDR(base) ((base) + (0x00ACUL))
+#define SOC_VENC_VEDU_VCPI_BG_FLT_PARA1_ADDR(base) ((base) + (0x00B0UL))
+#define SOC_VENC_VEDU_VCPI_BG_FLT_PARA2_ADDR(base) ((base) + (0x00B4UL))
+#define SOC_VENC_VEDU_VCPI_BG_THR0_ADDR(base) ((base) + (0x00B8UL))
+#define SOC_VENC_VEDU_VCPI_BG_THR1_ADDR(base) ((base) + (0x00BCUL))
+#define SOC_VENC_VEDU_VCPI_BG_STRIDE_ADDR(base) ((base) + (0x00C0UL))
+#define SOC_VENC_VEDU_VCPI_BG_EXT_STRIDE_ADDR(base) ((base) + (0x00C4UL))
+#define SOC_VENC_VEDU_VCPI_BGL_ADDR_L_ADDR(base) ((base) + (0x00C8UL))
+#define SOC_VENC_VEDU_VCPI_BGL_ADDR_H_ADDR(base) ((base) + (0x00CCUL))
+#define SOC_VENC_VEDU_VCPI_BGC_ADDR_L_ADDR(base) ((base) + (0x00D0UL))
+#define SOC_VENC_VEDU_VCPI_BGC_ADDR_H_ADDR(base) ((base) + (0x00D4UL))
+#define SOC_VENC_VEDU_VCPI_BGL_EXT_ADDR_L_ADDR(base) ((base) + (0x00D8UL))
+#define SOC_VENC_VEDU_VCPI_BGL_EXT_ADDR_H_ADDR(base) ((base) + (0x00DCUL))
+#define SOC_VENC_VEDU_VCPI_BGC_EXT_ADDR_L_ADDR(base) ((base) + (0x00E0UL))
+#define SOC_VENC_VEDU_VCPI_BGC_EXT_ADDR_H_ADDR(base) ((base) + (0x00E4UL))
+#define SOC_VENC_VEDU_VCPI_BGINF_ADDR_L_ADDR(base) ((base) + (0x00E8UL))
+#define SOC_VENC_VEDU_VCPI_BGINF_ADDR_H_ADDR(base) ((base) + (0x00ECUL))
+#define SOC_VENC_VEDU_VCPI_OUTSTD_ADDR(base) ((base) + (0x00F0UL))
+#define SOC_VENC_VEDU_VCTRL_LCU_BASELINE_ADDR(base) ((base) + (0x00F4UL))
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_0_ADDR(base) ((base) + (0x00F8UL))
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_1_ADDR(base) ((base) + (0x00FCUL))
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_2_ADDR(base) ((base) + (0x0100UL))
+#define SOC_VENC_VEDU_VCPI_TPMEM_CTRL_0_ADDR(base) ((base) + (0x0104UL))
+#define SOC_VENC_VEDU_VCPI_TPMEM_CTRL_1_ADDR(base) ((base) + (0x0108UL))
+#define SOC_VENC_VEDU_RESERVED_06_ADDR(base) ((base) + (0x010CUL))
+#define SOC_VENC_VEDU_CURLD_GCFG_ADDR(base) ((base) + (0x0200UL))
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_ADDR(base) ((base) + (0x0204UL))
+#define SOC_VENC_VEDU_VCPI_STRFMT_ADDR(base) ((base) + (0x0208UL))
+#define SOC_VENC_VEDU_VCPI_INTRA_INTER_CU_EN_ADDR(base) ((base) + (0x020CUL))
+#define SOC_VENC_VEDU_VCPI_CROSS_TILE_SLC_ADDR(base) ((base) + (0x0210UL))
+#define SOC_VENC_VEDU_VCPI_MULTISLC_ADDR(base) ((base) + (0x0214UL))
+#define SOC_VENC_VEDU_VCTRL_LCU_TARGET_BIT_ADDR(base) ((base) + (0x0218UL))
+#define SOC_VENC_VEDU_VCPI_SW_L0_SIZE_ADDR(base) ((base) + (0x021CUL))
+#define SOC_VENC_VEDU_VCPI_SW_L1_SIZE_ADDR(base) ((base) + (0x0220UL))
+#define SOC_VENC_VEDU_VCPI_I_SLC_INSERT_ADDR(base) ((base) + (0x0224UL))
+#define SOC_VENC_VEDU_PME_SAFE_CFG_ADDR(base) ((base) + (0x0228UL))
+#define SOC_VENC_VEDU_PME_IBLK_REFRESH_ADDR(base) ((base) + (0x022CUL))
+#define SOC_VENC_VEDU_PME_IBLK_REFRESH_NUM_ADDR(base) ((base) + (0x0230UL))
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_ADDR(base) ((base) + (0x0234UL))
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_1EN_ADDR(base) ((base) + (0x0238UL))
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_ADDR(base) ((base) + (0x023CUL))
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_1EN_ADDR(base) ((base) + (0x0240UL))
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_ADDR(base) ((base) + (0x0244UL))
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_1EN_ADDR(base) ((base) + (0x0248UL))
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_ADDR(base) ((base) + (0x024CUL))
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_1EN_ADDR(base) ((base) + (0x0250UL))
+#define SOC_VENC_VEDU_PACK_CU_PARAMETER_ADDR(base) ((base) + (0x0254UL))
+#define SOC_VENC_VEDU_PACK_PCM_PARAMETER_ADDR(base) ((base) + (0x0258UL))
+#define SOC_VENC_VEDU_QPG_READLINE_INTERVAL_ADDR(base) ((base) + (0x025CUL))
+#define SOC_VENC_VEDU_PMV_READLINE_INTERVAL_ADDR(base) ((base) + (0x0260UL))
+#define SOC_VENC_VEDU_RGB2YUV_COEF_P0_ADDR(base) ((base) + (0x0264UL))
+#define SOC_VENC_VEDU_RGB2YUV_COEF_P1_ADDR(base) ((base) + (0x0268UL))
+#define SOC_VENC_VEDU_RGB2YUV_COEF_P2_ADDR(base) ((base) + (0x026CUL))
+#define SOC_VENC_VEDU_RGB2YUV_OFFSET_ADDR(base) ((base) + (0x0270UL))
+#define SOC_VENC_VEDU_RGB2YUV_CLIP_THR_Y_ADDR(base) ((base) + (0x0274UL))
+#define SOC_VENC_VEDU_RGB2YUV_CLIP_THR_C_ADDR(base) ((base) + (0x0278UL))
+#define SOC_VENC_VEDU_RGB2YUV_SHIFT_WIDTH_ADDR(base) ((base) + (0x027CUL))
+#define SOC_VENC_VEDU_VCPI_OSD_POS_0_ADDR(base) ((base) + (0x0280UL))
+#define SOC_VENC_VEDU_VCPI_OSD_POS_1_ADDR(base) ((base) + (0x0284UL))
+#define SOC_VENC_VEDU_VCPI_OSD_POS_2_ADDR(base) ((base) + (0x0288UL))
+#define SOC_VENC_VEDU_VCPI_OSD_POS_3_ADDR(base) ((base) + (0x028CUL))
+#define SOC_VENC_VEDU_VCPI_OSD_POS_4_ADDR(base) ((base) + (0x0290UL))
+#define SOC_VENC_VEDU_VCPI_OSD_POS_5_ADDR(base) ((base) + (0x0294UL))
+#define SOC_VENC_VEDU_VCPI_OSD_POS_6_ADDR(base) ((base) + (0x0298UL))
+#define SOC_VENC_VEDU_VCPI_OSD_POS_7_ADDR(base) ((base) + (0x029CUL))
+#define SOC_VENC_VEDU_VCPI_OSD_SIZE_0_ADDR(base) ((base) + (0x02A0UL))
+#define SOC_VENC_VEDU_VCPI_OSD_SIZE_1_ADDR(base) ((base) + (0x02A4UL))
+#define SOC_VENC_VEDU_VCPI_OSD_SIZE_2_ADDR(base) ((base) + (0x02A8UL))
+#define SOC_VENC_VEDU_VCPI_OSD_SIZE_3_ADDR(base) ((base) + (0x02ACUL))
+#define SOC_VENC_VEDU_VCPI_OSD_SIZE_4_ADDR(base) ((base) + (0x02B0UL))
+#define SOC_VENC_VEDU_VCPI_OSD_SIZE_5_ADDR(base) ((base) + (0x02B4UL))
+#define SOC_VENC_VEDU_VCPI_OSD_SIZE_6_ADDR(base) ((base) + (0x02B8UL))
+#define SOC_VENC_VEDU_VCPI_OSD_SIZE_7_ADDR(base) ((base) + (0x02BCUL))
+#define SOC_VENC_VEDU_VCPI_OSD_LAYERID_ADDR(base) ((base) + (0x02C0UL))
+#define SOC_VENC_VEDU_VCPI_OSD_QP0_ADDR(base) ((base) + (0x02C4UL))
+#define SOC_VENC_VEDU_VCPI_OSD_QP1_ADDR(base) ((base) + (0x02C8UL))
+#define SOC_VENC_VEDU_CURLD_OSD01_ALPHA_ADDR(base) ((base) + (0x02CCUL))
+#define SOC_VENC_VEDU_CURLD_OSD23_ALPHA_ADDR(base) ((base) + (0x02D0UL))
+#define SOC_VENC_VEDU_CURLD_OSD45_ALPHA_ADDR(base) ((base) + (0x02D4UL))
+#define SOC_VENC_VEDU_CURLD_OSD67_ALPHA_ADDR(base) ((base) + (0x02D8UL))
+#define SOC_VENC_VEDU_CURLD_OSD_GALPHA0_ADDR(base) ((base) + (0x02DCUL))
+#define SOC_VENC_VEDU_CURLD_OSD_GALPHA1_ADDR(base) ((base) + (0x02E0UL))
+#define SOC_VENC_VEDU_TBLDST_READLINE_INTERVAL_ADDR(base) ((base) + (0x02E4UL))
+#define SOC_VENC_VEDU_RESERVED_07_ADDR(base) ((base) + (0x02E8UL))
+#define SOC_VENC_VEDU_CURLD_OSD0_ADDR_L_ADDR(base) ((base) + (0x0300UL))
+#define SOC_VENC_VEDU_CURLD_OSD0_ADDR_H_ADDR(base) ((base) + (0x0304UL))
+#define SOC_VENC_VEDU_CURLD_OSD1_ADDR_L_ADDR(base) ((base) + (0x0308UL))
+#define SOC_VENC_VEDU_CURLD_OSD1_ADDR_H_ADDR(base) ((base) + (0x030CUL))
+#define SOC_VENC_VEDU_CURLD_OSD2_ADDR_L_ADDR(base) ((base) + (0x0310UL))
+#define SOC_VENC_VEDU_CURLD_OSD2_ADDR_H_ADDR(base) ((base) + (0x0314UL))
+#define SOC_VENC_VEDU_CURLD_OSD3_ADDR_L_ADDR(base) ((base) + (0x0318UL))
+#define SOC_VENC_VEDU_CURLD_OSD3_ADDR_H_ADDR(base) ((base) + (0x031CUL))
+#define SOC_VENC_VEDU_CURLD_OSD4_ADDR_L_ADDR(base) ((base) + (0x0320UL))
+#define SOC_VENC_VEDU_CURLD_OSD4_ADDR_H_ADDR(base) ((base) + (0x0324UL))
+#define SOC_VENC_VEDU_CURLD_OSD5_ADDR_L_ADDR(base) ((base) + (0x0328UL))
+#define SOC_VENC_VEDU_CURLD_OSD5_ADDR_H_ADDR(base) ((base) + (0x032CUL))
+#define SOC_VENC_VEDU_CURLD_OSD6_ADDR_L_ADDR(base) ((base) + (0x0330UL))
+#define SOC_VENC_VEDU_CURLD_OSD6_ADDR_H_ADDR(base) ((base) + (0x0334UL))
+#define SOC_VENC_VEDU_CURLD_OSD7_ADDR_L_ADDR(base) ((base) + (0x0338UL))
+#define SOC_VENC_VEDU_CURLD_OSD7_ADDR_H_ADDR(base) ((base) + (0x033CUL))
+#define SOC_VENC_VEDU_CURLD_OSD01_STRIDE_ADDR(base) ((base) + (0x0340UL))
+#define SOC_VENC_VEDU_CURLD_OSD23_STRIDE_ADDR(base) ((base) + (0x0344UL))
+#define SOC_VENC_VEDU_CURLD_OSD45_STRIDE_ADDR(base) ((base) + (0x0348UL))
+#define SOC_VENC_VEDU_CURLD_OSD67_STRIDE_ADDR(base) ((base) + (0x034CUL))
+#define SOC_VENC_VEDU_NEW_CFG0_ADDR(base) ((base) + (0x0350UL))
+#define SOC_VENC_VEDU_RESERVED_08_ADDR(base) ((base) + (0x0354UL))
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_ADDR(base) ((base) + (0x0380UL))
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG1_ADDR(base) ((base) + (0x0384UL))
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG2_ADDR(base) ((base) + (0x0388UL))
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_0_ADDR(base) ((base) + (0x038CUL))
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_1_ADDR(base) ((base) + (0x0390UL))
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_2_ADDR(base) ((base) + (0x0394UL))
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_3_ADDR(base) ((base) + (0x0398UL))
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_4_ADDR(base) ((base) + (0x039CUL))
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_5_ADDR(base) ((base) + (0x03A0UL))
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_6_ADDR(base) ((base) + (0x03A4UL))
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_7_ADDR(base) ((base) + (0x03A8UL))
+#define SOC_VENC_VEDU_VCTRL_ROI_START_0_ADDR(base) ((base) + (0x03ACUL))
+#define SOC_VENC_VEDU_VCTRL_ROI_START_1_ADDR(base) ((base) + (0x03B0UL))
+#define SOC_VENC_VEDU_VCTRL_ROI_START_2_ADDR(base) ((base) + (0x03B4UL))
+#define SOC_VENC_VEDU_VCTRL_ROI_START_3_ADDR(base) ((base) + (0x03B8UL))
+#define SOC_VENC_VEDU_VCTRL_ROI_START_4_ADDR(base) ((base) + (0x03BCUL))
+#define SOC_VENC_VEDU_VCTRL_ROI_START_5_ADDR(base) ((base) + (0x03C0UL))
+#define SOC_VENC_VEDU_VCTRL_ROI_START_6_ADDR(base) ((base) + (0x03C4UL))
+#define SOC_VENC_VEDU_VCTRL_ROI_START_7_ADDR(base) ((base) + (0x03C8UL))
+#define SOC_VENC_VEDU_RESERVED_09_ADDR(base) ((base) + (0x03CCUL))
+#define SOC_VENC_VEDU_TILE_MODE_ADDR(base) ((base) + (0x0400UL))
+#define SOC_VENC_VEDU_VCPI_PICSIZE_PIX_ADDR(base) ((base) + (0x0404UL))
+#define SOC_VENC_VEDU_TILE_POS_ADDR(base) ((base) + (0x0408UL))
+#define SOC_VENC_VEDU_VCPI_TILE_SIZE_ADDR(base) ((base) + (0x040CUL))
+#define SOC_VENC_VEDU_VCPI_VLC_CONFIG_ADDR(base) ((base) + (0x0410UL))
+#define SOC_VENC_VEDU_VCPI_REF_FLAG_ADDR(base) ((base) + (0x0414UL))
+#define SOC_VENC_VEDU_PMV_TMV_EN_ADDR(base) ((base) + (0x0418UL))
+#define SOC_VENC_VEDU_VCPI_TMV_LOAD_ADDR(base) ((base) + (0x041CUL))
+#define SOC_VENC_VEDU_PMV_POC_0_ADDR(base) ((base) + (0x0420UL))
+#define SOC_VENC_VEDU_PMV_POC_1_ADDR(base) ((base) + (0x0424UL))
+#define SOC_VENC_VEDU_PMV_POC_2_ADDR(base) ((base) + (0x0428UL))
+#define SOC_VENC_VEDU_PMV_POC_3_ADDR(base) ((base) + (0x042CUL))
+#define SOC_VENC_VEDU_PMV_POC_4_ADDR(base) ((base) + (0x0430UL))
+#define SOC_VENC_VEDU_PMV_POC_5_ADDR(base) ((base) + (0x0434UL))
+#define SOC_VENC_VEDU_CABAC_GLB_CFG_ADDR(base) ((base) + (0x0438UL))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_SIZE_ADDR(base) ((base) + (0x043CUL))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART1_ADDR(base) ((base) + (0x0440UL))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG1_ADDR(base) ((base) + (0x0444UL))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG2_ADDR(base) ((base) + (0x0448UL))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG3_ADDR(base) ((base) + (0x044CUL))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG4_ADDR(base) ((base) + (0x0450UL))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG5_ADDR(base) ((base) + (0x0454UL))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG6_ADDR(base) ((base) + (0x0458UL))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG7_ADDR(base) ((base) + (0x045CUL))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG8_ADDR(base) ((base) + (0x0460UL))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_SIZE_I_ADDR(base) ((base) + (0x0464UL))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART1_I_ADDR(base) ((base) + (0x0468UL))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG1_I_ADDR(base) ((base) + (0x046CUL))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG2_I_ADDR(base) ((base) + (0x0470UL))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG3_I_ADDR(base) ((base) + (0x0474UL))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG4_I_ADDR(base) ((base) + (0x0478UL))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG5_I_ADDR(base) ((base) + (0x047CUL))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG6_I_ADDR(base) ((base) + (0x0480UL))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG7_I_ADDR(base) ((base) + (0x0484UL))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG8_I_ADDR(base) ((base) + (0x0488UL))
+#define SOC_VENC_VEDU_VLC_SLCHDRSTRM0_ADDR(base) ((base) + (0x048CUL))
+#define SOC_VENC_VEDU_VLC_SLCHDRSTRM1_ADDR(base) ((base) + (0x0490UL))
+#define SOC_VENC_VEDU_VLC_SLCHDRSTRM2_ADDR(base) ((base) + (0x0494UL))
+#define SOC_VENC_VEDU_VLC_SLCHDRSTRM3_ADDR(base) ((base) + (0x0498UL))
+#define SOC_VENC_VEDU_VLC_REORDERSTRM0_ADDR(base) ((base) + (0x049CUL))
+#define SOC_VENC_VEDU_VLC_REORDERSTRM1_ADDR(base) ((base) + (0x04A0UL))
+#define SOC_VENC_VEDU_VLC_MARKINGSTRM0_ADDR(base) ((base) + (0x04A4UL))
+#define SOC_VENC_VEDU_VLC_MARKINGSTRM1_ADDR(base) ((base) + (0x04A8UL))
+#define SOC_VENC_VEDU_VLC_SLCHDRPARA_ADDR(base) ((base) + (0x04ACUL))
+#define SOC_VENC_VEDU_VLC_SVC_ADDR(base) ((base) + (0x04B0UL))
+#define SOC_VENC_VEDU_VLC_SLCHDRSTRM0_I_ADDR(base) ((base) + (0x04B4UL))
+#define SOC_VENC_VEDU_VLC_SLCHDRSTRM1_I_ADDR(base) ((base) + (0x04B8UL))
+#define SOC_VENC_VEDU_VLC_SLCHDRSTRM2_I_ADDR(base) ((base) + (0x04BCUL))
+#define SOC_VENC_VEDU_VLC_SLCHDRSTRM3_I_ADDR(base) ((base) + (0x04C0UL))
+#define SOC_VENC_VEDU_VLC_REORDERSTRM0_I_ADDR(base) ((base) + (0x04C4UL))
+#define SOC_VENC_VEDU_VLC_REORDERSTRM1_I_ADDR(base) ((base) + (0x04C8UL))
+#define SOC_VENC_VEDU_VLC_MARKINGSTRM0_I_ADDR(base) ((base) + (0x04CCUL))
+#define SOC_VENC_VEDU_VLC_MARKINGSTRM1_I_ADDR(base) ((base) + (0x04D0UL))
+#define SOC_VENC_VEDU_VLC_SLCHDRPARA_I_ADDR(base) ((base) + (0x04D4UL))
+#define SOC_VENC_VEDU_VLCST_STRMBUFLEN_ADDR(base) ((base) + (0x04D8UL))
+#define SOC_VENC_VEDU_VLCST_SLC_CFG0_ADDR(base) ((base) + (0x04DCUL))
+#define SOC_VENC_VEDU_VLCST_SLC_CFG1_ADDR(base) ((base) + (0x04E0UL))
+#define SOC_VENC_VEDU_VLCST_SLC_CFG2_ADDR(base) ((base) + (0x04E4UL))
+#define SOC_VENC_VEDU_VLCST_SLC_CFG3_ADDR(base) ((base) + (0x04E8UL))
+#define SOC_VENC_VEDU_ICE_V2R1_SEG_256X1_DCMP_CTRL_ADDR(base) ((base) + (0x04ECUL))
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG0_ADDR(base) ((base) + (0x04F0UL))
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG1_ADDR(base) ((base) + (0x04F4UL))
+#define SOC_VENC_VEDU_RESERVED_10_ADDR(base) ((base) + (0x04F8UL))
+#define SOC_VENC_VEDU_QPG_LOWLUMA_ADDR(base) ((base) + (0x0500UL))
+#define SOC_VENC_VEDU_QPG_HEDGE_ADDR(base) ((base) + (0x0504UL))
+#define SOC_VENC_VEDU_QPG_HEDGE_MOVE_ADDR(base) ((base) + (0x0508UL))
+#define SOC_VENC_VEDU_QPG_SKIN_ADDR(base) ((base) + (0x050CUL))
+#define SOC_VENC_VEDU_QPG_INTRA_DET_ADDR(base) ((base) + (0x0510UL))
+#define SOC_VENC_VEDU_QPG_H264_SMOOTH_ADDR(base) ((base) + (0x0514UL))
+#define SOC_VENC_VEDU_QPG_CU32_DELTA_ADDR(base) ((base) + (0x0518UL))
+#define SOC_VENC_VEDU_QPG_LAMBDA_MODE_ADDR(base) ((base) + (0x051CUL))
+#define SOC_VENC_VEDU_QPG_QP_RESTRAIN_ADDR(base) ((base) + (0x0520UL))
+#define SOC_VENC_VEDU_QPG_CU_MIN_SAD_THRESH_0_ADDR(base) ((base) + (0x0524UL))
+#define SOC_VENC_VEDU_QPG_CU_MIN_SAD_REG_ADDR(base) ((base) + (0x0528UL))
+#define SOC_VENC_VEDU_QPG_FLAT_REGION_ADDR(base) ((base) + (0x052CUL))
+#define SOC_VENC_VEDU_QPG_RES_COEF_ADDR(base) ((base) + (0x0530UL))
+#define SOC_VENC_VEDU_TILE_RC_ADDR(base) ((base) + (0x0534UL))
+#define SOC_VENC_VEDU_CHROMA_PROTECT_ADDR(base) ((base) + (0x0538UL))
+#define SOC_VENC_VEDU_PME_QPG_RC_THR0_ADDR(base) ((base) + (0x053CUL))
+#define SOC_VENC_VEDU_PME_QPG_RC_THR1_ADDR(base) ((base) + (0x0540UL))
+#define SOC_VENC_VEDU_PME_LOW_LUMA_THR_ADDR(base) ((base) + (0x0544UL))
+#define SOC_VENC_VEDU_PME_CHROMA_FLAT_ADDR(base) ((base) + (0x0548UL))
+#define SOC_VENC_VEDU_PME_LUMA_FLAT_ADDR(base) ((base) + (0x054CUL))
+#define SOC_VENC_VEDU_PME_MADI_FLAT_ADDR(base) ((base) + (0x0550UL))
+#define SOC_VENC_VEDU_VLCST_DESCRIPTOR_ADDR(base) ((base) + (0x0554UL))
+#define SOC_VENC_VEDU_PPFD_ST_LEN0_ADDR(base) ((base) + (0x0558UL))
+#define SOC_VENC_VEDU_CURLD_CLIP_LUMA_ADDR(base) ((base) + (0x055CUL))
+#define SOC_VENC_VEDU_CURLD_CLIP_CHROMA_ADDR(base) ((base) + (0x0560UL))
+#define SOC_VENC_VEDU_TQITQ_DEADZONE_ADDR(base) ((base) + (0x0564UL))
+#define SOC_VENC_VEDU_VCPI_PME_PARAM_ADDR(base) ((base) + (0x0568UL))
+#define SOC_VENC_VEDU_VCPI_PIC_STRONG_EN_ADDR(base) ((base) + (0x056CUL))
+#define SOC_VENC_VEDU_VCPI_PINTRA_THRESH0_ADDR(base) ((base) + (0x0570UL))
+#define SOC_VENC_VEDU_VCPI_PINTRA_THRESH1_ADDR(base) ((base) + (0x0574UL))
+#define SOC_VENC_VEDU_VCPI_PINTRA_THRESH2_ADDR(base) ((base) + (0x0578UL))
+#define SOC_VENC_VEDU_VCPI_INTRA32_LOW_POWER_ADDR(base) ((base) + (0x057CUL))
+#define SOC_VENC_VEDU_VCPI_INTRA16_LOW_POWER_ADDR(base) ((base) + (0x0580UL))
+#define SOC_VENC_VEDU_VCPI_INTRA_REDUCE_RDO_NUM_ADDR(base) ((base) + (0x0584UL))
+#define SOC_VENC_VEDU_VCPI_NOFORCEZERO_ADDR(base) ((base) + (0x0588UL))
+#define SOC_VENC_VEDU_PME_SKIP_LARGE_RES_ADDR(base) ((base) + (0x058CUL))
+#define SOC_VENC_VEDU_PME_SKIN_SAD_THR_ADDR(base) ((base) + (0x0590UL))
+#define SOC_VENC_VEDU_VCTRL_NM_ACOFFSET_DENOISE_ADDR(base) ((base) + (0x0594UL))
+#define SOC_VENC_VEDU_VCTRL_NM_ENGTHR_DENOISE_ADDR(base) ((base) + (0x0598UL))
+#define SOC_VENC_VEDU_VCTRL_NM_TU8_DENOISE_ADDR(base) ((base) + (0x059CUL))
+#define SOC_VENC_VEDU_VCTRL_SK_ACOFFSET_DENOISE_ADDR(base) ((base) + (0x05A0UL))
+#define SOC_VENC_VEDU_VCTRL_SK_ENGTHR_DENOISE_ADDR(base) ((base) + (0x05A4UL))
+#define SOC_VENC_VEDU_VCTRL_SK_TU8_DENOISE_ADDR(base) ((base) + (0x05A8UL))
+#define SOC_VENC_VEDU_VCTRL_ST_ACOFFSET_DENOISE_ADDR(base) ((base) + (0x05ACUL))
+#define SOC_VENC_VEDU_VCTRL_ST_ENGTHR_DENOISE_ADDR(base) ((base) + (0x05B0UL))
+#define SOC_VENC_VEDU_VCTRL_ST_TU8_DENOISE_ADDR(base) ((base) + (0x05B4UL))
+#define SOC_VENC_VEDU_VCTRL_SE_ACOFFSET_DENOISE_ADDR(base) ((base) + (0x05B8UL))
+#define SOC_VENC_VEDU_VCTRL_SE_ENGTHR_DENOISE_ADDR(base) ((base) + (0x05BCUL))
+#define SOC_VENC_VEDU_VCTRL_SE_TU8_DENOISE_ADDR(base) ((base) + (0x05C0UL))
+#define SOC_VENC_VEDU_VCTRL_SELM_ACOFFSET_DENOISE_ADDR(base) ((base) + (0x05C4UL))
+#define SOC_VENC_VEDU_VCTRL_SELM_ENGTHR_DENOISE_ADDR(base) ((base) + (0x05C8UL))
+#define SOC_VENC_VEDU_VCTRL_SELM_TU8_DENOISE_ADDR(base) ((base) + (0x05CCUL))
+#define SOC_VENC_VEDU_VCTRL_WS_ACOFFSET_DENOISE_ADDR(base) ((base) + (0x05D0UL))
+#define SOC_VENC_VEDU_VCTRL_WS_ENGTHR_DENOISE_ADDR(base) ((base) + (0x05D4UL))
+#define SOC_VENC_VEDU_VCTRL_WS_TU8_DENOISE_ADDR(base) ((base) + (0x05D8UL))
+#define SOC_VENC_VEDU_VCTRL_SSSE_ACOFFSET_DENOISE_ADDR(base) ((base) + (0x05DCUL))
+#define SOC_VENC_VEDU_VCTRL_SSSE_ENGTHR_DENOISE_ADDR(base) ((base) + (0x05E0UL))
+#define SOC_VENC_VEDU_VCTRL_SSSE_TU8_DENOISE_ADDR(base) ((base) + (0x05E4UL))
+#define SOC_VENC_VEDU_RESERVED_11_ADDR(base) ((base) + (0x05E8UL))
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_0_ADDR(base) ((base) + (0x0600UL))
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_1_ADDR(base) ((base) + (0x0604UL))
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_2_ADDR(base) ((base) + (0x0608UL))
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_0_ADDR(base) ((base) + (0x060CUL))
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_1_ADDR(base) ((base) + (0x0610UL))
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_2_ADDR(base) ((base) + (0x0614UL))
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_0_ADDR(base) ((base) + (0x0618UL))
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_1_ADDR(base) ((base) + (0x061CUL))
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_2_ADDR(base) ((base) + (0x0620UL))
+#define SOC_VENC_VEDU_PME_NEW_COST_ADDR(base) ((base) + (0x0624UL))
+#define SOC_VENC_VEDU_PME_COST_OFFSET_ADDR(base) ((base) + (0x0628UL))
+#define SOC_VENC_VEDU_PME_ADJUST_PMEMV_H264_ADDR(base) ((base) + (0x062CUL))
+#define SOC_VENC_VEDU_PME_INTRABLK_DET_ADDR(base) ((base) + (0x0630UL))
+#define SOC_VENC_VEDU_PME_INTRABLK_DET_THR_ADDR(base) ((base) + (0x0634UL))
+#define SOC_VENC_VEDU_PME_SKIN_THR_ADDR(base) ((base) + (0x0638UL))
+#define SOC_VENC_VEDU_PME_STRONG_EDGE_ADDR(base) ((base) + (0x063CUL))
+#define SOC_VENC_VEDU_PME_LARGE_MOVE_THR_ADDR(base) ((base) + (0x0640UL))
+#define SOC_VENC_VEDU_PME_INTER_STRONG_EDGE_ADDR(base) ((base) + (0x0644UL))
+#define SOC_VENC_VEDU_PME_CHROMA_STRONG_EDGE_ADDR(base) ((base) + (0x0648UL))
+#define SOC_VENC_VEDU_CHROMA_SAD_THR_ADDR(base) ((base) + (0x064CUL))
+#define SOC_VENC_VEDU_CHROMA_FG_THR_ADDR(base) ((base) + (0x0650UL))
+#define SOC_VENC_VEDU_CHROMA_BG_THR_ADDR(base) ((base) + (0x0654UL))
+#define SOC_VENC_VEDU_CHROMA_SUM_FG_THR_ADDR(base) ((base) + (0x0658UL))
+#define SOC_VENC_VEDU_CHROMA_SUM_BG_THR_ADDR(base) ((base) + (0x065CUL))
+#define SOC_VENC_VEDU_CHROMA_FG_COUNT_THR_ADDR(base) ((base) + (0x0660UL))
+#define SOC_VENC_VEDU_CHROMA_BG_COUNT_THR_ADDR(base) ((base) + (0x0664UL))
+#define SOC_VENC_VEDU_PME_MOVE_SCENE_THR_ADDR(base) ((base) + (0x0668UL))
+#define SOC_VENC_VEDU_PME_NEW_MADI_TH_ADDR(base) ((base) + (0x066CUL))
+#define SOC_VENC_VEDU_PME_NEW_LAMBDA_ADDR(base) ((base) + (0x0670UL))
+#define SOC_VENC_VEDU_VCPI_DBLKCFG_ADDR(base) ((base) + (0x0674UL))
+#define SOC_VENC_VEDU_FME_BIAS_COST0_ADDR(base) ((base) + (0x0678UL))
+#define SOC_VENC_VEDU_FME_BIAS_COST1_ADDR(base) ((base) + (0x067CUL))
+#define SOC_VENC_VEDU_MRG_BIAS_COST0_ADDR(base) ((base) + (0x0680UL))
+#define SOC_VENC_VEDU_MRG_BIAS_COST1_ADDR(base) ((base) + (0x0684UL))
+#define SOC_VENC_VEDU_MRG_ABS_OFFSET0_ADDR(base) ((base) + (0x0688UL))
+#define SOC_VENC_VEDU_MRG_ABS_OFFSET1_ADDR(base) ((base) + (0x068CUL))
+#define SOC_VENC_VEDU_MRG_ADJ_WEIGHT_ADDR(base) ((base) + (0x0690UL))
+#define SOC_VENC_VEDU_INTRA_BIT_WEIGHT_ADDR(base) ((base) + (0x0694UL))
+#define SOC_VENC_VEDU_INTRA_RDO_COST_OFFSET_0_ADDR(base) ((base) + (0x0698UL))
+#define SOC_VENC_VEDU_INTRA_RDO_COST_OFFSET_1_ADDR(base) ((base) + (0x069CUL))
+#define SOC_VENC_VEDU_INTRA_NO_DC_COST_OFFSET_0_ADDR(base) ((base) + (0x06A0UL))
+#define SOC_VENC_VEDU_INTRA_NO_DC_COST_OFFSET_1_ADDR(base) ((base) + (0x06A4UL))
+#define SOC_VENC_VEDU_INTRA_RDO_COST_OFFSET_3_ADDR(base) ((base) + (0x06A8UL))
+#define SOC_VENC_VEDU_SEL_OFFSET_STRENGTH_ADDR(base) ((base) + (0x06ACUL))
+#define SOC_VENC_VEDU_SEL_CU32_DC_AC_TH_OFFSET_ADDR(base) ((base) + (0x06B0UL))
+#define SOC_VENC_VEDU_SEL_CU32_QP_TH_ADDR(base) ((base) + (0x06B4UL))
+#define SOC_VENC_VEDU_SEL_RES_DC_AC_TH_ADDR(base) ((base) + (0x06B8UL))
+#define SOC_VENC_VEDU_RESERVED_12_ADDR(base) ((base) + (0x06BCUL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG00_ADDR(base) ((base) + (0x0700UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG01_ADDR(base) ((base) + (0x0704UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG02_ADDR(base) ((base) + (0x0708UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG03_ADDR(base) ((base) + (0x070CUL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG04_ADDR(base) ((base) + (0x0710UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG05_ADDR(base) ((base) + (0x0714UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG06_ADDR(base) ((base) + (0x0718UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG07_ADDR(base) ((base) + (0x071CUL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG08_ADDR(base) ((base) + (0x0720UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG09_ADDR(base) ((base) + (0x0724UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG10_ADDR(base) ((base) + (0x0728UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG11_ADDR(base) ((base) + (0x072CUL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG12_ADDR(base) ((base) + (0x0730UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG13_ADDR(base) ((base) + (0x0734UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG14_ADDR(base) ((base) + (0x0738UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG15_ADDR(base) ((base) + (0x073CUL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG16_ADDR(base) ((base) + (0x0740UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG17_ADDR(base) ((base) + (0x0744UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG18_ADDR(base) ((base) + (0x0748UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG19_ADDR(base) ((base) + (0x074CUL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG20_ADDR(base) ((base) + (0x0750UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG21_ADDR(base) ((base) + (0x0754UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG22_ADDR(base) ((base) + (0x0758UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG23_ADDR(base) ((base) + (0x075CUL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG24_ADDR(base) ((base) + (0x0760UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG25_ADDR(base) ((base) + (0x0764UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG26_ADDR(base) ((base) + (0x0768UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG27_ADDR(base) ((base) + (0x076CUL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG28_ADDR(base) ((base) + (0x0770UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG29_ADDR(base) ((base) + (0x0774UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG30_ADDR(base) ((base) + (0x0778UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG31_ADDR(base) ((base) + (0x077CUL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG32_ADDR(base) ((base) + (0x0780UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG33_ADDR(base) ((base) + (0x0784UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG34_ADDR(base) ((base) + (0x0788UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG35_ADDR(base) ((base) + (0x078CUL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG36_ADDR(base) ((base) + (0x0790UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG37_ADDR(base) ((base) + (0x0794UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG38_ADDR(base) ((base) + (0x0798UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG39_ADDR(base) ((base) + (0x079CUL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG40_ADDR(base) ((base) + (0x07A0UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG41_ADDR(base) ((base) + (0x07A4UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG42_ADDR(base) ((base) + (0x07A8UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG43_ADDR(base) ((base) + (0x07ACUL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG44_ADDR(base) ((base) + (0x07B0UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG45_ADDR(base) ((base) + (0x07B4UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG46_ADDR(base) ((base) + (0x07B8UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG47_ADDR(base) ((base) + (0x07BCUL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG48_ADDR(base) ((base) + (0x07C0UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG49_ADDR(base) ((base) + (0x07C4UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG50_ADDR(base) ((base) + (0x07C8UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG51_ADDR(base) ((base) + (0x07CCUL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG52_ADDR(base) ((base) + (0x07D0UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG53_ADDR(base) ((base) + (0x07D4UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG54_ADDR(base) ((base) + (0x07D8UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG55_ADDR(base) ((base) + (0x07DCUL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG56_ADDR(base) ((base) + (0x07E0UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG57_ADDR(base) ((base) + (0x07E4UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG58_ADDR(base) ((base) + (0x07E8UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG59_ADDR(base) ((base) + (0x07ECUL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG60_ADDR(base) ((base) + (0x07F0UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG61_ADDR(base) ((base) + (0x07F4UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG62_ADDR(base) ((base) + (0x07F8UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG63_ADDR(base) ((base) + (0x07FCUL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG64_ADDR(base) ((base) + (0x0800UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG65_ADDR(base) ((base) + (0x0804UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG66_ADDR(base) ((base) + (0x0808UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG67_ADDR(base) ((base) + (0x080CUL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG68_ADDR(base) ((base) + (0x0810UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG69_ADDR(base) ((base) + (0x0814UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG70_ADDR(base) ((base) + (0x0818UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG71_ADDR(base) ((base) + (0x081CUL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG72_ADDR(base) ((base) + (0x0820UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG73_ADDR(base) ((base) + (0x0824UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG74_ADDR(base) ((base) + (0x0828UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG75_ADDR(base) ((base) + (0x082CUL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG76_ADDR(base) ((base) + (0x0830UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG77_ADDR(base) ((base) + (0x0834UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG78_ADDR(base) ((base) + (0x0838UL))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG79_ADDR(base) ((base) + (0x083CUL))
+#define SOC_VENC_VEDU_IME_RDOCFG_ADDR(base) ((base) + (0x0840UL))
+#define SOC_VENC_VEDU_MRG_FORCE_ZERO_EN_ADDR(base) ((base) + (0x0844UL))
+#define SOC_VENC_VEDU_VCPI_INTRA8_LOW_POWER_ADDR(base) ((base) + (0x0848UL))
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_ADDR(base) ((base) + (0x084CUL))
+#define SOC_VENC_VEDU_IME_INTER_MODE_ADDR(base) ((base) + (0x0850UL))
+#define SOC_VENC_VEDU_VCPI_PRE_JUDGE_EXT_EN_ADDR(base) ((base) + (0x0854UL))
+#define SOC_VENC_VEDU_RESERVED_13_ADDR(base) ((base) + (0x0858UL))
+#define SOC_VENC_VEDU_PME_SW_ADAPT_EN_ADDR(base) ((base) + (0x0880UL))
+#define SOC_VENC_VEDU_PME_WINDOW_SIZE0_L0_ADDR(base) ((base) + (0x0884UL))
+#define SOC_VENC_VEDU_PME_WINDOW_SIZE0_L1_ADDR(base) ((base) + (0x0888UL))
+#define SOC_VENC_VEDU_PME_SKIP_PRE_ADDR(base) ((base) + (0x088CUL))
+#define SOC_VENC_VEDU_PME_PBLK_PRE1_ADDR(base) ((base) + (0x0890UL))
+#define SOC_VENC_VEDU_VCPI_PRE_JUDGE_COST_THR_ADDR(base) ((base) + (0x0894UL))
+#define SOC_VENC_VEDU_VCPI_IBLK_PRE_MV_THR_ADDR(base) ((base) + (0x0898UL))
+#define SOC_VENC_VEDU_PME_IBLK_COST_THR_ADDR(base) ((base) + (0x089CUL))
+#define SOC_VENC_VEDU_PME_TR_WEIGHTX_ADDR(base) ((base) + (0x08A0UL))
+#define SOC_VENC_VEDU_PME_TR_WEIGHTY_ADDR(base) ((base) + (0x08A4UL))
+#define SOC_VENC_VEDU_PME_SR_WEIGHT_ADDR(base) ((base) + (0x08A8UL))
+#define SOC_VENC_VEDU_PME_INTRA_LOWPOW_ADDR(base) ((base) + (0x08ACUL))
+#define SOC_VENC_VEDU_IME_FME_LPOW_THR_ADDR(base) ((base) + (0x08B0UL))
+#define SOC_VENC_VEDU_PME_SKIP_FLAG_ADDR(base) ((base) + (0x08B4UL))
+#define SOC_VENC_VEDU_PME_PSW_LPW_ADDR(base) ((base) + (0x08B8UL))
+#define SOC_VENC_VEDU_PME_PBLK_PRE2_ADDR(base) ((base) + (0x08BCUL))
+#define SOC_VENC_VEDU_IME_LAYER3TO2_THR_ADDR(base) ((base) + (0x08C0UL))
+#define SOC_VENC_VEDU_IME_LAYER3TO2_THR1_ADDR(base) ((base) + (0x08C4UL))
+#define SOC_VENC_VEDU_IME_LAYER3TO1_THR_ADDR(base) ((base) + (0x08C8UL))
+#define SOC_VENC_VEDU_IME_LAYER3TO1_THR1_ADDR(base) ((base) + (0x08CCUL))
+#define SOC_VENC_VEDU_FME_PU64_LWP_ADDR(base) ((base) + (0x08D0UL))
+#define SOC_VENC_VEDU_MRG_FORCE_SKIP_EN_ADDR(base) ((base) + (0x08D4UL))
+#define SOC_VENC_VEDU_INTRA_CFG_ADDR(base) ((base) + (0x08D8UL))
+#define SOC_VENC_VEDU_INTRA_LOW_POW_ADDR(base) ((base) + (0x08DCUL))
+#define SOC_VENC_VEDU_RESERVED_14_ADDR(base) ((base) + (0x08E0UL))
+#define SOC_VENC_VEDU_VCPI_TUNLCELL_ADDR_L_ADDR(base) ((base) + (0x0900UL))
+#define SOC_VENC_VEDU_VCPI_TUNLCELL_ADDR_H_ADDR(base) ((base) + (0x0904UL))
+#define SOC_VENC_VEDU_VCPI_SRC_YADDR_L_ADDR(base) ((base) + (0x0908UL))
+#define SOC_VENC_VEDU_VCPI_SRC_YADDR_H_ADDR(base) ((base) + (0x090CUL))
+#define SOC_VENC_VEDU_VCPI_SRC_EXT_YADDR_L_ADDR(base) ((base) + (0x0910UL))
+#define SOC_VENC_VEDU_VCPI_SRC_EXT_YADDR_H_ADDR(base) ((base) + (0x0914UL))
+#define SOC_VENC_VEDU_VCPI_SRC_CADDR_L_ADDR(base) ((base) + (0x0918UL))
+#define SOC_VENC_VEDU_VCPI_SRC_CADDR_H_ADDR(base) ((base) + (0x091CUL))
+#define SOC_VENC_VEDU_VCPI_SRC_EXT_CADDR_L_ADDR(base) ((base) + (0x0920UL))
+#define SOC_VENC_VEDU_VCPI_SRC_EXT_CADDR_H_ADDR(base) ((base) + (0x0924UL))
+#define SOC_VENC_VEDU_VCPI_SRC_VADDR_L_ADDR(base) ((base) + (0x0928UL))
+#define SOC_VENC_VEDU_VCPI_SRC_VADDR_H_ADDR(base) ((base) + (0x092CUL))
+#define SOC_VENC_VEDU_VCPI_YH_ADDR_L_ADDR(base) ((base) + (0x0930UL))
+#define SOC_VENC_VEDU_VCPI_YH_ADDR_H_ADDR(base) ((base) + (0x0934UL))
+#define SOC_VENC_VEDU_VCPI_CH_ADDR_L_ADDR(base) ((base) + (0x0938UL))
+#define SOC_VENC_VEDU_VCPI_CH_ADDR_H_ADDR(base) ((base) + (0x093CUL))
+#define SOC_VENC_VEDU_VCPI_REFY_L0_ADDR_L_ADDR(base) ((base) + (0x0940UL))
+#define SOC_VENC_VEDU_VCPI_REFY_L0_ADDR_H_ADDR(base) ((base) + (0x0944UL))
+#define SOC_VENC_VEDU_VCPI_REFC_L0_ADDR_L_ADDR(base) ((base) + (0x0948UL))
+#define SOC_VENC_VEDU_VCPI_REFC_L0_ADDR_H_ADDR(base) ((base) + (0x094CUL))
+#define SOC_VENC_VEDU_VCPI_REFYH_L0_ADDR_L_ADDR(base) ((base) + (0x0950UL))
+#define SOC_VENC_VEDU_VCPI_REFYH_L0_ADDR_H_ADDR(base) ((base) + (0x0954UL))
+#define SOC_VENC_VEDU_VCPI_REFCH_L0_ADDR_L_ADDR(base) ((base) + (0x0958UL))
+#define SOC_VENC_VEDU_VCPI_REFCH_L0_ADDR_H_ADDR(base) ((base) + (0x095CUL))
+#define SOC_VENC_VEDU_VCPI_REFY_L1_ADDR_L_ADDR(base) ((base) + (0x0960UL))
+#define SOC_VENC_VEDU_VCPI_REFY_L1_ADDR_H_ADDR(base) ((base) + (0x0964UL))
+#define SOC_VENC_VEDU_VCPI_REFC_L1_ADDR_L_ADDR(base) ((base) + (0x0968UL))
+#define SOC_VENC_VEDU_VCPI_REFC_L1_ADDR_H_ADDR(base) ((base) + (0x096CUL))
+#define SOC_VENC_VEDU_VCPI_REFYH_L1_ADDR_L_ADDR(base) ((base) + (0x0970UL))
+#define SOC_VENC_VEDU_VCPI_REFYH_L1_ADDR_H_ADDR(base) ((base) + (0x0974UL))
+#define SOC_VENC_VEDU_VCPI_REFCH_L1_ADDR_L_ADDR(base) ((base) + (0x0978UL))
+#define SOC_VENC_VEDU_VCPI_REFCH_L1_ADDR_H_ADDR(base) ((base) + (0x097CUL))
+#define SOC_VENC_VEDU_VCPI_REC_YADDR_L_ADDR(base) ((base) + (0x0980UL))
+#define SOC_VENC_VEDU_VCPI_REC_YADDR_H_ADDR(base) ((base) + (0x0984UL))
+#define SOC_VENC_VEDU_VCPI_REC_CADDR_L_ADDR(base) ((base) + (0x0988UL))
+#define SOC_VENC_VEDU_VCPI_REC_CADDR_H_ADDR(base) ((base) + (0x098CUL))
+#define SOC_VENC_VEDU_VCPI_REC_YH_ADDR_L_ADDR(base) ((base) + (0x0990UL))
+#define SOC_VENC_VEDU_VCPI_REC_YH_ADDR_H_ADDR(base) ((base) + (0x0994UL))
+#define SOC_VENC_VEDU_VCPI_REC_CH_ADDR_L_ADDR(base) ((base) + (0x0998UL))
+#define SOC_VENC_VEDU_VCPI_REC_CH_ADDR_H_ADDR(base) ((base) + (0x099CUL))
+#define SOC_VENC_VEDU_VCPI_PMELD_L0_ADDR_L_ADDR(base) ((base) + (0x09A0UL))
+#define SOC_VENC_VEDU_VCPI_PMELD_L0_ADDR_H_ADDR(base) ((base) + (0x09A4UL))
+#define SOC_VENC_VEDU_VCPI_PMELD_L1_ADDR_L_ADDR(base) ((base) + (0x09A8UL))
+#define SOC_VENC_VEDU_VCPI_PMELD_L1_ADDR_H_ADDR(base) ((base) + (0x09ACUL))
+#define SOC_VENC_VEDU_VCPI_PMEST_ADDR_L_ADDR(base) ((base) + (0x09B0UL))
+#define SOC_VENC_VEDU_VCPI_PMEST_ADDR_H_ADDR(base) ((base) + (0x09B4UL))
+#define SOC_VENC_VEDU_VCPI_NBI_MVST_ADDR_L_ADDR(base) ((base) + (0x09B8UL))
+#define SOC_VENC_VEDU_VCPI_NBI_MVST_ADDR_H_ADDR(base) ((base) + (0x09BCUL))
+#define SOC_VENC_VEDU_VCPI_NBI_MVLD_ADDR_L_ADDR(base) ((base) + (0x09C0UL))
+#define SOC_VENC_VEDU_VCPI_NBI_MVLD_ADDR_H_ADDR(base) ((base) + (0x09C4UL))
+#define SOC_VENC_VEDU_VCPI_STRMADDR_L_ADDR(base) ((base) + (0x09C8UL))
+#define SOC_VENC_VEDU_VCPI_STRMADDR_H_ADDR(base) ((base) + (0x09CCUL))
+#define SOC_VENC_VEDU_VCPI_SWPTRADDR_L_ADDR(base) ((base) + (0x09D0UL))
+#define SOC_VENC_VEDU_VCPI_SWPTRADDR_H_ADDR(base) ((base) + (0x09D4UL))
+#define SOC_VENC_VEDU_VCPI_SRPTRADDR_L_ADDR(base) ((base) + (0x09D8UL))
+#define SOC_VENC_VEDU_VCPI_SRPTRADDR_H_ADDR(base) ((base) + (0x09DCUL))
+#define SOC_VENC_VEDU_VCPI_PMEINFO_ST_ADDR_L_ADDR(base) ((base) + (0x09E0UL))
+#define SOC_VENC_VEDU_VCPI_PMEINFO_ST_ADDR_H_ADDR(base) ((base) + (0x09E4UL))
+#define SOC_VENC_VEDU_VCPI_PMEINFO_LD0_ADDR_L_ADDR(base) ((base) + (0x09E8UL))
+#define SOC_VENC_VEDU_VCPI_PMEINFO_LD0_ADDR_H_ADDR(base) ((base) + (0x09ECUL))
+#define SOC_VENC_VEDU_VCPI_PMEINFO_LD1_ADDR_L_ADDR(base) ((base) + (0x09F0UL))
+#define SOC_VENC_VEDU_VCPI_PMEINFO_LD1_ADDR_H_ADDR(base) ((base) + (0x09F4UL))
+#define SOC_VENC_VEDU_VCPI_QPGLD_INF_ADDR_L_ADDR(base) ((base) + (0x09F8UL))
+#define SOC_VENC_VEDU_VCPI_QPGLD_INF_ADDR_H_ADDR(base) ((base) + (0x09FCUL))
+#define SOC_VENC_VEDU_LEFT_CELL_RADDR_L_ADDR(base) ((base) + (0x0A00UL))
+#define SOC_VENC_VEDU_LEFT_CELL_RADDR_H_ADDR(base) ((base) + (0x0A04UL))
+#define SOC_VENC_VEDU_TOP_CELL_RADDR_L_ADDR(base) ((base) + (0x0A08UL))
+#define SOC_VENC_VEDU_TOP_CELL_RADDR_H_ADDR(base) ((base) + (0x0A0CUL))
+#define SOC_VENC_VEDU_CURR_CELL_WADDR_L_ADDR(base) ((base) + (0x0A10UL))
+#define SOC_VENC_VEDU_CURR_CELL_WADDR_H_ADDR(base) ((base) + (0x0A14UL))
+#define SOC_VENC_VEDU_TOPLEFT_CELL_RADDR_L_ADDR(base) ((base) + (0x0A18UL))
+#define SOC_VENC_VEDU_TOPLEFT_CELL_RADDR_H_ADDR(base) ((base) + (0x0A1CUL))
+#define SOC_VENC_VEDU_BOT_RC_INFO_WADDR_L_ADDR(base) ((base) + (0x0A20UL))
+#define SOC_VENC_VEDU_BOT_RC_INFO_WADDR_H_ADDR(base) ((base) + (0x0A24UL))
+#define SOC_VENC_VEDU_RIGHT_RC_INFO_WADDR_L_ADDR(base) ((base) + (0x0A28UL))
+#define SOC_VENC_VEDU_RIGHT_RC_INFO_WADDR_H_ADDR(base) ((base) + (0x0A2CUL))
+#define SOC_VENC_VEDU_RIGHT_BS_INFO_WADDR_L_ADDR(base) ((base) + (0x0A30UL))
+#define SOC_VENC_VEDU_RIGHT_BS_INFO_WADDR_H_ADDR(base) ((base) + (0x0A34UL))
+#define SOC_VENC_VEDU_LEFT_BS_INFO_RADDR_L_ADDR(base) ((base) + (0x0A38UL))
+#define SOC_VENC_VEDU_LEFT_BS_INFO_RADDR_H_ADDR(base) ((base) + (0x0A3CUL))
+#define SOC_VENC_VEDU_BOT_TB_INFO_WADDR_L_ADDR(base) ((base) + (0x0A40UL))
+#define SOC_VENC_VEDU_BOT_TB_INFO_WADDR_H_ADDR(base) ((base) + (0x0A44UL))
+#define SOC_VENC_VEDU_RIGHT_TB_INFO_WADDR_L_ADDR(base) ((base) + (0x0A48UL))
+#define SOC_VENC_VEDU_RIGHT_TB_INFO_WADDR_H_ADDR(base) ((base) + (0x0A4CUL))
+#define SOC_VENC_VEDU_BOTRIGHT_TB_INFO_WADDR_L_ADDR(base) ((base) + (0x0A50UL))
+#define SOC_VENC_VEDU_BOTRIGHT_TB_INFO_WADDR_H_ADDR(base) ((base) + (0x0A54UL))
+#define SOC_VENC_VEDU_TOP_RC_INFO_RADDR_L_ADDR(base) ((base) + (0x0A58UL))
+#define SOC_VENC_VEDU_TOP_RC_INFO_RADDR_H_ADDR(base) ((base) + (0x0A5CUL))
+#define SOC_VENC_VEDU_LEFT_RC_INFO_RADDR_L_ADDR(base) ((base) + (0x0A60UL))
+#define SOC_VENC_VEDU_LEFT_RC_INFO_RADDR_H_ADDR(base) ((base) + (0x0A64UL))
+#define SOC_VENC_VEDU_TOP_TB_INFO_RADDR_L_ADDR(base) ((base) + (0x0A68UL))
+#define SOC_VENC_VEDU_TOP_TB_INFO_RADDR_H_ADDR(base) ((base) + (0x0A6CUL))
+#define SOC_VENC_VEDU_LEFT_TB_INFO_RADDR_L_ADDR(base) ((base) + (0x0A70UL))
+#define SOC_VENC_VEDU_LEFT_TB_INFO_RADDR_H_ADDR(base) ((base) + (0x0A74UL))
+#define SOC_VENC_VEDU_TOPLEFT_TB_INFO_RADDR_L_ADDR(base) ((base) + (0x0A78UL))
+#define SOC_VENC_VEDU_TOPLEFT_TB_INFO_RADDR_H_ADDR(base) ((base) + (0x0A7CUL))
+#define SOC_VENC_VEDU_PPFD_ST_ADDR0_L_ADDR(base) ((base) + (0x0A80UL))
+#define SOC_VENC_VEDU_PPFD_ST_ADDR0_H_ADDR(base) ((base) + (0x0A84UL))
+#define SOC_VENC_VEDU_SKIPWEIGHT_LD_ADDR_L_ADDR(base) ((base) + (0x0A88UL))
+#define SOC_VENC_VEDU_SKIPWEIGHT_LD_ADDR_H_ADDR(base) ((base) + (0x0A8CUL))
+#define SOC_VENC_VEDU_RESERVED_15_ADDR(base) ((base) + (0x0A90UL))
+#define SOC_VENC_VEDU_SAO_SSD_AREA0_START_ADDR(base) ((base) + (0x0B00UL))
+#define SOC_VENC_VEDU_SAO_SSD_AREA0_END_ADDR(base) ((base) + (0x0B04UL))
+#define SOC_VENC_VEDU_SAO_SSD_AREA1_START_ADDR(base) ((base) + (0x0B08UL))
+#define SOC_VENC_VEDU_SAO_SSD_AREA1_END_ADDR(base) ((base) + (0x0B0CUL))
+#define SOC_VENC_VEDU_SAO_SSD_AREA2_START_ADDR(base) ((base) + (0x0B10UL))
+#define SOC_VENC_VEDU_SAO_SSD_AREA2_END_ADDR(base) ((base) + (0x0B14UL))
+#define SOC_VENC_VEDU_SAO_SSD_AREA3_START_ADDR(base) ((base) + (0x0B18UL))
+#define SOC_VENC_VEDU_SAO_SSD_AREA3_END_ADDR(base) ((base) + (0x0B1CUL))
+#define SOC_VENC_VEDU_SAO_SSD_AREA4_START_ADDR(base) ((base) + (0x0B20UL))
+#define SOC_VENC_VEDU_SAO_SSD_AREA4_END_ADDR(base) ((base) + (0x0B24UL))
+#define SOC_VENC_VEDU_SAO_SSD_AREA5_START_ADDR(base) ((base) + (0x0B28UL))
+#define SOC_VENC_VEDU_SAO_SSD_AREA5_END_ADDR(base) ((base) + (0x0B2CUL))
+#define SOC_VENC_VEDU_SAO_SSD_AREA6_START_ADDR(base) ((base) + (0x0B30UL))
+#define SOC_VENC_VEDU_SAO_SSD_AREA6_END_ADDR(base) ((base) + (0x0B34UL))
+#define SOC_VENC_VEDU_SAO_SSD_AREA7_START_ADDR(base) ((base) + (0x0B38UL))
+#define SOC_VENC_VEDU_SAO_SSD_AREA7_END_ADDR(base) ((base) + (0x0B3CUL))
+#define SOC_VENC_VEDU_RESERVED_16_ADDR(base) ((base) + (0x0B40UL))
+#define SOC_VENC_VEDU_VCPI_STRIDE_ADDR(base) ((base) + (0x0B80UL))
+#define SOC_VENC_VEDU_VCPI_EXT_STRIDE_ADDR(base) ((base) + (0x0B84UL))
+#define SOC_VENC_VEDU_VCPI_REF_L0_STRIDE_ADDR(base) ((base) + (0x0B88UL))
+#define SOC_VENC_VEDU_VCPI_REF_L1_STRIDE_ADDR(base) ((base) + (0x0B8CUL))
+#define SOC_VENC_VEDU_VCPI_REC_STRIDE_ADDR(base) ((base) + (0x0B90UL))
+#define SOC_VENC_VEDU_VCPI_PMEST_STRIDE_ADDR(base) ((base) + (0x0B94UL))
+#define SOC_VENC_VEDU_VCPI_PMELD_STRIDE_ADDR(base) ((base) + (0x0B98UL))
+#define SOC_VENC_VEDU_RESERVED_17_ADDR(base) ((base) + (0x0B9CUL))
+#define SOC_VENC_VEDU_GHDR_CTRL_ADDR(base) ((base) + (0x0C80UL))
+#define SOC_VENC_VEDU_GHDR_DEGAMMA_CTRL_ADDR(base) ((base) + (0x0C84UL))
+#define SOC_VENC_VEDU_GHDR_DEGAMMA_STEP_ADDR(base) ((base) + (0x0C88UL))
+#define SOC_VENC_VEDU_GHDR_DEGAMMA_POS1_ADDR(base) ((base) + (0x0C8CUL))
+#define SOC_VENC_VEDU_GHDR_DEGAMMA_POS2_ADDR(base) ((base) + (0x0C90UL))
+#define SOC_VENC_VEDU_GHDR_DEGAMMA_NUM_ADDR(base) ((base) + (0x0C94UL))
+#define SOC_VENC_VEDU_GHDR_GAMUT_CTRL_ADDR(base) ((base) + (0x0C98UL))
+#define SOC_VENC_VEDU_GHDR_GAMUT_COEF00_ADDR(base) ((base) + (0x0C9CUL))
+#define SOC_VENC_VEDU_GHDR_GAMUT_COEF01_ADDR(base) ((base) + (0x0CA0UL))
+#define SOC_VENC_VEDU_GHDR_GAMUT_COEF02_ADDR(base) ((base) + (0x0CA4UL))
+#define SOC_VENC_VEDU_GHDR_GAMUT_COEF10_ADDR(base) ((base) + (0x0CA8UL))
+#define SOC_VENC_VEDU_GHDR_GAMUT_COEF11_ADDR(base) ((base) + (0x0CACUL))
+#define SOC_VENC_VEDU_GHDR_GAMUT_COEF12_ADDR(base) ((base) + (0x0CB0UL))
+#define SOC_VENC_VEDU_GHDR_GAMUT_COEF20_ADDR(base) ((base) + (0x0CB4UL))
+#define SOC_VENC_VEDU_GHDR_GAMUT_COEF21_ADDR(base) ((base) + (0x0CB8UL))
+#define SOC_VENC_VEDU_GHDR_GAMUT_COEF22_ADDR(base) ((base) + (0x0CBCUL))
+#define SOC_VENC_VEDU_GHDR_GAMUT_SCALE_ADDR(base) ((base) + (0x0CC0UL))
+#define SOC_VENC_VEDU_GHDR_GAMUT_CLIP_MIN_ADDR(base) ((base) + (0x0CC4UL))
+#define SOC_VENC_VEDU_GHDR_GAMUT_CLIP_MAX_ADDR(base) ((base) + (0x0CC8UL))
+#define SOC_VENC_VEDU_GHDR_TONEMAP_CTRL_ADDR(base) ((base) + (0x0CCCUL))
+#define SOC_VENC_VEDU_GHDR_TONEMAP_REN_ADDR(base) ((base) + (0x0CD0UL))
+#define SOC_VENC_VEDU_GHDR_RESERVED0_ADDR(base) ((base) + (0x0CD4UL))
+#define SOC_VENC_VEDU_GHDR_TONEMAP_STEP_ADDR(base) ((base) + (0x0CD8UL))
+#define SOC_VENC_VEDU_GHDR_TONEMAP_POS1_ADDR(base) ((base) + (0x0CDCUL))
+#define SOC_VENC_VEDU_GHDR_TONEMAP_POS2_ADDR(base) ((base) + (0x0CE0UL))
+#define SOC_VENC_VEDU_GHDR_TONEMAP_POS3_ADDR(base) ((base) + (0x0CE4UL))
+#define SOC_VENC_VEDU_GHDR_TONEMAP_POS4_ADDR(base) ((base) + (0x0CE8UL))
+#define SOC_VENC_VEDU_GHDR_TONEMAP_NUM_ADDR(base) ((base) + (0x0CECUL))
+#define SOC_VENC_VEDU_GHDR_TONEMAP_LUMA_COEF0_ADDR(base) ((base) + (0x0CF0UL))
+#define SOC_VENC_VEDU_GHDR_TONEMAP_LUMA_COEF1_ADDR(base) ((base) + (0x0CF4UL))
+#define SOC_VENC_VEDU_GHDR_TONEMAP_LUMA_COEF2_ADDR(base) ((base) + (0x0CF8UL))
+#define SOC_VENC_VEDU_GHDR_TONEMAP_LUMA_SCALE_ADDR(base) ((base) + (0x0CFCUL))
+#define SOC_VENC_VEDU_GHDR_TONEMAP_COEF_SCALE_ADDR(base) ((base) + (0x0D00UL))
+#define SOC_VENC_VEDU_GHDR_TONEMAP_OUT_CLIP_MIN_ADDR(base) ((base) + (0x0D04UL))
+#define SOC_VENC_VEDU_GHDR_TONEMAP_OUT_CLIP_MAX_ADDR(base) ((base) + (0x0D08UL))
+#define SOC_VENC_VEDU_GHDR_GAMMA_CTRL_ADDR(base) ((base) + (0x0D0CUL))
+#define SOC_VENC_VEDU_GHDR_GAMMA_REN_ADDR(base) ((base) + (0x0D10UL))
+#define SOC_VENC_VEDU_GHDR_RESERVED1_ADDR(base) ((base) + (0x0D14UL))
+#define SOC_VENC_VEDU_GHDR_GAMMA_STEP1_ADDR(base) ((base) + (0x0D18UL))
+#define SOC_VENC_VEDU_GHDR_GAMMA_STEP2_ADDR(base) ((base) + (0x0D1CUL))
+#define SOC_VENC_VEDU_GHDR_GAMMA_POS1_ADDR(base) ((base) + (0x0D20UL))
+#define SOC_VENC_VEDU_GHDR_GAMMA_POS2_ADDR(base) ((base) + (0x0D24UL))
+#define SOC_VENC_VEDU_GHDR_GAMMA_POS3_ADDR(base) ((base) + (0x0D28UL))
+#define SOC_VENC_VEDU_GHDR_GAMMA_POS4_ADDR(base) ((base) + (0x0D2CUL))
+#define SOC_VENC_VEDU_GHDR_GAMMA_NUM1_ADDR(base) ((base) + (0x0D30UL))
+#define SOC_VENC_VEDU_GHDR_GAMMA_NUM2_ADDR(base) ((base) + (0x0D34UL))
+#define SOC_VENC_VEDU_GHDR_DITHER_CTRL_ADDR(base) ((base) + (0x0D38UL))
+#define SOC_VENC_VEDU_GHDR_DITHER_THR_ADDR(base) ((base) + (0x0D3CUL))
+#define SOC_VENC_VEDU_GHDR_DITHER_SED_Y0_ADDR(base) ((base) + (0x0D40UL))
+#define SOC_VENC_VEDU_GHDR_DITHER_SED_U0_ADDR(base) ((base) + (0x0D44UL))
+#define SOC_VENC_VEDU_GHDR_DITHER_SED_V0_ADDR(base) ((base) + (0x0D48UL))
+#define SOC_VENC_VEDU_GHDR_DITHER_SED_W0_ADDR(base) ((base) + (0x0D4CUL))
+#define SOC_VENC_VEDU_GHDR_DITHER_SED_Y1_ADDR(base) ((base) + (0x0D50UL))
+#define SOC_VENC_VEDU_GHDR_DITHER_SED_U1_ADDR(base) ((base) + (0x0D54UL))
+#define SOC_VENC_VEDU_GHDR_DITHER_SED_V1_ADDR(base) ((base) + (0x0D58UL))
+#define SOC_VENC_VEDU_GHDR_DITHER_SED_W1_ADDR(base) ((base) + (0x0D5CUL))
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_CTRL_ADDR(base) ((base) + (0x0D60UL))
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF0_ADDR(base) ((base) + (0x0D64UL))
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF1_ADDR(base) ((base) + (0x0D68UL))
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF2_ADDR(base) ((base) + (0x0D6CUL))
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF3_ADDR(base) ((base) + (0x0D70UL))
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF4_ADDR(base) ((base) + (0x0D74UL))
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF5_ADDR(base) ((base) + (0x0D78UL))
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF6_ADDR(base) ((base) + (0x0D7CUL))
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF7_ADDR(base) ((base) + (0x0D80UL))
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF8_ADDR(base) ((base) + (0x0D84UL))
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_SCALE2P_ADDR(base) ((base) + (0x0D88UL))
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_IDC0_ADDR(base) ((base) + (0x0D8CUL))
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_IDC1_ADDR(base) ((base) + (0x0D90UL))
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_IDC2_ADDR(base) ((base) + (0x0D94UL))
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_ODC0_ADDR(base) ((base) + (0x0D98UL))
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_ODC1_ADDR(base) ((base) + (0x0D9CUL))
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_ODC2_ADDR(base) ((base) + (0x0DA0UL))
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_MIN_ADDR(base) ((base) + (0x0DA4UL))
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_MAX_ADDR(base) ((base) + (0x0DA8UL))
+#define SOC_VENC_VEDU_RESERVED_18_ADDR(base) ((base) + (0x0DACUL))
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_00_01_ADDR(base) ((base) + (0x0E00UL))
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_02_03_ADDR(base) ((base) + (0x0E04UL))
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_04_05_ADDR(base) ((base) + (0x0E08UL))
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_06_07_ADDR(base) ((base) + (0x0E0CUL))
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_08_09_ADDR(base) ((base) + (0x0E10UL))
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_10_11_ADDR(base) ((base) + (0x0E14UL))
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_12_13_ADDR(base) ((base) + (0x0E18UL))
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_14_15_ADDR(base) ((base) + (0x0E1CUL))
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_16_17_ADDR(base) ((base) + (0x0E20UL))
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_18_19_ADDR(base) ((base) + (0x0E24UL))
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_20_21_ADDR(base) ((base) + (0x0E28UL))
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_22_23_ADDR(base) ((base) + (0x0E2CUL))
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_24_25_ADDR(base) ((base) + (0x0E30UL))
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_26_27_ADDR(base) ((base) + (0x0E34UL))
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_28_29_ADDR(base) ((base) + (0x0E38UL))
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_30_31_ADDR(base) ((base) + (0x0E3CUL))
+#define SOC_VENC_VEDU_RESERVED_19_ADDR(base) ((base) + (0x0E40UL))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_00_09_P0_ADDR(base) ((base) + (0x0E80UL))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_00_09_P1_ADDR(base) ((base) + (0x0E84UL))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_00_09_P2_ADDR(base) ((base) + (0x0E88UL))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_00_09_P3_ADDR(base) ((base) + (0x0E8CUL))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_10_19_P0_ADDR(base) ((base) + (0x0E90UL))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_10_19_P1_ADDR(base) ((base) + (0x0E94UL))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_10_19_P2_ADDR(base) ((base) + (0x0E98UL))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_10_19_P3_ADDR(base) ((base) + (0x0E9CUL))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_20_29_P0_ADDR(base) ((base) + (0x0EA0UL))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_20_29_P1_ADDR(base) ((base) + (0x0EA4UL))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_20_29_P2_ADDR(base) ((base) + (0x0EA8UL))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_20_29_P3_ADDR(base) ((base) + (0x0EACUL))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_30_39_P0_ADDR(base) ((base) + (0x0EB0UL))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_30_39_P1_ADDR(base) ((base) + (0x0EB4UL))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_30_39_P2_ADDR(base) ((base) + (0x0EB8UL))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_30_39_P3_ADDR(base) ((base) + (0x0EBCUL))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_40_49_P0_ADDR(base) ((base) + (0x0EC0UL))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_40_49_P1_ADDR(base) ((base) + (0x0EC4UL))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_40_49_P2_ADDR(base) ((base) + (0x0EC8UL))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_40_49_P3_ADDR(base) ((base) + (0x0ECCUL))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_50_59_P0_ADDR(base) ((base) + (0x0ED0UL))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_50_59_P1_ADDR(base) ((base) + (0x0ED4UL))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_50_59_P2_ADDR(base) ((base) + (0x0ED8UL))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_50_59_P3_ADDR(base) ((base) + (0x0EDCUL))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_60_69_P0_ADDR(base) ((base) + (0x0EE0UL))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_60_69_P1_ADDR(base) ((base) + (0x0EE4UL))
+#define SOC_VENC_VEDU_RESERVED_20_ADDR(base) ((base) + (0x0EE8UL))
+#define SOC_VENC_VEDU_SECURE_SET_ADDR(base) ((base) + (0x0FF0UL))
+#define SOC_VENC_VEDU_RESERVED_21_ADDR(base) ((base) + (0x0FF4UL))
+#define SOC_VENC_VEDU_RESERVED_22_ADDR(base) ((base) + (0x1000UL))
+#else
+#define SOC_VENC_VEDU_VCPI_INTMASK_ADDR(base) ((base) + (0x0000))
+#define SOC_VENC_VEDU_VCPI_INTCLR_ADDR(base) ((base) + (0x0004))
+#define SOC_VENC_VEDU_VCPI_START_ADDR(base) ((base) + (0x0008))
+#define SOC_VENC_VEDU_BUS_IDLE_REQ_ADDR(base) ((base) + (0x000C))
+#define SOC_VENC_VEDU_VCPI_FRAMENO_ADDR(base) ((base) + (0x0010))
+#define SOC_VENC_VEDU_VCPI_TIMEOUT_ADDR(base) ((base) + (0x0014))
+#define SOC_VENC_VEDU_VCPI_MODE_ADDR(base) ((base) + (0x0018))
+#define SOC_VENC_VEDU_RESERVED_00_ADDR(base) ((base) + (0x001C))
+#define SOC_VENC_VEDU_RESERVED_01_ADDR(base) ((base) + (0x0020))
+#define SOC_VENC_VEDU_RESERVED_02_ADDR(base) ((base) + (0x0024))
+#define SOC_VENC_VEDU_RESERVED_03_ADDR(base) ((base) + (0x0028))
+#define SOC_VENC_VEDU_RESERVED_04_ADDR(base) ((base) + (0x002C))
+#define SOC_VENC_VEDU_EMAR_SCRAMBLE_TYPE_ADDR(base) ((base) + (0x0030))
+#define SOC_VENC_VEDU_VCPI_LLILD_ADDR_L_ADDR(base) ((base) + (0x0034))
+#define SOC_VENC_VEDU_VCPI_LLILD_ADDR_H_ADDR(base) ((base) + (0x0038))
+#define SOC_VENC_VEDU_VCPI_RC_ENABLE_ADDR(base) ((base) + (0x003C))
+#define SOC_VENC_VEDU_VLCST_PTBITS_EN_ADDR(base) ((base) + (0x0040))
+#define SOC_VENC_VEDU_VLCST_PTBITS_ADDR(base) ((base) + (0x0044))
+#define SOC_VENC_VEDU_PPFD_ST_CFG_ADDR(base) ((base) + (0x0048))
+#define SOC_VENC_VEDU_VCPI_QPCFG_ADDR(base) ((base) + (0x004C))
+#define SOC_VENC_VEDU_QPG_MAX_MIN_QP_ADDR(base) ((base) + (0x0050))
+#define SOC_VENC_VEDU_QPG_SMART_REG_ADDR(base) ((base) + (0x0054))
+#define SOC_VENC_VEDU_QPG_ROW_TARGET_BITS_ADDR(base) ((base) + (0x0058))
+#define SOC_VENC_VEDU_QPG_AVERAGE_LCU_BITS_ADDR(base) ((base) + (0x005C))
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG0_ADDR(base) ((base) + (0x0060))
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG1_ADDR(base) ((base) + (0x0064))
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG2_ADDR(base) ((base) + (0x0068))
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG3_ADDR(base) ((base) + (0x006C))
+#define SOC_VENC_VEDU_QPG_DELTA_LEVEL_ADDR(base) ((base) + (0x0070))
+#define SOC_VENC_VEDU_QPG_MADI_SWITCH_THR_ADDR(base) ((base) + (0x0074))
+#define SOC_VENC_VEDU_QPG_CURR_SAD_EN_ADDR(base) ((base) + (0x0078))
+#define SOC_VENC_VEDU_QPG_CURR_SAD_LEVEL_ADDR(base) ((base) + (0x007C))
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH0_ADDR(base) ((base) + (0x0080))
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH1_ADDR(base) ((base) + (0x0084))
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH2_ADDR(base) ((base) + (0x0088))
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH3_ADDR(base) ((base) + (0x008C))
+#define SOC_VENC_VEDU_LUMA_RC_ADDR(base) ((base) + (0x0090))
+#define SOC_VENC_VEDU_LUMA_LEVEL_ADDR(base) ((base) + (0x0094))
+#define SOC_VENC_VEDU_LUMA_THRESH0_ADDR(base) ((base) + (0x0098))
+#define SOC_VENC_VEDU_LUMA_THRESH1_ADDR(base) ((base) + (0x009C))
+#define SOC_VENC_VEDU_LUMA_THRESH2_ADDR(base) ((base) + (0x00A0))
+#define SOC_VENC_VEDU_LUMA_THRESH3_ADDR(base) ((base) + (0x00A4))
+#define SOC_VENC_VEDU_VCPI_BG_ENABLE_ADDR(base) ((base) + (0x00A8))
+#define SOC_VENC_VEDU_VCPI_BG_FLT_PARA0_ADDR(base) ((base) + (0x00AC))
+#define SOC_VENC_VEDU_VCPI_BG_FLT_PARA1_ADDR(base) ((base) + (0x00B0))
+#define SOC_VENC_VEDU_VCPI_BG_FLT_PARA2_ADDR(base) ((base) + (0x00B4))
+#define SOC_VENC_VEDU_VCPI_BG_THR0_ADDR(base) ((base) + (0x00B8))
+#define SOC_VENC_VEDU_VCPI_BG_THR1_ADDR(base) ((base) + (0x00BC))
+#define SOC_VENC_VEDU_VCPI_BG_STRIDE_ADDR(base) ((base) + (0x00C0))
+#define SOC_VENC_VEDU_VCPI_BG_EXT_STRIDE_ADDR(base) ((base) + (0x00C4))
+#define SOC_VENC_VEDU_VCPI_BGL_ADDR_L_ADDR(base) ((base) + (0x00C8))
+#define SOC_VENC_VEDU_VCPI_BGL_ADDR_H_ADDR(base) ((base) + (0x00CC))
+#define SOC_VENC_VEDU_VCPI_BGC_ADDR_L_ADDR(base) ((base) + (0x00D0))
+#define SOC_VENC_VEDU_VCPI_BGC_ADDR_H_ADDR(base) ((base) + (0x00D4))
+#define SOC_VENC_VEDU_VCPI_BGL_EXT_ADDR_L_ADDR(base) ((base) + (0x00D8))
+#define SOC_VENC_VEDU_VCPI_BGL_EXT_ADDR_H_ADDR(base) ((base) + (0x00DC))
+#define SOC_VENC_VEDU_VCPI_BGC_EXT_ADDR_L_ADDR(base) ((base) + (0x00E0))
+#define SOC_VENC_VEDU_VCPI_BGC_EXT_ADDR_H_ADDR(base) ((base) + (0x00E4))
+#define SOC_VENC_VEDU_VCPI_BGINF_ADDR_L_ADDR(base) ((base) + (0x00E8))
+#define SOC_VENC_VEDU_VCPI_BGINF_ADDR_H_ADDR(base) ((base) + (0x00EC))
+#define SOC_VENC_VEDU_VCPI_OUTSTD_ADDR(base) ((base) + (0x00F0))
+#define SOC_VENC_VEDU_VCTRL_LCU_BASELINE_ADDR(base) ((base) + (0x00F4))
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_0_ADDR(base) ((base) + (0x00F8))
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_1_ADDR(base) ((base) + (0x00FC))
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_2_ADDR(base) ((base) + (0x0100))
+#define SOC_VENC_VEDU_VCPI_TPMEM_CTRL_0_ADDR(base) ((base) + (0x0104))
+#define SOC_VENC_VEDU_VCPI_TPMEM_CTRL_1_ADDR(base) ((base) + (0x0108))
+#define SOC_VENC_VEDU_RESERVED_06_ADDR(base) ((base) + (0x010C))
+#define SOC_VENC_VEDU_CURLD_GCFG_ADDR(base) ((base) + (0x0200))
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_ADDR(base) ((base) + (0x0204))
+#define SOC_VENC_VEDU_VCPI_STRFMT_ADDR(base) ((base) + (0x0208))
+#define SOC_VENC_VEDU_VCPI_INTRA_INTER_CU_EN_ADDR(base) ((base) + (0x020C))
+#define SOC_VENC_VEDU_VCPI_CROSS_TILE_SLC_ADDR(base) ((base) + (0x0210))
+#define SOC_VENC_VEDU_VCPI_MULTISLC_ADDR(base) ((base) + (0x0214))
+#define SOC_VENC_VEDU_VCTRL_LCU_TARGET_BIT_ADDR(base) ((base) + (0x0218))
+#define SOC_VENC_VEDU_VCPI_SW_L0_SIZE_ADDR(base) ((base) + (0x021C))
+#define SOC_VENC_VEDU_VCPI_SW_L1_SIZE_ADDR(base) ((base) + (0x0220))
+#define SOC_VENC_VEDU_VCPI_I_SLC_INSERT_ADDR(base) ((base) + (0x0224))
+#define SOC_VENC_VEDU_PME_SAFE_CFG_ADDR(base) ((base) + (0x0228))
+#define SOC_VENC_VEDU_PME_IBLK_REFRESH_ADDR(base) ((base) + (0x022C))
+#define SOC_VENC_VEDU_PME_IBLK_REFRESH_NUM_ADDR(base) ((base) + (0x0230))
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_ADDR(base) ((base) + (0x0234))
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_1EN_ADDR(base) ((base) + (0x0238))
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_ADDR(base) ((base) + (0x023C))
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_1EN_ADDR(base) ((base) + (0x0240))
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_ADDR(base) ((base) + (0x0244))
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_1EN_ADDR(base) ((base) + (0x0248))
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_ADDR(base) ((base) + (0x024C))
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_1EN_ADDR(base) ((base) + (0x0250))
+#define SOC_VENC_VEDU_PACK_CU_PARAMETER_ADDR(base) ((base) + (0x0254))
+#define SOC_VENC_VEDU_PACK_PCM_PARAMETER_ADDR(base) ((base) + (0x0258))
+#define SOC_VENC_VEDU_QPG_READLINE_INTERVAL_ADDR(base) ((base) + (0x025C))
+#define SOC_VENC_VEDU_PMV_READLINE_INTERVAL_ADDR(base) ((base) + (0x0260))
+#define SOC_VENC_VEDU_RGB2YUV_COEF_P0_ADDR(base) ((base) + (0x0264))
+#define SOC_VENC_VEDU_RGB2YUV_COEF_P1_ADDR(base) ((base) + (0x0268))
+#define SOC_VENC_VEDU_RGB2YUV_COEF_P2_ADDR(base) ((base) + (0x026C))
+#define SOC_VENC_VEDU_RGB2YUV_OFFSET_ADDR(base) ((base) + (0x0270))
+#define SOC_VENC_VEDU_RGB2YUV_CLIP_THR_Y_ADDR(base) ((base) + (0x0274))
+#define SOC_VENC_VEDU_RGB2YUV_CLIP_THR_C_ADDR(base) ((base) + (0x0278))
+#define SOC_VENC_VEDU_RGB2YUV_SHIFT_WIDTH_ADDR(base) ((base) + (0x027C))
+#define SOC_VENC_VEDU_VCPI_OSD_POS_0_ADDR(base) ((base) + (0x0280))
+#define SOC_VENC_VEDU_VCPI_OSD_POS_1_ADDR(base) ((base) + (0x0284))
+#define SOC_VENC_VEDU_VCPI_OSD_POS_2_ADDR(base) ((base) + (0x0288))
+#define SOC_VENC_VEDU_VCPI_OSD_POS_3_ADDR(base) ((base) + (0x028C))
+#define SOC_VENC_VEDU_VCPI_OSD_POS_4_ADDR(base) ((base) + (0x0290))
+#define SOC_VENC_VEDU_VCPI_OSD_POS_5_ADDR(base) ((base) + (0x0294))
+#define SOC_VENC_VEDU_VCPI_OSD_POS_6_ADDR(base) ((base) + (0x0298))
+#define SOC_VENC_VEDU_VCPI_OSD_POS_7_ADDR(base) ((base) + (0x029C))
+#define SOC_VENC_VEDU_VCPI_OSD_SIZE_0_ADDR(base) ((base) + (0x02A0))
+#define SOC_VENC_VEDU_VCPI_OSD_SIZE_1_ADDR(base) ((base) + (0x02A4))
+#define SOC_VENC_VEDU_VCPI_OSD_SIZE_2_ADDR(base) ((base) + (0x02A8))
+#define SOC_VENC_VEDU_VCPI_OSD_SIZE_3_ADDR(base) ((base) + (0x02AC))
+#define SOC_VENC_VEDU_VCPI_OSD_SIZE_4_ADDR(base) ((base) + (0x02B0))
+#define SOC_VENC_VEDU_VCPI_OSD_SIZE_5_ADDR(base) ((base) + (0x02B4))
+#define SOC_VENC_VEDU_VCPI_OSD_SIZE_6_ADDR(base) ((base) + (0x02B8))
+#define SOC_VENC_VEDU_VCPI_OSD_SIZE_7_ADDR(base) ((base) + (0x02BC))
+#define SOC_VENC_VEDU_VCPI_OSD_LAYERID_ADDR(base) ((base) + (0x02C0))
+#define SOC_VENC_VEDU_VCPI_OSD_QP0_ADDR(base) ((base) + (0x02C4))
+#define SOC_VENC_VEDU_VCPI_OSD_QP1_ADDR(base) ((base) + (0x02C8))
+#define SOC_VENC_VEDU_CURLD_OSD01_ALPHA_ADDR(base) ((base) + (0x02CC))
+#define SOC_VENC_VEDU_CURLD_OSD23_ALPHA_ADDR(base) ((base) + (0x02D0))
+#define SOC_VENC_VEDU_CURLD_OSD45_ALPHA_ADDR(base) ((base) + (0x02D4))
+#define SOC_VENC_VEDU_CURLD_OSD67_ALPHA_ADDR(base) ((base) + (0x02D8))
+#define SOC_VENC_VEDU_CURLD_OSD_GALPHA0_ADDR(base) ((base) + (0x02DC))
+#define SOC_VENC_VEDU_CURLD_OSD_GALPHA1_ADDR(base) ((base) + (0x02E0))
+#define SOC_VENC_VEDU_TBLDST_READLINE_INTERVAL_ADDR(base) ((base) + (0x02E4))
+#define SOC_VENC_VEDU_RESERVED_07_ADDR(base) ((base) + (0x02E8))
+#define SOC_VENC_VEDU_CURLD_OSD0_ADDR_L_ADDR(base) ((base) + (0x0300))
+#define SOC_VENC_VEDU_CURLD_OSD0_ADDR_H_ADDR(base) ((base) + (0x0304))
+#define SOC_VENC_VEDU_CURLD_OSD1_ADDR_L_ADDR(base) ((base) + (0x0308))
+#define SOC_VENC_VEDU_CURLD_OSD1_ADDR_H_ADDR(base) ((base) + (0x030C))
+#define SOC_VENC_VEDU_CURLD_OSD2_ADDR_L_ADDR(base) ((base) + (0x0310))
+#define SOC_VENC_VEDU_CURLD_OSD2_ADDR_H_ADDR(base) ((base) + (0x0314))
+#define SOC_VENC_VEDU_CURLD_OSD3_ADDR_L_ADDR(base) ((base) + (0x0318))
+#define SOC_VENC_VEDU_CURLD_OSD3_ADDR_H_ADDR(base) ((base) + (0x031C))
+#define SOC_VENC_VEDU_CURLD_OSD4_ADDR_L_ADDR(base) ((base) + (0x0320))
+#define SOC_VENC_VEDU_CURLD_OSD4_ADDR_H_ADDR(base) ((base) + (0x0324))
+#define SOC_VENC_VEDU_CURLD_OSD5_ADDR_L_ADDR(base) ((base) + (0x0328))
+#define SOC_VENC_VEDU_CURLD_OSD5_ADDR_H_ADDR(base) ((base) + (0x032C))
+#define SOC_VENC_VEDU_CURLD_OSD6_ADDR_L_ADDR(base) ((base) + (0x0330))
+#define SOC_VENC_VEDU_CURLD_OSD6_ADDR_H_ADDR(base) ((base) + (0x0334))
+#define SOC_VENC_VEDU_CURLD_OSD7_ADDR_L_ADDR(base) ((base) + (0x0338))
+#define SOC_VENC_VEDU_CURLD_OSD7_ADDR_H_ADDR(base) ((base) + (0x033C))
+#define SOC_VENC_VEDU_CURLD_OSD01_STRIDE_ADDR(base) ((base) + (0x0340))
+#define SOC_VENC_VEDU_CURLD_OSD23_STRIDE_ADDR(base) ((base) + (0x0344))
+#define SOC_VENC_VEDU_CURLD_OSD45_STRIDE_ADDR(base) ((base) + (0x0348))
+#define SOC_VENC_VEDU_CURLD_OSD67_STRIDE_ADDR(base) ((base) + (0x034C))
+#define SOC_VENC_VEDU_NEW_CFG0_ADDR(base) ((base) + (0x0350))
+#define SOC_VENC_VEDU_RESERVED_08_ADDR(base) ((base) + (0x0354))
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_ADDR(base) ((base) + (0x0380))
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG1_ADDR(base) ((base) + (0x0384))
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG2_ADDR(base) ((base) + (0x0388))
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_0_ADDR(base) ((base) + (0x038C))
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_1_ADDR(base) ((base) + (0x0390))
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_2_ADDR(base) ((base) + (0x0394))
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_3_ADDR(base) ((base) + (0x0398))
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_4_ADDR(base) ((base) + (0x039C))
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_5_ADDR(base) ((base) + (0x03A0))
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_6_ADDR(base) ((base) + (0x03A4))
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_7_ADDR(base) ((base) + (0x03A8))
+#define SOC_VENC_VEDU_VCTRL_ROI_START_0_ADDR(base) ((base) + (0x03AC))
+#define SOC_VENC_VEDU_VCTRL_ROI_START_1_ADDR(base) ((base) + (0x03B0))
+#define SOC_VENC_VEDU_VCTRL_ROI_START_2_ADDR(base) ((base) + (0x03B4))
+#define SOC_VENC_VEDU_VCTRL_ROI_START_3_ADDR(base) ((base) + (0x03B8))
+#define SOC_VENC_VEDU_VCTRL_ROI_START_4_ADDR(base) ((base) + (0x03BC))
+#define SOC_VENC_VEDU_VCTRL_ROI_START_5_ADDR(base) ((base) + (0x03C0))
+#define SOC_VENC_VEDU_VCTRL_ROI_START_6_ADDR(base) ((base) + (0x03C4))
+#define SOC_VENC_VEDU_VCTRL_ROI_START_7_ADDR(base) ((base) + (0x03C8))
+#define SOC_VENC_VEDU_RESERVED_09_ADDR(base) ((base) + (0x03CC))
+#define SOC_VENC_VEDU_TILE_MODE_ADDR(base) ((base) + (0x0400))
+#define SOC_VENC_VEDU_VCPI_PICSIZE_PIX_ADDR(base) ((base) + (0x0404))
+#define SOC_VENC_VEDU_TILE_POS_ADDR(base) ((base) + (0x0408))
+#define SOC_VENC_VEDU_VCPI_TILE_SIZE_ADDR(base) ((base) + (0x040C))
+#define SOC_VENC_VEDU_VCPI_VLC_CONFIG_ADDR(base) ((base) + (0x0410))
+#define SOC_VENC_VEDU_VCPI_REF_FLAG_ADDR(base) ((base) + (0x0414))
+#define SOC_VENC_VEDU_PMV_TMV_EN_ADDR(base) ((base) + (0x0418))
+#define SOC_VENC_VEDU_VCPI_TMV_LOAD_ADDR(base) ((base) + (0x041C))
+#define SOC_VENC_VEDU_PMV_POC_0_ADDR(base) ((base) + (0x0420))
+#define SOC_VENC_VEDU_PMV_POC_1_ADDR(base) ((base) + (0x0424))
+#define SOC_VENC_VEDU_PMV_POC_2_ADDR(base) ((base) + (0x0428))
+#define SOC_VENC_VEDU_PMV_POC_3_ADDR(base) ((base) + (0x042C))
+#define SOC_VENC_VEDU_PMV_POC_4_ADDR(base) ((base) + (0x0430))
+#define SOC_VENC_VEDU_PMV_POC_5_ADDR(base) ((base) + (0x0434))
+#define SOC_VENC_VEDU_CABAC_GLB_CFG_ADDR(base) ((base) + (0x0438))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_SIZE_ADDR(base) ((base) + (0x043C))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART1_ADDR(base) ((base) + (0x0440))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG1_ADDR(base) ((base) + (0x0444))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG2_ADDR(base) ((base) + (0x0448))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG3_ADDR(base) ((base) + (0x044C))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG4_ADDR(base) ((base) + (0x0450))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG5_ADDR(base) ((base) + (0x0454))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG6_ADDR(base) ((base) + (0x0458))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG7_ADDR(base) ((base) + (0x045C))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG8_ADDR(base) ((base) + (0x0460))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_SIZE_I_ADDR(base) ((base) + (0x0464))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART1_I_ADDR(base) ((base) + (0x0468))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG1_I_ADDR(base) ((base) + (0x046C))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG2_I_ADDR(base) ((base) + (0x0470))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG3_I_ADDR(base) ((base) + (0x0474))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG4_I_ADDR(base) ((base) + (0x0478))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG5_I_ADDR(base) ((base) + (0x047C))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG6_I_ADDR(base) ((base) + (0x0480))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG7_I_ADDR(base) ((base) + (0x0484))
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG8_I_ADDR(base) ((base) + (0x0488))
+#define SOC_VENC_VEDU_VLC_SLCHDRSTRM0_ADDR(base) ((base) + (0x048C))
+#define SOC_VENC_VEDU_VLC_SLCHDRSTRM1_ADDR(base) ((base) + (0x0490))
+#define SOC_VENC_VEDU_VLC_SLCHDRSTRM2_ADDR(base) ((base) + (0x0494))
+#define SOC_VENC_VEDU_VLC_SLCHDRSTRM3_ADDR(base) ((base) + (0x0498))
+#define SOC_VENC_VEDU_VLC_REORDERSTRM0_ADDR(base) ((base) + (0x049C))
+#define SOC_VENC_VEDU_VLC_REORDERSTRM1_ADDR(base) ((base) + (0x04A0))
+#define SOC_VENC_VEDU_VLC_MARKINGSTRM0_ADDR(base) ((base) + (0x04A4))
+#define SOC_VENC_VEDU_VLC_MARKINGSTRM1_ADDR(base) ((base) + (0x04A8))
+#define SOC_VENC_VEDU_VLC_SLCHDRPARA_ADDR(base) ((base) + (0x04AC))
+#define SOC_VENC_VEDU_VLC_SVC_ADDR(base) ((base) + (0x04B0))
+#define SOC_VENC_VEDU_VLC_SLCHDRSTRM0_I_ADDR(base) ((base) + (0x04B4))
+#define SOC_VENC_VEDU_VLC_SLCHDRSTRM1_I_ADDR(base) ((base) + (0x04B8))
+#define SOC_VENC_VEDU_VLC_SLCHDRSTRM2_I_ADDR(base) ((base) + (0x04BC))
+#define SOC_VENC_VEDU_VLC_SLCHDRSTRM3_I_ADDR(base) ((base) + (0x04C0))
+#define SOC_VENC_VEDU_VLC_REORDERSTRM0_I_ADDR(base) ((base) + (0x04C4))
+#define SOC_VENC_VEDU_VLC_REORDERSTRM1_I_ADDR(base) ((base) + (0x04C8))
+#define SOC_VENC_VEDU_VLC_MARKINGSTRM0_I_ADDR(base) ((base) + (0x04CC))
+#define SOC_VENC_VEDU_VLC_MARKINGSTRM1_I_ADDR(base) ((base) + (0x04D0))
+#define SOC_VENC_VEDU_VLC_SLCHDRPARA_I_ADDR(base) ((base) + (0x04D4))
+#define SOC_VENC_VEDU_VLCST_STRMBUFLEN_ADDR(base) ((base) + (0x04D8))
+#define SOC_VENC_VEDU_VLCST_SLC_CFG0_ADDR(base) ((base) + (0x04DC))
+#define SOC_VENC_VEDU_VLCST_SLC_CFG1_ADDR(base) ((base) + (0x04E0))
+#define SOC_VENC_VEDU_VLCST_SLC_CFG2_ADDR(base) ((base) + (0x04E4))
+#define SOC_VENC_VEDU_VLCST_SLC_CFG3_ADDR(base) ((base) + (0x04E8))
+#define SOC_VENC_VEDU_ICE_V2R1_SEG_256X1_DCMP_CTRL_ADDR(base) ((base) + (0x04EC))
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG0_ADDR(base) ((base) + (0x04F0))
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG1_ADDR(base) ((base) + (0x04F4))
+#define SOC_VENC_VEDU_RESERVED_10_ADDR(base) ((base) + (0x04F8))
+#define SOC_VENC_VEDU_QPG_LOWLUMA_ADDR(base) ((base) + (0x0500))
+#define SOC_VENC_VEDU_QPG_HEDGE_ADDR(base) ((base) + (0x0504))
+#define SOC_VENC_VEDU_QPG_HEDGE_MOVE_ADDR(base) ((base) + (0x0508))
+#define SOC_VENC_VEDU_QPG_SKIN_ADDR(base) ((base) + (0x050C))
+#define SOC_VENC_VEDU_QPG_INTRA_DET_ADDR(base) ((base) + (0x0510))
+#define SOC_VENC_VEDU_QPG_H264_SMOOTH_ADDR(base) ((base) + (0x0514))
+#define SOC_VENC_VEDU_QPG_CU32_DELTA_ADDR(base) ((base) + (0x0518))
+#define SOC_VENC_VEDU_QPG_LAMBDA_MODE_ADDR(base) ((base) + (0x051C))
+#define SOC_VENC_VEDU_QPG_QP_RESTRAIN_ADDR(base) ((base) + (0x0520))
+#define SOC_VENC_VEDU_QPG_CU_MIN_SAD_THRESH_0_ADDR(base) ((base) + (0x0524))
+#define SOC_VENC_VEDU_QPG_CU_MIN_SAD_REG_ADDR(base) ((base) + (0x0528))
+#define SOC_VENC_VEDU_QPG_FLAT_REGION_ADDR(base) ((base) + (0x052C))
+#define SOC_VENC_VEDU_QPG_RES_COEF_ADDR(base) ((base) + (0x0530))
+#define SOC_VENC_VEDU_TILE_RC_ADDR(base) ((base) + (0x0534))
+#define SOC_VENC_VEDU_CHROMA_PROTECT_ADDR(base) ((base) + (0x0538))
+#define SOC_VENC_VEDU_PME_QPG_RC_THR0_ADDR(base) ((base) + (0x053C))
+#define SOC_VENC_VEDU_PME_QPG_RC_THR1_ADDR(base) ((base) + (0x0540))
+#define SOC_VENC_VEDU_PME_LOW_LUMA_THR_ADDR(base) ((base) + (0x0544))
+#define SOC_VENC_VEDU_PME_CHROMA_FLAT_ADDR(base) ((base) + (0x0548))
+#define SOC_VENC_VEDU_PME_LUMA_FLAT_ADDR(base) ((base) + (0x054C))
+#define SOC_VENC_VEDU_PME_MADI_FLAT_ADDR(base) ((base) + (0x0550))
+#define SOC_VENC_VEDU_VLCST_DESCRIPTOR_ADDR(base) ((base) + (0x0554))
+#define SOC_VENC_VEDU_PPFD_ST_LEN0_ADDR(base) ((base) + (0x0558))
+#define SOC_VENC_VEDU_CURLD_CLIP_LUMA_ADDR(base) ((base) + (0x055C))
+#define SOC_VENC_VEDU_CURLD_CLIP_CHROMA_ADDR(base) ((base) + (0x0560))
+#define SOC_VENC_VEDU_TQITQ_DEADZONE_ADDR(base) ((base) + (0x0564))
+#define SOC_VENC_VEDU_VCPI_PME_PARAM_ADDR(base) ((base) + (0x0568))
+#define SOC_VENC_VEDU_VCPI_PIC_STRONG_EN_ADDR(base) ((base) + (0x056C))
+#define SOC_VENC_VEDU_VCPI_PINTRA_THRESH0_ADDR(base) ((base) + (0x0570))
+#define SOC_VENC_VEDU_VCPI_PINTRA_THRESH1_ADDR(base) ((base) + (0x0574))
+#define SOC_VENC_VEDU_VCPI_PINTRA_THRESH2_ADDR(base) ((base) + (0x0578))
+#define SOC_VENC_VEDU_VCPI_INTRA32_LOW_POWER_ADDR(base) ((base) + (0x057C))
+#define SOC_VENC_VEDU_VCPI_INTRA16_LOW_POWER_ADDR(base) ((base) + (0x0580))
+#define SOC_VENC_VEDU_VCPI_INTRA_REDUCE_RDO_NUM_ADDR(base) ((base) + (0x0584))
+#define SOC_VENC_VEDU_VCPI_NOFORCEZERO_ADDR(base) ((base) + (0x0588))
+#define SOC_VENC_VEDU_PME_SKIP_LARGE_RES_ADDR(base) ((base) + (0x058C))
+#define SOC_VENC_VEDU_PME_SKIN_SAD_THR_ADDR(base) ((base) + (0x0590))
+#define SOC_VENC_VEDU_VCTRL_NM_ACOFFSET_DENOISE_ADDR(base) ((base) + (0x0594))
+#define SOC_VENC_VEDU_VCTRL_NM_ENGTHR_DENOISE_ADDR(base) ((base) + (0x0598))
+#define SOC_VENC_VEDU_VCTRL_NM_TU8_DENOISE_ADDR(base) ((base) + (0x059C))
+#define SOC_VENC_VEDU_VCTRL_SK_ACOFFSET_DENOISE_ADDR(base) ((base) + (0x05A0))
+#define SOC_VENC_VEDU_VCTRL_SK_ENGTHR_DENOISE_ADDR(base) ((base) + (0x05A4))
+#define SOC_VENC_VEDU_VCTRL_SK_TU8_DENOISE_ADDR(base) ((base) + (0x05A8))
+#define SOC_VENC_VEDU_VCTRL_ST_ACOFFSET_DENOISE_ADDR(base) ((base) + (0x05AC))
+#define SOC_VENC_VEDU_VCTRL_ST_ENGTHR_DENOISE_ADDR(base) ((base) + (0x05B0))
+#define SOC_VENC_VEDU_VCTRL_ST_TU8_DENOISE_ADDR(base) ((base) + (0x05B4))
+#define SOC_VENC_VEDU_VCTRL_SE_ACOFFSET_DENOISE_ADDR(base) ((base) + (0x05B8))
+#define SOC_VENC_VEDU_VCTRL_SE_ENGTHR_DENOISE_ADDR(base) ((base) + (0x05BC))
+#define SOC_VENC_VEDU_VCTRL_SE_TU8_DENOISE_ADDR(base) ((base) + (0x05C0))
+#define SOC_VENC_VEDU_VCTRL_SELM_ACOFFSET_DENOISE_ADDR(base) ((base) + (0x05C4))
+#define SOC_VENC_VEDU_VCTRL_SELM_ENGTHR_DENOISE_ADDR(base) ((base) + (0x05C8))
+#define SOC_VENC_VEDU_VCTRL_SELM_TU8_DENOISE_ADDR(base) ((base) + (0x05CC))
+#define SOC_VENC_VEDU_VCTRL_WS_ACOFFSET_DENOISE_ADDR(base) ((base) + (0x05D0))
+#define SOC_VENC_VEDU_VCTRL_WS_ENGTHR_DENOISE_ADDR(base) ((base) + (0x05D4))
+#define SOC_VENC_VEDU_VCTRL_WS_TU8_DENOISE_ADDR(base) ((base) + (0x05D8))
+#define SOC_VENC_VEDU_VCTRL_SSSE_ACOFFSET_DENOISE_ADDR(base) ((base) + (0x05DC))
+#define SOC_VENC_VEDU_VCTRL_SSSE_ENGTHR_DENOISE_ADDR(base) ((base) + (0x05E0))
+#define SOC_VENC_VEDU_VCTRL_SSSE_TU8_DENOISE_ADDR(base) ((base) + (0x05E4))
+#define SOC_VENC_VEDU_RESERVED_11_ADDR(base) ((base) + (0x05E8))
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_0_ADDR(base) ((base) + (0x0600))
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_1_ADDR(base) ((base) + (0x0604))
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_2_ADDR(base) ((base) + (0x0608))
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_0_ADDR(base) ((base) + (0x060C))
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_1_ADDR(base) ((base) + (0x0610))
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_2_ADDR(base) ((base) + (0x0614))
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_0_ADDR(base) ((base) + (0x0618))
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_1_ADDR(base) ((base) + (0x061C))
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_2_ADDR(base) ((base) + (0x0620))
+#define SOC_VENC_VEDU_PME_NEW_COST_ADDR(base) ((base) + (0x0624))
+#define SOC_VENC_VEDU_PME_COST_OFFSET_ADDR(base) ((base) + (0x0628))
+#define SOC_VENC_VEDU_PME_ADJUST_PMEMV_H264_ADDR(base) ((base) + (0x062C))
+#define SOC_VENC_VEDU_PME_INTRABLK_DET_ADDR(base) ((base) + (0x0630))
+#define SOC_VENC_VEDU_PME_INTRABLK_DET_THR_ADDR(base) ((base) + (0x0634))
+#define SOC_VENC_VEDU_PME_SKIN_THR_ADDR(base) ((base) + (0x0638))
+#define SOC_VENC_VEDU_PME_STRONG_EDGE_ADDR(base) ((base) + (0x063C))
+#define SOC_VENC_VEDU_PME_LARGE_MOVE_THR_ADDR(base) ((base) + (0x0640))
+#define SOC_VENC_VEDU_PME_INTER_STRONG_EDGE_ADDR(base) ((base) + (0x0644))
+#define SOC_VENC_VEDU_PME_CHROMA_STRONG_EDGE_ADDR(base) ((base) + (0x0648))
+#define SOC_VENC_VEDU_CHROMA_SAD_THR_ADDR(base) ((base) + (0x064C))
+#define SOC_VENC_VEDU_CHROMA_FG_THR_ADDR(base) ((base) + (0x0650))
+#define SOC_VENC_VEDU_CHROMA_BG_THR_ADDR(base) ((base) + (0x0654))
+#define SOC_VENC_VEDU_CHROMA_SUM_FG_THR_ADDR(base) ((base) + (0x0658))
+#define SOC_VENC_VEDU_CHROMA_SUM_BG_THR_ADDR(base) ((base) + (0x065C))
+#define SOC_VENC_VEDU_CHROMA_FG_COUNT_THR_ADDR(base) ((base) + (0x0660))
+#define SOC_VENC_VEDU_CHROMA_BG_COUNT_THR_ADDR(base) ((base) + (0x0664))
+#define SOC_VENC_VEDU_PME_MOVE_SCENE_THR_ADDR(base) ((base) + (0x0668))
+#define SOC_VENC_VEDU_PME_NEW_MADI_TH_ADDR(base) ((base) + (0x066C))
+#define SOC_VENC_VEDU_PME_NEW_LAMBDA_ADDR(base) ((base) + (0x0670))
+#define SOC_VENC_VEDU_VCPI_DBLKCFG_ADDR(base) ((base) + (0x0674))
+#define SOC_VENC_VEDU_FME_BIAS_COST0_ADDR(base) ((base) + (0x0678))
+#define SOC_VENC_VEDU_FME_BIAS_COST1_ADDR(base) ((base) + (0x067C))
+#define SOC_VENC_VEDU_MRG_BIAS_COST0_ADDR(base) ((base) + (0x0680))
+#define SOC_VENC_VEDU_MRG_BIAS_COST1_ADDR(base) ((base) + (0x0684))
+#define SOC_VENC_VEDU_MRG_ABS_OFFSET0_ADDR(base) ((base) + (0x0688))
+#define SOC_VENC_VEDU_MRG_ABS_OFFSET1_ADDR(base) ((base) + (0x068C))
+#define SOC_VENC_VEDU_MRG_ADJ_WEIGHT_ADDR(base) ((base) + (0x0690))
+#define SOC_VENC_VEDU_INTRA_BIT_WEIGHT_ADDR(base) ((base) + (0x0694))
+#define SOC_VENC_VEDU_INTRA_RDO_COST_OFFSET_0_ADDR(base) ((base) + (0x0698))
+#define SOC_VENC_VEDU_INTRA_RDO_COST_OFFSET_1_ADDR(base) ((base) + (0x069C))
+#define SOC_VENC_VEDU_INTRA_NO_DC_COST_OFFSET_0_ADDR(base) ((base) + (0x06A0))
+#define SOC_VENC_VEDU_INTRA_NO_DC_COST_OFFSET_1_ADDR(base) ((base) + (0x06A4))
+#define SOC_VENC_VEDU_INTRA_RDO_COST_OFFSET_3_ADDR(base) ((base) + (0x06A8))
+#define SOC_VENC_VEDU_SEL_OFFSET_STRENGTH_ADDR(base) ((base) + (0x06AC))
+#define SOC_VENC_VEDU_SEL_CU32_DC_AC_TH_OFFSET_ADDR(base) ((base) + (0x06B0))
+#define SOC_VENC_VEDU_SEL_CU32_QP_TH_ADDR(base) ((base) + (0x06B4))
+#define SOC_VENC_VEDU_SEL_RES_DC_AC_TH_ADDR(base) ((base) + (0x06B8))
+#define SOC_VENC_VEDU_RESERVED_12_ADDR(base) ((base) + (0x06BC))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG00_ADDR(base) ((base) + (0x0700))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG01_ADDR(base) ((base) + (0x0704))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG02_ADDR(base) ((base) + (0x0708))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG03_ADDR(base) ((base) + (0x070C))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG04_ADDR(base) ((base) + (0x0710))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG05_ADDR(base) ((base) + (0x0714))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG06_ADDR(base) ((base) + (0x0718))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG07_ADDR(base) ((base) + (0x071C))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG08_ADDR(base) ((base) + (0x0720))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG09_ADDR(base) ((base) + (0x0724))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG10_ADDR(base) ((base) + (0x0728))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG11_ADDR(base) ((base) + (0x072C))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG12_ADDR(base) ((base) + (0x0730))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG13_ADDR(base) ((base) + (0x0734))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG14_ADDR(base) ((base) + (0x0738))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG15_ADDR(base) ((base) + (0x073C))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG16_ADDR(base) ((base) + (0x0740))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG17_ADDR(base) ((base) + (0x0744))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG18_ADDR(base) ((base) + (0x0748))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG19_ADDR(base) ((base) + (0x074C))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG20_ADDR(base) ((base) + (0x0750))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG21_ADDR(base) ((base) + (0x0754))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG22_ADDR(base) ((base) + (0x0758))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG23_ADDR(base) ((base) + (0x075C))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG24_ADDR(base) ((base) + (0x0760))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG25_ADDR(base) ((base) + (0x0764))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG26_ADDR(base) ((base) + (0x0768))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG27_ADDR(base) ((base) + (0x076C))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG28_ADDR(base) ((base) + (0x0770))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG29_ADDR(base) ((base) + (0x0774))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG30_ADDR(base) ((base) + (0x0778))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG31_ADDR(base) ((base) + (0x077C))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG32_ADDR(base) ((base) + (0x0780))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG33_ADDR(base) ((base) + (0x0784))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG34_ADDR(base) ((base) + (0x0788))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG35_ADDR(base) ((base) + (0x078C))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG36_ADDR(base) ((base) + (0x0790))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG37_ADDR(base) ((base) + (0x0794))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG38_ADDR(base) ((base) + (0x0798))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG39_ADDR(base) ((base) + (0x079C))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG40_ADDR(base) ((base) + (0x07A0))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG41_ADDR(base) ((base) + (0x07A4))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG42_ADDR(base) ((base) + (0x07A8))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG43_ADDR(base) ((base) + (0x07AC))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG44_ADDR(base) ((base) + (0x07B0))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG45_ADDR(base) ((base) + (0x07B4))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG46_ADDR(base) ((base) + (0x07B8))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG47_ADDR(base) ((base) + (0x07BC))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG48_ADDR(base) ((base) + (0x07C0))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG49_ADDR(base) ((base) + (0x07C4))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG50_ADDR(base) ((base) + (0x07C8))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG51_ADDR(base) ((base) + (0x07CC))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG52_ADDR(base) ((base) + (0x07D0))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG53_ADDR(base) ((base) + (0x07D4))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG54_ADDR(base) ((base) + (0x07D8))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG55_ADDR(base) ((base) + (0x07DC))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG56_ADDR(base) ((base) + (0x07E0))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG57_ADDR(base) ((base) + (0x07E4))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG58_ADDR(base) ((base) + (0x07E8))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG59_ADDR(base) ((base) + (0x07EC))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG60_ADDR(base) ((base) + (0x07F0))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG61_ADDR(base) ((base) + (0x07F4))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG62_ADDR(base) ((base) + (0x07F8))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG63_ADDR(base) ((base) + (0x07FC))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG64_ADDR(base) ((base) + (0x0800))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG65_ADDR(base) ((base) + (0x0804))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG66_ADDR(base) ((base) + (0x0808))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG67_ADDR(base) ((base) + (0x080C))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG68_ADDR(base) ((base) + (0x0810))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG69_ADDR(base) ((base) + (0x0814))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG70_ADDR(base) ((base) + (0x0818))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG71_ADDR(base) ((base) + (0x081C))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG72_ADDR(base) ((base) + (0x0820))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG73_ADDR(base) ((base) + (0x0824))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG74_ADDR(base) ((base) + (0x0828))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG75_ADDR(base) ((base) + (0x082C))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG76_ADDR(base) ((base) + (0x0830))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG77_ADDR(base) ((base) + (0x0834))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG78_ADDR(base) ((base) + (0x0838))
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG79_ADDR(base) ((base) + (0x083C))
+#define SOC_VENC_VEDU_IME_RDOCFG_ADDR(base) ((base) + (0x0840))
+#define SOC_VENC_VEDU_MRG_FORCE_ZERO_EN_ADDR(base) ((base) + (0x0844))
+#define SOC_VENC_VEDU_VCPI_INTRA8_LOW_POWER_ADDR(base) ((base) + (0x0848))
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_ADDR(base) ((base) + (0x084C))
+#define SOC_VENC_VEDU_IME_INTER_MODE_ADDR(base) ((base) + (0x0850))
+#define SOC_VENC_VEDU_VCPI_PRE_JUDGE_EXT_EN_ADDR(base) ((base) + (0x0854))
+#define SOC_VENC_VEDU_RESERVED_13_ADDR(base) ((base) + (0x0858))
+#define SOC_VENC_VEDU_PME_SW_ADAPT_EN_ADDR(base) ((base) + (0x0880))
+#define SOC_VENC_VEDU_PME_WINDOW_SIZE0_L0_ADDR(base) ((base) + (0x0884))
+#define SOC_VENC_VEDU_PME_WINDOW_SIZE0_L1_ADDR(base) ((base) + (0x0888))
+#define SOC_VENC_VEDU_PME_SKIP_PRE_ADDR(base) ((base) + (0x088C))
+#define SOC_VENC_VEDU_PME_PBLK_PRE1_ADDR(base) ((base) + (0x0890))
+#define SOC_VENC_VEDU_VCPI_PRE_JUDGE_COST_THR_ADDR(base) ((base) + (0x0894))
+#define SOC_VENC_VEDU_VCPI_IBLK_PRE_MV_THR_ADDR(base) ((base) + (0x0898))
+#define SOC_VENC_VEDU_PME_IBLK_COST_THR_ADDR(base) ((base) + (0x089C))
+#define SOC_VENC_VEDU_PME_TR_WEIGHTX_ADDR(base) ((base) + (0x08A0))
+#define SOC_VENC_VEDU_PME_TR_WEIGHTY_ADDR(base) ((base) + (0x08A4))
+#define SOC_VENC_VEDU_PME_SR_WEIGHT_ADDR(base) ((base) + (0x08A8))
+#define SOC_VENC_VEDU_PME_INTRA_LOWPOW_ADDR(base) ((base) + (0x08AC))
+#define SOC_VENC_VEDU_IME_FME_LPOW_THR_ADDR(base) ((base) + (0x08B0))
+#define SOC_VENC_VEDU_PME_SKIP_FLAG_ADDR(base) ((base) + (0x08B4))
+#define SOC_VENC_VEDU_PME_PSW_LPW_ADDR(base) ((base) + (0x08B8))
+#define SOC_VENC_VEDU_PME_PBLK_PRE2_ADDR(base) ((base) + (0x08BC))
+#define SOC_VENC_VEDU_IME_LAYER3TO2_THR_ADDR(base) ((base) + (0x08C0))
+#define SOC_VENC_VEDU_IME_LAYER3TO2_THR1_ADDR(base) ((base) + (0x08C4))
+#define SOC_VENC_VEDU_IME_LAYER3TO1_THR_ADDR(base) ((base) + (0x08C8))
+#define SOC_VENC_VEDU_IME_LAYER3TO1_THR1_ADDR(base) ((base) + (0x08CC))
+#define SOC_VENC_VEDU_FME_PU64_LWP_ADDR(base) ((base) + (0x08D0))
+#define SOC_VENC_VEDU_MRG_FORCE_SKIP_EN_ADDR(base) ((base) + (0x08D4))
+#define SOC_VENC_VEDU_INTRA_CFG_ADDR(base) ((base) + (0x08D8))
+#define SOC_VENC_VEDU_INTRA_LOW_POW_ADDR(base) ((base) + (0x08DC))
+#define SOC_VENC_VEDU_RESERVED_14_ADDR(base) ((base) + (0x08E0))
+#define SOC_VENC_VEDU_VCPI_TUNLCELL_ADDR_L_ADDR(base) ((base) + (0x0900))
+#define SOC_VENC_VEDU_VCPI_TUNLCELL_ADDR_H_ADDR(base) ((base) + (0x0904))
+#define SOC_VENC_VEDU_VCPI_SRC_YADDR_L_ADDR(base) ((base) + (0x0908))
+#define SOC_VENC_VEDU_VCPI_SRC_YADDR_H_ADDR(base) ((base) + (0x090C))
+#define SOC_VENC_VEDU_VCPI_SRC_EXT_YADDR_L_ADDR(base) ((base) + (0x0910))
+#define SOC_VENC_VEDU_VCPI_SRC_EXT_YADDR_H_ADDR(base) ((base) + (0x0914))
+#define SOC_VENC_VEDU_VCPI_SRC_CADDR_L_ADDR(base) ((base) + (0x0918))
+#define SOC_VENC_VEDU_VCPI_SRC_CADDR_H_ADDR(base) ((base) + (0x091C))
+#define SOC_VENC_VEDU_VCPI_SRC_EXT_CADDR_L_ADDR(base) ((base) + (0x0920))
+#define SOC_VENC_VEDU_VCPI_SRC_EXT_CADDR_H_ADDR(base) ((base) + (0x0924))
+#define SOC_VENC_VEDU_VCPI_SRC_VADDR_L_ADDR(base) ((base) + (0x0928))
+#define SOC_VENC_VEDU_VCPI_SRC_VADDR_H_ADDR(base) ((base) + (0x092C))
+#define SOC_VENC_VEDU_VCPI_YH_ADDR_L_ADDR(base) ((base) + (0x0930))
+#define SOC_VENC_VEDU_VCPI_YH_ADDR_H_ADDR(base) ((base) + (0x0934))
+#define SOC_VENC_VEDU_VCPI_CH_ADDR_L_ADDR(base) ((base) + (0x0938))
+#define SOC_VENC_VEDU_VCPI_CH_ADDR_H_ADDR(base) ((base) + (0x093C))
+#define SOC_VENC_VEDU_VCPI_REFY_L0_ADDR_L_ADDR(base) ((base) + (0x0940))
+#define SOC_VENC_VEDU_VCPI_REFY_L0_ADDR_H_ADDR(base) ((base) + (0x0944))
+#define SOC_VENC_VEDU_VCPI_REFC_L0_ADDR_L_ADDR(base) ((base) + (0x0948))
+#define SOC_VENC_VEDU_VCPI_REFC_L0_ADDR_H_ADDR(base) ((base) + (0x094C))
+#define SOC_VENC_VEDU_VCPI_REFYH_L0_ADDR_L_ADDR(base) ((base) + (0x0950))
+#define SOC_VENC_VEDU_VCPI_REFYH_L0_ADDR_H_ADDR(base) ((base) + (0x0954))
+#define SOC_VENC_VEDU_VCPI_REFCH_L0_ADDR_L_ADDR(base) ((base) + (0x0958))
+#define SOC_VENC_VEDU_VCPI_REFCH_L0_ADDR_H_ADDR(base) ((base) + (0x095C))
+#define SOC_VENC_VEDU_VCPI_REFY_L1_ADDR_L_ADDR(base) ((base) + (0x0960))
+#define SOC_VENC_VEDU_VCPI_REFY_L1_ADDR_H_ADDR(base) ((base) + (0x0964))
+#define SOC_VENC_VEDU_VCPI_REFC_L1_ADDR_L_ADDR(base) ((base) + (0x0968))
+#define SOC_VENC_VEDU_VCPI_REFC_L1_ADDR_H_ADDR(base) ((base) + (0x096C))
+#define SOC_VENC_VEDU_VCPI_REFYH_L1_ADDR_L_ADDR(base) ((base) + (0x0970))
+#define SOC_VENC_VEDU_VCPI_REFYH_L1_ADDR_H_ADDR(base) ((base) + (0x0974))
+#define SOC_VENC_VEDU_VCPI_REFCH_L1_ADDR_L_ADDR(base) ((base) + (0x0978))
+#define SOC_VENC_VEDU_VCPI_REFCH_L1_ADDR_H_ADDR(base) ((base) + (0x097C))
+#define SOC_VENC_VEDU_VCPI_REC_YADDR_L_ADDR(base) ((base) + (0x0980))
+#define SOC_VENC_VEDU_VCPI_REC_YADDR_H_ADDR(base) ((base) + (0x0984))
+#define SOC_VENC_VEDU_VCPI_REC_CADDR_L_ADDR(base) ((base) + (0x0988))
+#define SOC_VENC_VEDU_VCPI_REC_CADDR_H_ADDR(base) ((base) + (0x098C))
+#define SOC_VENC_VEDU_VCPI_REC_YH_ADDR_L_ADDR(base) ((base) + (0x0990))
+#define SOC_VENC_VEDU_VCPI_REC_YH_ADDR_H_ADDR(base) ((base) + (0x0994))
+#define SOC_VENC_VEDU_VCPI_REC_CH_ADDR_L_ADDR(base) ((base) + (0x0998))
+#define SOC_VENC_VEDU_VCPI_REC_CH_ADDR_H_ADDR(base) ((base) + (0x099C))
+#define SOC_VENC_VEDU_VCPI_PMELD_L0_ADDR_L_ADDR(base) ((base) + (0x09A0))
+#define SOC_VENC_VEDU_VCPI_PMELD_L0_ADDR_H_ADDR(base) ((base) + (0x09A4))
+#define SOC_VENC_VEDU_VCPI_PMELD_L1_ADDR_L_ADDR(base) ((base) + (0x09A8))
+#define SOC_VENC_VEDU_VCPI_PMELD_L1_ADDR_H_ADDR(base) ((base) + (0x09AC))
+#define SOC_VENC_VEDU_VCPI_PMEST_ADDR_L_ADDR(base) ((base) + (0x09B0))
+#define SOC_VENC_VEDU_VCPI_PMEST_ADDR_H_ADDR(base) ((base) + (0x09B4))
+#define SOC_VENC_VEDU_VCPI_NBI_MVST_ADDR_L_ADDR(base) ((base) + (0x09B8))
+#define SOC_VENC_VEDU_VCPI_NBI_MVST_ADDR_H_ADDR(base) ((base) + (0x09BC))
+#define SOC_VENC_VEDU_VCPI_NBI_MVLD_ADDR_L_ADDR(base) ((base) + (0x09C0))
+#define SOC_VENC_VEDU_VCPI_NBI_MVLD_ADDR_H_ADDR(base) ((base) + (0x09C4))
+#define SOC_VENC_VEDU_VCPI_STRMADDR_L_ADDR(base) ((base) + (0x09C8))
+#define SOC_VENC_VEDU_VCPI_STRMADDR_H_ADDR(base) ((base) + (0x09CC))
+#define SOC_VENC_VEDU_VCPI_SWPTRADDR_L_ADDR(base) ((base) + (0x09D0))
+#define SOC_VENC_VEDU_VCPI_SWPTRADDR_H_ADDR(base) ((base) + (0x09D4))
+#define SOC_VENC_VEDU_VCPI_SRPTRADDR_L_ADDR(base) ((base) + (0x09D8))
+#define SOC_VENC_VEDU_VCPI_SRPTRADDR_H_ADDR(base) ((base) + (0x09DC))
+#define SOC_VENC_VEDU_VCPI_PMEINFO_ST_ADDR_L_ADDR(base) ((base) + (0x09E0))
+#define SOC_VENC_VEDU_VCPI_PMEINFO_ST_ADDR_H_ADDR(base) ((base) + (0x09E4))
+#define SOC_VENC_VEDU_VCPI_PMEINFO_LD0_ADDR_L_ADDR(base) ((base) + (0x09E8))
+#define SOC_VENC_VEDU_VCPI_PMEINFO_LD0_ADDR_H_ADDR(base) ((base) + (0x09EC))
+#define SOC_VENC_VEDU_VCPI_PMEINFO_LD1_ADDR_L_ADDR(base) ((base) + (0x09F0))
+#define SOC_VENC_VEDU_VCPI_PMEINFO_LD1_ADDR_H_ADDR(base) ((base) + (0x09F4))
+#define SOC_VENC_VEDU_VCPI_QPGLD_INF_ADDR_L_ADDR(base) ((base) + (0x09F8))
+#define SOC_VENC_VEDU_VCPI_QPGLD_INF_ADDR_H_ADDR(base) ((base) + (0x09FC))
+#define SOC_VENC_VEDU_LEFT_CELL_RADDR_L_ADDR(base) ((base) + (0x0A00))
+#define SOC_VENC_VEDU_LEFT_CELL_RADDR_H_ADDR(base) ((base) + (0x0A04))
+#define SOC_VENC_VEDU_TOP_CELL_RADDR_L_ADDR(base) ((base) + (0x0A08))
+#define SOC_VENC_VEDU_TOP_CELL_RADDR_H_ADDR(base) ((base) + (0x0A0C))
+#define SOC_VENC_VEDU_CURR_CELL_WADDR_L_ADDR(base) ((base) + (0x0A10))
+#define SOC_VENC_VEDU_CURR_CELL_WADDR_H_ADDR(base) ((base) + (0x0A14))
+#define SOC_VENC_VEDU_TOPLEFT_CELL_RADDR_L_ADDR(base) ((base) + (0x0A18))
+#define SOC_VENC_VEDU_TOPLEFT_CELL_RADDR_H_ADDR(base) ((base) + (0x0A1C))
+#define SOC_VENC_VEDU_BOT_RC_INFO_WADDR_L_ADDR(base) ((base) + (0x0A20))
+#define SOC_VENC_VEDU_BOT_RC_INFO_WADDR_H_ADDR(base) ((base) + (0x0A24))
+#define SOC_VENC_VEDU_RIGHT_RC_INFO_WADDR_L_ADDR(base) ((base) + (0x0A28))
+#define SOC_VENC_VEDU_RIGHT_RC_INFO_WADDR_H_ADDR(base) ((base) + (0x0A2C))
+#define SOC_VENC_VEDU_RIGHT_BS_INFO_WADDR_L_ADDR(base) ((base) + (0x0A30))
+#define SOC_VENC_VEDU_RIGHT_BS_INFO_WADDR_H_ADDR(base) ((base) + (0x0A34))
+#define SOC_VENC_VEDU_LEFT_BS_INFO_RADDR_L_ADDR(base) ((base) + (0x0A38))
+#define SOC_VENC_VEDU_LEFT_BS_INFO_RADDR_H_ADDR(base) ((base) + (0x0A3C))
+#define SOC_VENC_VEDU_BOT_TB_INFO_WADDR_L_ADDR(base) ((base) + (0x0A40))
+#define SOC_VENC_VEDU_BOT_TB_INFO_WADDR_H_ADDR(base) ((base) + (0x0A44))
+#define SOC_VENC_VEDU_RIGHT_TB_INFO_WADDR_L_ADDR(base) ((base) + (0x0A48))
+#define SOC_VENC_VEDU_RIGHT_TB_INFO_WADDR_H_ADDR(base) ((base) + (0x0A4C))
+#define SOC_VENC_VEDU_BOTRIGHT_TB_INFO_WADDR_L_ADDR(base) ((base) + (0x0A50))
+#define SOC_VENC_VEDU_BOTRIGHT_TB_INFO_WADDR_H_ADDR(base) ((base) + (0x0A54))
+#define SOC_VENC_VEDU_TOP_RC_INFO_RADDR_L_ADDR(base) ((base) + (0x0A58))
+#define SOC_VENC_VEDU_TOP_RC_INFO_RADDR_H_ADDR(base) ((base) + (0x0A5C))
+#define SOC_VENC_VEDU_LEFT_RC_INFO_RADDR_L_ADDR(base) ((base) + (0x0A60))
+#define SOC_VENC_VEDU_LEFT_RC_INFO_RADDR_H_ADDR(base) ((base) + (0x0A64))
+#define SOC_VENC_VEDU_TOP_TB_INFO_RADDR_L_ADDR(base) ((base) + (0x0A68))
+#define SOC_VENC_VEDU_TOP_TB_INFO_RADDR_H_ADDR(base) ((base) + (0x0A6C))
+#define SOC_VENC_VEDU_LEFT_TB_INFO_RADDR_L_ADDR(base) ((base) + (0x0A70))
+#define SOC_VENC_VEDU_LEFT_TB_INFO_RADDR_H_ADDR(base) ((base) + (0x0A74))
+#define SOC_VENC_VEDU_TOPLEFT_TB_INFO_RADDR_L_ADDR(base) ((base) + (0x0A78))
+#define SOC_VENC_VEDU_TOPLEFT_TB_INFO_RADDR_H_ADDR(base) ((base) + (0x0A7C))
+#define SOC_VENC_VEDU_PPFD_ST_ADDR0_L_ADDR(base) ((base) + (0x0A80))
+#define SOC_VENC_VEDU_PPFD_ST_ADDR0_H_ADDR(base) ((base) + (0x0A84))
+#define SOC_VENC_VEDU_SKIPWEIGHT_LD_ADDR_L_ADDR(base) ((base) + (0x0A88))
+#define SOC_VENC_VEDU_SKIPWEIGHT_LD_ADDR_H_ADDR(base) ((base) + (0x0A8C))
+#define SOC_VENC_VEDU_RESERVED_15_ADDR(base) ((base) + (0x0A90))
+#define SOC_VENC_VEDU_SAO_SSD_AREA0_START_ADDR(base) ((base) + (0x0B00))
+#define SOC_VENC_VEDU_SAO_SSD_AREA0_END_ADDR(base) ((base) + (0x0B04))
+#define SOC_VENC_VEDU_SAO_SSD_AREA1_START_ADDR(base) ((base) + (0x0B08))
+#define SOC_VENC_VEDU_SAO_SSD_AREA1_END_ADDR(base) ((base) + (0x0B0C))
+#define SOC_VENC_VEDU_SAO_SSD_AREA2_START_ADDR(base) ((base) + (0x0B10))
+#define SOC_VENC_VEDU_SAO_SSD_AREA2_END_ADDR(base) ((base) + (0x0B14))
+#define SOC_VENC_VEDU_SAO_SSD_AREA3_START_ADDR(base) ((base) + (0x0B18))
+#define SOC_VENC_VEDU_SAO_SSD_AREA3_END_ADDR(base) ((base) + (0x0B1C))
+#define SOC_VENC_VEDU_SAO_SSD_AREA4_START_ADDR(base) ((base) + (0x0B20))
+#define SOC_VENC_VEDU_SAO_SSD_AREA4_END_ADDR(base) ((base) + (0x0B24))
+#define SOC_VENC_VEDU_SAO_SSD_AREA5_START_ADDR(base) ((base) + (0x0B28))
+#define SOC_VENC_VEDU_SAO_SSD_AREA5_END_ADDR(base) ((base) + (0x0B2C))
+#define SOC_VENC_VEDU_SAO_SSD_AREA6_START_ADDR(base) ((base) + (0x0B30))
+#define SOC_VENC_VEDU_SAO_SSD_AREA6_END_ADDR(base) ((base) + (0x0B34))
+#define SOC_VENC_VEDU_SAO_SSD_AREA7_START_ADDR(base) ((base) + (0x0B38))
+#define SOC_VENC_VEDU_SAO_SSD_AREA7_END_ADDR(base) ((base) + (0x0B3C))
+#define SOC_VENC_VEDU_RESERVED_16_ADDR(base) ((base) + (0x0B40))
+#define SOC_VENC_VEDU_VCPI_STRIDE_ADDR(base) ((base) + (0x0B80))
+#define SOC_VENC_VEDU_VCPI_EXT_STRIDE_ADDR(base) ((base) + (0x0B84))
+#define SOC_VENC_VEDU_VCPI_REF_L0_STRIDE_ADDR(base) ((base) + (0x0B88))
+#define SOC_VENC_VEDU_VCPI_REF_L1_STRIDE_ADDR(base) ((base) + (0x0B8C))
+#define SOC_VENC_VEDU_VCPI_REC_STRIDE_ADDR(base) ((base) + (0x0B90))
+#define SOC_VENC_VEDU_VCPI_PMEST_STRIDE_ADDR(base) ((base) + (0x0B94))
+#define SOC_VENC_VEDU_VCPI_PMELD_STRIDE_ADDR(base) ((base) + (0x0B98))
+#define SOC_VENC_VEDU_RESERVED_17_ADDR(base) ((base) + (0x0B9C))
+#define SOC_VENC_VEDU_GHDR_CTRL_ADDR(base) ((base) + (0x0C80))
+#define SOC_VENC_VEDU_GHDR_DEGAMMA_CTRL_ADDR(base) ((base) + (0x0C84))
+#define SOC_VENC_VEDU_GHDR_DEGAMMA_STEP_ADDR(base) ((base) + (0x0C88))
+#define SOC_VENC_VEDU_GHDR_DEGAMMA_POS1_ADDR(base) ((base) + (0x0C8C))
+#define SOC_VENC_VEDU_GHDR_DEGAMMA_POS2_ADDR(base) ((base) + (0x0C90))
+#define SOC_VENC_VEDU_GHDR_DEGAMMA_NUM_ADDR(base) ((base) + (0x0C94))
+#define SOC_VENC_VEDU_GHDR_GAMUT_CTRL_ADDR(base) ((base) + (0x0C98))
+#define SOC_VENC_VEDU_GHDR_GAMUT_COEF00_ADDR(base) ((base) + (0x0C9C))
+#define SOC_VENC_VEDU_GHDR_GAMUT_COEF01_ADDR(base) ((base) + (0x0CA0))
+#define SOC_VENC_VEDU_GHDR_GAMUT_COEF02_ADDR(base) ((base) + (0x0CA4))
+#define SOC_VENC_VEDU_GHDR_GAMUT_COEF10_ADDR(base) ((base) + (0x0CA8))
+#define SOC_VENC_VEDU_GHDR_GAMUT_COEF11_ADDR(base) ((base) + (0x0CAC))
+#define SOC_VENC_VEDU_GHDR_GAMUT_COEF12_ADDR(base) ((base) + (0x0CB0))
+#define SOC_VENC_VEDU_GHDR_GAMUT_COEF20_ADDR(base) ((base) + (0x0CB4))
+#define SOC_VENC_VEDU_GHDR_GAMUT_COEF21_ADDR(base) ((base) + (0x0CB8))
+#define SOC_VENC_VEDU_GHDR_GAMUT_COEF22_ADDR(base) ((base) + (0x0CBC))
+#define SOC_VENC_VEDU_GHDR_GAMUT_SCALE_ADDR(base) ((base) + (0x0CC0))
+#define SOC_VENC_VEDU_GHDR_GAMUT_CLIP_MIN_ADDR(base) ((base) + (0x0CC4))
+#define SOC_VENC_VEDU_GHDR_GAMUT_CLIP_MAX_ADDR(base) ((base) + (0x0CC8))
+#define SOC_VENC_VEDU_GHDR_TONEMAP_CTRL_ADDR(base) ((base) + (0x0CCC))
+#define SOC_VENC_VEDU_GHDR_TONEMAP_REN_ADDR(base) ((base) + (0x0CD0))
+#define SOC_VENC_VEDU_GHDR_RESERVED0_ADDR(base) ((base) + (0x0CD4))
+#define SOC_VENC_VEDU_GHDR_TONEMAP_STEP_ADDR(base) ((base) + (0x0CD8))
+#define SOC_VENC_VEDU_GHDR_TONEMAP_POS1_ADDR(base) ((base) + (0x0CDC))
+#define SOC_VENC_VEDU_GHDR_TONEMAP_POS2_ADDR(base) ((base) + (0x0CE0))
+#define SOC_VENC_VEDU_GHDR_TONEMAP_POS3_ADDR(base) ((base) + (0x0CE4))
+#define SOC_VENC_VEDU_GHDR_TONEMAP_POS4_ADDR(base) ((base) + (0x0CE8))
+#define SOC_VENC_VEDU_GHDR_TONEMAP_NUM_ADDR(base) ((base) + (0x0CEC))
+#define SOC_VENC_VEDU_GHDR_TONEMAP_LUMA_COEF0_ADDR(base) ((base) + (0x0CF0))
+#define SOC_VENC_VEDU_GHDR_TONEMAP_LUMA_COEF1_ADDR(base) ((base) + (0x0CF4))
+#define SOC_VENC_VEDU_GHDR_TONEMAP_LUMA_COEF2_ADDR(base) ((base) + (0x0CF8))
+#define SOC_VENC_VEDU_GHDR_TONEMAP_LUMA_SCALE_ADDR(base) ((base) + (0x0CFC))
+#define SOC_VENC_VEDU_GHDR_TONEMAP_COEF_SCALE_ADDR(base) ((base) + (0x0D00))
+#define SOC_VENC_VEDU_GHDR_TONEMAP_OUT_CLIP_MIN_ADDR(base) ((base) + (0x0D04))
+#define SOC_VENC_VEDU_GHDR_TONEMAP_OUT_CLIP_MAX_ADDR(base) ((base) + (0x0D08))
+#define SOC_VENC_VEDU_GHDR_GAMMA_CTRL_ADDR(base) ((base) + (0x0D0C))
+#define SOC_VENC_VEDU_GHDR_GAMMA_REN_ADDR(base) ((base) + (0x0D10))
+#define SOC_VENC_VEDU_GHDR_RESERVED1_ADDR(base) ((base) + (0x0D14))
+#define SOC_VENC_VEDU_GHDR_GAMMA_STEP1_ADDR(base) ((base) + (0x0D18))
+#define SOC_VENC_VEDU_GHDR_GAMMA_STEP2_ADDR(base) ((base) + (0x0D1C))
+#define SOC_VENC_VEDU_GHDR_GAMMA_POS1_ADDR(base) ((base) + (0x0D20))
+#define SOC_VENC_VEDU_GHDR_GAMMA_POS2_ADDR(base) ((base) + (0x0D24))
+#define SOC_VENC_VEDU_GHDR_GAMMA_POS3_ADDR(base) ((base) + (0x0D28))
+#define SOC_VENC_VEDU_GHDR_GAMMA_POS4_ADDR(base) ((base) + (0x0D2C))
+#define SOC_VENC_VEDU_GHDR_GAMMA_NUM1_ADDR(base) ((base) + (0x0D30))
+#define SOC_VENC_VEDU_GHDR_GAMMA_NUM2_ADDR(base) ((base) + (0x0D34))
+#define SOC_VENC_VEDU_GHDR_DITHER_CTRL_ADDR(base) ((base) + (0x0D38))
+#define SOC_VENC_VEDU_GHDR_DITHER_THR_ADDR(base) ((base) + (0x0D3C))
+#define SOC_VENC_VEDU_GHDR_DITHER_SED_Y0_ADDR(base) ((base) + (0x0D40))
+#define SOC_VENC_VEDU_GHDR_DITHER_SED_U0_ADDR(base) ((base) + (0x0D44))
+#define SOC_VENC_VEDU_GHDR_DITHER_SED_V0_ADDR(base) ((base) + (0x0D48))
+#define SOC_VENC_VEDU_GHDR_DITHER_SED_W0_ADDR(base) ((base) + (0x0D4C))
+#define SOC_VENC_VEDU_GHDR_DITHER_SED_Y1_ADDR(base) ((base) + (0x0D50))
+#define SOC_VENC_VEDU_GHDR_DITHER_SED_U1_ADDR(base) ((base) + (0x0D54))
+#define SOC_VENC_VEDU_GHDR_DITHER_SED_V1_ADDR(base) ((base) + (0x0D58))
+#define SOC_VENC_VEDU_GHDR_DITHER_SED_W1_ADDR(base) ((base) + (0x0D5C))
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_CTRL_ADDR(base) ((base) + (0x0D60))
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF0_ADDR(base) ((base) + (0x0D64))
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF1_ADDR(base) ((base) + (0x0D68))
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF2_ADDR(base) ((base) + (0x0D6C))
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF3_ADDR(base) ((base) + (0x0D70))
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF4_ADDR(base) ((base) + (0x0D74))
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF5_ADDR(base) ((base) + (0x0D78))
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF6_ADDR(base) ((base) + (0x0D7C))
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF7_ADDR(base) ((base) + (0x0D80))
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF8_ADDR(base) ((base) + (0x0D84))
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_SCALE2P_ADDR(base) ((base) + (0x0D88))
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_IDC0_ADDR(base) ((base) + (0x0D8C))
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_IDC1_ADDR(base) ((base) + (0x0D90))
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_IDC2_ADDR(base) ((base) + (0x0D94))
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_ODC0_ADDR(base) ((base) + (0x0D98))
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_ODC1_ADDR(base) ((base) + (0x0D9C))
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_ODC2_ADDR(base) ((base) + (0x0DA0))
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_MIN_ADDR(base) ((base) + (0x0DA4))
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_MAX_ADDR(base) ((base) + (0x0DA8))
+#define SOC_VENC_VEDU_RESERVED_18_ADDR(base) ((base) + (0x0DAC))
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_00_01_ADDR(base) ((base) + (0x0E00))
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_02_03_ADDR(base) ((base) + (0x0E04))
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_04_05_ADDR(base) ((base) + (0x0E08))
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_06_07_ADDR(base) ((base) + (0x0E0C))
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_08_09_ADDR(base) ((base) + (0x0E10))
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_10_11_ADDR(base) ((base) + (0x0E14))
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_12_13_ADDR(base) ((base) + (0x0E18))
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_14_15_ADDR(base) ((base) + (0x0E1C))
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_16_17_ADDR(base) ((base) + (0x0E20))
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_18_19_ADDR(base) ((base) + (0x0E24))
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_20_21_ADDR(base) ((base) + (0x0E28))
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_22_23_ADDR(base) ((base) + (0x0E2C))
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_24_25_ADDR(base) ((base) + (0x0E30))
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_26_27_ADDR(base) ((base) + (0x0E34))
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_28_29_ADDR(base) ((base) + (0x0E38))
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_30_31_ADDR(base) ((base) + (0x0E3C))
+#define SOC_VENC_VEDU_RESERVED_19_ADDR(base) ((base) + (0x0E40))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_00_09_P0_ADDR(base) ((base) + (0x0E80))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_00_09_P1_ADDR(base) ((base) + (0x0E84))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_00_09_P2_ADDR(base) ((base) + (0x0E88))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_00_09_P3_ADDR(base) ((base) + (0x0E8C))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_10_19_P0_ADDR(base) ((base) + (0x0E90))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_10_19_P1_ADDR(base) ((base) + (0x0E94))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_10_19_P2_ADDR(base) ((base) + (0x0E98))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_10_19_P3_ADDR(base) ((base) + (0x0E9C))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_20_29_P0_ADDR(base) ((base) + (0x0EA0))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_20_29_P1_ADDR(base) ((base) + (0x0EA4))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_20_29_P2_ADDR(base) ((base) + (0x0EA8))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_20_29_P3_ADDR(base) ((base) + (0x0EAC))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_30_39_P0_ADDR(base) ((base) + (0x0EB0))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_30_39_P1_ADDR(base) ((base) + (0x0EB4))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_30_39_P2_ADDR(base) ((base) + (0x0EB8))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_30_39_P3_ADDR(base) ((base) + (0x0EBC))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_40_49_P0_ADDR(base) ((base) + (0x0EC0))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_40_49_P1_ADDR(base) ((base) + (0x0EC4))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_40_49_P2_ADDR(base) ((base) + (0x0EC8))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_40_49_P3_ADDR(base) ((base) + (0x0ECC))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_50_59_P0_ADDR(base) ((base) + (0x0ED0))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_50_59_P1_ADDR(base) ((base) + (0x0ED4))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_50_59_P2_ADDR(base) ((base) + (0x0ED8))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_50_59_P3_ADDR(base) ((base) + (0x0EDC))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_60_69_P0_ADDR(base) ((base) + (0x0EE0))
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_60_69_P1_ADDR(base) ((base) + (0x0EE4))
+#define SOC_VENC_VEDU_RESERVED_20_ADDR(base) ((base) + (0x0EE8))
+#define SOC_VENC_VEDU_SECURE_SET_ADDR(base) ((base) + (0x0FF0))
+#define SOC_VENC_VEDU_RESERVED_21_ADDR(base) ((base) + (0x0FF4))
+#define SOC_VENC_VEDU_RESERVED_22_ADDR(base) ((base) + (0x1000))
+#endif
+#ifndef __SOC_H_FOR_ASM__
+#define SOC_VENC_FUNC_VCPI_INTSTAT_ADDR(base) ((base) + (0x0000UL))
+#define SOC_VENC_FUNC_VCPI_RAWINT_ADDR(base) ((base) + (0x0004UL))
+#define SOC_VENC_FUNC_VCPI_VEDU_TIMER_ADDR(base) ((base) + (0x0008UL))
+#define SOC_VENC_FUNC_VCPI_IDLE_TIMER_ADDR(base) ((base) + (0x000CUL))
+#define SOC_VENC_FUNC_VCPI_BUS_IDLE_FLAG_ADDR(base) ((base) + (0x0010UL))
+#define SOC_VENC_RESERVED_FUNC_VCPI_ADDR(base) ((base) + (0x0014UL))
+#define SOC_VENC_RESERVED_FUNC_VCTRL_ADDR(base) ((base) + (0x0040UL))
+#define SOC_VENC_RESERVED_FUNC_QPGLD_ADDR(base) ((base) + (0x0080UL))
+#define SOC_VENC_RESERVED_FUNC_CURLD_ADDR(base) ((base) + (0x00c0UL))
+#define SOC_VENC_RESERVED_FUNC_NBI_ADDR(base) ((base) + (0x0100UL))
+#define SOC_VENC_RESERVED_FUNC_PMELD_ADDR(base) ((base) + (0x0140UL))
+#define SOC_VENC_RESERVED_FUNC_PMEINFO_LD_ADDR(base) ((base) + (0x0180UL))
+#define SOC_VENC_FUNC_PME_MADI_SUM_ADDR(base) ((base) + (0x01C0UL))
+#define SOC_VENC_FUNC_PME_MADP_SUM_ADDR(base) ((base) + (0x01C4UL))
+#define SOC_VENC_FUNC_PME_MADI_NUM_ADDR(base) ((base) + (0x01C8UL))
+#define SOC_VENC_FUNC_PME_MADP_NUM_ADDR(base) ((base) + (0x01CCUL))
+#define SOC_VENC_FUNC_PME_LARGE_SAD_SUM_ADDR(base) ((base) + (0x01D0UL))
+#define SOC_VENC_FUNC_PME_LOW_LUMA_SUM_ADDR(base) ((base) + (0x01D4UL))
+#define SOC_VENC_FUNC_PME_CHROMA_SCENE_SUM_ADDR(base) ((base) + (0x01D8UL))
+#define SOC_VENC_FUNC_PME_MOVE_SCENE_SUM_ADDR(base) ((base) + (0x01DCUL))
+#define SOC_VENC_FUNC_PME_SKIN_REGION_SUM_ADDR(base) ((base) + (0x01E0UL))
+#define SOC_VENC_RESERVED_FUNC_PME_ADDR(base) ((base) + (0x01E4UL))
+#define SOC_VENC_RESERVED_FUNC_PMEST_ADDR(base) ((base) + (0x0200UL))
+#define SOC_VENC_RESERVED_FUNC_PMEINFO_ST_ADDR(base) ((base) + (0x0240UL))
+#define SOC_VENC_FUNC_BGSTR_BLOCK_COUNT_ADDR(base) ((base) + (0x0280UL))
+#define SOC_VENC_FUNC_BGSTR_FRAME_BGM_DIST_ADDR(base) ((base) + (0x0284UL))
+#define SOC_VENC_RESERVED_FUNC_BGSTR_ADDR(base) ((base) + (0x0288UL))
+#define SOC_VENC_RESERVED_FUNC_QPG_ADDR(base) ((base) + (0x02C0UL))
+#define SOC_VENC_RESERVED_FUNC_REFLD_ADDR(base) ((base) + (0x0300UL))
+#define SOC_VENC_RESERVED_FUNC_PINTRA_ADDR(base) ((base) + (0x0340UL))
+#define SOC_VENC_RESERVED_FUNC_IME_ADDR(base) ((base) + (0x0380UL))
+#define SOC_VENC_RESERVED_FUNC_FME_ADDR(base) ((base) + (0x03C0UL))
+#define SOC_VENC_RESERVED_FUNC_MRG_ADDR(base) ((base) + (0x0400UL))
+#define SOC_VENC_RESERVED_FUNC_BGGEN_ADDR(base) ((base) + (0x0440UL))
+#define SOC_VENC_RESERVED_FUNC_INTRA_ADDR(base) ((base) + (0x0480UL))
+#define SOC_VENC_RESERVED_FUNC_NU0_ADDR(base) ((base) + (0x04C0UL))
+#define SOC_VENC_FUNC_PMV_MV0_COUNT_ADDR(base) ((base) + (0x0520UL))
+#define SOC_VENC_FUNC_PMV_MV1_COUNT_ADDR(base) ((base) + (0x0524UL))
+#define SOC_VENC_FUNC_PMV_MV2_COUNT_ADDR(base) ((base) + (0x0528UL))
+#define SOC_VENC_FUNC_PMV_MV3_COUNT_ADDR(base) ((base) + (0x052CUL))
+#define SOC_VENC_FUNC_PMV_MV4_COUNT_ADDR(base) ((base) + (0x0530UL))
+#define SOC_VENC_FUNC_PMV_MV5_COUNT_ADDR(base) ((base) + (0x0534UL))
+#define SOC_VENC_FUNC_PMV_MV6_COUNT_ADDR(base) ((base) + (0x0538UL))
+#define SOC_VENC_FUNC_PMV_MV7_COUNT_ADDR(base) ((base) + (0x053CUL))
+#define SOC_VENC_FUNC_PMV_MV8_COUNT_ADDR(base) ((base) + (0x0540UL))
+#define SOC_VENC_FUNC_PMV_MV9_COUNT_ADDR(base) ((base) + (0x0544UL))
+#define SOC_VENC_FUNC_PMV_MV10_COUNT_ADDR(base) ((base) + (0x0548UL))
+#define SOC_VENC_FUNC_PMV_MV11_COUNT_ADDR(base) ((base) + (0x054CUL))
+#define SOC_VENC_FUNC_PMV_MV12_COUNT_ADDR(base) ((base) + (0x0550UL))
+#define SOC_VENC_FUNC_PMV_MV13_COUNT_ADDR(base) ((base) + (0x0554UL))
+#define SOC_VENC_FUNC_PMV_MV14_COUNT_ADDR(base) ((base) + (0x0558UL))
+#define SOC_VENC_FUNC_PMV_MV15_COUNT_ADDR(base) ((base) + (0x055CUL))
+#define SOC_VENC_FUNC_PMV_MV16_COUNT_ADDR(base) ((base) + (0x0560UL))
+#define SOC_VENC_FUNC_PMV_MV17_COUNT_ADDR(base) ((base) + (0x0564UL))
+#define SOC_VENC_FUNC_PMV_MV18_COUNT_ADDR(base) ((base) + (0x0568UL))
+#define SOC_VENC_FUNC_PMV_MV19_COUNT_ADDR(base) ((base) + (0x056CUL))
+#define SOC_VENC_FUNC_PMV_MV20_COUNT_ADDR(base) ((base) + (0x0570UL))
+#define SOC_VENC_FUNC_PMV_MV21_COUNT_ADDR(base) ((base) + (0x0574UL))
+#define SOC_VENC_FUNC_PMV_MV22_COUNT_ADDR(base) ((base) + (0x0578UL))
+#define SOC_VENC_RESERVED_FUNC_TQITQ0_ADDR(base) ((base) + (0x0580UL))
+#define SOC_VENC_RESERVED_FUNC_NU2_ADDR(base) ((base) + (0x05C0UL))
+#define SOC_VENC_RESERVED_FUNC_BGLD_ADDR(base) ((base) + (0x0600UL))
+#define SOC_VENC_RESERVED_FUNC_LFLDST_ADDR(base) ((base) + (0x0640UL))
+#define SOC_VENC_RESERVED_FUNC_DBLK_ADDR(base) ((base) + (0x0680UL))
+#define SOC_VENC_RESERVED_FUNC_NU4_ADDR(base) ((base) + (0x06C0UL))
+#define SOC_VENC_RESERVED_FUNC_RECST_ADDR(base) ((base) + (0x0700UL))
+#define SOC_VENC_RESERVED_FUNC_PACK0_ADDR(base) ((base) + (0x0740UL))
+#define SOC_VENC_RESERVED_FUNC_PACK1_ADDR(base) ((base) + (0x0780UL))
+#define SOC_VENC_FUNC_CABAC_PIC_STRMSIZE_ADDR(base) ((base) + (0x07C0UL))
+#define SOC_VENC_FUNC_CABAC_BIN_NUM_ADDR(base) ((base) + (0x07C4UL))
+#define SOC_VENC_FUNC_CABAC_RES_BIN_NUM_ADDR(base) ((base) + (0x07C8UL))
+#define SOC_VENC_FUNC_CABAC_HDR_BIN_NUM_ADDR(base) ((base) + (0x07CCUL))
+#define SOC_VENC_FUNC_CABAC_MOVE_SCENE_BITS_ADDR(base) ((base) + (0x7d0UL))
+#define SOC_VENC_FUNC_CABAC_STREDGE_MOVE_BITS_ADDR(base) ((base) + (0x7d4UL))
+#define SOC_VENC_FUNC_CABAC_SKIN_BITS_ADDR(base) ((base) + (0x7d8UL))
+#define SOC_VENC_FUNC_CABAC_LOWLUMA_BITS_ADDR(base) ((base) + (0x7dcUL))
+#define SOC_VENC_FUNC_CABAC_CHROMAPROT_BITS_ADDR(base) ((base) + (0x7e0UL))
+#define SOC_VENC_RESERVED_FUNC_CABAC_ADDR(base) ((base) + (0x07e4UL))
+#define SOC_VENC_FUNC_VLC_CABAC_HRD_BITS_ADDR(base) ((base) + (0x0800UL))
+#define SOC_VENC_FUNC_VLC_CABAC_RES_BITS_ADDR(base) ((base) + (0x0804UL))
+#define SOC_VENC_FUNC_VLC_CAVLC_HRD_BITS_ADDR(base) ((base) + (0x0808UL))
+#define SOC_VENC_FUNC_VLC_CAVLC_RES_BITS_ADDR(base) ((base) + (0x080CUL))
+#define SOC_VENC_FUNC_VLC_PIC_STRMSIZE_ADDR(base) ((base) + (0x0810UL))
+#define SOC_VENC_RESERVED_FUNC_VLC_ADDR(base) ((base) + (0x0814UL))
+#define SOC_VENC_FUNC_VLCST_SLC_LEN_CNT_ADDR(base) ((base) + (0x0840UL))
+#define SOC_VENC_FUNC_VLCST_WPTR_ADDR(base) ((base) + (0x0844UL))
+#define SOC_VENC_FUNC_VLCST_RPTR_ADDR(base) ((base) + (0x0848UL))
+#define SOC_VENC_RESERVED_FUNC_VLCST_ADDR(base) ((base) + (0x084CUL))
+#define SOC_VENC_RESERVED_FUNC_EMAR_ADDR(base) ((base) + (0x0A40UL))
+#define SOC_VENC_RESERVED_FUNC_PPFD_ADDR(base) ((base) + (0x0A80UL))
+#define SOC_VENC_FUNC_SEL_OPT_8X8_CNT_ADDR(base) ((base) + (0x0AC0UL))
+#define SOC_VENC_FUNC_SEL_INTRA_OPT_8X8_CNT_ADDR(base) ((base) + (0x0AC4UL))
+#define SOC_VENC_FUNC_SEL_INTRA_NORMAL_OPT_8X8_CNT_ADDR(base) ((base) + (0x0AC8UL))
+#define SOC_VENC_FUNC_SEL_INTRA_PCM_OPT_8X8_CNT_ADDR(base) ((base) + (0x0ACCUL))
+#define SOC_VENC_FUNC_SEL_INTER_OPT_8X8_CNT_ADDR(base) ((base) + (0x0AD0UL))
+#define SOC_VENC_FUNC_SEL_INTER_FME_OPT_8X8_CNT_ADDR(base) ((base) + (0x0AD4UL))
+#define SOC_VENC_FUNC_SELINTER_MERGE_OPT_8X8_CNT_ADDR(base) ((base) + (0x0AD8UL))
+#define SOC_VENC_FUNC_SEL_INTER_SKIP_OPT_8X8_CNT_ADDR(base) ((base) + (0x0ADCUL))
+#define SOC_VENC_FUNC_SEL_OPT_16X16_CNT_ADDR(base) ((base) + (0x0AE0UL))
+#define SOC_VENC_FUNC_SEL_INTRA_OPT_16X16_CNT_ADDR(base) ((base) + (0x0AE4UL))
+#define SOC_VENC_FUNC_SEL_OPT_4X4_CNT_ADDR(base) ((base) + (0x0AE8UL))
+#define SOC_VENC_RESERVED0_FUNC_SEL_ADDR(base) ((base) + (0x0AECUL))
+#define SOC_VENC_FUNC_SEL_INTER_OPT_16X16_CNT_ADDR(base) ((base) + (0x0AF0UL))
+#define SOC_VENC_FUNC_SEL_INTER_FME_OPT_16X16_CNT_ADDR(base) ((base) + (0x0AF4UL))
+#define SOC_VENC_FUNC_SEL_INTER_MERGE_OPT_16X16_CNT_ADDR(base) ((base) + (0x0AF8UL))
+#define SOC_VENC_FUNC_SEL_INTER_SKIP_OPT_16X16_CNT_ADDR(base) ((base) + (0x0AFCUL))
+#define SOC_VENC_FUNC_SEL_OPT_32X32_CNT_ADDR(base) ((base) + (0x0B00UL))
+#define SOC_VENC_FUNC_SEL_INTRA_OPT_32X32_CNT_ADDR(base) ((base) + (0x0B04UL))
+#define SOC_VENC_RESERVED1_FUNC_SEL_ADDR(base) ((base) + (0x0B08UL))
+#define SOC_VENC_FUNC_SEL_INTER_OPT_32X32_CNT_ADDR(base) ((base) + (0x0B0CUL))
+#define SOC_VENC_FUNC_SEL_INTER_FME_OPT_32X32_CNT_ADDR(base) ((base) + (0x0B10UL))
+#define SOC_VENC_FUNC_SEL_INTER_MERGE_OPT_32X32_CNT_ADDR(base) ((base) + (0x0B14UL))
+#define SOC_VENC_FUNC_SEL_INTER_SKIP_OPT_32X32_CNT_ADDR(base) ((base) + (0x0B18UL))
+#define SOC_VENC_FUNC_SEL_OPT_64X64_CNT_ADDR(base) ((base) + (0x0B1CUL))
+#define SOC_VENC_FUNC_SEL_INTER_FME_OPT_64X64_CNT_ADDR(base) ((base) + (0x0B20UL))
+#define SOC_VENC_FUNC_SEL_INTER_MERGE_OPT_64X64_CNT_ADDR(base) ((base) + (0x0B24UL))
+#define SOC_VENC_FUNC_SEL_INTER_SKIP_OPT_64X64_CNT_ADDR(base) ((base) + (0x0B28UL))
+#define SOC_VENC_FUNC_SEL_TOTAL_LUMA_QP_ADDR(base) ((base) + (0x0B2CUL))
+#define SOC_VENC_FUNC_SEL_MAX_MIN_LUMA_QP_ADDR(base) ((base) + (0x0B30UL))
+#define SOC_VENC_RESERVED2_FUNC_SEL_ADDR(base) ((base) + (0x0B34UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP0_CNT_ADDR(base) ((base) + (0x0BC0UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP1_CNT_ADDR(base) ((base) + (0x0BC4UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP2_CNT_ADDR(base) ((base) + (0x0BC8UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP3_CNT_ADDR(base) ((base) + (0x0BCCUL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP4_CNT_ADDR(base) ((base) + (0x0BD0UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP5_CNT_ADDR(base) ((base) + (0x0BD4UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP6_CNT_ADDR(base) ((base) + (0x0BD8UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP7_CNT_ADDR(base) ((base) + (0x0BDCUL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP8_CNT_ADDR(base) ((base) + (0x0BE0UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP9_CNT_ADDR(base) ((base) + (0x0BE4UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP10_CNT_ADDR(base) ((base) + (0x0BE8UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP11_CNT_ADDR(base) ((base) + (0x0BECUL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP12_CNT_ADDR(base) ((base) + (0x0BF0UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP13_CNT_ADDR(base) ((base) + (0x0BF4UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP14_CNT_ADDR(base) ((base) + (0x0BF8UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP15_CNT_ADDR(base) ((base) + (0x0BFCUL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP16_CNT_ADDR(base) ((base) + (0x0C00UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP17_CNT_ADDR(base) ((base) + (0x0C04UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP18_CNT_ADDR(base) ((base) + (0x0C08UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP19_CNT_ADDR(base) ((base) + (0x0C0CUL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP20_CNT_ADDR(base) ((base) + (0x0C10UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP21_CNT_ADDR(base) ((base) + (0x0C14UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP22_CNT_ADDR(base) ((base) + (0x0C18UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP23_CNT_ADDR(base) ((base) + (0x0C1CUL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP24_CNT_ADDR(base) ((base) + (0x0C20UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP25_CNT_ADDR(base) ((base) + (0x0C24UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP26_CNT_ADDR(base) ((base) + (0x0C28UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP27_CNT_ADDR(base) ((base) + (0x0C2CUL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP28_CNT_ADDR(base) ((base) + (0x0C30UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP29_CNT_ADDR(base) ((base) + (0x0C34UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP30_CNT_ADDR(base) ((base) + (0x0C38UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP31_CNT_ADDR(base) ((base) + (0x0C3CUL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP32_CNT_ADDR(base) ((base) + (0x0C40UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP33_CNT_ADDR(base) ((base) + (0x0C44UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP34_CNT_ADDR(base) ((base) + (0x0C48UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP35_CNT_ADDR(base) ((base) + (0x0C4CUL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP36_CNT_ADDR(base) ((base) + (0x0C50UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP37_CNT_ADDR(base) ((base) + (0x0C54UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP38_CNT_ADDR(base) ((base) + (0x0C58UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP39_CNT_ADDR(base) ((base) + (0x0C5cUL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP40_CNT_ADDR(base) ((base) + (0x0C60UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP41_CNT_ADDR(base) ((base) + (0x0C64UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP42_CNT_ADDR(base) ((base) + (0x0C68UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP43_CNT_ADDR(base) ((base) + (0x0C6CUL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP44_CNT_ADDR(base) ((base) + (0x0C70UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP45_CNT_ADDR(base) ((base) + (0x0C74UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP46_CNT_ADDR(base) ((base) + (0x0C78UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP47_CNT_ADDR(base) ((base) + (0x0C7CUL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP48_CNT_ADDR(base) ((base) + (0x0C80UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP49_CNT_ADDR(base) ((base) + (0x0C84UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP50_CNT_ADDR(base) ((base) + (0x0C88UL))
+#define SOC_VENC_FUNC_SEL_LUMA_QP51_CNT_ADDR(base) ((base) + (0x0C8CUL))
+#define SOC_VENC_RESERVED3_FUNC_SEL_ADDR(base) ((base) + (0x0C90UL))
+#define SOC_VENC_RESERVED_FUNC_TBLDST_ADDR(base) ((base) + (0x0CC0UL))
+#define SOC_VENC_FUNC_SAO_OFF_NUM_ADDR(base) ((base) + (0x0EC0UL))
+#define SOC_VENC_FUNC_SAO_MSE_SUM_ADDR(base) ((base) + (0x0EC4UL))
+#define SOC_VENC_FUNC_SAO_MSE_CNT_ADDR(base) ((base) + (0x0EC8UL))
+#define SOC_VENC_FUNC_SAO_MSE_MAX_ADDR(base) ((base) + (0x0ECCUL))
+#define SOC_VENC_FUNC_SAO_SSD_AREA0_SUM_ADDR(base) ((base) + (0x0ED0UL))
+#define SOC_VENC_FUNC_SAO_SSD_AREA1_SUM_ADDR(base) ((base) + (0x0ED4UL))
+#define SOC_VENC_FUNC_SAO_SSD_AREA2_SUM_ADDR(base) ((base) + (0x0ED8UL))
+#define SOC_VENC_FUNC_SAO_SSD_AREA3_SUM_ADDR(base) ((base) + (0x0EDCUL))
+#define SOC_VENC_FUNC_SAO_SSD_AREA4_SUM_ADDR(base) ((base) + (0x0EE0UL))
+#define SOC_VENC_FUNC_SAO_SSD_AREA5_SUM_ADDR(base) ((base) + (0x0EE4UL))
+#define SOC_VENC_FUNC_SAO_SSD_AREA6_SUM_ADDR(base) ((base) + (0x0EE8UL))
+#define SOC_VENC_FUNC_SAO_SSD_AREA7_SUM_ADDR(base) ((base) + (0x0EECUL))
+#define SOC_VENC_RESERVED_FUNC_SAO_ADDR(base) ((base) + (0x0EF0UL))
+#define SOC_VENC_RESERVED_FUNC_NU3_ADDR(base) ((base) + (0x0F40UL))
+#else
+#define SOC_VENC_FUNC_VCPI_INTSTAT_ADDR(base) ((base) + (0x0000))
+#define SOC_VENC_FUNC_VCPI_RAWINT_ADDR(base) ((base) + (0x0004))
+#define SOC_VENC_FUNC_VCPI_VEDU_TIMER_ADDR(base) ((base) + (0x0008))
+#define SOC_VENC_FUNC_VCPI_IDLE_TIMER_ADDR(base) ((base) + (0x000C))
+#define SOC_VENC_FUNC_VCPI_BUS_IDLE_FLAG_ADDR(base) ((base) + (0x0010))
+#define SOC_VENC_RESERVED_FUNC_VCPI_ADDR(base) ((base) + (0x0014))
+#define SOC_VENC_RESERVED_FUNC_VCTRL_ADDR(base) ((base) + (0x0040))
+#define SOC_VENC_RESERVED_FUNC_QPGLD_ADDR(base) ((base) + (0x0080))
+#define SOC_VENC_RESERVED_FUNC_CURLD_ADDR(base) ((base) + (0x00c0))
+#define SOC_VENC_RESERVED_FUNC_NBI_ADDR(base) ((base) + (0x0100))
+#define SOC_VENC_RESERVED_FUNC_PMELD_ADDR(base) ((base) + (0x0140))
+#define SOC_VENC_RESERVED_FUNC_PMEINFO_LD_ADDR(base) ((base) + (0x0180))
+#define SOC_VENC_FUNC_PME_MADI_SUM_ADDR(base) ((base) + (0x01C0))
+#define SOC_VENC_FUNC_PME_MADP_SUM_ADDR(base) ((base) + (0x01C4))
+#define SOC_VENC_FUNC_PME_MADI_NUM_ADDR(base) ((base) + (0x01C8))
+#define SOC_VENC_FUNC_PME_MADP_NUM_ADDR(base) ((base) + (0x01CC))
+#define SOC_VENC_FUNC_PME_LARGE_SAD_SUM_ADDR(base) ((base) + (0x01D0))
+#define SOC_VENC_FUNC_PME_LOW_LUMA_SUM_ADDR(base) ((base) + (0x01D4))
+#define SOC_VENC_FUNC_PME_CHROMA_SCENE_SUM_ADDR(base) ((base) + (0x01D8))
+#define SOC_VENC_FUNC_PME_MOVE_SCENE_SUM_ADDR(base) ((base) + (0x01DC))
+#define SOC_VENC_FUNC_PME_SKIN_REGION_SUM_ADDR(base) ((base) + (0x01E0))
+#define SOC_VENC_RESERVED_FUNC_PME_ADDR(base) ((base) + (0x01E4))
+#define SOC_VENC_RESERVED_FUNC_PMEST_ADDR(base) ((base) + (0x0200))
+#define SOC_VENC_RESERVED_FUNC_PMEINFO_ST_ADDR(base) ((base) + (0x0240))
+#define SOC_VENC_FUNC_BGSTR_BLOCK_COUNT_ADDR(base) ((base) + (0x0280))
+#define SOC_VENC_FUNC_BGSTR_FRAME_BGM_DIST_ADDR(base) ((base) + (0x0284))
+#define SOC_VENC_RESERVED_FUNC_BGSTR_ADDR(base) ((base) + (0x0288))
+#define SOC_VENC_RESERVED_FUNC_QPG_ADDR(base) ((base) + (0x02C0))
+#define SOC_VENC_RESERVED_FUNC_REFLD_ADDR(base) ((base) + (0x0300))
+#define SOC_VENC_RESERVED_FUNC_PINTRA_ADDR(base) ((base) + (0x0340))
+#define SOC_VENC_RESERVED_FUNC_IME_ADDR(base) ((base) + (0x0380))
+#define SOC_VENC_RESERVED_FUNC_FME_ADDR(base) ((base) + (0x03C0))
+#define SOC_VENC_RESERVED_FUNC_MRG_ADDR(base) ((base) + (0x0400))
+#define SOC_VENC_RESERVED_FUNC_BGGEN_ADDR(base) ((base) + (0x0440))
+#define SOC_VENC_RESERVED_FUNC_INTRA_ADDR(base) ((base) + (0x0480))
+#define SOC_VENC_RESERVED_FUNC_NU0_ADDR(base) ((base) + (0x04C0))
+#define SOC_VENC_FUNC_PMV_MV0_COUNT_ADDR(base) ((base) + (0x0520))
+#define SOC_VENC_FUNC_PMV_MV1_COUNT_ADDR(base) ((base) + (0x0524))
+#define SOC_VENC_FUNC_PMV_MV2_COUNT_ADDR(base) ((base) + (0x0528))
+#define SOC_VENC_FUNC_PMV_MV3_COUNT_ADDR(base) ((base) + (0x052C))
+#define SOC_VENC_FUNC_PMV_MV4_COUNT_ADDR(base) ((base) + (0x0530))
+#define SOC_VENC_FUNC_PMV_MV5_COUNT_ADDR(base) ((base) + (0x0534))
+#define SOC_VENC_FUNC_PMV_MV6_COUNT_ADDR(base) ((base) + (0x0538))
+#define SOC_VENC_FUNC_PMV_MV7_COUNT_ADDR(base) ((base) + (0x053C))
+#define SOC_VENC_FUNC_PMV_MV8_COUNT_ADDR(base) ((base) + (0x0540))
+#define SOC_VENC_FUNC_PMV_MV9_COUNT_ADDR(base) ((base) + (0x0544))
+#define SOC_VENC_FUNC_PMV_MV10_COUNT_ADDR(base) ((base) + (0x0548))
+#define SOC_VENC_FUNC_PMV_MV11_COUNT_ADDR(base) ((base) + (0x054C))
+#define SOC_VENC_FUNC_PMV_MV12_COUNT_ADDR(base) ((base) + (0x0550))
+#define SOC_VENC_FUNC_PMV_MV13_COUNT_ADDR(base) ((base) + (0x0554))
+#define SOC_VENC_FUNC_PMV_MV14_COUNT_ADDR(base) ((base) + (0x0558))
+#define SOC_VENC_FUNC_PMV_MV15_COUNT_ADDR(base) ((base) + (0x055C))
+#define SOC_VENC_FUNC_PMV_MV16_COUNT_ADDR(base) ((base) + (0x0560))
+#define SOC_VENC_FUNC_PMV_MV17_COUNT_ADDR(base) ((base) + (0x0564))
+#define SOC_VENC_FUNC_PMV_MV18_COUNT_ADDR(base) ((base) + (0x0568))
+#define SOC_VENC_FUNC_PMV_MV19_COUNT_ADDR(base) ((base) + (0x056C))
+#define SOC_VENC_FUNC_PMV_MV20_COUNT_ADDR(base) ((base) + (0x0570))
+#define SOC_VENC_FUNC_PMV_MV21_COUNT_ADDR(base) ((base) + (0x0574))
+#define SOC_VENC_FUNC_PMV_MV22_COUNT_ADDR(base) ((base) + (0x0578))
+#define SOC_VENC_RESERVED_FUNC_TQITQ0_ADDR(base) ((base) + (0x0580))
+#define SOC_VENC_RESERVED_FUNC_NU2_ADDR(base) ((base) + (0x05C0))
+#define SOC_VENC_RESERVED_FUNC_BGLD_ADDR(base) ((base) + (0x0600))
+#define SOC_VENC_RESERVED_FUNC_LFLDST_ADDR(base) ((base) + (0x0640))
+#define SOC_VENC_RESERVED_FUNC_DBLK_ADDR(base) ((base) + (0x0680))
+#define SOC_VENC_RESERVED_FUNC_NU4_ADDR(base) ((base) + (0x06C0))
+#define SOC_VENC_RESERVED_FUNC_RECST_ADDR(base) ((base) + (0x0700))
+#define SOC_VENC_RESERVED_FUNC_PACK0_ADDR(base) ((base) + (0x0740))
+#define SOC_VENC_RESERVED_FUNC_PACK1_ADDR(base) ((base) + (0x0780))
+#define SOC_VENC_FUNC_CABAC_PIC_STRMSIZE_ADDR(base) ((base) + (0x07C0))
+#define SOC_VENC_FUNC_CABAC_BIN_NUM_ADDR(base) ((base) + (0x07C4))
+#define SOC_VENC_FUNC_CABAC_RES_BIN_NUM_ADDR(base) ((base) + (0x07C8))
+#define SOC_VENC_FUNC_CABAC_HDR_BIN_NUM_ADDR(base) ((base) + (0x07CC))
+#define SOC_VENC_FUNC_CABAC_MOVE_SCENE_BITS_ADDR(base) ((base) + (0x7d0))
+#define SOC_VENC_FUNC_CABAC_STREDGE_MOVE_BITS_ADDR(base) ((base) + (0x7d4))
+#define SOC_VENC_FUNC_CABAC_SKIN_BITS_ADDR(base) ((base) + (0x7d8))
+#define SOC_VENC_FUNC_CABAC_LOWLUMA_BITS_ADDR(base) ((base) + (0x7dc))
+#define SOC_VENC_FUNC_CABAC_CHROMAPROT_BITS_ADDR(base) ((base) + (0x7e0))
+#define SOC_VENC_RESERVED_FUNC_CABAC_ADDR(base) ((base) + (0x07e4))
+#define SOC_VENC_FUNC_VLC_CABAC_HRD_BITS_ADDR(base) ((base) + (0x0800))
+#define SOC_VENC_FUNC_VLC_CABAC_RES_BITS_ADDR(base) ((base) + (0x0804))
+#define SOC_VENC_FUNC_VLC_CAVLC_HRD_BITS_ADDR(base) ((base) + (0x0808))
+#define SOC_VENC_FUNC_VLC_CAVLC_RES_BITS_ADDR(base) ((base) + (0x080C))
+#define SOC_VENC_FUNC_VLC_PIC_STRMSIZE_ADDR(base) ((base) + (0x0810))
+#define SOC_VENC_RESERVED_FUNC_VLC_ADDR(base) ((base) + (0x0814))
+#define SOC_VENC_FUNC_VLCST_SLC_LEN_CNT_ADDR(base) ((base) + (0x0840))
+#define SOC_VENC_FUNC_VLCST_WPTR_ADDR(base) ((base) + (0x0844))
+#define SOC_VENC_FUNC_VLCST_RPTR_ADDR(base) ((base) + (0x0848))
+#define SOC_VENC_RESERVED_FUNC_VLCST_ADDR(base) ((base) + (0x084C))
+#define SOC_VENC_RESERVED_FUNC_EMAR_ADDR(base) ((base) + (0x0A40))
+#define SOC_VENC_RESERVED_FUNC_PPFD_ADDR(base) ((base) + (0x0A80))
+#define SOC_VENC_FUNC_SEL_OPT_8X8_CNT_ADDR(base) ((base) + (0x0AC0))
+#define SOC_VENC_FUNC_SEL_INTRA_OPT_8X8_CNT_ADDR(base) ((base) + (0x0AC4))
+#define SOC_VENC_FUNC_SEL_INTRA_NORMAL_OPT_8X8_CNT_ADDR(base) ((base) + (0x0AC8))
+#define SOC_VENC_FUNC_SEL_INTRA_PCM_OPT_8X8_CNT_ADDR(base) ((base) + (0x0ACC))
+#define SOC_VENC_FUNC_SEL_INTER_OPT_8X8_CNT_ADDR(base) ((base) + (0x0AD0))
+#define SOC_VENC_FUNC_SEL_INTER_FME_OPT_8X8_CNT_ADDR(base) ((base) + (0x0AD4))
+#define SOC_VENC_FUNC_SELINTER_MERGE_OPT_8X8_CNT_ADDR(base) ((base) + (0x0AD8))
+#define SOC_VENC_FUNC_SEL_INTER_SKIP_OPT_8X8_CNT_ADDR(base) ((base) + (0x0ADC))
+#define SOC_VENC_FUNC_SEL_OPT_16X16_CNT_ADDR(base) ((base) + (0x0AE0))
+#define SOC_VENC_FUNC_SEL_INTRA_OPT_16X16_CNT_ADDR(base) ((base) + (0x0AE4))
+#define SOC_VENC_FUNC_SEL_OPT_4X4_CNT_ADDR(base) ((base) + (0x0AE8))
+#define SOC_VENC_RESERVED0_FUNC_SEL_ADDR(base) ((base) + (0x0AEC))
+#define SOC_VENC_FUNC_SEL_INTER_OPT_16X16_CNT_ADDR(base) ((base) + (0x0AF0))
+#define SOC_VENC_FUNC_SEL_INTER_FME_OPT_16X16_CNT_ADDR(base) ((base) + (0x0AF4))
+#define SOC_VENC_FUNC_SEL_INTER_MERGE_OPT_16X16_CNT_ADDR(base) ((base) + (0x0AF8))
+#define SOC_VENC_FUNC_SEL_INTER_SKIP_OPT_16X16_CNT_ADDR(base) ((base) + (0x0AFC))
+#define SOC_VENC_FUNC_SEL_OPT_32X32_CNT_ADDR(base) ((base) + (0x0B00))
+#define SOC_VENC_FUNC_SEL_INTRA_OPT_32X32_CNT_ADDR(base) ((base) + (0x0B04))
+#define SOC_VENC_RESERVED1_FUNC_SEL_ADDR(base) ((base) + (0x0B08))
+#define SOC_VENC_FUNC_SEL_INTER_OPT_32X32_CNT_ADDR(base) ((base) + (0x0B0C))
+#define SOC_VENC_FUNC_SEL_INTER_FME_OPT_32X32_CNT_ADDR(base) ((base) + (0x0B10))
+#define SOC_VENC_FUNC_SEL_INTER_MERGE_OPT_32X32_CNT_ADDR(base) ((base) + (0x0B14))
+#define SOC_VENC_FUNC_SEL_INTER_SKIP_OPT_32X32_CNT_ADDR(base) ((base) + (0x0B18))
+#define SOC_VENC_FUNC_SEL_OPT_64X64_CNT_ADDR(base) ((base) + (0x0B1C))
+#define SOC_VENC_FUNC_SEL_INTER_FME_OPT_64X64_CNT_ADDR(base) ((base) + (0x0B20))
+#define SOC_VENC_FUNC_SEL_INTER_MERGE_OPT_64X64_CNT_ADDR(base) ((base) + (0x0B24))
+#define SOC_VENC_FUNC_SEL_INTER_SKIP_OPT_64X64_CNT_ADDR(base) ((base) + (0x0B28))
+#define SOC_VENC_FUNC_SEL_TOTAL_LUMA_QP_ADDR(base) ((base) + (0x0B2C))
+#define SOC_VENC_FUNC_SEL_MAX_MIN_LUMA_QP_ADDR(base) ((base) + (0x0B30))
+#define SOC_VENC_RESERVED2_FUNC_SEL_ADDR(base) ((base) + (0x0B34))
+#define SOC_VENC_FUNC_SEL_LUMA_QP0_CNT_ADDR(base) ((base) + (0x0BC0))
+#define SOC_VENC_FUNC_SEL_LUMA_QP1_CNT_ADDR(base) ((base) + (0x0BC4))
+#define SOC_VENC_FUNC_SEL_LUMA_QP2_CNT_ADDR(base) ((base) + (0x0BC8))
+#define SOC_VENC_FUNC_SEL_LUMA_QP3_CNT_ADDR(base) ((base) + (0x0BCC))
+#define SOC_VENC_FUNC_SEL_LUMA_QP4_CNT_ADDR(base) ((base) + (0x0BD0))
+#define SOC_VENC_FUNC_SEL_LUMA_QP5_CNT_ADDR(base) ((base) + (0x0BD4))
+#define SOC_VENC_FUNC_SEL_LUMA_QP6_CNT_ADDR(base) ((base) + (0x0BD8))
+#define SOC_VENC_FUNC_SEL_LUMA_QP7_CNT_ADDR(base) ((base) + (0x0BDC))
+#define SOC_VENC_FUNC_SEL_LUMA_QP8_CNT_ADDR(base) ((base) + (0x0BE0))
+#define SOC_VENC_FUNC_SEL_LUMA_QP9_CNT_ADDR(base) ((base) + (0x0BE4))
+#define SOC_VENC_FUNC_SEL_LUMA_QP10_CNT_ADDR(base) ((base) + (0x0BE8))
+#define SOC_VENC_FUNC_SEL_LUMA_QP11_CNT_ADDR(base) ((base) + (0x0BEC))
+#define SOC_VENC_FUNC_SEL_LUMA_QP12_CNT_ADDR(base) ((base) + (0x0BF0))
+#define SOC_VENC_FUNC_SEL_LUMA_QP13_CNT_ADDR(base) ((base) + (0x0BF4))
+#define SOC_VENC_FUNC_SEL_LUMA_QP14_CNT_ADDR(base) ((base) + (0x0BF8))
+#define SOC_VENC_FUNC_SEL_LUMA_QP15_CNT_ADDR(base) ((base) + (0x0BFC))
+#define SOC_VENC_FUNC_SEL_LUMA_QP16_CNT_ADDR(base) ((base) + (0x0C00))
+#define SOC_VENC_FUNC_SEL_LUMA_QP17_CNT_ADDR(base) ((base) + (0x0C04))
+#define SOC_VENC_FUNC_SEL_LUMA_QP18_CNT_ADDR(base) ((base) + (0x0C08))
+#define SOC_VENC_FUNC_SEL_LUMA_QP19_CNT_ADDR(base) ((base) + (0x0C0C))
+#define SOC_VENC_FUNC_SEL_LUMA_QP20_CNT_ADDR(base) ((base) + (0x0C10))
+#define SOC_VENC_FUNC_SEL_LUMA_QP21_CNT_ADDR(base) ((base) + (0x0C14))
+#define SOC_VENC_FUNC_SEL_LUMA_QP22_CNT_ADDR(base) ((base) + (0x0C18))
+#define SOC_VENC_FUNC_SEL_LUMA_QP23_CNT_ADDR(base) ((base) + (0x0C1C))
+#define SOC_VENC_FUNC_SEL_LUMA_QP24_CNT_ADDR(base) ((base) + (0x0C20))
+#define SOC_VENC_FUNC_SEL_LUMA_QP25_CNT_ADDR(base) ((base) + (0x0C24))
+#define SOC_VENC_FUNC_SEL_LUMA_QP26_CNT_ADDR(base) ((base) + (0x0C28))
+#define SOC_VENC_FUNC_SEL_LUMA_QP27_CNT_ADDR(base) ((base) + (0x0C2C))
+#define SOC_VENC_FUNC_SEL_LUMA_QP28_CNT_ADDR(base) ((base) + (0x0C30))
+#define SOC_VENC_FUNC_SEL_LUMA_QP29_CNT_ADDR(base) ((base) + (0x0C34))
+#define SOC_VENC_FUNC_SEL_LUMA_QP30_CNT_ADDR(base) ((base) + (0x0C38))
+#define SOC_VENC_FUNC_SEL_LUMA_QP31_CNT_ADDR(base) ((base) + (0x0C3C))
+#define SOC_VENC_FUNC_SEL_LUMA_QP32_CNT_ADDR(base) ((base) + (0x0C40))
+#define SOC_VENC_FUNC_SEL_LUMA_QP33_CNT_ADDR(base) ((base) + (0x0C44))
+#define SOC_VENC_FUNC_SEL_LUMA_QP34_CNT_ADDR(base) ((base) + (0x0C48))
+#define SOC_VENC_FUNC_SEL_LUMA_QP35_CNT_ADDR(base) ((base) + (0x0C4C))
+#define SOC_VENC_FUNC_SEL_LUMA_QP36_CNT_ADDR(base) ((base) + (0x0C50))
+#define SOC_VENC_FUNC_SEL_LUMA_QP37_CNT_ADDR(base) ((base) + (0x0C54))
+#define SOC_VENC_FUNC_SEL_LUMA_QP38_CNT_ADDR(base) ((base) + (0x0C58))
+#define SOC_VENC_FUNC_SEL_LUMA_QP39_CNT_ADDR(base) ((base) + (0x0C5c))
+#define SOC_VENC_FUNC_SEL_LUMA_QP40_CNT_ADDR(base) ((base) + (0x0C60))
+#define SOC_VENC_FUNC_SEL_LUMA_QP41_CNT_ADDR(base) ((base) + (0x0C64))
+#define SOC_VENC_FUNC_SEL_LUMA_QP42_CNT_ADDR(base) ((base) + (0x0C68))
+#define SOC_VENC_FUNC_SEL_LUMA_QP43_CNT_ADDR(base) ((base) + (0x0C6C))
+#define SOC_VENC_FUNC_SEL_LUMA_QP44_CNT_ADDR(base) ((base) + (0x0C70))
+#define SOC_VENC_FUNC_SEL_LUMA_QP45_CNT_ADDR(base) ((base) + (0x0C74))
+#define SOC_VENC_FUNC_SEL_LUMA_QP46_CNT_ADDR(base) ((base) + (0x0C78))
+#define SOC_VENC_FUNC_SEL_LUMA_QP47_CNT_ADDR(base) ((base) + (0x0C7C))
+#define SOC_VENC_FUNC_SEL_LUMA_QP48_CNT_ADDR(base) ((base) + (0x0C80))
+#define SOC_VENC_FUNC_SEL_LUMA_QP49_CNT_ADDR(base) ((base) + (0x0C84))
+#define SOC_VENC_FUNC_SEL_LUMA_QP50_CNT_ADDR(base) ((base) + (0x0C88))
+#define SOC_VENC_FUNC_SEL_LUMA_QP51_CNT_ADDR(base) ((base) + (0x0C8C))
+#define SOC_VENC_RESERVED3_FUNC_SEL_ADDR(base) ((base) + (0x0C90))
+#define SOC_VENC_RESERVED_FUNC_TBLDST_ADDR(base) ((base) + (0x0CC0))
+#define SOC_VENC_FUNC_SAO_OFF_NUM_ADDR(base) ((base) + (0x0EC0))
+#define SOC_VENC_FUNC_SAO_MSE_SUM_ADDR(base) ((base) + (0x0EC4))
+#define SOC_VENC_FUNC_SAO_MSE_CNT_ADDR(base) ((base) + (0x0EC8))
+#define SOC_VENC_FUNC_SAO_MSE_MAX_ADDR(base) ((base) + (0x0ECC))
+#define SOC_VENC_FUNC_SAO_SSD_AREA0_SUM_ADDR(base) ((base) + (0x0ED0))
+#define SOC_VENC_FUNC_SAO_SSD_AREA1_SUM_ADDR(base) ((base) + (0x0ED4))
+#define SOC_VENC_FUNC_SAO_SSD_AREA2_SUM_ADDR(base) ((base) + (0x0ED8))
+#define SOC_VENC_FUNC_SAO_SSD_AREA3_SUM_ADDR(base) ((base) + (0x0EDC))
+#define SOC_VENC_FUNC_SAO_SSD_AREA4_SUM_ADDR(base) ((base) + (0x0EE0))
+#define SOC_VENC_FUNC_SAO_SSD_AREA5_SUM_ADDR(base) ((base) + (0x0EE4))
+#define SOC_VENC_FUNC_SAO_SSD_AREA6_SUM_ADDR(base) ((base) + (0x0EE8))
+#define SOC_VENC_FUNC_SAO_SSD_AREA7_SUM_ADDR(base) ((base) + (0x0EEC))
+#define SOC_VENC_RESERVED_FUNC_SAO_ADDR(base) ((base) + (0x0EF0))
+#define SOC_VENC_RESERVED_FUNC_NU3_ADDR(base) ((base) + (0x0F40))
+#endif
+#ifndef __SOC_H_FOR_ASM__
+#define SOC_VENC_AXIDFX_ERR_ADDR(base) ((base) + (0x0000UL))
+#define SOC_VENC_RESERVED_1_ADDR(base) ((base) + (0x0004UL))
+#define SOC_VENC_AXIDFX_AR_R_CNT_ADDR(base) ((base) + (0x0010UL))
+#define SOC_VENC_AXIDFX_AW_W_CNT_ADDR(base) ((base) + (0x0014UL))
+#define SOC_VENC_AXIDFX_AW_B_CNT_ADDR(base) ((base) + (0x0018UL))
+#define SOC_VENC_RESERVED_2_ADDR(base) ((base) + (0x001CUL))
+#define SOC_VENC_AXIDFX_AR_R_ID_ERR_ADDR(base) ((base) + (0x0020UL))
+#define SOC_VENC_AXIDFX_ERR_ARID_ADDR(base) ((base) + (0x0024UL))
+#define SOC_VENC_AXIDFX_ERR_RID_ADDR(base) ((base) + (0x0028UL))
+#define SOC_VENC_RESERVED_3_ADDR(base) ((base) + (0x002CUL))
+#define SOC_VENC_AXIDFX_AW_W_B_ID_ERR_ADDR(base) ((base) + (0x0030UL))
+#define SOC_VENC_AXIDFX_ERR_AWID_ADDR(base) ((base) + (0x0034UL))
+#define SOC_VENC_AXIDFX_ERR_WID_ADDR(base) ((base) + (0x0038UL))
+#define SOC_VENC_AXIDFX_ERR_BID_ADDR(base) ((base) + (0x003CUL))
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_ADDR(base) ((base) + (0x0040UL))
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_ADDR(base) ((base) + (0x0044UL))
+#define SOC_VENC_AXIDFX_ARID_TX_2ERR_ADDR(base) ((base) + (0x0048UL))
+#define SOC_VENC_RESERVED_4_ADDR(base) ((base) + (0x004CUL))
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_ADDR(base) ((base) + (0x0050UL))
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_ADDR(base) ((base) + (0x0054UL))
+#define SOC_VENC_AXIDFX_RID_RX_2ERR_ADDR(base) ((base) + (0x0058UL))
+#define SOC_VENC_RESERVED_5_ADDR(base) ((base) + (0x005CUL))
+#define SOC_VENC_AXIDFX_ARID_RX_0ERR_ADDR(base) ((base) + (0x0060UL))
+#define SOC_VENC_AXIDFX_BID_RX_ERR_ADDR(base) ((base) + (0x0064UL))
+#define SOC_VENC_RESERVED_6_ADDR(base) ((base) + (0x0068UL))
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_ADDR(base) ((base) + (0x0070UL))
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_ADDR(base) ((base) + (0x0074UL))
+#define SOC_VENC_AXIDFX_ARID_LEN_2ERR_ADDR(base) ((base) + (0x0078UL))
+#define SOC_VENC_RESERVED_7_ADDR(base) ((base) + (0x007CUL))
+#define SOC_VENC_AXIDFX_AWLEN_CNT_ADDR(base) ((base) + (0x0080UL))
+#define SOC_VENC_AXIDFX_WLEN_CNT_ADDR(base) ((base) + (0x0084UL))
+#define SOC_VENC_RESERVED_8_ADDR(base) ((base) + (0x0088UL))
+#define SOC_VENC_AXIDFX_RESP_ERR_ADDR(base) ((base) + (0x0090UL))
+#define SOC_VENC_AXIDFX_ERR_RESP_ADDR(base) ((base) + (0x0094UL))
+#define SOC_VENC_AXIDFX_LEN_ERR_ADDR(base) ((base) + (0x0098UL))
+#define SOC_VENC_AXIDFX_ERR_LEN_ADDR(base) ((base) + (0x009CUL))
+#define SOC_VENC_AXIDFX_0RID_FLAG_ADDR(base) ((base) + (0x00A0UL))
+#define SOC_VENC_AXIDFX_1RID_FLAG_ADDR(base) ((base) + (0x00A4UL))
+#define SOC_VENC_AXIDFX_2RID_FLAG_ADDR(base) ((base) + (0x00A8UL))
+#define SOC_VENC_AXIDFX_WID_FLAG_ADDR(base) ((base) + (0x00ACUL))
+#define SOC_VENC_AXIDFX_AXI_ST_ADDR(base) ((base) + (0x00B0UL))
+#define SOC_VENC_RESERVED_9_ADDR(base) ((base) + (0x00A0UL))
+#define SOC_VENC_AXIDFX_SOFT_RST_REQ_ADDR(base) ((base) + (0x0100UL))
+#define SOC_VENC_AXIDFX_SOFT_RST_ACK_ADDR(base) ((base) + (0x0104UL))
+#define SOC_VENC_RESERVED_11_ADDR(base) ((base) + (0x0108UL))
+#define SOC_VENC_AXIDFX_SOFT_RST_FORCE_REQ_ACK_ADDR(base) ((base) + (0x0110UL))
+#define SOC_VENC_AXIDFX_SOFT_RST_STATE0_ADDR(base) ((base) + (0x0114UL))
+#define SOC_VENC_AXIDFX_SOFT_RST_STATE1_ADDR(base) ((base) + (0x0118UL))
+#define SOC_VENC_RESERVED_12_ADDR(base) ((base) + (0x011CUL))
+#define SOC_VENC_RESERVED_S_NS_0_ADDR(base) ((base) + (0x0700UL))
+#define SOC_VENC_RESERVED_S_NS_1_ADDR(base) ((base) + (0x0704UL))
+#define SOC_VENC_RESERVED_S_NS_2_ADDR(base) ((base) + (0x0708UL))
+#define SOC_VENC_RESERVED_S_NS_3_ADDR(base) ((base) + (0x070CUL))
+#define SOC_VENC_RESERVED_S_NS_4_ADDR(base) ((base) + (0x0710UL))
+#define SOC_VENC_RESERVED_S_NS_5_ADDR(base) ((base) + (0x0714UL))
+#define SOC_VENC_RESERVED_S_NS_6_ADDR(base) ((base) + (0x0718UL))
+#define SOC_VENC_RESERVED_S_NS_7_ADDR(base) ((base) + (0x071CUL))
+#else
+#define SOC_VENC_AXIDFX_ERR_ADDR(base) ((base) + (0x0000))
+#define SOC_VENC_RESERVED_1_ADDR(base) ((base) + (0x0004))
+#define SOC_VENC_AXIDFX_AR_R_CNT_ADDR(base) ((base) + (0x0010))
+#define SOC_VENC_AXIDFX_AW_W_CNT_ADDR(base) ((base) + (0x0014))
+#define SOC_VENC_AXIDFX_AW_B_CNT_ADDR(base) ((base) + (0x0018))
+#define SOC_VENC_RESERVED_2_ADDR(base) ((base) + (0x001C))
+#define SOC_VENC_AXIDFX_AR_R_ID_ERR_ADDR(base) ((base) + (0x0020))
+#define SOC_VENC_AXIDFX_ERR_ARID_ADDR(base) ((base) + (0x0024))
+#define SOC_VENC_AXIDFX_ERR_RID_ADDR(base) ((base) + (0x0028))
+#define SOC_VENC_RESERVED_3_ADDR(base) ((base) + (0x002C))
+#define SOC_VENC_AXIDFX_AW_W_B_ID_ERR_ADDR(base) ((base) + (0x0030))
+#define SOC_VENC_AXIDFX_ERR_AWID_ADDR(base) ((base) + (0x0034))
+#define SOC_VENC_AXIDFX_ERR_WID_ADDR(base) ((base) + (0x0038))
+#define SOC_VENC_AXIDFX_ERR_BID_ADDR(base) ((base) + (0x003C))
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_ADDR(base) ((base) + (0x0040))
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_ADDR(base) ((base) + (0x0044))
+#define SOC_VENC_AXIDFX_ARID_TX_2ERR_ADDR(base) ((base) + (0x0048))
+#define SOC_VENC_RESERVED_4_ADDR(base) ((base) + (0x004C))
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_ADDR(base) ((base) + (0x0050))
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_ADDR(base) ((base) + (0x0054))
+#define SOC_VENC_AXIDFX_RID_RX_2ERR_ADDR(base) ((base) + (0x0058))
+#define SOC_VENC_RESERVED_5_ADDR(base) ((base) + (0x005C))
+#define SOC_VENC_AXIDFX_ARID_RX_0ERR_ADDR(base) ((base) + (0x0060))
+#define SOC_VENC_AXIDFX_BID_RX_ERR_ADDR(base) ((base) + (0x0064))
+#define SOC_VENC_RESERVED_6_ADDR(base) ((base) + (0x0068))
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_ADDR(base) ((base) + (0x0070))
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_ADDR(base) ((base) + (0x0074))
+#define SOC_VENC_AXIDFX_ARID_LEN_2ERR_ADDR(base) ((base) + (0x0078))
+#define SOC_VENC_RESERVED_7_ADDR(base) ((base) + (0x007C))
+#define SOC_VENC_AXIDFX_AWLEN_CNT_ADDR(base) ((base) + (0x0080))
+#define SOC_VENC_AXIDFX_WLEN_CNT_ADDR(base) ((base) + (0x0084))
+#define SOC_VENC_RESERVED_8_ADDR(base) ((base) + (0x0088))
+#define SOC_VENC_AXIDFX_RESP_ERR_ADDR(base) ((base) + (0x0090))
+#define SOC_VENC_AXIDFX_ERR_RESP_ADDR(base) ((base) + (0x0094))
+#define SOC_VENC_AXIDFX_LEN_ERR_ADDR(base) ((base) + (0x0098))
+#define SOC_VENC_AXIDFX_ERR_LEN_ADDR(base) ((base) + (0x009C))
+#define SOC_VENC_AXIDFX_0RID_FLAG_ADDR(base) ((base) + (0x00A0))
+#define SOC_VENC_AXIDFX_1RID_FLAG_ADDR(base) ((base) + (0x00A4))
+#define SOC_VENC_AXIDFX_2RID_FLAG_ADDR(base) ((base) + (0x00A8))
+#define SOC_VENC_AXIDFX_WID_FLAG_ADDR(base) ((base) + (0x00AC))
+#define SOC_VENC_AXIDFX_AXI_ST_ADDR(base) ((base) + (0x00B0))
+#define SOC_VENC_RESERVED_9_ADDR(base) ((base) + (0x00A0))
+#define SOC_VENC_AXIDFX_SOFT_RST_REQ_ADDR(base) ((base) + (0x0100))
+#define SOC_VENC_AXIDFX_SOFT_RST_ACK_ADDR(base) ((base) + (0x0104))
+#define SOC_VENC_RESERVED_11_ADDR(base) ((base) + (0x0108))
+#define SOC_VENC_AXIDFX_SOFT_RST_FORCE_REQ_ACK_ADDR(base) ((base) + (0x0110))
+#define SOC_VENC_AXIDFX_SOFT_RST_STATE0_ADDR(base) ((base) + (0x0114))
+#define SOC_VENC_AXIDFX_SOFT_RST_STATE1_ADDR(base) ((base) + (0x0118))
+#define SOC_VENC_RESERVED_12_ADDR(base) ((base) + (0x011C))
+#define SOC_VENC_RESERVED_S_NS_0_ADDR(base) ((base) + (0x0700))
+#define SOC_VENC_RESERVED_S_NS_1_ADDR(base) ((base) + (0x0704))
+#define SOC_VENC_RESERVED_S_NS_2_ADDR(base) ((base) + (0x0708))
+#define SOC_VENC_RESERVED_S_NS_3_ADDR(base) ((base) + (0x070C))
+#define SOC_VENC_RESERVED_S_NS_4_ADDR(base) ((base) + (0x0710))
+#define SOC_VENC_RESERVED_S_NS_5_ADDR(base) ((base) + (0x0714))
+#define SOC_VENC_RESERVED_S_NS_6_ADDR(base) ((base) + (0x0718))
+#define SOC_VENC_RESERVED_S_NS_7_ADDR(base) ((base) + (0x071C))
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_enable_ve_eop : 1;
+        unsigned int vcpi_enable_vedu_slice_end : 1;
+        unsigned int vcpi_enable_ve_buffull : 1;
+        unsigned int vcpi_enable_ve_pbitsover : 1;
+        unsigned int vcpi_enable_line_pos : 1;
+        unsigned int vcpi_enable_ppdf_dec_err : 1;
+        unsigned int vcpi_enable_vedu_timeout : 1;
+        unsigned int reserved : 25;
+    } reg;
+} SOC_VENC_VEDU_VCPI_INTMASK_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_INTMASK_vcpi_enable_ve_eop_START (0)
+#define SOC_VENC_VEDU_VCPI_INTMASK_vcpi_enable_ve_eop_END (0)
+#define SOC_VENC_VEDU_VCPI_INTMASK_vcpi_enable_vedu_slice_end_START (1)
+#define SOC_VENC_VEDU_VCPI_INTMASK_vcpi_enable_vedu_slice_end_END (1)
+#define SOC_VENC_VEDU_VCPI_INTMASK_vcpi_enable_ve_buffull_START (2)
+#define SOC_VENC_VEDU_VCPI_INTMASK_vcpi_enable_ve_buffull_END (2)
+#define SOC_VENC_VEDU_VCPI_INTMASK_vcpi_enable_ve_pbitsover_START (3)
+#define SOC_VENC_VEDU_VCPI_INTMASK_vcpi_enable_ve_pbitsover_END (3)
+#define SOC_VENC_VEDU_VCPI_INTMASK_vcpi_enable_line_pos_START (4)
+#define SOC_VENC_VEDU_VCPI_INTMASK_vcpi_enable_line_pos_END (4)
+#define SOC_VENC_VEDU_VCPI_INTMASK_vcpi_enable_ppdf_dec_err_START (5)
+#define SOC_VENC_VEDU_VCPI_INTMASK_vcpi_enable_ppdf_dec_err_END (5)
+#define SOC_VENC_VEDU_VCPI_INTMASK_vcpi_enable_vedu_timeout_START (6)
+#define SOC_VENC_VEDU_VCPI_INTMASK_vcpi_enable_vedu_timeout_END (6)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_clr_ve_eop : 1;
+        unsigned int vcpi_clr_vedu_slice_end : 1;
+        unsigned int vcpi_clr_ve_buffull : 1;
+        unsigned int vcpi_clr_ve_pbitsover : 1;
+        unsigned int vcpi_clr_line_pos : 1;
+        unsigned int vcpi_clr_ppdf_dec_err : 1;
+        unsigned int vcpi_clr_vedu_timeout : 1;
+        unsigned int reserved : 25;
+    } reg;
+} SOC_VENC_VEDU_VCPI_INTCLR_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_INTCLR_vcpi_clr_ve_eop_START (0)
+#define SOC_VENC_VEDU_VCPI_INTCLR_vcpi_clr_ve_eop_END (0)
+#define SOC_VENC_VEDU_VCPI_INTCLR_vcpi_clr_vedu_slice_end_START (1)
+#define SOC_VENC_VEDU_VCPI_INTCLR_vcpi_clr_vedu_slice_end_END (1)
+#define SOC_VENC_VEDU_VCPI_INTCLR_vcpi_clr_ve_buffull_START (2)
+#define SOC_VENC_VEDU_VCPI_INTCLR_vcpi_clr_ve_buffull_END (2)
+#define SOC_VENC_VEDU_VCPI_INTCLR_vcpi_clr_ve_pbitsover_START (3)
+#define SOC_VENC_VEDU_VCPI_INTCLR_vcpi_clr_ve_pbitsover_END (3)
+#define SOC_VENC_VEDU_VCPI_INTCLR_vcpi_clr_line_pos_START (4)
+#define SOC_VENC_VEDU_VCPI_INTCLR_vcpi_clr_line_pos_END (4)
+#define SOC_VENC_VEDU_VCPI_INTCLR_vcpi_clr_ppdf_dec_err_START (5)
+#define SOC_VENC_VEDU_VCPI_INTCLR_vcpi_clr_ppdf_dec_err_END (5)
+#define SOC_VENC_VEDU_VCPI_INTCLR_vcpi_clr_vedu_timeout_START (6)
+#define SOC_VENC_VEDU_VCPI_INTCLR_vcpi_clr_vedu_timeout_END (6)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_vstart : 1;
+        unsigned int reserved : 31;
+    } reg;
+} SOC_VENC_VEDU_VCPI_START_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_START_vcpi_vstart_START (0)
+#define SOC_VENC_VEDU_VCPI_START_vcpi_vstart_END (0)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vedu_bus_idle_req : 1;
+        unsigned int reserved : 31;
+    } reg;
+} SOC_VENC_VEDU_BUS_IDLE_REQ_UNION;
+#endif
+#define SOC_VENC_VEDU_BUS_IDLE_REQ_vedu_bus_idle_req_START (0)
+#define SOC_VENC_VEDU_BUS_IDLE_REQ_vedu_bus_idle_req_END (0)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_frame_no : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_FRAMENO_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_FRAMENO_vcpi_frame_no_START (0)
+#define SOC_VENC_VEDU_VCPI_FRAMENO_vcpi_frame_no_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_timeout : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_TIMEOUT_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_TIMEOUT_vcpi_timeout_START (0)
+#define SOC_VENC_VEDU_VCPI_TIMEOUT_vcpi_timeout_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_vedsel : 1;
+        unsigned int vedu_selfrst_en : 1;
+        unsigned int vcpi_protocol : 2;
+        unsigned int vcpi_cfg_mode : 1;
+        unsigned int vcpi_slice_int_en : 1;
+        unsigned int vcpi_sao_luma : 1;
+        unsigned int vcpi_sao_chroma : 1;
+        unsigned int vcpi_rec_cmp_en : 1;
+        unsigned int vcpi_img_improve_en : 1;
+        unsigned int vcpi_frame_type : 2;
+        unsigned int vcpi_entropy_mode : 1;
+        unsigned int vcpi_long_term_refpic : 1;
+        unsigned int vcpi_ref_num : 1;
+        unsigned int vcpi_pr_inter_en : 1;
+        unsigned int vcpi_idr_pic : 1;
+        unsigned int vcpi_pskip_en : 1;
+        unsigned int vcpi_trans_mode : 2;
+        unsigned int vcpi_blk8_inter : 1;
+        unsigned int vcpi_sobel_weight_en : 1;
+        unsigned int vcpi_high_speed_en : 1;
+        unsigned int vcpi_tiles_en : 1;
+        unsigned int vcpi_10bit_mode : 2;
+        unsigned int reserved_0 : 2;
+        unsigned int vcpi_time_en : 1;
+        unsigned int reserved_1 : 1;
+        unsigned int vcpi_ref_cmp_en : 1;
+        unsigned int vcpi_refc_nload : 1;
+    } reg;
+} SOC_VENC_VEDU_VCPI_MODE_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_vedsel_START (0)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_vedsel_END (0)
+#define SOC_VENC_VEDU_VCPI_MODE_vedu_selfrst_en_START (1)
+#define SOC_VENC_VEDU_VCPI_MODE_vedu_selfrst_en_END (1)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_protocol_START (2)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_protocol_END (3)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_cfg_mode_START (4)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_cfg_mode_END (4)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_slice_int_en_START (5)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_slice_int_en_END (5)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_sao_luma_START (6)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_sao_luma_END (6)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_sao_chroma_START (7)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_sao_chroma_END (7)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_rec_cmp_en_START (8)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_rec_cmp_en_END (8)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_img_improve_en_START (9)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_img_improve_en_END (9)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_frame_type_START (10)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_frame_type_END (11)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_entropy_mode_START (12)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_entropy_mode_END (12)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_long_term_refpic_START (13)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_long_term_refpic_END (13)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_ref_num_START (14)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_ref_num_END (14)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_pr_inter_en_START (15)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_pr_inter_en_END (15)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_idr_pic_START (16)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_idr_pic_END (16)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_pskip_en_START (17)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_pskip_en_END (17)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_trans_mode_START (18)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_trans_mode_END (19)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_blk8_inter_START (20)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_blk8_inter_END (20)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_sobel_weight_en_START (21)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_sobel_weight_en_END (21)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_high_speed_en_START (22)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_high_speed_en_END (22)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_tiles_en_START (23)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_tiles_en_END (23)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_10bit_mode_START (24)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_10bit_mode_END (25)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_time_en_START (28)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_time_en_END (28)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_ref_cmp_en_START (30)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_ref_cmp_en_END (30)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_refc_nload_START (31)
+#define SOC_VENC_VEDU_VCPI_MODE_vcpi_refc_nload_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_RESERVED_00_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_RESERVED_01_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_RESERVED_02_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_RESERVED_03_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_RESERVED_04_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int emar_rec_b7_scramble : 1;
+        unsigned int emar_rec_b8_scramble : 2;
+        unsigned int emar_ori_y_b7_scramble : 2;
+        unsigned int emar_ori_y_b8_scramble : 2;
+        unsigned int emar_ori_y_b9_scramble : 2;
+        unsigned int emar_ori_uv_b7_scramble : 2;
+        unsigned int emar_ori_uv_b8_scramble : 2;
+        unsigned int emar_ori_uv_b9_scramble : 2;
+        unsigned int reserved : 17;
+    } reg;
+} SOC_VENC_VEDU_EMAR_SCRAMBLE_TYPE_UNION;
+#endif
+#define SOC_VENC_VEDU_EMAR_SCRAMBLE_TYPE_emar_rec_b7_scramble_START (0)
+#define SOC_VENC_VEDU_EMAR_SCRAMBLE_TYPE_emar_rec_b7_scramble_END (0)
+#define SOC_VENC_VEDU_EMAR_SCRAMBLE_TYPE_emar_rec_b8_scramble_START (1)
+#define SOC_VENC_VEDU_EMAR_SCRAMBLE_TYPE_emar_rec_b8_scramble_END (2)
+#define SOC_VENC_VEDU_EMAR_SCRAMBLE_TYPE_emar_ori_y_b7_scramble_START (3)
+#define SOC_VENC_VEDU_EMAR_SCRAMBLE_TYPE_emar_ori_y_b7_scramble_END (4)
+#define SOC_VENC_VEDU_EMAR_SCRAMBLE_TYPE_emar_ori_y_b8_scramble_START (5)
+#define SOC_VENC_VEDU_EMAR_SCRAMBLE_TYPE_emar_ori_y_b8_scramble_END (6)
+#define SOC_VENC_VEDU_EMAR_SCRAMBLE_TYPE_emar_ori_y_b9_scramble_START (7)
+#define SOC_VENC_VEDU_EMAR_SCRAMBLE_TYPE_emar_ori_y_b9_scramble_END (8)
+#define SOC_VENC_VEDU_EMAR_SCRAMBLE_TYPE_emar_ori_uv_b7_scramble_START (9)
+#define SOC_VENC_VEDU_EMAR_SCRAMBLE_TYPE_emar_ori_uv_b7_scramble_END (10)
+#define SOC_VENC_VEDU_EMAR_SCRAMBLE_TYPE_emar_ori_uv_b8_scramble_START (11)
+#define SOC_VENC_VEDU_EMAR_SCRAMBLE_TYPE_emar_ori_uv_b8_scramble_END (12)
+#define SOC_VENC_VEDU_EMAR_SCRAMBLE_TYPE_emar_ori_uv_b9_scramble_START (13)
+#define SOC_VENC_VEDU_EMAR_SCRAMBLE_TYPE_emar_ori_uv_b9_scramble_END (14)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_llild_addr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_LLILD_ADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_LLILD_ADDR_L_vcpi_llild_addr_l_START (0)
+#define SOC_VENC_VEDU_VCPI_LLILD_ADDR_L_vcpi_llild_addr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_llild_addr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_LLILD_ADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_LLILD_ADDR_H_vcpi_llild_addr_h_START (0)
+#define SOC_VENC_VEDU_VCPI_LLILD_ADDR_H_vcpi_llild_addr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_rc_cu_qp_en : 1;
+        unsigned int vcpi_rc_row_qp_en : 1;
+        unsigned int vcpi_move_scene_en : 1;
+        unsigned int reserved_0 : 1;
+        unsigned int vcpi_strong_edge_move_en : 1;
+        unsigned int reserved_1 : 1;
+        unsigned int reserved_2 : 2;
+        unsigned int vcpi_rc_low_luma_en : 1;
+        unsigned int reserved_3 : 1;
+        unsigned int reserved_4 : 1;
+        unsigned int vcpi_rd_min_sad_flag_en : 1;
+        unsigned int reserved_5 : 2;
+        unsigned int vcpi_low_min_sad_en : 1;
+        unsigned int vcpi_prev_min_sad_en : 1;
+        unsigned int vcpi_qpgld_en : 1;
+        unsigned int vcpi_map_roikeep_en : 1;
+        unsigned int vcpi_flat_region_en : 1;
+        unsigned int vcpi_qp_restrain_large_sad : 1;
+        unsigned int reserved_6 : 12;
+    } reg;
+} SOC_VENC_VEDU_VCPI_RC_ENABLE_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_RC_ENABLE_vcpi_rc_cu_qp_en_START (0)
+#define SOC_VENC_VEDU_VCPI_RC_ENABLE_vcpi_rc_cu_qp_en_END (0)
+#define SOC_VENC_VEDU_VCPI_RC_ENABLE_vcpi_rc_row_qp_en_START (1)
+#define SOC_VENC_VEDU_VCPI_RC_ENABLE_vcpi_rc_row_qp_en_END (1)
+#define SOC_VENC_VEDU_VCPI_RC_ENABLE_vcpi_move_scene_en_START (2)
+#define SOC_VENC_VEDU_VCPI_RC_ENABLE_vcpi_move_scene_en_END (2)
+#define SOC_VENC_VEDU_VCPI_RC_ENABLE_vcpi_strong_edge_move_en_START (4)
+#define SOC_VENC_VEDU_VCPI_RC_ENABLE_vcpi_strong_edge_move_en_END (4)
+#define SOC_VENC_VEDU_VCPI_RC_ENABLE_vcpi_rc_low_luma_en_START (8)
+#define SOC_VENC_VEDU_VCPI_RC_ENABLE_vcpi_rc_low_luma_en_END (8)
+#define SOC_VENC_VEDU_VCPI_RC_ENABLE_vcpi_rd_min_sad_flag_en_START (11)
+#define SOC_VENC_VEDU_VCPI_RC_ENABLE_vcpi_rd_min_sad_flag_en_END (11)
+#define SOC_VENC_VEDU_VCPI_RC_ENABLE_vcpi_low_min_sad_en_START (14)
+#define SOC_VENC_VEDU_VCPI_RC_ENABLE_vcpi_low_min_sad_en_END (14)
+#define SOC_VENC_VEDU_VCPI_RC_ENABLE_vcpi_prev_min_sad_en_START (15)
+#define SOC_VENC_VEDU_VCPI_RC_ENABLE_vcpi_prev_min_sad_en_END (15)
+#define SOC_VENC_VEDU_VCPI_RC_ENABLE_vcpi_qpgld_en_START (16)
+#define SOC_VENC_VEDU_VCPI_RC_ENABLE_vcpi_qpgld_en_END (16)
+#define SOC_VENC_VEDU_VCPI_RC_ENABLE_vcpi_map_roikeep_en_START (17)
+#define SOC_VENC_VEDU_VCPI_RC_ENABLE_vcpi_map_roikeep_en_END (17)
+#define SOC_VENC_VEDU_VCPI_RC_ENABLE_vcpi_flat_region_en_START (18)
+#define SOC_VENC_VEDU_VCPI_RC_ENABLE_vcpi_flat_region_en_END (18)
+#define SOC_VENC_VEDU_VCPI_RC_ENABLE_vcpi_qp_restrain_large_sad_START (19)
+#define SOC_VENC_VEDU_VCPI_RC_ENABLE_vcpi_qp_restrain_large_sad_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vlcst_ptbits_en : 1;
+        unsigned int reserved : 31;
+    } reg;
+} SOC_VENC_VEDU_VLCST_PTBITS_EN_UNION;
+#endif
+#define SOC_VENC_VEDU_VLCST_PTBITS_EN_vlcst_ptbits_en_START (0)
+#define SOC_VENC_VEDU_VLCST_PTBITS_EN_vlcst_ptbits_en_END (0)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vlcst_ptbits : 32;
+    } reg;
+} SOC_VENC_VEDU_VLCST_PTBITS_UNION;
+#endif
+#define SOC_VENC_VEDU_VLCST_PTBITS_vlcst_ptbits_START (0)
+#define SOC_VENC_VEDU_VLCST_PTBITS_vlcst_ptbits_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ppfd_st_bypass_en : 1;
+        unsigned int reserved : 31;
+    } reg;
+} SOC_VENC_VEDU_PPFD_ST_CFG_UNION;
+#endif
+#define SOC_VENC_VEDU_PPFD_ST_CFG_ppfd_st_bypass_en_START (0)
+#define SOC_VENC_VEDU_PPFD_ST_CFG_ppfd_st_bypass_en_END (0)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_cr_qp_offset : 5;
+        unsigned int vcpi_cb_qp_offset : 5;
+        unsigned int vcpi_frm_qp : 6;
+        unsigned int reserved_0 : 2;
+        unsigned int vcpi_intra_det_qp_en : 1;
+        unsigned int vcpi_rc_cu_madi_en : 1;
+        unsigned int reserved_1 : 12;
+    } reg;
+} SOC_VENC_VEDU_VCPI_QPCFG_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_QPCFG_vcpi_cr_qp_offset_START (0)
+#define SOC_VENC_VEDU_VCPI_QPCFG_vcpi_cr_qp_offset_END (4)
+#define SOC_VENC_VEDU_VCPI_QPCFG_vcpi_cb_qp_offset_START (5)
+#define SOC_VENC_VEDU_VCPI_QPCFG_vcpi_cb_qp_offset_END (9)
+#define SOC_VENC_VEDU_VCPI_QPCFG_vcpi_frm_qp_START (10)
+#define SOC_VENC_VEDU_VCPI_QPCFG_vcpi_frm_qp_END (15)
+#define SOC_VENC_VEDU_VCPI_QPCFG_vcpi_intra_det_qp_en_START (18)
+#define SOC_VENC_VEDU_VCPI_QPCFG_vcpi_intra_det_qp_en_END (18)
+#define SOC_VENC_VEDU_VCPI_QPCFG_vcpi_rc_cu_madi_en_START (19)
+#define SOC_VENC_VEDU_VCPI_QPCFG_vcpi_rc_cu_madi_en_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_min_qp : 6;
+        unsigned int reserved_0 : 2;
+        unsigned int qpg_max_qp : 6;
+        unsigned int reserved_1 : 2;
+        unsigned int qpg_cu_qp_delta_enable_flag : 1;
+        unsigned int reserved_2 : 15;
+    } reg;
+} SOC_VENC_VEDU_QPG_MAX_MIN_QP_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_MAX_MIN_QP_qpg_min_qp_START (0)
+#define SOC_VENC_VEDU_QPG_MAX_MIN_QP_qpg_min_qp_END (5)
+#define SOC_VENC_VEDU_QPG_MAX_MIN_QP_qpg_max_qp_START (8)
+#define SOC_VENC_VEDU_QPG_MAX_MIN_QP_qpg_max_qp_END (13)
+#define SOC_VENC_VEDU_QPG_MAX_MIN_QP_qpg_cu_qp_delta_enable_flag_START (16)
+#define SOC_VENC_VEDU_QPG_MAX_MIN_QP_qpg_cu_qp_delta_enable_flag_END (16)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved_0 : 2;
+        unsigned int qpg_smart_get_cu32_qp_mode : 2;
+        unsigned int qpg_smart_get_cu64_qp_mode : 2;
+        unsigned int qpg_qp_detlta_size_cu64 : 1;
+        unsigned int reserved_1 : 25;
+    } reg;
+} SOC_VENC_VEDU_QPG_SMART_REG_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_SMART_REG_qpg_smart_get_cu32_qp_mode_START (2)
+#define SOC_VENC_VEDU_QPG_SMART_REG_qpg_smart_get_cu32_qp_mode_END (3)
+#define SOC_VENC_VEDU_QPG_SMART_REG_qpg_smart_get_cu64_qp_mode_START (4)
+#define SOC_VENC_VEDU_QPG_SMART_REG_qpg_smart_get_cu64_qp_mode_END (5)
+#define SOC_VENC_VEDU_QPG_SMART_REG_qpg_qp_detlta_size_cu64_START (6)
+#define SOC_VENC_VEDU_QPG_SMART_REG_qpg_qp_detlta_size_cu64_END (6)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_qp_delta : 4;
+        unsigned int reserved_0 : 2;
+        unsigned int qpg_row_target_bits : 25;
+        unsigned int reserved_1 : 1;
+    } reg;
+} SOC_VENC_VEDU_QPG_ROW_TARGET_BITS_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_ROW_TARGET_BITS_qpg_qp_delta_START (0)
+#define SOC_VENC_VEDU_QPG_ROW_TARGET_BITS_qpg_qp_delta_END (3)
+#define SOC_VENC_VEDU_QPG_ROW_TARGET_BITS_qpg_row_target_bits_START (6)
+#define SOC_VENC_VEDU_QPG_ROW_TARGET_BITS_qpg_row_target_bits_END (30)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_ave_lcu_bits : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_VEDU_QPG_AVERAGE_LCU_BITS_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_AVERAGE_LCU_BITS_qpg_ave_lcu_bits_START (0)
+#define SOC_VENC_VEDU_QPG_AVERAGE_LCU_BITS_qpg_ave_lcu_bits_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_cu_qp_delta_thresh0 : 8;
+        unsigned int qpg_cu_qp_delta_thresh1 : 8;
+        unsigned int qpg_cu_qp_delta_thresh2 : 8;
+        unsigned int qpg_cu_qp_delta_thresh3 : 8;
+    } reg;
+} SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG0_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG0_qpg_cu_qp_delta_thresh0_START (0)
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG0_qpg_cu_qp_delta_thresh0_END (7)
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG0_qpg_cu_qp_delta_thresh1_START (8)
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG0_qpg_cu_qp_delta_thresh1_END (15)
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG0_qpg_cu_qp_delta_thresh2_START (16)
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG0_qpg_cu_qp_delta_thresh2_END (23)
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG0_qpg_cu_qp_delta_thresh3_START (24)
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG0_qpg_cu_qp_delta_thresh3_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_cu_qp_delta_thresh4 : 8;
+        unsigned int qpg_cu_qp_delta_thresh5 : 8;
+        unsigned int qpg_cu_qp_delta_thresh6 : 8;
+        unsigned int qpg_cu_qp_delta_thresh7 : 8;
+    } reg;
+} SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG1_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG1_qpg_cu_qp_delta_thresh4_START (0)
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG1_qpg_cu_qp_delta_thresh4_END (7)
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG1_qpg_cu_qp_delta_thresh5_START (8)
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG1_qpg_cu_qp_delta_thresh5_END (15)
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG1_qpg_cu_qp_delta_thresh6_START (16)
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG1_qpg_cu_qp_delta_thresh6_END (23)
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG1_qpg_cu_qp_delta_thresh7_START (24)
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG1_qpg_cu_qp_delta_thresh7_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_cu_qp_delta_thresh8 : 8;
+        unsigned int qpg_cu_qp_delta_thresh9 : 8;
+        unsigned int qpg_cu_qp_delta_thresh10 : 8;
+        unsigned int qpg_cu_qp_delta_thresh11 : 8;
+    } reg;
+} SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG2_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG2_qpg_cu_qp_delta_thresh8_START (0)
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG2_qpg_cu_qp_delta_thresh8_END (7)
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG2_qpg_cu_qp_delta_thresh9_START (8)
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG2_qpg_cu_qp_delta_thresh9_END (15)
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG2_qpg_cu_qp_delta_thresh10_START (16)
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG2_qpg_cu_qp_delta_thresh10_END (23)
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG2_qpg_cu_qp_delta_thresh11_START (24)
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG2_qpg_cu_qp_delta_thresh11_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_cu_qp_delta_thresh12 : 8;
+        unsigned int qpg_cu_qp_delta_thresh13 : 8;
+        unsigned int qpg_cu_qp_delta_thresh14 : 8;
+        unsigned int qpg_cu_qp_delta_thresh15 : 8;
+    } reg;
+} SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG3_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG3_qpg_cu_qp_delta_thresh12_START (0)
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG3_qpg_cu_qp_delta_thresh12_END (7)
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG3_qpg_cu_qp_delta_thresh13_START (8)
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG3_qpg_cu_qp_delta_thresh13_END (15)
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG3_qpg_cu_qp_delta_thresh14_START (16)
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG3_qpg_cu_qp_delta_thresh14_END (23)
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG3_qpg_cu_qp_delta_thresh15_START (24)
+#define SOC_VENC_VEDU_QPG_CU_QP_DELTA_THRESH_REG3_qpg_cu_qp_delta_thresh15_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_qp_delta_level_0 : 2;
+        unsigned int qpg_qp_delta_level_1 : 2;
+        unsigned int qpg_qp_delta_level_2 : 2;
+        unsigned int qpg_qp_delta_level_3 : 2;
+        unsigned int qpg_qp_delta_level_4 : 2;
+        unsigned int qpg_qp_delta_level_5 : 2;
+        unsigned int qpg_qp_delta_level_6 : 2;
+        unsigned int qpg_qp_delta_level_7 : 2;
+        unsigned int qpg_qp_delta_level_8 : 2;
+        unsigned int qpg_qp_delta_level_9 : 2;
+        unsigned int qpg_qp_delta_level_10 : 2;
+        unsigned int qpg_qp_delta_level_11 : 2;
+        unsigned int qpg_qp_delta_level_12 : 2;
+        unsigned int qpg_qp_delta_level_13 : 2;
+        unsigned int qpg_qp_delta_level_14 : 2;
+        unsigned int qpg_qp_delta_level_15 : 2;
+    } reg;
+} SOC_VENC_VEDU_QPG_DELTA_LEVEL_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_DELTA_LEVEL_qpg_qp_delta_level_0_START (0)
+#define SOC_VENC_VEDU_QPG_DELTA_LEVEL_qpg_qp_delta_level_0_END (1)
+#define SOC_VENC_VEDU_QPG_DELTA_LEVEL_qpg_qp_delta_level_1_START (2)
+#define SOC_VENC_VEDU_QPG_DELTA_LEVEL_qpg_qp_delta_level_1_END (3)
+#define SOC_VENC_VEDU_QPG_DELTA_LEVEL_qpg_qp_delta_level_2_START (4)
+#define SOC_VENC_VEDU_QPG_DELTA_LEVEL_qpg_qp_delta_level_2_END (5)
+#define SOC_VENC_VEDU_QPG_DELTA_LEVEL_qpg_qp_delta_level_3_START (6)
+#define SOC_VENC_VEDU_QPG_DELTA_LEVEL_qpg_qp_delta_level_3_END (7)
+#define SOC_VENC_VEDU_QPG_DELTA_LEVEL_qpg_qp_delta_level_4_START (8)
+#define SOC_VENC_VEDU_QPG_DELTA_LEVEL_qpg_qp_delta_level_4_END (9)
+#define SOC_VENC_VEDU_QPG_DELTA_LEVEL_qpg_qp_delta_level_5_START (10)
+#define SOC_VENC_VEDU_QPG_DELTA_LEVEL_qpg_qp_delta_level_5_END (11)
+#define SOC_VENC_VEDU_QPG_DELTA_LEVEL_qpg_qp_delta_level_6_START (12)
+#define SOC_VENC_VEDU_QPG_DELTA_LEVEL_qpg_qp_delta_level_6_END (13)
+#define SOC_VENC_VEDU_QPG_DELTA_LEVEL_qpg_qp_delta_level_7_START (14)
+#define SOC_VENC_VEDU_QPG_DELTA_LEVEL_qpg_qp_delta_level_7_END (15)
+#define SOC_VENC_VEDU_QPG_DELTA_LEVEL_qpg_qp_delta_level_8_START (16)
+#define SOC_VENC_VEDU_QPG_DELTA_LEVEL_qpg_qp_delta_level_8_END (17)
+#define SOC_VENC_VEDU_QPG_DELTA_LEVEL_qpg_qp_delta_level_9_START (18)
+#define SOC_VENC_VEDU_QPG_DELTA_LEVEL_qpg_qp_delta_level_9_END (19)
+#define SOC_VENC_VEDU_QPG_DELTA_LEVEL_qpg_qp_delta_level_10_START (20)
+#define SOC_VENC_VEDU_QPG_DELTA_LEVEL_qpg_qp_delta_level_10_END (21)
+#define SOC_VENC_VEDU_QPG_DELTA_LEVEL_qpg_qp_delta_level_11_START (22)
+#define SOC_VENC_VEDU_QPG_DELTA_LEVEL_qpg_qp_delta_level_11_END (23)
+#define SOC_VENC_VEDU_QPG_DELTA_LEVEL_qpg_qp_delta_level_12_START (24)
+#define SOC_VENC_VEDU_QPG_DELTA_LEVEL_qpg_qp_delta_level_12_END (25)
+#define SOC_VENC_VEDU_QPG_DELTA_LEVEL_qpg_qp_delta_level_13_START (26)
+#define SOC_VENC_VEDU_QPG_DELTA_LEVEL_qpg_qp_delta_level_13_END (27)
+#define SOC_VENC_VEDU_QPG_DELTA_LEVEL_qpg_qp_delta_level_14_START (28)
+#define SOC_VENC_VEDU_QPG_DELTA_LEVEL_qpg_qp_delta_level_14_END (29)
+#define SOC_VENC_VEDU_QPG_DELTA_LEVEL_qpg_qp_delta_level_15_START (30)
+#define SOC_VENC_VEDU_QPG_DELTA_LEVEL_qpg_qp_delta_level_15_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_qp_madi_switch_thr : 5;
+        unsigned int reserved : 27;
+    } reg;
+} SOC_VENC_VEDU_QPG_MADI_SWITCH_THR_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_MADI_SWITCH_THR_qpg_qp_madi_switch_thr_START (0)
+#define SOC_VENC_VEDU_QPG_MADI_SWITCH_THR_qpg_qp_madi_switch_thr_END (4)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_rc_cu_sad_en : 1;
+        unsigned int reserved_0 : 3;
+        unsigned int vcpi_sad_switch_thr : 5;
+        unsigned int reserved_1 : 7;
+        unsigned int vcpi_rc_cu_sad_mod : 2;
+        unsigned int vcpi_rc_cu_sad_offset : 8;
+        unsigned int vcpi_rc_cu_sad_gain : 4;
+        unsigned int reserved_2 : 2;
+    } reg;
+} SOC_VENC_VEDU_QPG_CURR_SAD_EN_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_CURR_SAD_EN_vcpi_rc_cu_sad_en_START (0)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_EN_vcpi_rc_cu_sad_en_END (0)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_EN_vcpi_sad_switch_thr_START (4)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_EN_vcpi_sad_switch_thr_END (8)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_EN_vcpi_rc_cu_sad_mod_START (16)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_EN_vcpi_rc_cu_sad_mod_END (17)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_EN_vcpi_rc_cu_sad_offset_START (18)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_EN_vcpi_rc_cu_sad_offset_END (25)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_EN_vcpi_rc_cu_sad_gain_START (26)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_EN_vcpi_rc_cu_sad_gain_END (29)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_curr_sad_level_0 : 2;
+        unsigned int vcpi_curr_sad_level_1 : 2;
+        unsigned int vcpi_curr_sad_level_2 : 2;
+        unsigned int vcpi_curr_sad_level_3 : 2;
+        unsigned int vcpi_curr_sad_level_4 : 2;
+        unsigned int vcpi_curr_sad_level_5 : 2;
+        unsigned int vcpi_curr_sad_level_6 : 2;
+        unsigned int vcpi_curr_sad_level_7 : 2;
+        unsigned int vcpi_curr_sad_level_8 : 2;
+        unsigned int vcpi_curr_sad_level_9 : 2;
+        unsigned int vcpi_curr_sad_level_10 : 2;
+        unsigned int vcpi_curr_sad_level_11 : 2;
+        unsigned int vcpi_curr_sad_level_12 : 2;
+        unsigned int vcpi_curr_sad_level_13 : 2;
+        unsigned int vcpi_curr_sad_level_14 : 2;
+        unsigned int vcpi_curr_sad_level_15 : 2;
+    } reg;
+} SOC_VENC_VEDU_QPG_CURR_SAD_LEVEL_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_CURR_SAD_LEVEL_vcpi_curr_sad_level_0_START (0)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_LEVEL_vcpi_curr_sad_level_0_END (1)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_LEVEL_vcpi_curr_sad_level_1_START (2)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_LEVEL_vcpi_curr_sad_level_1_END (3)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_LEVEL_vcpi_curr_sad_level_2_START (4)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_LEVEL_vcpi_curr_sad_level_2_END (5)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_LEVEL_vcpi_curr_sad_level_3_START (6)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_LEVEL_vcpi_curr_sad_level_3_END (7)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_LEVEL_vcpi_curr_sad_level_4_START (8)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_LEVEL_vcpi_curr_sad_level_4_END (9)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_LEVEL_vcpi_curr_sad_level_5_START (10)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_LEVEL_vcpi_curr_sad_level_5_END (11)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_LEVEL_vcpi_curr_sad_level_6_START (12)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_LEVEL_vcpi_curr_sad_level_6_END (13)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_LEVEL_vcpi_curr_sad_level_7_START (14)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_LEVEL_vcpi_curr_sad_level_7_END (15)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_LEVEL_vcpi_curr_sad_level_8_START (16)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_LEVEL_vcpi_curr_sad_level_8_END (17)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_LEVEL_vcpi_curr_sad_level_9_START (18)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_LEVEL_vcpi_curr_sad_level_9_END (19)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_LEVEL_vcpi_curr_sad_level_10_START (20)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_LEVEL_vcpi_curr_sad_level_10_END (21)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_LEVEL_vcpi_curr_sad_level_11_START (22)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_LEVEL_vcpi_curr_sad_level_11_END (23)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_LEVEL_vcpi_curr_sad_level_12_START (24)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_LEVEL_vcpi_curr_sad_level_12_END (25)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_LEVEL_vcpi_curr_sad_level_13_START (26)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_LEVEL_vcpi_curr_sad_level_13_END (27)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_LEVEL_vcpi_curr_sad_level_14_START (28)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_LEVEL_vcpi_curr_sad_level_14_END (29)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_LEVEL_vcpi_curr_sad_level_15_START (30)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_LEVEL_vcpi_curr_sad_level_15_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_curr_sad_thresh_0 : 8;
+        unsigned int vcpi_curr_sad_thresh_1 : 8;
+        unsigned int vcpi_curr_sad_thresh_2 : 8;
+        unsigned int vcpi_curr_sad_thresh_3 : 8;
+    } reg;
+} SOC_VENC_VEDU_QPG_CURR_SAD_THRESH0_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH0_vcpi_curr_sad_thresh_0_START (0)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH0_vcpi_curr_sad_thresh_0_END (7)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH0_vcpi_curr_sad_thresh_1_START (8)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH0_vcpi_curr_sad_thresh_1_END (15)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH0_vcpi_curr_sad_thresh_2_START (16)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH0_vcpi_curr_sad_thresh_2_END (23)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH0_vcpi_curr_sad_thresh_3_START (24)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH0_vcpi_curr_sad_thresh_3_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_curr_sad_thresh_4 : 8;
+        unsigned int vcpi_curr_sad_thresh_5 : 8;
+        unsigned int vcpi_curr_sad_thresh_6 : 8;
+        unsigned int vcpi_curr_sad_thresh_7 : 8;
+    } reg;
+} SOC_VENC_VEDU_QPG_CURR_SAD_THRESH1_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH1_vcpi_curr_sad_thresh_4_START (0)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH1_vcpi_curr_sad_thresh_4_END (7)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH1_vcpi_curr_sad_thresh_5_START (8)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH1_vcpi_curr_sad_thresh_5_END (15)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH1_vcpi_curr_sad_thresh_6_START (16)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH1_vcpi_curr_sad_thresh_6_END (23)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH1_vcpi_curr_sad_thresh_7_START (24)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH1_vcpi_curr_sad_thresh_7_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_curr_sad_thresh_8 : 8;
+        unsigned int vcpi_curr_sad_thresh_9 : 8;
+        unsigned int vcpi_curr_sad_thresh_10 : 8;
+        unsigned int vcpi_curr_sad_thresh_11 : 8;
+    } reg;
+} SOC_VENC_VEDU_QPG_CURR_SAD_THRESH2_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH2_vcpi_curr_sad_thresh_8_START (0)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH2_vcpi_curr_sad_thresh_8_END (7)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH2_vcpi_curr_sad_thresh_9_START (8)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH2_vcpi_curr_sad_thresh_9_END (15)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH2_vcpi_curr_sad_thresh_10_START (16)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH2_vcpi_curr_sad_thresh_10_END (23)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH2_vcpi_curr_sad_thresh_11_START (24)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH2_vcpi_curr_sad_thresh_11_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_curr_sad_thresh_12 : 8;
+        unsigned int vcpi_curr_sad_thresh_13 : 8;
+        unsigned int vcpi_curr_sad_thresh_14 : 8;
+        unsigned int vcpi_curr_sad_thresh_15 : 8;
+    } reg;
+} SOC_VENC_VEDU_QPG_CURR_SAD_THRESH3_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH3_vcpi_curr_sad_thresh_12_START (0)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH3_vcpi_curr_sad_thresh_12_END (7)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH3_vcpi_curr_sad_thresh_13_START (8)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH3_vcpi_curr_sad_thresh_13_END (15)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH3_vcpi_curr_sad_thresh_14_START (16)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH3_vcpi_curr_sad_thresh_14_END (23)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH3_vcpi_curr_sad_thresh_15_START (24)
+#define SOC_VENC_VEDU_QPG_CURR_SAD_THRESH3_vcpi_curr_sad_thresh_15_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_rc_luma_en : 1;
+        unsigned int vcpi_rc_luma_mode : 2;
+        unsigned int reserved_0 : 1;
+        unsigned int vcpi_rc_luma_switch_thr : 5;
+        unsigned int reserved_1 : 3;
+        unsigned int vcpi_rc_luma_low_madi_thr : 8;
+        unsigned int vcpi_rc_luma_high_madi_thr : 8;
+        unsigned int reserved_2 : 4;
+    } reg;
+} SOC_VENC_VEDU_LUMA_RC_UNION;
+#endif
+#define SOC_VENC_VEDU_LUMA_RC_vcpi_rc_luma_en_START (0)
+#define SOC_VENC_VEDU_LUMA_RC_vcpi_rc_luma_en_END (0)
+#define SOC_VENC_VEDU_LUMA_RC_vcpi_rc_luma_mode_START (1)
+#define SOC_VENC_VEDU_LUMA_RC_vcpi_rc_luma_mode_END (2)
+#define SOC_VENC_VEDU_LUMA_RC_vcpi_rc_luma_switch_thr_START (4)
+#define SOC_VENC_VEDU_LUMA_RC_vcpi_rc_luma_switch_thr_END (8)
+#define SOC_VENC_VEDU_LUMA_RC_vcpi_rc_luma_low_madi_thr_START (12)
+#define SOC_VENC_VEDU_LUMA_RC_vcpi_rc_luma_low_madi_thr_END (19)
+#define SOC_VENC_VEDU_LUMA_RC_vcpi_rc_luma_high_madi_thr_START (20)
+#define SOC_VENC_VEDU_LUMA_RC_vcpi_rc_luma_high_madi_thr_END (27)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_rc_luma_level_0 : 2;
+        unsigned int vcpi_rc_luma_level_1 : 2;
+        unsigned int vcpi_rc_luma_level_2 : 2;
+        unsigned int vcpi_rc_luma_level_3 : 2;
+        unsigned int vcpi_rc_luma_level_4 : 2;
+        unsigned int vcpi_rc_luma_level_5 : 2;
+        unsigned int vcpi_rc_luma_level_6 : 2;
+        unsigned int vcpi_rc_luma_level_7 : 2;
+        unsigned int vcpi_rc_luma_level_8 : 2;
+        unsigned int vcpi_rc_luma_level_9 : 2;
+        unsigned int vcpi_rc_luma_level_10 : 2;
+        unsigned int vcpi_rc_luma_level_11 : 2;
+        unsigned int vcpi_rc_luma_level_12 : 2;
+        unsigned int vcpi_rc_luma_level_13 : 2;
+        unsigned int vcpi_rc_luma_level_14 : 2;
+        unsigned int vcpi_rc_luma_level_15 : 2;
+    } reg;
+} SOC_VENC_VEDU_LUMA_LEVEL_UNION;
+#endif
+#define SOC_VENC_VEDU_LUMA_LEVEL_vcpi_rc_luma_level_0_START (0)
+#define SOC_VENC_VEDU_LUMA_LEVEL_vcpi_rc_luma_level_0_END (1)
+#define SOC_VENC_VEDU_LUMA_LEVEL_vcpi_rc_luma_level_1_START (2)
+#define SOC_VENC_VEDU_LUMA_LEVEL_vcpi_rc_luma_level_1_END (3)
+#define SOC_VENC_VEDU_LUMA_LEVEL_vcpi_rc_luma_level_2_START (4)
+#define SOC_VENC_VEDU_LUMA_LEVEL_vcpi_rc_luma_level_2_END (5)
+#define SOC_VENC_VEDU_LUMA_LEVEL_vcpi_rc_luma_level_3_START (6)
+#define SOC_VENC_VEDU_LUMA_LEVEL_vcpi_rc_luma_level_3_END (7)
+#define SOC_VENC_VEDU_LUMA_LEVEL_vcpi_rc_luma_level_4_START (8)
+#define SOC_VENC_VEDU_LUMA_LEVEL_vcpi_rc_luma_level_4_END (9)
+#define SOC_VENC_VEDU_LUMA_LEVEL_vcpi_rc_luma_level_5_START (10)
+#define SOC_VENC_VEDU_LUMA_LEVEL_vcpi_rc_luma_level_5_END (11)
+#define SOC_VENC_VEDU_LUMA_LEVEL_vcpi_rc_luma_level_6_START (12)
+#define SOC_VENC_VEDU_LUMA_LEVEL_vcpi_rc_luma_level_6_END (13)
+#define SOC_VENC_VEDU_LUMA_LEVEL_vcpi_rc_luma_level_7_START (14)
+#define SOC_VENC_VEDU_LUMA_LEVEL_vcpi_rc_luma_level_7_END (15)
+#define SOC_VENC_VEDU_LUMA_LEVEL_vcpi_rc_luma_level_8_START (16)
+#define SOC_VENC_VEDU_LUMA_LEVEL_vcpi_rc_luma_level_8_END (17)
+#define SOC_VENC_VEDU_LUMA_LEVEL_vcpi_rc_luma_level_9_START (18)
+#define SOC_VENC_VEDU_LUMA_LEVEL_vcpi_rc_luma_level_9_END (19)
+#define SOC_VENC_VEDU_LUMA_LEVEL_vcpi_rc_luma_level_10_START (20)
+#define SOC_VENC_VEDU_LUMA_LEVEL_vcpi_rc_luma_level_10_END (21)
+#define SOC_VENC_VEDU_LUMA_LEVEL_vcpi_rc_luma_level_11_START (22)
+#define SOC_VENC_VEDU_LUMA_LEVEL_vcpi_rc_luma_level_11_END (23)
+#define SOC_VENC_VEDU_LUMA_LEVEL_vcpi_rc_luma_level_12_START (24)
+#define SOC_VENC_VEDU_LUMA_LEVEL_vcpi_rc_luma_level_12_END (25)
+#define SOC_VENC_VEDU_LUMA_LEVEL_vcpi_rc_luma_level_13_START (26)
+#define SOC_VENC_VEDU_LUMA_LEVEL_vcpi_rc_luma_level_13_END (27)
+#define SOC_VENC_VEDU_LUMA_LEVEL_vcpi_rc_luma_level_14_START (28)
+#define SOC_VENC_VEDU_LUMA_LEVEL_vcpi_rc_luma_level_14_END (29)
+#define SOC_VENC_VEDU_LUMA_LEVEL_vcpi_rc_luma_level_15_START (30)
+#define SOC_VENC_VEDU_LUMA_LEVEL_vcpi_rc_luma_level_15_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_rc_luma_thresh_0 : 8;
+        unsigned int vcpi_rc_luma_thresh_1 : 8;
+        unsigned int vcpi_rc_luma_thresh_2 : 8;
+        unsigned int vcpi_rc_luma_thresh_3 : 8;
+    } reg;
+} SOC_VENC_VEDU_LUMA_THRESH0_UNION;
+#endif
+#define SOC_VENC_VEDU_LUMA_THRESH0_vcpi_rc_luma_thresh_0_START (0)
+#define SOC_VENC_VEDU_LUMA_THRESH0_vcpi_rc_luma_thresh_0_END (7)
+#define SOC_VENC_VEDU_LUMA_THRESH0_vcpi_rc_luma_thresh_1_START (8)
+#define SOC_VENC_VEDU_LUMA_THRESH0_vcpi_rc_luma_thresh_1_END (15)
+#define SOC_VENC_VEDU_LUMA_THRESH0_vcpi_rc_luma_thresh_2_START (16)
+#define SOC_VENC_VEDU_LUMA_THRESH0_vcpi_rc_luma_thresh_2_END (23)
+#define SOC_VENC_VEDU_LUMA_THRESH0_vcpi_rc_luma_thresh_3_START (24)
+#define SOC_VENC_VEDU_LUMA_THRESH0_vcpi_rc_luma_thresh_3_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_rc_luma_thresh_4 : 8;
+        unsigned int vcpi_rc_luma_thresh_5 : 8;
+        unsigned int vcpi_rc_luma_thresh_6 : 8;
+        unsigned int vcpi_rc_luma_thresh_7 : 8;
+    } reg;
+} SOC_VENC_VEDU_LUMA_THRESH1_UNION;
+#endif
+#define SOC_VENC_VEDU_LUMA_THRESH1_vcpi_rc_luma_thresh_4_START (0)
+#define SOC_VENC_VEDU_LUMA_THRESH1_vcpi_rc_luma_thresh_4_END (7)
+#define SOC_VENC_VEDU_LUMA_THRESH1_vcpi_rc_luma_thresh_5_START (8)
+#define SOC_VENC_VEDU_LUMA_THRESH1_vcpi_rc_luma_thresh_5_END (15)
+#define SOC_VENC_VEDU_LUMA_THRESH1_vcpi_rc_luma_thresh_6_START (16)
+#define SOC_VENC_VEDU_LUMA_THRESH1_vcpi_rc_luma_thresh_6_END (23)
+#define SOC_VENC_VEDU_LUMA_THRESH1_vcpi_rc_luma_thresh_7_START (24)
+#define SOC_VENC_VEDU_LUMA_THRESH1_vcpi_rc_luma_thresh_7_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_rc_luma_thresh_8 : 8;
+        unsigned int vcpi_rc_luma_thresh_9 : 8;
+        unsigned int vcpi_rc_luma_thresh_10 : 8;
+        unsigned int vcpi_rc_luma_thresh_11 : 8;
+    } reg;
+} SOC_VENC_VEDU_LUMA_THRESH2_UNION;
+#endif
+#define SOC_VENC_VEDU_LUMA_THRESH2_vcpi_rc_luma_thresh_8_START (0)
+#define SOC_VENC_VEDU_LUMA_THRESH2_vcpi_rc_luma_thresh_8_END (7)
+#define SOC_VENC_VEDU_LUMA_THRESH2_vcpi_rc_luma_thresh_9_START (8)
+#define SOC_VENC_VEDU_LUMA_THRESH2_vcpi_rc_luma_thresh_9_END (15)
+#define SOC_VENC_VEDU_LUMA_THRESH2_vcpi_rc_luma_thresh_10_START (16)
+#define SOC_VENC_VEDU_LUMA_THRESH2_vcpi_rc_luma_thresh_10_END (23)
+#define SOC_VENC_VEDU_LUMA_THRESH2_vcpi_rc_luma_thresh_11_START (24)
+#define SOC_VENC_VEDU_LUMA_THRESH2_vcpi_rc_luma_thresh_11_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_rc_luma_thresh_12 : 8;
+        unsigned int vcpi_rc_luma_thresh_13 : 8;
+        unsigned int vcpi_rc_luma_thresh_14 : 8;
+        unsigned int vcpi_rc_luma_thresh_15 : 8;
+    } reg;
+} SOC_VENC_VEDU_LUMA_THRESH3_UNION;
+#endif
+#define SOC_VENC_VEDU_LUMA_THRESH3_vcpi_rc_luma_thresh_12_START (0)
+#define SOC_VENC_VEDU_LUMA_THRESH3_vcpi_rc_luma_thresh_12_END (7)
+#define SOC_VENC_VEDU_LUMA_THRESH3_vcpi_rc_luma_thresh_13_START (8)
+#define SOC_VENC_VEDU_LUMA_THRESH3_vcpi_rc_luma_thresh_13_END (15)
+#define SOC_VENC_VEDU_LUMA_THRESH3_vcpi_rc_luma_thresh_14_START (16)
+#define SOC_VENC_VEDU_LUMA_THRESH3_vcpi_rc_luma_thresh_14_END (23)
+#define SOC_VENC_VEDU_LUMA_THRESH3_vcpi_rc_luma_thresh_15_START (24)
+#define SOC_VENC_VEDU_LUMA_THRESH3_vcpi_rc_luma_thresh_15_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_bg_info_st_en : 1;
+        unsigned int vcpi_bg_refresh_st_en : 1;
+        unsigned int vcpi_bg_ld_en : 1;
+        unsigned int vcpi_bg_en : 1;
+        unsigned int vcpi_bg_stat_frame : 1;
+        unsigned int vcpi_bg_th_frame : 1;
+        unsigned int vcpi_bg_percentage_en : 1;
+        unsigned int vcpi_bg_start_idc : 1;
+        unsigned int vcpi_bg_start_frame : 1;
+        unsigned int vcpi_bg_reset_diff_en : 1;
+        unsigned int reserved : 22;
+    } reg;
+} SOC_VENC_VEDU_VCPI_BG_ENABLE_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_BG_ENABLE_vcpi_bg_info_st_en_START (0)
+#define SOC_VENC_VEDU_VCPI_BG_ENABLE_vcpi_bg_info_st_en_END (0)
+#define SOC_VENC_VEDU_VCPI_BG_ENABLE_vcpi_bg_refresh_st_en_START (1)
+#define SOC_VENC_VEDU_VCPI_BG_ENABLE_vcpi_bg_refresh_st_en_END (1)
+#define SOC_VENC_VEDU_VCPI_BG_ENABLE_vcpi_bg_ld_en_START (2)
+#define SOC_VENC_VEDU_VCPI_BG_ENABLE_vcpi_bg_ld_en_END (2)
+#define SOC_VENC_VEDU_VCPI_BG_ENABLE_vcpi_bg_en_START (3)
+#define SOC_VENC_VEDU_VCPI_BG_ENABLE_vcpi_bg_en_END (3)
+#define SOC_VENC_VEDU_VCPI_BG_ENABLE_vcpi_bg_stat_frame_START (4)
+#define SOC_VENC_VEDU_VCPI_BG_ENABLE_vcpi_bg_stat_frame_END (4)
+#define SOC_VENC_VEDU_VCPI_BG_ENABLE_vcpi_bg_th_frame_START (5)
+#define SOC_VENC_VEDU_VCPI_BG_ENABLE_vcpi_bg_th_frame_END (5)
+#define SOC_VENC_VEDU_VCPI_BG_ENABLE_vcpi_bg_percentage_en_START (6)
+#define SOC_VENC_VEDU_VCPI_BG_ENABLE_vcpi_bg_percentage_en_END (6)
+#define SOC_VENC_VEDU_VCPI_BG_ENABLE_vcpi_bg_start_idc_START (7)
+#define SOC_VENC_VEDU_VCPI_BG_ENABLE_vcpi_bg_start_idc_END (7)
+#define SOC_VENC_VEDU_VCPI_BG_ENABLE_vcpi_bg_start_frame_START (8)
+#define SOC_VENC_VEDU_VCPI_BG_ENABLE_vcpi_bg_start_frame_END (8)
+#define SOC_VENC_VEDU_VCPI_BG_ENABLE_vcpi_bg_reset_diff_en_START (9)
+#define SOC_VENC_VEDU_VCPI_BG_ENABLE_vcpi_bg_reset_diff_en_END (9)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_bg_alpha_fix_0 : 11;
+        unsigned int reserved_0 : 5;
+        unsigned int vcpi_bg_alpha_fix_1 : 11;
+        unsigned int reserved_1 : 5;
+    } reg;
+} SOC_VENC_VEDU_VCPI_BG_FLT_PARA0_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_BG_FLT_PARA0_vcpi_bg_alpha_fix_0_START (0)
+#define SOC_VENC_VEDU_VCPI_BG_FLT_PARA0_vcpi_bg_alpha_fix_0_END (10)
+#define SOC_VENC_VEDU_VCPI_BG_FLT_PARA0_vcpi_bg_alpha_fix_1_START (16)
+#define SOC_VENC_VEDU_VCPI_BG_FLT_PARA0_vcpi_bg_alpha_fix_1_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_bg_belta_fix_0 : 11;
+        unsigned int reserved_0 : 5;
+        unsigned int vcpi_bg_belta_fix_1 : 11;
+        unsigned int reserved_1 : 5;
+    } reg;
+} SOC_VENC_VEDU_VCPI_BG_FLT_PARA1_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_BG_FLT_PARA1_vcpi_bg_belta_fix_0_START (0)
+#define SOC_VENC_VEDU_VCPI_BG_FLT_PARA1_vcpi_bg_belta_fix_0_END (10)
+#define SOC_VENC_VEDU_VCPI_BG_FLT_PARA1_vcpi_bg_belta_fix_1_START (16)
+#define SOC_VENC_VEDU_VCPI_BG_FLT_PARA1_vcpi_bg_belta_fix_1_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_bg_delta_fix_0 : 11;
+        unsigned int reserved_0 : 5;
+        unsigned int vcpi_bg_delta_fix_1 : 11;
+        unsigned int reserved_1 : 5;
+    } reg;
+} SOC_VENC_VEDU_VCPI_BG_FLT_PARA2_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_BG_FLT_PARA2_vcpi_bg_delta_fix_0_START (0)
+#define SOC_VENC_VEDU_VCPI_BG_FLT_PARA2_vcpi_bg_delta_fix_0_END (10)
+#define SOC_VENC_VEDU_VCPI_BG_FLT_PARA2_vcpi_bg_delta_fix_1_START (16)
+#define SOC_VENC_VEDU_VCPI_BG_FLT_PARA2_vcpi_bg_delta_fix_1_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_bg_th_ave : 10;
+        unsigned int vcpi_bg_ave_update_th : 10;
+        unsigned int vcpi_bg_stat_th : 12;
+    } reg;
+} SOC_VENC_VEDU_VCPI_BG_THR0_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_BG_THR0_vcpi_bg_th_ave_START (0)
+#define SOC_VENC_VEDU_VCPI_BG_THR0_vcpi_bg_th_ave_END (9)
+#define SOC_VENC_VEDU_VCPI_BG_THR0_vcpi_bg_ave_update_th_START (10)
+#define SOC_VENC_VEDU_VCPI_BG_THR0_vcpi_bg_ave_update_th_END (19)
+#define SOC_VENC_VEDU_VCPI_BG_THR0_vcpi_bg_stat_th_START (20)
+#define SOC_VENC_VEDU_VCPI_BG_THR0_vcpi_bg_stat_th_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_bg_dist_th : 10;
+        unsigned int vcpi_bg_frame_num : 10;
+        unsigned int vcpi_bg_min_diff : 10;
+        unsigned int reserved : 2;
+    } reg;
+} SOC_VENC_VEDU_VCPI_BG_THR1_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_BG_THR1_vcpi_bg_dist_th_START (0)
+#define SOC_VENC_VEDU_VCPI_BG_THR1_vcpi_bg_dist_th_END (9)
+#define SOC_VENC_VEDU_VCPI_BG_THR1_vcpi_bg_frame_num_START (10)
+#define SOC_VENC_VEDU_VCPI_BG_THR1_vcpi_bg_frame_num_END (19)
+#define SOC_VENC_VEDU_VCPI_BG_THR1_vcpi_bg_min_diff_START (20)
+#define SOC_VENC_VEDU_VCPI_BG_THR1_vcpi_bg_min_diff_END (29)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_bgl_stride : 16;
+        unsigned int vcpi_bgc_stride : 16;
+    } reg;
+} SOC_VENC_VEDU_VCPI_BG_STRIDE_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_BG_STRIDE_vcpi_bgl_stride_START (0)
+#define SOC_VENC_VEDU_VCPI_BG_STRIDE_vcpi_bgl_stride_END (15)
+#define SOC_VENC_VEDU_VCPI_BG_STRIDE_vcpi_bgc_stride_START (16)
+#define SOC_VENC_VEDU_VCPI_BG_STRIDE_vcpi_bgc_stride_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_bgl_ext_stride : 16;
+        unsigned int vcpi_bgc_ext_stride : 16;
+    } reg;
+} SOC_VENC_VEDU_VCPI_BG_EXT_STRIDE_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_BG_EXT_STRIDE_vcpi_bgl_ext_stride_START (0)
+#define SOC_VENC_VEDU_VCPI_BG_EXT_STRIDE_vcpi_bgl_ext_stride_END (15)
+#define SOC_VENC_VEDU_VCPI_BG_EXT_STRIDE_vcpi_bgc_ext_stride_START (16)
+#define SOC_VENC_VEDU_VCPI_BG_EXT_STRIDE_vcpi_bgc_ext_stride_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_bgl_addr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_BGL_ADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_BGL_ADDR_L_vcpi_bgl_addr_l_START (0)
+#define SOC_VENC_VEDU_VCPI_BGL_ADDR_L_vcpi_bgl_addr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_bgl_addr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_BGL_ADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_BGL_ADDR_H_vcpi_bgl_addr_h_START (0)
+#define SOC_VENC_VEDU_VCPI_BGL_ADDR_H_vcpi_bgl_addr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_bgc_addr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_BGC_ADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_BGC_ADDR_L_vcpi_bgc_addr_l_START (0)
+#define SOC_VENC_VEDU_VCPI_BGC_ADDR_L_vcpi_bgc_addr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_bgc_addr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_BGC_ADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_BGC_ADDR_H_vcpi_bgc_addr_h_START (0)
+#define SOC_VENC_VEDU_VCPI_BGC_ADDR_H_vcpi_bgc_addr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_bgl_ext_addr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_BGL_EXT_ADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_BGL_EXT_ADDR_L_vcpi_bgl_ext_addr_l_START (0)
+#define SOC_VENC_VEDU_VCPI_BGL_EXT_ADDR_L_vcpi_bgl_ext_addr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_bgl_ext_addr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_BGL_EXT_ADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_BGL_EXT_ADDR_H_vcpi_bgl_ext_addr_h_START (0)
+#define SOC_VENC_VEDU_VCPI_BGL_EXT_ADDR_H_vcpi_bgl_ext_addr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_bgc_ext_addr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_BGC_EXT_ADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_BGC_EXT_ADDR_L_vcpi_bgc_ext_addr_l_START (0)
+#define SOC_VENC_VEDU_VCPI_BGC_EXT_ADDR_L_vcpi_bgc_ext_addr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_bgc_ext_addr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_BGC_EXT_ADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_BGC_EXT_ADDR_H_vcpi_bgc_ext_addr_h_START (0)
+#define SOC_VENC_VEDU_VCPI_BGC_EXT_ADDR_H_vcpi_bgc_ext_addr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_bginf_addr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_BGINF_ADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_BGINF_ADDR_L_vcpi_bginf_addr_l_START (0)
+#define SOC_VENC_VEDU_VCPI_BGINF_ADDR_L_vcpi_bginf_addr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_bginf_addr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_BGINF_ADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_BGINF_ADDR_H_vcpi_bginf_addr_h_START (0)
+#define SOC_VENC_VEDU_VCPI_BGINF_ADDR_H_vcpi_bginf_addr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_r_outstanding : 7;
+        unsigned int reserved_0 : 1;
+        unsigned int vcpi_w_outstanding : 4;
+        unsigned int reserved_1 : 20;
+    } reg;
+} SOC_VENC_VEDU_VCPI_OUTSTD_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_OUTSTD_vcpi_r_outstanding_START (0)
+#define SOC_VENC_VEDU_VCPI_OUTSTD_vcpi_r_outstanding_END (6)
+#define SOC_VENC_VEDU_VCPI_OUTSTD_vcpi_w_outstanding_START (8)
+#define SOC_VENC_VEDU_VCPI_OUTSTD_vcpi_w_outstanding_END (11)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_lcu_performance_baseline : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_LCU_BASELINE_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_LCU_BASELINE_vctrl_lcu_performance_baseline_START (0)
+#define SOC_VENC_VEDU_VCTRL_LCU_BASELINE_vctrl_lcu_performance_baseline_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_spram_ctrl_0 : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_SPMEM_CTRL_0_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_0_vcpi_spram_ctrl_0_START (0)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_0_vcpi_spram_ctrl_0_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int rashds_svt_rtsel : 2;
+        unsigned int rashds_lvt_rtsel : 2;
+        unsigned int rashds_svt_wtsel : 2;
+        unsigned int rashds_lvt_wtsel : 2;
+        unsigned int rashdm_svt_rtsel : 2;
+        unsigned int rashdm_lvt_rtsel : 2;
+        unsigned int rashdm_svt_wtsel : 2;
+        unsigned int rashdm_lvt_wtsel : 2;
+        unsigned int rasshcsu_svt_rtsel : 2;
+        unsigned int rasshcsu_lvt_rtsel : 2;
+        unsigned int rasshcsu_svt_wtsel : 2;
+        unsigned int rasshcsu_lvt_wtsel : 2;
+        unsigned int rasshcss_svt_rtsel : 2;
+        unsigned int rasshcss_lvt_rtsel : 2;
+        unsigned int rasshcss_svt_wtsel : 2;
+        unsigned int rasshcss_lvt_wtsel : 2;
+    } reg;
+} SOC_VENC_VEDU_VCPI_SPMEM_CTRL_1_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_1_rashds_svt_rtsel_START (0)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_1_rashds_svt_rtsel_END (1)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_1_rashds_lvt_rtsel_START (2)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_1_rashds_lvt_rtsel_END (3)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_1_rashds_svt_wtsel_START (4)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_1_rashds_svt_wtsel_END (5)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_1_rashds_lvt_wtsel_START (6)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_1_rashds_lvt_wtsel_END (7)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_1_rashdm_svt_rtsel_START (8)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_1_rashdm_svt_rtsel_END (9)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_1_rashdm_lvt_rtsel_START (10)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_1_rashdm_lvt_rtsel_END (11)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_1_rashdm_svt_wtsel_START (12)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_1_rashdm_svt_wtsel_END (13)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_1_rashdm_lvt_wtsel_START (14)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_1_rashdm_lvt_wtsel_END (15)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_1_rasshcsu_svt_rtsel_START (16)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_1_rasshcsu_svt_rtsel_END (17)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_1_rasshcsu_lvt_rtsel_START (18)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_1_rasshcsu_lvt_rtsel_END (19)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_1_rasshcsu_svt_wtsel_START (20)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_1_rasshcsu_svt_wtsel_END (21)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_1_rasshcsu_lvt_wtsel_START (22)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_1_rasshcsu_lvt_wtsel_END (23)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_1_rasshcss_svt_rtsel_START (24)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_1_rasshcss_svt_rtsel_END (25)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_1_rasshcss_lvt_rtsel_START (26)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_1_rasshcss_lvt_rtsel_END (27)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_1_rasshcss_svt_wtsel_START (28)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_1_rasshcss_svt_wtsel_END (29)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_1_rasshcss_lvt_wtsel_START (30)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_1_rasshcss_lvt_wtsel_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int rasshcms_svt_rtsel : 2;
+        unsigned int rasshcms_lvt_rtsel : 2;
+        unsigned int rasshcms_svt_wtsel : 2;
+        unsigned int rasshcms_lvt_wtsel : 2;
+        unsigned int rasshcmu_svt_rtsel : 2;
+        unsigned int rasshcmu_lvt_rtsel : 2;
+        unsigned int rasshcmu_svt_wtsel : 2;
+        unsigned int rasshcmu_lvt_wtsel : 2;
+        unsigned int ras_svt_rtsel : 2;
+        unsigned int ras_lvt_rtsel : 2;
+        unsigned int ras_svt_wtsel : 2;
+        unsigned int ras_lvt_wtsel : 2;
+        unsigned int reserved : 8;
+    } reg;
+} SOC_VENC_VEDU_VCPI_SPMEM_CTRL_2_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_2_rasshcms_svt_rtsel_START (0)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_2_rasshcms_svt_rtsel_END (1)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_2_rasshcms_lvt_rtsel_START (2)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_2_rasshcms_lvt_rtsel_END (3)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_2_rasshcms_svt_wtsel_START (4)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_2_rasshcms_svt_wtsel_END (5)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_2_rasshcms_lvt_wtsel_START (6)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_2_rasshcms_lvt_wtsel_END (7)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_2_rasshcmu_svt_rtsel_START (8)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_2_rasshcmu_svt_rtsel_END (9)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_2_rasshcmu_lvt_rtsel_START (10)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_2_rasshcmu_lvt_rtsel_END (11)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_2_rasshcmu_svt_wtsel_START (12)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_2_rasshcmu_svt_wtsel_END (13)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_2_rasshcmu_lvt_wtsel_START (14)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_2_rasshcmu_lvt_wtsel_END (15)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_2_ras_svt_rtsel_START (16)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_2_ras_svt_rtsel_END (17)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_2_ras_lvt_rtsel_START (18)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_2_ras_lvt_rtsel_END (19)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_2_ras_svt_wtsel_START (20)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_2_ras_svt_wtsel_END (21)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_2_ras_lvt_wtsel_START (22)
+#define SOC_VENC_VEDU_VCPI_SPMEM_CTRL_2_ras_lvt_wtsel_END (23)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_tpram_ctrl_0 : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_TPMEM_CTRL_0_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_TPMEM_CTRL_0_vcpi_tpram_ctrl_0_START (0)
+#define SOC_VENC_VEDU_VCPI_TPMEM_CTRL_0_vcpi_tpram_ctrl_0_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_tpram_ctrl_1 : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_TPMEM_CTRL_1_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_TPMEM_CTRL_1_vcpi_tpram_ctrl_1_START (0)
+#define SOC_VENC_VEDU_VCPI_TPMEM_CTRL_1_vcpi_tpram_ctrl_1_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_RESERVED_06_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int wide_ynarrow_en : 1;
+        unsigned int wide_cnarrow_en : 1;
+        unsigned int rgb_clip_en : 1;
+        unsigned int mlsb_sel : 1;
+        unsigned int reserved_0 : 1;
+        unsigned int reserved_1 : 1;
+        unsigned int reserved_2 : 1;
+        unsigned int reserved_3 : 1;
+        unsigned int reserved_4 : 6;
+        unsigned int curld_col2gray_en : 1;
+        unsigned int curld_clip_en : 1;
+        unsigned int reserved_5 : 4;
+        unsigned int curld_read_interval : 8;
+        unsigned int curld_lowdly_en : 1;
+        unsigned int reserved_6 : 1;
+        unsigned int reserved_7 : 2;
+    } reg;
+} SOC_VENC_VEDU_CURLD_GCFG_UNION;
+#endif
+#define SOC_VENC_VEDU_CURLD_GCFG_wide_ynarrow_en_START (0)
+#define SOC_VENC_VEDU_CURLD_GCFG_wide_ynarrow_en_END (0)
+#define SOC_VENC_VEDU_CURLD_GCFG_wide_cnarrow_en_START (1)
+#define SOC_VENC_VEDU_CURLD_GCFG_wide_cnarrow_en_END (1)
+#define SOC_VENC_VEDU_CURLD_GCFG_rgb_clip_en_START (2)
+#define SOC_VENC_VEDU_CURLD_GCFG_rgb_clip_en_END (2)
+#define SOC_VENC_VEDU_CURLD_GCFG_mlsb_sel_START (3)
+#define SOC_VENC_VEDU_CURLD_GCFG_mlsb_sel_END (3)
+#define SOC_VENC_VEDU_CURLD_GCFG_curld_col2gray_en_START (14)
+#define SOC_VENC_VEDU_CURLD_GCFG_curld_col2gray_en_END (14)
+#define SOC_VENC_VEDU_CURLD_GCFG_curld_clip_en_START (15)
+#define SOC_VENC_VEDU_CURLD_GCFG_curld_clip_en_END (15)
+#define SOC_VENC_VEDU_CURLD_GCFG_curld_read_interval_START (20)
+#define SOC_VENC_VEDU_CURLD_GCFG_curld_read_interval_END (27)
+#define SOC_VENC_VEDU_CURLD_GCFG_curld_lowdly_en_START (28)
+#define SOC_VENC_VEDU_CURLD_GCFG_curld_lowdly_en_END (28)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_osd0_en : 1;
+        unsigned int vcpi_osd1_en : 1;
+        unsigned int vcpi_osd2_en : 1;
+        unsigned int vcpi_osd3_en : 1;
+        unsigned int vcpi_osd4_en : 1;
+        unsigned int vcpi_osd5_en : 1;
+        unsigned int vcpi_osd6_en : 1;
+        unsigned int vcpi_osd7_en : 1;
+        unsigned int vcpi_osd0_absqp : 1;
+        unsigned int vcpi_osd1_absqp : 1;
+        unsigned int vcpi_osd2_absqp : 1;
+        unsigned int vcpi_osd3_absqp : 1;
+        unsigned int vcpi_osd4_absqp : 1;
+        unsigned int vcpi_osd5_absqp : 1;
+        unsigned int vcpi_osd6_absqp : 1;
+        unsigned int vcpi_osd7_absqp : 1;
+        unsigned int vcpi_roi_osd_sel_0 : 1;
+        unsigned int vcpi_roi_osd_sel_1 : 1;
+        unsigned int vcpi_roi_osd_sel_2 : 1;
+        unsigned int vcpi_roi_osd_sel_3 : 1;
+        unsigned int vcpi_roi_osd_sel_4 : 1;
+        unsigned int vcpi_roi_osd_sel_5 : 1;
+        unsigned int vcpi_roi_osd_sel_6 : 1;
+        unsigned int vcpi_roi_osd_sel_7 : 1;
+        unsigned int vcpi_osd_en : 1;
+        unsigned int reserved : 7;
+    } reg;
+} SOC_VENC_VEDU_VCPI_OSD_ENABLE_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_osd0_en_START (0)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_osd0_en_END (0)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_osd1_en_START (1)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_osd1_en_END (1)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_osd2_en_START (2)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_osd2_en_END (2)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_osd3_en_START (3)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_osd3_en_END (3)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_osd4_en_START (4)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_osd4_en_END (4)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_osd5_en_START (5)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_osd5_en_END (5)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_osd6_en_START (6)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_osd6_en_END (6)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_osd7_en_START (7)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_osd7_en_END (7)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_osd0_absqp_START (8)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_osd0_absqp_END (8)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_osd1_absqp_START (9)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_osd1_absqp_END (9)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_osd2_absqp_START (10)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_osd2_absqp_END (10)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_osd3_absqp_START (11)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_osd3_absqp_END (11)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_osd4_absqp_START (12)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_osd4_absqp_END (12)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_osd5_absqp_START (13)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_osd5_absqp_END (13)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_osd6_absqp_START (14)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_osd6_absqp_END (14)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_osd7_absqp_START (15)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_osd7_absqp_END (15)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_roi_osd_sel_0_START (16)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_roi_osd_sel_0_END (16)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_roi_osd_sel_1_START (17)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_roi_osd_sel_1_END (17)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_roi_osd_sel_2_START (18)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_roi_osd_sel_2_END (18)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_roi_osd_sel_3_START (19)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_roi_osd_sel_3_END (19)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_roi_osd_sel_4_START (20)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_roi_osd_sel_4_END (20)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_roi_osd_sel_5_START (21)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_roi_osd_sel_5_END (21)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_roi_osd_sel_6_START (22)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_roi_osd_sel_6_END (22)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_roi_osd_sel_7_START (23)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_roi_osd_sel_7_END (23)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_osd_en_START (24)
+#define SOC_VENC_VEDU_VCPI_OSD_ENABLE_vcpi_osd_en_END (24)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_crop_en : 1;
+        unsigned int vcpi_scale_en : 1;
+        unsigned int vcpi_store_mode : 1;
+        unsigned int vcpi_blk_type : 3;
+        unsigned int vcpi_str_fmt : 4;
+        unsigned int vcpi_package_sel : 4;
+        unsigned int vcpi_recst_disable : 1;
+        unsigned int vcpi_recst_hfbc_raw_en : 1;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_VEDU_VCPI_STRFMT_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_STRFMT_vcpi_crop_en_START (0)
+#define SOC_VENC_VEDU_VCPI_STRFMT_vcpi_crop_en_END (0)
+#define SOC_VENC_VEDU_VCPI_STRFMT_vcpi_scale_en_START (1)
+#define SOC_VENC_VEDU_VCPI_STRFMT_vcpi_scale_en_END (1)
+#define SOC_VENC_VEDU_VCPI_STRFMT_vcpi_store_mode_START (2)
+#define SOC_VENC_VEDU_VCPI_STRFMT_vcpi_store_mode_END (2)
+#define SOC_VENC_VEDU_VCPI_STRFMT_vcpi_blk_type_START (3)
+#define SOC_VENC_VEDU_VCPI_STRFMT_vcpi_blk_type_END (5)
+#define SOC_VENC_VEDU_VCPI_STRFMT_vcpi_str_fmt_START (6)
+#define SOC_VENC_VEDU_VCPI_STRFMT_vcpi_str_fmt_END (9)
+#define SOC_VENC_VEDU_VCPI_STRFMT_vcpi_package_sel_START (10)
+#define SOC_VENC_VEDU_VCPI_STRFMT_vcpi_package_sel_END (13)
+#define SOC_VENC_VEDU_VCPI_STRFMT_vcpi_recst_disable_START (14)
+#define SOC_VENC_VEDU_VCPI_STRFMT_vcpi_recst_disable_END (14)
+#define SOC_VENC_VEDU_VCPI_STRFMT_vcpi_recst_hfbc_raw_en_START (15)
+#define SOC_VENC_VEDU_VCPI_STRFMT_vcpi_recst_hfbc_raw_en_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_intra_cu_en : 4;
+        unsigned int vcpi_ipcm_en : 1;
+        unsigned int vcpi_intra_h264_cutdiag : 1;
+        unsigned int reserved_0 : 2;
+        unsigned int vcpi_fme_cu_en : 4;
+        unsigned int vcpi_mrg_cu_en : 4;
+        unsigned int reserved_1 : 16;
+    } reg;
+} SOC_VENC_VEDU_VCPI_INTRA_INTER_CU_EN_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_INTRA_INTER_CU_EN_vcpi_intra_cu_en_START (0)
+#define SOC_VENC_VEDU_VCPI_INTRA_INTER_CU_EN_vcpi_intra_cu_en_END (3)
+#define SOC_VENC_VEDU_VCPI_INTRA_INTER_CU_EN_vcpi_ipcm_en_START (4)
+#define SOC_VENC_VEDU_VCPI_INTRA_INTER_CU_EN_vcpi_ipcm_en_END (4)
+#define SOC_VENC_VEDU_VCPI_INTRA_INTER_CU_EN_vcpi_intra_h264_cutdiag_START (5)
+#define SOC_VENC_VEDU_VCPI_INTRA_INTER_CU_EN_vcpi_intra_h264_cutdiag_END (5)
+#define SOC_VENC_VEDU_VCPI_INTRA_INTER_CU_EN_vcpi_fme_cu_en_START (8)
+#define SOC_VENC_VEDU_VCPI_INTRA_INTER_CU_EN_vcpi_fme_cu_en_END (11)
+#define SOC_VENC_VEDU_VCPI_INTRA_INTER_CU_EN_vcpi_mrg_cu_en_START (12)
+#define SOC_VENC_VEDU_VCPI_INTRA_INTER_CU_EN_vcpi_mrg_cu_en_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_cross_slice : 1;
+        unsigned int vcpi_cross_tile : 1;
+        unsigned int reserved : 30;
+    } reg;
+} SOC_VENC_VEDU_VCPI_CROSS_TILE_SLC_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_CROSS_TILE_SLC_vcpi_cross_slice_START (0)
+#define SOC_VENC_VEDU_VCPI_CROSS_TILE_SLC_vcpi_cross_slice_END (0)
+#define SOC_VENC_VEDU_VCPI_CROSS_TILE_SLC_vcpi_cross_tile_START (1)
+#define SOC_VENC_VEDU_VCPI_CROSS_TILE_SLC_vcpi_cross_tile_END (1)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_slice_size : 16;
+        unsigned int vcpi_slcspilt_mod : 1;
+        unsigned int vcpi_multislc_en : 1;
+        unsigned int reserved : 14;
+    } reg;
+} SOC_VENC_VEDU_VCPI_MULTISLC_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_MULTISLC_vcpi_slice_size_START (0)
+#define SOC_VENC_VEDU_VCPI_MULTISLC_vcpi_slice_size_END (15)
+#define SOC_VENC_VEDU_VCPI_MULTISLC_vcpi_slcspilt_mod_START (16)
+#define SOC_VENC_VEDU_VCPI_MULTISLC_vcpi_slcspilt_mod_END (16)
+#define SOC_VENC_VEDU_VCPI_MULTISLC_vcpi_multislc_en_START (17)
+#define SOC_VENC_VEDU_VCPI_MULTISLC_vcpi_multislc_en_END (17)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_lcu_target_bit : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_LCU_TARGET_BIT_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_LCU_TARGET_BIT_vctrl_lcu_target_bit_START (0)
+#define SOC_VENC_VEDU_VCTRL_LCU_TARGET_BIT_vctrl_lcu_target_bit_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_sw_l0_width : 7;
+        unsigned int reserved_0 : 9;
+        unsigned int vcpi_sw_l0_height : 6;
+        unsigned int reserved_1 : 10;
+    } reg;
+} SOC_VENC_VEDU_VCPI_SW_L0_SIZE_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_SW_L0_SIZE_vcpi_sw_l0_width_START (0)
+#define SOC_VENC_VEDU_VCPI_SW_L0_SIZE_vcpi_sw_l0_width_END (6)
+#define SOC_VENC_VEDU_VCPI_SW_L0_SIZE_vcpi_sw_l0_height_START (16)
+#define SOC_VENC_VEDU_VCPI_SW_L0_SIZE_vcpi_sw_l0_height_END (21)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_sw_l1_width : 7;
+        unsigned int reserved_0 : 9;
+        unsigned int vcpi_sw_l1_height : 6;
+        unsigned int reserved_1 : 10;
+    } reg;
+} SOC_VENC_VEDU_VCPI_SW_L1_SIZE_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_SW_L1_SIZE_vcpi_sw_l1_width_START (0)
+#define SOC_VENC_VEDU_VCPI_SW_L1_SIZE_vcpi_sw_l1_width_END (6)
+#define SOC_VENC_VEDU_VCPI_SW_L1_SIZE_vcpi_sw_l1_height_START (16)
+#define SOC_VENC_VEDU_VCPI_SW_L1_SIZE_vcpi_sw_l1_height_END (21)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_insert_i_slc_idx : 8;
+        unsigned int vcpi_insert_i_slc_en : 1;
+        unsigned int reserved : 23;
+    } reg;
+} SOC_VENC_VEDU_VCPI_I_SLC_INSERT_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_I_SLC_INSERT_vcpi_insert_i_slc_idx_START (0)
+#define SOC_VENC_VEDU_VCPI_I_SLC_INSERT_vcpi_insert_i_slc_idx_END (7)
+#define SOC_VENC_VEDU_VCPI_I_SLC_INSERT_vcpi_insert_i_slc_en_START (8)
+#define SOC_VENC_VEDU_VCPI_I_SLC_INSERT_vcpi_insert_i_slc_en_END (8)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pme_safe_line : 16;
+        unsigned int pme_safe_line_val : 1;
+        unsigned int reserved : 15;
+    } reg;
+} SOC_VENC_VEDU_PME_SAFE_CFG_UNION;
+#endif
+#define SOC_VENC_VEDU_PME_SAFE_CFG_pme_safe_line_START (0)
+#define SOC_VENC_VEDU_PME_SAFE_CFG_pme_safe_line_END (15)
+#define SOC_VENC_VEDU_PME_SAFE_CFG_pme_safe_line_val_START (16)
+#define SOC_VENC_VEDU_PME_SAFE_CFG_pme_safe_line_val_END (16)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pme_iblk_refresh_start_num : 18;
+        unsigned int reserved : 14;
+    } reg;
+} SOC_VENC_VEDU_PME_IBLK_REFRESH_UNION;
+#endif
+#define SOC_VENC_VEDU_PME_IBLK_REFRESH_pme_iblk_refresh_start_num_START (0)
+#define SOC_VENC_VEDU_PME_IBLK_REFRESH_pme_iblk_refresh_start_num_END (17)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pme_iblk_refresh_num : 18;
+        unsigned int reserved : 14;
+    } reg;
+} SOC_VENC_VEDU_PME_IBLK_REFRESH_NUM_UNION;
+#endif
+#define SOC_VENC_VEDU_PME_IBLK_REFRESH_NUM_pme_iblk_refresh_num_START (0)
+#define SOC_VENC_VEDU_PME_IBLK_REFRESH_NUM_pme_iblk_refresh_num_END (17)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int intra_cu4_mode0_en : 1;
+        unsigned int intra_cu4_mode1_en : 1;
+        unsigned int intra_cu4_mode2_en : 1;
+        unsigned int intra_cu4_mode3_en : 1;
+        unsigned int intra_cu4_mode4_en : 1;
+        unsigned int intra_cu4_mode5_en : 1;
+        unsigned int intra_cu4_mode6_en : 1;
+        unsigned int intra_cu4_mode7_en : 1;
+        unsigned int intra_cu4_mode8_en : 1;
+        unsigned int intra_cu4_mode9_en : 1;
+        unsigned int intra_cu4_mode10_en : 1;
+        unsigned int intra_cu4_mode11_en : 1;
+        unsigned int intra_cu4_mode12_en : 1;
+        unsigned int intra_cu4_mode13_en : 1;
+        unsigned int intra_cu4_mode14_en : 1;
+        unsigned int intra_cu4_mode15_en : 1;
+        unsigned int intra_cu4_mode16_en : 1;
+        unsigned int intra_cu4_mode17_en : 1;
+        unsigned int intra_cu4_mode18_en : 1;
+        unsigned int intra_cu4_mode19_en : 1;
+        unsigned int intra_cu4_mode20_en : 1;
+        unsigned int intra_cu4_mode21_en : 1;
+        unsigned int intra_cu4_mode22_en : 1;
+        unsigned int intra_cu4_mode23_en : 1;
+        unsigned int intra_cu4_mode24_en : 1;
+        unsigned int intra_cu4_mode25_en : 1;
+        unsigned int intra_cu4_mode26_en : 1;
+        unsigned int intra_cu4_mode27_en : 1;
+        unsigned int intra_cu4_mode28_en : 1;
+        unsigned int intra_cu4_mode29_en : 1;
+        unsigned int intra_cu4_mode30_en : 1;
+        unsigned int intra_cu4_mode31_en : 1;
+    } reg;
+} SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_UNION;
+#endif
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode0_en_START (0)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode0_en_END (0)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode1_en_START (1)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode1_en_END (1)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode2_en_START (2)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode2_en_END (2)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode3_en_START (3)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode3_en_END (3)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode4_en_START (4)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode4_en_END (4)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode5_en_START (5)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode5_en_END (5)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode6_en_START (6)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode6_en_END (6)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode7_en_START (7)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode7_en_END (7)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode8_en_START (8)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode8_en_END (8)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode9_en_START (9)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode9_en_END (9)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode10_en_START (10)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode10_en_END (10)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode11_en_START (11)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode11_en_END (11)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode12_en_START (12)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode12_en_END (12)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode13_en_START (13)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode13_en_END (13)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode14_en_START (14)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode14_en_END (14)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode15_en_START (15)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode15_en_END (15)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode16_en_START (16)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode16_en_END (16)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode17_en_START (17)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode17_en_END (17)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode18_en_START (18)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode18_en_END (18)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode19_en_START (19)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode19_en_END (19)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode20_en_START (20)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode20_en_END (20)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode21_en_START (21)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode21_en_END (21)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode22_en_START (22)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode22_en_END (22)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode23_en_START (23)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode23_en_END (23)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode24_en_START (24)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode24_en_END (24)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode25_en_START (25)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode25_en_END (25)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode26_en_START (26)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode26_en_END (26)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode27_en_START (27)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode27_en_END (27)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode28_en_START (28)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode28_en_END (28)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode29_en_START (29)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode29_en_END (29)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode30_en_START (30)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode30_en_END (30)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode31_en_START (31)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_0EN_intra_cu4_mode31_en_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int intra_cu4_mode32_en : 1;
+        unsigned int intra_cu4_mode33_en : 1;
+        unsigned int intra_cu4_mode34_en : 1;
+        unsigned int reserved : 29;
+    } reg;
+} SOC_VENC_VEDU_INTRA_CHNL4_ANG_1EN_UNION;
+#endif
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_1EN_intra_cu4_mode32_en_START (0)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_1EN_intra_cu4_mode32_en_END (0)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_1EN_intra_cu4_mode33_en_START (1)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_1EN_intra_cu4_mode33_en_END (1)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_1EN_intra_cu4_mode34_en_START (2)
+#define SOC_VENC_VEDU_INTRA_CHNL4_ANG_1EN_intra_cu4_mode34_en_END (2)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int intra_cu8_mode0_en : 1;
+        unsigned int intra_cu8_mode1_en : 1;
+        unsigned int intra_cu8_mode2_en : 1;
+        unsigned int intra_cu8_mode3_en : 1;
+        unsigned int intra_cu8_mode4_en : 1;
+        unsigned int intra_cu8_mode5_en : 1;
+        unsigned int intra_cu8_mode6_en : 1;
+        unsigned int intra_cu8_mode7_en : 1;
+        unsigned int intra_cu8_mode8_en : 1;
+        unsigned int intra_cu8_mode9_en : 1;
+        unsigned int intra_cu8_mode10_en : 1;
+        unsigned int intra_cu8_mode11_en : 1;
+        unsigned int intra_cu8_mode12_en : 1;
+        unsigned int intra_cu8_mode13_en : 1;
+        unsigned int intra_cu8_mode14_en : 1;
+        unsigned int intra_cu8_mode15_en : 1;
+        unsigned int intra_cu8_mode16_en : 1;
+        unsigned int intra_cu8_mode17_en : 1;
+        unsigned int intra_cu8_mode18_en : 1;
+        unsigned int intra_cu8_mode19_en : 1;
+        unsigned int intra_cu8_mode20_en : 1;
+        unsigned int intra_cu8_mode21_en : 1;
+        unsigned int intra_cu8_mode22_en : 1;
+        unsigned int intra_cu8_mode23_en : 1;
+        unsigned int intra_cu8_mode24_en : 1;
+        unsigned int intra_cu8_mode25_en : 1;
+        unsigned int intra_cu8_mode26_en : 1;
+        unsigned int intra_cu8_mode27_en : 1;
+        unsigned int intra_cu8_mode28_en : 1;
+        unsigned int intra_cu8_mode29_en : 1;
+        unsigned int intra_cu8_mode30_en : 1;
+        unsigned int intra_cu8_mode31_en : 1;
+    } reg;
+} SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_UNION;
+#endif
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode0_en_START (0)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode0_en_END (0)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode1_en_START (1)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode1_en_END (1)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode2_en_START (2)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode2_en_END (2)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode3_en_START (3)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode3_en_END (3)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode4_en_START (4)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode4_en_END (4)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode5_en_START (5)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode5_en_END (5)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode6_en_START (6)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode6_en_END (6)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode7_en_START (7)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode7_en_END (7)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode8_en_START (8)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode8_en_END (8)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode9_en_START (9)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode9_en_END (9)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode10_en_START (10)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode10_en_END (10)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode11_en_START (11)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode11_en_END (11)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode12_en_START (12)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode12_en_END (12)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode13_en_START (13)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode13_en_END (13)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode14_en_START (14)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode14_en_END (14)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode15_en_START (15)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode15_en_END (15)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode16_en_START (16)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode16_en_END (16)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode17_en_START (17)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode17_en_END (17)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode18_en_START (18)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode18_en_END (18)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode19_en_START (19)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode19_en_END (19)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode20_en_START (20)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode20_en_END (20)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode21_en_START (21)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode21_en_END (21)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode22_en_START (22)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode22_en_END (22)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode23_en_START (23)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode23_en_END (23)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode24_en_START (24)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode24_en_END (24)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode25_en_START (25)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode25_en_END (25)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode26_en_START (26)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode26_en_END (26)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode27_en_START (27)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode27_en_END (27)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode28_en_START (28)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode28_en_END (28)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode29_en_START (29)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode29_en_END (29)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode30_en_START (30)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode30_en_END (30)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode31_en_START (31)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_0EN_intra_cu8_mode31_en_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int intra_cu8_mode32_en : 1;
+        unsigned int intra_cu8_mode33_en : 1;
+        unsigned int intra_cu8_mode34_en : 1;
+        unsigned int reserved : 29;
+    } reg;
+} SOC_VENC_VEDU_INTRA_CHNL8_ANG_1EN_UNION;
+#endif
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_1EN_intra_cu8_mode32_en_START (0)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_1EN_intra_cu8_mode32_en_END (0)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_1EN_intra_cu8_mode33_en_START (1)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_1EN_intra_cu8_mode33_en_END (1)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_1EN_intra_cu8_mode34_en_START (2)
+#define SOC_VENC_VEDU_INTRA_CHNL8_ANG_1EN_intra_cu8_mode34_en_END (2)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int intra_cu16_mode0_en : 1;
+        unsigned int intra_cu16_mode1_en : 1;
+        unsigned int intra_cu16_mode2_en : 1;
+        unsigned int intra_cu16_mode3_en : 1;
+        unsigned int intra_cu16_mode4_en : 1;
+        unsigned int intra_cu16_mode5_en : 1;
+        unsigned int intra_cu16_mode6_en : 1;
+        unsigned int intra_cu16_mode7_en : 1;
+        unsigned int intra_cu16_mode8_en : 1;
+        unsigned int intra_cu16_mode9_en : 1;
+        unsigned int intra_cu16_mode10_en : 1;
+        unsigned int intra_cu16_mode11_en : 1;
+        unsigned int intra_cu16_mode12_en : 1;
+        unsigned int intra_cu16_mode13_en : 1;
+        unsigned int intra_cu16_mode14_en : 1;
+        unsigned int intra_cu16_mode15_en : 1;
+        unsigned int intra_cu16_mode16_en : 1;
+        unsigned int intra_cu16_mode17_en : 1;
+        unsigned int intra_cu16_mode18_en : 1;
+        unsigned int intra_cu16_mode19_en : 1;
+        unsigned int intra_cu16_mode20_en : 1;
+        unsigned int intra_cu16_mode21_en : 1;
+        unsigned int intra_cu16_mode22_en : 1;
+        unsigned int intra_cu16_mode23_en : 1;
+        unsigned int intra_cu16_mode24_en : 1;
+        unsigned int intra_cu16_mode25_en : 1;
+        unsigned int intra_cu16_mode26_en : 1;
+        unsigned int intra_cu16_mode27_en : 1;
+        unsigned int intra_cu16_mode28_en : 1;
+        unsigned int intra_cu16_mode29_en : 1;
+        unsigned int intra_cu16_mode30_en : 1;
+        unsigned int intra_cu16_mode31_en : 1;
+    } reg;
+} SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_UNION;
+#endif
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode0_en_START (0)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode0_en_END (0)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode1_en_START (1)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode1_en_END (1)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode2_en_START (2)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode2_en_END (2)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode3_en_START (3)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode3_en_END (3)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode4_en_START (4)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode4_en_END (4)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode5_en_START (5)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode5_en_END (5)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode6_en_START (6)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode6_en_END (6)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode7_en_START (7)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode7_en_END (7)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode8_en_START (8)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode8_en_END (8)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode9_en_START (9)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode9_en_END (9)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode10_en_START (10)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode10_en_END (10)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode11_en_START (11)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode11_en_END (11)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode12_en_START (12)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode12_en_END (12)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode13_en_START (13)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode13_en_END (13)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode14_en_START (14)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode14_en_END (14)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode15_en_START (15)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode15_en_END (15)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode16_en_START (16)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode16_en_END (16)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode17_en_START (17)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode17_en_END (17)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode18_en_START (18)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode18_en_END (18)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode19_en_START (19)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode19_en_END (19)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode20_en_START (20)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode20_en_END (20)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode21_en_START (21)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode21_en_END (21)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode22_en_START (22)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode22_en_END (22)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode23_en_START (23)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode23_en_END (23)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode24_en_START (24)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode24_en_END (24)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode25_en_START (25)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode25_en_END (25)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode26_en_START (26)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode26_en_END (26)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode27_en_START (27)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode27_en_END (27)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode28_en_START (28)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode28_en_END (28)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode29_en_START (29)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode29_en_END (29)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode30_en_START (30)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode30_en_END (30)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode31_en_START (31)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_0EN_intra_cu16_mode31_en_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int intra_cu16_mode32_en : 1;
+        unsigned int intra_cu16_mode33_en : 1;
+        unsigned int intra_cu16_mode34_en : 1;
+        unsigned int reserved : 29;
+    } reg;
+} SOC_VENC_VEDU_INTRA_CHNL16_ANG_1EN_UNION;
+#endif
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_1EN_intra_cu16_mode32_en_START (0)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_1EN_intra_cu16_mode32_en_END (0)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_1EN_intra_cu16_mode33_en_START (1)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_1EN_intra_cu16_mode33_en_END (1)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_1EN_intra_cu16_mode34_en_START (2)
+#define SOC_VENC_VEDU_INTRA_CHNL16_ANG_1EN_intra_cu16_mode34_en_END (2)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int intra_cu32_mode0_en : 1;
+        unsigned int intra_cu32_mode1_en : 1;
+        unsigned int intra_cu32_mode2_en : 1;
+        unsigned int intra_cu32_mode3_en : 1;
+        unsigned int intra_cu32_mode4_en : 1;
+        unsigned int intra_cu32_mode5_en : 1;
+        unsigned int intra_cu32_mode6_en : 1;
+        unsigned int intra_cu32_mode7_en : 1;
+        unsigned int intra_cu32_mode8_en : 1;
+        unsigned int intra_cu32_mode9_en : 1;
+        unsigned int intra_cu32_mode10_en : 1;
+        unsigned int intra_cu32_mode11_en : 1;
+        unsigned int intra_cu32_mode12_en : 1;
+        unsigned int intra_cu32_mode13_en : 1;
+        unsigned int intra_cu32_mode14_en : 1;
+        unsigned int intra_cu32_mode15_en : 1;
+        unsigned int intra_cu32_mode16_en : 1;
+        unsigned int intra_cu32_mode17_en : 1;
+        unsigned int intra_cu32_mode18_en : 1;
+        unsigned int intra_cu32_mode19_en : 1;
+        unsigned int intra_cu32_mode20_en : 1;
+        unsigned int intra_cu32_mode21_en : 1;
+        unsigned int intra_cu32_mode22_en : 1;
+        unsigned int intra_cu32_mode23_en : 1;
+        unsigned int intra_cu32_mode24_en : 1;
+        unsigned int intra_cu32_mode25_en : 1;
+        unsigned int intra_cu32_mode26_en : 1;
+        unsigned int intra_cu32_mode27_en : 1;
+        unsigned int intra_cu32_mode28_en : 1;
+        unsigned int intra_cu32_mode29_en : 1;
+        unsigned int intra_cu32_mode30_en : 1;
+        unsigned int intra_cu32_mode31_en : 1;
+    } reg;
+} SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_UNION;
+#endif
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode0_en_START (0)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode0_en_END (0)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode1_en_START (1)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode1_en_END (1)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode2_en_START (2)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode2_en_END (2)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode3_en_START (3)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode3_en_END (3)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode4_en_START (4)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode4_en_END (4)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode5_en_START (5)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode5_en_END (5)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode6_en_START (6)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode6_en_END (6)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode7_en_START (7)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode7_en_END (7)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode8_en_START (8)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode8_en_END (8)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode9_en_START (9)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode9_en_END (9)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode10_en_START (10)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode10_en_END (10)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode11_en_START (11)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode11_en_END (11)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode12_en_START (12)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode12_en_END (12)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode13_en_START (13)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode13_en_END (13)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode14_en_START (14)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode14_en_END (14)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode15_en_START (15)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode15_en_END (15)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode16_en_START (16)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode16_en_END (16)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode17_en_START (17)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode17_en_END (17)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode18_en_START (18)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode18_en_END (18)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode19_en_START (19)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode19_en_END (19)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode20_en_START (20)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode20_en_END (20)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode21_en_START (21)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode21_en_END (21)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode22_en_START (22)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode22_en_END (22)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode23_en_START (23)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode23_en_END (23)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode24_en_START (24)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode24_en_END (24)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode25_en_START (25)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode25_en_END (25)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode26_en_START (26)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode26_en_END (26)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode27_en_START (27)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode27_en_END (27)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode28_en_START (28)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode28_en_END (28)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode29_en_START (29)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode29_en_END (29)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode30_en_START (30)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode30_en_END (30)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode31_en_START (31)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_0EN_intra_cu32_mode31_en_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int intra_cu32_mode32_en : 1;
+        unsigned int intra_cu32_mode33_en : 1;
+        unsigned int intra_cu32_mode34_en : 1;
+        unsigned int reserved : 29;
+    } reg;
+} SOC_VENC_VEDU_INTRA_CHNL32_ANG_1EN_UNION;
+#endif
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_1EN_intra_cu32_mode32_en_START (0)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_1EN_intra_cu32_mode32_en_END (0)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_1EN_intra_cu32_mode33_en_START (1)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_1EN_intra_cu32_mode33_en_END (1)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_1EN_intra_cu32_mode34_en_START (2)
+#define SOC_VENC_VEDU_INTRA_CHNL32_ANG_1EN_intra_cu32_mode34_en_END (2)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pack_vcpi2cu_tq_bypass_enabled_flag : 1;
+        unsigned int reserved_0 : 3;
+        unsigned int pack_vcpi2cu_qp_min_cu_size : 3;
+        unsigned int reserved_1 : 25;
+    } reg;
+} SOC_VENC_VEDU_PACK_CU_PARAMETER_UNION;
+#endif
+#define SOC_VENC_VEDU_PACK_CU_PARAMETER_pack_vcpi2cu_tq_bypass_enabled_flag_START (0)
+#define SOC_VENC_VEDU_PACK_CU_PARAMETER_pack_vcpi2cu_tq_bypass_enabled_flag_END (0)
+#define SOC_VENC_VEDU_PACK_CU_PARAMETER_pack_vcpi2cu_qp_min_cu_size_START (4)
+#define SOC_VENC_VEDU_PACK_CU_PARAMETER_pack_vcpi2cu_qp_min_cu_size_END (6)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pack_vcpi2pu_log2_min_ipcm_cbsizey : 3;
+        unsigned int reserved_0 : 1;
+        unsigned int pack_vcpi2pu_log2_max_ipcm_cbsizey : 3;
+        unsigned int reserved_1 : 25;
+    } reg;
+} SOC_VENC_VEDU_PACK_PCM_PARAMETER_UNION;
+#endif
+#define SOC_VENC_VEDU_PACK_PCM_PARAMETER_pack_vcpi2pu_log2_min_ipcm_cbsizey_START (0)
+#define SOC_VENC_VEDU_PACK_PCM_PARAMETER_pack_vcpi2pu_log2_min_ipcm_cbsizey_END (2)
+#define SOC_VENC_VEDU_PACK_PCM_PARAMETER_pack_vcpi2pu_log2_max_ipcm_cbsizey_START (4)
+#define SOC_VENC_VEDU_PACK_PCM_PARAMETER_pack_vcpi2pu_log2_max_ipcm_cbsizey_END (6)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_tile_qpg_readline_interval : 8;
+        unsigned int reserved : 24;
+    } reg;
+} SOC_VENC_VEDU_QPG_READLINE_INTERVAL_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_READLINE_INTERVAL_vcpi_tile_qpg_readline_interval_START (0)
+#define SOC_VENC_VEDU_QPG_READLINE_INTERVAL_vcpi_tile_qpg_readline_interval_END (7)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_pmv_readline_interval : 8;
+        unsigned int reserved : 24;
+    } reg;
+} SOC_VENC_VEDU_PMV_READLINE_INTERVAL_UNION;
+#endif
+#define SOC_VENC_VEDU_PMV_READLINE_INTERVAL_vcpi_pmv_readline_interval_START (0)
+#define SOC_VENC_VEDU_PMV_READLINE_INTERVAL_vcpi_pmv_readline_interval_END (7)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int rgb2yuv_y_0coef : 15;
+        unsigned int reserved_0 : 1;
+        unsigned int rgb2yuv_y_1coef : 15;
+        unsigned int reserved_1 : 1;
+    } reg;
+} SOC_VENC_VEDU_RGB2YUV_COEF_P0_UNION;
+#endif
+#define SOC_VENC_VEDU_RGB2YUV_COEF_P0_rgb2yuv_y_0coef_START (0)
+#define SOC_VENC_VEDU_RGB2YUV_COEF_P0_rgb2yuv_y_0coef_END (14)
+#define SOC_VENC_VEDU_RGB2YUV_COEF_P0_rgb2yuv_y_1coef_START (16)
+#define SOC_VENC_VEDU_RGB2YUV_COEF_P0_rgb2yuv_y_1coef_END (30)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int rgb2yuv_y_2coef : 15;
+        unsigned int reserved_0 : 1;
+        unsigned int rgb2yuv_u_0coef : 15;
+        unsigned int reserved_1 : 1;
+    } reg;
+} SOC_VENC_VEDU_RGB2YUV_COEF_P1_UNION;
+#endif
+#define SOC_VENC_VEDU_RGB2YUV_COEF_P1_rgb2yuv_y_2coef_START (0)
+#define SOC_VENC_VEDU_RGB2YUV_COEF_P1_rgb2yuv_y_2coef_END (14)
+#define SOC_VENC_VEDU_RGB2YUV_COEF_P1_rgb2yuv_u_0coef_START (16)
+#define SOC_VENC_VEDU_RGB2YUV_COEF_P1_rgb2yuv_u_0coef_END (30)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int rgb2yuv_u_1coef : 15;
+        unsigned int reserved_0 : 1;
+        unsigned int rgb2yuv_u_2coef : 15;
+        unsigned int reserved_1 : 1;
+    } reg;
+} SOC_VENC_VEDU_RGB2YUV_COEF_P2_UNION;
+#endif
+#define SOC_VENC_VEDU_RGB2YUV_COEF_P2_rgb2yuv_u_1coef_START (0)
+#define SOC_VENC_VEDU_RGB2YUV_COEF_P2_rgb2yuv_u_1coef_END (14)
+#define SOC_VENC_VEDU_RGB2YUV_COEF_P2_rgb2yuv_u_2coef_START (16)
+#define SOC_VENC_VEDU_RGB2YUV_COEF_P2_rgb2yuv_u_2coef_END (30)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int rgb_y_rnd : 16;
+        unsigned int rgb_u_rnd : 16;
+    } reg;
+} SOC_VENC_VEDU_RGB2YUV_OFFSET_UNION;
+#endif
+#define SOC_VENC_VEDU_RGB2YUV_OFFSET_rgb_y_rnd_START (0)
+#define SOC_VENC_VEDU_RGB2YUV_OFFSET_rgb_y_rnd_END (15)
+#define SOC_VENC_VEDU_RGB2YUV_OFFSET_rgb_u_rnd_START (16)
+#define SOC_VENC_VEDU_RGB2YUV_OFFSET_rgb_u_rnd_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int rgb2yuv_clip_min_y : 10;
+        unsigned int reserved_0 : 6;
+        unsigned int rgb2yuv_clip_max_y : 10;
+        unsigned int reserved_1 : 6;
+    } reg;
+} SOC_VENC_VEDU_RGB2YUV_CLIP_THR_Y_UNION;
+#endif
+#define SOC_VENC_VEDU_RGB2YUV_CLIP_THR_Y_rgb2yuv_clip_min_y_START (0)
+#define SOC_VENC_VEDU_RGB2YUV_CLIP_THR_Y_rgb2yuv_clip_min_y_END (9)
+#define SOC_VENC_VEDU_RGB2YUV_CLIP_THR_Y_rgb2yuv_clip_max_y_START (16)
+#define SOC_VENC_VEDU_RGB2YUV_CLIP_THR_Y_rgb2yuv_clip_max_y_END (25)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int rgb2yuv_clip_min_c : 10;
+        unsigned int reserved_0 : 6;
+        unsigned int rgb2yuv_clip_max_c : 10;
+        unsigned int reserved_1 : 6;
+    } reg;
+} SOC_VENC_VEDU_RGB2YUV_CLIP_THR_C_UNION;
+#endif
+#define SOC_VENC_VEDU_RGB2YUV_CLIP_THR_C_rgb2yuv_clip_min_c_START (0)
+#define SOC_VENC_VEDU_RGB2YUV_CLIP_THR_C_rgb2yuv_clip_min_c_END (9)
+#define SOC_VENC_VEDU_RGB2YUV_CLIP_THR_C_rgb2yuv_clip_max_c_START (16)
+#define SOC_VENC_VEDU_RGB2YUV_CLIP_THR_C_rgb2yuv_clip_max_c_END (25)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int rgb2yuv_shift_width : 4;
+        unsigned int reserved : 28;
+    } reg;
+} SOC_VENC_VEDU_RGB2YUV_SHIFT_WIDTH_UNION;
+#endif
+#define SOC_VENC_VEDU_RGB2YUV_SHIFT_WIDTH_rgb2yuv_shift_width_START (0)
+#define SOC_VENC_VEDU_RGB2YUV_SHIFT_WIDTH_rgb2yuv_shift_width_END (3)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int rgb2yuv_v_0coef : 15;
+        unsigned int reserved_0 : 1;
+        unsigned int rgb2yuv_v_1coef : 15;
+        unsigned int reserved_1 : 1;
+    } reg;
+} SOC_VENC_VEDU_VCPI_OSD_POS_0_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_OSD_POS_0_rgb2yuv_v_0coef_START (0)
+#define SOC_VENC_VEDU_VCPI_OSD_POS_0_rgb2yuv_v_0coef_END (14)
+#define SOC_VENC_VEDU_VCPI_OSD_POS_0_rgb2yuv_v_1coef_START (16)
+#define SOC_VENC_VEDU_VCPI_OSD_POS_0_rgb2yuv_v_1coef_END (30)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int rgb2yuv_v_2coef : 15;
+        unsigned int reserved : 1;
+        unsigned int rgb_v_rnd : 16;
+    } reg;
+} SOC_VENC_VEDU_VCPI_OSD_POS_1_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_OSD_POS_1_rgb2yuv_v_2coef_START (0)
+#define SOC_VENC_VEDU_VCPI_OSD_POS_1_rgb2yuv_v_2coef_END (14)
+#define SOC_VENC_VEDU_VCPI_OSD_POS_1_rgb_v_rnd_START (16)
+#define SOC_VENC_VEDU_VCPI_OSD_POS_1_rgb_v_rnd_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_OSD_POS_2_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_OSD_POS_3_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int curld_narrow_chrm_min : 10;
+        unsigned int reserved_0 : 6;
+        unsigned int curld_narrow_chrm_max : 10;
+        unsigned int reserved_1 : 6;
+    } reg;
+} SOC_VENC_VEDU_VCPI_OSD_POS_4_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_OSD_POS_4_curld_narrow_chrm_min_START (0)
+#define SOC_VENC_VEDU_VCPI_OSD_POS_4_curld_narrow_chrm_min_END (9)
+#define SOC_VENC_VEDU_VCPI_OSD_POS_4_curld_narrow_chrm_max_START (16)
+#define SOC_VENC_VEDU_VCPI_OSD_POS_4_curld_narrow_chrm_max_END (25)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int curld_narrow_luma_min : 10;
+        unsigned int reserved_0 : 6;
+        unsigned int curld_narrow_luma_max : 10;
+        unsigned int reserved_1 : 6;
+    } reg;
+} SOC_VENC_VEDU_VCPI_OSD_POS_5_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_OSD_POS_5_curld_narrow_luma_min_START (0)
+#define SOC_VENC_VEDU_VCPI_OSD_POS_5_curld_narrow_luma_min_END (9)
+#define SOC_VENC_VEDU_VCPI_OSD_POS_5_curld_narrow_luma_max_START (16)
+#define SOC_VENC_VEDU_VCPI_OSD_POS_5_curld_narrow_luma_max_END (25)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_OSD_POS_6_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_OSD_POS_7_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_OSD_SIZE_0_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_OSD_SIZE_1_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_OSD_SIZE_2_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_OSD_SIZE_3_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_OSD_SIZE_4_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_OSD_SIZE_5_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_OSD_SIZE_6_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_OSD_SIZE_7_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_OSD_LAYERID_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_osd0_qp : 7;
+        unsigned int reserved_0 : 1;
+        unsigned int vcpi_osd1_qp : 7;
+        unsigned int reserved_1 : 1;
+        unsigned int vcpi_osd2_qp : 7;
+        unsigned int reserved_2 : 1;
+        unsigned int vcpi_osd3_qp : 7;
+        unsigned int reserved_3 : 1;
+    } reg;
+} SOC_VENC_VEDU_VCPI_OSD_QP0_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_OSD_QP0_vcpi_osd0_qp_START (0)
+#define SOC_VENC_VEDU_VCPI_OSD_QP0_vcpi_osd0_qp_END (6)
+#define SOC_VENC_VEDU_VCPI_OSD_QP0_vcpi_osd1_qp_START (8)
+#define SOC_VENC_VEDU_VCPI_OSD_QP0_vcpi_osd1_qp_END (14)
+#define SOC_VENC_VEDU_VCPI_OSD_QP0_vcpi_osd2_qp_START (16)
+#define SOC_VENC_VEDU_VCPI_OSD_QP0_vcpi_osd2_qp_END (22)
+#define SOC_VENC_VEDU_VCPI_OSD_QP0_vcpi_osd3_qp_START (24)
+#define SOC_VENC_VEDU_VCPI_OSD_QP0_vcpi_osd3_qp_END (30)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_osd4_qp : 7;
+        unsigned int reserved_0 : 1;
+        unsigned int vcpi_osd5_qp : 7;
+        unsigned int reserved_1 : 1;
+        unsigned int vcpi_osd6_qp : 7;
+        unsigned int reserved_2 : 1;
+        unsigned int vcpi_osd7_qp : 7;
+        unsigned int reserved_3 : 1;
+    } reg;
+} SOC_VENC_VEDU_VCPI_OSD_QP1_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_OSD_QP1_vcpi_osd4_qp_START (0)
+#define SOC_VENC_VEDU_VCPI_OSD_QP1_vcpi_osd4_qp_END (6)
+#define SOC_VENC_VEDU_VCPI_OSD_QP1_vcpi_osd5_qp_START (8)
+#define SOC_VENC_VEDU_VCPI_OSD_QP1_vcpi_osd5_qp_END (14)
+#define SOC_VENC_VEDU_VCPI_OSD_QP1_vcpi_osd6_qp_START (16)
+#define SOC_VENC_VEDU_VCPI_OSD_QP1_vcpi_osd6_qp_END (22)
+#define SOC_VENC_VEDU_VCPI_OSD_QP1_vcpi_osd7_qp_START (24)
+#define SOC_VENC_VEDU_VCPI_OSD_QP1_vcpi_osd7_qp_END (30)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int rgb_clip_min : 10;
+        unsigned int rgb_clip_max : 10;
+        unsigned int curld_hfbcd_clk_gt_en : 1;
+        unsigned int curld_hfbcd_bypass_en : 1;
+        unsigned int curld_hfbcd_raw_en : 1;
+        unsigned int reserved : 9;
+    } reg;
+} SOC_VENC_VEDU_CURLD_OSD01_ALPHA_UNION;
+#endif
+#define SOC_VENC_VEDU_CURLD_OSD01_ALPHA_rgb_clip_min_START (0)
+#define SOC_VENC_VEDU_CURLD_OSD01_ALPHA_rgb_clip_min_END (9)
+#define SOC_VENC_VEDU_CURLD_OSD01_ALPHA_rgb_clip_max_START (10)
+#define SOC_VENC_VEDU_CURLD_OSD01_ALPHA_rgb_clip_max_END (19)
+#define SOC_VENC_VEDU_CURLD_OSD01_ALPHA_curld_hfbcd_clk_gt_en_START (20)
+#define SOC_VENC_VEDU_CURLD_OSD01_ALPHA_curld_hfbcd_clk_gt_en_END (20)
+#define SOC_VENC_VEDU_CURLD_OSD01_ALPHA_curld_hfbcd_bypass_en_START (21)
+#define SOC_VENC_VEDU_CURLD_OSD01_ALPHA_curld_hfbcd_bypass_en_END (21)
+#define SOC_VENC_VEDU_CURLD_OSD01_ALPHA_curld_hfbcd_raw_en_START (22)
+#define SOC_VENC_VEDU_CURLD_OSD01_ALPHA_curld_hfbcd_raw_en_END (22)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_filter_hor_0coef : 4;
+        unsigned int vcpi_filter_hor_1coef : 4;
+        unsigned int vcpi_filter_hor_2coef : 4;
+        unsigned int vcpi_filter_hor_3coef : 4;
+        unsigned int vcpi_filter_hor_rnd : 4;
+        unsigned int vcpi_filter_hor_shift : 3;
+        unsigned int reserved : 9;
+    } reg;
+} SOC_VENC_VEDU_CURLD_OSD23_ALPHA_UNION;
+#endif
+#define SOC_VENC_VEDU_CURLD_OSD23_ALPHA_vcpi_filter_hor_0coef_START (0)
+#define SOC_VENC_VEDU_CURLD_OSD23_ALPHA_vcpi_filter_hor_0coef_END (3)
+#define SOC_VENC_VEDU_CURLD_OSD23_ALPHA_vcpi_filter_hor_1coef_START (4)
+#define SOC_VENC_VEDU_CURLD_OSD23_ALPHA_vcpi_filter_hor_1coef_END (7)
+#define SOC_VENC_VEDU_CURLD_OSD23_ALPHA_vcpi_filter_hor_2coef_START (8)
+#define SOC_VENC_VEDU_CURLD_OSD23_ALPHA_vcpi_filter_hor_2coef_END (11)
+#define SOC_VENC_VEDU_CURLD_OSD23_ALPHA_vcpi_filter_hor_3coef_START (12)
+#define SOC_VENC_VEDU_CURLD_OSD23_ALPHA_vcpi_filter_hor_3coef_END (15)
+#define SOC_VENC_VEDU_CURLD_OSD23_ALPHA_vcpi_filter_hor_rnd_START (16)
+#define SOC_VENC_VEDU_CURLD_OSD23_ALPHA_vcpi_filter_hor_rnd_END (19)
+#define SOC_VENC_VEDU_CURLD_OSD23_ALPHA_vcpi_filter_hor_shift_START (20)
+#define SOC_VENC_VEDU_CURLD_OSD23_ALPHA_vcpi_filter_hor_shift_END (22)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_filter_ver_0coef : 4;
+        unsigned int vcpi_filter_ver_1coef : 4;
+        unsigned int vcpi_filter_ver_2coef : 4;
+        unsigned int vcpi_filter_ver_3coef : 4;
+        unsigned int vcpi_filter_ver_rnd : 4;
+        unsigned int vcpi_filter_ver_shift : 3;
+        unsigned int reserved : 9;
+    } reg;
+} SOC_VENC_VEDU_CURLD_OSD45_ALPHA_UNION;
+#endif
+#define SOC_VENC_VEDU_CURLD_OSD45_ALPHA_vcpi_filter_ver_0coef_START (0)
+#define SOC_VENC_VEDU_CURLD_OSD45_ALPHA_vcpi_filter_ver_0coef_END (3)
+#define SOC_VENC_VEDU_CURLD_OSD45_ALPHA_vcpi_filter_ver_1coef_START (4)
+#define SOC_VENC_VEDU_CURLD_OSD45_ALPHA_vcpi_filter_ver_1coef_END (7)
+#define SOC_VENC_VEDU_CURLD_OSD45_ALPHA_vcpi_filter_ver_2coef_START (8)
+#define SOC_VENC_VEDU_CURLD_OSD45_ALPHA_vcpi_filter_ver_2coef_END (11)
+#define SOC_VENC_VEDU_CURLD_OSD45_ALPHA_vcpi_filter_ver_3coef_START (12)
+#define SOC_VENC_VEDU_CURLD_OSD45_ALPHA_vcpi_filter_ver_3coef_END (15)
+#define SOC_VENC_VEDU_CURLD_OSD45_ALPHA_vcpi_filter_ver_rnd_START (16)
+#define SOC_VENC_VEDU_CURLD_OSD45_ALPHA_vcpi_filter_ver_rnd_END (19)
+#define SOC_VENC_VEDU_CURLD_OSD45_ALPHA_vcpi_filter_ver_shift_START (20)
+#define SOC_VENC_VEDU_CURLD_OSD45_ALPHA_vcpi_filter_ver_shift_END (22)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int srcyh_stride : 16;
+        unsigned int srcch_stride : 16;
+    } reg;
+} SOC_VENC_VEDU_CURLD_OSD67_ALPHA_UNION;
+#endif
+#define SOC_VENC_VEDU_CURLD_OSD67_ALPHA_srcyh_stride_START (0)
+#define SOC_VENC_VEDU_CURLD_OSD67_ALPHA_srcyh_stride_END (15)
+#define SOC_VENC_VEDU_CURLD_OSD67_ALPHA_srcch_stride_START (16)
+#define SOC_VENC_VEDU_CURLD_OSD67_ALPHA_srcch_stride_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_CURLD_OSD_GALPHA0_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_CURLD_OSD_GALPHA1_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_tbldst_readline_interval : 8;
+        unsigned int reserved : 24;
+    } reg;
+} SOC_VENC_VEDU_TBLDST_READLINE_INTERVAL_UNION;
+#endif
+#define SOC_VENC_VEDU_TBLDST_READLINE_INTERVAL_vcpi_tbldst_readline_interval_START (0)
+#define SOC_VENC_VEDU_TBLDST_READLINE_INTERVAL_vcpi_tbldst_readline_interval_END (7)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_RESERVED_07_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_CURLD_OSD0_ADDR_L_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_CURLD_OSD0_ADDR_H_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_CURLD_OSD1_ADDR_L_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_CURLD_OSD1_ADDR_H_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_CURLD_OSD2_ADDR_L_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_CURLD_OSD2_ADDR_H_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_CURLD_OSD3_ADDR_L_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_CURLD_OSD3_ADDR_H_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_CURLD_OSD4_ADDR_L_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_CURLD_OSD4_ADDR_H_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_CURLD_OSD5_ADDR_L_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_CURLD_OSD5_ADDR_H_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_CURLD_OSD6_ADDR_L_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_CURLD_OSD6_ADDR_H_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_CURLD_OSD7_ADDR_L_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_CURLD_OSD7_ADDR_H_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_CURLD_OSD01_STRIDE_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_CURLD_OSD23_STRIDE_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_CURLD_OSD45_STRIDE_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_CURLD_OSD67_STRIDE_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int irq_position_cnt_y : 10;
+        unsigned int reserved_0 : 7;
+        unsigned int reserved_1 : 15;
+    } reg;
+} SOC_VENC_VEDU_NEW_CFG0_UNION;
+#endif
+#define SOC_VENC_VEDU_NEW_CFG0_irq_position_cnt_y_START (0)
+#define SOC_VENC_VEDU_NEW_CFG0_irq_position_cnt_y_END (9)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_RESERVED_08_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_region0en : 1;
+        unsigned int vctrl_region1en : 1;
+        unsigned int vctrl_region2en : 1;
+        unsigned int vctrl_region3en : 1;
+        unsigned int vctrl_region4en : 1;
+        unsigned int vctrl_region5en : 1;
+        unsigned int vctrl_region6en : 1;
+        unsigned int vctrl_region7en : 1;
+        unsigned int vctrl_absqp0 : 1;
+        unsigned int vctrl_absqp1 : 1;
+        unsigned int vctrl_absqp2 : 1;
+        unsigned int vctrl_absqp3 : 1;
+        unsigned int vctrl_absqp4 : 1;
+        unsigned int vctrl_absqp5 : 1;
+        unsigned int vctrl_absqp6 : 1;
+        unsigned int vctrl_absqp7 : 1;
+        unsigned int vctrl_region0keep : 1;
+        unsigned int vctrl_region1keep : 1;
+        unsigned int vctrl_region2keep : 1;
+        unsigned int vctrl_region3keep : 1;
+        unsigned int vctrl_region4keep : 1;
+        unsigned int vctrl_region5keep : 1;
+        unsigned int vctrl_region6keep : 1;
+        unsigned int vctrl_region7keep : 1;
+        unsigned int vctrl_roi_en : 1;
+        unsigned int reserved : 7;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_ROI_CFG0_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_region0en_START (0)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_region0en_END (0)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_region1en_START (1)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_region1en_END (1)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_region2en_START (2)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_region2en_END (2)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_region3en_START (3)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_region3en_END (3)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_region4en_START (4)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_region4en_END (4)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_region5en_START (5)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_region5en_END (5)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_region6en_START (6)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_region6en_END (6)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_region7en_START (7)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_region7en_END (7)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_absqp0_START (8)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_absqp0_END (8)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_absqp1_START (9)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_absqp1_END (9)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_absqp2_START (10)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_absqp2_END (10)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_absqp3_START (11)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_absqp3_END (11)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_absqp4_START (12)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_absqp4_END (12)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_absqp5_START (13)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_absqp5_END (13)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_absqp6_START (14)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_absqp6_END (14)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_absqp7_START (15)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_absqp7_END (15)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_region0keep_START (16)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_region0keep_END (16)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_region1keep_START (17)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_region1keep_END (17)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_region2keep_START (18)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_region2keep_END (18)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_region3keep_START (19)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_region3keep_END (19)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_region4keep_START (20)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_region4keep_END (20)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_region5keep_START (21)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_region5keep_END (21)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_region6keep_START (22)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_region6keep_END (22)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_region7keep_START (23)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_region7keep_END (23)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_roi_en_START (24)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG0_vctrl_roi_en_END (24)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_roiqp0 : 7;
+        unsigned int reserved_0 : 1;
+        unsigned int vctrl_roiqp1 : 7;
+        unsigned int reserved_1 : 1;
+        unsigned int vctrl_roiqp2 : 7;
+        unsigned int reserved_2 : 1;
+        unsigned int vctrl_roiqp3 : 7;
+        unsigned int reserved_3 : 1;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_ROI_CFG1_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG1_vctrl_roiqp0_START (0)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG1_vctrl_roiqp0_END (6)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG1_vctrl_roiqp1_START (8)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG1_vctrl_roiqp1_END (14)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG1_vctrl_roiqp2_START (16)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG1_vctrl_roiqp2_END (22)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG1_vctrl_roiqp3_START (24)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG1_vctrl_roiqp3_END (30)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_roiqp4 : 7;
+        unsigned int reserved_0 : 1;
+        unsigned int vctrl_roiqp5 : 7;
+        unsigned int reserved_1 : 1;
+        unsigned int vctrl_roiqp6 : 7;
+        unsigned int reserved_2 : 1;
+        unsigned int vctrl_roiqp7 : 7;
+        unsigned int reserved_3 : 1;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_ROI_CFG2_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG2_vctrl_roiqp4_START (0)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG2_vctrl_roiqp4_END (6)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG2_vctrl_roiqp5_START (8)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG2_vctrl_roiqp5_END (14)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG2_vctrl_roiqp6_START (16)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG2_vctrl_roiqp6_END (22)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG2_vctrl_roiqp7_START (24)
+#define SOC_VENC_VEDU_VCTRL_ROI_CFG2_vctrl_roiqp7_END (30)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_size0_roiwidth : 13;
+        unsigned int reserved_0 : 3;
+        unsigned int vctrl_size0_roiheight : 13;
+        unsigned int reserved_1 : 3;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_ROI_SIZE_0_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_0_vctrl_size0_roiwidth_START (0)
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_0_vctrl_size0_roiwidth_END (12)
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_0_vctrl_size0_roiheight_START (16)
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_0_vctrl_size0_roiheight_END (28)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_size1_roiwidth : 13;
+        unsigned int reserved_0 : 3;
+        unsigned int vctrl_size1_roiheight : 13;
+        unsigned int reserved_1 : 3;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_ROI_SIZE_1_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_1_vctrl_size1_roiwidth_START (0)
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_1_vctrl_size1_roiwidth_END (12)
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_1_vctrl_size1_roiheight_START (16)
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_1_vctrl_size1_roiheight_END (28)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_size2_roiwidth : 13;
+        unsigned int reserved_0 : 3;
+        unsigned int vctrl_size2_roiheight : 13;
+        unsigned int reserved_1 : 3;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_ROI_SIZE_2_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_2_vctrl_size2_roiwidth_START (0)
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_2_vctrl_size2_roiwidth_END (12)
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_2_vctrl_size2_roiheight_START (16)
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_2_vctrl_size2_roiheight_END (28)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_size3_roiwidth : 13;
+        unsigned int reserved_0 : 3;
+        unsigned int vctrl_size3_roiheight : 13;
+        unsigned int reserved_1 : 3;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_ROI_SIZE_3_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_3_vctrl_size3_roiwidth_START (0)
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_3_vctrl_size3_roiwidth_END (12)
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_3_vctrl_size3_roiheight_START (16)
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_3_vctrl_size3_roiheight_END (28)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_size4_roiwidth : 13;
+        unsigned int reserved_0 : 3;
+        unsigned int vctrl_size4_roiheight : 13;
+        unsigned int reserved_1 : 3;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_ROI_SIZE_4_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_4_vctrl_size4_roiwidth_START (0)
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_4_vctrl_size4_roiwidth_END (12)
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_4_vctrl_size4_roiheight_START (16)
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_4_vctrl_size4_roiheight_END (28)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_size5_roiwidth : 13;
+        unsigned int reserved_0 : 3;
+        unsigned int vctrl_size5_roiheight : 13;
+        unsigned int reserved_1 : 3;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_ROI_SIZE_5_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_5_vctrl_size5_roiwidth_START (0)
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_5_vctrl_size5_roiwidth_END (12)
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_5_vctrl_size5_roiheight_START (16)
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_5_vctrl_size5_roiheight_END (28)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_size6_roiwidth : 13;
+        unsigned int reserved_0 : 3;
+        unsigned int vctrl_size6_roiheight : 13;
+        unsigned int reserved_1 : 3;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_ROI_SIZE_6_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_6_vctrl_size6_roiwidth_START (0)
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_6_vctrl_size6_roiwidth_END (12)
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_6_vctrl_size6_roiheight_START (16)
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_6_vctrl_size6_roiheight_END (28)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_size7_roiwidth : 13;
+        unsigned int reserved_0 : 3;
+        unsigned int vctrl_size7_roiheight : 13;
+        unsigned int reserved_1 : 3;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_ROI_SIZE_7_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_7_vctrl_size7_roiwidth_START (0)
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_7_vctrl_size7_roiwidth_END (12)
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_7_vctrl_size7_roiheight_START (16)
+#define SOC_VENC_VEDU_VCTRL_ROI_SIZE_7_vctrl_size7_roiheight_END (28)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_start0_roistartx : 12;
+        unsigned int reserved_0 : 4;
+        unsigned int vctrl_start0_roistarty : 12;
+        unsigned int reserved_1 : 4;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_ROI_START_0_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_ROI_START_0_vctrl_start0_roistartx_START (0)
+#define SOC_VENC_VEDU_VCTRL_ROI_START_0_vctrl_start0_roistartx_END (11)
+#define SOC_VENC_VEDU_VCTRL_ROI_START_0_vctrl_start0_roistarty_START (16)
+#define SOC_VENC_VEDU_VCTRL_ROI_START_0_vctrl_start0_roistarty_END (27)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_start1_roistartx : 12;
+        unsigned int reserved_0 : 4;
+        unsigned int vctrl_start1_roistarty : 12;
+        unsigned int reserved_1 : 4;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_ROI_START_1_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_ROI_START_1_vctrl_start1_roistartx_START (0)
+#define SOC_VENC_VEDU_VCTRL_ROI_START_1_vctrl_start1_roistartx_END (11)
+#define SOC_VENC_VEDU_VCTRL_ROI_START_1_vctrl_start1_roistarty_START (16)
+#define SOC_VENC_VEDU_VCTRL_ROI_START_1_vctrl_start1_roistarty_END (27)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_start2_roistartx : 12;
+        unsigned int reserved_0 : 4;
+        unsigned int vctrl_start2_roistarty : 12;
+        unsigned int reserved_1 : 4;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_ROI_START_2_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_ROI_START_2_vctrl_start2_roistartx_START (0)
+#define SOC_VENC_VEDU_VCTRL_ROI_START_2_vctrl_start2_roistartx_END (11)
+#define SOC_VENC_VEDU_VCTRL_ROI_START_2_vctrl_start2_roistarty_START (16)
+#define SOC_VENC_VEDU_VCTRL_ROI_START_2_vctrl_start2_roistarty_END (27)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_start3_roistartx : 12;
+        unsigned int reserved_0 : 4;
+        unsigned int vctrl_start3_roistarty : 12;
+        unsigned int reserved_1 : 4;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_ROI_START_3_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_ROI_START_3_vctrl_start3_roistartx_START (0)
+#define SOC_VENC_VEDU_VCTRL_ROI_START_3_vctrl_start3_roistartx_END (11)
+#define SOC_VENC_VEDU_VCTRL_ROI_START_3_vctrl_start3_roistarty_START (16)
+#define SOC_VENC_VEDU_VCTRL_ROI_START_3_vctrl_start3_roistarty_END (27)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_start4_roistartx : 12;
+        unsigned int reserved_0 : 4;
+        unsigned int vctrl_start4_roistarty : 12;
+        unsigned int reserved_1 : 4;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_ROI_START_4_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_ROI_START_4_vctrl_start4_roistartx_START (0)
+#define SOC_VENC_VEDU_VCTRL_ROI_START_4_vctrl_start4_roistartx_END (11)
+#define SOC_VENC_VEDU_VCTRL_ROI_START_4_vctrl_start4_roistarty_START (16)
+#define SOC_VENC_VEDU_VCTRL_ROI_START_4_vctrl_start4_roistarty_END (27)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_start5_roistartx : 12;
+        unsigned int reserved_0 : 4;
+        unsigned int vctrl_start5_roistarty : 12;
+        unsigned int reserved_1 : 4;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_ROI_START_5_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_ROI_START_5_vctrl_start5_roistartx_START (0)
+#define SOC_VENC_VEDU_VCTRL_ROI_START_5_vctrl_start5_roistartx_END (11)
+#define SOC_VENC_VEDU_VCTRL_ROI_START_5_vctrl_start5_roistarty_START (16)
+#define SOC_VENC_VEDU_VCTRL_ROI_START_5_vctrl_start5_roistarty_END (27)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_start6_roistartx : 12;
+        unsigned int reserved_0 : 4;
+        unsigned int vctrl_start6_roistarty : 12;
+        unsigned int reserved_1 : 4;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_ROI_START_6_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_ROI_START_6_vctrl_start6_roistartx_START (0)
+#define SOC_VENC_VEDU_VCTRL_ROI_START_6_vctrl_start6_roistartx_END (11)
+#define SOC_VENC_VEDU_VCTRL_ROI_START_6_vctrl_start6_roistarty_START (16)
+#define SOC_VENC_VEDU_VCTRL_ROI_START_6_vctrl_start6_roistarty_END (27)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_start7_roistartx : 12;
+        unsigned int reserved_0 : 4;
+        unsigned int vctrl_start7_roistarty : 12;
+        unsigned int reserved_1 : 4;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_ROI_START_7_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_ROI_START_7_vctrl_start7_roistartx_START (0)
+#define SOC_VENC_VEDU_VCTRL_ROI_START_7_vctrl_start7_roistartx_END (11)
+#define SOC_VENC_VEDU_VCTRL_ROI_START_7_vctrl_start7_roistarty_START (16)
+#define SOC_VENC_VEDU_VCTRL_ROI_START_7_vctrl_start7_roistarty_END (27)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_RESERVED_09_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vedu_curr_cell_mode : 1;
+        unsigned int vedu_left_cell_mode : 1;
+        unsigned int vedu_top_cell_mode : 1;
+        unsigned int vedu_topleft_cell_mode : 1;
+        unsigned int reserved : 28;
+    } reg;
+} SOC_VENC_VEDU_TILE_MODE_UNION;
+#endif
+#define SOC_VENC_VEDU_TILE_MODE_vedu_curr_cell_mode_START (0)
+#define SOC_VENC_VEDU_TILE_MODE_vedu_curr_cell_mode_END (0)
+#define SOC_VENC_VEDU_TILE_MODE_vedu_left_cell_mode_START (1)
+#define SOC_VENC_VEDU_TILE_MODE_vedu_left_cell_mode_END (1)
+#define SOC_VENC_VEDU_TILE_MODE_vedu_top_cell_mode_START (2)
+#define SOC_VENC_VEDU_TILE_MODE_vedu_top_cell_mode_END (2)
+#define SOC_VENC_VEDU_TILE_MODE_vedu_topleft_cell_mode_START (3)
+#define SOC_VENC_VEDU_TILE_MODE_vedu_topleft_cell_mode_END (3)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_imgwidth_pix : 16;
+        unsigned int vcpi_imgheight_pix : 16;
+    } reg;
+} SOC_VENC_VEDU_VCPI_PICSIZE_PIX_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_PICSIZE_PIX_vcpi_imgwidth_pix_START (0)
+#define SOC_VENC_VEDU_VCPI_PICSIZE_PIX_vcpi_imgwidth_pix_END (15)
+#define SOC_VENC_VEDU_VCPI_PICSIZE_PIX_vcpi_imgheight_pix_START (16)
+#define SOC_VENC_VEDU_VCPI_PICSIZE_PIX_vcpi_imgheight_pix_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vedu_tile_start_x : 16;
+        unsigned int vedu_tile_start_y : 16;
+    } reg;
+} SOC_VENC_VEDU_TILE_POS_UNION;
+#endif
+#define SOC_VENC_VEDU_TILE_POS_vedu_tile_start_x_START (0)
+#define SOC_VENC_VEDU_TILE_POS_vedu_tile_start_x_END (15)
+#define SOC_VENC_VEDU_TILE_POS_vedu_tile_start_y_START (16)
+#define SOC_VENC_VEDU_TILE_POS_vedu_tile_start_y_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_tile_width : 16;
+        unsigned int vcpi_tile_height : 16;
+    } reg;
+} SOC_VENC_VEDU_VCPI_TILE_SIZE_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_TILE_SIZE_vcpi_tile_width_START (0)
+#define SOC_VENC_VEDU_VCPI_TILE_SIZE_vcpi_tile_width_END (15)
+#define SOC_VENC_VEDU_VCPI_TILE_SIZE_vcpi_tile_height_START (16)
+#define SOC_VENC_VEDU_VCPI_TILE_SIZE_vcpi_tile_height_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_ref_idc : 2;
+        unsigned int reserved_0 : 2;
+        unsigned int vcpi_cabac_init_idc : 2;
+        unsigned int reserved_1 : 6;
+        unsigned int vcpi_byte_stuffing : 1;
+        unsigned int reserved_2 : 19;
+    } reg;
+} SOC_VENC_VEDU_VCPI_VLC_CONFIG_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_VLC_CONFIG_vcpi_ref_idc_START (0)
+#define SOC_VENC_VEDU_VCPI_VLC_CONFIG_vcpi_ref_idc_END (1)
+#define SOC_VENC_VEDU_VCPI_VLC_CONFIG_vcpi_cabac_init_idc_START (4)
+#define SOC_VENC_VEDU_VCPI_VLC_CONFIG_vcpi_cabac_init_idc_END (5)
+#define SOC_VENC_VEDU_VCPI_VLC_CONFIG_vcpi_byte_stuffing_START (12)
+#define SOC_VENC_VEDU_VCPI_VLC_CONFIG_vcpi_byte_stuffing_END (12)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved_0 : 1;
+        unsigned int vcpi_col_from_l0_flag : 1;
+        unsigned int vcpi_curr_ref_long_flag : 2;
+        unsigned int vcpi_col_long_flag : 2;
+        unsigned int vcpi_predflag_sel : 2;
+        unsigned int reserved_1 : 24;
+    } reg;
+} SOC_VENC_VEDU_VCPI_REF_FLAG_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_REF_FLAG_vcpi_col_from_l0_flag_START (1)
+#define SOC_VENC_VEDU_VCPI_REF_FLAG_vcpi_col_from_l0_flag_END (1)
+#define SOC_VENC_VEDU_VCPI_REF_FLAG_vcpi_curr_ref_long_flag_START (2)
+#define SOC_VENC_VEDU_VCPI_REF_FLAG_vcpi_curr_ref_long_flag_END (3)
+#define SOC_VENC_VEDU_VCPI_REF_FLAG_vcpi_col_long_flag_START (4)
+#define SOC_VENC_VEDU_VCPI_REF_FLAG_vcpi_col_long_flag_END (5)
+#define SOC_VENC_VEDU_VCPI_REF_FLAG_vcpi_predflag_sel_START (6)
+#define SOC_VENC_VEDU_VCPI_REF_FLAG_vcpi_predflag_sel_END (7)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pmv_tmv_en : 1;
+        unsigned int reserved : 31;
+    } reg;
+} SOC_VENC_VEDU_PMV_TMV_EN_UNION;
+#endif
+#define SOC_VENC_VEDU_PMV_TMV_EN_pmv_tmv_en_START (0)
+#define SOC_VENC_VEDU_PMV_TMV_EN_pmv_tmv_en_END (0)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_tmv_wr_rd_avail : 2;
+        unsigned int reserved : 30;
+    } reg;
+} SOC_VENC_VEDU_VCPI_TMV_LOAD_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_TMV_LOAD_vcpi_tmv_wr_rd_avail_START (0)
+#define SOC_VENC_VEDU_VCPI_TMV_LOAD_vcpi_tmv_wr_rd_avail_END (1)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pmv_curr_pic_poc : 32;
+    } reg;
+} SOC_VENC_VEDU_PMV_POC_0_UNION;
+#endif
+#define SOC_VENC_VEDU_PMV_POC_0_pmv_curr_pic_poc_START (0)
+#define SOC_VENC_VEDU_PMV_POC_0_pmv_curr_pic_poc_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pmv_curr_pic_ref0_poc : 32;
+    } reg;
+} SOC_VENC_VEDU_PMV_POC_1_UNION;
+#endif
+#define SOC_VENC_VEDU_PMV_POC_1_pmv_curr_pic_ref0_poc_START (0)
+#define SOC_VENC_VEDU_PMV_POC_1_pmv_curr_pic_ref0_poc_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pmv_curr_pic_ref1_poc : 32;
+    } reg;
+} SOC_VENC_VEDU_PMV_POC_2_UNION;
+#endif
+#define SOC_VENC_VEDU_PMV_POC_2_pmv_curr_pic_ref1_poc_START (0)
+#define SOC_VENC_VEDU_PMV_POC_2_pmv_curr_pic_ref1_poc_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pmv_curr_col_poc : 32;
+    } reg;
+} SOC_VENC_VEDU_PMV_POC_3_UNION;
+#endif
+#define SOC_VENC_VEDU_PMV_POC_3_pmv_curr_col_poc_START (0)
+#define SOC_VENC_VEDU_PMV_POC_3_pmv_curr_col_poc_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pmv_curr_col_ref0_poc : 32;
+    } reg;
+} SOC_VENC_VEDU_PMV_POC_4_UNION;
+#endif
+#define SOC_VENC_VEDU_PMV_POC_4_pmv_curr_col_ref0_poc_START (0)
+#define SOC_VENC_VEDU_PMV_POC_4_pmv_curr_col_ref0_poc_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pmv_curr_col_ref1_poc : 32;
+    } reg;
+} SOC_VENC_VEDU_PMV_POC_5_UNION;
+#endif
+#define SOC_VENC_VEDU_PMV_POC_5_pmv_curr_col_ref1_poc_START (0)
+#define SOC_VENC_VEDU_PMV_POC_5_pmv_curr_col_ref1_poc_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved_0 : 8;
+        unsigned int cabac_max_num_mergecand : 3;
+        unsigned int reserved_1 : 5;
+        unsigned int cabac_nal_unit_head : 16;
+    } reg;
+} SOC_VENC_VEDU_CABAC_GLB_CFG_UNION;
+#endif
+#define SOC_VENC_VEDU_CABAC_GLB_CFG_cabac_max_num_mergecand_START (8)
+#define SOC_VENC_VEDU_CABAC_GLB_CFG_cabac_max_num_mergecand_END (10)
+#define SOC_VENC_VEDU_CABAC_GLB_CFG_cabac_nal_unit_head_START (16)
+#define SOC_VENC_VEDU_CABAC_GLB_CFG_cabac_nal_unit_head_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int cabac_slchdr_size_part1 : 5;
+        unsigned int reserved : 11;
+        unsigned int cabac_slchdr_size_part2 : 16;
+    } reg;
+} SOC_VENC_VEDU_CABAC_SLCHDR_SIZE_UNION;
+#endif
+#define SOC_VENC_VEDU_CABAC_SLCHDR_SIZE_cabac_slchdr_size_part1_START (0)
+#define SOC_VENC_VEDU_CABAC_SLCHDR_SIZE_cabac_slchdr_size_part1_END (4)
+#define SOC_VENC_VEDU_CABAC_SLCHDR_SIZE_cabac_slchdr_size_part2_START (16)
+#define SOC_VENC_VEDU_CABAC_SLCHDR_SIZE_cabac_slchdr_size_part2_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int cabac_slchdr_part1 : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_VEDU_CABAC_SLCHDR_PART1_UNION;
+#endif
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART1_cabac_slchdr_part1_START (0)
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART1_cabac_slchdr_part1_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int cabac_slchdr_part2_seg1 : 32;
+    } reg;
+} SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG1_UNION;
+#endif
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG1_cabac_slchdr_part2_seg1_START (0)
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG1_cabac_slchdr_part2_seg1_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int cabac_slchdr_part2_seg2 : 32;
+    } reg;
+} SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG2_UNION;
+#endif
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG2_cabac_slchdr_part2_seg2_START (0)
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG2_cabac_slchdr_part2_seg2_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int cabac_slchdr_part2_seg3 : 32;
+    } reg;
+} SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG3_UNION;
+#endif
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG3_cabac_slchdr_part2_seg3_START (0)
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG3_cabac_slchdr_part2_seg3_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int cabac_slchdr_part2_seg4 : 32;
+    } reg;
+} SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG4_UNION;
+#endif
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG4_cabac_slchdr_part2_seg4_START (0)
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG4_cabac_slchdr_part2_seg4_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int cabac_slchdr_part2_seg5 : 32;
+    } reg;
+} SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG5_UNION;
+#endif
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG5_cabac_slchdr_part2_seg5_START (0)
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG5_cabac_slchdr_part2_seg5_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int cabac_slchdr_part2_seg6 : 32;
+    } reg;
+} SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG6_UNION;
+#endif
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG6_cabac_slchdr_part2_seg6_START (0)
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG6_cabac_slchdr_part2_seg6_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int cabac_slchdr_part2_seg7 : 32;
+    } reg;
+} SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG7_UNION;
+#endif
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG7_cabac_slchdr_part2_seg7_START (0)
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG7_cabac_slchdr_part2_seg7_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int cabac_slchdr_part2_seg8 : 32;
+    } reg;
+} SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG8_UNION;
+#endif
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG8_cabac_slchdr_part2_seg8_START (0)
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG8_cabac_slchdr_part2_seg8_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int cabac_slchdr_size_part1_i : 5;
+        unsigned int reserved : 11;
+        unsigned int cabac_slchdr_size_part2_i : 16;
+    } reg;
+} SOC_VENC_VEDU_CABAC_SLCHDR_SIZE_I_UNION;
+#endif
+#define SOC_VENC_VEDU_CABAC_SLCHDR_SIZE_I_cabac_slchdr_size_part1_i_START (0)
+#define SOC_VENC_VEDU_CABAC_SLCHDR_SIZE_I_cabac_slchdr_size_part1_i_END (4)
+#define SOC_VENC_VEDU_CABAC_SLCHDR_SIZE_I_cabac_slchdr_size_part2_i_START (16)
+#define SOC_VENC_VEDU_CABAC_SLCHDR_SIZE_I_cabac_slchdr_size_part2_i_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int cabac_slchdr_part1_i : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_VEDU_CABAC_SLCHDR_PART1_I_UNION;
+#endif
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART1_I_cabac_slchdr_part1_i_START (0)
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART1_I_cabac_slchdr_part1_i_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int cabac_slchdr_part2_seg1_i : 32;
+    } reg;
+} SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG1_I_UNION;
+#endif
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG1_I_cabac_slchdr_part2_seg1_i_START (0)
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG1_I_cabac_slchdr_part2_seg1_i_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int cabac_slchdr_part2_seg2_i : 32;
+    } reg;
+} SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG2_I_UNION;
+#endif
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG2_I_cabac_slchdr_part2_seg2_i_START (0)
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG2_I_cabac_slchdr_part2_seg2_i_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int cabac_slchdr_part2_seg3_i : 32;
+    } reg;
+} SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG3_I_UNION;
+#endif
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG3_I_cabac_slchdr_part2_seg3_i_START (0)
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG3_I_cabac_slchdr_part2_seg3_i_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int cabac_slchdr_part2_seg4_i : 32;
+    } reg;
+} SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG4_I_UNION;
+#endif
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG4_I_cabac_slchdr_part2_seg4_i_START (0)
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG4_I_cabac_slchdr_part2_seg4_i_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int cabac_slchdr_part2_seg5_i : 32;
+    } reg;
+} SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG5_I_UNION;
+#endif
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG5_I_cabac_slchdr_part2_seg5_i_START (0)
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG5_I_cabac_slchdr_part2_seg5_i_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int cabac_slchdr_part2_seg6_i : 32;
+    } reg;
+} SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG6_I_UNION;
+#endif
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG6_I_cabac_slchdr_part2_seg6_i_START (0)
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG6_I_cabac_slchdr_part2_seg6_i_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int cabac_slchdr_part2_seg7_i : 32;
+    } reg;
+} SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG7_I_UNION;
+#endif
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG7_I_cabac_slchdr_part2_seg7_i_START (0)
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG7_I_cabac_slchdr_part2_seg7_i_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int cabac_slchdr_part2_seg8_i : 32;
+    } reg;
+} SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG8_I_UNION;
+#endif
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG8_I_cabac_slchdr_part2_seg8_i_START (0)
+#define SOC_VENC_VEDU_CABAC_SLCHDR_PART2_SEG8_I_cabac_slchdr_part2_seg8_i_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vlc_slchdrstrm0 : 32;
+    } reg;
+} SOC_VENC_VEDU_VLC_SLCHDRSTRM0_UNION;
+#endif
+#define SOC_VENC_VEDU_VLC_SLCHDRSTRM0_vlc_slchdrstrm0_START (0)
+#define SOC_VENC_VEDU_VLC_SLCHDRSTRM0_vlc_slchdrstrm0_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vlc_slchdrstrm1 : 32;
+    } reg;
+} SOC_VENC_VEDU_VLC_SLCHDRSTRM1_UNION;
+#endif
+#define SOC_VENC_VEDU_VLC_SLCHDRSTRM1_vlc_slchdrstrm1_START (0)
+#define SOC_VENC_VEDU_VLC_SLCHDRSTRM1_vlc_slchdrstrm1_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vlc_slchdrstrm2 : 32;
+    } reg;
+} SOC_VENC_VEDU_VLC_SLCHDRSTRM2_UNION;
+#endif
+#define SOC_VENC_VEDU_VLC_SLCHDRSTRM2_vlc_slchdrstrm2_START (0)
+#define SOC_VENC_VEDU_VLC_SLCHDRSTRM2_vlc_slchdrstrm2_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vlc_slchdrstrm3 : 32;
+    } reg;
+} SOC_VENC_VEDU_VLC_SLCHDRSTRM3_UNION;
+#endif
+#define SOC_VENC_VEDU_VLC_SLCHDRSTRM3_vlc_slchdrstrm3_START (0)
+#define SOC_VENC_VEDU_VLC_SLCHDRSTRM3_vlc_slchdrstrm3_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vlc_reorderstrm0 : 32;
+    } reg;
+} SOC_VENC_VEDU_VLC_REORDERSTRM0_UNION;
+#endif
+#define SOC_VENC_VEDU_VLC_REORDERSTRM0_vlc_reorderstrm0_START (0)
+#define SOC_VENC_VEDU_VLC_REORDERSTRM0_vlc_reorderstrm0_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vlc_reorderstrm1 : 32;
+    } reg;
+} SOC_VENC_VEDU_VLC_REORDERSTRM1_UNION;
+#endif
+#define SOC_VENC_VEDU_VLC_REORDERSTRM1_vlc_reorderstrm1_START (0)
+#define SOC_VENC_VEDU_VLC_REORDERSTRM1_vlc_reorderstrm1_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vlc_markingstrm0 : 32;
+    } reg;
+} SOC_VENC_VEDU_VLC_MARKINGSTRM0_UNION;
+#endif
+#define SOC_VENC_VEDU_VLC_MARKINGSTRM0_vlc_markingstrm0_START (0)
+#define SOC_VENC_VEDU_VLC_MARKINGSTRM0_vlc_markingstrm0_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vlc_markingstrm1 : 32;
+    } reg;
+} SOC_VENC_VEDU_VLC_MARKINGSTRM1_UNION;
+#endif
+#define SOC_VENC_VEDU_VLC_MARKINGSTRM1_vlc_markingstrm1_START (0)
+#define SOC_VENC_VEDU_VLC_MARKINGSTRM1_vlc_markingstrm1_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vlc_markingbit : 6;
+        unsigned int reserved_0 : 2;
+        unsigned int vlc_reorderbit : 6;
+        unsigned int reserved_1 : 2;
+        unsigned int vlc_parabit : 7;
+        unsigned int reserved_2 : 9;
+    } reg;
+} SOC_VENC_VEDU_VLC_SLCHDRPARA_UNION;
+#endif
+#define SOC_VENC_VEDU_VLC_SLCHDRPARA_vlc_markingbit_START (0)
+#define SOC_VENC_VEDU_VLC_SLCHDRPARA_vlc_markingbit_END (5)
+#define SOC_VENC_VEDU_VLC_SLCHDRPARA_vlc_reorderbit_START (8)
+#define SOC_VENC_VEDU_VLC_SLCHDRPARA_vlc_reorderbit_END (13)
+#define SOC_VENC_VEDU_VLC_SLCHDRPARA_vlc_parabit_START (16)
+#define SOC_VENC_VEDU_VLC_SLCHDRPARA_vlc_parabit_END (22)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vlc_svc_en : 1;
+        unsigned int vlc_svc_strm : 24;
+        unsigned int reserved : 7;
+    } reg;
+} SOC_VENC_VEDU_VLC_SVC_UNION;
+#endif
+#define SOC_VENC_VEDU_VLC_SVC_vlc_svc_en_START (0)
+#define SOC_VENC_VEDU_VLC_SVC_vlc_svc_en_END (0)
+#define SOC_VENC_VEDU_VLC_SVC_vlc_svc_strm_START (1)
+#define SOC_VENC_VEDU_VLC_SVC_vlc_svc_strm_END (24)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vlc_slchdrstrm0_i : 32;
+    } reg;
+} SOC_VENC_VEDU_VLC_SLCHDRSTRM0_I_UNION;
+#endif
+#define SOC_VENC_VEDU_VLC_SLCHDRSTRM0_I_vlc_slchdrstrm0_i_START (0)
+#define SOC_VENC_VEDU_VLC_SLCHDRSTRM0_I_vlc_slchdrstrm0_i_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vlc_slchdrstrm1_i : 32;
+    } reg;
+} SOC_VENC_VEDU_VLC_SLCHDRSTRM1_I_UNION;
+#endif
+#define SOC_VENC_VEDU_VLC_SLCHDRSTRM1_I_vlc_slchdrstrm1_i_START (0)
+#define SOC_VENC_VEDU_VLC_SLCHDRSTRM1_I_vlc_slchdrstrm1_i_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vlc_slchdrstrm2_i : 32;
+    } reg;
+} SOC_VENC_VEDU_VLC_SLCHDRSTRM2_I_UNION;
+#endif
+#define SOC_VENC_VEDU_VLC_SLCHDRSTRM2_I_vlc_slchdrstrm2_i_START (0)
+#define SOC_VENC_VEDU_VLC_SLCHDRSTRM2_I_vlc_slchdrstrm2_i_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vlc_slchdrstrm3_i : 32;
+    } reg;
+} SOC_VENC_VEDU_VLC_SLCHDRSTRM3_I_UNION;
+#endif
+#define SOC_VENC_VEDU_VLC_SLCHDRSTRM3_I_vlc_slchdrstrm3_i_START (0)
+#define SOC_VENC_VEDU_VLC_SLCHDRSTRM3_I_vlc_slchdrstrm3_i_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vlc_reorderstrm0_i : 32;
+    } reg;
+} SOC_VENC_VEDU_VLC_REORDERSTRM0_I_UNION;
+#endif
+#define SOC_VENC_VEDU_VLC_REORDERSTRM0_I_vlc_reorderstrm0_i_START (0)
+#define SOC_VENC_VEDU_VLC_REORDERSTRM0_I_vlc_reorderstrm0_i_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vlc_reorderstrm1_i : 32;
+    } reg;
+} SOC_VENC_VEDU_VLC_REORDERSTRM1_I_UNION;
+#endif
+#define SOC_VENC_VEDU_VLC_REORDERSTRM1_I_vlc_reorderstrm1_i_START (0)
+#define SOC_VENC_VEDU_VLC_REORDERSTRM1_I_vlc_reorderstrm1_i_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vlc_markingstrm0_i : 32;
+    } reg;
+} SOC_VENC_VEDU_VLC_MARKINGSTRM0_I_UNION;
+#endif
+#define SOC_VENC_VEDU_VLC_MARKINGSTRM0_I_vlc_markingstrm0_i_START (0)
+#define SOC_VENC_VEDU_VLC_MARKINGSTRM0_I_vlc_markingstrm0_i_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vlc_markingstrm1_i : 32;
+    } reg;
+} SOC_VENC_VEDU_VLC_MARKINGSTRM1_I_UNION;
+#endif
+#define SOC_VENC_VEDU_VLC_MARKINGSTRM1_I_vlc_markingstrm1_i_START (0)
+#define SOC_VENC_VEDU_VLC_MARKINGSTRM1_I_vlc_markingstrm1_i_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vlc_markingbit_i : 6;
+        unsigned int reserved_0 : 2;
+        unsigned int vlc_reorderbit_i : 6;
+        unsigned int reserved_1 : 2;
+        unsigned int vlc_parabit_i : 7;
+        unsigned int reserved_2 : 9;
+    } reg;
+} SOC_VENC_VEDU_VLC_SLCHDRPARA_I_UNION;
+#endif
+#define SOC_VENC_VEDU_VLC_SLCHDRPARA_I_vlc_markingbit_i_START (0)
+#define SOC_VENC_VEDU_VLC_SLCHDRPARA_I_vlc_markingbit_i_END (5)
+#define SOC_VENC_VEDU_VLC_SLCHDRPARA_I_vlc_reorderbit_i_START (8)
+#define SOC_VENC_VEDU_VLC_SLCHDRPARA_I_vlc_reorderbit_i_END (13)
+#define SOC_VENC_VEDU_VLC_SLCHDRPARA_I_vlc_parabit_i_START (16)
+#define SOC_VENC_VEDU_VLC_SLCHDRPARA_I_vlc_parabit_i_END (22)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vlcst_strmbuflen : 32;
+    } reg;
+} SOC_VENC_VEDU_VLCST_STRMBUFLEN_UNION;
+#endif
+#define SOC_VENC_VEDU_VLCST_STRMBUFLEN_vlcst_strmbuflen_START (0)
+#define SOC_VENC_VEDU_VLCST_STRMBUFLEN_vlcst_strmbuflen_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vlcst_slc_cfg0 : 32;
+    } reg;
+} SOC_VENC_VEDU_VLCST_SLC_CFG0_UNION;
+#endif
+#define SOC_VENC_VEDU_VLCST_SLC_CFG0_vlcst_slc_cfg0_START (0)
+#define SOC_VENC_VEDU_VLCST_SLC_CFG0_vlcst_slc_cfg0_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vlcst_slc_cfg1 : 32;
+    } reg;
+} SOC_VENC_VEDU_VLCST_SLC_CFG1_UNION;
+#endif
+#define SOC_VENC_VEDU_VLCST_SLC_CFG1_vlcst_slc_cfg1_START (0)
+#define SOC_VENC_VEDU_VLCST_SLC_CFG1_vlcst_slc_cfg1_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vlcst_slc_cfg2 : 32;
+    } reg;
+} SOC_VENC_VEDU_VLCST_SLC_CFG2_UNION;
+#endif
+#define SOC_VENC_VEDU_VLCST_SLC_CFG2_vlcst_slc_cfg2_START (0)
+#define SOC_VENC_VEDU_VLCST_SLC_CFG2_vlcst_slc_cfg2_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vlcst_slc_cfg3 : 32;
+    } reg;
+} SOC_VENC_VEDU_VLCST_SLC_CFG3_UNION;
+#endif
+#define SOC_VENC_VEDU_VLCST_SLC_CFG3_vlcst_slc_cfg3_START (0)
+#define SOC_VENC_VEDU_VLCST_SLC_CFG3_vlcst_slc_cfg3_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_ICE_V2R1_SEG_256X1_DCMP_CTRL_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcfg_hfbc_clkgate_en : 1;
+        unsigned int reserved : 1;
+        unsigned int rfs_emaw : 2;
+        unsigned int rfs_ema : 3;
+        unsigned int rft_colldisn : 1;
+        unsigned int rft_emaa : 3;
+        unsigned int rft_emab : 3;
+        unsigned int rft_emasa : 1;
+        unsigned int rfsuhd_wtsel : 2;
+        unsigned int rfsuhd_rtsel : 2;
+        unsigned int rfs_wtsel : 2;
+        unsigned int rfs_rtsel : 2;
+        unsigned int rfts_wct : 2;
+        unsigned int rfts_rct : 2;
+        unsigned int rfts_kp : 3;
+        unsigned int rftf_wct : 2;
+    } reg;
+} SOC_VENC_VEDU_ICE_CMC_MODE_CFG0_UNION;
+#endif
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG0_vcfg_hfbc_clkgate_en_START (0)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG0_vcfg_hfbc_clkgate_en_END (0)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG0_rfs_emaw_START (2)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG0_rfs_emaw_END (3)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG0_rfs_ema_START (4)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG0_rfs_ema_END (6)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG0_rft_colldisn_START (7)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG0_rft_colldisn_END (7)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG0_rft_emaa_START (8)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG0_rft_emaa_END (10)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG0_rft_emab_START (11)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG0_rft_emab_END (13)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG0_rft_emasa_START (14)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG0_rft_emasa_END (14)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG0_rfsuhd_wtsel_START (15)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG0_rfsuhd_wtsel_END (16)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG0_rfsuhd_rtsel_START (17)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG0_rfsuhd_rtsel_END (18)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG0_rfs_wtsel_START (19)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG0_rfs_wtsel_END (20)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG0_rfs_rtsel_START (21)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG0_rfs_rtsel_END (22)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG0_rfts_wct_START (23)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG0_rfts_wct_END (24)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG0_rfts_rct_START (25)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG0_rfts_rct_END (26)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG0_rfts_kp_START (27)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG0_rfts_kp_END (29)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG0_rftf_wct_START (30)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG0_rftf_wct_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int rftf_rct : 2;
+        unsigned int rftf_kp : 3;
+        unsigned int rfthd_wtsel : 2;
+        unsigned int rfthd_mtsel : 2;
+        unsigned int rfthd_rtsel : 2;
+        unsigned int rasshds_wtsel : 2;
+        unsigned int rasshds_rtsel : 2;
+        unsigned int rasshdm_wtsel : 2;
+        unsigned int rasshdm_rtsel : 2;
+        unsigned int rashds_wtsel : 2;
+        unsigned int rashds_rtsel : 2;
+        unsigned int rashdm_wtsel : 2;
+        unsigned int rashdm_rtsel : 2;
+        unsigned int ras_wtsel : 2;
+        unsigned int ras_rtsel : 2;
+        unsigned int reserved : 1;
+    } reg;
+} SOC_VENC_VEDU_ICE_CMC_MODE_CFG1_UNION;
+#endif
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG1_rftf_rct_START (0)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG1_rftf_rct_END (1)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG1_rftf_kp_START (2)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG1_rftf_kp_END (4)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG1_rfthd_wtsel_START (5)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG1_rfthd_wtsel_END (6)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG1_rfthd_mtsel_START (7)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG1_rfthd_mtsel_END (8)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG1_rfthd_rtsel_START (9)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG1_rfthd_rtsel_END (10)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG1_rasshds_wtsel_START (11)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG1_rasshds_wtsel_END (12)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG1_rasshds_rtsel_START (13)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG1_rasshds_rtsel_END (14)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG1_rasshdm_wtsel_START (15)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG1_rasshdm_wtsel_END (16)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG1_rasshdm_rtsel_START (17)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG1_rasshdm_rtsel_END (18)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG1_rashds_wtsel_START (19)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG1_rashds_wtsel_END (20)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG1_rashds_rtsel_START (21)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG1_rashds_rtsel_END (22)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG1_rashdm_wtsel_START (23)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG1_rashdm_wtsel_END (24)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG1_rashdm_rtsel_START (25)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG1_rashdm_rtsel_END (26)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG1_ras_wtsel_START (27)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG1_ras_wtsel_END (28)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG1_ras_rtsel_START (29)
+#define SOC_VENC_VEDU_ICE_CMC_MODE_CFG1_ras_rtsel_END (30)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_RESERVED_10_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lowluma_min_qp : 6;
+        unsigned int reserved_0 : 2;
+        unsigned int qpg_lowluma_max_qp : 6;
+        unsigned int reserved_1 : 2;
+        unsigned int qpg_lowluma_qp_delta : 4;
+        unsigned int reserved_2 : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_LOWLUMA_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_LOWLUMA_qpg_lowluma_min_qp_START (0)
+#define SOC_VENC_VEDU_QPG_LOWLUMA_qpg_lowluma_min_qp_END (5)
+#define SOC_VENC_VEDU_QPG_LOWLUMA_qpg_lowluma_max_qp_START (8)
+#define SOC_VENC_VEDU_QPG_LOWLUMA_qpg_lowluma_max_qp_END (13)
+#define SOC_VENC_VEDU_QPG_LOWLUMA_qpg_lowluma_qp_delta_START (16)
+#define SOC_VENC_VEDU_QPG_LOWLUMA_qpg_lowluma_qp_delta_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_hedge_mim_qp : 6;
+        unsigned int reserved_0 : 2;
+        unsigned int qpg_hedge_max_qp : 6;
+        unsigned int reserved_1 : 2;
+        unsigned int qpg_hedge_qp_delta : 4;
+        unsigned int reserved_2 : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_HEDGE_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_HEDGE_qpg_hedge_mim_qp_START (0)
+#define SOC_VENC_VEDU_QPG_HEDGE_qpg_hedge_mim_qp_END (5)
+#define SOC_VENC_VEDU_QPG_HEDGE_qpg_hedge_max_qp_START (8)
+#define SOC_VENC_VEDU_QPG_HEDGE_qpg_hedge_max_qp_END (13)
+#define SOC_VENC_VEDU_QPG_HEDGE_qpg_hedge_qp_delta_START (16)
+#define SOC_VENC_VEDU_QPG_HEDGE_qpg_hedge_qp_delta_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_hedge_move_min_qp : 6;
+        unsigned int reserved_0 : 2;
+        unsigned int qpg_hedge_move_max_qp : 6;
+        unsigned int reserved_1 : 2;
+        unsigned int qpg_hedge_move_qp_delta : 4;
+        unsigned int reserved_2 : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_HEDGE_MOVE_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_HEDGE_MOVE_qpg_hedge_move_min_qp_START (0)
+#define SOC_VENC_VEDU_QPG_HEDGE_MOVE_qpg_hedge_move_min_qp_END (5)
+#define SOC_VENC_VEDU_QPG_HEDGE_MOVE_qpg_hedge_move_max_qp_START (8)
+#define SOC_VENC_VEDU_QPG_HEDGE_MOVE_qpg_hedge_move_max_qp_END (13)
+#define SOC_VENC_VEDU_QPG_HEDGE_MOVE_qpg_hedge_move_qp_delta_START (16)
+#define SOC_VENC_VEDU_QPG_HEDGE_MOVE_qpg_hedge_move_qp_delta_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_skin_min_qp : 6;
+        unsigned int reserved_0 : 2;
+        unsigned int qpg_skin_max_qp : 6;
+        unsigned int reserved_1 : 2;
+        unsigned int qpg_skin_qp_delta : 4;
+        unsigned int reserved_2 : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_SKIN_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_SKIN_qpg_skin_min_qp_START (0)
+#define SOC_VENC_VEDU_QPG_SKIN_qpg_skin_min_qp_END (5)
+#define SOC_VENC_VEDU_QPG_SKIN_qpg_skin_max_qp_START (8)
+#define SOC_VENC_VEDU_QPG_SKIN_qpg_skin_max_qp_END (13)
+#define SOC_VENC_VEDU_QPG_SKIN_qpg_skin_qp_delta_START (16)
+#define SOC_VENC_VEDU_QPG_SKIN_qpg_skin_qp_delta_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_intra_det_min_qp : 6;
+        unsigned int reserved_0 : 2;
+        unsigned int qpg_intra_det_max_qp : 6;
+        unsigned int reserved_1 : 2;
+        unsigned int qpg_intra_det_qp_delta : 4;
+        unsigned int reserved_2 : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_INTRA_DET_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_INTRA_DET_qpg_intra_det_min_qp_START (0)
+#define SOC_VENC_VEDU_QPG_INTRA_DET_qpg_intra_det_min_qp_END (5)
+#define SOC_VENC_VEDU_QPG_INTRA_DET_qpg_intra_det_max_qp_START (8)
+#define SOC_VENC_VEDU_QPG_INTRA_DET_qpg_intra_det_max_qp_END (13)
+#define SOC_VENC_VEDU_QPG_INTRA_DET_qpg_intra_det_qp_delta_START (16)
+#define SOC_VENC_VEDU_QPG_INTRA_DET_qpg_intra_det_qp_delta_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_QPG_H264_SMOOTH_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_cu32_delta_low : 4;
+        unsigned int qpg_cu32_delta_high : 4;
+        unsigned int reserved : 24;
+    } reg;
+} SOC_VENC_VEDU_QPG_CU32_DELTA_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_CU32_DELTA_qpg_cu32_delta_low_START (0)
+#define SOC_VENC_VEDU_QPG_CU32_DELTA_qpg_cu32_delta_low_END (3)
+#define SOC_VENC_VEDU_QPG_CU32_DELTA_qpg_cu32_delta_high_START (4)
+#define SOC_VENC_VEDU_QPG_CU32_DELTA_qpg_cu32_delta_high_END (7)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda_qp_offset : 5;
+        unsigned int reserved_0 : 3;
+        unsigned int qpg_rdo_lambda_choose_mode : 2;
+        unsigned int reserved_1 : 2;
+        unsigned int qpg_lambda_inter_stredge_en : 1;
+        unsigned int reserved_2 : 19;
+    } reg;
+} SOC_VENC_VEDU_QPG_LAMBDA_MODE_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_LAMBDA_MODE_qpg_lambda_qp_offset_START (0)
+#define SOC_VENC_VEDU_QPG_LAMBDA_MODE_qpg_lambda_qp_offset_END (4)
+#define SOC_VENC_VEDU_QPG_LAMBDA_MODE_qpg_rdo_lambda_choose_mode_START (8)
+#define SOC_VENC_VEDU_QPG_LAMBDA_MODE_qpg_rdo_lambda_choose_mode_END (9)
+#define SOC_VENC_VEDU_QPG_LAMBDA_MODE_qpg_lambda_inter_stredge_en_START (12)
+#define SOC_VENC_VEDU_QPG_LAMBDA_MODE_qpg_lambda_inter_stredge_en_END (12)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_qp_restrain_madi_thr : 6;
+        unsigned int reserved_0 : 2;
+        unsigned int qpg_qp_restrain_en : 1;
+        unsigned int qpg_qp_restrain_mode : 2;
+        unsigned int reserved_1 : 1;
+        unsigned int qpg_qp_restrain_delta_blk16 : 4;
+        unsigned int qpg_qp_restrain_delta_blk32 : 4;
+        unsigned int reserved_2 : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_RESTRAIN_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_RESTRAIN_qpg_qp_restrain_madi_thr_START (0)
+#define SOC_VENC_VEDU_QPG_QP_RESTRAIN_qpg_qp_restrain_madi_thr_END (5)
+#define SOC_VENC_VEDU_QPG_QP_RESTRAIN_qpg_qp_restrain_en_START (8)
+#define SOC_VENC_VEDU_QPG_QP_RESTRAIN_qpg_qp_restrain_en_END (8)
+#define SOC_VENC_VEDU_QPG_QP_RESTRAIN_qpg_qp_restrain_mode_START (9)
+#define SOC_VENC_VEDU_QPG_QP_RESTRAIN_qpg_qp_restrain_mode_END (10)
+#define SOC_VENC_VEDU_QPG_QP_RESTRAIN_qpg_qp_restrain_delta_blk16_START (12)
+#define SOC_VENC_VEDU_QPG_QP_RESTRAIN_qpg_qp_restrain_delta_blk16_END (15)
+#define SOC_VENC_VEDU_QPG_QP_RESTRAIN_qpg_qp_restrain_delta_blk32_START (16)
+#define SOC_VENC_VEDU_QPG_QP_RESTRAIN_qpg_qp_restrain_delta_blk32_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_min_sad_thresh_low : 32;
+    } reg;
+} SOC_VENC_VEDU_QPG_CU_MIN_SAD_THRESH_0_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_CU_MIN_SAD_THRESH_0_qpg_min_sad_thresh_low_START (0)
+#define SOC_VENC_VEDU_QPG_CU_MIN_SAD_THRESH_0_qpg_min_sad_thresh_low_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_min_sad_level : 8;
+        unsigned int reserved_0 : 8;
+        unsigned int qpg_low_min_sad_mode : 2;
+        unsigned int reserved_1 : 2;
+        unsigned int qpg_min_sad_madi_en : 1;
+        unsigned int qpg_min_sad_qp_restrain_en : 1;
+        unsigned int reserved_2 : 10;
+    } reg;
+} SOC_VENC_VEDU_QPG_CU_MIN_SAD_REG_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_CU_MIN_SAD_REG_qpg_min_sad_level_START (0)
+#define SOC_VENC_VEDU_QPG_CU_MIN_SAD_REG_qpg_min_sad_level_END (7)
+#define SOC_VENC_VEDU_QPG_CU_MIN_SAD_REG_qpg_low_min_sad_mode_START (16)
+#define SOC_VENC_VEDU_QPG_CU_MIN_SAD_REG_qpg_low_min_sad_mode_END (17)
+#define SOC_VENC_VEDU_QPG_CU_MIN_SAD_REG_qpg_min_sad_madi_en_START (20)
+#define SOC_VENC_VEDU_QPG_CU_MIN_SAD_REG_qpg_min_sad_madi_en_END (20)
+#define SOC_VENC_VEDU_QPG_CU_MIN_SAD_REG_qpg_min_sad_qp_restrain_en_START (21)
+#define SOC_VENC_VEDU_QPG_CU_MIN_SAD_REG_qpg_min_sad_qp_restrain_en_END (21)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_flat_region_qp_delta : 4;
+        unsigned int qpg_flat_region_max_qp : 6;
+        unsigned int reserved_0 : 2;
+        unsigned int qpg_flat_region_min_qp : 6;
+        unsigned int reserved_1 : 6;
+        unsigned int vcpi_cu32_use_cu16_mean_en : 1;
+        unsigned int reserved_2 : 7;
+    } reg;
+} SOC_VENC_VEDU_QPG_FLAT_REGION_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_FLAT_REGION_qpg_flat_region_qp_delta_START (0)
+#define SOC_VENC_VEDU_QPG_FLAT_REGION_qpg_flat_region_qp_delta_END (3)
+#define SOC_VENC_VEDU_QPG_FLAT_REGION_qpg_flat_region_max_qp_START (4)
+#define SOC_VENC_VEDU_QPG_FLAT_REGION_qpg_flat_region_max_qp_END (9)
+#define SOC_VENC_VEDU_QPG_FLAT_REGION_qpg_flat_region_min_qp_START (12)
+#define SOC_VENC_VEDU_QPG_FLAT_REGION_qpg_flat_region_min_qp_END (17)
+#define SOC_VENC_VEDU_QPG_FLAT_REGION_vcpi_cu32_use_cu16_mean_en_START (24)
+#define SOC_VENC_VEDU_QPG_FLAT_REGION_vcpi_cu32_use_cu16_mean_en_END (24)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_res_coef_en : 1;
+        unsigned int reserved_0 : 3;
+        unsigned int vcpi_large_res_coef : 5;
+        unsigned int reserved_1 : 3;
+        unsigned int vcpi_small_res_coef : 5;
+        unsigned int reserved_2 : 15;
+    } reg;
+} SOC_VENC_VEDU_QPG_RES_COEF_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_RES_COEF_vcpi_res_coef_en_START (0)
+#define SOC_VENC_VEDU_QPG_RES_COEF_vcpi_res_coef_en_END (0)
+#define SOC_VENC_VEDU_QPG_RES_COEF_vcpi_large_res_coef_START (4)
+#define SOC_VENC_VEDU_QPG_RES_COEF_vcpi_large_res_coef_END (8)
+#define SOC_VENC_VEDU_QPG_RES_COEF_vcpi_small_res_coef_START (12)
+#define SOC_VENC_VEDU_QPG_RES_COEF_vcpi_small_res_coef_END (16)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_tile_level_rc_en : 1;
+        unsigned int reserved_0 : 3;
+        unsigned int vcpi_tile_line_qp_delta : 4;
+        unsigned int vcpi_tile_bound_qp_delta : 4;
+        unsigned int reserved_1 : 20;
+    } reg;
+} SOC_VENC_VEDU_TILE_RC_UNION;
+#endif
+#define SOC_VENC_VEDU_TILE_RC_vcpi_tile_level_rc_en_START (0)
+#define SOC_VENC_VEDU_TILE_RC_vcpi_tile_level_rc_en_END (0)
+#define SOC_VENC_VEDU_TILE_RC_vcpi_tile_line_qp_delta_START (4)
+#define SOC_VENC_VEDU_TILE_RC_vcpi_tile_line_qp_delta_END (7)
+#define SOC_VENC_VEDU_TILE_RC_vcpi_tile_bound_qp_delta_START (8)
+#define SOC_VENC_VEDU_TILE_RC_vcpi_tile_bound_qp_delta_END (11)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_chroma_prot_en : 1;
+        unsigned int reserved_0 : 3;
+        unsigned int vcpi_chroma_max_qp : 6;
+        unsigned int reserved_1 : 2;
+        unsigned int vcpi_chroma_in_qp : 6;
+        unsigned int reserved_2 : 2;
+        unsigned int vcpi_chroma_qp_delta : 4;
+        unsigned int reserved_3 : 8;
+    } reg;
+} SOC_VENC_VEDU_CHROMA_PROTECT_UNION;
+#endif
+#define SOC_VENC_VEDU_CHROMA_PROTECT_vcpi_chroma_prot_en_START (0)
+#define SOC_VENC_VEDU_CHROMA_PROTECT_vcpi_chroma_prot_en_END (0)
+#define SOC_VENC_VEDU_CHROMA_PROTECT_vcpi_chroma_max_qp_START (4)
+#define SOC_VENC_VEDU_CHROMA_PROTECT_vcpi_chroma_max_qp_END (9)
+#define SOC_VENC_VEDU_CHROMA_PROTECT_vcpi_chroma_in_qp_START (12)
+#define SOC_VENC_VEDU_CHROMA_PROTECT_vcpi_chroma_in_qp_END (17)
+#define SOC_VENC_VEDU_CHROMA_PROTECT_vcpi_chroma_qp_delta_START (20)
+#define SOC_VENC_VEDU_CHROMA_PROTECT_vcpi_chroma_qp_delta_END (23)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved_0 : 16;
+        unsigned int pme_madi_dif_thr : 7;
+        unsigned int pme_cur_madi_dif_thr : 7;
+        unsigned int reserved_1 : 2;
+    } reg;
+} SOC_VENC_VEDU_PME_QPG_RC_THR0_UNION;
+#endif
+#define SOC_VENC_VEDU_PME_QPG_RC_THR0_pme_madi_dif_thr_START (16)
+#define SOC_VENC_VEDU_PME_QPG_RC_THR0_pme_madi_dif_thr_END (22)
+#define SOC_VENC_VEDU_PME_QPG_RC_THR0_pme_cur_madi_dif_thr_START (23)
+#define SOC_VENC_VEDU_PME_QPG_RC_THR0_pme_cur_madi_dif_thr_END (29)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pme_min_sad_thr_offset : 8;
+        unsigned int pme_min_sad_thr_gain : 4;
+        unsigned int reserved : 8;
+        unsigned int pme_min_sad_thr_offset_cur : 8;
+        unsigned int pme_min_sad_thr_gain_cur : 4;
+    } reg;
+} SOC_VENC_VEDU_PME_QPG_RC_THR1_UNION;
+#endif
+#define SOC_VENC_VEDU_PME_QPG_RC_THR1_pme_min_sad_thr_offset_START (0)
+#define SOC_VENC_VEDU_PME_QPG_RC_THR1_pme_min_sad_thr_offset_END (7)
+#define SOC_VENC_VEDU_PME_QPG_RC_THR1_pme_min_sad_thr_gain_START (8)
+#define SOC_VENC_VEDU_PME_QPG_RC_THR1_pme_min_sad_thr_gain_END (11)
+#define SOC_VENC_VEDU_PME_QPG_RC_THR1_pme_min_sad_thr_offset_cur_START (20)
+#define SOC_VENC_VEDU_PME_QPG_RC_THR1_pme_min_sad_thr_offset_cur_END (27)
+#define SOC_VENC_VEDU_PME_QPG_RC_THR1_pme_min_sad_thr_gain_cur_START (28)
+#define SOC_VENC_VEDU_PME_QPG_RC_THR1_pme_min_sad_thr_gain_cur_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pme_low_luma_thr : 8;
+        unsigned int pme_low_luma_madi_thr : 8;
+        unsigned int pme_high_luma_thr : 8;
+        unsigned int reserved : 8;
+    } reg;
+} SOC_VENC_VEDU_PME_LOW_LUMA_THR_UNION;
+#endif
+#define SOC_VENC_VEDU_PME_LOW_LUMA_THR_pme_low_luma_thr_START (0)
+#define SOC_VENC_VEDU_PME_LOW_LUMA_THR_pme_low_luma_thr_END (7)
+#define SOC_VENC_VEDU_PME_LOW_LUMA_THR_pme_low_luma_madi_thr_START (8)
+#define SOC_VENC_VEDU_PME_LOW_LUMA_THR_pme_low_luma_madi_thr_END (15)
+#define SOC_VENC_VEDU_PME_LOW_LUMA_THR_pme_high_luma_thr_START (16)
+#define SOC_VENC_VEDU_PME_LOW_LUMA_THR_pme_high_luma_thr_END (23)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pme_flat_v_thr_high : 8;
+        unsigned int pme_flat_v_thr_low : 8;
+        unsigned int pme_flat_u_thr_high : 8;
+        unsigned int pme_flat_u_thr_low : 8;
+    } reg;
+} SOC_VENC_VEDU_PME_CHROMA_FLAT_UNION;
+#endif
+#define SOC_VENC_VEDU_PME_CHROMA_FLAT_pme_flat_v_thr_high_START (0)
+#define SOC_VENC_VEDU_PME_CHROMA_FLAT_pme_flat_v_thr_high_END (7)
+#define SOC_VENC_VEDU_PME_CHROMA_FLAT_pme_flat_v_thr_low_START (8)
+#define SOC_VENC_VEDU_PME_CHROMA_FLAT_pme_flat_v_thr_low_END (15)
+#define SOC_VENC_VEDU_PME_CHROMA_FLAT_pme_flat_u_thr_high_START (16)
+#define SOC_VENC_VEDU_PME_CHROMA_FLAT_pme_flat_u_thr_high_END (23)
+#define SOC_VENC_VEDU_PME_CHROMA_FLAT_pme_flat_u_thr_low_START (24)
+#define SOC_VENC_VEDU_PME_CHROMA_FLAT_pme_flat_u_thr_low_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pme_flat_pmemv_thr : 8;
+        unsigned int pme_flat_luma_madi_thr : 8;
+        unsigned int pme_flat_low_luma_thr : 8;
+        unsigned int pme_flat_high_luma_thr : 8;
+    } reg;
+} SOC_VENC_VEDU_PME_LUMA_FLAT_UNION;
+#endif
+#define SOC_VENC_VEDU_PME_LUMA_FLAT_pme_flat_pmemv_thr_START (0)
+#define SOC_VENC_VEDU_PME_LUMA_FLAT_pme_flat_pmemv_thr_END (7)
+#define SOC_VENC_VEDU_PME_LUMA_FLAT_pme_flat_luma_madi_thr_START (8)
+#define SOC_VENC_VEDU_PME_LUMA_FLAT_pme_flat_luma_madi_thr_END (15)
+#define SOC_VENC_VEDU_PME_LUMA_FLAT_pme_flat_low_luma_thr_START (16)
+#define SOC_VENC_VEDU_PME_LUMA_FLAT_pme_flat_low_luma_thr_END (23)
+#define SOC_VENC_VEDU_PME_LUMA_FLAT_pme_flat_high_luma_thr_START (24)
+#define SOC_VENC_VEDU_PME_LUMA_FLAT_pme_flat_high_luma_thr_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pme_flat_pmesad_thr : 14;
+        unsigned int pme_flat_icount_thr : 9;
+        unsigned int pme_flat_region_cnt : 5;
+        unsigned int pme_flat_madi_times : 4;
+    } reg;
+} SOC_VENC_VEDU_PME_MADI_FLAT_UNION;
+#endif
+#define SOC_VENC_VEDU_PME_MADI_FLAT_pme_flat_pmesad_thr_START (0)
+#define SOC_VENC_VEDU_PME_MADI_FLAT_pme_flat_pmesad_thr_END (13)
+#define SOC_VENC_VEDU_PME_MADI_FLAT_pme_flat_icount_thr_START (14)
+#define SOC_VENC_VEDU_PME_MADI_FLAT_pme_flat_icount_thr_END (22)
+#define SOC_VENC_VEDU_PME_MADI_FLAT_pme_flat_region_cnt_START (23)
+#define SOC_VENC_VEDU_PME_MADI_FLAT_pme_flat_region_cnt_END (27)
+#define SOC_VENC_VEDU_PME_MADI_FLAT_pme_flat_madi_times_START (28)
+#define SOC_VENC_VEDU_PME_MADI_FLAT_pme_flat_madi_times_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vlcst_idrind : 1;
+        unsigned int reserved_0 : 15;
+        unsigned int vlcst_chnid : 8;
+        unsigned int reserved_1 : 8;
+    } reg;
+} SOC_VENC_VEDU_VLCST_DESCRIPTOR_UNION;
+#endif
+#define SOC_VENC_VEDU_VLCST_DESCRIPTOR_vlcst_idrind_START (0)
+#define SOC_VENC_VEDU_VLCST_DESCRIPTOR_vlcst_idrind_END (0)
+#define SOC_VENC_VEDU_VLCST_DESCRIPTOR_vlcst_chnid_START (16)
+#define SOC_VENC_VEDU_VLCST_DESCRIPTOR_vlcst_chnid_END (23)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ppfd_st_len0 : 32;
+    } reg;
+} SOC_VENC_VEDU_PPFD_ST_LEN0_UNION;
+#endif
+#define SOC_VENC_VEDU_PPFD_ST_LEN0_ppfd_st_len0_START (0)
+#define SOC_VENC_VEDU_PPFD_ST_LEN0_ppfd_st_len0_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int curld_clip_luma_min : 10;
+        unsigned int reserved_0 : 6;
+        unsigned int curld_clip_luma_max : 10;
+        unsigned int reserved_1 : 6;
+    } reg;
+} SOC_VENC_VEDU_CURLD_CLIP_LUMA_UNION;
+#endif
+#define SOC_VENC_VEDU_CURLD_CLIP_LUMA_curld_clip_luma_min_START (0)
+#define SOC_VENC_VEDU_CURLD_CLIP_LUMA_curld_clip_luma_min_END (9)
+#define SOC_VENC_VEDU_CURLD_CLIP_LUMA_curld_clip_luma_max_START (16)
+#define SOC_VENC_VEDU_CURLD_CLIP_LUMA_curld_clip_luma_max_END (25)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int curld_clip_chroma_min : 10;
+        unsigned int reserved_0 : 6;
+        unsigned int curld_clip_chroma_max : 10;
+        unsigned int reserved_1 : 6;
+    } reg;
+} SOC_VENC_VEDU_CURLD_CLIP_CHROMA_UNION;
+#endif
+#define SOC_VENC_VEDU_CURLD_CLIP_CHROMA_curld_clip_chroma_min_START (0)
+#define SOC_VENC_VEDU_CURLD_CLIP_CHROMA_curld_clip_chroma_min_END (9)
+#define SOC_VENC_VEDU_CURLD_CLIP_CHROMA_curld_clip_chroma_max_START (16)
+#define SOC_VENC_VEDU_CURLD_CLIP_CHROMA_curld_clip_chroma_max_END (25)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int tqitq_deadzone_intra_slice : 8;
+        unsigned int tqitq_deadzone_inter_slice : 8;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_VEDU_TQITQ_DEADZONE_UNION;
+#endif
+#define SOC_VENC_VEDU_TQITQ_DEADZONE_tqitq_deadzone_intra_slice_START (0)
+#define SOC_VENC_VEDU_TQITQ_DEADZONE_tqitq_deadzone_intra_slice_END (7)
+#define SOC_VENC_VEDU_TQITQ_DEADZONE_tqitq_deadzone_inter_slice_START (8)
+#define SOC_VENC_VEDU_TQITQ_DEADZONE_tqitq_deadzone_inter_slice_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved_0 : 1;
+        unsigned int vcpi_move_sad_en : 1;
+        unsigned int reserved_1 : 14;
+        unsigned int vcpi_pblk_pre_mvx_thr : 8;
+        unsigned int vcpi_pblk_pre_mvy_thr : 8;
+    } reg;
+} SOC_VENC_VEDU_VCPI_PME_PARAM_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_PME_PARAM_vcpi_move_sad_en_START (1)
+#define SOC_VENC_VEDU_VCPI_PME_PARAM_vcpi_move_sad_en_END (1)
+#define SOC_VENC_VEDU_VCPI_PME_PARAM_vcpi_pblk_pre_mvx_thr_START (16)
+#define SOC_VENC_VEDU_VCPI_PME_PARAM_vcpi_pblk_pre_mvx_thr_END (23)
+#define SOC_VENC_VEDU_VCPI_PME_PARAM_vcpi_pblk_pre_mvy_thr_START (24)
+#define SOC_VENC_VEDU_VCPI_PME_PARAM_vcpi_pblk_pre_mvy_thr_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_skin_en : 1;
+        unsigned int vcpi_strong_edge_en : 1;
+        unsigned int vcpi_still_en : 1;
+        unsigned int vcpi_skin_close_angle : 1;
+        unsigned int vcpi_rounding_sobel_en : 1;
+        unsigned int reserved : 27;
+    } reg;
+} SOC_VENC_VEDU_VCPI_PIC_STRONG_EN_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_PIC_STRONG_EN_vcpi_skin_en_START (0)
+#define SOC_VENC_VEDU_VCPI_PIC_STRONG_EN_vcpi_skin_en_END (0)
+#define SOC_VENC_VEDU_VCPI_PIC_STRONG_EN_vcpi_strong_edge_en_START (1)
+#define SOC_VENC_VEDU_VCPI_PIC_STRONG_EN_vcpi_strong_edge_en_END (1)
+#define SOC_VENC_VEDU_VCPI_PIC_STRONG_EN_vcpi_still_en_START (2)
+#define SOC_VENC_VEDU_VCPI_PIC_STRONG_EN_vcpi_still_en_END (2)
+#define SOC_VENC_VEDU_VCPI_PIC_STRONG_EN_vcpi_skin_close_angle_START (3)
+#define SOC_VENC_VEDU_VCPI_PIC_STRONG_EN_vcpi_skin_close_angle_END (3)
+#define SOC_VENC_VEDU_VCPI_PIC_STRONG_EN_vcpi_rounding_sobel_en_START (4)
+#define SOC_VENC_VEDU_VCPI_PIC_STRONG_EN_vcpi_rounding_sobel_en_END (4)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_pintra_pu16_amp_th : 8;
+        unsigned int vcpi_pintra_pu32_amp_th : 8;
+        unsigned int vcpi_pintra_pu64_amp_th : 8;
+        unsigned int reserved : 8;
+    } reg;
+} SOC_VENC_VEDU_VCPI_PINTRA_THRESH0_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_PINTRA_THRESH0_vcpi_pintra_pu16_amp_th_START (0)
+#define SOC_VENC_VEDU_VCPI_PINTRA_THRESH0_vcpi_pintra_pu16_amp_th_END (7)
+#define SOC_VENC_VEDU_VCPI_PINTRA_THRESH0_vcpi_pintra_pu32_amp_th_START (8)
+#define SOC_VENC_VEDU_VCPI_PINTRA_THRESH0_vcpi_pintra_pu32_amp_th_END (15)
+#define SOC_VENC_VEDU_VCPI_PINTRA_THRESH0_vcpi_pintra_pu64_amp_th_START (16)
+#define SOC_VENC_VEDU_VCPI_PINTRA_THRESH0_vcpi_pintra_pu64_amp_th_END (23)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_pintra_pu16_std_th : 8;
+        unsigned int vcpi_pintra_pu32_std_th : 8;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_VEDU_VCPI_PINTRA_THRESH1_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_PINTRA_THRESH1_vcpi_pintra_pu16_std_th_START (0)
+#define SOC_VENC_VEDU_VCPI_PINTRA_THRESH1_vcpi_pintra_pu16_std_th_END (7)
+#define SOC_VENC_VEDU_VCPI_PINTRA_THRESH1_vcpi_pintra_pu32_std_th_START (8)
+#define SOC_VENC_VEDU_VCPI_PINTRA_THRESH1_vcpi_pintra_pu32_std_th_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_pintra_pu16_angel_cost_th : 10;
+        unsigned int vcpi_pintra_pu32_angel_cost_th : 10;
+        unsigned int reserved_0 : 4;
+        unsigned int vcpi_rpintra_pu4_strong_edge_th : 3;
+        unsigned int reserved_1 : 1;
+        unsigned int vcpi_rpintra_pu4_mode_distance_th : 2;
+        unsigned int vcpi_rpintra_bypass : 1;
+        unsigned int reserved_2 : 1;
+    } reg;
+} SOC_VENC_VEDU_VCPI_PINTRA_THRESH2_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_PINTRA_THRESH2_vcpi_pintra_pu16_angel_cost_th_START (0)
+#define SOC_VENC_VEDU_VCPI_PINTRA_THRESH2_vcpi_pintra_pu16_angel_cost_th_END (9)
+#define SOC_VENC_VEDU_VCPI_PINTRA_THRESH2_vcpi_pintra_pu32_angel_cost_th_START (10)
+#define SOC_VENC_VEDU_VCPI_PINTRA_THRESH2_vcpi_pintra_pu32_angel_cost_th_END (19)
+#define SOC_VENC_VEDU_VCPI_PINTRA_THRESH2_vcpi_rpintra_pu4_strong_edge_th_START (24)
+#define SOC_VENC_VEDU_VCPI_PINTRA_THRESH2_vcpi_rpintra_pu4_strong_edge_th_END (26)
+#define SOC_VENC_VEDU_VCPI_PINTRA_THRESH2_vcpi_rpintra_pu4_mode_distance_th_START (28)
+#define SOC_VENC_VEDU_VCPI_PINTRA_THRESH2_vcpi_rpintra_pu4_mode_distance_th_END (29)
+#define SOC_VENC_VEDU_VCPI_PINTRA_THRESH2_vcpi_rpintra_bypass_START (30)
+#define SOC_VENC_VEDU_VCPI_PINTRA_THRESH2_vcpi_rpintra_bypass_END (30)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_intra32_low_power_thr : 16;
+        unsigned int vcpi_intra32_low_power_en : 1;
+        unsigned int reserved : 3;
+        unsigned int vcpi_intra32_low_power_gain : 6;
+        unsigned int vcpi_intra32_low_power_offset : 6;
+    } reg;
+} SOC_VENC_VEDU_VCPI_INTRA32_LOW_POWER_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_INTRA32_LOW_POWER_vcpi_intra32_low_power_thr_START (0)
+#define SOC_VENC_VEDU_VCPI_INTRA32_LOW_POWER_vcpi_intra32_low_power_thr_END (15)
+#define SOC_VENC_VEDU_VCPI_INTRA32_LOW_POWER_vcpi_intra32_low_power_en_START (16)
+#define SOC_VENC_VEDU_VCPI_INTRA32_LOW_POWER_vcpi_intra32_low_power_en_END (16)
+#define SOC_VENC_VEDU_VCPI_INTRA32_LOW_POWER_vcpi_intra32_low_power_gain_START (20)
+#define SOC_VENC_VEDU_VCPI_INTRA32_LOW_POWER_vcpi_intra32_low_power_gain_END (25)
+#define SOC_VENC_VEDU_VCPI_INTRA32_LOW_POWER_vcpi_intra32_low_power_offset_START (26)
+#define SOC_VENC_VEDU_VCPI_INTRA32_LOW_POWER_vcpi_intra32_low_power_offset_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_intra16_low_power_thr : 16;
+        unsigned int vcpi_intra16_low_power_en : 1;
+        unsigned int reserved : 3;
+        unsigned int vcpi_intra16_low_power_gain : 6;
+        unsigned int vcpi_intra16_low_power_offset : 6;
+    } reg;
+} SOC_VENC_VEDU_VCPI_INTRA16_LOW_POWER_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_INTRA16_LOW_POWER_vcpi_intra16_low_power_thr_START (0)
+#define SOC_VENC_VEDU_VCPI_INTRA16_LOW_POWER_vcpi_intra16_low_power_thr_END (15)
+#define SOC_VENC_VEDU_VCPI_INTRA16_LOW_POWER_vcpi_intra16_low_power_en_START (16)
+#define SOC_VENC_VEDU_VCPI_INTRA16_LOW_POWER_vcpi_intra16_low_power_en_END (16)
+#define SOC_VENC_VEDU_VCPI_INTRA16_LOW_POWER_vcpi_intra16_low_power_gain_START (20)
+#define SOC_VENC_VEDU_VCPI_INTRA16_LOW_POWER_vcpi_intra16_low_power_gain_END (25)
+#define SOC_VENC_VEDU_VCPI_INTRA16_LOW_POWER_vcpi_intra16_low_power_offset_START (26)
+#define SOC_VENC_VEDU_VCPI_INTRA16_LOW_POWER_vcpi_intra16_low_power_offset_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_intra_reduce_rdo_num_thr : 12;
+        unsigned int reserved_0 : 4;
+        unsigned int vcpi_intra_reduce_rdo_num_en : 1;
+        unsigned int reserved_1 : 15;
+    } reg;
+} SOC_VENC_VEDU_VCPI_INTRA_REDUCE_RDO_NUM_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_INTRA_REDUCE_RDO_NUM_vcpi_intra_reduce_rdo_num_thr_START (0)
+#define SOC_VENC_VEDU_VCPI_INTRA_REDUCE_RDO_NUM_vcpi_intra_reduce_rdo_num_thr_END (11)
+#define SOC_VENC_VEDU_VCPI_INTRA_REDUCE_RDO_NUM_vcpi_intra_reduce_rdo_num_en_START (16)
+#define SOC_VENC_VEDU_VCPI_INTRA_REDUCE_RDO_NUM_vcpi_intra_reduce_rdo_num_en_END (16)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_bislayer0flag : 1;
+        unsigned int vcpi_bnoforcezero_flag : 1;
+        unsigned int vcpi_bnoforcezero_posx : 4;
+        unsigned int vcpi_bnoforcezero_posy : 4;
+        unsigned int reserved : 22;
+    } reg;
+} SOC_VENC_VEDU_VCPI_NOFORCEZERO_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_NOFORCEZERO_vcpi_bislayer0flag_START (0)
+#define SOC_VENC_VEDU_VCPI_NOFORCEZERO_vcpi_bislayer0flag_END (0)
+#define SOC_VENC_VEDU_VCPI_NOFORCEZERO_vcpi_bnoforcezero_flag_START (1)
+#define SOC_VENC_VEDU_VCPI_NOFORCEZERO_vcpi_bnoforcezero_flag_END (1)
+#define SOC_VENC_VEDU_VCPI_NOFORCEZERO_vcpi_bnoforcezero_posx_START (2)
+#define SOC_VENC_VEDU_VCPI_NOFORCEZERO_vcpi_bnoforcezero_posx_END (5)
+#define SOC_VENC_VEDU_VCPI_NOFORCEZERO_vcpi_bnoforcezero_posy_START (6)
+#define SOC_VENC_VEDU_VCPI_NOFORCEZERO_vcpi_bnoforcezero_posy_END (9)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pme_skip_sad_thr_offset : 8;
+        unsigned int pme_skip_sad_thr_gain : 4;
+        unsigned int pme_skip_large_res_det : 1;
+        unsigned int reserved : 19;
+    } reg;
+} SOC_VENC_VEDU_PME_SKIP_LARGE_RES_UNION;
+#endif
+#define SOC_VENC_VEDU_PME_SKIP_LARGE_RES_pme_skip_sad_thr_offset_START (0)
+#define SOC_VENC_VEDU_PME_SKIP_LARGE_RES_pme_skip_sad_thr_offset_END (7)
+#define SOC_VENC_VEDU_PME_SKIP_LARGE_RES_pme_skip_sad_thr_gain_START (8)
+#define SOC_VENC_VEDU_PME_SKIP_LARGE_RES_pme_skip_sad_thr_gain_END (11)
+#define SOC_VENC_VEDU_PME_SKIP_LARGE_RES_pme_skip_large_res_det_START (12)
+#define SOC_VENC_VEDU_PME_SKIP_LARGE_RES_pme_skip_large_res_det_END (12)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_skin_sad_thr_offset : 8;
+        unsigned int reserved_0 : 4;
+        unsigned int vcpi_skin_sad_thr_gain : 4;
+        unsigned int reserved_1 : 16;
+    } reg;
+} SOC_VENC_VEDU_PME_SKIN_SAD_THR_UNION;
+#endif
+#define SOC_VENC_VEDU_PME_SKIN_SAD_THR_vcpi_skin_sad_thr_offset_START (0)
+#define SOC_VENC_VEDU_PME_SKIN_SAD_THR_vcpi_skin_sad_thr_offset_END (7)
+#define SOC_VENC_VEDU_PME_SKIN_SAD_THR_vcpi_skin_sad_thr_gain_START (12)
+#define SOC_VENC_VEDU_PME_SKIN_SAD_THR_vcpi_skin_sad_thr_gain_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_ChosOthBlkSpecOffset : 4;
+        unsigned int vctrl_ChosOthBlkOffset16 : 4;
+        unsigned int vctrl_IChosCurBlkOffset16 : 4;
+        unsigned int vctrl_LowFreqACBlk16 : 4;
+        unsigned int vctrl_ChosOthBlkOffset32 : 4;
+        unsigned int vctrl_IChosCurBlkOffset32 : 4;
+        unsigned int vctrl_LowFreqACBlk32 : 4;
+        unsigned int reserved : 4;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_NM_ACOFFSET_DENOISE_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_NM_ACOFFSET_DENOISE_vctrl_ChosOthBlkSpecOffset_START (0)
+#define SOC_VENC_VEDU_VCTRL_NM_ACOFFSET_DENOISE_vctrl_ChosOthBlkSpecOffset_END (3)
+#define SOC_VENC_VEDU_VCTRL_NM_ACOFFSET_DENOISE_vctrl_ChosOthBlkOffset16_START (4)
+#define SOC_VENC_VEDU_VCTRL_NM_ACOFFSET_DENOISE_vctrl_ChosOthBlkOffset16_END (7)
+#define SOC_VENC_VEDU_VCTRL_NM_ACOFFSET_DENOISE_vctrl_IChosCurBlkOffset16_START (8)
+#define SOC_VENC_VEDU_VCTRL_NM_ACOFFSET_DENOISE_vctrl_IChosCurBlkOffset16_END (11)
+#define SOC_VENC_VEDU_VCTRL_NM_ACOFFSET_DENOISE_vctrl_LowFreqACBlk16_START (12)
+#define SOC_VENC_VEDU_VCTRL_NM_ACOFFSET_DENOISE_vctrl_LowFreqACBlk16_END (15)
+#define SOC_VENC_VEDU_VCTRL_NM_ACOFFSET_DENOISE_vctrl_ChosOthBlkOffset32_START (16)
+#define SOC_VENC_VEDU_VCTRL_NM_ACOFFSET_DENOISE_vctrl_ChosOthBlkOffset32_END (19)
+#define SOC_VENC_VEDU_VCTRL_NM_ACOFFSET_DENOISE_vctrl_IChosCurBlkOffset32_START (20)
+#define SOC_VENC_VEDU_VCTRL_NM_ACOFFSET_DENOISE_vctrl_IChosCurBlkOffset32_END (23)
+#define SOC_VENC_VEDU_VCTRL_NM_ACOFFSET_DENOISE_vctrl_LowFreqACBlk32_START (24)
+#define SOC_VENC_VEDU_VCTRL_NM_ACOFFSET_DENOISE_vctrl_LowFreqACBlk32_END (27)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_ChosOthBlkSpecThr : 4;
+        unsigned int vctrl_ChosOthBlkEngThr : 4;
+        unsigned int vctrl_ChosOthBlkThr3 : 6;
+        unsigned int vctrl_ChosOthBlkThr2 : 6;
+        unsigned int vctrl_ChosOthBlkThr : 5;
+        unsigned int vctrl_RmAllHighACThr : 4;
+        unsigned int reserved : 3;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_NM_ENGTHR_DENOISE_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_NM_ENGTHR_DENOISE_vctrl_ChosOthBlkSpecThr_START (0)
+#define SOC_VENC_VEDU_VCTRL_NM_ENGTHR_DENOISE_vctrl_ChosOthBlkSpecThr_END (3)
+#define SOC_VENC_VEDU_VCTRL_NM_ENGTHR_DENOISE_vctrl_ChosOthBlkEngThr_START (4)
+#define SOC_VENC_VEDU_VCTRL_NM_ENGTHR_DENOISE_vctrl_ChosOthBlkEngThr_END (7)
+#define SOC_VENC_VEDU_VCTRL_NM_ENGTHR_DENOISE_vctrl_ChosOthBlkThr3_START (8)
+#define SOC_VENC_VEDU_VCTRL_NM_ENGTHR_DENOISE_vctrl_ChosOthBlkThr3_END (13)
+#define SOC_VENC_VEDU_VCTRL_NM_ENGTHR_DENOISE_vctrl_ChosOthBlkThr2_START (14)
+#define SOC_VENC_VEDU_VCTRL_NM_ENGTHR_DENOISE_vctrl_ChosOthBlkThr2_END (19)
+#define SOC_VENC_VEDU_VCTRL_NM_ENGTHR_DENOISE_vctrl_ChosOthBlkThr_START (20)
+#define SOC_VENC_VEDU_VCTRL_NM_ENGTHR_DENOISE_vctrl_ChosOthBlkThr_END (24)
+#define SOC_VENC_VEDU_VCTRL_NM_ENGTHR_DENOISE_vctrl_RmAllHighACThr_START (25)
+#define SOC_VENC_VEDU_VCTRL_NM_ENGTHR_DENOISE_vctrl_RmAllHighACThr_END (28)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_RingEngThr : 4;
+        unsigned int vctrl_RingACThr : 4;
+        unsigned int vctrl_PChosOthBlkOffset : 4;
+        unsigned int vctrl_PChosOthBlkOffset8 : 4;
+        unsigned int vctrl_IChosCurBlkOffset8 : 4;
+        unsigned int vctrl_LowFreqACBlk8 : 3;
+        unsigned int vctrl_Blk8EnableFlag : 1;
+        unsigned int vctrl_ChosOthBlkOffsetSec16 : 4;
+        unsigned int vctrl_ChosOthBlkOffsetSec32 : 4;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_NM_TU8_DENOISE_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_NM_TU8_DENOISE_vctrl_RingEngThr_START (0)
+#define SOC_VENC_VEDU_VCTRL_NM_TU8_DENOISE_vctrl_RingEngThr_END (3)
+#define SOC_VENC_VEDU_VCTRL_NM_TU8_DENOISE_vctrl_RingACThr_START (4)
+#define SOC_VENC_VEDU_VCTRL_NM_TU8_DENOISE_vctrl_RingACThr_END (7)
+#define SOC_VENC_VEDU_VCTRL_NM_TU8_DENOISE_vctrl_PChosOthBlkOffset_START (8)
+#define SOC_VENC_VEDU_VCTRL_NM_TU8_DENOISE_vctrl_PChosOthBlkOffset_END (11)
+#define SOC_VENC_VEDU_VCTRL_NM_TU8_DENOISE_vctrl_PChosOthBlkOffset8_START (12)
+#define SOC_VENC_VEDU_VCTRL_NM_TU8_DENOISE_vctrl_PChosOthBlkOffset8_END (15)
+#define SOC_VENC_VEDU_VCTRL_NM_TU8_DENOISE_vctrl_IChosCurBlkOffset8_START (16)
+#define SOC_VENC_VEDU_VCTRL_NM_TU8_DENOISE_vctrl_IChosCurBlkOffset8_END (19)
+#define SOC_VENC_VEDU_VCTRL_NM_TU8_DENOISE_vctrl_LowFreqACBlk8_START (20)
+#define SOC_VENC_VEDU_VCTRL_NM_TU8_DENOISE_vctrl_LowFreqACBlk8_END (22)
+#define SOC_VENC_VEDU_VCTRL_NM_TU8_DENOISE_vctrl_Blk8EnableFlag_START (23)
+#define SOC_VENC_VEDU_VCTRL_NM_TU8_DENOISE_vctrl_Blk8EnableFlag_END (23)
+#define SOC_VENC_VEDU_VCTRL_NM_TU8_DENOISE_vctrl_ChosOthBlkOffsetSec16_START (24)
+#define SOC_VENC_VEDU_VCTRL_NM_TU8_DENOISE_vctrl_ChosOthBlkOffsetSec16_END (27)
+#define SOC_VENC_VEDU_VCTRL_NM_TU8_DENOISE_vctrl_ChosOthBlkOffsetSec32_START (28)
+#define SOC_VENC_VEDU_VCTRL_NM_TU8_DENOISE_vctrl_ChosOthBlkOffsetSec32_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_SkinChosOthBlkSpecOffset : 4;
+        unsigned int vctrl_SkinChosOthBlkOffset16 : 4;
+        unsigned int vctrl_SkinIChosCurBlkOffset16 : 4;
+        unsigned int vctrl_SkinLowFreqACBlk16 : 4;
+        unsigned int vctrl_SkinChosOthBlkOffset32 : 4;
+        unsigned int vctrl_SkinIChosCurBlkOffset32 : 4;
+        unsigned int vctrl_SkinLowFreqACBlk32 : 4;
+        unsigned int reserved : 4;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_SK_ACOFFSET_DENOISE_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_SK_ACOFFSET_DENOISE_vctrl_SkinChosOthBlkSpecOffset_START (0)
+#define SOC_VENC_VEDU_VCTRL_SK_ACOFFSET_DENOISE_vctrl_SkinChosOthBlkSpecOffset_END (3)
+#define SOC_VENC_VEDU_VCTRL_SK_ACOFFSET_DENOISE_vctrl_SkinChosOthBlkOffset16_START (4)
+#define SOC_VENC_VEDU_VCTRL_SK_ACOFFSET_DENOISE_vctrl_SkinChosOthBlkOffset16_END (7)
+#define SOC_VENC_VEDU_VCTRL_SK_ACOFFSET_DENOISE_vctrl_SkinIChosCurBlkOffset16_START (8)
+#define SOC_VENC_VEDU_VCTRL_SK_ACOFFSET_DENOISE_vctrl_SkinIChosCurBlkOffset16_END (11)
+#define SOC_VENC_VEDU_VCTRL_SK_ACOFFSET_DENOISE_vctrl_SkinLowFreqACBlk16_START (12)
+#define SOC_VENC_VEDU_VCTRL_SK_ACOFFSET_DENOISE_vctrl_SkinLowFreqACBlk16_END (15)
+#define SOC_VENC_VEDU_VCTRL_SK_ACOFFSET_DENOISE_vctrl_SkinChosOthBlkOffset32_START (16)
+#define SOC_VENC_VEDU_VCTRL_SK_ACOFFSET_DENOISE_vctrl_SkinChosOthBlkOffset32_END (19)
+#define SOC_VENC_VEDU_VCTRL_SK_ACOFFSET_DENOISE_vctrl_SkinIChosCurBlkOffset32_START (20)
+#define SOC_VENC_VEDU_VCTRL_SK_ACOFFSET_DENOISE_vctrl_SkinIChosCurBlkOffset32_END (23)
+#define SOC_VENC_VEDU_VCTRL_SK_ACOFFSET_DENOISE_vctrl_SkinLowFreqACBlk32_START (24)
+#define SOC_VENC_VEDU_VCTRL_SK_ACOFFSET_DENOISE_vctrl_SkinLowFreqACBlk32_END (27)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_SkinChosOthBlkSpecThr : 4;
+        unsigned int vctrl_SkinChosOthBlkEngThr : 4;
+        unsigned int vctrl_SkinChosOthBlkThr3 : 6;
+        unsigned int vctrl_SkinChosOthBlkThr2 : 6;
+        unsigned int vctrl_SkinChosOthBlkThr : 5;
+        unsigned int vctrl_SkinRmAllHighACThr : 4;
+        unsigned int reserved : 3;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_SK_ENGTHR_DENOISE_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_SK_ENGTHR_DENOISE_vctrl_SkinChosOthBlkSpecThr_START (0)
+#define SOC_VENC_VEDU_VCTRL_SK_ENGTHR_DENOISE_vctrl_SkinChosOthBlkSpecThr_END (3)
+#define SOC_VENC_VEDU_VCTRL_SK_ENGTHR_DENOISE_vctrl_SkinChosOthBlkEngThr_START (4)
+#define SOC_VENC_VEDU_VCTRL_SK_ENGTHR_DENOISE_vctrl_SkinChosOthBlkEngThr_END (7)
+#define SOC_VENC_VEDU_VCTRL_SK_ENGTHR_DENOISE_vctrl_SkinChosOthBlkThr3_START (8)
+#define SOC_VENC_VEDU_VCTRL_SK_ENGTHR_DENOISE_vctrl_SkinChosOthBlkThr3_END (13)
+#define SOC_VENC_VEDU_VCTRL_SK_ENGTHR_DENOISE_vctrl_SkinChosOthBlkThr2_START (14)
+#define SOC_VENC_VEDU_VCTRL_SK_ENGTHR_DENOISE_vctrl_SkinChosOthBlkThr2_END (19)
+#define SOC_VENC_VEDU_VCTRL_SK_ENGTHR_DENOISE_vctrl_SkinChosOthBlkThr_START (20)
+#define SOC_VENC_VEDU_VCTRL_SK_ENGTHR_DENOISE_vctrl_SkinChosOthBlkThr_END (24)
+#define SOC_VENC_VEDU_VCTRL_SK_ENGTHR_DENOISE_vctrl_SkinRmAllHighACThr_START (25)
+#define SOC_VENC_VEDU_VCTRL_SK_ENGTHR_DENOISE_vctrl_SkinRmAllHighACThr_END (28)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_SkinRingEngThr : 4;
+        unsigned int vctrl_SkinRingACThr : 4;
+        unsigned int vctrl_SkinPChosOthBlkOffset : 4;
+        unsigned int vctrl_SkinPChosOthBlkOffset8 : 4;
+        unsigned int vctrl_SkinIChosCurBlkOffset8 : 4;
+        unsigned int vctrl_SkinLowFreqACBlk8 : 3;
+        unsigned int vctrl_SkinBlk8EnableFlag : 1;
+        unsigned int vctrl_SkinChosOthBlkOffsetSec16 : 4;
+        unsigned int vctrl_SkinChosOthBlkOffsetSec32 : 4;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_SK_TU8_DENOISE_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_SK_TU8_DENOISE_vctrl_SkinRingEngThr_START (0)
+#define SOC_VENC_VEDU_VCTRL_SK_TU8_DENOISE_vctrl_SkinRingEngThr_END (3)
+#define SOC_VENC_VEDU_VCTRL_SK_TU8_DENOISE_vctrl_SkinRingACThr_START (4)
+#define SOC_VENC_VEDU_VCTRL_SK_TU8_DENOISE_vctrl_SkinRingACThr_END (7)
+#define SOC_VENC_VEDU_VCTRL_SK_TU8_DENOISE_vctrl_SkinPChosOthBlkOffset_START (8)
+#define SOC_VENC_VEDU_VCTRL_SK_TU8_DENOISE_vctrl_SkinPChosOthBlkOffset_END (11)
+#define SOC_VENC_VEDU_VCTRL_SK_TU8_DENOISE_vctrl_SkinPChosOthBlkOffset8_START (12)
+#define SOC_VENC_VEDU_VCTRL_SK_TU8_DENOISE_vctrl_SkinPChosOthBlkOffset8_END (15)
+#define SOC_VENC_VEDU_VCTRL_SK_TU8_DENOISE_vctrl_SkinIChosCurBlkOffset8_START (16)
+#define SOC_VENC_VEDU_VCTRL_SK_TU8_DENOISE_vctrl_SkinIChosCurBlkOffset8_END (19)
+#define SOC_VENC_VEDU_VCTRL_SK_TU8_DENOISE_vctrl_SkinLowFreqACBlk8_START (20)
+#define SOC_VENC_VEDU_VCTRL_SK_TU8_DENOISE_vctrl_SkinLowFreqACBlk8_END (22)
+#define SOC_VENC_VEDU_VCTRL_SK_TU8_DENOISE_vctrl_SkinBlk8EnableFlag_START (23)
+#define SOC_VENC_VEDU_VCTRL_SK_TU8_DENOISE_vctrl_SkinBlk8EnableFlag_END (23)
+#define SOC_VENC_VEDU_VCTRL_SK_TU8_DENOISE_vctrl_SkinChosOthBlkOffsetSec16_START (24)
+#define SOC_VENC_VEDU_VCTRL_SK_TU8_DENOISE_vctrl_SkinChosOthBlkOffsetSec16_END (27)
+#define SOC_VENC_VEDU_VCTRL_SK_TU8_DENOISE_vctrl_SkinChosOthBlkOffsetSec32_START (28)
+#define SOC_VENC_VEDU_VCTRL_SK_TU8_DENOISE_vctrl_SkinChosOthBlkOffsetSec32_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_StillChosOthBlkSpecOffset : 4;
+        unsigned int vctrl_StillChosOthBlkOffset16 : 4;
+        unsigned int vctrl_StillIChosCurBlkOffset16 : 4;
+        unsigned int vctrl_StillLowFreqACBlk16 : 4;
+        unsigned int vctrl_StillChosOthBlkOffset32 : 4;
+        unsigned int vctrl_StillIChosCurBlkOffset32 : 4;
+        unsigned int vctrl_StillLowFreqACBlk32 : 4;
+        unsigned int reserved : 4;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_ST_ACOFFSET_DENOISE_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_ST_ACOFFSET_DENOISE_vctrl_StillChosOthBlkSpecOffset_START (0)
+#define SOC_VENC_VEDU_VCTRL_ST_ACOFFSET_DENOISE_vctrl_StillChosOthBlkSpecOffset_END (3)
+#define SOC_VENC_VEDU_VCTRL_ST_ACOFFSET_DENOISE_vctrl_StillChosOthBlkOffset16_START (4)
+#define SOC_VENC_VEDU_VCTRL_ST_ACOFFSET_DENOISE_vctrl_StillChosOthBlkOffset16_END (7)
+#define SOC_VENC_VEDU_VCTRL_ST_ACOFFSET_DENOISE_vctrl_StillIChosCurBlkOffset16_START (8)
+#define SOC_VENC_VEDU_VCTRL_ST_ACOFFSET_DENOISE_vctrl_StillIChosCurBlkOffset16_END (11)
+#define SOC_VENC_VEDU_VCTRL_ST_ACOFFSET_DENOISE_vctrl_StillLowFreqACBlk16_START (12)
+#define SOC_VENC_VEDU_VCTRL_ST_ACOFFSET_DENOISE_vctrl_StillLowFreqACBlk16_END (15)
+#define SOC_VENC_VEDU_VCTRL_ST_ACOFFSET_DENOISE_vctrl_StillChosOthBlkOffset32_START (16)
+#define SOC_VENC_VEDU_VCTRL_ST_ACOFFSET_DENOISE_vctrl_StillChosOthBlkOffset32_END (19)
+#define SOC_VENC_VEDU_VCTRL_ST_ACOFFSET_DENOISE_vctrl_StillIChosCurBlkOffset32_START (20)
+#define SOC_VENC_VEDU_VCTRL_ST_ACOFFSET_DENOISE_vctrl_StillIChosCurBlkOffset32_END (23)
+#define SOC_VENC_VEDU_VCTRL_ST_ACOFFSET_DENOISE_vctrl_StillLowFreqACBlk32_START (24)
+#define SOC_VENC_VEDU_VCTRL_ST_ACOFFSET_DENOISE_vctrl_StillLowFreqACBlk32_END (27)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_StillChosOthBlkSpecThr : 4;
+        unsigned int vctrl_StillChosOthBlkEngThr : 4;
+        unsigned int vctrl_StillChosOthBlkThr3 : 6;
+        unsigned int vctrl_StillChosOthBlkThr2 : 6;
+        unsigned int vctrl_StillChosOthBlkThr : 5;
+        unsigned int vctrl_StillRmAllHighACThr : 4;
+        unsigned int reserved : 3;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_ST_ENGTHR_DENOISE_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_ST_ENGTHR_DENOISE_vctrl_StillChosOthBlkSpecThr_START (0)
+#define SOC_VENC_VEDU_VCTRL_ST_ENGTHR_DENOISE_vctrl_StillChosOthBlkSpecThr_END (3)
+#define SOC_VENC_VEDU_VCTRL_ST_ENGTHR_DENOISE_vctrl_StillChosOthBlkEngThr_START (4)
+#define SOC_VENC_VEDU_VCTRL_ST_ENGTHR_DENOISE_vctrl_StillChosOthBlkEngThr_END (7)
+#define SOC_VENC_VEDU_VCTRL_ST_ENGTHR_DENOISE_vctrl_StillChosOthBlkThr3_START (8)
+#define SOC_VENC_VEDU_VCTRL_ST_ENGTHR_DENOISE_vctrl_StillChosOthBlkThr3_END (13)
+#define SOC_VENC_VEDU_VCTRL_ST_ENGTHR_DENOISE_vctrl_StillChosOthBlkThr2_START (14)
+#define SOC_VENC_VEDU_VCTRL_ST_ENGTHR_DENOISE_vctrl_StillChosOthBlkThr2_END (19)
+#define SOC_VENC_VEDU_VCTRL_ST_ENGTHR_DENOISE_vctrl_StillChosOthBlkThr_START (20)
+#define SOC_VENC_VEDU_VCTRL_ST_ENGTHR_DENOISE_vctrl_StillChosOthBlkThr_END (24)
+#define SOC_VENC_VEDU_VCTRL_ST_ENGTHR_DENOISE_vctrl_StillRmAllHighACThr_START (25)
+#define SOC_VENC_VEDU_VCTRL_ST_ENGTHR_DENOISE_vctrl_StillRmAllHighACThr_END (28)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_StillRingEngThr : 4;
+        unsigned int vctrl_StillRingACThr : 4;
+        unsigned int vctrl_StillPChosOthBlkOffset : 4;
+        unsigned int vctrl_StillPChosOthBlkOffset8 : 4;
+        unsigned int vctrl_StillIChosCurBlkOffset8 : 4;
+        unsigned int vctrl_StillLowFreqACBlk8 : 3;
+        unsigned int vctrl_StillBlk8EnableFlag : 1;
+        unsigned int vctrl_StillChosOthBlkOffsetSec16 : 4;
+        unsigned int vctrl_StillChosOthBlkOffsetSec32 : 4;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_ST_TU8_DENOISE_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_ST_TU8_DENOISE_vctrl_StillRingEngThr_START (0)
+#define SOC_VENC_VEDU_VCTRL_ST_TU8_DENOISE_vctrl_StillRingEngThr_END (3)
+#define SOC_VENC_VEDU_VCTRL_ST_TU8_DENOISE_vctrl_StillRingACThr_START (4)
+#define SOC_VENC_VEDU_VCTRL_ST_TU8_DENOISE_vctrl_StillRingACThr_END (7)
+#define SOC_VENC_VEDU_VCTRL_ST_TU8_DENOISE_vctrl_StillPChosOthBlkOffset_START (8)
+#define SOC_VENC_VEDU_VCTRL_ST_TU8_DENOISE_vctrl_StillPChosOthBlkOffset_END (11)
+#define SOC_VENC_VEDU_VCTRL_ST_TU8_DENOISE_vctrl_StillPChosOthBlkOffset8_START (12)
+#define SOC_VENC_VEDU_VCTRL_ST_TU8_DENOISE_vctrl_StillPChosOthBlkOffset8_END (15)
+#define SOC_VENC_VEDU_VCTRL_ST_TU8_DENOISE_vctrl_StillIChosCurBlkOffset8_START (16)
+#define SOC_VENC_VEDU_VCTRL_ST_TU8_DENOISE_vctrl_StillIChosCurBlkOffset8_END (19)
+#define SOC_VENC_VEDU_VCTRL_ST_TU8_DENOISE_vctrl_StillLowFreqACBlk8_START (20)
+#define SOC_VENC_VEDU_VCTRL_ST_TU8_DENOISE_vctrl_StillLowFreqACBlk8_END (22)
+#define SOC_VENC_VEDU_VCTRL_ST_TU8_DENOISE_vctrl_StillBlk8EnableFlag_START (23)
+#define SOC_VENC_VEDU_VCTRL_ST_TU8_DENOISE_vctrl_StillBlk8EnableFlag_END (23)
+#define SOC_VENC_VEDU_VCTRL_ST_TU8_DENOISE_vctrl_StillChosOthBlkOffsetSec16_START (24)
+#define SOC_VENC_VEDU_VCTRL_ST_TU8_DENOISE_vctrl_StillChosOthBlkOffsetSec16_END (27)
+#define SOC_VENC_VEDU_VCTRL_ST_TU8_DENOISE_vctrl_StillChosOthBlkOffsetSec32_START (28)
+#define SOC_VENC_VEDU_VCTRL_ST_TU8_DENOISE_vctrl_StillChosOthBlkOffsetSec32_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_EdgeChosOthBlkSpecOffset : 4;
+        unsigned int vctrl_EdgeChosOthBlkOffset16 : 4;
+        unsigned int vctrl_EdgeIChosCurBlkOffset16 : 4;
+        unsigned int vctrl_EdgeLowFreqACBlk16 : 4;
+        unsigned int vctrl_EdgeChosOthBlkOffset32 : 4;
+        unsigned int vctrl_EdgeIChosCurBlkOffset32 : 4;
+        unsigned int vctrl_EdgeLowFreqACBlk32 : 4;
+        unsigned int reserved : 4;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_SE_ACOFFSET_DENOISE_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_SE_ACOFFSET_DENOISE_vctrl_EdgeChosOthBlkSpecOffset_START (0)
+#define SOC_VENC_VEDU_VCTRL_SE_ACOFFSET_DENOISE_vctrl_EdgeChosOthBlkSpecOffset_END (3)
+#define SOC_VENC_VEDU_VCTRL_SE_ACOFFSET_DENOISE_vctrl_EdgeChosOthBlkOffset16_START (4)
+#define SOC_VENC_VEDU_VCTRL_SE_ACOFFSET_DENOISE_vctrl_EdgeChosOthBlkOffset16_END (7)
+#define SOC_VENC_VEDU_VCTRL_SE_ACOFFSET_DENOISE_vctrl_EdgeIChosCurBlkOffset16_START (8)
+#define SOC_VENC_VEDU_VCTRL_SE_ACOFFSET_DENOISE_vctrl_EdgeIChosCurBlkOffset16_END (11)
+#define SOC_VENC_VEDU_VCTRL_SE_ACOFFSET_DENOISE_vctrl_EdgeLowFreqACBlk16_START (12)
+#define SOC_VENC_VEDU_VCTRL_SE_ACOFFSET_DENOISE_vctrl_EdgeLowFreqACBlk16_END (15)
+#define SOC_VENC_VEDU_VCTRL_SE_ACOFFSET_DENOISE_vctrl_EdgeChosOthBlkOffset32_START (16)
+#define SOC_VENC_VEDU_VCTRL_SE_ACOFFSET_DENOISE_vctrl_EdgeChosOthBlkOffset32_END (19)
+#define SOC_VENC_VEDU_VCTRL_SE_ACOFFSET_DENOISE_vctrl_EdgeIChosCurBlkOffset32_START (20)
+#define SOC_VENC_VEDU_VCTRL_SE_ACOFFSET_DENOISE_vctrl_EdgeIChosCurBlkOffset32_END (23)
+#define SOC_VENC_VEDU_VCTRL_SE_ACOFFSET_DENOISE_vctrl_EdgeLowFreqACBlk32_START (24)
+#define SOC_VENC_VEDU_VCTRL_SE_ACOFFSET_DENOISE_vctrl_EdgeLowFreqACBlk32_END (27)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_EdgeChosOthBlkSpecThr : 4;
+        unsigned int vctrl_EdgeChosOthBlkEngThr : 4;
+        unsigned int vctrl_EdgeChosOthBlkThr3 : 6;
+        unsigned int vctrl_EdgeChosOthBlkThr2 : 6;
+        unsigned int vctrl_EdgeChosOthBlkThr : 5;
+        unsigned int vctrl_EdgeRmAllHighACThr : 4;
+        unsigned int reserved : 3;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_SE_ENGTHR_DENOISE_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_SE_ENGTHR_DENOISE_vctrl_EdgeChosOthBlkSpecThr_START (0)
+#define SOC_VENC_VEDU_VCTRL_SE_ENGTHR_DENOISE_vctrl_EdgeChosOthBlkSpecThr_END (3)
+#define SOC_VENC_VEDU_VCTRL_SE_ENGTHR_DENOISE_vctrl_EdgeChosOthBlkEngThr_START (4)
+#define SOC_VENC_VEDU_VCTRL_SE_ENGTHR_DENOISE_vctrl_EdgeChosOthBlkEngThr_END (7)
+#define SOC_VENC_VEDU_VCTRL_SE_ENGTHR_DENOISE_vctrl_EdgeChosOthBlkThr3_START (8)
+#define SOC_VENC_VEDU_VCTRL_SE_ENGTHR_DENOISE_vctrl_EdgeChosOthBlkThr3_END (13)
+#define SOC_VENC_VEDU_VCTRL_SE_ENGTHR_DENOISE_vctrl_EdgeChosOthBlkThr2_START (14)
+#define SOC_VENC_VEDU_VCTRL_SE_ENGTHR_DENOISE_vctrl_EdgeChosOthBlkThr2_END (19)
+#define SOC_VENC_VEDU_VCTRL_SE_ENGTHR_DENOISE_vctrl_EdgeChosOthBlkThr_START (20)
+#define SOC_VENC_VEDU_VCTRL_SE_ENGTHR_DENOISE_vctrl_EdgeChosOthBlkThr_END (24)
+#define SOC_VENC_VEDU_VCTRL_SE_ENGTHR_DENOISE_vctrl_EdgeRmAllHighACThr_START (25)
+#define SOC_VENC_VEDU_VCTRL_SE_ENGTHR_DENOISE_vctrl_EdgeRmAllHighACThr_END (28)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_EdgeRingEngThr : 4;
+        unsigned int vctrl_EdgeRingACThr : 4;
+        unsigned int vctrl_EdgePChosOthBlkOffset : 4;
+        unsigned int vctrl_EdgePChosOthBlkOffset8 : 4;
+        unsigned int vctrl_EdgeIChosCurBlkOffset8 : 4;
+        unsigned int vctrl_EdgeLowFreqACBlk8 : 3;
+        unsigned int vctrl_EdgeBlk8EnableFlag : 1;
+        unsigned int vctrl_EdgeChosOthBlkOffsetSec16 : 4;
+        unsigned int vctrl_EdgeChosOthBlkOffsetSec32 : 4;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_SE_TU8_DENOISE_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_SE_TU8_DENOISE_vctrl_EdgeRingEngThr_START (0)
+#define SOC_VENC_VEDU_VCTRL_SE_TU8_DENOISE_vctrl_EdgeRingEngThr_END (3)
+#define SOC_VENC_VEDU_VCTRL_SE_TU8_DENOISE_vctrl_EdgeRingACThr_START (4)
+#define SOC_VENC_VEDU_VCTRL_SE_TU8_DENOISE_vctrl_EdgeRingACThr_END (7)
+#define SOC_VENC_VEDU_VCTRL_SE_TU8_DENOISE_vctrl_EdgePChosOthBlkOffset_START (8)
+#define SOC_VENC_VEDU_VCTRL_SE_TU8_DENOISE_vctrl_EdgePChosOthBlkOffset_END (11)
+#define SOC_VENC_VEDU_VCTRL_SE_TU8_DENOISE_vctrl_EdgePChosOthBlkOffset8_START (12)
+#define SOC_VENC_VEDU_VCTRL_SE_TU8_DENOISE_vctrl_EdgePChosOthBlkOffset8_END (15)
+#define SOC_VENC_VEDU_VCTRL_SE_TU8_DENOISE_vctrl_EdgeIChosCurBlkOffset8_START (16)
+#define SOC_VENC_VEDU_VCTRL_SE_TU8_DENOISE_vctrl_EdgeIChosCurBlkOffset8_END (19)
+#define SOC_VENC_VEDU_VCTRL_SE_TU8_DENOISE_vctrl_EdgeLowFreqACBlk8_START (20)
+#define SOC_VENC_VEDU_VCTRL_SE_TU8_DENOISE_vctrl_EdgeLowFreqACBlk8_END (22)
+#define SOC_VENC_VEDU_VCTRL_SE_TU8_DENOISE_vctrl_EdgeBlk8EnableFlag_START (23)
+#define SOC_VENC_VEDU_VCTRL_SE_TU8_DENOISE_vctrl_EdgeBlk8EnableFlag_END (23)
+#define SOC_VENC_VEDU_VCTRL_SE_TU8_DENOISE_vctrl_EdgeChosOthBlkOffsetSec16_START (24)
+#define SOC_VENC_VEDU_VCTRL_SE_TU8_DENOISE_vctrl_EdgeChosOthBlkOffsetSec16_END (27)
+#define SOC_VENC_VEDU_VCTRL_SE_TU8_DENOISE_vctrl_EdgeChosOthBlkOffsetSec32_START (28)
+#define SOC_VENC_VEDU_VCTRL_SE_TU8_DENOISE_vctrl_EdgeChosOthBlkOffsetSec32_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_EdgeAndMoveChosOthBlkSpecOffset : 4;
+        unsigned int vctrl_EdgeAndMoveChosOthBlkOffset16 : 4;
+        unsigned int vctrl_EdgeAndMoveIChosCurBlkOffset16 : 4;
+        unsigned int vctrl_EdgeAndMoveLowFreqACBlk16 : 4;
+        unsigned int vctrl_EdgeAndMoveChosOthBlkOffset32 : 4;
+        unsigned int vctrl_EdgeAndMoveIChosCurBlkOffset32 : 4;
+        unsigned int vctrl_EdgeAndMoveLowFreqACBlk32 : 4;
+        unsigned int reserved : 4;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_SELM_ACOFFSET_DENOISE_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_SELM_ACOFFSET_DENOISE_vctrl_EdgeAndMoveChosOthBlkSpecOffset_START (0)
+#define SOC_VENC_VEDU_VCTRL_SELM_ACOFFSET_DENOISE_vctrl_EdgeAndMoveChosOthBlkSpecOffset_END (3)
+#define SOC_VENC_VEDU_VCTRL_SELM_ACOFFSET_DENOISE_vctrl_EdgeAndMoveChosOthBlkOffset16_START (4)
+#define SOC_VENC_VEDU_VCTRL_SELM_ACOFFSET_DENOISE_vctrl_EdgeAndMoveChosOthBlkOffset16_END (7)
+#define SOC_VENC_VEDU_VCTRL_SELM_ACOFFSET_DENOISE_vctrl_EdgeAndMoveIChosCurBlkOffset16_START (8)
+#define SOC_VENC_VEDU_VCTRL_SELM_ACOFFSET_DENOISE_vctrl_EdgeAndMoveIChosCurBlkOffset16_END (11)
+#define SOC_VENC_VEDU_VCTRL_SELM_ACOFFSET_DENOISE_vctrl_EdgeAndMoveLowFreqACBlk16_START (12)
+#define SOC_VENC_VEDU_VCTRL_SELM_ACOFFSET_DENOISE_vctrl_EdgeAndMoveLowFreqACBlk16_END (15)
+#define SOC_VENC_VEDU_VCTRL_SELM_ACOFFSET_DENOISE_vctrl_EdgeAndMoveChosOthBlkOffset32_START (16)
+#define SOC_VENC_VEDU_VCTRL_SELM_ACOFFSET_DENOISE_vctrl_EdgeAndMoveChosOthBlkOffset32_END (19)
+#define SOC_VENC_VEDU_VCTRL_SELM_ACOFFSET_DENOISE_vctrl_EdgeAndMoveIChosCurBlkOffset32_START (20)
+#define SOC_VENC_VEDU_VCTRL_SELM_ACOFFSET_DENOISE_vctrl_EdgeAndMoveIChosCurBlkOffset32_END (23)
+#define SOC_VENC_VEDU_VCTRL_SELM_ACOFFSET_DENOISE_vctrl_EdgeAndMoveLowFreqACBlk32_START (24)
+#define SOC_VENC_VEDU_VCTRL_SELM_ACOFFSET_DENOISE_vctrl_EdgeAndMoveLowFreqACBlk32_END (27)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_EdgeAndMoveChosOthBlkSpecThr : 4;
+        unsigned int vctrl_EdgeAndMoveChosOthBlkEngThr : 4;
+        unsigned int vctrl_EdgeAndMoveChosOthBlkThr3 : 6;
+        unsigned int vctrl_EdgeAndMoveChosOthBlkThr2 : 6;
+        unsigned int vctrl_EdgeAndMoveChosOthBlkThr : 5;
+        unsigned int vctrl_EdgeAndMoveRmAllHighACThr : 4;
+        unsigned int reserved : 3;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_SELM_ENGTHR_DENOISE_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_SELM_ENGTHR_DENOISE_vctrl_EdgeAndMoveChosOthBlkSpecThr_START (0)
+#define SOC_VENC_VEDU_VCTRL_SELM_ENGTHR_DENOISE_vctrl_EdgeAndMoveChosOthBlkSpecThr_END (3)
+#define SOC_VENC_VEDU_VCTRL_SELM_ENGTHR_DENOISE_vctrl_EdgeAndMoveChosOthBlkEngThr_START (4)
+#define SOC_VENC_VEDU_VCTRL_SELM_ENGTHR_DENOISE_vctrl_EdgeAndMoveChosOthBlkEngThr_END (7)
+#define SOC_VENC_VEDU_VCTRL_SELM_ENGTHR_DENOISE_vctrl_EdgeAndMoveChosOthBlkThr3_START (8)
+#define SOC_VENC_VEDU_VCTRL_SELM_ENGTHR_DENOISE_vctrl_EdgeAndMoveChosOthBlkThr3_END (13)
+#define SOC_VENC_VEDU_VCTRL_SELM_ENGTHR_DENOISE_vctrl_EdgeAndMoveChosOthBlkThr2_START (14)
+#define SOC_VENC_VEDU_VCTRL_SELM_ENGTHR_DENOISE_vctrl_EdgeAndMoveChosOthBlkThr2_END (19)
+#define SOC_VENC_VEDU_VCTRL_SELM_ENGTHR_DENOISE_vctrl_EdgeAndMoveChosOthBlkThr_START (20)
+#define SOC_VENC_VEDU_VCTRL_SELM_ENGTHR_DENOISE_vctrl_EdgeAndMoveChosOthBlkThr_END (24)
+#define SOC_VENC_VEDU_VCTRL_SELM_ENGTHR_DENOISE_vctrl_EdgeAndMoveRmAllHighACThr_START (25)
+#define SOC_VENC_VEDU_VCTRL_SELM_ENGTHR_DENOISE_vctrl_EdgeAndMoveRmAllHighACThr_END (28)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_EdgeAndMoveRingEngThr : 4;
+        unsigned int vctrl_EdgeAndMoveRingACThr : 4;
+        unsigned int vctrl_EdgeAndMovePChosOthBlkOffset : 4;
+        unsigned int vctrl_EdgeAndMovePChosOthBlkOffset8 : 4;
+        unsigned int vctrl_EdgeAndMoveIChosCurBlkOffset8 : 4;
+        unsigned int vctrl_EdgeAndMoveLowFreqACBlk8 : 3;
+        unsigned int vctrl_EdgeAndMoveBlk8EnableFlag : 1;
+        unsigned int vctrl_EdgeAndMoveChosOthBlkOffsetSec16 : 4;
+        unsigned int vctrl_EdgeAndMoveChosOthBlkOffsetSec32 : 4;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_SELM_TU8_DENOISE_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_SELM_TU8_DENOISE_vctrl_EdgeAndMoveRingEngThr_START (0)
+#define SOC_VENC_VEDU_VCTRL_SELM_TU8_DENOISE_vctrl_EdgeAndMoveRingEngThr_END (3)
+#define SOC_VENC_VEDU_VCTRL_SELM_TU8_DENOISE_vctrl_EdgeAndMoveRingACThr_START (4)
+#define SOC_VENC_VEDU_VCTRL_SELM_TU8_DENOISE_vctrl_EdgeAndMoveRingACThr_END (7)
+#define SOC_VENC_VEDU_VCTRL_SELM_TU8_DENOISE_vctrl_EdgeAndMovePChosOthBlkOffset_START (8)
+#define SOC_VENC_VEDU_VCTRL_SELM_TU8_DENOISE_vctrl_EdgeAndMovePChosOthBlkOffset_END (11)
+#define SOC_VENC_VEDU_VCTRL_SELM_TU8_DENOISE_vctrl_EdgeAndMovePChosOthBlkOffset8_START (12)
+#define SOC_VENC_VEDU_VCTRL_SELM_TU8_DENOISE_vctrl_EdgeAndMovePChosOthBlkOffset8_END (15)
+#define SOC_VENC_VEDU_VCTRL_SELM_TU8_DENOISE_vctrl_EdgeAndMoveIChosCurBlkOffset8_START (16)
+#define SOC_VENC_VEDU_VCTRL_SELM_TU8_DENOISE_vctrl_EdgeAndMoveIChosCurBlkOffset8_END (19)
+#define SOC_VENC_VEDU_VCTRL_SELM_TU8_DENOISE_vctrl_EdgeAndMoveLowFreqACBlk8_START (20)
+#define SOC_VENC_VEDU_VCTRL_SELM_TU8_DENOISE_vctrl_EdgeAndMoveLowFreqACBlk8_END (22)
+#define SOC_VENC_VEDU_VCTRL_SELM_TU8_DENOISE_vctrl_EdgeAndMoveBlk8EnableFlag_START (23)
+#define SOC_VENC_VEDU_VCTRL_SELM_TU8_DENOISE_vctrl_EdgeAndMoveBlk8EnableFlag_END (23)
+#define SOC_VENC_VEDU_VCTRL_SELM_TU8_DENOISE_vctrl_EdgeAndMoveChosOthBlkOffsetSec16_START (24)
+#define SOC_VENC_VEDU_VCTRL_SELM_TU8_DENOISE_vctrl_EdgeAndMoveChosOthBlkOffsetSec16_END (27)
+#define SOC_VENC_VEDU_VCTRL_SELM_TU8_DENOISE_vctrl_EdgeAndMoveChosOthBlkOffsetSec32_START (28)
+#define SOC_VENC_VEDU_VCTRL_SELM_TU8_DENOISE_vctrl_EdgeAndMoveChosOthBlkOffsetSec32_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_WeakChosOthBlkSpecOffset : 4;
+        unsigned int vctrl_WeakChosOthBlkOffset16 : 4;
+        unsigned int vctrl_WeakIChosCurBlkOffset16 : 4;
+        unsigned int vctrl_WeakLowFreqACBlk16 : 4;
+        unsigned int vctrl_WeakChosOthBlkOffset32 : 4;
+        unsigned int vctrl_WeakIChosCurBlkOffset32 : 4;
+        unsigned int vctrl_WeakLowFreqACBlk32 : 4;
+        unsigned int reserved : 4;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_WS_ACOFFSET_DENOISE_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_WS_ACOFFSET_DENOISE_vctrl_WeakChosOthBlkSpecOffset_START (0)
+#define SOC_VENC_VEDU_VCTRL_WS_ACOFFSET_DENOISE_vctrl_WeakChosOthBlkSpecOffset_END (3)
+#define SOC_VENC_VEDU_VCTRL_WS_ACOFFSET_DENOISE_vctrl_WeakChosOthBlkOffset16_START (4)
+#define SOC_VENC_VEDU_VCTRL_WS_ACOFFSET_DENOISE_vctrl_WeakChosOthBlkOffset16_END (7)
+#define SOC_VENC_VEDU_VCTRL_WS_ACOFFSET_DENOISE_vctrl_WeakIChosCurBlkOffset16_START (8)
+#define SOC_VENC_VEDU_VCTRL_WS_ACOFFSET_DENOISE_vctrl_WeakIChosCurBlkOffset16_END (11)
+#define SOC_VENC_VEDU_VCTRL_WS_ACOFFSET_DENOISE_vctrl_WeakLowFreqACBlk16_START (12)
+#define SOC_VENC_VEDU_VCTRL_WS_ACOFFSET_DENOISE_vctrl_WeakLowFreqACBlk16_END (15)
+#define SOC_VENC_VEDU_VCTRL_WS_ACOFFSET_DENOISE_vctrl_WeakChosOthBlkOffset32_START (16)
+#define SOC_VENC_VEDU_VCTRL_WS_ACOFFSET_DENOISE_vctrl_WeakChosOthBlkOffset32_END (19)
+#define SOC_VENC_VEDU_VCTRL_WS_ACOFFSET_DENOISE_vctrl_WeakIChosCurBlkOffset32_START (20)
+#define SOC_VENC_VEDU_VCTRL_WS_ACOFFSET_DENOISE_vctrl_WeakIChosCurBlkOffset32_END (23)
+#define SOC_VENC_VEDU_VCTRL_WS_ACOFFSET_DENOISE_vctrl_WeakLowFreqACBlk32_START (24)
+#define SOC_VENC_VEDU_VCTRL_WS_ACOFFSET_DENOISE_vctrl_WeakLowFreqACBlk32_END (27)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_WeakChosOthBlkSpecThr : 4;
+        unsigned int vctrl_WeakChosOthBlkEngThr : 4;
+        unsigned int vctrl_WeakChosOthBlkThr3 : 6;
+        unsigned int vctrl_WeakChosOthBlkThr2 : 6;
+        unsigned int vctrl_WeakChosOthBlkThr : 5;
+        unsigned int vctrl_WeakRmAllHighACThr : 4;
+        unsigned int reserved : 3;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_WS_ENGTHR_DENOISE_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_WS_ENGTHR_DENOISE_vctrl_WeakChosOthBlkSpecThr_START (0)
+#define SOC_VENC_VEDU_VCTRL_WS_ENGTHR_DENOISE_vctrl_WeakChosOthBlkSpecThr_END (3)
+#define SOC_VENC_VEDU_VCTRL_WS_ENGTHR_DENOISE_vctrl_WeakChosOthBlkEngThr_START (4)
+#define SOC_VENC_VEDU_VCTRL_WS_ENGTHR_DENOISE_vctrl_WeakChosOthBlkEngThr_END (7)
+#define SOC_VENC_VEDU_VCTRL_WS_ENGTHR_DENOISE_vctrl_WeakChosOthBlkThr3_START (8)
+#define SOC_VENC_VEDU_VCTRL_WS_ENGTHR_DENOISE_vctrl_WeakChosOthBlkThr3_END (13)
+#define SOC_VENC_VEDU_VCTRL_WS_ENGTHR_DENOISE_vctrl_WeakChosOthBlkThr2_START (14)
+#define SOC_VENC_VEDU_VCTRL_WS_ENGTHR_DENOISE_vctrl_WeakChosOthBlkThr2_END (19)
+#define SOC_VENC_VEDU_VCTRL_WS_ENGTHR_DENOISE_vctrl_WeakChosOthBlkThr_START (20)
+#define SOC_VENC_VEDU_VCTRL_WS_ENGTHR_DENOISE_vctrl_WeakChosOthBlkThr_END (24)
+#define SOC_VENC_VEDU_VCTRL_WS_ENGTHR_DENOISE_vctrl_WeakRmAllHighACThr_START (25)
+#define SOC_VENC_VEDU_VCTRL_WS_ENGTHR_DENOISE_vctrl_WeakRmAllHighACThr_END (28)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_WeakRingEngThr : 4;
+        unsigned int vctrl_WeakRingACThr : 4;
+        unsigned int vctrl_WeakPChosOthBlkOffset : 4;
+        unsigned int vctrl_WeakPChosOthBlkOffset8 : 4;
+        unsigned int vctrl_WeakIChosCurBlkOffset8 : 4;
+        unsigned int vctrl_WeakLowFreqACBlk8 : 3;
+        unsigned int vctrl_WeakBlk8EnableFlag : 1;
+        unsigned int vctrl_WeakChosOthBlkOffsetSec16 : 4;
+        unsigned int vctrl_WeakChosOthBlkOffsetSec32 : 4;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_WS_TU8_DENOISE_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_WS_TU8_DENOISE_vctrl_WeakRingEngThr_START (0)
+#define SOC_VENC_VEDU_VCTRL_WS_TU8_DENOISE_vctrl_WeakRingEngThr_END (3)
+#define SOC_VENC_VEDU_VCTRL_WS_TU8_DENOISE_vctrl_WeakRingACThr_START (4)
+#define SOC_VENC_VEDU_VCTRL_WS_TU8_DENOISE_vctrl_WeakRingACThr_END (7)
+#define SOC_VENC_VEDU_VCTRL_WS_TU8_DENOISE_vctrl_WeakPChosOthBlkOffset_START (8)
+#define SOC_VENC_VEDU_VCTRL_WS_TU8_DENOISE_vctrl_WeakPChosOthBlkOffset_END (11)
+#define SOC_VENC_VEDU_VCTRL_WS_TU8_DENOISE_vctrl_WeakPChosOthBlkOffset8_START (12)
+#define SOC_VENC_VEDU_VCTRL_WS_TU8_DENOISE_vctrl_WeakPChosOthBlkOffset8_END (15)
+#define SOC_VENC_VEDU_VCTRL_WS_TU8_DENOISE_vctrl_WeakIChosCurBlkOffset8_START (16)
+#define SOC_VENC_VEDU_VCTRL_WS_TU8_DENOISE_vctrl_WeakIChosCurBlkOffset8_END (19)
+#define SOC_VENC_VEDU_VCTRL_WS_TU8_DENOISE_vctrl_WeakLowFreqACBlk8_START (20)
+#define SOC_VENC_VEDU_VCTRL_WS_TU8_DENOISE_vctrl_WeakLowFreqACBlk8_END (22)
+#define SOC_VENC_VEDU_VCTRL_WS_TU8_DENOISE_vctrl_WeakBlk8EnableFlag_START (23)
+#define SOC_VENC_VEDU_VCTRL_WS_TU8_DENOISE_vctrl_WeakBlk8EnableFlag_END (23)
+#define SOC_VENC_VEDU_VCTRL_WS_TU8_DENOISE_vctrl_WeakChosOthBlkOffsetSec16_START (24)
+#define SOC_VENC_VEDU_VCTRL_WS_TU8_DENOISE_vctrl_WeakChosOthBlkOffsetSec16_END (27)
+#define SOC_VENC_VEDU_VCTRL_WS_TU8_DENOISE_vctrl_WeakChosOthBlkOffsetSec32_START (28)
+#define SOC_VENC_VEDU_VCTRL_WS_TU8_DENOISE_vctrl_WeakChosOthBlkOffsetSec32_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_StrongChosOthBlkSpecOffset : 4;
+        unsigned int vctrl_StrongChosOthBlkOffset16 : 4;
+        unsigned int vctrl_StrongIChosCurBlkOffset16 : 4;
+        unsigned int vctrl_StrongLowFreqACBlk16 : 4;
+        unsigned int vctrl_StrongChosOthBlkOffset32 : 4;
+        unsigned int vctrl_StrongIChosCurBlkOffset32 : 4;
+        unsigned int vctrl_StrongLowFreqACBlk32 : 4;
+        unsigned int reserved : 4;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_SSSE_ACOFFSET_DENOISE_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_SSSE_ACOFFSET_DENOISE_vctrl_StrongChosOthBlkSpecOffset_START (0)
+#define SOC_VENC_VEDU_VCTRL_SSSE_ACOFFSET_DENOISE_vctrl_StrongChosOthBlkSpecOffset_END (3)
+#define SOC_VENC_VEDU_VCTRL_SSSE_ACOFFSET_DENOISE_vctrl_StrongChosOthBlkOffset16_START (4)
+#define SOC_VENC_VEDU_VCTRL_SSSE_ACOFFSET_DENOISE_vctrl_StrongChosOthBlkOffset16_END (7)
+#define SOC_VENC_VEDU_VCTRL_SSSE_ACOFFSET_DENOISE_vctrl_StrongIChosCurBlkOffset16_START (8)
+#define SOC_VENC_VEDU_VCTRL_SSSE_ACOFFSET_DENOISE_vctrl_StrongIChosCurBlkOffset16_END (11)
+#define SOC_VENC_VEDU_VCTRL_SSSE_ACOFFSET_DENOISE_vctrl_StrongLowFreqACBlk16_START (12)
+#define SOC_VENC_VEDU_VCTRL_SSSE_ACOFFSET_DENOISE_vctrl_StrongLowFreqACBlk16_END (15)
+#define SOC_VENC_VEDU_VCTRL_SSSE_ACOFFSET_DENOISE_vctrl_StrongChosOthBlkOffset32_START (16)
+#define SOC_VENC_VEDU_VCTRL_SSSE_ACOFFSET_DENOISE_vctrl_StrongChosOthBlkOffset32_END (19)
+#define SOC_VENC_VEDU_VCTRL_SSSE_ACOFFSET_DENOISE_vctrl_StrongIChosCurBlkOffset32_START (20)
+#define SOC_VENC_VEDU_VCTRL_SSSE_ACOFFSET_DENOISE_vctrl_StrongIChosCurBlkOffset32_END (23)
+#define SOC_VENC_VEDU_VCTRL_SSSE_ACOFFSET_DENOISE_vctrl_StrongLowFreqACBlk32_START (24)
+#define SOC_VENC_VEDU_VCTRL_SSSE_ACOFFSET_DENOISE_vctrl_StrongLowFreqACBlk32_END (27)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_StrongChosOthBlkSpecThr : 4;
+        unsigned int vctrl_StrongChosOthBlkEngThr : 4;
+        unsigned int vctrl_StrongChosOthBlkThr3 : 6;
+        unsigned int vctrl_StrongChosOthBlkThr2 : 6;
+        unsigned int vctrl_StrongChosOthBlkThr : 5;
+        unsigned int vctrl_StrongRmAllHighACThr : 4;
+        unsigned int reserved : 3;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_SSSE_ENGTHR_DENOISE_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_SSSE_ENGTHR_DENOISE_vctrl_StrongChosOthBlkSpecThr_START (0)
+#define SOC_VENC_VEDU_VCTRL_SSSE_ENGTHR_DENOISE_vctrl_StrongChosOthBlkSpecThr_END (3)
+#define SOC_VENC_VEDU_VCTRL_SSSE_ENGTHR_DENOISE_vctrl_StrongChosOthBlkEngThr_START (4)
+#define SOC_VENC_VEDU_VCTRL_SSSE_ENGTHR_DENOISE_vctrl_StrongChosOthBlkEngThr_END (7)
+#define SOC_VENC_VEDU_VCTRL_SSSE_ENGTHR_DENOISE_vctrl_StrongChosOthBlkThr3_START (8)
+#define SOC_VENC_VEDU_VCTRL_SSSE_ENGTHR_DENOISE_vctrl_StrongChosOthBlkThr3_END (13)
+#define SOC_VENC_VEDU_VCTRL_SSSE_ENGTHR_DENOISE_vctrl_StrongChosOthBlkThr2_START (14)
+#define SOC_VENC_VEDU_VCTRL_SSSE_ENGTHR_DENOISE_vctrl_StrongChosOthBlkThr2_END (19)
+#define SOC_VENC_VEDU_VCTRL_SSSE_ENGTHR_DENOISE_vctrl_StrongChosOthBlkThr_START (20)
+#define SOC_VENC_VEDU_VCTRL_SSSE_ENGTHR_DENOISE_vctrl_StrongChosOthBlkThr_END (24)
+#define SOC_VENC_VEDU_VCTRL_SSSE_ENGTHR_DENOISE_vctrl_StrongRmAllHighACThr_START (25)
+#define SOC_VENC_VEDU_VCTRL_SSSE_ENGTHR_DENOISE_vctrl_StrongRmAllHighACThr_END (28)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_StrongRingEngThr : 4;
+        unsigned int vctrl_StrongRingACThr : 4;
+        unsigned int vctrl_StrongPChosOthBlkOffset : 4;
+        unsigned int vctrl_StrongPChosOthBlkOffset8 : 4;
+        unsigned int vctrl_StrongIChosCurBlkOffset8 : 4;
+        unsigned int vctrl_StrongLowFreqACBlk8 : 3;
+        unsigned int vctrl_StrongBlk8EnableFlag : 1;
+        unsigned int vctrl_StrongChosOthBlkOffsetSec16 : 4;
+        unsigned int vctrl_StrongChosOthBlkOffsetSec32 : 4;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_SSSE_TU8_DENOISE_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_SSSE_TU8_DENOISE_vctrl_StrongRingEngThr_START (0)
+#define SOC_VENC_VEDU_VCTRL_SSSE_TU8_DENOISE_vctrl_StrongRingEngThr_END (3)
+#define SOC_VENC_VEDU_VCTRL_SSSE_TU8_DENOISE_vctrl_StrongRingACThr_START (4)
+#define SOC_VENC_VEDU_VCTRL_SSSE_TU8_DENOISE_vctrl_StrongRingACThr_END (7)
+#define SOC_VENC_VEDU_VCTRL_SSSE_TU8_DENOISE_vctrl_StrongPChosOthBlkOffset_START (8)
+#define SOC_VENC_VEDU_VCTRL_SSSE_TU8_DENOISE_vctrl_StrongPChosOthBlkOffset_END (11)
+#define SOC_VENC_VEDU_VCTRL_SSSE_TU8_DENOISE_vctrl_StrongPChosOthBlkOffset8_START (12)
+#define SOC_VENC_VEDU_VCTRL_SSSE_TU8_DENOISE_vctrl_StrongPChosOthBlkOffset8_END (15)
+#define SOC_VENC_VEDU_VCTRL_SSSE_TU8_DENOISE_vctrl_StrongIChosCurBlkOffset8_START (16)
+#define SOC_VENC_VEDU_VCTRL_SSSE_TU8_DENOISE_vctrl_StrongIChosCurBlkOffset8_END (19)
+#define SOC_VENC_VEDU_VCTRL_SSSE_TU8_DENOISE_vctrl_StrongLowFreqACBlk8_START (20)
+#define SOC_VENC_VEDU_VCTRL_SSSE_TU8_DENOISE_vctrl_StrongLowFreqACBlk8_END (22)
+#define SOC_VENC_VEDU_VCTRL_SSSE_TU8_DENOISE_vctrl_StrongBlk8EnableFlag_START (23)
+#define SOC_VENC_VEDU_VCTRL_SSSE_TU8_DENOISE_vctrl_StrongBlk8EnableFlag_END (23)
+#define SOC_VENC_VEDU_VCTRL_SSSE_TU8_DENOISE_vctrl_StrongChosOthBlkOffsetSec16_START (24)
+#define SOC_VENC_VEDU_VCTRL_SSSE_TU8_DENOISE_vctrl_StrongChosOthBlkOffsetSec16_END (27)
+#define SOC_VENC_VEDU_VCTRL_SSSE_TU8_DENOISE_vctrl_StrongChosOthBlkOffsetSec32_START (28)
+#define SOC_VENC_VEDU_VCTRL_SSSE_TU8_DENOISE_vctrl_StrongChosOthBlkOffsetSec32_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_RESERVED_11_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_norm_intra_cu4_rdcost_offset : 4;
+        unsigned int vctrl_norm_intra_cu8_rdcost_offset : 4;
+        unsigned int vctrl_norm_intra_cu16_rdcost_offset : 4;
+        unsigned int vctrl_norm_intra_cu32_rdcost_offset : 4;
+        unsigned int vctrl_strmov_intra_cu4_rdcost_offset : 4;
+        unsigned int vctrl_strmov_intra_cu8_rdcost_offset : 4;
+        unsigned int vctrl_strmov_intra_cu16_rdcost_offset : 4;
+        unsigned int vctrl_strmov_intra_cu32_rdcost_offset : 4;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_0_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_0_vctrl_norm_intra_cu4_rdcost_offset_START (0)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_0_vctrl_norm_intra_cu4_rdcost_offset_END (3)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_0_vctrl_norm_intra_cu8_rdcost_offset_START (4)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_0_vctrl_norm_intra_cu8_rdcost_offset_END (7)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_0_vctrl_norm_intra_cu16_rdcost_offset_START (8)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_0_vctrl_norm_intra_cu16_rdcost_offset_END (11)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_0_vctrl_norm_intra_cu32_rdcost_offset_START (12)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_0_vctrl_norm_intra_cu32_rdcost_offset_END (15)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_0_vctrl_strmov_intra_cu4_rdcost_offset_START (16)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_0_vctrl_strmov_intra_cu4_rdcost_offset_END (19)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_0_vctrl_strmov_intra_cu8_rdcost_offset_START (20)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_0_vctrl_strmov_intra_cu8_rdcost_offset_END (23)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_0_vctrl_strmov_intra_cu16_rdcost_offset_START (24)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_0_vctrl_strmov_intra_cu16_rdcost_offset_END (27)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_0_vctrl_strmov_intra_cu32_rdcost_offset_START (28)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_0_vctrl_strmov_intra_cu32_rdcost_offset_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_skin_intra_cu4_rdcost_offset : 4;
+        unsigned int vctrl_skin_intra_cu8_rdcost_offset : 4;
+        unsigned int vctrl_skin_intra_cu16_rdcost_offset : 4;
+        unsigned int vctrl_skin_intra_cu32_rdcost_offset : 4;
+        unsigned int vctrl_sobel_str_intra_cu4_rdcost_offset : 4;
+        unsigned int vctrl_sobel_str_intra_cu8_rdcost_offset : 4;
+        unsigned int vctrl_sobel_str_intra_cu16_rdcost_offset : 4;
+        unsigned int vctrl_sobel_str_intra_cu32_rdcost_offset : 4;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_1_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_1_vctrl_skin_intra_cu4_rdcost_offset_START (0)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_1_vctrl_skin_intra_cu4_rdcost_offset_END (3)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_1_vctrl_skin_intra_cu8_rdcost_offset_START (4)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_1_vctrl_skin_intra_cu8_rdcost_offset_END (7)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_1_vctrl_skin_intra_cu16_rdcost_offset_START (8)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_1_vctrl_skin_intra_cu16_rdcost_offset_END (11)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_1_vctrl_skin_intra_cu32_rdcost_offset_START (12)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_1_vctrl_skin_intra_cu32_rdcost_offset_END (15)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_1_vctrl_sobel_str_intra_cu4_rdcost_offset_START (16)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_1_vctrl_sobel_str_intra_cu4_rdcost_offset_END (19)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_1_vctrl_sobel_str_intra_cu8_rdcost_offset_START (20)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_1_vctrl_sobel_str_intra_cu8_rdcost_offset_END (23)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_1_vctrl_sobel_str_intra_cu16_rdcost_offset_START (24)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_1_vctrl_sobel_str_intra_cu16_rdcost_offset_END (27)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_1_vctrl_sobel_str_intra_cu32_rdcost_offset_START (28)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_1_vctrl_sobel_str_intra_cu32_rdcost_offset_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_hedge_intra_cu4_rdcost_offset : 4;
+        unsigned int vctrl_hedge_intra_cu8_rdcost_offset : 4;
+        unsigned int vctrl_hedge_intra_cu16_rdcost_offset : 4;
+        unsigned int vctrl_hedge_intra_cu32_rdcost_offset : 4;
+        unsigned int vctrl_sobel_tex_intra_cu4_rdcost_offset : 4;
+        unsigned int vctrl_sobel_tex_intra_cu8_rdcost_offset : 4;
+        unsigned int vctrl_sobel_tex_intra_cu16_rdcost_offset : 4;
+        unsigned int vctrl_sobel_tex_intra_cu32_rdcost_offset : 4;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_2_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_2_vctrl_hedge_intra_cu4_rdcost_offset_START (0)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_2_vctrl_hedge_intra_cu4_rdcost_offset_END (3)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_2_vctrl_hedge_intra_cu8_rdcost_offset_START (4)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_2_vctrl_hedge_intra_cu8_rdcost_offset_END (7)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_2_vctrl_hedge_intra_cu16_rdcost_offset_START (8)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_2_vctrl_hedge_intra_cu16_rdcost_offset_END (11)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_2_vctrl_hedge_intra_cu32_rdcost_offset_START (12)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_2_vctrl_hedge_intra_cu32_rdcost_offset_END (15)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_2_vctrl_sobel_tex_intra_cu4_rdcost_offset_START (16)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_2_vctrl_sobel_tex_intra_cu4_rdcost_offset_END (19)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_2_vctrl_sobel_tex_intra_cu8_rdcost_offset_START (20)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_2_vctrl_sobel_tex_intra_cu8_rdcost_offset_END (23)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_2_vctrl_sobel_tex_intra_cu16_rdcost_offset_START (24)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_2_vctrl_sobel_tex_intra_cu16_rdcost_offset_END (27)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_2_vctrl_sobel_tex_intra_cu32_rdcost_offset_START (28)
+#define SOC_VENC_VEDU_VCTRL_INTRA_RDO_FACTOR_2_vctrl_sobel_tex_intra_cu32_rdcost_offset_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_norm_mrg_cu8_rdcost_offset : 4;
+        unsigned int vctrl_norm_mrg_cu16_rdcost_offset : 4;
+        unsigned int vctrl_norm_mrg_cu32_rdcost_offset : 4;
+        unsigned int vctrl_norm_mrg_cu64_rdcost_offset : 4;
+        unsigned int vctrl_strmov_mrg_cu8_rdcost_offset : 4;
+        unsigned int vctrl_strmov_mrg_cu16_rdcost_offset : 4;
+        unsigned int vctrl_strmov_mrg_cu32_rdcost_offset : 4;
+        unsigned int vctrl_strmov_mrg_cu64_rdcost_offset : 4;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_0_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_0_vctrl_norm_mrg_cu8_rdcost_offset_START (0)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_0_vctrl_norm_mrg_cu8_rdcost_offset_END (3)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_0_vctrl_norm_mrg_cu16_rdcost_offset_START (4)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_0_vctrl_norm_mrg_cu16_rdcost_offset_END (7)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_0_vctrl_norm_mrg_cu32_rdcost_offset_START (8)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_0_vctrl_norm_mrg_cu32_rdcost_offset_END (11)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_0_vctrl_norm_mrg_cu64_rdcost_offset_START (12)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_0_vctrl_norm_mrg_cu64_rdcost_offset_END (15)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_0_vctrl_strmov_mrg_cu8_rdcost_offset_START (16)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_0_vctrl_strmov_mrg_cu8_rdcost_offset_END (19)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_0_vctrl_strmov_mrg_cu16_rdcost_offset_START (20)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_0_vctrl_strmov_mrg_cu16_rdcost_offset_END (23)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_0_vctrl_strmov_mrg_cu32_rdcost_offset_START (24)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_0_vctrl_strmov_mrg_cu32_rdcost_offset_END (27)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_0_vctrl_strmov_mrg_cu64_rdcost_offset_START (28)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_0_vctrl_strmov_mrg_cu64_rdcost_offset_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_skin_mrg_cu8_rdcost_offset : 4;
+        unsigned int vctrl_skin_mrg_cu16_rdcost_offset : 4;
+        unsigned int vctrl_skin_mrg_cu32_rdcost_offset : 4;
+        unsigned int vctrl_skin_mrg_cu64_rdcost_offset : 4;
+        unsigned int vctrl_sobel_str_mrg_cu8_rdcost_offset : 4;
+        unsigned int vctrl_sobel_str_mrg_cu16_rdcost_offset : 4;
+        unsigned int vctrl_sobel_str_mrg_cu32_rdcost_offset : 4;
+        unsigned int vctrl_sobel_str_mrg_cu64_rdcost_offset : 4;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_1_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_1_vctrl_skin_mrg_cu8_rdcost_offset_START (0)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_1_vctrl_skin_mrg_cu8_rdcost_offset_END (3)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_1_vctrl_skin_mrg_cu16_rdcost_offset_START (4)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_1_vctrl_skin_mrg_cu16_rdcost_offset_END (7)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_1_vctrl_skin_mrg_cu32_rdcost_offset_START (8)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_1_vctrl_skin_mrg_cu32_rdcost_offset_END (11)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_1_vctrl_skin_mrg_cu64_rdcost_offset_START (12)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_1_vctrl_skin_mrg_cu64_rdcost_offset_END (15)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_1_vctrl_sobel_str_mrg_cu8_rdcost_offset_START (16)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_1_vctrl_sobel_str_mrg_cu8_rdcost_offset_END (19)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_1_vctrl_sobel_str_mrg_cu16_rdcost_offset_START (20)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_1_vctrl_sobel_str_mrg_cu16_rdcost_offset_END (23)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_1_vctrl_sobel_str_mrg_cu32_rdcost_offset_START (24)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_1_vctrl_sobel_str_mrg_cu32_rdcost_offset_END (27)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_1_vctrl_sobel_str_mrg_cu64_rdcost_offset_START (28)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_1_vctrl_sobel_str_mrg_cu64_rdcost_offset_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_hedge_mrg_cu8_rdcost_offset : 4;
+        unsigned int vctrl_hedge_mrg_cu16_rdcost_offset : 4;
+        unsigned int vctrl_hedge_mrg_cu32_rdcost_offset : 4;
+        unsigned int vctrl_hedge_mrg_cu64_rdcost_offset : 4;
+        unsigned int vctrl_sobel_tex_mrg_cu8_rdcost_offset : 4;
+        unsigned int vctrl_sobel_tex_mrg_cu16_rdcost_offset : 4;
+        unsigned int vctrl_sobel_tex_mrg_cu32_rdcost_offset : 4;
+        unsigned int vctrl_sobel_tex_mrg_cu64_rdcost_offset : 4;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_2_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_2_vctrl_hedge_mrg_cu8_rdcost_offset_START (0)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_2_vctrl_hedge_mrg_cu8_rdcost_offset_END (3)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_2_vctrl_hedge_mrg_cu16_rdcost_offset_START (4)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_2_vctrl_hedge_mrg_cu16_rdcost_offset_END (7)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_2_vctrl_hedge_mrg_cu32_rdcost_offset_START (8)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_2_vctrl_hedge_mrg_cu32_rdcost_offset_END (11)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_2_vctrl_hedge_mrg_cu64_rdcost_offset_START (12)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_2_vctrl_hedge_mrg_cu64_rdcost_offset_END (15)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_2_vctrl_sobel_tex_mrg_cu8_rdcost_offset_START (16)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_2_vctrl_sobel_tex_mrg_cu8_rdcost_offset_END (19)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_2_vctrl_sobel_tex_mrg_cu16_rdcost_offset_START (20)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_2_vctrl_sobel_tex_mrg_cu16_rdcost_offset_END (23)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_2_vctrl_sobel_tex_mrg_cu32_rdcost_offset_START (24)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_2_vctrl_sobel_tex_mrg_cu32_rdcost_offset_END (27)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_2_vctrl_sobel_tex_mrg_cu64_rdcost_offset_START (28)
+#define SOC_VENC_VEDU_VCTRL_MRG_RDO_FACTOR_2_vctrl_sobel_tex_mrg_cu64_rdcost_offset_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_norm_fme_cu8_rdcost_offset : 4;
+        unsigned int vctrl_norm_fme_cu16_rdcost_offset : 4;
+        unsigned int vctrl_norm_fme_cu32_rdcost_offset : 4;
+        unsigned int vctrl_norm_fme_cu64_rdcost_offset : 4;
+        unsigned int vctrl_strmov_fme_cu8_rdcost_offset : 4;
+        unsigned int vctrl_strmov_fme_cu16_rdcost_offset : 4;
+        unsigned int vctrl_strmov_fme_cu32_rdcost_offset : 4;
+        unsigned int vctrl_strmov_fme_cu64_rdcost_offset : 4;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_0_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_0_vctrl_norm_fme_cu8_rdcost_offset_START (0)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_0_vctrl_norm_fme_cu8_rdcost_offset_END (3)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_0_vctrl_norm_fme_cu16_rdcost_offset_START (4)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_0_vctrl_norm_fme_cu16_rdcost_offset_END (7)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_0_vctrl_norm_fme_cu32_rdcost_offset_START (8)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_0_vctrl_norm_fme_cu32_rdcost_offset_END (11)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_0_vctrl_norm_fme_cu64_rdcost_offset_START (12)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_0_vctrl_norm_fme_cu64_rdcost_offset_END (15)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_0_vctrl_strmov_fme_cu8_rdcost_offset_START (16)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_0_vctrl_strmov_fme_cu8_rdcost_offset_END (19)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_0_vctrl_strmov_fme_cu16_rdcost_offset_START (20)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_0_vctrl_strmov_fme_cu16_rdcost_offset_END (23)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_0_vctrl_strmov_fme_cu32_rdcost_offset_START (24)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_0_vctrl_strmov_fme_cu32_rdcost_offset_END (27)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_0_vctrl_strmov_fme_cu64_rdcost_offset_START (28)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_0_vctrl_strmov_fme_cu64_rdcost_offset_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_skin_fme_cu8_rdcost_offset : 4;
+        unsigned int vctrl_skin_fme_cu16_rdcost_offset : 4;
+        unsigned int vctrl_skin_fme_cu32_rdcost_offset : 4;
+        unsigned int vctrl_skin_fme_cu64_rdcost_offset : 4;
+        unsigned int vctrl_sobel_str_fme_cu8_rdcost_offset : 4;
+        unsigned int vctrl_sobel_str_fme_cu16_rdcost_offset : 4;
+        unsigned int vctrl_sobel_str_fme_cu32_rdcost_offset : 4;
+        unsigned int vctrl_sobel_str_fme_cu64_rdcost_offset : 4;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_1_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_1_vctrl_skin_fme_cu8_rdcost_offset_START (0)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_1_vctrl_skin_fme_cu8_rdcost_offset_END (3)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_1_vctrl_skin_fme_cu16_rdcost_offset_START (4)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_1_vctrl_skin_fme_cu16_rdcost_offset_END (7)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_1_vctrl_skin_fme_cu32_rdcost_offset_START (8)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_1_vctrl_skin_fme_cu32_rdcost_offset_END (11)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_1_vctrl_skin_fme_cu64_rdcost_offset_START (12)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_1_vctrl_skin_fme_cu64_rdcost_offset_END (15)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_1_vctrl_sobel_str_fme_cu8_rdcost_offset_START (16)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_1_vctrl_sobel_str_fme_cu8_rdcost_offset_END (19)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_1_vctrl_sobel_str_fme_cu16_rdcost_offset_START (20)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_1_vctrl_sobel_str_fme_cu16_rdcost_offset_END (23)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_1_vctrl_sobel_str_fme_cu32_rdcost_offset_START (24)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_1_vctrl_sobel_str_fme_cu32_rdcost_offset_END (27)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_1_vctrl_sobel_str_fme_cu64_rdcost_offset_START (28)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_1_vctrl_sobel_str_fme_cu64_rdcost_offset_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vctrl_hedge_fme_cu8_rdcost_offset : 4;
+        unsigned int vctrl_hedge_fme_cu16_rdcost_offset : 4;
+        unsigned int vctrl_hedge_fme_cu32_rdcost_offset : 4;
+        unsigned int vctrl_hedge_fme_cu64_rdcost_offset : 4;
+        unsigned int vctrl_sobel_tex_fme_cu8_rdcost_offset : 4;
+        unsigned int vctrl_sobel_tex_fme_cu16_rdcost_offset : 4;
+        unsigned int vctrl_sobel_tex_fme_cu32_rdcost_offset : 4;
+        unsigned int vctrl_sobel_tex_fme_cu64_rdcost_offset : 4;
+    } reg;
+} SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_2_UNION;
+#endif
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_2_vctrl_hedge_fme_cu8_rdcost_offset_START (0)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_2_vctrl_hedge_fme_cu8_rdcost_offset_END (3)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_2_vctrl_hedge_fme_cu16_rdcost_offset_START (4)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_2_vctrl_hedge_fme_cu16_rdcost_offset_END (7)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_2_vctrl_hedge_fme_cu32_rdcost_offset_START (8)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_2_vctrl_hedge_fme_cu32_rdcost_offset_END (11)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_2_vctrl_hedge_fme_cu64_rdcost_offset_START (12)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_2_vctrl_hedge_fme_cu64_rdcost_offset_END (15)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_2_vctrl_sobel_tex_fme_cu8_rdcost_offset_START (16)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_2_vctrl_sobel_tex_fme_cu8_rdcost_offset_END (19)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_2_vctrl_sobel_tex_fme_cu16_rdcost_offset_START (20)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_2_vctrl_sobel_tex_fme_cu16_rdcost_offset_END (23)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_2_vctrl_sobel_tex_fme_cu32_rdcost_offset_START (24)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_2_vctrl_sobel_tex_fme_cu32_rdcost_offset_END (27)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_2_vctrl_sobel_tex_fme_cu64_rdcost_offset_START (28)
+#define SOC_VENC_VEDU_VCTRL_FME_RDO_FACTOR_2_vctrl_sobel_tex_fme_cu64_rdcost_offset_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pme_cost_lamda0 : 4;
+        unsigned int pme_cost_lamda1 : 4;
+        unsigned int pme_cost_lamda2 : 4;
+        unsigned int pme_new_cost_en : 2;
+        unsigned int reserved_0 : 2;
+        unsigned int pme_cost_lamda_en : 2;
+        unsigned int pme_mvp3median_en : 1;
+        unsigned int reserved_1 : 13;
+    } reg;
+} SOC_VENC_VEDU_PME_NEW_COST_UNION;
+#endif
+#define SOC_VENC_VEDU_PME_NEW_COST_pme_cost_lamda0_START (0)
+#define SOC_VENC_VEDU_PME_NEW_COST_pme_cost_lamda0_END (3)
+#define SOC_VENC_VEDU_PME_NEW_COST_pme_cost_lamda1_START (4)
+#define SOC_VENC_VEDU_PME_NEW_COST_pme_cost_lamda1_END (7)
+#define SOC_VENC_VEDU_PME_NEW_COST_pme_cost_lamda2_START (8)
+#define SOC_VENC_VEDU_PME_NEW_COST_pme_cost_lamda2_END (11)
+#define SOC_VENC_VEDU_PME_NEW_COST_pme_new_cost_en_START (12)
+#define SOC_VENC_VEDU_PME_NEW_COST_pme_new_cost_en_END (13)
+#define SOC_VENC_VEDU_PME_NEW_COST_pme_cost_lamda_en_START (16)
+#define SOC_VENC_VEDU_PME_NEW_COST_pme_cost_lamda_en_END (17)
+#define SOC_VENC_VEDU_PME_NEW_COST_pme_mvp3median_en_START (18)
+#define SOC_VENC_VEDU_PME_NEW_COST_pme_mvp3median_en_END (18)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pme_l0_cost_offset : 16;
+        unsigned int pme_l1_cost_offset : 16;
+    } reg;
+} SOC_VENC_VEDU_PME_COST_OFFSET_UNION;
+#endif
+#define SOC_VENC_VEDU_PME_COST_OFFSET_pme_l0_cost_offset_START (0)
+#define SOC_VENC_VEDU_PME_COST_OFFSET_pme_l0_cost_offset_END (15)
+#define SOC_VENC_VEDU_PME_COST_OFFSET_pme_l1_cost_offset_START (16)
+#define SOC_VENC_VEDU_PME_COST_OFFSET_pme_l1_cost_offset_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pme_adjust_pmemv_dist_times : 8;
+        unsigned int pme_adjust_pmemv_en : 1;
+        unsigned int reserved : 23;
+    } reg;
+} SOC_VENC_VEDU_PME_ADJUST_PMEMV_H264_UNION;
+#endif
+#define SOC_VENC_VEDU_PME_ADJUST_PMEMV_H264_pme_adjust_pmemv_dist_times_START (0)
+#define SOC_VENC_VEDU_PME_ADJUST_PMEMV_H264_pme_adjust_pmemv_dist_times_END (7)
+#define SOC_VENC_VEDU_PME_ADJUST_PMEMV_H264_pme_adjust_pmemv_en_START (8)
+#define SOC_VENC_VEDU_PME_ADJUST_PMEMV_H264_pme_adjust_pmemv_en_END (8)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pme_intrablk_det_cost_thr0 : 16;
+        unsigned int pme_pskip_mvy_consistency_thr : 8;
+        unsigned int pme_pskip_mvx_consistency_thr : 8;
+    } reg;
+} SOC_VENC_VEDU_PME_INTRABLK_DET_UNION;
+#endif
+#define SOC_VENC_VEDU_PME_INTRABLK_DET_pme_intrablk_det_cost_thr0_START (0)
+#define SOC_VENC_VEDU_PME_INTRABLK_DET_pme_intrablk_det_cost_thr0_END (15)
+#define SOC_VENC_VEDU_PME_INTRABLK_DET_pme_pskip_mvy_consistency_thr_START (16)
+#define SOC_VENC_VEDU_PME_INTRABLK_DET_pme_pskip_mvy_consistency_thr_END (23)
+#define SOC_VENC_VEDU_PME_INTRABLK_DET_pme_pskip_mvx_consistency_thr_START (24)
+#define SOC_VENC_VEDU_PME_INTRABLK_DET_pme_pskip_mvx_consistency_thr_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pme_intrablk_det_mv_dif_thr1 : 8;
+        unsigned int pme_intrablk_det_mv_dif_thr0 : 8;
+        unsigned int pme_intrablk_det_mvy_thr : 8;
+        unsigned int pme_intrablk_det_mvx_thr : 8;
+    } reg;
+} SOC_VENC_VEDU_PME_INTRABLK_DET_THR_UNION;
+#endif
+#define SOC_VENC_VEDU_PME_INTRABLK_DET_THR_pme_intrablk_det_mv_dif_thr1_START (0)
+#define SOC_VENC_VEDU_PME_INTRABLK_DET_THR_pme_intrablk_det_mv_dif_thr1_END (7)
+#define SOC_VENC_VEDU_PME_INTRABLK_DET_THR_pme_intrablk_det_mv_dif_thr0_START (8)
+#define SOC_VENC_VEDU_PME_INTRABLK_DET_THR_pme_intrablk_det_mv_dif_thr0_END (15)
+#define SOC_VENC_VEDU_PME_INTRABLK_DET_THR_pme_intrablk_det_mvy_thr_START (16)
+#define SOC_VENC_VEDU_PME_INTRABLK_DET_THR_pme_intrablk_det_mvy_thr_END (23)
+#define SOC_VENC_VEDU_PME_INTRABLK_DET_THR_pme_intrablk_det_mvx_thr_START (24)
+#define SOC_VENC_VEDU_PME_INTRABLK_DET_THR_pme_intrablk_det_mvx_thr_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pme_skin_u_max_thr : 8;
+        unsigned int pme_skin_u_min_thr : 8;
+        unsigned int pme_skin_v_max_thr : 8;
+        unsigned int pme_skin_v_min_thr : 8;
+    } reg;
+} SOC_VENC_VEDU_PME_SKIN_THR_UNION;
+#endif
+#define SOC_VENC_VEDU_PME_SKIN_THR_pme_skin_u_max_thr_START (0)
+#define SOC_VENC_VEDU_PME_SKIN_THR_pme_skin_u_max_thr_END (7)
+#define SOC_VENC_VEDU_PME_SKIN_THR_pme_skin_u_min_thr_START (8)
+#define SOC_VENC_VEDU_PME_SKIN_THR_pme_skin_u_min_thr_END (15)
+#define SOC_VENC_VEDU_PME_SKIN_THR_pme_skin_v_max_thr_START (16)
+#define SOC_VENC_VEDU_PME_SKIN_THR_pme_skin_v_max_thr_END (23)
+#define SOC_VENC_VEDU_PME_SKIN_THR_pme_skin_v_min_thr_START (24)
+#define SOC_VENC_VEDU_PME_SKIN_THR_pme_skin_v_min_thr_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pme_skin_num : 9;
+        unsigned int pme_strong_edge_thr : 8;
+        unsigned int pme_strong_edge_cnt : 5;
+        unsigned int pme_still_scene_thr : 9;
+        unsigned int reserved : 1;
+    } reg;
+} SOC_VENC_VEDU_PME_STRONG_EDGE_UNION;
+#endif
+#define SOC_VENC_VEDU_PME_STRONG_EDGE_pme_skin_num_START (0)
+#define SOC_VENC_VEDU_PME_STRONG_EDGE_pme_skin_num_END (8)
+#define SOC_VENC_VEDU_PME_STRONG_EDGE_pme_strong_edge_thr_START (9)
+#define SOC_VENC_VEDU_PME_STRONG_EDGE_pme_strong_edge_thr_END (16)
+#define SOC_VENC_VEDU_PME_STRONG_EDGE_pme_strong_edge_cnt_START (17)
+#define SOC_VENC_VEDU_PME_STRONG_EDGE_pme_strong_edge_cnt_END (21)
+#define SOC_VENC_VEDU_PME_STRONG_EDGE_pme_still_scene_thr_START (22)
+#define SOC_VENC_VEDU_PME_STRONG_EDGE_pme_still_scene_thr_END (30)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pme_move_scene_thr : 8;
+        unsigned int pme_move_sad_thr : 14;
+        unsigned int reserved : 10;
+    } reg;
+} SOC_VENC_VEDU_PME_LARGE_MOVE_THR_UNION;
+#endif
+#define SOC_VENC_VEDU_PME_LARGE_MOVE_THR_pme_move_scene_thr_START (0)
+#define SOC_VENC_VEDU_PME_LARGE_MOVE_THR_pme_move_scene_thr_END (7)
+#define SOC_VENC_VEDU_PME_LARGE_MOVE_THR_pme_move_sad_thr_START (8)
+#define SOC_VENC_VEDU_PME_LARGE_MOVE_THR_pme_move_sad_thr_END (21)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pme_interdiff_max_min_madi_abs : 8;
+        unsigned int pme_interdiff_max_min_madi_times : 8;
+        unsigned int pme_interstrongedge_madi_thr : 8;
+        unsigned int reserved : 8;
+    } reg;
+} SOC_VENC_VEDU_PME_INTER_STRONG_EDGE_UNION;
+#endif
+#define SOC_VENC_VEDU_PME_INTER_STRONG_EDGE_pme_interdiff_max_min_madi_abs_START (0)
+#define SOC_VENC_VEDU_PME_INTER_STRONG_EDGE_pme_interdiff_max_min_madi_abs_END (7)
+#define SOC_VENC_VEDU_PME_INTER_STRONG_EDGE_pme_interdiff_max_min_madi_times_START (8)
+#define SOC_VENC_VEDU_PME_INTER_STRONG_EDGE_pme_interdiff_max_min_madi_times_END (15)
+#define SOC_VENC_VEDU_PME_INTER_STRONG_EDGE_pme_interstrongedge_madi_thr_START (16)
+#define SOC_VENC_VEDU_PME_INTER_STRONG_EDGE_pme_interstrongedge_madi_thr_END (23)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_strong_edge_thr_u : 8;
+        unsigned int reserved_0 : 2;
+        unsigned int vcpi_strong_edge_cnt_u : 5;
+        unsigned int reserved_1 : 1;
+        unsigned int vcpi_strong_edge_thr_v : 8;
+        unsigned int reserved_2 : 2;
+        unsigned int vcpi_strong_edge_cnt_v : 5;
+        unsigned int reserved_3 : 1;
+    } reg;
+} SOC_VENC_VEDU_PME_CHROMA_STRONG_EDGE_UNION;
+#endif
+#define SOC_VENC_VEDU_PME_CHROMA_STRONG_EDGE_vcpi_strong_edge_thr_u_START (0)
+#define SOC_VENC_VEDU_PME_CHROMA_STRONG_EDGE_vcpi_strong_edge_thr_u_END (7)
+#define SOC_VENC_VEDU_PME_CHROMA_STRONG_EDGE_vcpi_strong_edge_cnt_u_START (10)
+#define SOC_VENC_VEDU_PME_CHROMA_STRONG_EDGE_vcpi_strong_edge_cnt_u_END (14)
+#define SOC_VENC_VEDU_PME_CHROMA_STRONG_EDGE_vcpi_strong_edge_thr_v_START (16)
+#define SOC_VENC_VEDU_PME_CHROMA_STRONG_EDGE_vcpi_strong_edge_thr_v_END (23)
+#define SOC_VENC_VEDU_PME_CHROMA_STRONG_EDGE_vcpi_strong_edge_cnt_v_START (26)
+#define SOC_VENC_VEDU_PME_CHROMA_STRONG_EDGE_vcpi_strong_edge_cnt_v_END (30)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_chroma_sad_thr_offset : 8;
+        unsigned int vcpi_chroma_sad_thr_gain : 4;
+        unsigned int reserved : 20;
+    } reg;
+} SOC_VENC_VEDU_CHROMA_SAD_THR_UNION;
+#endif
+#define SOC_VENC_VEDU_CHROMA_SAD_THR_vcpi_chroma_sad_thr_offset_START (0)
+#define SOC_VENC_VEDU_CHROMA_SAD_THR_vcpi_chroma_sad_thr_offset_END (7)
+#define SOC_VENC_VEDU_CHROMA_SAD_THR_vcpi_chroma_sad_thr_gain_START (8)
+#define SOC_VENC_VEDU_CHROMA_SAD_THR_vcpi_chroma_sad_thr_gain_END (11)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_chroma_u0_thr_min : 8;
+        unsigned int vcpi_chroma_u0_thr_max : 8;
+        unsigned int vcpi_chroma_v0_thr_min : 8;
+        unsigned int vcpi_chroma_v0_thr_max : 8;
+    } reg;
+} SOC_VENC_VEDU_CHROMA_FG_THR_UNION;
+#endif
+#define SOC_VENC_VEDU_CHROMA_FG_THR_vcpi_chroma_u0_thr_min_START (0)
+#define SOC_VENC_VEDU_CHROMA_FG_THR_vcpi_chroma_u0_thr_min_END (7)
+#define SOC_VENC_VEDU_CHROMA_FG_THR_vcpi_chroma_u0_thr_max_START (8)
+#define SOC_VENC_VEDU_CHROMA_FG_THR_vcpi_chroma_u0_thr_max_END (15)
+#define SOC_VENC_VEDU_CHROMA_FG_THR_vcpi_chroma_v0_thr_min_START (16)
+#define SOC_VENC_VEDU_CHROMA_FG_THR_vcpi_chroma_v0_thr_min_END (23)
+#define SOC_VENC_VEDU_CHROMA_FG_THR_vcpi_chroma_v0_thr_max_START (24)
+#define SOC_VENC_VEDU_CHROMA_FG_THR_vcpi_chroma_v0_thr_max_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_chroma_u1_thr_min : 8;
+        unsigned int vcpi_chroma_u1_thr_max : 8;
+        unsigned int vcpi_chroma_v1_thr_min : 8;
+        unsigned int vcpi_chroma_v1_thr_max : 8;
+    } reg;
+} SOC_VENC_VEDU_CHROMA_BG_THR_UNION;
+#endif
+#define SOC_VENC_VEDU_CHROMA_BG_THR_vcpi_chroma_u1_thr_min_START (0)
+#define SOC_VENC_VEDU_CHROMA_BG_THR_vcpi_chroma_u1_thr_min_END (7)
+#define SOC_VENC_VEDU_CHROMA_BG_THR_vcpi_chroma_u1_thr_max_START (8)
+#define SOC_VENC_VEDU_CHROMA_BG_THR_vcpi_chroma_u1_thr_max_END (15)
+#define SOC_VENC_VEDU_CHROMA_BG_THR_vcpi_chroma_v1_thr_min_START (16)
+#define SOC_VENC_VEDU_CHROMA_BG_THR_vcpi_chroma_v1_thr_min_END (23)
+#define SOC_VENC_VEDU_CHROMA_BG_THR_vcpi_chroma_v1_thr_max_START (24)
+#define SOC_VENC_VEDU_CHROMA_BG_THR_vcpi_chroma_v1_thr_max_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_chroma_uv0_thr_min : 9;
+        unsigned int reserved_0 : 7;
+        unsigned int vcpi_chroma_uv0_thr_max : 9;
+        unsigned int reserved_1 : 7;
+    } reg;
+} SOC_VENC_VEDU_CHROMA_SUM_FG_THR_UNION;
+#endif
+#define SOC_VENC_VEDU_CHROMA_SUM_FG_THR_vcpi_chroma_uv0_thr_min_START (0)
+#define SOC_VENC_VEDU_CHROMA_SUM_FG_THR_vcpi_chroma_uv0_thr_min_END (8)
+#define SOC_VENC_VEDU_CHROMA_SUM_FG_THR_vcpi_chroma_uv0_thr_max_START (16)
+#define SOC_VENC_VEDU_CHROMA_SUM_FG_THR_vcpi_chroma_uv0_thr_max_END (24)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_chroma_uv1_thr_min : 9;
+        unsigned int reserved_0 : 7;
+        unsigned int vcpi_chroma_uv1_thr_max : 9;
+        unsigned int reserved_1 : 7;
+    } reg;
+} SOC_VENC_VEDU_CHROMA_SUM_BG_THR_UNION;
+#endif
+#define SOC_VENC_VEDU_CHROMA_SUM_BG_THR_vcpi_chroma_uv1_thr_min_START (0)
+#define SOC_VENC_VEDU_CHROMA_SUM_BG_THR_vcpi_chroma_uv1_thr_min_END (8)
+#define SOC_VENC_VEDU_CHROMA_SUM_BG_THR_vcpi_chroma_uv1_thr_max_START (16)
+#define SOC_VENC_VEDU_CHROMA_SUM_BG_THR_vcpi_chroma_uv1_thr_max_END (24)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_chroma_count0_thr_min : 9;
+        unsigned int reserved_0 : 7;
+        unsigned int vcpi_chroma_count0_thr_max : 9;
+        unsigned int reserved_1 : 7;
+    } reg;
+} SOC_VENC_VEDU_CHROMA_FG_COUNT_THR_UNION;
+#endif
+#define SOC_VENC_VEDU_CHROMA_FG_COUNT_THR_vcpi_chroma_count0_thr_min_START (0)
+#define SOC_VENC_VEDU_CHROMA_FG_COUNT_THR_vcpi_chroma_count0_thr_min_END (8)
+#define SOC_VENC_VEDU_CHROMA_FG_COUNT_THR_vcpi_chroma_count0_thr_max_START (16)
+#define SOC_VENC_VEDU_CHROMA_FG_COUNT_THR_vcpi_chroma_count0_thr_max_END (24)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_chroma_count1_thr_min : 9;
+        unsigned int reserved_0 : 7;
+        unsigned int vcpi_chroma_count1_thr_max : 9;
+        unsigned int reserved_1 : 7;
+    } reg;
+} SOC_VENC_VEDU_CHROMA_BG_COUNT_THR_UNION;
+#endif
+#define SOC_VENC_VEDU_CHROMA_BG_COUNT_THR_vcpi_chroma_count1_thr_min_START (0)
+#define SOC_VENC_VEDU_CHROMA_BG_COUNT_THR_vcpi_chroma_count1_thr_min_END (8)
+#define SOC_VENC_VEDU_CHROMA_BG_COUNT_THR_vcpi_chroma_count1_thr_max_START (16)
+#define SOC_VENC_VEDU_CHROMA_BG_COUNT_THR_vcpi_chroma_count1_thr_max_END (24)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_move_scene_mv_thr : 13;
+        unsigned int reserved_0 : 3;
+        unsigned int vcpi_move_scene_mv_en : 1;
+        unsigned int reserved_1 : 15;
+    } reg;
+} SOC_VENC_VEDU_PME_MOVE_SCENE_THR_UNION;
+#endif
+#define SOC_VENC_VEDU_PME_MOVE_SCENE_THR_vcpi_move_scene_mv_thr_START (0)
+#define SOC_VENC_VEDU_PME_MOVE_SCENE_THR_vcpi_move_scene_mv_thr_END (12)
+#define SOC_VENC_VEDU_PME_MOVE_SCENE_THR_vcpi_move_scene_mv_en_START (16)
+#define SOC_VENC_VEDU_PME_MOVE_SCENE_THR_vcpi_move_scene_mv_en_END (16)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_new_madi_th0 : 8;
+        unsigned int vcpi_new_madi_th1 : 8;
+        unsigned int vcpi_new_madi_th2 : 8;
+        unsigned int vcpi_new_madi_th3 : 8;
+    } reg;
+} SOC_VENC_VEDU_PME_NEW_MADI_TH_UNION;
+#endif
+#define SOC_VENC_VEDU_PME_NEW_MADI_TH_vcpi_new_madi_th0_START (0)
+#define SOC_VENC_VEDU_PME_NEW_MADI_TH_vcpi_new_madi_th0_END (7)
+#define SOC_VENC_VEDU_PME_NEW_MADI_TH_vcpi_new_madi_th1_START (8)
+#define SOC_VENC_VEDU_PME_NEW_MADI_TH_vcpi_new_madi_th1_END (15)
+#define SOC_VENC_VEDU_PME_NEW_MADI_TH_vcpi_new_madi_th2_START (16)
+#define SOC_VENC_VEDU_PME_NEW_MADI_TH_vcpi_new_madi_th2_END (23)
+#define SOC_VENC_VEDU_PME_NEW_MADI_TH_vcpi_new_madi_th3_START (24)
+#define SOC_VENC_VEDU_PME_NEW_MADI_TH_vcpi_new_madi_th3_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_new_lambda : 8;
+        unsigned int reserved : 24;
+    } reg;
+} SOC_VENC_VEDU_PME_NEW_LAMBDA_UNION;
+#endif
+#define SOC_VENC_VEDU_PME_NEW_LAMBDA_vcpi_new_lambda_START (0)
+#define SOC_VENC_VEDU_PME_NEW_LAMBDA_vcpi_new_lambda_END (7)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_dblk_beta : 4;
+        unsigned int vcpi_dblk_alpha : 4;
+        unsigned int vcpi_dblk_filter_flag : 2;
+        unsigned int reserved : 22;
+    } reg;
+} SOC_VENC_VEDU_VCPI_DBLKCFG_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_DBLKCFG_vcpi_dblk_beta_START (0)
+#define SOC_VENC_VEDU_VCPI_DBLKCFG_vcpi_dblk_beta_END (3)
+#define SOC_VENC_VEDU_VCPI_DBLKCFG_vcpi_dblk_alpha_START (4)
+#define SOC_VENC_VEDU_VCPI_DBLKCFG_vcpi_dblk_alpha_END (7)
+#define SOC_VENC_VEDU_VCPI_DBLKCFG_vcpi_dblk_filter_flag_START (8)
+#define SOC_VENC_VEDU_VCPI_DBLKCFG_vcpi_dblk_filter_flag_END (9)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int fme_pu8_bias_cost : 16;
+        unsigned int fme_pu16_bias_cost : 16;
+    } reg;
+} SOC_VENC_VEDU_FME_BIAS_COST0_UNION;
+#endif
+#define SOC_VENC_VEDU_FME_BIAS_COST0_fme_pu8_bias_cost_START (0)
+#define SOC_VENC_VEDU_FME_BIAS_COST0_fme_pu8_bias_cost_END (15)
+#define SOC_VENC_VEDU_FME_BIAS_COST0_fme_pu16_bias_cost_START (16)
+#define SOC_VENC_VEDU_FME_BIAS_COST0_fme_pu16_bias_cost_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int fme_pu32_bias_cost : 16;
+        unsigned int fme_pu64_bias_cost : 16;
+    } reg;
+} SOC_VENC_VEDU_FME_BIAS_COST1_UNION;
+#endif
+#define SOC_VENC_VEDU_FME_BIAS_COST1_fme_pu32_bias_cost_START (0)
+#define SOC_VENC_VEDU_FME_BIAS_COST1_fme_pu32_bias_cost_END (15)
+#define SOC_VENC_VEDU_FME_BIAS_COST1_fme_pu64_bias_cost_START (16)
+#define SOC_VENC_VEDU_FME_BIAS_COST1_fme_pu64_bias_cost_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int mrg_pu8_bias_cost : 16;
+        unsigned int mrg_pu16_bias_cost : 16;
+    } reg;
+} SOC_VENC_VEDU_MRG_BIAS_COST0_UNION;
+#endif
+#define SOC_VENC_VEDU_MRG_BIAS_COST0_mrg_pu8_bias_cost_START (0)
+#define SOC_VENC_VEDU_MRG_BIAS_COST0_mrg_pu8_bias_cost_END (15)
+#define SOC_VENC_VEDU_MRG_BIAS_COST0_mrg_pu16_bias_cost_START (16)
+#define SOC_VENC_VEDU_MRG_BIAS_COST0_mrg_pu16_bias_cost_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int mrg_pu32_bias_cost : 16;
+        unsigned int mrg_pu64_bias_cost : 16;
+    } reg;
+} SOC_VENC_VEDU_MRG_BIAS_COST1_UNION;
+#endif
+#define SOC_VENC_VEDU_MRG_BIAS_COST1_mrg_pu32_bias_cost_START (0)
+#define SOC_VENC_VEDU_MRG_BIAS_COST1_mrg_pu32_bias_cost_END (15)
+#define SOC_VENC_VEDU_MRG_BIAS_COST1_mrg_pu64_bias_cost_START (16)
+#define SOC_VENC_VEDU_MRG_BIAS_COST1_mrg_pu64_bias_cost_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int mrg_pu8_abs_offset : 16;
+        unsigned int mrg_pu16_abs_offset : 16;
+    } reg;
+} SOC_VENC_VEDU_MRG_ABS_OFFSET0_UNION;
+#endif
+#define SOC_VENC_VEDU_MRG_ABS_OFFSET0_mrg_pu8_abs_offset_START (0)
+#define SOC_VENC_VEDU_MRG_ABS_OFFSET0_mrg_pu8_abs_offset_END (15)
+#define SOC_VENC_VEDU_MRG_ABS_OFFSET0_mrg_pu16_abs_offset_START (16)
+#define SOC_VENC_VEDU_MRG_ABS_OFFSET0_mrg_pu16_abs_offset_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int mrg_pu32_abs_offset : 16;
+        unsigned int mrg_pu64_abs_offset : 16;
+    } reg;
+} SOC_VENC_VEDU_MRG_ABS_OFFSET1_UNION;
+#endif
+#define SOC_VENC_VEDU_MRG_ABS_OFFSET1_mrg_pu32_abs_offset_START (0)
+#define SOC_VENC_VEDU_MRG_ABS_OFFSET1_mrg_pu32_abs_offset_END (15)
+#define SOC_VENC_VEDU_MRG_ABS_OFFSET1_mrg_pu64_abs_offset_START (16)
+#define SOC_VENC_VEDU_MRG_ABS_OFFSET1_mrg_pu64_abs_offset_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int cu8_fz_weight : 4;
+        unsigned int cu16_fz_weight : 4;
+        unsigned int cu32_fz_weight : 4;
+        unsigned int cu64_fz_weight : 4;
+        unsigned int cu8_fz_adapt_weight : 4;
+        unsigned int cu16_fz_adapt_weight : 4;
+        unsigned int cu32_fz_adapt_weight : 4;
+        unsigned int cu64_fz_adapt_weight : 4;
+    } reg;
+} SOC_VENC_VEDU_MRG_ADJ_WEIGHT_UNION;
+#endif
+#define SOC_VENC_VEDU_MRG_ADJ_WEIGHT_cu8_fz_weight_START (0)
+#define SOC_VENC_VEDU_MRG_ADJ_WEIGHT_cu8_fz_weight_END (3)
+#define SOC_VENC_VEDU_MRG_ADJ_WEIGHT_cu16_fz_weight_START (4)
+#define SOC_VENC_VEDU_MRG_ADJ_WEIGHT_cu16_fz_weight_END (7)
+#define SOC_VENC_VEDU_MRG_ADJ_WEIGHT_cu32_fz_weight_START (8)
+#define SOC_VENC_VEDU_MRG_ADJ_WEIGHT_cu32_fz_weight_END (11)
+#define SOC_VENC_VEDU_MRG_ADJ_WEIGHT_cu64_fz_weight_START (12)
+#define SOC_VENC_VEDU_MRG_ADJ_WEIGHT_cu64_fz_weight_END (15)
+#define SOC_VENC_VEDU_MRG_ADJ_WEIGHT_cu8_fz_adapt_weight_START (16)
+#define SOC_VENC_VEDU_MRG_ADJ_WEIGHT_cu8_fz_adapt_weight_END (19)
+#define SOC_VENC_VEDU_MRG_ADJ_WEIGHT_cu16_fz_adapt_weight_START (20)
+#define SOC_VENC_VEDU_MRG_ADJ_WEIGHT_cu16_fz_adapt_weight_END (23)
+#define SOC_VENC_VEDU_MRG_ADJ_WEIGHT_cu32_fz_adapt_weight_START (24)
+#define SOC_VENC_VEDU_MRG_ADJ_WEIGHT_cu32_fz_adapt_weight_END (27)
+#define SOC_VENC_VEDU_MRG_ADJ_WEIGHT_cu64_fz_adapt_weight_START (28)
+#define SOC_VENC_VEDU_MRG_ADJ_WEIGHT_cu64_fz_adapt_weight_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int intra_bit_weight : 4;
+        unsigned int reserved : 28;
+    } reg;
+} SOC_VENC_VEDU_INTRA_BIT_WEIGHT_UNION;
+#endif
+#define SOC_VENC_VEDU_INTRA_BIT_WEIGHT_intra_bit_weight_START (0)
+#define SOC_VENC_VEDU_INTRA_BIT_WEIGHT_intra_bit_weight_END (3)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int intra_cu16_rdo_cost_offset : 16;
+        unsigned int intra_cu32_rdo_cost_offset : 16;
+    } reg;
+} SOC_VENC_VEDU_INTRA_RDO_COST_OFFSET_0_UNION;
+#endif
+#define SOC_VENC_VEDU_INTRA_RDO_COST_OFFSET_0_intra_cu16_rdo_cost_offset_START (0)
+#define SOC_VENC_VEDU_INTRA_RDO_COST_OFFSET_0_intra_cu16_rdo_cost_offset_END (15)
+#define SOC_VENC_VEDU_INTRA_RDO_COST_OFFSET_0_intra_cu32_rdo_cost_offset_START (16)
+#define SOC_VENC_VEDU_INTRA_RDO_COST_OFFSET_0_intra_cu32_rdo_cost_offset_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int intra_cu4_rdo_cost_offset : 16;
+        unsigned int intra_cu8_rdo_cost_offset : 16;
+    } reg;
+} SOC_VENC_VEDU_INTRA_RDO_COST_OFFSET_1_UNION;
+#endif
+#define SOC_VENC_VEDU_INTRA_RDO_COST_OFFSET_1_intra_cu4_rdo_cost_offset_START (0)
+#define SOC_VENC_VEDU_INTRA_RDO_COST_OFFSET_1_intra_cu4_rdo_cost_offset_END (15)
+#define SOC_VENC_VEDU_INTRA_RDO_COST_OFFSET_1_intra_cu8_rdo_cost_offset_START (16)
+#define SOC_VENC_VEDU_INTRA_RDO_COST_OFFSET_1_intra_cu8_rdo_cost_offset_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int intra_cu16_non_dc_mode_offset : 16;
+        unsigned int intra_cu32_non_dc_mode_offset : 16;
+    } reg;
+} SOC_VENC_VEDU_INTRA_NO_DC_COST_OFFSET_0_UNION;
+#endif
+#define SOC_VENC_VEDU_INTRA_NO_DC_COST_OFFSET_0_intra_cu16_non_dc_mode_offset_START (0)
+#define SOC_VENC_VEDU_INTRA_NO_DC_COST_OFFSET_0_intra_cu16_non_dc_mode_offset_END (15)
+#define SOC_VENC_VEDU_INTRA_NO_DC_COST_OFFSET_0_intra_cu32_non_dc_mode_offset_START (16)
+#define SOC_VENC_VEDU_INTRA_NO_DC_COST_OFFSET_0_intra_cu32_non_dc_mode_offset_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int intra_cu4_non_dc_mode_offset : 16;
+        unsigned int intra_cu8_non_dc_mode_offset : 16;
+    } reg;
+} SOC_VENC_VEDU_INTRA_NO_DC_COST_OFFSET_1_UNION;
+#endif
+#define SOC_VENC_VEDU_INTRA_NO_DC_COST_OFFSET_1_intra_cu4_non_dc_mode_offset_START (0)
+#define SOC_VENC_VEDU_INTRA_NO_DC_COST_OFFSET_1_intra_cu4_non_dc_mode_offset_END (15)
+#define SOC_VENC_VEDU_INTRA_NO_DC_COST_OFFSET_1_intra_cu8_non_dc_mode_offset_START (16)
+#define SOC_VENC_VEDU_INTRA_NO_DC_COST_OFFSET_1_intra_cu8_non_dc_mode_offset_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int intra_h264_rdo_cost_offset : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_VEDU_INTRA_RDO_COST_OFFSET_3_UNION;
+#endif
+#define SOC_VENC_VEDU_INTRA_RDO_COST_OFFSET_3_intra_h264_rdo_cost_offset_START (0)
+#define SOC_VENC_VEDU_INTRA_RDO_COST_OFFSET_3_intra_h264_rdo_cost_offset_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sel_offset_strength : 3;
+        unsigned int reserved : 29;
+    } reg;
+} SOC_VENC_VEDU_SEL_OFFSET_STRENGTH_UNION;
+#endif
+#define SOC_VENC_VEDU_SEL_OFFSET_STRENGTH_sel_offset_strength_START (0)
+#define SOC_VENC_VEDU_SEL_OFFSET_STRENGTH_sel_offset_strength_END (2)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sel_cu32_dc_ac_th_offset : 2;
+        unsigned int reserved : 30;
+    } reg;
+} SOC_VENC_VEDU_SEL_CU32_DC_AC_TH_OFFSET_UNION;
+#endif
+#define SOC_VENC_VEDU_SEL_CU32_DC_AC_TH_OFFSET_sel_cu32_dc_ac_th_offset_START (0)
+#define SOC_VENC_VEDU_SEL_CU32_DC_AC_TH_OFFSET_sel_cu32_dc_ac_th_offset_END (1)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sel_cu32_qp0_th : 6;
+        unsigned int reserved_0 : 2;
+        unsigned int sel_cu32_qp1_th : 6;
+        unsigned int reserved_1 : 18;
+    } reg;
+} SOC_VENC_VEDU_SEL_CU32_QP_TH_UNION;
+#endif
+#define SOC_VENC_VEDU_SEL_CU32_QP_TH_sel_cu32_qp0_th_START (0)
+#define SOC_VENC_VEDU_SEL_CU32_QP_TH_sel_cu32_qp0_th_END (5)
+#define SOC_VENC_VEDU_SEL_CU32_QP_TH_sel_cu32_qp1_th_START (8)
+#define SOC_VENC_VEDU_SEL_CU32_QP_TH_sel_cu32_qp1_th_END (13)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sel_res16_luma_dc_th : 4;
+        unsigned int sel_res16_chroma_dc_th : 4;
+        unsigned int sel_res16_luma_ac_th : 4;
+        unsigned int sel_res16_chroma_ac_th : 4;
+        unsigned int sel_res32_luma_dc_th : 4;
+        unsigned int sel_res32_chroma_dc_th : 4;
+        unsigned int sel_res32_luma_ac_th : 4;
+        unsigned int sel_res32_chroma_ac_th : 4;
+    } reg;
+} SOC_VENC_VEDU_SEL_RES_DC_AC_TH_UNION;
+#endif
+#define SOC_VENC_VEDU_SEL_RES_DC_AC_TH_sel_res16_luma_dc_th_START (0)
+#define SOC_VENC_VEDU_SEL_RES_DC_AC_TH_sel_res16_luma_dc_th_END (3)
+#define SOC_VENC_VEDU_SEL_RES_DC_AC_TH_sel_res16_chroma_dc_th_START (4)
+#define SOC_VENC_VEDU_SEL_RES_DC_AC_TH_sel_res16_chroma_dc_th_END (7)
+#define SOC_VENC_VEDU_SEL_RES_DC_AC_TH_sel_res16_luma_ac_th_START (8)
+#define SOC_VENC_VEDU_SEL_RES_DC_AC_TH_sel_res16_luma_ac_th_END (11)
+#define SOC_VENC_VEDU_SEL_RES_DC_AC_TH_sel_res16_chroma_ac_th_START (12)
+#define SOC_VENC_VEDU_SEL_RES_DC_AC_TH_sel_res16_chroma_ac_th_END (15)
+#define SOC_VENC_VEDU_SEL_RES_DC_AC_TH_sel_res32_luma_dc_th_START (16)
+#define SOC_VENC_VEDU_SEL_RES_DC_AC_TH_sel_res32_luma_dc_th_END (19)
+#define SOC_VENC_VEDU_SEL_RES_DC_AC_TH_sel_res32_chroma_dc_th_START (20)
+#define SOC_VENC_VEDU_SEL_RES_DC_AC_TH_sel_res32_chroma_dc_th_END (23)
+#define SOC_VENC_VEDU_SEL_RES_DC_AC_TH_sel_res32_luma_ac_th_START (24)
+#define SOC_VENC_VEDU_SEL_RES_DC_AC_TH_sel_res32_luma_ac_th_END (27)
+#define SOC_VENC_VEDU_SEL_RES_DC_AC_TH_sel_res32_chroma_ac_th_START (28)
+#define SOC_VENC_VEDU_SEL_RES_DC_AC_TH_sel_res32_chroma_ac_th_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_RESERVED_12_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda00 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG00_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG00_qpg_lambda00_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG00_qpg_lambda00_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda01 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG01_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG01_qpg_lambda01_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG01_qpg_lambda01_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda02 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG02_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG02_qpg_lambda02_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG02_qpg_lambda02_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda03 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG03_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG03_qpg_lambda03_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG03_qpg_lambda03_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda04 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG04_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG04_qpg_lambda04_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG04_qpg_lambda04_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda05 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG05_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG05_qpg_lambda05_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG05_qpg_lambda05_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda06 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG06_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG06_qpg_lambda06_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG06_qpg_lambda06_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda07 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG07_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG07_qpg_lambda07_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG07_qpg_lambda07_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda08 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG08_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG08_qpg_lambda08_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG08_qpg_lambda08_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda09 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG09_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG09_qpg_lambda09_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG09_qpg_lambda09_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda10 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG10_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG10_qpg_lambda10_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG10_qpg_lambda10_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda11 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG11_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG11_qpg_lambda11_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG11_qpg_lambda11_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda12 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG12_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG12_qpg_lambda12_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG12_qpg_lambda12_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda13 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG13_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG13_qpg_lambda13_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG13_qpg_lambda13_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda14 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG14_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG14_qpg_lambda14_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG14_qpg_lambda14_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda15 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG15_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG15_qpg_lambda15_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG15_qpg_lambda15_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda16 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG16_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG16_qpg_lambda16_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG16_qpg_lambda16_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda17 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG17_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG17_qpg_lambda17_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG17_qpg_lambda17_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda18 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG18_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG18_qpg_lambda18_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG18_qpg_lambda18_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda19 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG19_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG19_qpg_lambda19_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG19_qpg_lambda19_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda20 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG20_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG20_qpg_lambda20_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG20_qpg_lambda20_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda21 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG21_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG21_qpg_lambda21_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG21_qpg_lambda21_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda22 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG22_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG22_qpg_lambda22_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG22_qpg_lambda22_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda23 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG23_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG23_qpg_lambda23_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG23_qpg_lambda23_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda24 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG24_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG24_qpg_lambda24_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG24_qpg_lambda24_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda25 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG25_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG25_qpg_lambda25_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG25_qpg_lambda25_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda26 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG26_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG26_qpg_lambda26_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG26_qpg_lambda26_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda27 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG27_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG27_qpg_lambda27_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG27_qpg_lambda27_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda28 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG28_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG28_qpg_lambda28_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG28_qpg_lambda28_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda29 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG29_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG29_qpg_lambda29_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG29_qpg_lambda29_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda30 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG30_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG30_qpg_lambda30_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG30_qpg_lambda30_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda31 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG31_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG31_qpg_lambda31_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG31_qpg_lambda31_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda32 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG32_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG32_qpg_lambda32_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG32_qpg_lambda32_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda33 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG33_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG33_qpg_lambda33_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG33_qpg_lambda33_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda34 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG34_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG34_qpg_lambda34_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG34_qpg_lambda34_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda35 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG35_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG35_qpg_lambda35_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG35_qpg_lambda35_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda36 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG36_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG36_qpg_lambda36_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG36_qpg_lambda36_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda37 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG37_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG37_qpg_lambda37_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG37_qpg_lambda37_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda38 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG38_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG38_qpg_lambda38_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG38_qpg_lambda38_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda39 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG39_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG39_qpg_lambda39_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG39_qpg_lambda39_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda40 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG40_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG40_qpg_lambda40_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG40_qpg_lambda40_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda41 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG41_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG41_qpg_lambda41_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG41_qpg_lambda41_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda42 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG42_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG42_qpg_lambda42_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG42_qpg_lambda42_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda43 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG43_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG43_qpg_lambda43_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG43_qpg_lambda43_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda44 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG44_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG44_qpg_lambda44_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG44_qpg_lambda44_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda45 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG45_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG45_qpg_lambda45_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG45_qpg_lambda45_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda46 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG46_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG46_qpg_lambda46_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG46_qpg_lambda46_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda47 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG47_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG47_qpg_lambda47_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG47_qpg_lambda47_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda48 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG48_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG48_qpg_lambda48_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG48_qpg_lambda48_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda49 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG49_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG49_qpg_lambda49_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG49_qpg_lambda49_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda50 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG50_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG50_qpg_lambda50_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG50_qpg_lambda50_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda51 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG51_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG51_qpg_lambda51_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG51_qpg_lambda51_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda52 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG52_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG52_qpg_lambda52_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG52_qpg_lambda52_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda53 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG53_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG53_qpg_lambda53_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG53_qpg_lambda53_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda54 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG54_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG54_qpg_lambda54_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG54_qpg_lambda54_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda55 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG55_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG55_qpg_lambda55_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG55_qpg_lambda55_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda56 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG56_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG56_qpg_lambda56_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG56_qpg_lambda56_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda57 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG57_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG57_qpg_lambda57_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG57_qpg_lambda57_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda58 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG58_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG58_qpg_lambda58_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG58_qpg_lambda58_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda59 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG59_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG59_qpg_lambda59_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG59_qpg_lambda59_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda60 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG60_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG60_qpg_lambda60_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG60_qpg_lambda60_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda61 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG61_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG61_qpg_lambda61_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG61_qpg_lambda61_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda62 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG62_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG62_qpg_lambda62_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG62_qpg_lambda62_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda63 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG63_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG63_qpg_lambda63_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG63_qpg_lambda63_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda64 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG64_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG64_qpg_lambda64_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG64_qpg_lambda64_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda65 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG65_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG65_qpg_lambda65_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG65_qpg_lambda65_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda66 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG66_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG66_qpg_lambda66_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG66_qpg_lambda66_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda67 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG67_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG67_qpg_lambda67_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG67_qpg_lambda67_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda68 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG68_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG68_qpg_lambda68_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG68_qpg_lambda68_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda69 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG69_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG69_qpg_lambda69_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG69_qpg_lambda69_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda70 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG70_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG70_qpg_lambda70_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG70_qpg_lambda70_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda71 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG71_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG71_qpg_lambda71_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG71_qpg_lambda71_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda72 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG72_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG72_qpg_lambda72_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG72_qpg_lambda72_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda73 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG73_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG73_qpg_lambda73_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG73_qpg_lambda73_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda74 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG74_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG74_qpg_lambda74_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG74_qpg_lambda74_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda75 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG75_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG75_qpg_lambda75_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG75_qpg_lambda75_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda76 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG76_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG76_qpg_lambda76_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG76_qpg_lambda76_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda77 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG77_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG77_qpg_lambda77_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG77_qpg_lambda77_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda78 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG78_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG78_qpg_lambda78_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG78_qpg_lambda78_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int qpg_lambda79 : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG79_UNION;
+#endif
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG79_qpg_lambda79_START (0)
+#define SOC_VENC_VEDU_QPG_QP_LAMBDA_CTRL_REG79_qpg_lambda79_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ime_lambdaoff8 : 16;
+        unsigned int ime_lambdaoff16 : 16;
+    } reg;
+} SOC_VENC_VEDU_IME_RDOCFG_UNION;
+#endif
+#define SOC_VENC_VEDU_IME_RDOCFG_ime_lambdaoff8_START (0)
+#define SOC_VENC_VEDU_IME_RDOCFG_ime_lambdaoff8_END (15)
+#define SOC_VENC_VEDU_IME_RDOCFG_ime_lambdaoff16_START (16)
+#define SOC_VENC_VEDU_IME_RDOCFG_ime_lambdaoff16_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int mrg_force_zero_en : 1;
+        unsigned int mrg_force_y_zero_en : 1;
+        unsigned int mrg_force_u_zero_en : 1;
+        unsigned int mrg_force_v_zero_en : 1;
+        unsigned int fme_rdo_lpw_en : 1;
+        unsigned int dct4_en : 1;
+        unsigned int force_adapt_en : 1;
+        unsigned int reserved_0 : 5;
+        unsigned int rqt_bias_weight : 4;
+        unsigned int fme_rdo_lpw_th : 10;
+        unsigned int mrg_skip_weight_en : 1;
+        unsigned int reserved_1 : 5;
+    } reg;
+} SOC_VENC_VEDU_MRG_FORCE_ZERO_EN_UNION;
+#endif
+#define SOC_VENC_VEDU_MRG_FORCE_ZERO_EN_mrg_force_zero_en_START (0)
+#define SOC_VENC_VEDU_MRG_FORCE_ZERO_EN_mrg_force_zero_en_END (0)
+#define SOC_VENC_VEDU_MRG_FORCE_ZERO_EN_mrg_force_y_zero_en_START (1)
+#define SOC_VENC_VEDU_MRG_FORCE_ZERO_EN_mrg_force_y_zero_en_END (1)
+#define SOC_VENC_VEDU_MRG_FORCE_ZERO_EN_mrg_force_u_zero_en_START (2)
+#define SOC_VENC_VEDU_MRG_FORCE_ZERO_EN_mrg_force_u_zero_en_END (2)
+#define SOC_VENC_VEDU_MRG_FORCE_ZERO_EN_mrg_force_v_zero_en_START (3)
+#define SOC_VENC_VEDU_MRG_FORCE_ZERO_EN_mrg_force_v_zero_en_END (3)
+#define SOC_VENC_VEDU_MRG_FORCE_ZERO_EN_fme_rdo_lpw_en_START (4)
+#define SOC_VENC_VEDU_MRG_FORCE_ZERO_EN_fme_rdo_lpw_en_END (4)
+#define SOC_VENC_VEDU_MRG_FORCE_ZERO_EN_dct4_en_START (5)
+#define SOC_VENC_VEDU_MRG_FORCE_ZERO_EN_dct4_en_END (5)
+#define SOC_VENC_VEDU_MRG_FORCE_ZERO_EN_force_adapt_en_START (6)
+#define SOC_VENC_VEDU_MRG_FORCE_ZERO_EN_force_adapt_en_END (6)
+#define SOC_VENC_VEDU_MRG_FORCE_ZERO_EN_rqt_bias_weight_START (12)
+#define SOC_VENC_VEDU_MRG_FORCE_ZERO_EN_rqt_bias_weight_END (15)
+#define SOC_VENC_VEDU_MRG_FORCE_ZERO_EN_fme_rdo_lpw_th_START (16)
+#define SOC_VENC_VEDU_MRG_FORCE_ZERO_EN_fme_rdo_lpw_th_END (25)
+#define SOC_VENC_VEDU_MRG_FORCE_ZERO_EN_mrg_skip_weight_en_START (26)
+#define SOC_VENC_VEDU_MRG_FORCE_ZERO_EN_mrg_skip_weight_en_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_INTRA8_LOW_POWER_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_intra_lowpow_en : 1;
+        unsigned int vcpi_fme_lowpow_en : 1;
+        unsigned int vcpi_ime_lowpow_en : 1;
+        unsigned int powerpro_func_bypass : 1;
+        unsigned int vcpi_ddr_cross_idx : 11;
+        unsigned int reserved : 1;
+        unsigned int vcpi_tqitq_gtck_en : 1;
+        unsigned int vcpi_mrg_gtck_en : 1;
+        unsigned int vcpi_recst_hfbc_clkgate_en : 1;
+        unsigned int vcpi_clkgate_en : 2;
+        unsigned int vcpi_mem_clkgate_en : 1;
+        unsigned int venc_dpm_apb_clk_en : 1;
+        unsigned int vcpi_ddr_cross_en : 1;
+        unsigned int vcpi_osd_clkgete_en : 1;
+        unsigned int vcpi_ghdr_clkgate_en : 1;
+        unsigned int vcpi_curld_dcmp_clkgate_en : 1;
+        unsigned int vcpi_refld_dcmp_clkgate_en : 1;
+        unsigned int vcpi_cpi_clkgate_en : 1;
+        unsigned int vcpi_vlc_clkgate_en : 1;
+        unsigned int venc_axi_dfx_clk_en : 1;
+        unsigned int venc_apb_cfg_force_clk_on : 1;
+    } reg;
+} SOC_VENC_VEDU_VCPI_LOW_POWER_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_vcpi_intra_lowpow_en_START (0)
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_vcpi_intra_lowpow_en_END (0)
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_vcpi_fme_lowpow_en_START (1)
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_vcpi_fme_lowpow_en_END (1)
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_vcpi_ime_lowpow_en_START (2)
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_vcpi_ime_lowpow_en_END (2)
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_powerpro_func_bypass_START (3)
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_powerpro_func_bypass_END (3)
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_vcpi_ddr_cross_idx_START (4)
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_vcpi_ddr_cross_idx_END (14)
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_vcpi_tqitq_gtck_en_START (16)
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_vcpi_tqitq_gtck_en_END (16)
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_vcpi_mrg_gtck_en_START (17)
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_vcpi_mrg_gtck_en_END (17)
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_vcpi_recst_hfbc_clkgate_en_START (18)
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_vcpi_recst_hfbc_clkgate_en_END (18)
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_vcpi_clkgate_en_START (19)
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_vcpi_clkgate_en_END (20)
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_vcpi_mem_clkgate_en_START (21)
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_vcpi_mem_clkgate_en_END (21)
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_venc_dpm_apb_clk_en_START (22)
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_venc_dpm_apb_clk_en_END (22)
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_vcpi_ddr_cross_en_START (23)
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_vcpi_ddr_cross_en_END (23)
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_vcpi_osd_clkgete_en_START (24)
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_vcpi_osd_clkgete_en_END (24)
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_vcpi_ghdr_clkgate_en_START (25)
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_vcpi_ghdr_clkgate_en_END (25)
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_vcpi_curld_dcmp_clkgate_en_START (26)
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_vcpi_curld_dcmp_clkgate_en_END (26)
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_vcpi_refld_dcmp_clkgate_en_START (27)
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_vcpi_refld_dcmp_clkgate_en_END (27)
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_vcpi_cpi_clkgate_en_START (28)
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_vcpi_cpi_clkgate_en_END (28)
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_vcpi_vlc_clkgate_en_START (29)
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_vcpi_vlc_clkgate_en_END (29)
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_venc_axi_dfx_clk_en_START (30)
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_venc_axi_dfx_clk_en_END (30)
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_venc_apb_cfg_force_clk_on_START (31)
+#define SOC_VENC_VEDU_VCPI_LOW_POWER_venc_apb_cfg_force_clk_on_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ime_layer3to2_en : 1;
+        unsigned int ime_inter8x8_en : 1;
+        unsigned int ime_flat_region_force_low3layer : 1;
+        unsigned int reserved_0 : 1;
+        unsigned int ime_high3pre_en : 2;
+        unsigned int reserved_1 : 2;
+        unsigned int ime_intra4_lowpow_en : 1;
+        unsigned int tile_boundry_improve_en : 1;
+        unsigned int reserved_2 : 22;
+    } reg;
+} SOC_VENC_VEDU_IME_INTER_MODE_UNION;
+#endif
+#define SOC_VENC_VEDU_IME_INTER_MODE_ime_layer3to2_en_START (0)
+#define SOC_VENC_VEDU_IME_INTER_MODE_ime_layer3to2_en_END (0)
+#define SOC_VENC_VEDU_IME_INTER_MODE_ime_inter8x8_en_START (1)
+#define SOC_VENC_VEDU_IME_INTER_MODE_ime_inter8x8_en_END (1)
+#define SOC_VENC_VEDU_IME_INTER_MODE_ime_flat_region_force_low3layer_START (2)
+#define SOC_VENC_VEDU_IME_INTER_MODE_ime_flat_region_force_low3layer_END (2)
+#define SOC_VENC_VEDU_IME_INTER_MODE_ime_high3pre_en_START (4)
+#define SOC_VENC_VEDU_IME_INTER_MODE_ime_high3pre_en_END (5)
+#define SOC_VENC_VEDU_IME_INTER_MODE_ime_intra4_lowpow_en_START (8)
+#define SOC_VENC_VEDU_IME_INTER_MODE_ime_intra4_lowpow_en_END (8)
+#define SOC_VENC_VEDU_IME_INTER_MODE_tile_boundry_improve_en_START (9)
+#define SOC_VENC_VEDU_IME_INTER_MODE_tile_boundry_improve_en_END (9)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved_0 : 1;
+        unsigned int vcpi_pblk_pre_en : 1;
+        unsigned int vcpi_force_inter : 1;
+        unsigned int vcpi_pintra_inter_flag_disable : 1;
+        unsigned int vcpi_ext_edge_en : 1;
+        unsigned int reserved_1 : 27;
+    } reg;
+} SOC_VENC_VEDU_VCPI_PRE_JUDGE_EXT_EN_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_PRE_JUDGE_EXT_EN_vcpi_pblk_pre_en_START (1)
+#define SOC_VENC_VEDU_VCPI_PRE_JUDGE_EXT_EN_vcpi_pblk_pre_en_END (1)
+#define SOC_VENC_VEDU_VCPI_PRE_JUDGE_EXT_EN_vcpi_force_inter_START (2)
+#define SOC_VENC_VEDU_VCPI_PRE_JUDGE_EXT_EN_vcpi_force_inter_END (2)
+#define SOC_VENC_VEDU_VCPI_PRE_JUDGE_EXT_EN_vcpi_pintra_inter_flag_disable_START (3)
+#define SOC_VENC_VEDU_VCPI_PRE_JUDGE_EXT_EN_vcpi_pintra_inter_flag_disable_END (3)
+#define SOC_VENC_VEDU_VCPI_PRE_JUDGE_EXT_EN_vcpi_ext_edge_en_START (4)
+#define SOC_VENC_VEDU_VCPI_PRE_JUDGE_EXT_EN_vcpi_ext_edge_en_END (4)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_RESERVED_13_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pme_l0_psw_adapt_en : 1;
+        unsigned int pme_l1_psw_adapt_en : 1;
+        unsigned int reserved : 30;
+    } reg;
+} SOC_VENC_VEDU_PME_SW_ADAPT_EN_UNION;
+#endif
+#define SOC_VENC_VEDU_PME_SW_ADAPT_EN_pme_l0_psw_adapt_en_START (0)
+#define SOC_VENC_VEDU_PME_SW_ADAPT_EN_pme_l0_psw_adapt_en_END (0)
+#define SOC_VENC_VEDU_PME_SW_ADAPT_EN_pme_l1_psw_adapt_en_START (1)
+#define SOC_VENC_VEDU_PME_SW_ADAPT_EN_pme_l1_psw_adapt_en_END (1)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pme_l0_win0_width : 10;
+        unsigned int reserved_0 : 6;
+        unsigned int pme_l0_win0_height : 9;
+        unsigned int reserved_1 : 7;
+    } reg;
+} SOC_VENC_VEDU_PME_WINDOW_SIZE0_L0_UNION;
+#endif
+#define SOC_VENC_VEDU_PME_WINDOW_SIZE0_L0_pme_l0_win0_width_START (0)
+#define SOC_VENC_VEDU_PME_WINDOW_SIZE0_L0_pme_l0_win0_width_END (9)
+#define SOC_VENC_VEDU_PME_WINDOW_SIZE0_L0_pme_l0_win0_height_START (16)
+#define SOC_VENC_VEDU_PME_WINDOW_SIZE0_L0_pme_l0_win0_height_END (24)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pme_l1_win0_width : 10;
+        unsigned int reserved_0 : 6;
+        unsigned int pme_l1_win0_height : 9;
+        unsigned int reserved_1 : 7;
+    } reg;
+} SOC_VENC_VEDU_PME_WINDOW_SIZE0_L1_UNION;
+#endif
+#define SOC_VENC_VEDU_PME_WINDOW_SIZE0_L1_pme_l1_win0_width_START (0)
+#define SOC_VENC_VEDU_PME_WINDOW_SIZE0_L1_pme_l1_win0_width_END (9)
+#define SOC_VENC_VEDU_PME_WINDOW_SIZE0_L1_pme_l1_win0_height_START (16)
+#define SOC_VENC_VEDU_PME_WINDOW_SIZE0_L1_pme_l1_win0_height_END (24)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pme_skipblk_pre_cost_thr : 16;
+        unsigned int pme_skipblk_pre_en : 1;
+        unsigned int reserved : 15;
+    } reg;
+} SOC_VENC_VEDU_PME_SKIP_PRE_UNION;
+#endif
+#define SOC_VENC_VEDU_PME_SKIP_PRE_pme_skipblk_pre_cost_thr_START (0)
+#define SOC_VENC_VEDU_PME_SKIP_PRE_pme_skipblk_pre_cost_thr_END (15)
+#define SOC_VENC_VEDU_PME_SKIP_PRE_pme_skipblk_pre_en_START (16)
+#define SOC_VENC_VEDU_PME_SKIP_PRE_pme_skipblk_pre_en_END (16)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pme_pblk_pre_mv_dif_thr1 : 8;
+        unsigned int pme_pblk_pre_mv_dif_thr0 : 8;
+        unsigned int pme_pblk_pre_mv_dif_cost_thr : 16;
+    } reg;
+} SOC_VENC_VEDU_PME_PBLK_PRE1_UNION;
+#endif
+#define SOC_VENC_VEDU_PME_PBLK_PRE1_pme_pblk_pre_mv_dif_thr1_START (0)
+#define SOC_VENC_VEDU_PME_PBLK_PRE1_pme_pblk_pre_mv_dif_thr1_END (7)
+#define SOC_VENC_VEDU_PME_PBLK_PRE1_pme_pblk_pre_mv_dif_thr0_START (8)
+#define SOC_VENC_VEDU_PME_PBLK_PRE1_pme_pblk_pre_mv_dif_thr0_END (15)
+#define SOC_VENC_VEDU_PME_PBLK_PRE1_pme_pblk_pre_mv_dif_cost_thr_START (16)
+#define SOC_VENC_VEDU_PME_PBLK_PRE1_pme_pblk_pre_mv_dif_cost_thr_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_iblk_pre_cost_thr : 16;
+        unsigned int vcpi_pblk_pre_cost_thr : 16;
+    } reg;
+} SOC_VENC_VEDU_VCPI_PRE_JUDGE_COST_THR_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_PRE_JUDGE_COST_THR_vcpi_iblk_pre_cost_thr_START (0)
+#define SOC_VENC_VEDU_VCPI_PRE_JUDGE_COST_THR_vcpi_iblk_pre_cost_thr_END (15)
+#define SOC_VENC_VEDU_VCPI_PRE_JUDGE_COST_THR_vcpi_pblk_pre_cost_thr_START (16)
+#define SOC_VENC_VEDU_VCPI_PRE_JUDGE_COST_THR_vcpi_pblk_pre_cost_thr_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_iblk_pre_mv_dif_thr0 : 8;
+        unsigned int vcpi_iblk_pre_mv_dif_thr1 : 8;
+        unsigned int vcpi_iblk_pre_mvx_thr : 8;
+        unsigned int vcpi_iblk_pre_mvy_thr : 8;
+    } reg;
+} SOC_VENC_VEDU_VCPI_IBLK_PRE_MV_THR_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_IBLK_PRE_MV_THR_vcpi_iblk_pre_mv_dif_thr0_START (0)
+#define SOC_VENC_VEDU_VCPI_IBLK_PRE_MV_THR_vcpi_iblk_pre_mv_dif_thr0_END (7)
+#define SOC_VENC_VEDU_VCPI_IBLK_PRE_MV_THR_vcpi_iblk_pre_mv_dif_thr1_START (8)
+#define SOC_VENC_VEDU_VCPI_IBLK_PRE_MV_THR_vcpi_iblk_pre_mv_dif_thr1_END (15)
+#define SOC_VENC_VEDU_VCPI_IBLK_PRE_MV_THR_vcpi_iblk_pre_mvx_thr_START (16)
+#define SOC_VENC_VEDU_VCPI_IBLK_PRE_MV_THR_vcpi_iblk_pre_mvx_thr_END (23)
+#define SOC_VENC_VEDU_VCPI_IBLK_PRE_MV_THR_vcpi_iblk_pre_mvy_thr_START (24)
+#define SOC_VENC_VEDU_VCPI_IBLK_PRE_MV_THR_vcpi_iblk_pre_mvy_thr_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pme_iblk_pre_cost_thr_h264 : 16;
+        unsigned int pme_intrablk_det_cost_thr1 : 16;
+    } reg;
+} SOC_VENC_VEDU_PME_IBLK_COST_THR_UNION;
+#endif
+#define SOC_VENC_VEDU_PME_IBLK_COST_THR_pme_iblk_pre_cost_thr_h264_START (0)
+#define SOC_VENC_VEDU_PME_IBLK_COST_THR_pme_iblk_pre_cost_thr_h264_END (15)
+#define SOC_VENC_VEDU_PME_IBLK_COST_THR_pme_intrablk_det_cost_thr1_START (16)
+#define SOC_VENC_VEDU_PME_IBLK_COST_THR_pme_intrablk_det_cost_thr1_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pme_tr_weightx_0 : 9;
+        unsigned int pme_tr_weightx_1 : 9;
+        unsigned int pme_tr_weightx_2 : 9;
+        unsigned int reserved : 5;
+    } reg;
+} SOC_VENC_VEDU_PME_TR_WEIGHTX_UNION;
+#endif
+#define SOC_VENC_VEDU_PME_TR_WEIGHTX_pme_tr_weightx_0_START (0)
+#define SOC_VENC_VEDU_PME_TR_WEIGHTX_pme_tr_weightx_0_END (8)
+#define SOC_VENC_VEDU_PME_TR_WEIGHTX_pme_tr_weightx_1_START (9)
+#define SOC_VENC_VEDU_PME_TR_WEIGHTX_pme_tr_weightx_1_END (17)
+#define SOC_VENC_VEDU_PME_TR_WEIGHTX_pme_tr_weightx_2_START (18)
+#define SOC_VENC_VEDU_PME_TR_WEIGHTX_pme_tr_weightx_2_END (26)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pme_tr_weighty_0 : 8;
+        unsigned int pme_tr_weighty_1 : 8;
+        unsigned int pme_tr_weighty_2 : 8;
+        unsigned int reserved : 8;
+    } reg;
+} SOC_VENC_VEDU_PME_TR_WEIGHTY_UNION;
+#endif
+#define SOC_VENC_VEDU_PME_TR_WEIGHTY_pme_tr_weighty_0_START (0)
+#define SOC_VENC_VEDU_PME_TR_WEIGHTY_pme_tr_weighty_0_END (7)
+#define SOC_VENC_VEDU_PME_TR_WEIGHTY_pme_tr_weighty_1_START (8)
+#define SOC_VENC_VEDU_PME_TR_WEIGHTY_pme_tr_weighty_1_END (15)
+#define SOC_VENC_VEDU_PME_TR_WEIGHTY_pme_tr_weighty_2_START (16)
+#define SOC_VENC_VEDU_PME_TR_WEIGHTY_pme_tr_weighty_2_END (23)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pme_sr_weight_0 : 4;
+        unsigned int pme_sr_weight_1 : 4;
+        unsigned int pme_sr_weight_2 : 4;
+        unsigned int reserved : 20;
+    } reg;
+} SOC_VENC_VEDU_PME_SR_WEIGHT_UNION;
+#endif
+#define SOC_VENC_VEDU_PME_SR_WEIGHT_pme_sr_weight_0_START (0)
+#define SOC_VENC_VEDU_PME_SR_WEIGHT_pme_sr_weight_0_END (3)
+#define SOC_VENC_VEDU_PME_SR_WEIGHT_pme_sr_weight_1_START (4)
+#define SOC_VENC_VEDU_PME_SR_WEIGHT_pme_sr_weight_1_END (7)
+#define SOC_VENC_VEDU_PME_SR_WEIGHT_pme_sr_weight_2_START (8)
+#define SOC_VENC_VEDU_PME_SR_WEIGHT_pme_sr_weight_2_END (11)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pme_intra16_madi_thr : 8;
+        unsigned int pme_intra32_madi_thr : 8;
+        unsigned int pme_intra_lowpow_en : 1;
+        unsigned int pme_inter_first : 1;
+        unsigned int reserved : 14;
+    } reg;
+} SOC_VENC_VEDU_PME_INTRA_LOWPOW_UNION;
+#endif
+#define SOC_VENC_VEDU_PME_INTRA_LOWPOW_pme_intra16_madi_thr_START (0)
+#define SOC_VENC_VEDU_PME_INTRA_LOWPOW_pme_intra16_madi_thr_END (7)
+#define SOC_VENC_VEDU_PME_INTRA_LOWPOW_pme_intra32_madi_thr_START (8)
+#define SOC_VENC_VEDU_PME_INTRA_LOWPOW_pme_intra32_madi_thr_END (15)
+#define SOC_VENC_VEDU_PME_INTRA_LOWPOW_pme_intra_lowpow_en_START (16)
+#define SOC_VENC_VEDU_PME_INTRA_LOWPOW_pme_intra_lowpow_en_END (16)
+#define SOC_VENC_VEDU_PME_INTRA_LOWPOW_pme_inter_first_START (17)
+#define SOC_VENC_VEDU_PME_INTRA_LOWPOW_pme_inter_first_END (17)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ime_lowpow_fme_thr0 : 6;
+        unsigned int ime_lowpow_fme_thr1 : 6;
+        unsigned int reserved : 20;
+    } reg;
+} SOC_VENC_VEDU_IME_FME_LPOW_THR_UNION;
+#endif
+#define SOC_VENC_VEDU_IME_FME_LPOW_THR_ime_lowpow_fme_thr0_START (0)
+#define SOC_VENC_VEDU_IME_FME_LPOW_THR_ime_lowpow_fme_thr0_END (5)
+#define SOC_VENC_VEDU_IME_FME_LPOW_THR_ime_lowpow_fme_thr1_START (6)
+#define SOC_VENC_VEDU_IME_FME_LPOW_THR_ime_lowpow_fme_thr1_END (11)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_pskip_strongedge_madi_thr : 8;
+        unsigned int vcpi_pskip_strongedge_madi_times : 8;
+        unsigned int vcpi_pskip_flatregion_madi_thr : 8;
+        unsigned int reserved : 8;
+    } reg;
+} SOC_VENC_VEDU_PME_SKIP_FLAG_UNION;
+#endif
+#define SOC_VENC_VEDU_PME_SKIP_FLAG_vcpi_pskip_strongedge_madi_thr_START (0)
+#define SOC_VENC_VEDU_PME_SKIP_FLAG_vcpi_pskip_strongedge_madi_thr_END (7)
+#define SOC_VENC_VEDU_PME_SKIP_FLAG_vcpi_pskip_strongedge_madi_times_START (8)
+#define SOC_VENC_VEDU_PME_SKIP_FLAG_vcpi_pskip_strongedge_madi_times_END (15)
+#define SOC_VENC_VEDU_PME_SKIP_FLAG_vcpi_pskip_flatregion_madi_thr_START (16)
+#define SOC_VENC_VEDU_PME_SKIP_FLAG_vcpi_pskip_flatregion_madi_thr_END (23)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pme_psw_lp_diff_thy : 4;
+        unsigned int reserved_0 : 4;
+        unsigned int pme_psw_lp_diff_thx : 4;
+        unsigned int reserved_1 : 20;
+    } reg;
+} SOC_VENC_VEDU_PME_PSW_LPW_UNION;
+#endif
+#define SOC_VENC_VEDU_PME_PSW_LPW_pme_psw_lp_diff_thy_START (0)
+#define SOC_VENC_VEDU_PME_PSW_LPW_pme_psw_lp_diff_thy_END (3)
+#define SOC_VENC_VEDU_PME_PSW_LPW_pme_psw_lp_diff_thx_START (8)
+#define SOC_VENC_VEDU_PME_PSW_LPW_pme_psw_lp_diff_thx_END (11)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pme_pblk_pre_madi_times : 8;
+        unsigned int reserved : 24;
+    } reg;
+} SOC_VENC_VEDU_PME_PBLK_PRE2_UNION;
+#endif
+#define SOC_VENC_VEDU_PME_PBLK_PRE2_pme_pblk_pre_madi_times_START (0)
+#define SOC_VENC_VEDU_PME_PBLK_PRE2_pme_pblk_pre_madi_times_END (7)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ime_layer3to2_thr0 : 10;
+        unsigned int reserved_0 : 6;
+        unsigned int ime_layer3to2_thr1 : 10;
+        unsigned int reserved_1 : 6;
+    } reg;
+} SOC_VENC_VEDU_IME_LAYER3TO2_THR_UNION;
+#endif
+#define SOC_VENC_VEDU_IME_LAYER3TO2_THR_ime_layer3to2_thr0_START (0)
+#define SOC_VENC_VEDU_IME_LAYER3TO2_THR_ime_layer3to2_thr0_END (9)
+#define SOC_VENC_VEDU_IME_LAYER3TO2_THR_ime_layer3to2_thr1_START (16)
+#define SOC_VENC_VEDU_IME_LAYER3TO2_THR_ime_layer3to2_thr1_END (25)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ime_layer3to2_cost_diff_thr : 10;
+        unsigned int reserved : 22;
+    } reg;
+} SOC_VENC_VEDU_IME_LAYER3TO2_THR1_UNION;
+#endif
+#define SOC_VENC_VEDU_IME_LAYER3TO2_THR1_ime_layer3to2_cost_diff_thr_START (0)
+#define SOC_VENC_VEDU_IME_LAYER3TO2_THR1_ime_layer3to2_cost_diff_thr_END (9)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ime_layer3to1_en : 1;
+        unsigned int reserved_0 : 7;
+        unsigned int ime_layer3to1_pu64_madi_thr : 7;
+        unsigned int reserved_1 : 17;
+    } reg;
+} SOC_VENC_VEDU_IME_LAYER3TO1_THR_UNION;
+#endif
+#define SOC_VENC_VEDU_IME_LAYER3TO1_THR_ime_layer3to1_en_START (0)
+#define SOC_VENC_VEDU_IME_LAYER3TO1_THR_ime_layer3to1_en_END (0)
+#define SOC_VENC_VEDU_IME_LAYER3TO1_THR_ime_layer3to1_pu64_madi_thr_START (8)
+#define SOC_VENC_VEDU_IME_LAYER3TO1_THR_ime_layer3to1_pu64_madi_thr_END (14)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ime_layer3to1_pu32_cost_thr : 16;
+        unsigned int ime_layer3to1_pu64_cost_thr : 16;
+    } reg;
+} SOC_VENC_VEDU_IME_LAYER3TO1_THR1_UNION;
+#endif
+#define SOC_VENC_VEDU_IME_LAYER3TO1_THR1_ime_layer3to1_pu32_cost_thr_START (0)
+#define SOC_VENC_VEDU_IME_LAYER3TO1_THR1_ime_layer3to1_pu32_cost_thr_END (15)
+#define SOC_VENC_VEDU_IME_LAYER3TO1_THR1_ime_layer3to1_pu64_cost_thr_START (16)
+#define SOC_VENC_VEDU_IME_LAYER3TO1_THR1_ime_layer3to1_pu64_cost_thr_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int fme_pu64_lwp_flag : 1;
+        unsigned int reserved : 31;
+    } reg;
+} SOC_VENC_VEDU_FME_PU64_LWP_UNION;
+#endif
+#define SOC_VENC_VEDU_FME_PU64_LWP_fme_pu64_lwp_flag_START (0)
+#define SOC_VENC_VEDU_FME_PU64_LWP_fme_pu64_lwp_flag_END (0)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int inter32_use_tu16_en : 1;
+        unsigned int mrg_not_use_sad_en : 1;
+        unsigned int reserved_0 : 2;
+        unsigned int mrg_force_skip_en : 1;
+        unsigned int mrg_not_use_sad_th : 18;
+        unsigned int reserved_1 : 9;
+    } reg;
+} SOC_VENC_VEDU_MRG_FORCE_SKIP_EN_UNION;
+#endif
+#define SOC_VENC_VEDU_MRG_FORCE_SKIP_EN_inter32_use_tu16_en_START (0)
+#define SOC_VENC_VEDU_MRG_FORCE_SKIP_EN_inter32_use_tu16_en_END (0)
+#define SOC_VENC_VEDU_MRG_FORCE_SKIP_EN_mrg_not_use_sad_en_START (1)
+#define SOC_VENC_VEDU_MRG_FORCE_SKIP_EN_mrg_not_use_sad_en_END (1)
+#define SOC_VENC_VEDU_MRG_FORCE_SKIP_EN_mrg_force_skip_en_START (4)
+#define SOC_VENC_VEDU_MRG_FORCE_SKIP_EN_mrg_force_skip_en_END (4)
+#define SOC_VENC_VEDU_MRG_FORCE_SKIP_EN_mrg_not_use_sad_th_START (5)
+#define SOC_VENC_VEDU_MRG_FORCE_SKIP_EN_mrg_not_use_sad_th_END (22)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int constrained_intra_pred_flag : 1;
+        unsigned int reserved_0 : 3;
+        unsigned int intra_smooth : 1;
+        unsigned int reserved_1 : 3;
+        unsigned int vcpi_force_cu16_low_pow : 1;
+        unsigned int reserved_2 : 3;
+        unsigned int vcpi_force_cu32_low_pow : 1;
+        unsigned int reserved_3 : 19;
+    } reg;
+} SOC_VENC_VEDU_INTRA_CFG_UNION;
+#endif
+#define SOC_VENC_VEDU_INTRA_CFG_constrained_intra_pred_flag_START (0)
+#define SOC_VENC_VEDU_INTRA_CFG_constrained_intra_pred_flag_END (0)
+#define SOC_VENC_VEDU_INTRA_CFG_intra_smooth_START (4)
+#define SOC_VENC_VEDU_INTRA_CFG_intra_smooth_END (4)
+#define SOC_VENC_VEDU_INTRA_CFG_vcpi_force_cu16_low_pow_START (8)
+#define SOC_VENC_VEDU_INTRA_CFG_vcpi_force_cu16_low_pow_END (8)
+#define SOC_VENC_VEDU_INTRA_CFG_vcpi_force_cu32_low_pow_START (12)
+#define SOC_VENC_VEDU_INTRA_CFG_vcpi_force_cu32_low_pow_END (12)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int cu16_weak_ang_thr : 4;
+        unsigned int cu16_medium_ang_thr : 4;
+        unsigned int cu16_strong_ang_thr : 4;
+        unsigned int cu16_rdo_num : 3;
+        unsigned int cu16_adaptive_reduce_rdo_en : 1;
+        unsigned int cu32_weak_ang_thr : 4;
+        unsigned int cu32_medium_ang_thr : 4;
+        unsigned int cu32_strong_ang_thr : 4;
+        unsigned int cu32_rdo_num : 3;
+        unsigned int cu32_adaptive_reduce_rdo_en : 1;
+    } reg;
+} SOC_VENC_VEDU_INTRA_LOW_POW_UNION;
+#endif
+#define SOC_VENC_VEDU_INTRA_LOW_POW_cu16_weak_ang_thr_START (0)
+#define SOC_VENC_VEDU_INTRA_LOW_POW_cu16_weak_ang_thr_END (3)
+#define SOC_VENC_VEDU_INTRA_LOW_POW_cu16_medium_ang_thr_START (4)
+#define SOC_VENC_VEDU_INTRA_LOW_POW_cu16_medium_ang_thr_END (7)
+#define SOC_VENC_VEDU_INTRA_LOW_POW_cu16_strong_ang_thr_START (8)
+#define SOC_VENC_VEDU_INTRA_LOW_POW_cu16_strong_ang_thr_END (11)
+#define SOC_VENC_VEDU_INTRA_LOW_POW_cu16_rdo_num_START (12)
+#define SOC_VENC_VEDU_INTRA_LOW_POW_cu16_rdo_num_END (14)
+#define SOC_VENC_VEDU_INTRA_LOW_POW_cu16_adaptive_reduce_rdo_en_START (15)
+#define SOC_VENC_VEDU_INTRA_LOW_POW_cu16_adaptive_reduce_rdo_en_END (15)
+#define SOC_VENC_VEDU_INTRA_LOW_POW_cu32_weak_ang_thr_START (16)
+#define SOC_VENC_VEDU_INTRA_LOW_POW_cu32_weak_ang_thr_END (19)
+#define SOC_VENC_VEDU_INTRA_LOW_POW_cu32_medium_ang_thr_START (20)
+#define SOC_VENC_VEDU_INTRA_LOW_POW_cu32_medium_ang_thr_END (23)
+#define SOC_VENC_VEDU_INTRA_LOW_POW_cu32_strong_ang_thr_START (24)
+#define SOC_VENC_VEDU_INTRA_LOW_POW_cu32_strong_ang_thr_END (27)
+#define SOC_VENC_VEDU_INTRA_LOW_POW_cu32_rdo_num_START (28)
+#define SOC_VENC_VEDU_INTRA_LOW_POW_cu32_rdo_num_END (30)
+#define SOC_VENC_VEDU_INTRA_LOW_POW_cu32_adaptive_reduce_rdo_en_START (31)
+#define SOC_VENC_VEDU_INTRA_LOW_POW_cu32_adaptive_reduce_rdo_en_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_RESERVED_14_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_curld_tunlcell_addr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_TUNLCELL_ADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_TUNLCELL_ADDR_L_vcpi_curld_tunlcell_addr_l_START (0)
+#define SOC_VENC_VEDU_VCPI_TUNLCELL_ADDR_L_vcpi_curld_tunlcell_addr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_curld_tunlcell_addr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_TUNLCELL_ADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_TUNLCELL_ADDR_H_vcpi_curld_tunlcell_addr_h_START (0)
+#define SOC_VENC_VEDU_VCPI_TUNLCELL_ADDR_H_vcpi_curld_tunlcell_addr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_curld_y_addr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_SRC_YADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_SRC_YADDR_L_vcpi_curld_y_addr_l_START (0)
+#define SOC_VENC_VEDU_VCPI_SRC_YADDR_L_vcpi_curld_y_addr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_curld_y_addr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_SRC_YADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_SRC_YADDR_H_vcpi_curld_y_addr_h_START (0)
+#define SOC_VENC_VEDU_VCPI_SRC_YADDR_H_vcpi_curld_y_addr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_curld_ext_y_addr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_SRC_EXT_YADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_SRC_EXT_YADDR_L_vcpi_curld_ext_y_addr_l_START (0)
+#define SOC_VENC_VEDU_VCPI_SRC_EXT_YADDR_L_vcpi_curld_ext_y_addr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_curld_ext_y_addr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_SRC_EXT_YADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_SRC_EXT_YADDR_H_vcpi_curld_ext_y_addr_h_START (0)
+#define SOC_VENC_VEDU_VCPI_SRC_EXT_YADDR_H_vcpi_curld_ext_y_addr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_curld_c_addr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_SRC_CADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_SRC_CADDR_L_vcpi_curld_c_addr_l_START (0)
+#define SOC_VENC_VEDU_VCPI_SRC_CADDR_L_vcpi_curld_c_addr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_curld_c_addr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_SRC_CADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_SRC_CADDR_H_vcpi_curld_c_addr_h_START (0)
+#define SOC_VENC_VEDU_VCPI_SRC_CADDR_H_vcpi_curld_c_addr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_curld_ext_c_addr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_SRC_EXT_CADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_SRC_EXT_CADDR_L_vcpi_curld_ext_c_addr_l_START (0)
+#define SOC_VENC_VEDU_VCPI_SRC_EXT_CADDR_L_vcpi_curld_ext_c_addr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_curld_ext_c_addr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_SRC_EXT_CADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_SRC_EXT_CADDR_H_vcpi_curld_ext_c_addr_h_START (0)
+#define SOC_VENC_VEDU_VCPI_SRC_EXT_CADDR_H_vcpi_curld_ext_c_addr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_curld_v_addr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_SRC_VADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_SRC_VADDR_L_vcpi_curld_v_addr_l_START (0)
+#define SOC_VENC_VEDU_VCPI_SRC_VADDR_L_vcpi_curld_v_addr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_curld_v_addr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_SRC_VADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_SRC_VADDR_H_vcpi_curld_v_addr_h_START (0)
+#define SOC_VENC_VEDU_VCPI_SRC_VADDR_H_vcpi_curld_v_addr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_curld_yh_addr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_YH_ADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_YH_ADDR_L_vcpi_curld_yh_addr_l_START (0)
+#define SOC_VENC_VEDU_VCPI_YH_ADDR_L_vcpi_curld_yh_addr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_curld_yh_addr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_YH_ADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_YH_ADDR_H_vcpi_curld_yh_addr_h_START (0)
+#define SOC_VENC_VEDU_VCPI_YH_ADDR_H_vcpi_curld_yh_addr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_curld_ch_addr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_CH_ADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_CH_ADDR_L_vcpi_curld_ch_addr_l_START (0)
+#define SOC_VENC_VEDU_VCPI_CH_ADDR_L_vcpi_curld_ch_addr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_curld_ch_addr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_CH_ADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_CH_ADDR_H_vcpi_curld_ch_addr_h_START (0)
+#define SOC_VENC_VEDU_VCPI_CH_ADDR_H_vcpi_curld_ch_addr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_refy_l0_addr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_REFY_L0_ADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_REFY_L0_ADDR_L_vcpi_refy_l0_addr_l_START (0)
+#define SOC_VENC_VEDU_VCPI_REFY_L0_ADDR_L_vcpi_refy_l0_addr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_refy_l0_addr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_REFY_L0_ADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_REFY_L0_ADDR_H_vcpi_refy_l0_addr_h_START (0)
+#define SOC_VENC_VEDU_VCPI_REFY_L0_ADDR_H_vcpi_refy_l0_addr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_refc_l0_addr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_REFC_L0_ADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_REFC_L0_ADDR_L_vcpi_refc_l0_addr_l_START (0)
+#define SOC_VENC_VEDU_VCPI_REFC_L0_ADDR_L_vcpi_refc_l0_addr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_refc_l0_addr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_REFC_L0_ADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_REFC_L0_ADDR_H_vcpi_refc_l0_addr_h_START (0)
+#define SOC_VENC_VEDU_VCPI_REFC_L0_ADDR_H_vcpi_refc_l0_addr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_refyh_l0_addr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_REFYH_L0_ADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_REFYH_L0_ADDR_L_vcpi_refyh_l0_addr_l_START (0)
+#define SOC_VENC_VEDU_VCPI_REFYH_L0_ADDR_L_vcpi_refyh_l0_addr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_refyh_l0_addr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_REFYH_L0_ADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_REFYH_L0_ADDR_H_vcpi_refyh_l0_addr_h_START (0)
+#define SOC_VENC_VEDU_VCPI_REFYH_L0_ADDR_H_vcpi_refyh_l0_addr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_refch_l0_addr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_REFCH_L0_ADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_REFCH_L0_ADDR_L_vcpi_refch_l0_addr_l_START (0)
+#define SOC_VENC_VEDU_VCPI_REFCH_L0_ADDR_L_vcpi_refch_l0_addr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_refch_l0_addr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_REFCH_L0_ADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_REFCH_L0_ADDR_H_vcpi_refch_l0_addr_h_START (0)
+#define SOC_VENC_VEDU_VCPI_REFCH_L0_ADDR_H_vcpi_refch_l0_addr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_refy_l1_addr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_REFY_L1_ADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_REFY_L1_ADDR_L_vcpi_refy_l1_addr_l_START (0)
+#define SOC_VENC_VEDU_VCPI_REFY_L1_ADDR_L_vcpi_refy_l1_addr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_refy_l1_addr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_REFY_L1_ADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_REFY_L1_ADDR_H_vcpi_refy_l1_addr_h_START (0)
+#define SOC_VENC_VEDU_VCPI_REFY_L1_ADDR_H_vcpi_refy_l1_addr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_refc_l1_addr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_REFC_L1_ADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_REFC_L1_ADDR_L_vcpi_refc_l1_addr_l_START (0)
+#define SOC_VENC_VEDU_VCPI_REFC_L1_ADDR_L_vcpi_refc_l1_addr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_refc_l1_addr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_REFC_L1_ADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_REFC_L1_ADDR_H_vcpi_refc_l1_addr_h_START (0)
+#define SOC_VENC_VEDU_VCPI_REFC_L1_ADDR_H_vcpi_refc_l1_addr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_refyh_l1_addr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_REFYH_L1_ADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_REFYH_L1_ADDR_L_vcpi_refyh_l1_addr_l_START (0)
+#define SOC_VENC_VEDU_VCPI_REFYH_L1_ADDR_L_vcpi_refyh_l1_addr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_refyh_l1_addr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_REFYH_L1_ADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_REFYH_L1_ADDR_H_vcpi_refyh_l1_addr_h_START (0)
+#define SOC_VENC_VEDU_VCPI_REFYH_L1_ADDR_H_vcpi_refyh_l1_addr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_refch_l1_addr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_REFCH_L1_ADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_REFCH_L1_ADDR_L_vcpi_refch_l1_addr_l_START (0)
+#define SOC_VENC_VEDU_VCPI_REFCH_L1_ADDR_L_vcpi_refch_l1_addr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_refch_l1_addr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_REFCH_L1_ADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_REFCH_L1_ADDR_H_vcpi_refch_l1_addr_h_START (0)
+#define SOC_VENC_VEDU_VCPI_REFCH_L1_ADDR_H_vcpi_refch_l1_addr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_recst_yaddr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_REC_YADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_REC_YADDR_L_vcpi_recst_yaddr_l_START (0)
+#define SOC_VENC_VEDU_VCPI_REC_YADDR_L_vcpi_recst_yaddr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_recst_yaddr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_REC_YADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_REC_YADDR_H_vcpi_recst_yaddr_h_START (0)
+#define SOC_VENC_VEDU_VCPI_REC_YADDR_H_vcpi_recst_yaddr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_recst_caddr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_REC_CADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_REC_CADDR_L_vcpi_recst_caddr_l_START (0)
+#define SOC_VENC_VEDU_VCPI_REC_CADDR_L_vcpi_recst_caddr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_recst_caddr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_REC_CADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_REC_CADDR_H_vcpi_recst_caddr_h_START (0)
+#define SOC_VENC_VEDU_VCPI_REC_CADDR_H_vcpi_recst_caddr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_recst_yh_addr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_REC_YH_ADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_REC_YH_ADDR_L_vcpi_recst_yh_addr_l_START (0)
+#define SOC_VENC_VEDU_VCPI_REC_YH_ADDR_L_vcpi_recst_yh_addr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_recst_yh_addr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_REC_YH_ADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_REC_YH_ADDR_H_vcpi_recst_yh_addr_h_START (0)
+#define SOC_VENC_VEDU_VCPI_REC_YH_ADDR_H_vcpi_recst_yh_addr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_recst_ch_addr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_REC_CH_ADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_REC_CH_ADDR_L_vcpi_recst_ch_addr_l_START (0)
+#define SOC_VENC_VEDU_VCPI_REC_CH_ADDR_L_vcpi_recst_ch_addr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_recst_ch_addr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_REC_CH_ADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_REC_CH_ADDR_H_vcpi_recst_ch_addr_h_START (0)
+#define SOC_VENC_VEDU_VCPI_REC_CH_ADDR_H_vcpi_recst_ch_addr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_pmeld_l0_addr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_PMELD_L0_ADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_PMELD_L0_ADDR_L_vcpi_pmeld_l0_addr_l_START (0)
+#define SOC_VENC_VEDU_VCPI_PMELD_L0_ADDR_L_vcpi_pmeld_l0_addr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_pmeld_l0_addr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_PMELD_L0_ADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_PMELD_L0_ADDR_H_vcpi_pmeld_l0_addr_h_START (0)
+#define SOC_VENC_VEDU_VCPI_PMELD_L0_ADDR_H_vcpi_pmeld_l0_addr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_pmeld_l1_addr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_PMELD_L1_ADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_PMELD_L1_ADDR_L_vcpi_pmeld_l1_addr_l_START (0)
+#define SOC_VENC_VEDU_VCPI_PMELD_L1_ADDR_L_vcpi_pmeld_l1_addr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_pmeld_l1_addr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_PMELD_L1_ADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_PMELD_L1_ADDR_H_vcpi_pmeld_l1_addr_h_START (0)
+#define SOC_VENC_VEDU_VCPI_PMELD_L1_ADDR_H_vcpi_pmeld_l1_addr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_pmest_addr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_PMEST_ADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_PMEST_ADDR_L_vcpi_pmest_addr_l_START (0)
+#define SOC_VENC_VEDU_VCPI_PMEST_ADDR_L_vcpi_pmest_addr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_pmest_addr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_PMEST_ADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_PMEST_ADDR_H_vcpi_pmest_addr_h_START (0)
+#define SOC_VENC_VEDU_VCPI_PMEST_ADDR_H_vcpi_pmest_addr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_mvst_address_l : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_NBI_MVST_ADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_NBI_MVST_ADDR_L_vcpi_mvst_address_l_START (0)
+#define SOC_VENC_VEDU_VCPI_NBI_MVST_ADDR_L_vcpi_mvst_address_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_mvst_address_h : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_NBI_MVST_ADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_NBI_MVST_ADDR_H_vcpi_mvst_address_h_START (0)
+#define SOC_VENC_VEDU_VCPI_NBI_MVST_ADDR_H_vcpi_mvst_address_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_mvld_address_l : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_NBI_MVLD_ADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_NBI_MVLD_ADDR_L_vcpi_mvld_address_l_START (0)
+#define SOC_VENC_VEDU_VCPI_NBI_MVLD_ADDR_L_vcpi_mvld_address_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_mvld_address_h : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_NBI_MVLD_ADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_NBI_MVLD_ADDR_H_vcpi_mvld_address_h_START (0)
+#define SOC_VENC_VEDU_VCPI_NBI_MVLD_ADDR_H_vcpi_mvld_address_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_csst_strmaddr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_STRMADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_STRMADDR_L_vcpi_csst_strmaddr_l_START (0)
+#define SOC_VENC_VEDU_VCPI_STRMADDR_L_vcpi_csst_strmaddr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_csst_strmaddr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_STRMADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_STRMADDR_H_vcpi_csst_strmaddr_h_START (0)
+#define SOC_VENC_VEDU_VCPI_STRMADDR_H_vcpi_csst_strmaddr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_csst_swptraddr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_SWPTRADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_SWPTRADDR_L_vcpi_csst_swptraddr_l_START (0)
+#define SOC_VENC_VEDU_VCPI_SWPTRADDR_L_vcpi_csst_swptraddr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_csst_swptraddr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_SWPTRADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_SWPTRADDR_H_vcpi_csst_swptraddr_h_START (0)
+#define SOC_VENC_VEDU_VCPI_SWPTRADDR_H_vcpi_csst_swptraddr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_csst_srptraddr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_SRPTRADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_SRPTRADDR_L_vcpi_csst_srptraddr_l_START (0)
+#define SOC_VENC_VEDU_VCPI_SRPTRADDR_L_vcpi_csst_srptraddr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_csst_srptraddr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_SRPTRADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_SRPTRADDR_H_vcpi_csst_srptraddr_h_START (0)
+#define SOC_VENC_VEDU_VCPI_SRPTRADDR_H_vcpi_csst_srptraddr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_pmest_info_addr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_PMEINFO_ST_ADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_PMEINFO_ST_ADDR_L_vcpi_pmest_info_addr_l_START (0)
+#define SOC_VENC_VEDU_VCPI_PMEINFO_ST_ADDR_L_vcpi_pmest_info_addr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_pmest_info_addr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_PMEINFO_ST_ADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_PMEINFO_ST_ADDR_H_vcpi_pmest_info_addr_h_START (0)
+#define SOC_VENC_VEDU_VCPI_PMEINFO_ST_ADDR_H_vcpi_pmest_info_addr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_pmeinfo_ld_0_addr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_PMEINFO_LD0_ADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_PMEINFO_LD0_ADDR_L_vcpi_pmeinfo_ld_0_addr_l_START (0)
+#define SOC_VENC_VEDU_VCPI_PMEINFO_LD0_ADDR_L_vcpi_pmeinfo_ld_0_addr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_pmeinfo_ld_0_addr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_PMEINFO_LD0_ADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_PMEINFO_LD0_ADDR_H_vcpi_pmeinfo_ld_0_addr_h_START (0)
+#define SOC_VENC_VEDU_VCPI_PMEINFO_LD0_ADDR_H_vcpi_pmeinfo_ld_0_addr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_pmeinfo_ld_1_addr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_PMEINFO_LD1_ADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_PMEINFO_LD1_ADDR_L_vcpi_pmeinfo_ld_1_addr_l_START (0)
+#define SOC_VENC_VEDU_VCPI_PMEINFO_LD1_ADDR_L_vcpi_pmeinfo_ld_1_addr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_pmeinfo_ld_1_addr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_PMEINFO_LD1_ADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_PMEINFO_LD1_ADDR_H_vcpi_pmeinfo_ld_1_addr_h_START (0)
+#define SOC_VENC_VEDU_VCPI_PMEINFO_LD1_ADDR_H_vcpi_pmeinfo_ld_1_addr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_qpgld_inf_addr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_QPGLD_INF_ADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_QPGLD_INF_ADDR_L_vcpi_qpgld_inf_addr_l_START (0)
+#define SOC_VENC_VEDU_VCPI_QPGLD_INF_ADDR_L_vcpi_qpgld_inf_addr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_qpgld_inf_addr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_QPGLD_INF_ADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_QPGLD_INF_ADDR_H_vcpi_qpgld_inf_addr_h_START (0)
+#define SOC_VENC_VEDU_VCPI_QPGLD_INF_ADDR_H_vcpi_qpgld_inf_addr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vedu_left_cell_raddr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_LEFT_CELL_RADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_LEFT_CELL_RADDR_L_vedu_left_cell_raddr_l_START (0)
+#define SOC_VENC_VEDU_LEFT_CELL_RADDR_L_vedu_left_cell_raddr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vedu_left_cell_raddr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_LEFT_CELL_RADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_LEFT_CELL_RADDR_H_vedu_left_cell_raddr_h_START (0)
+#define SOC_VENC_VEDU_LEFT_CELL_RADDR_H_vedu_left_cell_raddr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vedu_top_cell_raddr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_TOP_CELL_RADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_TOP_CELL_RADDR_L_vedu_top_cell_raddr_l_START (0)
+#define SOC_VENC_VEDU_TOP_CELL_RADDR_L_vedu_top_cell_raddr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vedu_top_cell_raddr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_TOP_CELL_RADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_TOP_CELL_RADDR_H_vedu_top_cell_raddr_h_START (0)
+#define SOC_VENC_VEDU_TOP_CELL_RADDR_H_vedu_top_cell_raddr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vedu_curr_cell_waddr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_CURR_CELL_WADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_CURR_CELL_WADDR_L_vedu_curr_cell_waddr_l_START (0)
+#define SOC_VENC_VEDU_CURR_CELL_WADDR_L_vedu_curr_cell_waddr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vedu_curr_cell_waddr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_CURR_CELL_WADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_CURR_CELL_WADDR_H_vedu_curr_cell_waddr_h_START (0)
+#define SOC_VENC_VEDU_CURR_CELL_WADDR_H_vedu_curr_cell_waddr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vedu_topleft_cell_raddr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_TOPLEFT_CELL_RADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_TOPLEFT_CELL_RADDR_L_vedu_topleft_cell_raddr_l_START (0)
+#define SOC_VENC_VEDU_TOPLEFT_CELL_RADDR_L_vedu_topleft_cell_raddr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vedu_topleft_cell_raddr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_TOPLEFT_CELL_RADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_TOPLEFT_CELL_RADDR_H_vedu_topleft_cell_raddr_h_START (0)
+#define SOC_VENC_VEDU_TOPLEFT_CELL_RADDR_H_vedu_topleft_cell_raddr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vedu_bot_rc_info_waddr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_BOT_RC_INFO_WADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_BOT_RC_INFO_WADDR_L_vedu_bot_rc_info_waddr_l_START (0)
+#define SOC_VENC_VEDU_BOT_RC_INFO_WADDR_L_vedu_bot_rc_info_waddr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vedu_bot_rc_info_waddr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_BOT_RC_INFO_WADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_BOT_RC_INFO_WADDR_H_vedu_bot_rc_info_waddr_h_START (0)
+#define SOC_VENC_VEDU_BOT_RC_INFO_WADDR_H_vedu_bot_rc_info_waddr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vedu_right_rc_info_waddr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_RIGHT_RC_INFO_WADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_RIGHT_RC_INFO_WADDR_L_vedu_right_rc_info_waddr_l_START (0)
+#define SOC_VENC_VEDU_RIGHT_RC_INFO_WADDR_L_vedu_right_rc_info_waddr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vedu_right_rc_info_waddr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_RIGHT_RC_INFO_WADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_RIGHT_RC_INFO_WADDR_H_vedu_right_rc_info_waddr_h_START (0)
+#define SOC_VENC_VEDU_RIGHT_RC_INFO_WADDR_H_vedu_right_rc_info_waddr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_right_bs_info_waddr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_RIGHT_BS_INFO_WADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_RIGHT_BS_INFO_WADDR_L_vcpi_right_bs_info_waddr_l_START (0)
+#define SOC_VENC_VEDU_RIGHT_BS_INFO_WADDR_L_vcpi_right_bs_info_waddr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_right_bs_info_waddr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_RIGHT_BS_INFO_WADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_RIGHT_BS_INFO_WADDR_H_vcpi_right_bs_info_waddr_h_START (0)
+#define SOC_VENC_VEDU_RIGHT_BS_INFO_WADDR_H_vcpi_right_bs_info_waddr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_left_bs_info_raddr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_LEFT_BS_INFO_RADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_LEFT_BS_INFO_RADDR_L_vcpi_left_bs_info_raddr_l_START (0)
+#define SOC_VENC_VEDU_LEFT_BS_INFO_RADDR_L_vcpi_left_bs_info_raddr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_left_bs_info_raddr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_LEFT_BS_INFO_RADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_LEFT_BS_INFO_RADDR_H_vcpi_left_bs_info_raddr_h_START (0)
+#define SOC_VENC_VEDU_LEFT_BS_INFO_RADDR_H_vcpi_left_bs_info_raddr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vedu_bot_tb_info_waddr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_BOT_TB_INFO_WADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_BOT_TB_INFO_WADDR_L_vedu_bot_tb_info_waddr_l_START (0)
+#define SOC_VENC_VEDU_BOT_TB_INFO_WADDR_L_vedu_bot_tb_info_waddr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vedu_bot_tb_info_waddr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_BOT_TB_INFO_WADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_BOT_TB_INFO_WADDR_H_vedu_bot_tb_info_waddr_h_START (0)
+#define SOC_VENC_VEDU_BOT_TB_INFO_WADDR_H_vedu_bot_tb_info_waddr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vedu_right_tb_info_waddr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_RIGHT_TB_INFO_WADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_RIGHT_TB_INFO_WADDR_L_vedu_right_tb_info_waddr_l_START (0)
+#define SOC_VENC_VEDU_RIGHT_TB_INFO_WADDR_L_vedu_right_tb_info_waddr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vedu_right_tb_info_waddr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_RIGHT_TB_INFO_WADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_RIGHT_TB_INFO_WADDR_H_vedu_right_tb_info_waddr_h_START (0)
+#define SOC_VENC_VEDU_RIGHT_TB_INFO_WADDR_H_vedu_right_tb_info_waddr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vedu_botright_tb_info_waddr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_BOTRIGHT_TB_INFO_WADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_BOTRIGHT_TB_INFO_WADDR_L_vedu_botright_tb_info_waddr_l_START (0)
+#define SOC_VENC_VEDU_BOTRIGHT_TB_INFO_WADDR_L_vedu_botright_tb_info_waddr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vedu_botright_tb_info_waddr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_BOTRIGHT_TB_INFO_WADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_BOTRIGHT_TB_INFO_WADDR_H_vedu_botright_tb_info_waddr_h_START (0)
+#define SOC_VENC_VEDU_BOTRIGHT_TB_INFO_WADDR_H_vedu_botright_tb_info_waddr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vedu_top_rc_info_raddr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_TOP_RC_INFO_RADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_TOP_RC_INFO_RADDR_L_vedu_top_rc_info_raddr_l_START (0)
+#define SOC_VENC_VEDU_TOP_RC_INFO_RADDR_L_vedu_top_rc_info_raddr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vedu_top_rc_info_raddr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_TOP_RC_INFO_RADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_TOP_RC_INFO_RADDR_H_vedu_top_rc_info_raddr_h_START (0)
+#define SOC_VENC_VEDU_TOP_RC_INFO_RADDR_H_vedu_top_rc_info_raddr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vedu_left_rc_info_raddr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_LEFT_RC_INFO_RADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_LEFT_RC_INFO_RADDR_L_vedu_left_rc_info_raddr_l_START (0)
+#define SOC_VENC_VEDU_LEFT_RC_INFO_RADDR_L_vedu_left_rc_info_raddr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vedu_left_rc_info_raddr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_LEFT_RC_INFO_RADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_LEFT_RC_INFO_RADDR_H_vedu_left_rc_info_raddr_h_START (0)
+#define SOC_VENC_VEDU_LEFT_RC_INFO_RADDR_H_vedu_left_rc_info_raddr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vedu_top_tb_info_raddr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_TOP_TB_INFO_RADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_TOP_TB_INFO_RADDR_L_vedu_top_tb_info_raddr_l_START (0)
+#define SOC_VENC_VEDU_TOP_TB_INFO_RADDR_L_vedu_top_tb_info_raddr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vedu_top_tb_info_raddr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_TOP_TB_INFO_RADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_TOP_TB_INFO_RADDR_H_vedu_top_tb_info_raddr_h_START (0)
+#define SOC_VENC_VEDU_TOP_TB_INFO_RADDR_H_vedu_top_tb_info_raddr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vedu_left_tb_info_raddr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_LEFT_TB_INFO_RADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_LEFT_TB_INFO_RADDR_L_vedu_left_tb_info_raddr_l_START (0)
+#define SOC_VENC_VEDU_LEFT_TB_INFO_RADDR_L_vedu_left_tb_info_raddr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vedu_left_tb_info_raddr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_LEFT_TB_INFO_RADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_LEFT_TB_INFO_RADDR_H_vedu_left_tb_info_raddr_h_START (0)
+#define SOC_VENC_VEDU_LEFT_TB_INFO_RADDR_H_vedu_left_tb_info_raddr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vedu_topleft_tb_info_raddr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_TOPLEFT_TB_INFO_RADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_TOPLEFT_TB_INFO_RADDR_L_vedu_topleft_tb_info_raddr_l_START (0)
+#define SOC_VENC_VEDU_TOPLEFT_TB_INFO_RADDR_L_vedu_topleft_tb_info_raddr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vedu_topleft_tb_info_raddr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_TOPLEFT_TB_INFO_RADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_TOPLEFT_TB_INFO_RADDR_H_vedu_topleft_tb_info_raddr_h_START (0)
+#define SOC_VENC_VEDU_TOPLEFT_TB_INFO_RADDR_H_vedu_topleft_tb_info_raddr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ppfd_st_addr0_l : 32;
+    } reg;
+} SOC_VENC_VEDU_PPFD_ST_ADDR0_L_UNION;
+#endif
+#define SOC_VENC_VEDU_PPFD_ST_ADDR0_L_ppfd_st_addr0_l_START (0)
+#define SOC_VENC_VEDU_PPFD_ST_ADDR0_L_ppfd_st_addr0_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ppfd_st_addr0_h : 32;
+    } reg;
+} SOC_VENC_VEDU_PPFD_ST_ADDR0_H_UNION;
+#endif
+#define SOC_VENC_VEDU_PPFD_ST_ADDR0_H_ppfd_st_addr0_h_START (0)
+#define SOC_VENC_VEDU_PPFD_ST_ADDR0_H_ppfd_st_addr0_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vedu_skipweight_ld_addr_l : 32;
+    } reg;
+} SOC_VENC_VEDU_SKIPWEIGHT_LD_ADDR_L_UNION;
+#endif
+#define SOC_VENC_VEDU_SKIPWEIGHT_LD_ADDR_L_vedu_skipweight_ld_addr_l_START (0)
+#define SOC_VENC_VEDU_SKIPWEIGHT_LD_ADDR_L_vedu_skipweight_ld_addr_l_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vedu_skipweight_ld_addr_h : 32;
+    } reg;
+} SOC_VENC_VEDU_SKIPWEIGHT_LD_ADDR_H_UNION;
+#endif
+#define SOC_VENC_VEDU_SKIPWEIGHT_LD_ADDR_H_vedu_skipweight_ld_addr_h_START (0)
+#define SOC_VENC_VEDU_SKIPWEIGHT_LD_ADDR_H_vedu_skipweight_ld_addr_h_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_RESERVED_15_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sao_area0_start_lcux : 16;
+        unsigned int sao_area0_start_lcuy : 16;
+    } reg;
+} SOC_VENC_VEDU_SAO_SSD_AREA0_START_UNION;
+#endif
+#define SOC_VENC_VEDU_SAO_SSD_AREA0_START_sao_area0_start_lcux_START (0)
+#define SOC_VENC_VEDU_SAO_SSD_AREA0_START_sao_area0_start_lcux_END (15)
+#define SOC_VENC_VEDU_SAO_SSD_AREA0_START_sao_area0_start_lcuy_START (16)
+#define SOC_VENC_VEDU_SAO_SSD_AREA0_START_sao_area0_start_lcuy_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sao_area0_end_lcux : 16;
+        unsigned int sao_area0_end_lcuy : 16;
+    } reg;
+} SOC_VENC_VEDU_SAO_SSD_AREA0_END_UNION;
+#endif
+#define SOC_VENC_VEDU_SAO_SSD_AREA0_END_sao_area0_end_lcux_START (0)
+#define SOC_VENC_VEDU_SAO_SSD_AREA0_END_sao_area0_end_lcux_END (15)
+#define SOC_VENC_VEDU_SAO_SSD_AREA0_END_sao_area0_end_lcuy_START (16)
+#define SOC_VENC_VEDU_SAO_SSD_AREA0_END_sao_area0_end_lcuy_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sao_area1_start_lcux : 16;
+        unsigned int sao_area1_start_lcuy : 16;
+    } reg;
+} SOC_VENC_VEDU_SAO_SSD_AREA1_START_UNION;
+#endif
+#define SOC_VENC_VEDU_SAO_SSD_AREA1_START_sao_area1_start_lcux_START (0)
+#define SOC_VENC_VEDU_SAO_SSD_AREA1_START_sao_area1_start_lcux_END (15)
+#define SOC_VENC_VEDU_SAO_SSD_AREA1_START_sao_area1_start_lcuy_START (16)
+#define SOC_VENC_VEDU_SAO_SSD_AREA1_START_sao_area1_start_lcuy_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sao_area1_end_lcux : 16;
+        unsigned int sao_area1_end_lcuy : 16;
+    } reg;
+} SOC_VENC_VEDU_SAO_SSD_AREA1_END_UNION;
+#endif
+#define SOC_VENC_VEDU_SAO_SSD_AREA1_END_sao_area1_end_lcux_START (0)
+#define SOC_VENC_VEDU_SAO_SSD_AREA1_END_sao_area1_end_lcux_END (15)
+#define SOC_VENC_VEDU_SAO_SSD_AREA1_END_sao_area1_end_lcuy_START (16)
+#define SOC_VENC_VEDU_SAO_SSD_AREA1_END_sao_area1_end_lcuy_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sao_area2_start_lcux : 16;
+        unsigned int sao_area2_start_lcuy : 16;
+    } reg;
+} SOC_VENC_VEDU_SAO_SSD_AREA2_START_UNION;
+#endif
+#define SOC_VENC_VEDU_SAO_SSD_AREA2_START_sao_area2_start_lcux_START (0)
+#define SOC_VENC_VEDU_SAO_SSD_AREA2_START_sao_area2_start_lcux_END (15)
+#define SOC_VENC_VEDU_SAO_SSD_AREA2_START_sao_area2_start_lcuy_START (16)
+#define SOC_VENC_VEDU_SAO_SSD_AREA2_START_sao_area2_start_lcuy_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sao_area2_end_lcux : 16;
+        unsigned int sao_area2_end_lcuy : 16;
+    } reg;
+} SOC_VENC_VEDU_SAO_SSD_AREA2_END_UNION;
+#endif
+#define SOC_VENC_VEDU_SAO_SSD_AREA2_END_sao_area2_end_lcux_START (0)
+#define SOC_VENC_VEDU_SAO_SSD_AREA2_END_sao_area2_end_lcux_END (15)
+#define SOC_VENC_VEDU_SAO_SSD_AREA2_END_sao_area2_end_lcuy_START (16)
+#define SOC_VENC_VEDU_SAO_SSD_AREA2_END_sao_area2_end_lcuy_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sao_area3_start_lcux : 16;
+        unsigned int sao_area3_start_lcuy : 16;
+    } reg;
+} SOC_VENC_VEDU_SAO_SSD_AREA3_START_UNION;
+#endif
+#define SOC_VENC_VEDU_SAO_SSD_AREA3_START_sao_area3_start_lcux_START (0)
+#define SOC_VENC_VEDU_SAO_SSD_AREA3_START_sao_area3_start_lcux_END (15)
+#define SOC_VENC_VEDU_SAO_SSD_AREA3_START_sao_area3_start_lcuy_START (16)
+#define SOC_VENC_VEDU_SAO_SSD_AREA3_START_sao_area3_start_lcuy_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sao_area3_end_lcux : 16;
+        unsigned int sao_area3_end_lcuy : 16;
+    } reg;
+} SOC_VENC_VEDU_SAO_SSD_AREA3_END_UNION;
+#endif
+#define SOC_VENC_VEDU_SAO_SSD_AREA3_END_sao_area3_end_lcux_START (0)
+#define SOC_VENC_VEDU_SAO_SSD_AREA3_END_sao_area3_end_lcux_END (15)
+#define SOC_VENC_VEDU_SAO_SSD_AREA3_END_sao_area3_end_lcuy_START (16)
+#define SOC_VENC_VEDU_SAO_SSD_AREA3_END_sao_area3_end_lcuy_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sao_area4_start_lcux : 16;
+        unsigned int sao_area4_start_lcuy : 16;
+    } reg;
+} SOC_VENC_VEDU_SAO_SSD_AREA4_START_UNION;
+#endif
+#define SOC_VENC_VEDU_SAO_SSD_AREA4_START_sao_area4_start_lcux_START (0)
+#define SOC_VENC_VEDU_SAO_SSD_AREA4_START_sao_area4_start_lcux_END (15)
+#define SOC_VENC_VEDU_SAO_SSD_AREA4_START_sao_area4_start_lcuy_START (16)
+#define SOC_VENC_VEDU_SAO_SSD_AREA4_START_sao_area4_start_lcuy_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sao_area4_end_lcux : 16;
+        unsigned int sao_area4_end_lcuy : 16;
+    } reg;
+} SOC_VENC_VEDU_SAO_SSD_AREA4_END_UNION;
+#endif
+#define SOC_VENC_VEDU_SAO_SSD_AREA4_END_sao_area4_end_lcux_START (0)
+#define SOC_VENC_VEDU_SAO_SSD_AREA4_END_sao_area4_end_lcux_END (15)
+#define SOC_VENC_VEDU_SAO_SSD_AREA4_END_sao_area4_end_lcuy_START (16)
+#define SOC_VENC_VEDU_SAO_SSD_AREA4_END_sao_area4_end_lcuy_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sao_area5_start_lcux : 16;
+        unsigned int sao_area5_start_lcuy : 16;
+    } reg;
+} SOC_VENC_VEDU_SAO_SSD_AREA5_START_UNION;
+#endif
+#define SOC_VENC_VEDU_SAO_SSD_AREA5_START_sao_area5_start_lcux_START (0)
+#define SOC_VENC_VEDU_SAO_SSD_AREA5_START_sao_area5_start_lcux_END (15)
+#define SOC_VENC_VEDU_SAO_SSD_AREA5_START_sao_area5_start_lcuy_START (16)
+#define SOC_VENC_VEDU_SAO_SSD_AREA5_START_sao_area5_start_lcuy_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sao_area5_end_lcux : 16;
+        unsigned int sao_area5_end_lcuy : 16;
+    } reg;
+} SOC_VENC_VEDU_SAO_SSD_AREA5_END_UNION;
+#endif
+#define SOC_VENC_VEDU_SAO_SSD_AREA5_END_sao_area5_end_lcux_START (0)
+#define SOC_VENC_VEDU_SAO_SSD_AREA5_END_sao_area5_end_lcux_END (15)
+#define SOC_VENC_VEDU_SAO_SSD_AREA5_END_sao_area5_end_lcuy_START (16)
+#define SOC_VENC_VEDU_SAO_SSD_AREA5_END_sao_area5_end_lcuy_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sao_area6_start_lcux : 16;
+        unsigned int sao_area6_start_lcuy : 16;
+    } reg;
+} SOC_VENC_VEDU_SAO_SSD_AREA6_START_UNION;
+#endif
+#define SOC_VENC_VEDU_SAO_SSD_AREA6_START_sao_area6_start_lcux_START (0)
+#define SOC_VENC_VEDU_SAO_SSD_AREA6_START_sao_area6_start_lcux_END (15)
+#define SOC_VENC_VEDU_SAO_SSD_AREA6_START_sao_area6_start_lcuy_START (16)
+#define SOC_VENC_VEDU_SAO_SSD_AREA6_START_sao_area6_start_lcuy_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sao_area6_end_lcux : 16;
+        unsigned int sao_area6_end_lcuy : 16;
+    } reg;
+} SOC_VENC_VEDU_SAO_SSD_AREA6_END_UNION;
+#endif
+#define SOC_VENC_VEDU_SAO_SSD_AREA6_END_sao_area6_end_lcux_START (0)
+#define SOC_VENC_VEDU_SAO_SSD_AREA6_END_sao_area6_end_lcux_END (15)
+#define SOC_VENC_VEDU_SAO_SSD_AREA6_END_sao_area6_end_lcuy_START (16)
+#define SOC_VENC_VEDU_SAO_SSD_AREA6_END_sao_area6_end_lcuy_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sao_area7_start_lcux : 16;
+        unsigned int sao_area7_start_lcuy : 16;
+    } reg;
+} SOC_VENC_VEDU_SAO_SSD_AREA7_START_UNION;
+#endif
+#define SOC_VENC_VEDU_SAO_SSD_AREA7_START_sao_area7_start_lcux_START (0)
+#define SOC_VENC_VEDU_SAO_SSD_AREA7_START_sao_area7_start_lcux_END (15)
+#define SOC_VENC_VEDU_SAO_SSD_AREA7_START_sao_area7_start_lcuy_START (16)
+#define SOC_VENC_VEDU_SAO_SSD_AREA7_START_sao_area7_start_lcuy_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sao_area7_end_lcux : 16;
+        unsigned int sao_area7_end_lcuy : 16;
+    } reg;
+} SOC_VENC_VEDU_SAO_SSD_AREA7_END_UNION;
+#endif
+#define SOC_VENC_VEDU_SAO_SSD_AREA7_END_sao_area7_end_lcux_START (0)
+#define SOC_VENC_VEDU_SAO_SSD_AREA7_END_sao_area7_end_lcux_END (15)
+#define SOC_VENC_VEDU_SAO_SSD_AREA7_END_sao_area7_end_lcuy_START (16)
+#define SOC_VENC_VEDU_SAO_SSD_AREA7_END_sao_area7_end_lcuy_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_RESERVED_16_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_curld_c_stride : 16;
+        unsigned int vcpi_curld_y_stride : 16;
+    } reg;
+} SOC_VENC_VEDU_VCPI_STRIDE_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_STRIDE_vcpi_curld_c_stride_START (0)
+#define SOC_VENC_VEDU_VCPI_STRIDE_vcpi_curld_c_stride_END (15)
+#define SOC_VENC_VEDU_VCPI_STRIDE_vcpi_curld_y_stride_START (16)
+#define SOC_VENC_VEDU_VCPI_STRIDE_vcpi_curld_y_stride_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_curld_ext_c_stride : 16;
+        unsigned int vcpi_curld_ext_y_stride : 16;
+    } reg;
+} SOC_VENC_VEDU_VCPI_EXT_STRIDE_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_EXT_STRIDE_vcpi_curld_ext_c_stride_START (0)
+#define SOC_VENC_VEDU_VCPI_EXT_STRIDE_vcpi_curld_ext_c_stride_END (15)
+#define SOC_VENC_VEDU_VCPI_EXT_STRIDE_vcpi_curld_ext_y_stride_START (16)
+#define SOC_VENC_VEDU_VCPI_EXT_STRIDE_vcpi_curld_ext_y_stride_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_refc_l0_stride : 16;
+        unsigned int vcpi_refy_l0_stride : 16;
+    } reg;
+} SOC_VENC_VEDU_VCPI_REF_L0_STRIDE_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_REF_L0_STRIDE_vcpi_refc_l0_stride_START (0)
+#define SOC_VENC_VEDU_VCPI_REF_L0_STRIDE_vcpi_refc_l0_stride_END (15)
+#define SOC_VENC_VEDU_VCPI_REF_L0_STRIDE_vcpi_refy_l0_stride_START (16)
+#define SOC_VENC_VEDU_VCPI_REF_L0_STRIDE_vcpi_refy_l0_stride_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_refc_l1_stride : 16;
+        unsigned int vcpi_refy_l1_stride : 16;
+    } reg;
+} SOC_VENC_VEDU_VCPI_REF_L1_STRIDE_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_REF_L1_STRIDE_vcpi_refc_l1_stride_START (0)
+#define SOC_VENC_VEDU_VCPI_REF_L1_STRIDE_vcpi_refc_l1_stride_END (15)
+#define SOC_VENC_VEDU_VCPI_REF_L1_STRIDE_vcpi_refy_l1_stride_START (16)
+#define SOC_VENC_VEDU_VCPI_REF_L1_STRIDE_vcpi_refy_l1_stride_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_recst_ystride : 16;
+        unsigned int vcpi_recst_cstride : 16;
+    } reg;
+} SOC_VENC_VEDU_VCPI_REC_STRIDE_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_REC_STRIDE_vcpi_recst_ystride_START (0)
+#define SOC_VENC_VEDU_VCPI_REC_STRIDE_vcpi_recst_ystride_END (15)
+#define SOC_VENC_VEDU_VCPI_REC_STRIDE_vcpi_recst_cstride_START (16)
+#define SOC_VENC_VEDU_VCPI_REC_STRIDE_vcpi_recst_cstride_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_pmest_stride : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_PMEST_STRIDE_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_PMEST_STRIDE_vcpi_pmest_stride_START (0)
+#define SOC_VENC_VEDU_VCPI_PMEST_STRIDE_vcpi_pmest_stride_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_pmeld_stride : 32;
+    } reg;
+} SOC_VENC_VEDU_VCPI_PMELD_STRIDE_UNION;
+#endif
+#define SOC_VENC_VEDU_VCPI_PMELD_STRIDE_vcpi_pmeld_stride_START (0)
+#define SOC_VENC_VEDU_VCPI_PMELD_STRIDE_vcpi_pmeld_stride_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_RESERVED_17_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ghdr_en : 1;
+        unsigned int ghdr_ck_gt_en : 1;
+        unsigned int reserved_0 : 10;
+        unsigned int ghdr_demo_en : 1;
+        unsigned int ghdr_demo_mode : 1;
+        unsigned int reserved_1 : 2;
+        unsigned int ghdr_demo_pos : 16;
+    } reg;
+} SOC_VENC_VEDU_GHDR_CTRL_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_CTRL_ghdr_en_START (0)
+#define SOC_VENC_VEDU_GHDR_CTRL_ghdr_en_END (0)
+#define SOC_VENC_VEDU_GHDR_CTRL_ghdr_ck_gt_en_START (1)
+#define SOC_VENC_VEDU_GHDR_CTRL_ghdr_ck_gt_en_END (1)
+#define SOC_VENC_VEDU_GHDR_CTRL_ghdr_demo_en_START (12)
+#define SOC_VENC_VEDU_GHDR_CTRL_ghdr_demo_en_END (12)
+#define SOC_VENC_VEDU_GHDR_CTRL_ghdr_demo_mode_START (13)
+#define SOC_VENC_VEDU_GHDR_CTRL_ghdr_demo_mode_END (13)
+#define SOC_VENC_VEDU_GHDR_CTRL_ghdr_demo_pos_START (16)
+#define SOC_VENC_VEDU_GHDR_CTRL_ghdr_demo_pos_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ghdr_degmm_en : 1;
+        unsigned int reserved : 31;
+    } reg;
+} SOC_VENC_VEDU_GHDR_DEGAMMA_CTRL_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_DEGAMMA_CTRL_ghdr_degmm_en_START (0)
+#define SOC_VENC_VEDU_GHDR_DEGAMMA_CTRL_ghdr_degmm_en_END (0)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int g_degmm_x1_step : 4;
+        unsigned int g_degmm_x2_step : 4;
+        unsigned int g_degmm_x3_step : 4;
+        unsigned int g_degmm_x4_step : 4;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_VEDU_GHDR_DEGAMMA_STEP_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_DEGAMMA_STEP_g_degmm_x1_step_START (0)
+#define SOC_VENC_VEDU_GHDR_DEGAMMA_STEP_g_degmm_x1_step_END (3)
+#define SOC_VENC_VEDU_GHDR_DEGAMMA_STEP_g_degmm_x2_step_START (4)
+#define SOC_VENC_VEDU_GHDR_DEGAMMA_STEP_g_degmm_x2_step_END (7)
+#define SOC_VENC_VEDU_GHDR_DEGAMMA_STEP_g_degmm_x3_step_START (8)
+#define SOC_VENC_VEDU_GHDR_DEGAMMA_STEP_g_degmm_x3_step_END (11)
+#define SOC_VENC_VEDU_GHDR_DEGAMMA_STEP_g_degmm_x4_step_START (12)
+#define SOC_VENC_VEDU_GHDR_DEGAMMA_STEP_g_degmm_x4_step_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int g_degmm_x1_pos : 10;
+        unsigned int g_degmm_x2_pos : 10;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_GHDR_DEGAMMA_POS1_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_DEGAMMA_POS1_g_degmm_x1_pos_START (0)
+#define SOC_VENC_VEDU_GHDR_DEGAMMA_POS1_g_degmm_x1_pos_END (9)
+#define SOC_VENC_VEDU_GHDR_DEGAMMA_POS1_g_degmm_x2_pos_START (10)
+#define SOC_VENC_VEDU_GHDR_DEGAMMA_POS1_g_degmm_x2_pos_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int g_degmm_x3_pos : 10;
+        unsigned int g_degmm_x4_pos : 10;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_VEDU_GHDR_DEGAMMA_POS2_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_DEGAMMA_POS2_g_degmm_x3_pos_START (0)
+#define SOC_VENC_VEDU_GHDR_DEGAMMA_POS2_g_degmm_x3_pos_END (9)
+#define SOC_VENC_VEDU_GHDR_DEGAMMA_POS2_g_degmm_x4_pos_START (10)
+#define SOC_VENC_VEDU_GHDR_DEGAMMA_POS2_g_degmm_x4_pos_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int g_degmm_x1_num : 6;
+        unsigned int reserved_0 : 2;
+        unsigned int g_degmm_x2_num : 6;
+        unsigned int reserved_1 : 2;
+        unsigned int g_degmm_x3_num : 6;
+        unsigned int reserved_2 : 2;
+        unsigned int g_degmm_x4_num : 6;
+        unsigned int reserved_3 : 2;
+    } reg;
+} SOC_VENC_VEDU_GHDR_DEGAMMA_NUM_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_DEGAMMA_NUM_g_degmm_x1_num_START (0)
+#define SOC_VENC_VEDU_GHDR_DEGAMMA_NUM_g_degmm_x1_num_END (5)
+#define SOC_VENC_VEDU_GHDR_DEGAMMA_NUM_g_degmm_x2_num_START (8)
+#define SOC_VENC_VEDU_GHDR_DEGAMMA_NUM_g_degmm_x2_num_END (13)
+#define SOC_VENC_VEDU_GHDR_DEGAMMA_NUM_g_degmm_x3_num_START (16)
+#define SOC_VENC_VEDU_GHDR_DEGAMMA_NUM_g_degmm_x3_num_END (21)
+#define SOC_VENC_VEDU_GHDR_DEGAMMA_NUM_g_degmm_x4_num_START (24)
+#define SOC_VENC_VEDU_GHDR_DEGAMMA_NUM_g_degmm_x4_num_END (29)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ghdr_gamut_en : 1;
+        unsigned int reserved : 31;
+    } reg;
+} SOC_VENC_VEDU_GHDR_GAMUT_CTRL_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_GAMUT_CTRL_ghdr_gamut_en_START (0)
+#define SOC_VENC_VEDU_GHDR_GAMUT_CTRL_ghdr_gamut_en_END (0)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ghdr_gamut_coef00 : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_VEDU_GHDR_GAMUT_COEF00_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_GAMUT_COEF00_ghdr_gamut_coef00_START (0)
+#define SOC_VENC_VEDU_GHDR_GAMUT_COEF00_ghdr_gamut_coef00_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ghdr_gamut_coef01 : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_VEDU_GHDR_GAMUT_COEF01_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_GAMUT_COEF01_ghdr_gamut_coef01_START (0)
+#define SOC_VENC_VEDU_GHDR_GAMUT_COEF01_ghdr_gamut_coef01_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ghdr_gamut_coef02 : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_VEDU_GHDR_GAMUT_COEF02_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_GAMUT_COEF02_ghdr_gamut_coef02_START (0)
+#define SOC_VENC_VEDU_GHDR_GAMUT_COEF02_ghdr_gamut_coef02_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ghdr_gamut_coef10 : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_VEDU_GHDR_GAMUT_COEF10_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_GAMUT_COEF10_ghdr_gamut_coef10_START (0)
+#define SOC_VENC_VEDU_GHDR_GAMUT_COEF10_ghdr_gamut_coef10_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ghdr_gamut_coef11 : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_VEDU_GHDR_GAMUT_COEF11_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_GAMUT_COEF11_ghdr_gamut_coef11_START (0)
+#define SOC_VENC_VEDU_GHDR_GAMUT_COEF11_ghdr_gamut_coef11_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ghdr_gamut_coef12 : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_VEDU_GHDR_GAMUT_COEF12_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_GAMUT_COEF12_ghdr_gamut_coef12_START (0)
+#define SOC_VENC_VEDU_GHDR_GAMUT_COEF12_ghdr_gamut_coef12_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ghdr_gamut_coef20 : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_VEDU_GHDR_GAMUT_COEF20_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_GAMUT_COEF20_ghdr_gamut_coef20_START (0)
+#define SOC_VENC_VEDU_GHDR_GAMUT_COEF20_ghdr_gamut_coef20_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ghdr_gamut_coef21 : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_VEDU_GHDR_GAMUT_COEF21_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_GAMUT_COEF21_ghdr_gamut_coef21_START (0)
+#define SOC_VENC_VEDU_GHDR_GAMUT_COEF21_ghdr_gamut_coef21_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ghdr_gamut_coef22 : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_VEDU_GHDR_GAMUT_COEF22_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_GAMUT_COEF22_ghdr_gamut_coef22_START (0)
+#define SOC_VENC_VEDU_GHDR_GAMUT_COEF22_ghdr_gamut_coef22_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ghdr_gamut_scale : 4;
+        unsigned int reserved : 28;
+    } reg;
+} SOC_VENC_VEDU_GHDR_GAMUT_SCALE_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_GAMUT_SCALE_ghdr_gamut_scale_START (0)
+#define SOC_VENC_VEDU_GHDR_GAMUT_SCALE_ghdr_gamut_scale_END (3)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ghdr_gamut_clip_min : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_VEDU_GHDR_GAMUT_CLIP_MIN_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_GAMUT_CLIP_MIN_ghdr_gamut_clip_min_START (0)
+#define SOC_VENC_VEDU_GHDR_GAMUT_CLIP_MIN_ghdr_gamut_clip_min_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ghdr_gamut_clip_max : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_VEDU_GHDR_GAMUT_CLIP_MAX_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_GAMUT_CLIP_MAX_ghdr_gamut_clip_max_START (0)
+#define SOC_VENC_VEDU_GHDR_GAMUT_CLIP_MAX_ghdr_gamut_clip_max_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ghdr_tmap_en : 1;
+        unsigned int reserved : 31;
+    } reg;
+} SOC_VENC_VEDU_GHDR_TONEMAP_CTRL_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_TONEMAP_CTRL_ghdr_tmap_en_START (0)
+#define SOC_VENC_VEDU_GHDR_TONEMAP_CTRL_ghdr_tmap_en_END (0)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ghdr_tmap_rd_en : 1;
+        unsigned int reserved : 31;
+    } reg;
+} SOC_VENC_VEDU_GHDR_TONEMAP_REN_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_TONEMAP_REN_ghdr_tmap_rd_en_START (0)
+#define SOC_VENC_VEDU_GHDR_TONEMAP_REN_ghdr_tmap_rd_en_END (0)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_GHDR_RESERVED0_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int g_tmap_x1_step : 4;
+        unsigned int reserved_0 : 4;
+        unsigned int g_tmap_x2_step : 4;
+        unsigned int reserved_1 : 4;
+        unsigned int g_tmap_x3_step : 4;
+        unsigned int reserved_2 : 4;
+        unsigned int g_tmap_x4_step : 4;
+        unsigned int reserved_3 : 4;
+    } reg;
+} SOC_VENC_VEDU_GHDR_TONEMAP_STEP_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_TONEMAP_STEP_g_tmap_x1_step_START (0)
+#define SOC_VENC_VEDU_GHDR_TONEMAP_STEP_g_tmap_x1_step_END (3)
+#define SOC_VENC_VEDU_GHDR_TONEMAP_STEP_g_tmap_x2_step_START (8)
+#define SOC_VENC_VEDU_GHDR_TONEMAP_STEP_g_tmap_x2_step_END (11)
+#define SOC_VENC_VEDU_GHDR_TONEMAP_STEP_g_tmap_x3_step_START (16)
+#define SOC_VENC_VEDU_GHDR_TONEMAP_STEP_g_tmap_x3_step_END (19)
+#define SOC_VENC_VEDU_GHDR_TONEMAP_STEP_g_tmap_x4_step_START (24)
+#define SOC_VENC_VEDU_GHDR_TONEMAP_STEP_g_tmap_x4_step_END (27)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int g_tmap_x1_pos : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_VEDU_GHDR_TONEMAP_POS1_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_TONEMAP_POS1_g_tmap_x1_pos_START (0)
+#define SOC_VENC_VEDU_GHDR_TONEMAP_POS1_g_tmap_x1_pos_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int g_tmap_x2_pos : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_VEDU_GHDR_TONEMAP_POS2_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_TONEMAP_POS2_g_tmap_x2_pos_START (0)
+#define SOC_VENC_VEDU_GHDR_TONEMAP_POS2_g_tmap_x2_pos_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int g_tmap_x3_pos : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_VEDU_GHDR_TONEMAP_POS3_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_TONEMAP_POS3_g_tmap_x3_pos_START (0)
+#define SOC_VENC_VEDU_GHDR_TONEMAP_POS3_g_tmap_x3_pos_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int g_tmap_x4_pos : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_VEDU_GHDR_TONEMAP_POS4_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_TONEMAP_POS4_g_tmap_x4_pos_START (0)
+#define SOC_VENC_VEDU_GHDR_TONEMAP_POS4_g_tmap_x4_pos_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int g_tmap_x1_num : 5;
+        unsigned int reserved_0 : 3;
+        unsigned int g_tmap_x2_num : 5;
+        unsigned int reserved_1 : 3;
+        unsigned int g_tmap_x3_num : 5;
+        unsigned int reserved_2 : 3;
+        unsigned int g_tmap_x4_num : 5;
+        unsigned int reserved_3 : 3;
+    } reg;
+} SOC_VENC_VEDU_GHDR_TONEMAP_NUM_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_TONEMAP_NUM_g_tmap_x1_num_START (0)
+#define SOC_VENC_VEDU_GHDR_TONEMAP_NUM_g_tmap_x1_num_END (4)
+#define SOC_VENC_VEDU_GHDR_TONEMAP_NUM_g_tmap_x2_num_START (8)
+#define SOC_VENC_VEDU_GHDR_TONEMAP_NUM_g_tmap_x2_num_END (12)
+#define SOC_VENC_VEDU_GHDR_TONEMAP_NUM_g_tmap_x3_num_START (16)
+#define SOC_VENC_VEDU_GHDR_TONEMAP_NUM_g_tmap_x3_num_END (20)
+#define SOC_VENC_VEDU_GHDR_TONEMAP_NUM_g_tmap_x4_num_START (24)
+#define SOC_VENC_VEDU_GHDR_TONEMAP_NUM_g_tmap_x4_num_END (28)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ghdr_tmap_luma_coef0 : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_VEDU_GHDR_TONEMAP_LUMA_COEF0_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_TONEMAP_LUMA_COEF0_ghdr_tmap_luma_coef0_START (0)
+#define SOC_VENC_VEDU_GHDR_TONEMAP_LUMA_COEF0_ghdr_tmap_luma_coef0_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ghdr_tmap_luma_coef1 : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_VEDU_GHDR_TONEMAP_LUMA_COEF1_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_TONEMAP_LUMA_COEF1_ghdr_tmap_luma_coef1_START (0)
+#define SOC_VENC_VEDU_GHDR_TONEMAP_LUMA_COEF1_ghdr_tmap_luma_coef1_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ghdr_tmap_luma_coef2 : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_VEDU_GHDR_TONEMAP_LUMA_COEF2_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_TONEMAP_LUMA_COEF2_ghdr_tmap_luma_coef2_START (0)
+#define SOC_VENC_VEDU_GHDR_TONEMAP_LUMA_COEF2_ghdr_tmap_luma_coef2_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ghdr_tmap_luma_scale : 4;
+        unsigned int reserved : 28;
+    } reg;
+} SOC_VENC_VEDU_GHDR_TONEMAP_LUMA_SCALE_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_TONEMAP_LUMA_SCALE_ghdr_tmap_luma_scale_START (0)
+#define SOC_VENC_VEDU_GHDR_TONEMAP_LUMA_SCALE_ghdr_tmap_luma_scale_END (3)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ghdr_tmap_coef_scale : 4;
+        unsigned int reserved : 28;
+    } reg;
+} SOC_VENC_VEDU_GHDR_TONEMAP_COEF_SCALE_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_TONEMAP_COEF_SCALE_ghdr_tmap_coef_scale_START (0)
+#define SOC_VENC_VEDU_GHDR_TONEMAP_COEF_SCALE_ghdr_tmap_coef_scale_END (3)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ghdr_tmap_out_clip_min : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_VEDU_GHDR_TONEMAP_OUT_CLIP_MIN_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_TONEMAP_OUT_CLIP_MIN_ghdr_tmap_out_clip_min_START (0)
+#define SOC_VENC_VEDU_GHDR_TONEMAP_OUT_CLIP_MIN_ghdr_tmap_out_clip_min_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ghdr_tmap_out_clip_max : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_VEDU_GHDR_TONEMAP_OUT_CLIP_MAX_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_TONEMAP_OUT_CLIP_MAX_ghdr_tmap_out_clip_max_START (0)
+#define SOC_VENC_VEDU_GHDR_TONEMAP_OUT_CLIP_MAX_ghdr_tmap_out_clip_max_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ghdr_gmm_en : 1;
+        unsigned int reserved : 31;
+    } reg;
+} SOC_VENC_VEDU_GHDR_GAMMA_CTRL_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_GAMMA_CTRL_ghdr_gmm_en_START (0)
+#define SOC_VENC_VEDU_GHDR_GAMMA_CTRL_ghdr_gmm_en_END (0)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ghdr_gamma_rd_en : 1;
+        unsigned int reserved : 31;
+    } reg;
+} SOC_VENC_VEDU_GHDR_GAMMA_REN_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_GAMMA_REN_ghdr_gamma_rd_en_START (0)
+#define SOC_VENC_VEDU_GHDR_GAMMA_REN_ghdr_gamma_rd_en_END (0)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_GHDR_RESERVED1_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int g_gmm_x1_step : 4;
+        unsigned int reserved_0 : 4;
+        unsigned int g_gmm_x2_step : 4;
+        unsigned int reserved_1 : 4;
+        unsigned int g_gmm_x3_step : 4;
+        unsigned int reserved_2 : 4;
+        unsigned int g_gmm_x4_step : 4;
+        unsigned int reserved_3 : 4;
+    } reg;
+} SOC_VENC_VEDU_GHDR_GAMMA_STEP1_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_GAMMA_STEP1_g_gmm_x1_step_START (0)
+#define SOC_VENC_VEDU_GHDR_GAMMA_STEP1_g_gmm_x1_step_END (3)
+#define SOC_VENC_VEDU_GHDR_GAMMA_STEP1_g_gmm_x2_step_START (8)
+#define SOC_VENC_VEDU_GHDR_GAMMA_STEP1_g_gmm_x2_step_END (11)
+#define SOC_VENC_VEDU_GHDR_GAMMA_STEP1_g_gmm_x3_step_START (16)
+#define SOC_VENC_VEDU_GHDR_GAMMA_STEP1_g_gmm_x3_step_END (19)
+#define SOC_VENC_VEDU_GHDR_GAMMA_STEP1_g_gmm_x4_step_START (24)
+#define SOC_VENC_VEDU_GHDR_GAMMA_STEP1_g_gmm_x4_step_END (27)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int g_gmm_x5_step : 4;
+        unsigned int reserved_0 : 4;
+        unsigned int g_gmm_x6_step : 4;
+        unsigned int reserved_1 : 4;
+        unsigned int g_gmm_x7_step : 4;
+        unsigned int reserved_2 : 4;
+        unsigned int g_gmm_x8_step : 4;
+        unsigned int reserved_3 : 4;
+    } reg;
+} SOC_VENC_VEDU_GHDR_GAMMA_STEP2_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_GAMMA_STEP2_g_gmm_x5_step_START (0)
+#define SOC_VENC_VEDU_GHDR_GAMMA_STEP2_g_gmm_x5_step_END (3)
+#define SOC_VENC_VEDU_GHDR_GAMMA_STEP2_g_gmm_x6_step_START (8)
+#define SOC_VENC_VEDU_GHDR_GAMMA_STEP2_g_gmm_x6_step_END (11)
+#define SOC_VENC_VEDU_GHDR_GAMMA_STEP2_g_gmm_x7_step_START (16)
+#define SOC_VENC_VEDU_GHDR_GAMMA_STEP2_g_gmm_x7_step_END (19)
+#define SOC_VENC_VEDU_GHDR_GAMMA_STEP2_g_gmm_x8_step_START (24)
+#define SOC_VENC_VEDU_GHDR_GAMMA_STEP2_g_gmm_x8_step_END (27)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int g_gmm_x1_pos : 16;
+        unsigned int g_gmm_x2_pos : 16;
+    } reg;
+} SOC_VENC_VEDU_GHDR_GAMMA_POS1_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_GAMMA_POS1_g_gmm_x1_pos_START (0)
+#define SOC_VENC_VEDU_GHDR_GAMMA_POS1_g_gmm_x1_pos_END (15)
+#define SOC_VENC_VEDU_GHDR_GAMMA_POS1_g_gmm_x2_pos_START (16)
+#define SOC_VENC_VEDU_GHDR_GAMMA_POS1_g_gmm_x2_pos_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int g_gmm_x3_pos : 16;
+        unsigned int g_gmm_x4_pos : 16;
+    } reg;
+} SOC_VENC_VEDU_GHDR_GAMMA_POS2_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_GAMMA_POS2_g_gmm_x3_pos_START (0)
+#define SOC_VENC_VEDU_GHDR_GAMMA_POS2_g_gmm_x3_pos_END (15)
+#define SOC_VENC_VEDU_GHDR_GAMMA_POS2_g_gmm_x4_pos_START (16)
+#define SOC_VENC_VEDU_GHDR_GAMMA_POS2_g_gmm_x4_pos_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int g_gmm_x5_pos : 16;
+        unsigned int g_gmm_x6_pos : 16;
+    } reg;
+} SOC_VENC_VEDU_GHDR_GAMMA_POS3_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_GAMMA_POS3_g_gmm_x5_pos_START (0)
+#define SOC_VENC_VEDU_GHDR_GAMMA_POS3_g_gmm_x5_pos_END (15)
+#define SOC_VENC_VEDU_GHDR_GAMMA_POS3_g_gmm_x6_pos_START (16)
+#define SOC_VENC_VEDU_GHDR_GAMMA_POS3_g_gmm_x6_pos_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int g_gmm_x7_pos : 16;
+        unsigned int g_gmm_x8_pos : 16;
+    } reg;
+} SOC_VENC_VEDU_GHDR_GAMMA_POS4_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_GAMMA_POS4_g_gmm_x7_pos_START (0)
+#define SOC_VENC_VEDU_GHDR_GAMMA_POS4_g_gmm_x7_pos_END (15)
+#define SOC_VENC_VEDU_GHDR_GAMMA_POS4_g_gmm_x8_pos_START (16)
+#define SOC_VENC_VEDU_GHDR_GAMMA_POS4_g_gmm_x8_pos_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int g_gmm_x1_num : 6;
+        unsigned int reserved_0 : 2;
+        unsigned int g_gmm_x2_num : 6;
+        unsigned int reserved_1 : 2;
+        unsigned int g_gmm_x3_num : 6;
+        unsigned int reserved_2 : 2;
+        unsigned int g_gmm_x4_num : 6;
+        unsigned int reserved_3 : 2;
+    } reg;
+} SOC_VENC_VEDU_GHDR_GAMMA_NUM1_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_GAMMA_NUM1_g_gmm_x1_num_START (0)
+#define SOC_VENC_VEDU_GHDR_GAMMA_NUM1_g_gmm_x1_num_END (5)
+#define SOC_VENC_VEDU_GHDR_GAMMA_NUM1_g_gmm_x2_num_START (8)
+#define SOC_VENC_VEDU_GHDR_GAMMA_NUM1_g_gmm_x2_num_END (13)
+#define SOC_VENC_VEDU_GHDR_GAMMA_NUM1_g_gmm_x3_num_START (16)
+#define SOC_VENC_VEDU_GHDR_GAMMA_NUM1_g_gmm_x3_num_END (21)
+#define SOC_VENC_VEDU_GHDR_GAMMA_NUM1_g_gmm_x4_num_START (24)
+#define SOC_VENC_VEDU_GHDR_GAMMA_NUM1_g_gmm_x4_num_END (29)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int g_gmm_x5_num : 6;
+        unsigned int reserved_0 : 2;
+        unsigned int g_gmm_x6_num : 6;
+        unsigned int reserved_1 : 2;
+        unsigned int g_gmm_x7_num : 6;
+        unsigned int reserved_2 : 2;
+        unsigned int g_gmm_x8_num : 6;
+        unsigned int reserved_3 : 2;
+    } reg;
+} SOC_VENC_VEDU_GHDR_GAMMA_NUM2_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_GAMMA_NUM2_g_gmm_x5_num_START (0)
+#define SOC_VENC_VEDU_GHDR_GAMMA_NUM2_g_gmm_x5_num_END (5)
+#define SOC_VENC_VEDU_GHDR_GAMMA_NUM2_g_gmm_x6_num_START (8)
+#define SOC_VENC_VEDU_GHDR_GAMMA_NUM2_g_gmm_x6_num_END (13)
+#define SOC_VENC_VEDU_GHDR_GAMMA_NUM2_g_gmm_x7_num_START (16)
+#define SOC_VENC_VEDU_GHDR_GAMMA_NUM2_g_gmm_x7_num_END (21)
+#define SOC_VENC_VEDU_GHDR_GAMMA_NUM2_g_gmm_x8_num_START (24)
+#define SOC_VENC_VEDU_GHDR_GAMMA_NUM2_g_gmm_x8_num_END (29)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ghdr_dither_tap_mode : 2;
+        unsigned int ghdr_dither_domain_mode : 1;
+        unsigned int ghdr_dither_round : 1;
+        unsigned int ghdr_dither_mode : 1;
+        unsigned int ghdr_dither_en : 1;
+        unsigned int ghdr_dither_round_unlim : 1;
+        unsigned int reserved : 25;
+    } reg;
+} SOC_VENC_VEDU_GHDR_DITHER_CTRL_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_DITHER_CTRL_ghdr_dither_tap_mode_START (0)
+#define SOC_VENC_VEDU_GHDR_DITHER_CTRL_ghdr_dither_tap_mode_END (1)
+#define SOC_VENC_VEDU_GHDR_DITHER_CTRL_ghdr_dither_domain_mode_START (2)
+#define SOC_VENC_VEDU_GHDR_DITHER_CTRL_ghdr_dither_domain_mode_END (2)
+#define SOC_VENC_VEDU_GHDR_DITHER_CTRL_ghdr_dither_round_START (3)
+#define SOC_VENC_VEDU_GHDR_DITHER_CTRL_ghdr_dither_round_END (3)
+#define SOC_VENC_VEDU_GHDR_DITHER_CTRL_ghdr_dither_mode_START (4)
+#define SOC_VENC_VEDU_GHDR_DITHER_CTRL_ghdr_dither_mode_END (4)
+#define SOC_VENC_VEDU_GHDR_DITHER_CTRL_ghdr_dither_en_START (5)
+#define SOC_VENC_VEDU_GHDR_DITHER_CTRL_ghdr_dither_en_END (5)
+#define SOC_VENC_VEDU_GHDR_DITHER_CTRL_ghdr_dither_round_unlim_START (6)
+#define SOC_VENC_VEDU_GHDR_DITHER_CTRL_ghdr_dither_round_unlim_END (6)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ghdr_dither_thr_min : 16;
+        unsigned int ghdr_dither_thr_max : 16;
+    } reg;
+} SOC_VENC_VEDU_GHDR_DITHER_THR_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_DITHER_THR_ghdr_dither_thr_min_START (0)
+#define SOC_VENC_VEDU_GHDR_DITHER_THR_ghdr_dither_thr_min_END (15)
+#define SOC_VENC_VEDU_GHDR_DITHER_THR_ghdr_dither_thr_max_START (16)
+#define SOC_VENC_VEDU_GHDR_DITHER_THR_ghdr_dither_thr_max_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ghdr_dither_sed_y0 : 31;
+        unsigned int reserved : 1;
+    } reg;
+} SOC_VENC_VEDU_GHDR_DITHER_SED_Y0_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_DITHER_SED_Y0_ghdr_dither_sed_y0_START (0)
+#define SOC_VENC_VEDU_GHDR_DITHER_SED_Y0_ghdr_dither_sed_y0_END (30)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ghdr_dither_sed_u0 : 31;
+        unsigned int reserved : 1;
+    } reg;
+} SOC_VENC_VEDU_GHDR_DITHER_SED_U0_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_DITHER_SED_U0_ghdr_dither_sed_u0_START (0)
+#define SOC_VENC_VEDU_GHDR_DITHER_SED_U0_ghdr_dither_sed_u0_END (30)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ghdr_dither_sed_v0 : 31;
+        unsigned int reserved : 1;
+    } reg;
+} SOC_VENC_VEDU_GHDR_DITHER_SED_V0_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_DITHER_SED_V0_ghdr_dither_sed_v0_START (0)
+#define SOC_VENC_VEDU_GHDR_DITHER_SED_V0_ghdr_dither_sed_v0_END (30)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ghdr_dither_sed_w0 : 31;
+        unsigned int reserved : 1;
+    } reg;
+} SOC_VENC_VEDU_GHDR_DITHER_SED_W0_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_DITHER_SED_W0_ghdr_dither_sed_w0_START (0)
+#define SOC_VENC_VEDU_GHDR_DITHER_SED_W0_ghdr_dither_sed_w0_END (30)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ghdr_dither_sed_y1 : 31;
+        unsigned int reserved : 1;
+    } reg;
+} SOC_VENC_VEDU_GHDR_DITHER_SED_Y1_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_DITHER_SED_Y1_ghdr_dither_sed_y1_START (0)
+#define SOC_VENC_VEDU_GHDR_DITHER_SED_Y1_ghdr_dither_sed_y1_END (30)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ghdr_dither_sed_u1 : 31;
+        unsigned int reserved : 1;
+    } reg;
+} SOC_VENC_VEDU_GHDR_DITHER_SED_U1_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_DITHER_SED_U1_ghdr_dither_sed_u1_START (0)
+#define SOC_VENC_VEDU_GHDR_DITHER_SED_U1_ghdr_dither_sed_u1_END (30)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ghdr_dither_sed_v1 : 31;
+        unsigned int reserved : 1;
+    } reg;
+} SOC_VENC_VEDU_GHDR_DITHER_SED_V1_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_DITHER_SED_V1_ghdr_dither_sed_v1_START (0)
+#define SOC_VENC_VEDU_GHDR_DITHER_SED_V1_ghdr_dither_sed_v1_END (30)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ghdr_dither_sed_w1 : 31;
+        unsigned int reserved : 1;
+    } reg;
+} SOC_VENC_VEDU_GHDR_DITHER_SED_W1_UNION;
+#endif
+#define SOC_VENC_VEDU_GHDR_DITHER_SED_W1_ghdr_dither_sed_w1_START (0)
+#define SOC_VENC_VEDU_GHDR_DITHER_SED_W1_ghdr_dither_sed_w1_END (30)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_r2y_en : 1;
+        unsigned int reserved : 31;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_RGB2YUV_CTRL_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_CTRL_hihdr_r2y_en_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_CTRL_hihdr_r2y_en_END (0)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_r2y_coef00 : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF0_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF0_hihdr_r2y_coef00_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF0_hihdr_r2y_coef00_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_r2y_coef01 : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF1_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF1_hihdr_r2y_coef01_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF1_hihdr_r2y_coef01_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_r2y_coef02 : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF2_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF2_hihdr_r2y_coef02_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF2_hihdr_r2y_coef02_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_r2y_coef10 : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF3_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF3_hihdr_r2y_coef10_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF3_hihdr_r2y_coef10_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_r2y_coef11 : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF4_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF4_hihdr_r2y_coef11_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF4_hihdr_r2y_coef11_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_r2y_coef12 : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF5_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF5_hihdr_r2y_coef12_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF5_hihdr_r2y_coef12_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_r2y_coef20 : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF6_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF6_hihdr_r2y_coef20_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF6_hihdr_r2y_coef20_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_r2y_coef21 : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF7_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF7_hihdr_r2y_coef21_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF7_hihdr_r2y_coef21_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_r2y_coef22 : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF8_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF8_hihdr_r2y_coef22_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_COEF8_hihdr_r2y_coef22_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_r2y_scale2p : 4;
+        unsigned int reserved : 28;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_RGB2YUV_SCALE2P_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_SCALE2P_hihdr_r2y_scale2p_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_SCALE2P_hihdr_r2y_scale2p_END (3)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_r2y_idc0 : 11;
+        unsigned int reserved : 21;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_RGB2YUV_IDC0_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_IDC0_hihdr_r2y_idc0_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_IDC0_hihdr_r2y_idc0_END (10)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_r2y_idc1 : 11;
+        unsigned int reserved : 21;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_RGB2YUV_IDC1_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_IDC1_hihdr_r2y_idc1_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_IDC1_hihdr_r2y_idc1_END (10)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_r2y_idc2 : 11;
+        unsigned int reserved : 21;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_RGB2YUV_IDC2_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_IDC2_hihdr_r2y_idc2_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_IDC2_hihdr_r2y_idc2_END (10)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_r2y_odc0 : 11;
+        unsigned int reserved : 21;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_RGB2YUV_ODC0_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_ODC0_hihdr_r2y_odc0_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_ODC0_hihdr_r2y_odc0_END (10)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_r2y_odc1 : 11;
+        unsigned int reserved : 21;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_RGB2YUV_ODC1_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_ODC1_hihdr_r2y_odc1_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_ODC1_hihdr_r2y_odc1_END (10)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_r2y_odc2 : 11;
+        unsigned int reserved : 21;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_RGB2YUV_ODC2_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_ODC2_hihdr_r2y_odc2_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_ODC2_hihdr_r2y_odc2_END (10)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_r2y_clip_min : 10;
+        unsigned int reserved : 22;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_RGB2YUV_MIN_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_MIN_hihdr_r2y_clip_min_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_MIN_hihdr_r2y_clip_min_END (9)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_r2y_clip_max : 10;
+        unsigned int reserved : 22;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_RGB2YUV_MAX_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_MAX_hihdr_r2y_clip_max_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_RGB2YUV_MAX_hihdr_r2y_clip_max_END (9)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_RESERVED_18_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_tonemap_coef00 : 16;
+        unsigned int hihdr_tonemap_coef01 : 16;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_00_01_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_00_01_hihdr_tonemap_coef00_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_00_01_hihdr_tonemap_coef00_END (15)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_00_01_hihdr_tonemap_coef01_START (16)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_00_01_hihdr_tonemap_coef01_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_tonemap_coef02 : 16;
+        unsigned int hihdr_tonemap_coef03 : 16;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_02_03_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_02_03_hihdr_tonemap_coef02_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_02_03_hihdr_tonemap_coef02_END (15)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_02_03_hihdr_tonemap_coef03_START (16)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_02_03_hihdr_tonemap_coef03_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_tonemap_coef04 : 16;
+        unsigned int hihdr_tonemap_coef05 : 16;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_04_05_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_04_05_hihdr_tonemap_coef04_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_04_05_hihdr_tonemap_coef04_END (15)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_04_05_hihdr_tonemap_coef05_START (16)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_04_05_hihdr_tonemap_coef05_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_tonemap_coef06 : 16;
+        unsigned int hihdr_tonemap_coef07 : 16;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_06_07_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_06_07_hihdr_tonemap_coef06_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_06_07_hihdr_tonemap_coef06_END (15)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_06_07_hihdr_tonemap_coef07_START (16)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_06_07_hihdr_tonemap_coef07_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_tonemap_coef08 : 16;
+        unsigned int hihdr_tonemap_coef09 : 16;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_08_09_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_08_09_hihdr_tonemap_coef08_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_08_09_hihdr_tonemap_coef08_END (15)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_08_09_hihdr_tonemap_coef09_START (16)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_08_09_hihdr_tonemap_coef09_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_tonemap_coef10 : 16;
+        unsigned int hihdr_tonemap_coef11 : 16;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_10_11_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_10_11_hihdr_tonemap_coef10_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_10_11_hihdr_tonemap_coef10_END (15)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_10_11_hihdr_tonemap_coef11_START (16)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_10_11_hihdr_tonemap_coef11_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_tonemap_coef12 : 16;
+        unsigned int hihdr_tonemap_coef13 : 16;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_12_13_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_12_13_hihdr_tonemap_coef12_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_12_13_hihdr_tonemap_coef12_END (15)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_12_13_hihdr_tonemap_coef13_START (16)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_12_13_hihdr_tonemap_coef13_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_tonemap_coef14 : 16;
+        unsigned int hihdr_tonemap_coef15 : 16;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_14_15_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_14_15_hihdr_tonemap_coef14_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_14_15_hihdr_tonemap_coef14_END (15)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_14_15_hihdr_tonemap_coef15_START (16)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_14_15_hihdr_tonemap_coef15_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_tonemap_coef16 : 16;
+        unsigned int hihdr_tonemap_coef17 : 16;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_16_17_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_16_17_hihdr_tonemap_coef16_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_16_17_hihdr_tonemap_coef16_END (15)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_16_17_hihdr_tonemap_coef17_START (16)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_16_17_hihdr_tonemap_coef17_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_tonemap_coef18 : 16;
+        unsigned int hihdr_tonemap_coef19 : 16;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_18_19_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_18_19_hihdr_tonemap_coef18_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_18_19_hihdr_tonemap_coef18_END (15)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_18_19_hihdr_tonemap_coef19_START (16)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_18_19_hihdr_tonemap_coef19_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_tonemap_coef20 : 16;
+        unsigned int hihdr_tonemap_coef21 : 16;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_20_21_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_20_21_hihdr_tonemap_coef20_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_20_21_hihdr_tonemap_coef20_END (15)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_20_21_hihdr_tonemap_coef21_START (16)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_20_21_hihdr_tonemap_coef21_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_tonemap_coef22 : 16;
+        unsigned int hihdr_tonemap_coef23 : 16;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_22_23_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_22_23_hihdr_tonemap_coef22_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_22_23_hihdr_tonemap_coef22_END (15)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_22_23_hihdr_tonemap_coef23_START (16)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_22_23_hihdr_tonemap_coef23_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_tonemap_coef24 : 16;
+        unsigned int hihdr_tonemap_coef25 : 16;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_24_25_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_24_25_hihdr_tonemap_coef24_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_24_25_hihdr_tonemap_coef24_END (15)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_24_25_hihdr_tonemap_coef25_START (16)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_24_25_hihdr_tonemap_coef25_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_tonemap_coef26 : 16;
+        unsigned int hihdr_tonemap_coef27 : 16;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_26_27_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_26_27_hihdr_tonemap_coef26_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_26_27_hihdr_tonemap_coef26_END (15)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_26_27_hihdr_tonemap_coef27_START (16)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_26_27_hihdr_tonemap_coef27_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_tonemap_coef28 : 16;
+        unsigned int hihdr_tonemap_coef29 : 16;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_28_29_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_28_29_hihdr_tonemap_coef28_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_28_29_hihdr_tonemap_coef28_END (15)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_28_29_hihdr_tonemap_coef29_START (16)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_28_29_hihdr_tonemap_coef29_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_tonemap_coef30 : 16;
+        unsigned int hihdr_tonemap_coef31 : 16;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_30_31_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_30_31_hihdr_tonemap_coef30_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_30_31_hihdr_tonemap_coef30_END (15)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_30_31_hihdr_tonemap_coef31_START (16)
+#define SOC_VENC_VEDU_HIHDR_G_TONEMAP_COEF_30_31_hihdr_tonemap_coef31_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_RESERVED_19_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_gmm_coef0 : 12;
+        unsigned int hihdr_gmm_coef1 : 12;
+        unsigned int hihdr_gmm_coef2_l8b : 8;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_GMM_COEF_00_09_P0_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_00_09_P0_hihdr_gmm_coef0_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_00_09_P0_hihdr_gmm_coef0_END (11)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_00_09_P0_hihdr_gmm_coef1_START (12)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_00_09_P0_hihdr_gmm_coef1_END (23)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_00_09_P0_hihdr_gmm_coef2_l8b_START (24)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_00_09_P0_hihdr_gmm_coef2_l8b_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_gmm_coef2_h4b : 4;
+        unsigned int hihdr_gmm_coef3 : 12;
+        unsigned int hihdr_gmm_coef4 : 12;
+        unsigned int hihdr_gmm_coef5_l4b : 4;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_GMM_COEF_00_09_P1_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_00_09_P1_hihdr_gmm_coef2_h4b_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_00_09_P1_hihdr_gmm_coef2_h4b_END (3)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_00_09_P1_hihdr_gmm_coef3_START (4)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_00_09_P1_hihdr_gmm_coef3_END (15)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_00_09_P1_hihdr_gmm_coef4_START (16)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_00_09_P1_hihdr_gmm_coef4_END (27)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_00_09_P1_hihdr_gmm_coef5_l4b_START (28)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_00_09_P1_hihdr_gmm_coef5_l4b_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_gmm_coef5_h8b : 8;
+        unsigned int hihdr_gmm_coef6 : 12;
+        unsigned int hihdr_gmm_coef7 : 12;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_GMM_COEF_00_09_P2_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_00_09_P2_hihdr_gmm_coef5_h8b_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_00_09_P2_hihdr_gmm_coef5_h8b_END (7)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_00_09_P2_hihdr_gmm_coef6_START (8)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_00_09_P2_hihdr_gmm_coef6_END (19)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_00_09_P2_hihdr_gmm_coef7_START (20)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_00_09_P2_hihdr_gmm_coef7_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_gmm_coef8 : 12;
+        unsigned int hihdr_gmm_coef9 : 12;
+        unsigned int reserved : 8;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_GMM_COEF_00_09_P3_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_00_09_P3_hihdr_gmm_coef8_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_00_09_P3_hihdr_gmm_coef8_END (11)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_00_09_P3_hihdr_gmm_coef9_START (12)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_00_09_P3_hihdr_gmm_coef9_END (23)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_gmm_coef10 : 12;
+        unsigned int hihdr_gmm_coef11 : 12;
+        unsigned int hihdr_gmm_coef12_l8b : 8;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_GMM_COEF_10_19_P0_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_10_19_P0_hihdr_gmm_coef10_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_10_19_P0_hihdr_gmm_coef10_END (11)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_10_19_P0_hihdr_gmm_coef11_START (12)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_10_19_P0_hihdr_gmm_coef11_END (23)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_10_19_P0_hihdr_gmm_coef12_l8b_START (24)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_10_19_P0_hihdr_gmm_coef12_l8b_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_gmm_coef12_h4b : 4;
+        unsigned int hihdr_gmm_coef13 : 12;
+        unsigned int hihdr_gmm_coef14 : 12;
+        unsigned int hihdr_gmm_coef15_l4b : 4;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_GMM_COEF_10_19_P1_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_10_19_P1_hihdr_gmm_coef12_h4b_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_10_19_P1_hihdr_gmm_coef12_h4b_END (3)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_10_19_P1_hihdr_gmm_coef13_START (4)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_10_19_P1_hihdr_gmm_coef13_END (15)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_10_19_P1_hihdr_gmm_coef14_START (16)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_10_19_P1_hihdr_gmm_coef14_END (27)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_10_19_P1_hihdr_gmm_coef15_l4b_START (28)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_10_19_P1_hihdr_gmm_coef15_l4b_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_gmm_coef15_h8b : 8;
+        unsigned int hihdr_gmm_coef16 : 12;
+        unsigned int hihdr_gmm_coef17 : 12;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_GMM_COEF_10_19_P2_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_10_19_P2_hihdr_gmm_coef15_h8b_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_10_19_P2_hihdr_gmm_coef15_h8b_END (7)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_10_19_P2_hihdr_gmm_coef16_START (8)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_10_19_P2_hihdr_gmm_coef16_END (19)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_10_19_P2_hihdr_gmm_coef17_START (20)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_10_19_P2_hihdr_gmm_coef17_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_gmm_coef18 : 12;
+        unsigned int hihdr_gmm_coef19 : 12;
+        unsigned int reserved : 8;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_GMM_COEF_10_19_P3_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_10_19_P3_hihdr_gmm_coef18_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_10_19_P3_hihdr_gmm_coef18_END (11)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_10_19_P3_hihdr_gmm_coef19_START (12)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_10_19_P3_hihdr_gmm_coef19_END (23)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_gmm_coef20 : 12;
+        unsigned int hihdr_gmm_coef21 : 12;
+        unsigned int hihdr_gmm_coef22_l8b : 8;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_GMM_COEF_20_29_P0_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_20_29_P0_hihdr_gmm_coef20_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_20_29_P0_hihdr_gmm_coef20_END (11)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_20_29_P0_hihdr_gmm_coef21_START (12)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_20_29_P0_hihdr_gmm_coef21_END (23)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_20_29_P0_hihdr_gmm_coef22_l8b_START (24)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_20_29_P0_hihdr_gmm_coef22_l8b_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_gmm_coef22_h4b : 4;
+        unsigned int hihdr_gmm_coef23 : 12;
+        unsigned int hihdr_gmm_coef24 : 12;
+        unsigned int hihdr_gmm_coef25_l4b : 4;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_GMM_COEF_20_29_P1_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_20_29_P1_hihdr_gmm_coef22_h4b_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_20_29_P1_hihdr_gmm_coef22_h4b_END (3)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_20_29_P1_hihdr_gmm_coef23_START (4)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_20_29_P1_hihdr_gmm_coef23_END (15)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_20_29_P1_hihdr_gmm_coef24_START (16)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_20_29_P1_hihdr_gmm_coef24_END (27)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_20_29_P1_hihdr_gmm_coef25_l4b_START (28)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_20_29_P1_hihdr_gmm_coef25_l4b_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_gmm_coef25_h8b : 8;
+        unsigned int hihdr_gmm_coef26 : 12;
+        unsigned int hihdr_gmm_coef27 : 12;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_GMM_COEF_20_29_P2_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_20_29_P2_hihdr_gmm_coef25_h8b_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_20_29_P2_hihdr_gmm_coef25_h8b_END (7)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_20_29_P2_hihdr_gmm_coef26_START (8)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_20_29_P2_hihdr_gmm_coef26_END (19)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_20_29_P2_hihdr_gmm_coef27_START (20)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_20_29_P2_hihdr_gmm_coef27_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_gmm_coef28 : 12;
+        unsigned int hihdr_gmm_coef29 : 12;
+        unsigned int reserved : 8;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_GMM_COEF_20_29_P3_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_20_29_P3_hihdr_gmm_coef28_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_20_29_P3_hihdr_gmm_coef28_END (11)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_20_29_P3_hihdr_gmm_coef29_START (12)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_20_29_P3_hihdr_gmm_coef29_END (23)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_gmm_coef30 : 12;
+        unsigned int hihdr_gmm_coef31 : 12;
+        unsigned int hihdr_gmm_coef32_l8b : 8;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_GMM_COEF_30_39_P0_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_30_39_P0_hihdr_gmm_coef30_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_30_39_P0_hihdr_gmm_coef30_END (11)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_30_39_P0_hihdr_gmm_coef31_START (12)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_30_39_P0_hihdr_gmm_coef31_END (23)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_30_39_P0_hihdr_gmm_coef32_l8b_START (24)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_30_39_P0_hihdr_gmm_coef32_l8b_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_gmm_coef32_h4b : 4;
+        unsigned int hihdr_gmm_coef33 : 12;
+        unsigned int hihdr_gmm_coef34 : 12;
+        unsigned int hihdr_gmm_coef35_l4b : 4;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_GMM_COEF_30_39_P1_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_30_39_P1_hihdr_gmm_coef32_h4b_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_30_39_P1_hihdr_gmm_coef32_h4b_END (3)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_30_39_P1_hihdr_gmm_coef33_START (4)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_30_39_P1_hihdr_gmm_coef33_END (15)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_30_39_P1_hihdr_gmm_coef34_START (16)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_30_39_P1_hihdr_gmm_coef34_END (27)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_30_39_P1_hihdr_gmm_coef35_l4b_START (28)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_30_39_P1_hihdr_gmm_coef35_l4b_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_gmm_coef35_h8b : 8;
+        unsigned int hihdr_gmm_coef36 : 12;
+        unsigned int hihdr_gmm_coef37 : 12;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_GMM_COEF_30_39_P2_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_30_39_P2_hihdr_gmm_coef35_h8b_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_30_39_P2_hihdr_gmm_coef35_h8b_END (7)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_30_39_P2_hihdr_gmm_coef36_START (8)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_30_39_P2_hihdr_gmm_coef36_END (19)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_30_39_P2_hihdr_gmm_coef37_START (20)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_30_39_P2_hihdr_gmm_coef37_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_gmm_coef38 : 12;
+        unsigned int hihdr_gmm_coef39 : 12;
+        unsigned int reserved : 8;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_GMM_COEF_30_39_P3_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_30_39_P3_hihdr_gmm_coef38_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_30_39_P3_hihdr_gmm_coef38_END (11)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_30_39_P3_hihdr_gmm_coef39_START (12)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_30_39_P3_hihdr_gmm_coef39_END (23)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_gmm_coef40 : 12;
+        unsigned int hihdr_gmm_coef41 : 12;
+        unsigned int hihdr_gmm_coef42_l8b : 8;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_GMM_COEF_40_49_P0_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_40_49_P0_hihdr_gmm_coef40_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_40_49_P0_hihdr_gmm_coef40_END (11)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_40_49_P0_hihdr_gmm_coef41_START (12)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_40_49_P0_hihdr_gmm_coef41_END (23)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_40_49_P0_hihdr_gmm_coef42_l8b_START (24)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_40_49_P0_hihdr_gmm_coef42_l8b_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_gmm_coef42_h4b : 4;
+        unsigned int hihdr_gmm_coef43 : 12;
+        unsigned int hihdr_gmm_coef44 : 12;
+        unsigned int hihdr_gmm_coef45_l4b : 4;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_GMM_COEF_40_49_P1_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_40_49_P1_hihdr_gmm_coef42_h4b_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_40_49_P1_hihdr_gmm_coef42_h4b_END (3)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_40_49_P1_hihdr_gmm_coef43_START (4)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_40_49_P1_hihdr_gmm_coef43_END (15)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_40_49_P1_hihdr_gmm_coef44_START (16)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_40_49_P1_hihdr_gmm_coef44_END (27)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_40_49_P1_hihdr_gmm_coef45_l4b_START (28)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_40_49_P1_hihdr_gmm_coef45_l4b_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_gmm_coef45_h8b : 8;
+        unsigned int hihdr_gmm_coef46 : 12;
+        unsigned int hihdr_gmm_coef47 : 12;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_GMM_COEF_40_49_P2_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_40_49_P2_hihdr_gmm_coef45_h8b_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_40_49_P2_hihdr_gmm_coef45_h8b_END (7)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_40_49_P2_hihdr_gmm_coef46_START (8)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_40_49_P2_hihdr_gmm_coef46_END (19)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_40_49_P2_hihdr_gmm_coef47_START (20)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_40_49_P2_hihdr_gmm_coef47_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_gmm_coef48 : 12;
+        unsigned int hihdr_gmm_coef49 : 12;
+        unsigned int reserved : 8;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_GMM_COEF_40_49_P3_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_40_49_P3_hihdr_gmm_coef48_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_40_49_P3_hihdr_gmm_coef48_END (11)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_40_49_P3_hihdr_gmm_coef49_START (12)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_40_49_P3_hihdr_gmm_coef49_END (23)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_gmm_coef50 : 12;
+        unsigned int hihdr_gmm_coef51 : 12;
+        unsigned int hihdr_gmm_coef52_l8b : 8;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_GMM_COEF_50_59_P0_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_50_59_P0_hihdr_gmm_coef50_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_50_59_P0_hihdr_gmm_coef50_END (11)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_50_59_P0_hihdr_gmm_coef51_START (12)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_50_59_P0_hihdr_gmm_coef51_END (23)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_50_59_P0_hihdr_gmm_coef52_l8b_START (24)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_50_59_P0_hihdr_gmm_coef52_l8b_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_gmm_coef52_h4b : 4;
+        unsigned int hihdr_gmm_coef53 : 12;
+        unsigned int hihdr_gmm_coef54 : 12;
+        unsigned int hihdr_gmm_coef55_l4b : 4;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_GMM_COEF_50_59_P1_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_50_59_P1_hihdr_gmm_coef52_h4b_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_50_59_P1_hihdr_gmm_coef52_h4b_END (3)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_50_59_P1_hihdr_gmm_coef53_START (4)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_50_59_P1_hihdr_gmm_coef53_END (15)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_50_59_P1_hihdr_gmm_coef54_START (16)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_50_59_P1_hihdr_gmm_coef54_END (27)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_50_59_P1_hihdr_gmm_coef55_l4b_START (28)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_50_59_P1_hihdr_gmm_coef55_l4b_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_gmm_coef55_h8b : 8;
+        unsigned int hihdr_gmm_coef56 : 12;
+        unsigned int hihdr_gmm_coef57 : 12;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_GMM_COEF_50_59_P2_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_50_59_P2_hihdr_gmm_coef55_h8b_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_50_59_P2_hihdr_gmm_coef55_h8b_END (7)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_50_59_P2_hihdr_gmm_coef56_START (8)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_50_59_P2_hihdr_gmm_coef56_END (19)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_50_59_P2_hihdr_gmm_coef57_START (20)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_50_59_P2_hihdr_gmm_coef57_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_gmm_coef58 : 12;
+        unsigned int hihdr_gmm_coef59 : 12;
+        unsigned int reserved : 8;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_GMM_COEF_50_59_P3_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_50_59_P3_hihdr_gmm_coef58_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_50_59_P3_hihdr_gmm_coef58_END (11)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_50_59_P3_hihdr_gmm_coef59_START (12)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_50_59_P3_hihdr_gmm_coef59_END (23)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_gmm_coef60 : 12;
+        unsigned int hihdr_gmm_coef61 : 12;
+        unsigned int hihdr_gmm_coef62_l8b : 8;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_GMM_COEF_60_69_P0_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_60_69_P0_hihdr_gmm_coef60_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_60_69_P0_hihdr_gmm_coef60_END (11)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_60_69_P0_hihdr_gmm_coef61_START (12)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_60_69_P0_hihdr_gmm_coef61_END (23)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_60_69_P0_hihdr_gmm_coef62_l8b_START (24)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_60_69_P0_hihdr_gmm_coef62_l8b_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int hihdr_gmm_coef62_h4b : 4;
+        unsigned int hihdr_gmm_coef63 : 12;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_VEDU_HIHDR_G_GMM_COEF_60_69_P1_UNION;
+#endif
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_60_69_P1_hihdr_gmm_coef62_h4b_START (0)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_60_69_P1_hihdr_gmm_coef62_h4b_END (3)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_60_69_P1_hihdr_gmm_coef63_START (4)
+#define SOC_VENC_VEDU_HIHDR_G_GMM_COEF_60_69_P1_hihdr_gmm_coef63_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_RESERVED_20_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int venc_top_secure_n : 1;
+        unsigned int reserved : 31;
+    } reg;
+} SOC_VENC_VEDU_SECURE_SET_UNION;
+#endif
+#define SOC_VENC_VEDU_SECURE_SET_venc_top_secure_n_START (0)
+#define SOC_VENC_VEDU_SECURE_SET_venc_top_secure_n_END (0)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_RESERVED_21_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_VEDU_RESERVED_22_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_int_ve_eop : 1;
+        unsigned int vcpi_int_vedu_slice_end : 1;
+        unsigned int vcpi_int_ve_buffull : 1;
+        unsigned int vcpi_int_ve_pbitsover : 1;
+        unsigned int vcpi_int_line_pos : 1;
+        unsigned int vcpi_int_ppfd_dec_err : 1;
+        unsigned int vcpi_int_vedu_timeout : 1;
+        unsigned int reserved : 25;
+    } reg;
+} SOC_VENC_FUNC_VCPI_INTSTAT_UNION;
+#endif
+#define SOC_VENC_FUNC_VCPI_INTSTAT_vcpi_int_ve_eop_START (0)
+#define SOC_VENC_FUNC_VCPI_INTSTAT_vcpi_int_ve_eop_END (0)
+#define SOC_VENC_FUNC_VCPI_INTSTAT_vcpi_int_vedu_slice_end_START (1)
+#define SOC_VENC_FUNC_VCPI_INTSTAT_vcpi_int_vedu_slice_end_END (1)
+#define SOC_VENC_FUNC_VCPI_INTSTAT_vcpi_int_ve_buffull_START (2)
+#define SOC_VENC_FUNC_VCPI_INTSTAT_vcpi_int_ve_buffull_END (2)
+#define SOC_VENC_FUNC_VCPI_INTSTAT_vcpi_int_ve_pbitsover_START (3)
+#define SOC_VENC_FUNC_VCPI_INTSTAT_vcpi_int_ve_pbitsover_END (3)
+#define SOC_VENC_FUNC_VCPI_INTSTAT_vcpi_int_line_pos_START (4)
+#define SOC_VENC_FUNC_VCPI_INTSTAT_vcpi_int_line_pos_END (4)
+#define SOC_VENC_FUNC_VCPI_INTSTAT_vcpi_int_ppfd_dec_err_START (5)
+#define SOC_VENC_FUNC_VCPI_INTSTAT_vcpi_int_ppfd_dec_err_END (5)
+#define SOC_VENC_FUNC_VCPI_INTSTAT_vcpi_int_vedu_timeout_START (6)
+#define SOC_VENC_FUNC_VCPI_INTSTAT_vcpi_int_vedu_timeout_END (6)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_rint_ve_eop : 1;
+        unsigned int vcpi_rint_vedu_slice_end : 1;
+        unsigned int vcpi_rint_ve_buffull : 1;
+        unsigned int vcpi_rint_ve_pbitsover : 1;
+        unsigned int vcpi_rint_line_pos : 1;
+        unsigned int vcpi_rint_ppfd_dec_err : 1;
+        unsigned int vcpi_rint_vedu_timeout : 1;
+        unsigned int reserved : 25;
+    } reg;
+} SOC_VENC_FUNC_VCPI_RAWINT_UNION;
+#endif
+#define SOC_VENC_FUNC_VCPI_RAWINT_vcpi_rint_ve_eop_START (0)
+#define SOC_VENC_FUNC_VCPI_RAWINT_vcpi_rint_ve_eop_END (0)
+#define SOC_VENC_FUNC_VCPI_RAWINT_vcpi_rint_vedu_slice_end_START (1)
+#define SOC_VENC_FUNC_VCPI_RAWINT_vcpi_rint_vedu_slice_end_END (1)
+#define SOC_VENC_FUNC_VCPI_RAWINT_vcpi_rint_ve_buffull_START (2)
+#define SOC_VENC_FUNC_VCPI_RAWINT_vcpi_rint_ve_buffull_END (2)
+#define SOC_VENC_FUNC_VCPI_RAWINT_vcpi_rint_ve_pbitsover_START (3)
+#define SOC_VENC_FUNC_VCPI_RAWINT_vcpi_rint_ve_pbitsover_END (3)
+#define SOC_VENC_FUNC_VCPI_RAWINT_vcpi_rint_line_pos_START (4)
+#define SOC_VENC_FUNC_VCPI_RAWINT_vcpi_rint_line_pos_END (4)
+#define SOC_VENC_FUNC_VCPI_RAWINT_vcpi_rint_ppfd_dec_err_START (5)
+#define SOC_VENC_FUNC_VCPI_RAWINT_vcpi_rint_ppfd_dec_err_END (5)
+#define SOC_VENC_FUNC_VCPI_RAWINT_vcpi_rint_vedu_timeout_START (6)
+#define SOC_VENC_FUNC_VCPI_RAWINT_vcpi_rint_vedu_timeout_END (6)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_vedu_timer : 32;
+    } reg;
+} SOC_VENC_FUNC_VCPI_VEDU_TIMER_UNION;
+#endif
+#define SOC_VENC_FUNC_VCPI_VEDU_TIMER_vcpi_vedu_timer_START (0)
+#define SOC_VENC_FUNC_VCPI_VEDU_TIMER_vcpi_vedu_timer_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_idle_timer : 32;
+    } reg;
+} SOC_VENC_FUNC_VCPI_IDLE_TIMER_UNION;
+#endif
+#define SOC_VENC_FUNC_VCPI_IDLE_TIMER_vcpi_idle_timer_START (0)
+#define SOC_VENC_FUNC_VCPI_IDLE_TIMER_vcpi_idle_timer_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int bus_idle_flag : 1;
+        unsigned int reserved : 31;
+    } reg;
+} SOC_VENC_FUNC_VCPI_BUS_IDLE_FLAG_UNION;
+#endif
+#define SOC_VENC_FUNC_VCPI_BUS_IDLE_FLAG_bus_idle_flag_START (0)
+#define SOC_VENC_FUNC_VCPI_BUS_IDLE_FLAG_bus_idle_flag_END (0)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_FUNC_VCPI_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_FUNC_VCTRL_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_FUNC_QPGLD_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_FUNC_CURLD_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_FUNC_NBI_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_FUNC_PMELD_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_FUNC_PMEINFO_LD_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pme_madi_sum : 25;
+        unsigned int reserved : 7;
+    } reg;
+} SOC_VENC_FUNC_PME_MADI_SUM_UNION;
+#endif
+#define SOC_VENC_FUNC_PME_MADI_SUM_pme_madi_sum_START (0)
+#define SOC_VENC_FUNC_PME_MADI_SUM_pme_madi_sum_END (24)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pme_madp_sum : 25;
+        unsigned int reserved : 7;
+    } reg;
+} SOC_VENC_FUNC_PME_MADP_SUM_UNION;
+#endif
+#define SOC_VENC_FUNC_PME_MADP_SUM_pme_madp_sum_START (0)
+#define SOC_VENC_FUNC_PME_MADP_SUM_pme_madp_sum_END (24)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pme_madi_num : 17;
+        unsigned int reserved : 15;
+    } reg;
+} SOC_VENC_FUNC_PME_MADI_NUM_UNION;
+#endif
+#define SOC_VENC_FUNC_PME_MADI_NUM_pme_madi_num_START (0)
+#define SOC_VENC_FUNC_PME_MADI_NUM_pme_madi_num_END (16)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pme_madp_num : 17;
+        unsigned int reserved : 15;
+    } reg;
+} SOC_VENC_FUNC_PME_MADP_NUM_UNION;
+#endif
+#define SOC_VENC_FUNC_PME_MADP_NUM_pme_madp_num_START (0)
+#define SOC_VENC_FUNC_PME_MADP_NUM_pme_madp_num_END (16)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int large_sad_sum : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_FUNC_PME_LARGE_SAD_SUM_UNION;
+#endif
+#define SOC_VENC_FUNC_PME_LARGE_SAD_SUM_large_sad_sum_START (0)
+#define SOC_VENC_FUNC_PME_LARGE_SAD_SUM_large_sad_sum_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int low_luma_sum : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_FUNC_PME_LOW_LUMA_SUM_UNION;
+#endif
+#define SOC_VENC_FUNC_PME_LOW_LUMA_SUM_low_luma_sum_START (0)
+#define SOC_VENC_FUNC_PME_LOW_LUMA_SUM_low_luma_sum_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int chroma_prot_sum : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_FUNC_PME_CHROMA_SCENE_SUM_UNION;
+#endif
+#define SOC_VENC_FUNC_PME_CHROMA_SCENE_SUM_chroma_prot_sum_START (0)
+#define SOC_VENC_FUNC_PME_CHROMA_SCENE_SUM_chroma_prot_sum_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int move_scene_sum : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_FUNC_PME_MOVE_SCENE_SUM_UNION;
+#endif
+#define SOC_VENC_FUNC_PME_MOVE_SCENE_SUM_move_scene_sum_START (0)
+#define SOC_VENC_FUNC_PME_MOVE_SCENE_SUM_move_scene_sum_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int skin_region_sum : 20;
+        unsigned int reserved : 12;
+    } reg;
+} SOC_VENC_FUNC_PME_SKIN_REGION_SUM_UNION;
+#endif
+#define SOC_VENC_FUNC_PME_SKIN_REGION_SUM_skin_region_sum_START (0)
+#define SOC_VENC_FUNC_PME_SKIN_REGION_SUM_skin_region_sum_END (19)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_FUNC_PME_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_FUNC_PMEST_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_FUNC_PMEINFO_ST_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_bggen_block_count : 18;
+        unsigned int reserved : 14;
+    } reg;
+} SOC_VENC_FUNC_BGSTR_BLOCK_COUNT_UNION;
+#endif
+#define SOC_VENC_FUNC_BGSTR_BLOCK_COUNT_vcpi_bggen_block_count_START (0)
+#define SOC_VENC_FUNC_BGSTR_BLOCK_COUNT_vcpi_bggen_block_count_END (17)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vcpi_frame_bgm_dist : 31;
+        unsigned int reserved : 1;
+    } reg;
+} SOC_VENC_FUNC_BGSTR_FRAME_BGM_DIST_UNION;
+#endif
+#define SOC_VENC_FUNC_BGSTR_FRAME_BGM_DIST_vcpi_frame_bgm_dist_START (0)
+#define SOC_VENC_FUNC_BGSTR_FRAME_BGM_DIST_vcpi_frame_bgm_dist_END (30)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_FUNC_BGSTR_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_FUNC_QPG_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_FUNC_REFLD_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_FUNC_PINTRA_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_FUNC_IME_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_FUNC_FME_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_FUNC_MRG_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_FUNC_BGGEN_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_FUNC_INTRA_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_FUNC_NU0_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pmv_mv0_count : 32;
+    } reg;
+} SOC_VENC_FUNC_PMV_MV0_COUNT_UNION;
+#endif
+#define SOC_VENC_FUNC_PMV_MV0_COUNT_pmv_mv0_count_START (0)
+#define SOC_VENC_FUNC_PMV_MV0_COUNT_pmv_mv0_count_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pmv_mv1_count : 32;
+    } reg;
+} SOC_VENC_FUNC_PMV_MV1_COUNT_UNION;
+#endif
+#define SOC_VENC_FUNC_PMV_MV1_COUNT_pmv_mv1_count_START (0)
+#define SOC_VENC_FUNC_PMV_MV1_COUNT_pmv_mv1_count_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pmv_mv2_count : 32;
+    } reg;
+} SOC_VENC_FUNC_PMV_MV2_COUNT_UNION;
+#endif
+#define SOC_VENC_FUNC_PMV_MV2_COUNT_pmv_mv2_count_START (0)
+#define SOC_VENC_FUNC_PMV_MV2_COUNT_pmv_mv2_count_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pmv_mv3_count : 32;
+    } reg;
+} SOC_VENC_FUNC_PMV_MV3_COUNT_UNION;
+#endif
+#define SOC_VENC_FUNC_PMV_MV3_COUNT_pmv_mv3_count_START (0)
+#define SOC_VENC_FUNC_PMV_MV3_COUNT_pmv_mv3_count_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pmv_mv4_count : 32;
+    } reg;
+} SOC_VENC_FUNC_PMV_MV4_COUNT_UNION;
+#endif
+#define SOC_VENC_FUNC_PMV_MV4_COUNT_pmv_mv4_count_START (0)
+#define SOC_VENC_FUNC_PMV_MV4_COUNT_pmv_mv4_count_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pmv_mv5_count : 32;
+    } reg;
+} SOC_VENC_FUNC_PMV_MV5_COUNT_UNION;
+#endif
+#define SOC_VENC_FUNC_PMV_MV5_COUNT_pmv_mv5_count_START (0)
+#define SOC_VENC_FUNC_PMV_MV5_COUNT_pmv_mv5_count_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pmv_mv6_count : 32;
+    } reg;
+} SOC_VENC_FUNC_PMV_MV6_COUNT_UNION;
+#endif
+#define SOC_VENC_FUNC_PMV_MV6_COUNT_pmv_mv6_count_START (0)
+#define SOC_VENC_FUNC_PMV_MV6_COUNT_pmv_mv6_count_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pmv_mv7_count : 32;
+    } reg;
+} SOC_VENC_FUNC_PMV_MV7_COUNT_UNION;
+#endif
+#define SOC_VENC_FUNC_PMV_MV7_COUNT_pmv_mv7_count_START (0)
+#define SOC_VENC_FUNC_PMV_MV7_COUNT_pmv_mv7_count_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pmv_mv8_count : 32;
+    } reg;
+} SOC_VENC_FUNC_PMV_MV8_COUNT_UNION;
+#endif
+#define SOC_VENC_FUNC_PMV_MV8_COUNT_pmv_mv8_count_START (0)
+#define SOC_VENC_FUNC_PMV_MV8_COUNT_pmv_mv8_count_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pmv_mv9_count : 32;
+    } reg;
+} SOC_VENC_FUNC_PMV_MV9_COUNT_UNION;
+#endif
+#define SOC_VENC_FUNC_PMV_MV9_COUNT_pmv_mv9_count_START (0)
+#define SOC_VENC_FUNC_PMV_MV9_COUNT_pmv_mv9_count_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pmv_mv10_count : 32;
+    } reg;
+} SOC_VENC_FUNC_PMV_MV10_COUNT_UNION;
+#endif
+#define SOC_VENC_FUNC_PMV_MV10_COUNT_pmv_mv10_count_START (0)
+#define SOC_VENC_FUNC_PMV_MV10_COUNT_pmv_mv10_count_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pmv_mv11_count : 32;
+    } reg;
+} SOC_VENC_FUNC_PMV_MV11_COUNT_UNION;
+#endif
+#define SOC_VENC_FUNC_PMV_MV11_COUNT_pmv_mv11_count_START (0)
+#define SOC_VENC_FUNC_PMV_MV11_COUNT_pmv_mv11_count_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pmv_mv12_count : 32;
+    } reg;
+} SOC_VENC_FUNC_PMV_MV12_COUNT_UNION;
+#endif
+#define SOC_VENC_FUNC_PMV_MV12_COUNT_pmv_mv12_count_START (0)
+#define SOC_VENC_FUNC_PMV_MV12_COUNT_pmv_mv12_count_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pmv_mv13_count : 32;
+    } reg;
+} SOC_VENC_FUNC_PMV_MV13_COUNT_UNION;
+#endif
+#define SOC_VENC_FUNC_PMV_MV13_COUNT_pmv_mv13_count_START (0)
+#define SOC_VENC_FUNC_PMV_MV13_COUNT_pmv_mv13_count_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pmv_mv14_count : 32;
+    } reg;
+} SOC_VENC_FUNC_PMV_MV14_COUNT_UNION;
+#endif
+#define SOC_VENC_FUNC_PMV_MV14_COUNT_pmv_mv14_count_START (0)
+#define SOC_VENC_FUNC_PMV_MV14_COUNT_pmv_mv14_count_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pmv_mv15_count : 32;
+    } reg;
+} SOC_VENC_FUNC_PMV_MV15_COUNT_UNION;
+#endif
+#define SOC_VENC_FUNC_PMV_MV15_COUNT_pmv_mv15_count_START (0)
+#define SOC_VENC_FUNC_PMV_MV15_COUNT_pmv_mv15_count_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pmv_mv16_count : 32;
+    } reg;
+} SOC_VENC_FUNC_PMV_MV16_COUNT_UNION;
+#endif
+#define SOC_VENC_FUNC_PMV_MV16_COUNT_pmv_mv16_count_START (0)
+#define SOC_VENC_FUNC_PMV_MV16_COUNT_pmv_mv16_count_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pmv_mv17_count : 32;
+    } reg;
+} SOC_VENC_FUNC_PMV_MV17_COUNT_UNION;
+#endif
+#define SOC_VENC_FUNC_PMV_MV17_COUNT_pmv_mv17_count_START (0)
+#define SOC_VENC_FUNC_PMV_MV17_COUNT_pmv_mv17_count_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pmv_mv18_count : 32;
+    } reg;
+} SOC_VENC_FUNC_PMV_MV18_COUNT_UNION;
+#endif
+#define SOC_VENC_FUNC_PMV_MV18_COUNT_pmv_mv18_count_START (0)
+#define SOC_VENC_FUNC_PMV_MV18_COUNT_pmv_mv18_count_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pmv_mv19_count : 32;
+    } reg;
+} SOC_VENC_FUNC_PMV_MV19_COUNT_UNION;
+#endif
+#define SOC_VENC_FUNC_PMV_MV19_COUNT_pmv_mv19_count_START (0)
+#define SOC_VENC_FUNC_PMV_MV19_COUNT_pmv_mv19_count_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pmv_mv20_count : 32;
+    } reg;
+} SOC_VENC_FUNC_PMV_MV20_COUNT_UNION;
+#endif
+#define SOC_VENC_FUNC_PMV_MV20_COUNT_pmv_mv20_count_START (0)
+#define SOC_VENC_FUNC_PMV_MV20_COUNT_pmv_mv20_count_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pmv_mv21_count : 32;
+    } reg;
+} SOC_VENC_FUNC_PMV_MV21_COUNT_UNION;
+#endif
+#define SOC_VENC_FUNC_PMV_MV21_COUNT_pmv_mv21_count_START (0)
+#define SOC_VENC_FUNC_PMV_MV21_COUNT_pmv_mv21_count_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pmv_mv22_count : 32;
+    } reg;
+} SOC_VENC_FUNC_PMV_MV22_COUNT_UNION;
+#endif
+#define SOC_VENC_FUNC_PMV_MV22_COUNT_pmv_mv22_count_START (0)
+#define SOC_VENC_FUNC_PMV_MV22_COUNT_pmv_mv22_count_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_FUNC_TQITQ0_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_FUNC_NU2_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_FUNC_BGLD_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_FUNC_LFLDST_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_FUNC_DBLK_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_FUNC_NU4_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_FUNC_RECST_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_FUNC_PACK0_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_FUNC_PACK1_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int cabac_pic_strmsize : 32;
+    } reg;
+} SOC_VENC_FUNC_CABAC_PIC_STRMSIZE_UNION;
+#endif
+#define SOC_VENC_FUNC_CABAC_PIC_STRMSIZE_cabac_pic_strmsize_START (0)
+#define SOC_VENC_FUNC_CABAC_PIC_STRMSIZE_cabac_pic_strmsize_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int bin2bsgen_bincount : 32;
+    } reg;
+} SOC_VENC_FUNC_CABAC_BIN_NUM_UNION;
+#endif
+#define SOC_VENC_FUNC_CABAC_BIN_NUM_bin2bsgen_bincount_START (0)
+#define SOC_VENC_FUNC_CABAC_BIN_NUM_bin2bsgen_bincount_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int bin2bsgen_res_bincount : 32;
+    } reg;
+} SOC_VENC_FUNC_CABAC_RES_BIN_NUM_UNION;
+#endif
+#define SOC_VENC_FUNC_CABAC_RES_BIN_NUM_bin2bsgen_res_bincount_START (0)
+#define SOC_VENC_FUNC_CABAC_RES_BIN_NUM_bin2bsgen_res_bincount_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int bin2bsgen_hdr_bincount : 32;
+    } reg;
+} SOC_VENC_FUNC_CABAC_HDR_BIN_NUM_UNION;
+#endif
+#define SOC_VENC_FUNC_CABAC_HDR_BIN_NUM_bin2bsgen_hdr_bincount_START (0)
+#define SOC_VENC_FUNC_CABAC_HDR_BIN_NUM_bin2bsgen_hdr_bincount_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int cabac_move_scene_bits : 32;
+    } reg;
+} SOC_VENC_FUNC_CABAC_MOVE_SCENE_BITS_UNION;
+#endif
+#define SOC_VENC_FUNC_CABAC_MOVE_SCENE_BITS_cabac_move_scene_bits_START (0)
+#define SOC_VENC_FUNC_CABAC_MOVE_SCENE_BITS_cabac_move_scene_bits_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int cabac_stredge_move_bits : 32;
+    } reg;
+} SOC_VENC_FUNC_CABAC_STREDGE_MOVE_BITS_UNION;
+#endif
+#define SOC_VENC_FUNC_CABAC_STREDGE_MOVE_BITS_cabac_stredge_move_bits_START (0)
+#define SOC_VENC_FUNC_CABAC_STREDGE_MOVE_BITS_cabac_stredge_move_bits_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int cabac_skin_bits : 32;
+    } reg;
+} SOC_VENC_FUNC_CABAC_SKIN_BITS_UNION;
+#endif
+#define SOC_VENC_FUNC_CABAC_SKIN_BITS_cabac_skin_bits_START (0)
+#define SOC_VENC_FUNC_CABAC_SKIN_BITS_cabac_skin_bits_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int cabac_lowluma_bits : 32;
+    } reg;
+} SOC_VENC_FUNC_CABAC_LOWLUMA_BITS_UNION;
+#endif
+#define SOC_VENC_FUNC_CABAC_LOWLUMA_BITS_cabac_lowluma_bits_START (0)
+#define SOC_VENC_FUNC_CABAC_LOWLUMA_BITS_cabac_lowluma_bits_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int cabac_chromaprot_bits : 32;
+    } reg;
+} SOC_VENC_FUNC_CABAC_CHROMAPROT_BITS_UNION;
+#endif
+#define SOC_VENC_FUNC_CABAC_CHROMAPROT_BITS_cabac_chromaprot_bits_START (0)
+#define SOC_VENC_FUNC_CABAC_CHROMAPROT_BITS_cabac_chromaprot_bits_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_FUNC_CABAC_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vlc_cabac_hrd_bin_num_in_pic : 32;
+    } reg;
+} SOC_VENC_FUNC_VLC_CABAC_HRD_BITS_UNION;
+#endif
+#define SOC_VENC_FUNC_VLC_CABAC_HRD_BITS_vlc_cabac_hrd_bin_num_in_pic_START (0)
+#define SOC_VENC_FUNC_VLC_CABAC_HRD_BITS_vlc_cabac_hrd_bin_num_in_pic_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vlc_cabac_res_bin_num_in_pic : 32;
+    } reg;
+} SOC_VENC_FUNC_VLC_CABAC_RES_BITS_UNION;
+#endif
+#define SOC_VENC_FUNC_VLC_CABAC_RES_BITS_vlc_cabac_res_bin_num_in_pic_START (0)
+#define SOC_VENC_FUNC_VLC_CABAC_RES_BITS_vlc_cabac_res_bin_num_in_pic_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vlc_cavlc_hrd_bit_num_in_pic : 32;
+    } reg;
+} SOC_VENC_FUNC_VLC_CAVLC_HRD_BITS_UNION;
+#endif
+#define SOC_VENC_FUNC_VLC_CAVLC_HRD_BITS_vlc_cavlc_hrd_bit_num_in_pic_START (0)
+#define SOC_VENC_FUNC_VLC_CAVLC_HRD_BITS_vlc_cavlc_hrd_bit_num_in_pic_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vlc_cavlc_res_bit_num_in_pic : 32;
+    } reg;
+} SOC_VENC_FUNC_VLC_CAVLC_RES_BITS_UNION;
+#endif
+#define SOC_VENC_FUNC_VLC_CAVLC_RES_BITS_vlc_cavlc_res_bit_num_in_pic_START (0)
+#define SOC_VENC_FUNC_VLC_CAVLC_RES_BITS_vlc_cavlc_res_bit_num_in_pic_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_FUNC_VLC_PIC_STRMSIZE_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_FUNC_VLC_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vlcst_slc_len_cnt : 32;
+    } reg;
+} SOC_VENC_FUNC_VLCST_SLC_LEN_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_VLCST_SLC_LEN_CNT_vlcst_slc_len_cnt_START (0)
+#define SOC_VENC_FUNC_VLCST_SLC_LEN_CNT_vlcst_slc_len_cnt_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vlcst_wptr : 32;
+    } reg;
+} SOC_VENC_FUNC_VLCST_WPTR_UNION;
+#endif
+#define SOC_VENC_FUNC_VLCST_WPTR_vlcst_wptr_START (0)
+#define SOC_VENC_FUNC_VLCST_WPTR_vlcst_wptr_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int vlcst_rptr : 32;
+    } reg;
+} SOC_VENC_FUNC_VLCST_RPTR_UNION;
+#endif
+#define SOC_VENC_FUNC_VLCST_RPTR_vlcst_rptr_START (0)
+#define SOC_VENC_FUNC_VLCST_RPTR_vlcst_rptr_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_FUNC_VLCST_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_FUNC_EMAR_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_FUNC_PPFD_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int opt_8x8_cnt : 19;
+        unsigned int reserved : 13;
+    } reg;
+} SOC_VENC_FUNC_SEL_OPT_8X8_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_OPT_8X8_CNT_opt_8x8_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_OPT_8X8_CNT_opt_8x8_cnt_END (18)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int intra_opt_8x8_cnt : 19;
+        unsigned int reserved : 13;
+    } reg;
+} SOC_VENC_FUNC_SEL_INTRA_OPT_8X8_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_INTRA_OPT_8X8_CNT_intra_opt_8x8_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_INTRA_OPT_8X8_CNT_intra_opt_8x8_cnt_END (18)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_FUNC_SEL_INTRA_NORMAL_OPT_8X8_CNT_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int pcm_opt_8x8_cnt : 19;
+        unsigned int reserved : 13;
+    } reg;
+} SOC_VENC_FUNC_SEL_INTRA_PCM_OPT_8X8_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_INTRA_PCM_OPT_8X8_CNT_pcm_opt_8x8_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_INTRA_PCM_OPT_8X8_CNT_pcm_opt_8x8_cnt_END (18)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int inter_opt_8x8_cnt : 19;
+        unsigned int reserved : 13;
+    } reg;
+} SOC_VENC_FUNC_SEL_INTER_OPT_8X8_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_INTER_OPT_8X8_CNT_inter_opt_8x8_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_INTER_OPT_8X8_CNT_inter_opt_8x8_cnt_END (18)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int fme_opt_8x8_cnt : 19;
+        unsigned int reserved : 13;
+    } reg;
+} SOC_VENC_FUNC_SEL_INTER_FME_OPT_8X8_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_INTER_FME_OPT_8X8_CNT_fme_opt_8x8_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_INTER_FME_OPT_8X8_CNT_fme_opt_8x8_cnt_END (18)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int mrg_opt_8x8_cnt : 19;
+        unsigned int reserved : 13;
+    } reg;
+} SOC_VENC_FUNC_SELINTER_MERGE_OPT_8X8_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SELINTER_MERGE_OPT_8X8_CNT_mrg_opt_8x8_cnt_START (0)
+#define SOC_VENC_FUNC_SELINTER_MERGE_OPT_8X8_CNT_mrg_opt_8x8_cnt_END (18)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int mrg_skip_opt_8x8_cnt : 19;
+        unsigned int reserved : 13;
+    } reg;
+} SOC_VENC_FUNC_SEL_INTER_SKIP_OPT_8X8_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_INTER_SKIP_OPT_8X8_CNT_mrg_skip_opt_8x8_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_INTER_SKIP_OPT_8X8_CNT_mrg_skip_opt_8x8_cnt_END (18)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int opt_16x16_cnt : 17;
+        unsigned int reserved : 15;
+    } reg;
+} SOC_VENC_FUNC_SEL_OPT_16X16_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_OPT_16X16_CNT_opt_16x16_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_OPT_16X16_CNT_opt_16x16_cnt_END (16)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int intra_opt_16x16_cnt : 17;
+        unsigned int reserved : 15;
+    } reg;
+} SOC_VENC_FUNC_SEL_INTRA_OPT_16X16_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_INTRA_OPT_16X16_CNT_intra_opt_16x16_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_INTRA_OPT_16X16_CNT_intra_opt_16x16_cnt_END (16)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int opt_4x4_cnt : 19;
+        unsigned int reserved : 13;
+    } reg;
+} SOC_VENC_FUNC_SEL_OPT_4X4_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_OPT_4X4_CNT_opt_4x4_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_OPT_4X4_CNT_opt_4x4_cnt_END (18)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED0_FUNC_SEL_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int inter_opt_16x16_cnt : 17;
+        unsigned int reserved : 15;
+    } reg;
+} SOC_VENC_FUNC_SEL_INTER_OPT_16X16_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_INTER_OPT_16X16_CNT_inter_opt_16x16_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_INTER_OPT_16X16_CNT_inter_opt_16x16_cnt_END (16)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int fme_opt_16x16_cnt : 17;
+        unsigned int reserved : 15;
+    } reg;
+} SOC_VENC_FUNC_SEL_INTER_FME_OPT_16X16_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_INTER_FME_OPT_16X16_CNT_fme_opt_16x16_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_INTER_FME_OPT_16X16_CNT_fme_opt_16x16_cnt_END (16)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int mrg_opt_16x16_cnt : 17;
+        unsigned int reserved : 15;
+    } reg;
+} SOC_VENC_FUNC_SEL_INTER_MERGE_OPT_16X16_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_INTER_MERGE_OPT_16X16_CNT_mrg_opt_16x16_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_INTER_MERGE_OPT_16X16_CNT_mrg_opt_16x16_cnt_END (16)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int mrg_skip_opt_16x16_cnt : 17;
+        unsigned int reserved : 15;
+    } reg;
+} SOC_VENC_FUNC_SEL_INTER_SKIP_OPT_16X16_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_INTER_SKIP_OPT_16X16_CNT_mrg_skip_opt_16x16_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_INTER_SKIP_OPT_16X16_CNT_mrg_skip_opt_16x16_cnt_END (16)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int opt_32x32_cnt : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_FUNC_SEL_OPT_32X32_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_OPT_32X32_CNT_opt_32x32_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_OPT_32X32_CNT_opt_32x32_cnt_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int intra_opt_32x32_cnt : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_FUNC_SEL_INTRA_OPT_32X32_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_INTRA_OPT_32X32_CNT_intra_opt_32x32_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_INTRA_OPT_32X32_CNT_intra_opt_32x32_cnt_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED1_FUNC_SEL_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int inter_opt_32x32_cnt : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_FUNC_SEL_INTER_OPT_32X32_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_INTER_OPT_32X32_CNT_inter_opt_32x32_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_INTER_OPT_32X32_CNT_inter_opt_32x32_cnt_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int fme_opt_32x32_cnt : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_FUNC_SEL_INTER_FME_OPT_32X32_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_INTER_FME_OPT_32X32_CNT_fme_opt_32x32_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_INTER_FME_OPT_32X32_CNT_fme_opt_32x32_cnt_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int mrg_opt_32x32_cnt : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_FUNC_SEL_INTER_MERGE_OPT_32X32_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_INTER_MERGE_OPT_32X32_CNT_mrg_opt_32x32_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_INTER_MERGE_OPT_32X32_CNT_mrg_opt_32x32_cnt_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int mrg_skip_opt_32x32_cnt : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_FUNC_SEL_INTER_SKIP_OPT_32X32_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_INTER_SKIP_OPT_32X32_CNT_mrg_skip_opt_32x32_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_INTER_SKIP_OPT_32X32_CNT_mrg_skip_opt_32x32_cnt_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int opt_64x64_cnt : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_FUNC_SEL_OPT_64X64_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_OPT_64X64_CNT_opt_64x64_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_OPT_64X64_CNT_opt_64x64_cnt_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int fme_opt_64x64_cnt : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_FUNC_SEL_INTER_FME_OPT_64X64_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_INTER_FME_OPT_64X64_CNT_fme_opt_64x64_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_INTER_FME_OPT_64X64_CNT_fme_opt_64x64_cnt_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int mrg_opt_64x64_cnt : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_FUNC_SEL_INTER_MERGE_OPT_64X64_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_INTER_MERGE_OPT_64X64_CNT_mrg_opt_64x64_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_INTER_MERGE_OPT_64X64_CNT_mrg_opt_64x64_cnt_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int mrg_skip_opt_64x64_cnt : 16;
+        unsigned int reserved : 16;
+    } reg;
+} SOC_VENC_FUNC_SEL_INTER_SKIP_OPT_64X64_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_INTER_SKIP_OPT_64X64_CNT_mrg_skip_opt_64x64_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_INTER_SKIP_OPT_64X64_CNT_mrg_skip_opt_64x64_cnt_END (15)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int total_luma_qp : 26;
+        unsigned int reserved : 6;
+    } reg;
+} SOC_VENC_FUNC_SEL_TOTAL_LUMA_QP_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_TOTAL_LUMA_QP_total_luma_qp_START (0)
+#define SOC_VENC_FUNC_SEL_TOTAL_LUMA_QP_total_luma_qp_END (25)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int min_luma_qp : 6;
+        unsigned int reserved_0 : 2;
+        unsigned int max_luma_qp : 6;
+        unsigned int reserved_1 : 18;
+    } reg;
+} SOC_VENC_FUNC_SEL_MAX_MIN_LUMA_QP_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_MAX_MIN_LUMA_QP_min_luma_qp_START (0)
+#define SOC_VENC_FUNC_SEL_MAX_MIN_LUMA_QP_min_luma_qp_END (5)
+#define SOC_VENC_FUNC_SEL_MAX_MIN_LUMA_QP_max_luma_qp_START (8)
+#define SOC_VENC_FUNC_SEL_MAX_MIN_LUMA_QP_max_luma_qp_END (13)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED2_FUNC_SEL_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp0_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP0_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP0_CNT_luma_qp0_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP0_CNT_luma_qp0_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp1_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP1_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP1_CNT_luma_qp1_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP1_CNT_luma_qp1_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp2_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP2_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP2_CNT_luma_qp2_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP2_CNT_luma_qp2_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp3_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP3_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP3_CNT_luma_qp3_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP3_CNT_luma_qp3_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp4_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP4_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP4_CNT_luma_qp4_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP4_CNT_luma_qp4_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp5_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP5_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP5_CNT_luma_qp5_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP5_CNT_luma_qp5_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp6_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP6_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP6_CNT_luma_qp6_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP6_CNT_luma_qp6_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp7_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP7_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP7_CNT_luma_qp7_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP7_CNT_luma_qp7_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp8_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP8_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP8_CNT_luma_qp8_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP8_CNT_luma_qp8_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp9_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP9_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP9_CNT_luma_qp9_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP9_CNT_luma_qp9_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp10_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP10_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP10_CNT_luma_qp10_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP10_CNT_luma_qp10_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp11_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP11_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP11_CNT_luma_qp11_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP11_CNT_luma_qp11_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp12_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP12_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP12_CNT_luma_qp12_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP12_CNT_luma_qp12_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp13_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP13_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP13_CNT_luma_qp13_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP13_CNT_luma_qp13_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp14_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP14_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP14_CNT_luma_qp14_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP14_CNT_luma_qp14_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp15_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP15_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP15_CNT_luma_qp15_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP15_CNT_luma_qp15_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp16_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP16_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP16_CNT_luma_qp16_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP16_CNT_luma_qp16_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp17_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP17_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP17_CNT_luma_qp17_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP17_CNT_luma_qp17_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp18_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP18_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP18_CNT_luma_qp18_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP18_CNT_luma_qp18_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp19_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP19_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP19_CNT_luma_qp19_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP19_CNT_luma_qp19_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp20_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP20_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP20_CNT_luma_qp20_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP20_CNT_luma_qp20_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp21_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP21_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP21_CNT_luma_qp21_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP21_CNT_luma_qp21_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp22_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP22_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP22_CNT_luma_qp22_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP22_CNT_luma_qp22_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp23_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP23_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP23_CNT_luma_qp23_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP23_CNT_luma_qp23_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp24_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP24_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP24_CNT_luma_qp24_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP24_CNT_luma_qp24_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp25_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP25_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP25_CNT_luma_qp25_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP25_CNT_luma_qp25_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp26_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP26_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP26_CNT_luma_qp26_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP26_CNT_luma_qp26_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp27_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP27_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP27_CNT_luma_qp27_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP27_CNT_luma_qp27_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp28_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP28_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP28_CNT_luma_qp28_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP28_CNT_luma_qp28_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp29_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP29_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP29_CNT_luma_qp29_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP29_CNT_luma_qp29_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp30_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP30_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP30_CNT_luma_qp30_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP30_CNT_luma_qp30_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp31_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP31_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP31_CNT_luma_qp31_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP31_CNT_luma_qp31_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp32_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP32_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP32_CNT_luma_qp32_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP32_CNT_luma_qp32_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp33_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP33_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP33_CNT_luma_qp33_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP33_CNT_luma_qp33_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp34_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP34_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP34_CNT_luma_qp34_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP34_CNT_luma_qp34_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp35_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP35_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP35_CNT_luma_qp35_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP35_CNT_luma_qp35_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp36_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP36_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP36_CNT_luma_qp36_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP36_CNT_luma_qp36_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp37_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP37_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP37_CNT_luma_qp37_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP37_CNT_luma_qp37_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp38_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP38_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP38_CNT_luma_qp38_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP38_CNT_luma_qp38_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp39_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP39_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP39_CNT_luma_qp39_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP39_CNT_luma_qp39_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp40_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP40_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP40_CNT_luma_qp40_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP40_CNT_luma_qp40_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp41_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP41_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP41_CNT_luma_qp41_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP41_CNT_luma_qp41_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp42_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP42_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP42_CNT_luma_qp42_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP42_CNT_luma_qp42_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp43_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP43_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP43_CNT_luma_qp43_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP43_CNT_luma_qp43_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp44_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP44_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP44_CNT_luma_qp44_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP44_CNT_luma_qp44_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp45_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP45_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP45_CNT_luma_qp45_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP45_CNT_luma_qp45_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp46_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP46_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP46_CNT_luma_qp46_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP46_CNT_luma_qp46_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp47_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP47_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP47_CNT_luma_qp47_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP47_CNT_luma_qp47_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp48_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP48_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP48_CNT_luma_qp48_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP48_CNT_luma_qp48_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp49_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP49_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP49_CNT_luma_qp49_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP49_CNT_luma_qp49_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp50_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP50_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP50_CNT_luma_qp50_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP50_CNT_luma_qp50_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int luma_qp51_cnt : 21;
+        unsigned int reserved : 11;
+    } reg;
+} SOC_VENC_FUNC_SEL_LUMA_QP51_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SEL_LUMA_QP51_CNT_luma_qp51_cnt_START (0)
+#define SOC_VENC_FUNC_SEL_LUMA_QP51_CNT_luma_qp51_cnt_END (20)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED3_FUNC_SEL_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_FUNC_TBLDST_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sao2vcpi_saooff_num_luma : 14;
+        unsigned int reserved_0 : 2;
+        unsigned int sao2vcpi_saooff_num_chroma : 14;
+        unsigned int reserved_1 : 2;
+    } reg;
+} SOC_VENC_FUNC_SAO_OFF_NUM_UNION;
+#endif
+#define SOC_VENC_FUNC_SAO_OFF_NUM_sao2vcpi_saooff_num_luma_START (0)
+#define SOC_VENC_FUNC_SAO_OFF_NUM_sao2vcpi_saooff_num_luma_END (13)
+#define SOC_VENC_FUNC_SAO_OFF_NUM_sao2vcpi_saooff_num_chroma_START (16)
+#define SOC_VENC_FUNC_SAO_OFF_NUM_sao2vcpi_saooff_num_chroma_END (29)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sao2vcpi_mse_sum : 32;
+    } reg;
+} SOC_VENC_FUNC_SAO_MSE_SUM_UNION;
+#endif
+#define SOC_VENC_FUNC_SAO_MSE_SUM_sao2vcpi_mse_sum_START (0)
+#define SOC_VENC_FUNC_SAO_MSE_SUM_sao2vcpi_mse_sum_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sao2vcpi_mse_cnt : 15;
+        unsigned int reserved : 17;
+    } reg;
+} SOC_VENC_FUNC_SAO_MSE_CNT_UNION;
+#endif
+#define SOC_VENC_FUNC_SAO_MSE_CNT_sao2vcpi_mse_cnt_START (0)
+#define SOC_VENC_FUNC_SAO_MSE_CNT_sao2vcpi_mse_cnt_END (14)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sao2vcpi_mse_max : 28;
+        unsigned int reserved : 4;
+    } reg;
+} SOC_VENC_FUNC_SAO_MSE_MAX_UNION;
+#endif
+#define SOC_VENC_FUNC_SAO_MSE_MAX_sao2vcpi_mse_max_START (0)
+#define SOC_VENC_FUNC_SAO_MSE_MAX_sao2vcpi_mse_max_END (27)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sao_ssd_area0_sum : 32;
+    } reg;
+} SOC_VENC_FUNC_SAO_SSD_AREA0_SUM_UNION;
+#endif
+#define SOC_VENC_FUNC_SAO_SSD_AREA0_SUM_sao_ssd_area0_sum_START (0)
+#define SOC_VENC_FUNC_SAO_SSD_AREA0_SUM_sao_ssd_area0_sum_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sao_ssd_area1_sum : 32;
+    } reg;
+} SOC_VENC_FUNC_SAO_SSD_AREA1_SUM_UNION;
+#endif
+#define SOC_VENC_FUNC_SAO_SSD_AREA1_SUM_sao_ssd_area1_sum_START (0)
+#define SOC_VENC_FUNC_SAO_SSD_AREA1_SUM_sao_ssd_area1_sum_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sao_ssd_area2_sum : 32;
+    } reg;
+} SOC_VENC_FUNC_SAO_SSD_AREA2_SUM_UNION;
+#endif
+#define SOC_VENC_FUNC_SAO_SSD_AREA2_SUM_sao_ssd_area2_sum_START (0)
+#define SOC_VENC_FUNC_SAO_SSD_AREA2_SUM_sao_ssd_area2_sum_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sao_ssd_area3_sum : 32;
+    } reg;
+} SOC_VENC_FUNC_SAO_SSD_AREA3_SUM_UNION;
+#endif
+#define SOC_VENC_FUNC_SAO_SSD_AREA3_SUM_sao_ssd_area3_sum_START (0)
+#define SOC_VENC_FUNC_SAO_SSD_AREA3_SUM_sao_ssd_area3_sum_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sao_ssd_area4_sum : 32;
+    } reg;
+} SOC_VENC_FUNC_SAO_SSD_AREA4_SUM_UNION;
+#endif
+#define SOC_VENC_FUNC_SAO_SSD_AREA4_SUM_sao_ssd_area4_sum_START (0)
+#define SOC_VENC_FUNC_SAO_SSD_AREA4_SUM_sao_ssd_area4_sum_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sao_ssd_area5_sum : 32;
+    } reg;
+} SOC_VENC_FUNC_SAO_SSD_AREA5_SUM_UNION;
+#endif
+#define SOC_VENC_FUNC_SAO_SSD_AREA5_SUM_sao_ssd_area5_sum_START (0)
+#define SOC_VENC_FUNC_SAO_SSD_AREA5_SUM_sao_ssd_area5_sum_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sao_ssd_area6_sum : 32;
+    } reg;
+} SOC_VENC_FUNC_SAO_SSD_AREA6_SUM_UNION;
+#endif
+#define SOC_VENC_FUNC_SAO_SSD_AREA6_SUM_sao_ssd_area6_sum_START (0)
+#define SOC_VENC_FUNC_SAO_SSD_AREA6_SUM_sao_ssd_area6_sum_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sao_ssd_area7_sum : 32;
+    } reg;
+} SOC_VENC_FUNC_SAO_SSD_AREA7_SUM_UNION;
+#endif
+#define SOC_VENC_FUNC_SAO_SSD_AREA7_SUM_sao_ssd_area7_sum_START (0)
+#define SOC_VENC_FUNC_SAO_SSD_AREA7_SUM_sao_ssd_area7_sum_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_FUNC_SAO_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_FUNC_NU3_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dfx_ar_r_err : 1;
+        unsigned int dfx_aw_w_err : 1;
+        unsigned int dfx_aw_b_err : 1;
+        unsigned int dfx_arid_err : 1;
+        unsigned int dfx_rid_err : 1;
+        unsigned int dfx_awid_err : 1;
+        unsigned int dfx_wid_err : 1;
+        unsigned int dfx_bid_err : 1;
+        unsigned int dfx_arid_tx_err : 1;
+        unsigned int dfx_rid_rx_err : 1;
+        unsigned int dfx_awid_tx_err : 1;
+        unsigned int dfx_bid_rx_err : 1;
+        unsigned int dfx_arid_len_err : 1;
+        unsigned int dfx_awid_len : 1;
+        unsigned int dfx_rresp_err : 1;
+        unsigned int dfx_bresp_err : 1;
+        unsigned int dfx_ar_ovr_err : 1;
+        unsigned int dfx_r_ovr_err : 1;
+        unsigned int dfx_aw_ovr_err : 1;
+        unsigned int dfx_w_ovr_err : 1;
+        unsigned int dfx_b_ovr_err : 1;
+        unsigned int dfx_ar_outstanding_err : 1;
+        unsigned int dfx_aw_outstanding_err : 1;
+        unsigned int dfx_arlen_err : 1;
+        unsigned int dfx_awlen_err : 1;
+        unsigned int reserved : 7;
+    } reg;
+} SOC_VENC_AXIDFX_ERR_UNION;
+#endif
+#define SOC_VENC_AXIDFX_ERR_dfx_ar_r_err_START (0)
+#define SOC_VENC_AXIDFX_ERR_dfx_ar_r_err_END (0)
+#define SOC_VENC_AXIDFX_ERR_dfx_aw_w_err_START (1)
+#define SOC_VENC_AXIDFX_ERR_dfx_aw_w_err_END (1)
+#define SOC_VENC_AXIDFX_ERR_dfx_aw_b_err_START (2)
+#define SOC_VENC_AXIDFX_ERR_dfx_aw_b_err_END (2)
+#define SOC_VENC_AXIDFX_ERR_dfx_arid_err_START (3)
+#define SOC_VENC_AXIDFX_ERR_dfx_arid_err_END (3)
+#define SOC_VENC_AXIDFX_ERR_dfx_rid_err_START (4)
+#define SOC_VENC_AXIDFX_ERR_dfx_rid_err_END (4)
+#define SOC_VENC_AXIDFX_ERR_dfx_awid_err_START (5)
+#define SOC_VENC_AXIDFX_ERR_dfx_awid_err_END (5)
+#define SOC_VENC_AXIDFX_ERR_dfx_wid_err_START (6)
+#define SOC_VENC_AXIDFX_ERR_dfx_wid_err_END (6)
+#define SOC_VENC_AXIDFX_ERR_dfx_bid_err_START (7)
+#define SOC_VENC_AXIDFX_ERR_dfx_bid_err_END (7)
+#define SOC_VENC_AXIDFX_ERR_dfx_arid_tx_err_START (8)
+#define SOC_VENC_AXIDFX_ERR_dfx_arid_tx_err_END (8)
+#define SOC_VENC_AXIDFX_ERR_dfx_rid_rx_err_START (9)
+#define SOC_VENC_AXIDFX_ERR_dfx_rid_rx_err_END (9)
+#define SOC_VENC_AXIDFX_ERR_dfx_awid_tx_err_START (10)
+#define SOC_VENC_AXIDFX_ERR_dfx_awid_tx_err_END (10)
+#define SOC_VENC_AXIDFX_ERR_dfx_bid_rx_err_START (11)
+#define SOC_VENC_AXIDFX_ERR_dfx_bid_rx_err_END (11)
+#define SOC_VENC_AXIDFX_ERR_dfx_arid_len_err_START (12)
+#define SOC_VENC_AXIDFX_ERR_dfx_arid_len_err_END (12)
+#define SOC_VENC_AXIDFX_ERR_dfx_awid_len_START (13)
+#define SOC_VENC_AXIDFX_ERR_dfx_awid_len_END (13)
+#define SOC_VENC_AXIDFX_ERR_dfx_rresp_err_START (14)
+#define SOC_VENC_AXIDFX_ERR_dfx_rresp_err_END (14)
+#define SOC_VENC_AXIDFX_ERR_dfx_bresp_err_START (15)
+#define SOC_VENC_AXIDFX_ERR_dfx_bresp_err_END (15)
+#define SOC_VENC_AXIDFX_ERR_dfx_ar_ovr_err_START (16)
+#define SOC_VENC_AXIDFX_ERR_dfx_ar_ovr_err_END (16)
+#define SOC_VENC_AXIDFX_ERR_dfx_r_ovr_err_START (17)
+#define SOC_VENC_AXIDFX_ERR_dfx_r_ovr_err_END (17)
+#define SOC_VENC_AXIDFX_ERR_dfx_aw_ovr_err_START (18)
+#define SOC_VENC_AXIDFX_ERR_dfx_aw_ovr_err_END (18)
+#define SOC_VENC_AXIDFX_ERR_dfx_w_ovr_err_START (19)
+#define SOC_VENC_AXIDFX_ERR_dfx_w_ovr_err_END (19)
+#define SOC_VENC_AXIDFX_ERR_dfx_b_ovr_err_START (20)
+#define SOC_VENC_AXIDFX_ERR_dfx_b_ovr_err_END (20)
+#define SOC_VENC_AXIDFX_ERR_dfx_ar_outstanding_err_START (21)
+#define SOC_VENC_AXIDFX_ERR_dfx_ar_outstanding_err_END (21)
+#define SOC_VENC_AXIDFX_ERR_dfx_aw_outstanding_err_START (22)
+#define SOC_VENC_AXIDFX_ERR_dfx_aw_outstanding_err_END (22)
+#define SOC_VENC_AXIDFX_ERR_dfx_arlen_err_START (23)
+#define SOC_VENC_AXIDFX_ERR_dfx_arlen_err_END (23)
+#define SOC_VENC_AXIDFX_ERR_dfx_awlen_err_START (24)
+#define SOC_VENC_AXIDFX_ERR_dfx_awlen_err_END (24)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_1_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int ar_r_cnt : 7;
+        unsigned int reserved : 25;
+    } reg;
+} SOC_VENC_AXIDFX_AR_R_CNT_UNION;
+#endif
+#define SOC_VENC_AXIDFX_AR_R_CNT_ar_r_cnt_START (0)
+#define SOC_VENC_AXIDFX_AR_R_CNT_ar_r_cnt_END (6)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int aw_w_cnt : 6;
+        unsigned int reserved : 26;
+    } reg;
+} SOC_VENC_AXIDFX_AW_W_CNT_UNION;
+#endif
+#define SOC_VENC_AXIDFX_AW_W_CNT_aw_w_cnt_START (0)
+#define SOC_VENC_AXIDFX_AW_W_CNT_aw_w_cnt_END (5)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int aw_b_cnt : 6;
+        unsigned int reserved : 26;
+    } reg;
+} SOC_VENC_AXIDFX_AW_B_CNT_UNION;
+#endif
+#define SOC_VENC_AXIDFX_AW_B_CNT_aw_b_cnt_START (0)
+#define SOC_VENC_AXIDFX_AW_B_CNT_aw_b_cnt_END (5)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_2_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dfx_arid_err : 1;
+        unsigned int reserved_0 : 3;
+        unsigned int dfx_rid_err : 1;
+        unsigned int reserved_1 : 27;
+    } reg;
+} SOC_VENC_AXIDFX_AR_R_ID_ERR_UNION;
+#endif
+#define SOC_VENC_AXIDFX_AR_R_ID_ERR_dfx_arid_err_START (0)
+#define SOC_VENC_AXIDFX_AR_R_ID_ERR_dfx_arid_err_END (0)
+#define SOC_VENC_AXIDFX_AR_R_ID_ERR_dfx_rid_err_START (4)
+#define SOC_VENC_AXIDFX_AR_R_ID_ERR_dfx_rid_err_END (4)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dfx_err_arid : 7;
+        unsigned int reserved : 25;
+    } reg;
+} SOC_VENC_AXIDFX_ERR_ARID_UNION;
+#endif
+#define SOC_VENC_AXIDFX_ERR_ARID_dfx_err_arid_START (0)
+#define SOC_VENC_AXIDFX_ERR_ARID_dfx_err_arid_END (6)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dfx_err_rid : 7;
+        unsigned int reserved : 25;
+    } reg;
+} SOC_VENC_AXIDFX_ERR_RID_UNION;
+#endif
+#define SOC_VENC_AXIDFX_ERR_RID_dfx_err_rid_START (0)
+#define SOC_VENC_AXIDFX_ERR_RID_dfx_err_rid_END (6)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_3_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dfx_awid_err : 1;
+        unsigned int reserved_0 : 3;
+        unsigned int dfx_wid_err : 1;
+        unsigned int reserved_1 : 3;
+        unsigned int dfx_bid_err : 1;
+        unsigned int reserved_2 : 23;
+    } reg;
+} SOC_VENC_AXIDFX_AW_W_B_ID_ERR_UNION;
+#endif
+#define SOC_VENC_AXIDFX_AW_W_B_ID_ERR_dfx_awid_err_START (0)
+#define SOC_VENC_AXIDFX_AW_W_B_ID_ERR_dfx_awid_err_END (0)
+#define SOC_VENC_AXIDFX_AW_W_B_ID_ERR_dfx_wid_err_START (4)
+#define SOC_VENC_AXIDFX_AW_W_B_ID_ERR_dfx_wid_err_END (4)
+#define SOC_VENC_AXIDFX_AW_W_B_ID_ERR_dfx_bid_err_START (8)
+#define SOC_VENC_AXIDFX_AW_W_B_ID_ERR_dfx_bid_err_END (8)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dfx_err_awid : 6;
+        unsigned int reserved : 26;
+    } reg;
+} SOC_VENC_AXIDFX_ERR_AWID_UNION;
+#endif
+#define SOC_VENC_AXIDFX_ERR_AWID_dfx_err_awid_START (0)
+#define SOC_VENC_AXIDFX_ERR_AWID_dfx_err_awid_END (5)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dfx_err_wid : 6;
+        unsigned int reserved : 26;
+    } reg;
+} SOC_VENC_AXIDFX_ERR_WID_UNION;
+#endif
+#define SOC_VENC_AXIDFX_ERR_WID_dfx_err_wid_START (0)
+#define SOC_VENC_AXIDFX_ERR_WID_dfx_err_wid_END (5)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dfx_err_bid : 6;
+        unsigned int reserved : 26;
+    } reg;
+} SOC_VENC_AXIDFX_ERR_BID_UNION;
+#endif
+#define SOC_VENC_AXIDFX_ERR_BID_dfx_err_bid_START (0)
+#define SOC_VENC_AXIDFX_ERR_BID_dfx_err_bid_END (5)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dfx_arid0_tx_err : 1;
+        unsigned int dfx_arid1_tx_err : 1;
+        unsigned int dfx_arid2_tx_err : 1;
+        unsigned int dfx_arid3_tx_err : 1;
+        unsigned int dfx_arid4_tx_err : 1;
+        unsigned int dfx_arid5_tx_err : 1;
+        unsigned int dfx_arid6_tx_err : 1;
+        unsigned int dfx_arid7_tx_err : 1;
+        unsigned int dfx_arid8_tx_err : 1;
+        unsigned int dfx_arid9_tx_err : 1;
+        unsigned int dfx_arid10_tx_err : 1;
+        unsigned int dfx_arid11_tx_err : 1;
+        unsigned int dfx_arid12_tx_err : 1;
+        unsigned int dfx_arid13_tx_err : 1;
+        unsigned int dfx_arid14_tx_err : 1;
+        unsigned int dfx_arid15_tx_err : 1;
+        unsigned int dfx_arid16_tx_err : 1;
+        unsigned int dfx_arid17_tx_err : 1;
+        unsigned int dfx_arid18_tx_err : 1;
+        unsigned int dfx_arid19_tx_err : 1;
+        unsigned int dfx_arid20_tx_err : 1;
+        unsigned int dfx_arid21_tx_err : 1;
+        unsigned int dfx_arid22_tx_err : 1;
+        unsigned int dfx_arid23_tx_err : 1;
+        unsigned int dfx_arid24_tx_err : 1;
+        unsigned int dfx_arid25_tx_err : 1;
+        unsigned int dfx_arid26_tx_err : 1;
+        unsigned int dfx_arid27_tx_err : 1;
+        unsigned int dfx_arid28_tx_err : 1;
+        unsigned int dfx_arid29_tx_err : 1;
+        unsigned int dfx_arid30_tx_err : 1;
+        unsigned int dfx_arid31_tx_err : 1;
+    } reg;
+} SOC_VENC_AXIDFX_ARID_TX_0ERR_UNION;
+#endif
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid0_tx_err_START (0)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid0_tx_err_END (0)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid1_tx_err_START (1)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid1_tx_err_END (1)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid2_tx_err_START (2)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid2_tx_err_END (2)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid3_tx_err_START (3)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid3_tx_err_END (3)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid4_tx_err_START (4)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid4_tx_err_END (4)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid5_tx_err_START (5)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid5_tx_err_END (5)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid6_tx_err_START (6)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid6_tx_err_END (6)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid7_tx_err_START (7)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid7_tx_err_END (7)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid8_tx_err_START (8)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid8_tx_err_END (8)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid9_tx_err_START (9)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid9_tx_err_END (9)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid10_tx_err_START (10)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid10_tx_err_END (10)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid11_tx_err_START (11)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid11_tx_err_END (11)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid12_tx_err_START (12)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid12_tx_err_END (12)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid13_tx_err_START (13)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid13_tx_err_END (13)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid14_tx_err_START (14)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid14_tx_err_END (14)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid15_tx_err_START (15)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid15_tx_err_END (15)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid16_tx_err_START (16)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid16_tx_err_END (16)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid17_tx_err_START (17)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid17_tx_err_END (17)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid18_tx_err_START (18)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid18_tx_err_END (18)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid19_tx_err_START (19)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid19_tx_err_END (19)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid20_tx_err_START (20)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid20_tx_err_END (20)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid21_tx_err_START (21)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid21_tx_err_END (21)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid22_tx_err_START (22)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid22_tx_err_END (22)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid23_tx_err_START (23)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid23_tx_err_END (23)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid24_tx_err_START (24)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid24_tx_err_END (24)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid25_tx_err_START (25)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid25_tx_err_END (25)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid26_tx_err_START (26)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid26_tx_err_END (26)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid27_tx_err_START (27)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid27_tx_err_END (27)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid28_tx_err_START (28)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid28_tx_err_END (28)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid29_tx_err_START (29)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid29_tx_err_END (29)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid30_tx_err_START (30)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid30_tx_err_END (30)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid31_tx_err_START (31)
+#define SOC_VENC_AXIDFX_ARID_TX_0ERR_dfx_arid31_tx_err_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dfx_arid32_tx_err : 1;
+        unsigned int dfx_arid33_tx_err : 1;
+        unsigned int dfx_arid34_tx_err : 1;
+        unsigned int dfx_arid35_tx_err : 1;
+        unsigned int dfx_arid36_tx_err : 1;
+        unsigned int dfx_arid37_tx_err : 1;
+        unsigned int dfx_arid38_tx_err : 1;
+        unsigned int dfx_arid39_tx_err : 1;
+        unsigned int dfx_arid40_tx_err : 1;
+        unsigned int dfx_arid41_tx_err : 1;
+        unsigned int dfx_arid42_tx_err : 1;
+        unsigned int dfx_arid43_tx_err : 1;
+        unsigned int dfx_arid44_tx_err : 1;
+        unsigned int dfx_arid45_tx_err : 1;
+        unsigned int dfx_arid46_tx_err : 1;
+        unsigned int dfx_arid47_tx_err : 1;
+        unsigned int dfx_arid48_tx_err : 1;
+        unsigned int dfx_arid49_tx_err : 1;
+        unsigned int dfx_arid50_tx_err : 1;
+        unsigned int dfx_arid51_tx_err : 1;
+        unsigned int dfx_arid52_tx_err : 1;
+        unsigned int dfx_arid53_tx_err : 1;
+        unsigned int dfx_arid54_tx_err : 1;
+        unsigned int dfx_arid55_tx_err : 1;
+        unsigned int dfx_arid56_tx_err : 1;
+        unsigned int dfx_arid57_tx_err : 1;
+        unsigned int dfx_arid58_tx_err : 1;
+        unsigned int dfx_arid59_tx_err : 1;
+        unsigned int dfx_arid60_tx_err : 1;
+        unsigned int dfx_arid61_tx_err : 1;
+        unsigned int dfx_arid62_tx_err : 1;
+        unsigned int dfx_arid63_tx_err : 1;
+    } reg;
+} SOC_VENC_AXIDFX_ARID_TX_1ERR_UNION;
+#endif
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid32_tx_err_START (0)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid32_tx_err_END (0)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid33_tx_err_START (1)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid33_tx_err_END (1)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid34_tx_err_START (2)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid34_tx_err_END (2)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid35_tx_err_START (3)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid35_tx_err_END (3)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid36_tx_err_START (4)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid36_tx_err_END (4)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid37_tx_err_START (5)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid37_tx_err_END (5)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid38_tx_err_START (6)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid38_tx_err_END (6)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid39_tx_err_START (7)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid39_tx_err_END (7)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid40_tx_err_START (8)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid40_tx_err_END (8)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid41_tx_err_START (9)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid41_tx_err_END (9)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid42_tx_err_START (10)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid42_tx_err_END (10)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid43_tx_err_START (11)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid43_tx_err_END (11)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid44_tx_err_START (12)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid44_tx_err_END (12)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid45_tx_err_START (13)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid45_tx_err_END (13)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid46_tx_err_START (14)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid46_tx_err_END (14)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid47_tx_err_START (15)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid47_tx_err_END (15)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid48_tx_err_START (16)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid48_tx_err_END (16)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid49_tx_err_START (17)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid49_tx_err_END (17)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid50_tx_err_START (18)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid50_tx_err_END (18)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid51_tx_err_START (19)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid51_tx_err_END (19)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid52_tx_err_START (20)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid52_tx_err_END (20)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid53_tx_err_START (21)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid53_tx_err_END (21)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid54_tx_err_START (22)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid54_tx_err_END (22)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid55_tx_err_START (23)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid55_tx_err_END (23)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid56_tx_err_START (24)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid56_tx_err_END (24)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid57_tx_err_START (25)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid57_tx_err_END (25)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid58_tx_err_START (26)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid58_tx_err_END (26)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid59_tx_err_START (27)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid59_tx_err_END (27)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid60_tx_err_START (28)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid60_tx_err_END (28)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid61_tx_err_START (29)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid61_tx_err_END (29)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid62_tx_err_START (30)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid62_tx_err_END (30)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid63_tx_err_START (31)
+#define SOC_VENC_AXIDFX_ARID_TX_1ERR_dfx_arid63_tx_err_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dfx_arid64_tx_err : 1;
+        unsigned int dfx_arid65_tx_err : 1;
+        unsigned int dfx_arid66_tx_err : 1;
+        unsigned int dfx_arid67_tx_err : 1;
+        unsigned int reserved : 28;
+    } reg;
+} SOC_VENC_AXIDFX_ARID_TX_2ERR_UNION;
+#endif
+#define SOC_VENC_AXIDFX_ARID_TX_2ERR_dfx_arid64_tx_err_START (0)
+#define SOC_VENC_AXIDFX_ARID_TX_2ERR_dfx_arid64_tx_err_END (0)
+#define SOC_VENC_AXIDFX_ARID_TX_2ERR_dfx_arid65_tx_err_START (1)
+#define SOC_VENC_AXIDFX_ARID_TX_2ERR_dfx_arid65_tx_err_END (1)
+#define SOC_VENC_AXIDFX_ARID_TX_2ERR_dfx_arid66_tx_err_START (2)
+#define SOC_VENC_AXIDFX_ARID_TX_2ERR_dfx_arid66_tx_err_END (2)
+#define SOC_VENC_AXIDFX_ARID_TX_2ERR_dfx_arid67_tx_err_START (3)
+#define SOC_VENC_AXIDFX_ARID_TX_2ERR_dfx_arid67_tx_err_END (3)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_4_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dfx_rid0_rx_err : 1;
+        unsigned int dfx_rid1_rx_err : 1;
+        unsigned int dfx_rid2_rx_err : 1;
+        unsigned int dfx_rid3_rx_err : 1;
+        unsigned int dfx_rid4_rx_err : 1;
+        unsigned int dfx_rid5_rx_err : 1;
+        unsigned int dfx_rid6_rx_err : 1;
+        unsigned int dfx_rid7_rx_err : 1;
+        unsigned int dfx_rid8_rx_err : 1;
+        unsigned int dfx_rid9_rx_err : 1;
+        unsigned int dfx_rid10_rx_err : 1;
+        unsigned int dfx_rid11_rx_err : 1;
+        unsigned int dfx_rid12_rx_err : 1;
+        unsigned int dfx_rid13_rx_err : 1;
+        unsigned int dfx_rid14_rx_err : 1;
+        unsigned int dfx_rid15_rx_err : 1;
+        unsigned int dfx_rid16_rx_err : 1;
+        unsigned int dfx_rid17_rx_err : 1;
+        unsigned int dfx_rid18_rx_err : 1;
+        unsigned int dfx_rid19_rx_err : 1;
+        unsigned int dfx_rid20_rx_err : 1;
+        unsigned int dfx_rid21_rx_err : 1;
+        unsigned int dfx_rid22_rx_err : 1;
+        unsigned int dfx_rid23_rx_err : 1;
+        unsigned int dfx_rid24_rx_err : 1;
+        unsigned int dfx_rid25_rx_err : 1;
+        unsigned int dfx_rid26_rx_err : 1;
+        unsigned int dfx_rid27_rx_err : 1;
+        unsigned int dfx_rid28_rx_err : 1;
+        unsigned int dfx_rid29_rx_err : 1;
+        unsigned int dfx_rid30_rx_err : 1;
+        unsigned int dfx_rid31_rx_err : 1;
+    } reg;
+} SOC_VENC_AXIDFX_RID_RX_0ERR_UNION;
+#endif
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid0_rx_err_START (0)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid0_rx_err_END (0)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid1_rx_err_START (1)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid1_rx_err_END (1)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid2_rx_err_START (2)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid2_rx_err_END (2)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid3_rx_err_START (3)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid3_rx_err_END (3)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid4_rx_err_START (4)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid4_rx_err_END (4)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid5_rx_err_START (5)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid5_rx_err_END (5)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid6_rx_err_START (6)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid6_rx_err_END (6)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid7_rx_err_START (7)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid7_rx_err_END (7)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid8_rx_err_START (8)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid8_rx_err_END (8)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid9_rx_err_START (9)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid9_rx_err_END (9)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid10_rx_err_START (10)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid10_rx_err_END (10)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid11_rx_err_START (11)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid11_rx_err_END (11)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid12_rx_err_START (12)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid12_rx_err_END (12)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid13_rx_err_START (13)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid13_rx_err_END (13)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid14_rx_err_START (14)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid14_rx_err_END (14)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid15_rx_err_START (15)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid15_rx_err_END (15)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid16_rx_err_START (16)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid16_rx_err_END (16)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid17_rx_err_START (17)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid17_rx_err_END (17)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid18_rx_err_START (18)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid18_rx_err_END (18)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid19_rx_err_START (19)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid19_rx_err_END (19)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid20_rx_err_START (20)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid20_rx_err_END (20)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid21_rx_err_START (21)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid21_rx_err_END (21)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid22_rx_err_START (22)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid22_rx_err_END (22)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid23_rx_err_START (23)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid23_rx_err_END (23)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid24_rx_err_START (24)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid24_rx_err_END (24)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid25_rx_err_START (25)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid25_rx_err_END (25)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid26_rx_err_START (26)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid26_rx_err_END (26)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid27_rx_err_START (27)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid27_rx_err_END (27)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid28_rx_err_START (28)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid28_rx_err_END (28)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid29_rx_err_START (29)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid29_rx_err_END (29)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid30_rx_err_START (30)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid30_rx_err_END (30)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid31_rx_err_START (31)
+#define SOC_VENC_AXIDFX_RID_RX_0ERR_dfx_rid31_rx_err_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dfx_rid32_rx_err : 1;
+        unsigned int dfx_rid33_rx_err : 1;
+        unsigned int dfx_rid34_rx_err : 1;
+        unsigned int dfx_rid35_rx_err : 1;
+        unsigned int dfx_rid36_rx_err : 1;
+        unsigned int dfx_rid37_rx_err : 1;
+        unsigned int dfx_rid38_rx_err : 1;
+        unsigned int dfx_rid39_rx_err : 1;
+        unsigned int dfx_rid40_rx_err : 1;
+        unsigned int dfx_rid41_rx_err : 1;
+        unsigned int dfx_rid42_rx_err : 1;
+        unsigned int dfx_rid43_rx_err : 1;
+        unsigned int dfx_rid44_rx_err : 1;
+        unsigned int dfx_rid45_rx_err : 1;
+        unsigned int dfx_rid46_rx_err : 1;
+        unsigned int dfx_rid47_rx_err : 1;
+        unsigned int dfx_rid48_rx_err : 1;
+        unsigned int dfx_rid49_rx_err : 1;
+        unsigned int dfx_rid50_rx_err : 1;
+        unsigned int dfx_rid51_rx_err : 1;
+        unsigned int dfx_rid52_rx_err : 1;
+        unsigned int dfx_rid53_rx_err : 1;
+        unsigned int dfx_rid54_rx_err : 1;
+        unsigned int dfx_rid55_rx_err : 1;
+        unsigned int dfx_rid56_rx_err : 1;
+        unsigned int dfx_rid57_rx_err : 1;
+        unsigned int dfx_rid58_rx_err : 1;
+        unsigned int dfx_rid59_rx_err : 1;
+        unsigned int dfx_rid60_rx_err : 1;
+        unsigned int dfx_rid61_rx_err : 1;
+        unsigned int dfx_rid62_rx_err : 1;
+        unsigned int dfx_rid63_rx_err : 1;
+    } reg;
+} SOC_VENC_AXIDFX_RID_RX_1ERR_UNION;
+#endif
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid32_rx_err_START (0)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid32_rx_err_END (0)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid33_rx_err_START (1)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid33_rx_err_END (1)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid34_rx_err_START (2)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid34_rx_err_END (2)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid35_rx_err_START (3)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid35_rx_err_END (3)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid36_rx_err_START (4)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid36_rx_err_END (4)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid37_rx_err_START (5)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid37_rx_err_END (5)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid38_rx_err_START (6)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid38_rx_err_END (6)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid39_rx_err_START (7)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid39_rx_err_END (7)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid40_rx_err_START (8)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid40_rx_err_END (8)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid41_rx_err_START (9)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid41_rx_err_END (9)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid42_rx_err_START (10)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid42_rx_err_END (10)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid43_rx_err_START (11)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid43_rx_err_END (11)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid44_rx_err_START (12)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid44_rx_err_END (12)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid45_rx_err_START (13)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid45_rx_err_END (13)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid46_rx_err_START (14)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid46_rx_err_END (14)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid47_rx_err_START (15)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid47_rx_err_END (15)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid48_rx_err_START (16)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid48_rx_err_END (16)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid49_rx_err_START (17)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid49_rx_err_END (17)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid50_rx_err_START (18)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid50_rx_err_END (18)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid51_rx_err_START (19)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid51_rx_err_END (19)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid52_rx_err_START (20)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid52_rx_err_END (20)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid53_rx_err_START (21)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid53_rx_err_END (21)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid54_rx_err_START (22)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid54_rx_err_END (22)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid55_rx_err_START (23)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid55_rx_err_END (23)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid56_rx_err_START (24)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid56_rx_err_END (24)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid57_rx_err_START (25)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid57_rx_err_END (25)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid58_rx_err_START (26)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid58_rx_err_END (26)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid59_rx_err_START (27)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid59_rx_err_END (27)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid60_rx_err_START (28)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid60_rx_err_END (28)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid61_rx_err_START (29)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid61_rx_err_END (29)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid62_rx_err_START (30)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid62_rx_err_END (30)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid63_rx_err_START (31)
+#define SOC_VENC_AXIDFX_RID_RX_1ERR_dfx_rid63_rx_err_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dfx_rid64_rx_err : 1;
+        unsigned int dfx_rid65_rx_err : 1;
+        unsigned int dfx_rid66_rx_err : 1;
+        unsigned int dfx_rid67_rx_err : 1;
+        unsigned int reserved : 28;
+    } reg;
+} SOC_VENC_AXIDFX_RID_RX_2ERR_UNION;
+#endif
+#define SOC_VENC_AXIDFX_RID_RX_2ERR_dfx_rid64_rx_err_START (0)
+#define SOC_VENC_AXIDFX_RID_RX_2ERR_dfx_rid64_rx_err_END (0)
+#define SOC_VENC_AXIDFX_RID_RX_2ERR_dfx_rid65_rx_err_START (1)
+#define SOC_VENC_AXIDFX_RID_RX_2ERR_dfx_rid65_rx_err_END (1)
+#define SOC_VENC_AXIDFX_RID_RX_2ERR_dfx_rid66_rx_err_START (2)
+#define SOC_VENC_AXIDFX_RID_RX_2ERR_dfx_rid66_rx_err_END (2)
+#define SOC_VENC_AXIDFX_RID_RX_2ERR_dfx_rid67_rx_err_START (3)
+#define SOC_VENC_AXIDFX_RID_RX_2ERR_dfx_rid67_rx_err_END (3)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_5_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dfx_awid0_rx_err : 1;
+        unsigned int dfx_awid1_rx_err : 1;
+        unsigned int dfx_awid2_rx_err : 1;
+        unsigned int dfx_awid3_rx_err : 1;
+        unsigned int dfx_awid4_rx_err : 1;
+        unsigned int dfx_awid5_rx_err : 1;
+        unsigned int dfx_awid6_rx_err : 1;
+        unsigned int dfx_awid7_rx_err : 1;
+        unsigned int reserved : 24;
+    } reg;
+} SOC_VENC_AXIDFX_ARID_RX_0ERR_UNION;
+#endif
+#define SOC_VENC_AXIDFX_ARID_RX_0ERR_dfx_awid0_rx_err_START (0)
+#define SOC_VENC_AXIDFX_ARID_RX_0ERR_dfx_awid0_rx_err_END (0)
+#define SOC_VENC_AXIDFX_ARID_RX_0ERR_dfx_awid1_rx_err_START (1)
+#define SOC_VENC_AXIDFX_ARID_RX_0ERR_dfx_awid1_rx_err_END (1)
+#define SOC_VENC_AXIDFX_ARID_RX_0ERR_dfx_awid2_rx_err_START (2)
+#define SOC_VENC_AXIDFX_ARID_RX_0ERR_dfx_awid2_rx_err_END (2)
+#define SOC_VENC_AXIDFX_ARID_RX_0ERR_dfx_awid3_rx_err_START (3)
+#define SOC_VENC_AXIDFX_ARID_RX_0ERR_dfx_awid3_rx_err_END (3)
+#define SOC_VENC_AXIDFX_ARID_RX_0ERR_dfx_awid4_rx_err_START (4)
+#define SOC_VENC_AXIDFX_ARID_RX_0ERR_dfx_awid4_rx_err_END (4)
+#define SOC_VENC_AXIDFX_ARID_RX_0ERR_dfx_awid5_rx_err_START (5)
+#define SOC_VENC_AXIDFX_ARID_RX_0ERR_dfx_awid5_rx_err_END (5)
+#define SOC_VENC_AXIDFX_ARID_RX_0ERR_dfx_awid6_rx_err_START (6)
+#define SOC_VENC_AXIDFX_ARID_RX_0ERR_dfx_awid6_rx_err_END (6)
+#define SOC_VENC_AXIDFX_ARID_RX_0ERR_dfx_awid7_rx_err_START (7)
+#define SOC_VENC_AXIDFX_ARID_RX_0ERR_dfx_awid7_rx_err_END (7)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dfx_bid0_rx_err : 1;
+        unsigned int dfx_bid1_rx_err : 1;
+        unsigned int dfx_bid2_rx_err : 1;
+        unsigned int dfx_bid3_rx_err : 1;
+        unsigned int dfx_bid4_rx_err : 1;
+        unsigned int dfx_bid5_rx_err : 1;
+        unsigned int dfx_bid6_rx_err : 1;
+        unsigned int dfx_bid7_rx_err : 1;
+        unsigned int reserved : 24;
+    } reg;
+} SOC_VENC_AXIDFX_BID_RX_ERR_UNION;
+#endif
+#define SOC_VENC_AXIDFX_BID_RX_ERR_dfx_bid0_rx_err_START (0)
+#define SOC_VENC_AXIDFX_BID_RX_ERR_dfx_bid0_rx_err_END (0)
+#define SOC_VENC_AXIDFX_BID_RX_ERR_dfx_bid1_rx_err_START (1)
+#define SOC_VENC_AXIDFX_BID_RX_ERR_dfx_bid1_rx_err_END (1)
+#define SOC_VENC_AXIDFX_BID_RX_ERR_dfx_bid2_rx_err_START (2)
+#define SOC_VENC_AXIDFX_BID_RX_ERR_dfx_bid2_rx_err_END (2)
+#define SOC_VENC_AXIDFX_BID_RX_ERR_dfx_bid3_rx_err_START (3)
+#define SOC_VENC_AXIDFX_BID_RX_ERR_dfx_bid3_rx_err_END (3)
+#define SOC_VENC_AXIDFX_BID_RX_ERR_dfx_bid4_rx_err_START (4)
+#define SOC_VENC_AXIDFX_BID_RX_ERR_dfx_bid4_rx_err_END (4)
+#define SOC_VENC_AXIDFX_BID_RX_ERR_dfx_bid5_rx_err_START (5)
+#define SOC_VENC_AXIDFX_BID_RX_ERR_dfx_bid5_rx_err_END (5)
+#define SOC_VENC_AXIDFX_BID_RX_ERR_dfx_bid6_rx_err_START (6)
+#define SOC_VENC_AXIDFX_BID_RX_ERR_dfx_bid6_rx_err_END (6)
+#define SOC_VENC_AXIDFX_BID_RX_ERR_dfx_bid7_rx_err_START (7)
+#define SOC_VENC_AXIDFX_BID_RX_ERR_dfx_bid7_rx_err_END (7)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_6_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dfx_arid0_len_err : 1;
+        unsigned int dfx_arid1_len_err : 1;
+        unsigned int dfx_arid2_len_err : 1;
+        unsigned int dfx_arid3_len_err : 1;
+        unsigned int dfx_arid4_len_err : 1;
+        unsigned int dfx_arid5_len_err : 1;
+        unsigned int dfx_arid6_len_err : 1;
+        unsigned int dfx_arid7_len_err : 1;
+        unsigned int dfx_arid8_len_err : 1;
+        unsigned int dfx_arid9_len_err : 1;
+        unsigned int dfx_arid10_len_err : 1;
+        unsigned int dfx_arid11_len_err : 1;
+        unsigned int dfx_arid12_len_err : 1;
+        unsigned int dfx_arid13_len_err : 1;
+        unsigned int dfx_arid14_len_err : 1;
+        unsigned int dfx_arid15_len_err : 1;
+        unsigned int dfx_arid16_len_err : 1;
+        unsigned int dfx_arid17_len_err : 1;
+        unsigned int dfx_arid18_len_err : 1;
+        unsigned int dfx_arid19_len_err : 1;
+        unsigned int dfx_arid20_len_err : 1;
+        unsigned int dfx_arid21_len_err : 1;
+        unsigned int dfx_arid22_len_err : 1;
+        unsigned int dfx_arid23_len_err : 1;
+        unsigned int dfx_arid24_len_err : 1;
+        unsigned int dfx_arid25_len_err : 1;
+        unsigned int dfx_arid26_len_err : 1;
+        unsigned int dfx_arid27_len_err : 1;
+        unsigned int dfx_arid28_len_err : 1;
+        unsigned int dfx_arid29_len_err : 1;
+        unsigned int dfx_arid30_len_err : 1;
+        unsigned int dfx_arid31_len_err : 1;
+    } reg;
+} SOC_VENC_AXIDFX_ARID_LEN_0ERR_UNION;
+#endif
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid0_len_err_START (0)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid0_len_err_END (0)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid1_len_err_START (1)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid1_len_err_END (1)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid2_len_err_START (2)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid2_len_err_END (2)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid3_len_err_START (3)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid3_len_err_END (3)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid4_len_err_START (4)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid4_len_err_END (4)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid5_len_err_START (5)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid5_len_err_END (5)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid6_len_err_START (6)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid6_len_err_END (6)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid7_len_err_START (7)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid7_len_err_END (7)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid8_len_err_START (8)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid8_len_err_END (8)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid9_len_err_START (9)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid9_len_err_END (9)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid10_len_err_START (10)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid10_len_err_END (10)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid11_len_err_START (11)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid11_len_err_END (11)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid12_len_err_START (12)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid12_len_err_END (12)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid13_len_err_START (13)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid13_len_err_END (13)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid14_len_err_START (14)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid14_len_err_END (14)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid15_len_err_START (15)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid15_len_err_END (15)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid16_len_err_START (16)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid16_len_err_END (16)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid17_len_err_START (17)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid17_len_err_END (17)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid18_len_err_START (18)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid18_len_err_END (18)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid19_len_err_START (19)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid19_len_err_END (19)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid20_len_err_START (20)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid20_len_err_END (20)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid21_len_err_START (21)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid21_len_err_END (21)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid22_len_err_START (22)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid22_len_err_END (22)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid23_len_err_START (23)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid23_len_err_END (23)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid24_len_err_START (24)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid24_len_err_END (24)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid25_len_err_START (25)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid25_len_err_END (25)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid26_len_err_START (26)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid26_len_err_END (26)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid27_len_err_START (27)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid27_len_err_END (27)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid28_len_err_START (28)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid28_len_err_END (28)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid29_len_err_START (29)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid29_len_err_END (29)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid30_len_err_START (30)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid30_len_err_END (30)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid31_len_err_START (31)
+#define SOC_VENC_AXIDFX_ARID_LEN_0ERR_dfx_arid31_len_err_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dfx_arid32_len_err : 1;
+        unsigned int dfx_arid33_len_err : 1;
+        unsigned int dfx_arid34_len_err : 1;
+        unsigned int dfx_arid35_len_err : 1;
+        unsigned int dfx_arid36_len_err : 1;
+        unsigned int dfx_arid37_len_err : 1;
+        unsigned int dfx_arid38_len_err : 1;
+        unsigned int dfx_arid39_len_err : 1;
+        unsigned int dfx_arid40_len_err : 1;
+        unsigned int dfx_arid41_len_err : 1;
+        unsigned int dfx_arid42_len_err : 1;
+        unsigned int dfx_arid43_len_err : 1;
+        unsigned int dfx_arid44_len_err : 1;
+        unsigned int dfx_arid45_len_err : 1;
+        unsigned int dfx_arid46_len_err : 1;
+        unsigned int dfx_arid47_len_err : 1;
+        unsigned int dfx_arid48_len_err : 1;
+        unsigned int dfx_arid49_len_err : 1;
+        unsigned int dfx_arid50_len_err : 1;
+        unsigned int dfx_arid51_len_err : 1;
+        unsigned int dfx_arid52_len_err : 1;
+        unsigned int dfx_arid53_len_err : 1;
+        unsigned int dfx_arid54_len_err : 1;
+        unsigned int dfx_arid55_len_err : 1;
+        unsigned int dfx_arid56_len_err : 1;
+        unsigned int dfx_arid57_len_err : 1;
+        unsigned int dfx_arid58_len_err : 1;
+        unsigned int dfx_arid59_len_err : 1;
+        unsigned int dfx_arid60_len_err : 1;
+        unsigned int dfx_arid61_len_err : 1;
+        unsigned int dfx_arid62_len_err : 1;
+        unsigned int dfx_arid63_len_err : 1;
+    } reg;
+} SOC_VENC_AXIDFX_ARID_LEN_1ERR_UNION;
+#endif
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid32_len_err_START (0)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid32_len_err_END (0)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid33_len_err_START (1)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid33_len_err_END (1)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid34_len_err_START (2)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid34_len_err_END (2)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid35_len_err_START (3)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid35_len_err_END (3)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid36_len_err_START (4)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid36_len_err_END (4)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid37_len_err_START (5)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid37_len_err_END (5)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid38_len_err_START (6)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid38_len_err_END (6)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid39_len_err_START (7)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid39_len_err_END (7)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid40_len_err_START (8)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid40_len_err_END (8)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid41_len_err_START (9)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid41_len_err_END (9)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid42_len_err_START (10)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid42_len_err_END (10)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid43_len_err_START (11)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid43_len_err_END (11)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid44_len_err_START (12)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid44_len_err_END (12)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid45_len_err_START (13)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid45_len_err_END (13)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid46_len_err_START (14)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid46_len_err_END (14)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid47_len_err_START (15)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid47_len_err_END (15)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid48_len_err_START (16)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid48_len_err_END (16)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid49_len_err_START (17)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid49_len_err_END (17)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid50_len_err_START (18)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid50_len_err_END (18)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid51_len_err_START (19)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid51_len_err_END (19)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid52_len_err_START (20)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid52_len_err_END (20)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid53_len_err_START (21)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid53_len_err_END (21)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid54_len_err_START (22)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid54_len_err_END (22)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid55_len_err_START (23)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid55_len_err_END (23)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid56_len_err_START (24)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid56_len_err_END (24)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid57_len_err_START (25)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid57_len_err_END (25)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid58_len_err_START (26)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid58_len_err_END (26)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid59_len_err_START (27)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid59_len_err_END (27)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid60_len_err_START (28)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid60_len_err_END (28)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid61_len_err_START (29)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid61_len_err_END (29)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid62_len_err_START (30)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid62_len_err_END (30)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid63_len_err_START (31)
+#define SOC_VENC_AXIDFX_ARID_LEN_1ERR_dfx_arid63_len_err_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dfx_arid64_len_err : 1;
+        unsigned int dfx_arid65_len_err : 1;
+        unsigned int dfx_arid66_len_err : 1;
+        unsigned int dfx_arid67_len_err : 1;
+        unsigned int reserved : 28;
+    } reg;
+} SOC_VENC_AXIDFX_ARID_LEN_2ERR_UNION;
+#endif
+#define SOC_VENC_AXIDFX_ARID_LEN_2ERR_dfx_arid64_len_err_START (0)
+#define SOC_VENC_AXIDFX_ARID_LEN_2ERR_dfx_arid64_len_err_END (0)
+#define SOC_VENC_AXIDFX_ARID_LEN_2ERR_dfx_arid65_len_err_START (1)
+#define SOC_VENC_AXIDFX_ARID_LEN_2ERR_dfx_arid65_len_err_END (1)
+#define SOC_VENC_AXIDFX_ARID_LEN_2ERR_dfx_arid66_len_err_START (2)
+#define SOC_VENC_AXIDFX_ARID_LEN_2ERR_dfx_arid66_len_err_END (2)
+#define SOC_VENC_AXIDFX_ARID_LEN_2ERR_dfx_arid67_len_err_START (3)
+#define SOC_VENC_AXIDFX_ARID_LEN_2ERR_dfx_arid67_len_err_END (3)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_7_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dfx_awlen_cnt : 32;
+    } reg;
+} SOC_VENC_AXIDFX_AWLEN_CNT_UNION;
+#endif
+#define SOC_VENC_AXIDFX_AWLEN_CNT_dfx_awlen_cnt_START (0)
+#define SOC_VENC_AXIDFX_AWLEN_CNT_dfx_awlen_cnt_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dfx_wlen_cnt : 32;
+    } reg;
+} SOC_VENC_AXIDFX_WLEN_CNT_UNION;
+#endif
+#define SOC_VENC_AXIDFX_WLEN_CNT_dfx_wlen_cnt_START (0)
+#define SOC_VENC_AXIDFX_WLEN_CNT_dfx_wlen_cnt_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_8_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dfx_rresp_err : 1;
+        unsigned int reserved_0 : 3;
+        unsigned int dfx_bresp_err : 1;
+        unsigned int reserved_1 : 27;
+    } reg;
+} SOC_VENC_AXIDFX_RESP_ERR_UNION;
+#endif
+#define SOC_VENC_AXIDFX_RESP_ERR_dfx_rresp_err_START (0)
+#define SOC_VENC_AXIDFX_RESP_ERR_dfx_rresp_err_END (0)
+#define SOC_VENC_AXIDFX_RESP_ERR_dfx_bresp_err_START (4)
+#define SOC_VENC_AXIDFX_RESP_ERR_dfx_bresp_err_END (4)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dfx_err_rresp : 2;
+        unsigned int dfx_err_bresp : 2;
+        unsigned int reserved : 28;
+    } reg;
+} SOC_VENC_AXIDFX_ERR_RESP_UNION;
+#endif
+#define SOC_VENC_AXIDFX_ERR_RESP_dfx_err_rresp_START (0)
+#define SOC_VENC_AXIDFX_ERR_RESP_dfx_err_rresp_END (1)
+#define SOC_VENC_AXIDFX_ERR_RESP_dfx_err_bresp_START (2)
+#define SOC_VENC_AXIDFX_ERR_RESP_dfx_err_bresp_END (3)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dfx_arlen_err : 1;
+        unsigned int reserved_0 : 3;
+        unsigned int dfx_awlen_err : 1;
+        unsigned int reserved_1 : 27;
+    } reg;
+} SOC_VENC_AXIDFX_LEN_ERR_UNION;
+#endif
+#define SOC_VENC_AXIDFX_LEN_ERR_dfx_arlen_err_START (0)
+#define SOC_VENC_AXIDFX_LEN_ERR_dfx_arlen_err_END (0)
+#define SOC_VENC_AXIDFX_LEN_ERR_dfx_awlen_err_START (4)
+#define SOC_VENC_AXIDFX_LEN_ERR_dfx_awlen_err_END (4)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dfx_err_arlen : 4;
+        unsigned int dfx_err_awlen : 4;
+        unsigned int reserved : 24;
+    } reg;
+} SOC_VENC_AXIDFX_ERR_LEN_UNION;
+#endif
+#define SOC_VENC_AXIDFX_ERR_LEN_dfx_err_arlen_START (0)
+#define SOC_VENC_AXIDFX_ERR_LEN_dfx_err_arlen_END (3)
+#define SOC_VENC_AXIDFX_ERR_LEN_dfx_err_awlen_START (4)
+#define SOC_VENC_AXIDFX_ERR_LEN_dfx_err_awlen_END (7)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dfx_0rid_flag : 32;
+    } reg;
+} SOC_VENC_AXIDFX_0RID_FLAG_UNION;
+#endif
+#define SOC_VENC_AXIDFX_0RID_FLAG_dfx_0rid_flag_START (0)
+#define SOC_VENC_AXIDFX_0RID_FLAG_dfx_0rid_flag_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dfx_1rid_flag : 32;
+    } reg;
+} SOC_VENC_AXIDFX_1RID_FLAG_UNION;
+#endif
+#define SOC_VENC_AXIDFX_1RID_FLAG_dfx_1rid_flag_START (0)
+#define SOC_VENC_AXIDFX_1RID_FLAG_dfx_1rid_flag_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dfx_2rid_flag : 4;
+        unsigned int reserved : 28;
+    } reg;
+} SOC_VENC_AXIDFX_2RID_FLAG_UNION;
+#endif
+#define SOC_VENC_AXIDFX_2RID_FLAG_dfx_2rid_flag_START (0)
+#define SOC_VENC_AXIDFX_2RID_FLAG_dfx_2rid_flag_END (3)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dfx_wid_flag : 8;
+        unsigned int reserved : 24;
+    } reg;
+} SOC_VENC_AXIDFX_WID_FLAG_UNION;
+#endif
+#define SOC_VENC_AXIDFX_WID_FLAG_dfx_wid_flag_START (0)
+#define SOC_VENC_AXIDFX_WID_FLAG_dfx_wid_flag_END (7)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int arvalid : 1;
+        unsigned int arready : 1;
+        unsigned int rvalid : 1;
+        unsigned int rready : 1;
+        unsigned int awvalid : 1;
+        unsigned int awready : 1;
+        unsigned int wvalid : 1;
+        unsigned int wready : 1;
+        unsigned int bvalid : 1;
+        unsigned int bready : 1;
+        unsigned int reserved : 22;
+    } reg;
+} SOC_VENC_AXIDFX_AXI_ST_UNION;
+#endif
+#define SOC_VENC_AXIDFX_AXI_ST_arvalid_START (0)
+#define SOC_VENC_AXIDFX_AXI_ST_arvalid_END (0)
+#define SOC_VENC_AXIDFX_AXI_ST_arready_START (1)
+#define SOC_VENC_AXIDFX_AXI_ST_arready_END (1)
+#define SOC_VENC_AXIDFX_AXI_ST_rvalid_START (2)
+#define SOC_VENC_AXIDFX_AXI_ST_rvalid_END (2)
+#define SOC_VENC_AXIDFX_AXI_ST_rready_START (3)
+#define SOC_VENC_AXIDFX_AXI_ST_rready_END (3)
+#define SOC_VENC_AXIDFX_AXI_ST_awvalid_START (4)
+#define SOC_VENC_AXIDFX_AXI_ST_awvalid_END (4)
+#define SOC_VENC_AXIDFX_AXI_ST_awready_START (5)
+#define SOC_VENC_AXIDFX_AXI_ST_awready_END (5)
+#define SOC_VENC_AXIDFX_AXI_ST_wvalid_START (6)
+#define SOC_VENC_AXIDFX_AXI_ST_wvalid_END (6)
+#define SOC_VENC_AXIDFX_AXI_ST_wready_START (7)
+#define SOC_VENC_AXIDFX_AXI_ST_wready_END (7)
+#define SOC_VENC_AXIDFX_AXI_ST_bvalid_START (8)
+#define SOC_VENC_AXIDFX_AXI_ST_bvalid_END (8)
+#define SOC_VENC_AXIDFX_AXI_ST_bready_START (9)
+#define SOC_VENC_AXIDFX_AXI_ST_bready_END (9)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_9_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int axi_soft_rst_req : 1;
+        unsigned int reserved : 31;
+    } reg;
+} SOC_VENC_AXIDFX_SOFT_RST_REQ_UNION;
+#endif
+#define SOC_VENC_AXIDFX_SOFT_RST_REQ_axi_soft_rst_req_START (0)
+#define SOC_VENC_AXIDFX_SOFT_RST_REQ_axi_soft_rst_req_END (0)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int axi_soft_rst_ack : 1;
+        unsigned int reserved : 31;
+    } reg;
+} SOC_VENC_AXIDFX_SOFT_RST_ACK_UNION;
+#endif
+#define SOC_VENC_AXIDFX_SOFT_RST_ACK_axi_soft_rst_ack_START (0)
+#define SOC_VENC_AXIDFX_SOFT_RST_ACK_axi_soft_rst_ack_END (0)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_11_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int axi_soft_rst_force_req_ack : 1;
+        unsigned int reserved : 31;
+    } reg;
+} SOC_VENC_AXIDFX_SOFT_RST_FORCE_REQ_ACK_UNION;
+#endif
+#define SOC_VENC_AXIDFX_SOFT_RST_FORCE_REQ_ACK_axi_soft_rst_force_req_ack_START (0)
+#define SOC_VENC_AXIDFX_SOFT_RST_FORCE_REQ_ACK_axi_soft_rst_force_req_ack_END (0)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dfx_state0 : 32;
+    } reg;
+} SOC_VENC_AXIDFX_SOFT_RST_STATE0_UNION;
+#endif
+#define SOC_VENC_AXIDFX_SOFT_RST_STATE0_dfx_state0_START (0)
+#define SOC_VENC_AXIDFX_SOFT_RST_STATE0_dfx_state0_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int dfx_state0 : 32;
+    } reg;
+} SOC_VENC_AXIDFX_SOFT_RST_STATE1_UNION;
+#endif
+#define SOC_VENC_AXIDFX_SOFT_RST_STATE1_dfx_state0_START (0)
+#define SOC_VENC_AXIDFX_SOFT_RST_STATE1_dfx_state0_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int reserved : 32;
+    } reg;
+} SOC_VENC_RESERVED_12_UNION;
+#endif
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sec_ns_set0 : 32;
+    } reg;
+} SOC_VENC_RESERVED_S_NS_0_UNION;
+#endif
+#define SOC_VENC_RESERVED_S_NS_0_sec_ns_set0_START (0)
+#define SOC_VENC_RESERVED_S_NS_0_sec_ns_set0_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sec_ns_set1 : 32;
+    } reg;
+} SOC_VENC_RESERVED_S_NS_1_UNION;
+#endif
+#define SOC_VENC_RESERVED_S_NS_1_sec_ns_set1_START (0)
+#define SOC_VENC_RESERVED_S_NS_1_sec_ns_set1_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sec_ns_set2 : 32;
+    } reg;
+} SOC_VENC_RESERVED_S_NS_2_UNION;
+#endif
+#define SOC_VENC_RESERVED_S_NS_2_sec_ns_set2_START (0)
+#define SOC_VENC_RESERVED_S_NS_2_sec_ns_set2_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sec_ns_set3 : 32;
+    } reg;
+} SOC_VENC_RESERVED_S_NS_3_UNION;
+#endif
+#define SOC_VENC_RESERVED_S_NS_3_sec_ns_set3_START (0)
+#define SOC_VENC_RESERVED_S_NS_3_sec_ns_set3_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sec_ns_set4 : 32;
+    } reg;
+} SOC_VENC_RESERVED_S_NS_4_UNION;
+#endif
+#define SOC_VENC_RESERVED_S_NS_4_sec_ns_set4_START (0)
+#define SOC_VENC_RESERVED_S_NS_4_sec_ns_set4_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sec_ns_set5 : 32;
+    } reg;
+} SOC_VENC_RESERVED_S_NS_5_UNION;
+#endif
+#define SOC_VENC_RESERVED_S_NS_5_sec_ns_set5_START (0)
+#define SOC_VENC_RESERVED_S_NS_5_sec_ns_set5_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sec_ns_set6 : 32;
+    } reg;
+} SOC_VENC_RESERVED_S_NS_6_UNION;
+#endif
+#define SOC_VENC_RESERVED_S_NS_6_sec_ns_set6_START (0)
+#define SOC_VENC_RESERVED_S_NS_6_sec_ns_set6_END (31)
+#ifndef __SOC_H_FOR_ASM__
+typedef union
+{
+    unsigned int value;
+    struct
+    {
+        unsigned int sec_ns_set7 : 32;
+    } reg;
+} SOC_VENC_RESERVED_S_NS_7_UNION;
+#endif
+#define SOC_VENC_RESERVED_S_NS_7_sec_ns_set7_START (0)
+#define SOC_VENC_RESERVED_S_NS_7_sec_ns_set7_END (31)
+#ifdef __cplusplus
+    #if __cplusplus
+        }
+    #endif
+#endif
+#endif

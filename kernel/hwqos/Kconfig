@@ -1,0 +1,11 @@
+config HW_QOS_THREAD
+    bool "iaware 5.0 qos thread"
+    default n
+    help
+      if set, qos thread is propagated by lock&binder, and picked first in lock's waitlist
+config HW_RTG_SCHED_LOCK_PI
+    bool "mutex&rwsem rt trans switches in chipset"
+    default n
+    depends on HW_QOS_THREAD
+    help
+      if set, mutex&rwsem rt trans will be enabled in the chipset

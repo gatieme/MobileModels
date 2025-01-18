@@ -1,0 +1,14 @@
+INCLUDE_DIR += \
+	-I$(HVGR_PATH)/mem
+
+ifdef CONFIG_LIBLINUX
+ifndef CONFIG_LIBLINUX_CDC
+	SRC += \
+	$(HVGR_ROOT)/ldk/mem/hvgr_mem_ldk.c
+endif
+endif
+
+ifdef CONFIG_HVGR_SAMEVA_CACHE
+	SRC += \
+	$(HVGR_ROOT)/ldk/mem/sameva_cache.c
+endif

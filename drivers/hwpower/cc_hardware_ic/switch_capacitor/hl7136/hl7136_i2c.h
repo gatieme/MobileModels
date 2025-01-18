@@ -1,0 +1,32 @@
+/* SPDX-License-Identifier: GPL-2.0 */
+/*
+ * hl7136_i2c.h
+ *
+ * hl7136 i2c header file
+ *
+ * Copyright (c) 2023-2023 Huawei Technologies Co., Ltd.
+ *
+ * This software is licensed under the terms of the GNU General Public
+ * License version 2, as published by the Free Software Foundation, and
+ * may be copied, distributed, and modified under those terms.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ */
+
+#ifndef _HL7136_I2C_H_
+#define _HL7136_I2C_H_
+
+#include "hl7136.h"
+
+int hl7136_read_block(struct hl7136_device_info *di, u8 *value, u8 reg, unsigned int num_bytes);
+int hl7136_write_block(struct hl7136_device_info *di, u8 reg, u8 *value, unsigned int num_bytes);
+int hl7136_write_byte(struct hl7136_device_info *di, u8 reg, u8 value);
+int hl7136_read_byte(struct hl7136_device_info *di, u8 reg, u8 *value);
+int hl7136_write_mask(struct hl7136_device_info *di, u8 reg, u8 mask, u8 shift, u8 value);
+int hl7136_read_word(struct hl7136_device_info *di, u8 reg, u16 *value);
+
+#endif /* _hl7136_I2C_H_ */

@@ -1,0 +1,36 @@
+#ifndef ULTRA_VOLT_COMMON_H__
+#define ULTRA_VOLT_COMMON_H__ 
+enum ultra_service_idx {
+ ULTRA_VOLT_REMOTE_INIT,
+ ULTRA_VOLT_GET_SUPPORT_CHIP_TYPE,
+ ULTRA_VOLT_SERVICE_IDX_MAX
+};
+#ifndef ARRAY_SIZE
+#define ARRAY_SIZE(array) (sizeof(array) / sizeof((array)[0]))
+#endif
+enum ultra_chip_type {
+ CHIP_TYPE_NORMAL = 0,
+ CHIP_TYPE_START = 1,
+ CHIP_TYPE_SECOEND_LEVEL = CHIP_TYPE_START,
+ CHIP_TYPE_ULTRA_VOLT,
+ CHIP_TYPE_ULTRA_VOLT_EXT,
+ CHIP_TYPE_SLT_B25,
+ CHIP_TYPE_MAX
+};
+#define support_type(x) (unsigned int)(1U << (unsigned int)(x))
+enum ultra_cluster {
+ ULTRA_VOLT_LIT = 0,
+ ULTRA_VOLT_MID,
+ ULTRA_VOLT_BIG,
+ ULTRA_VOLT_L3,
+ ULTRA_VOLT_GPU,
+ ULTRA_VOLT_PERI,
+ ULTRA_VOLT_AO,
+ ULTRA_VOLT_LIT_MEM,
+ ULTRA_VOLT_MID_MEM,
+ ULTRA_VOLT_BIG_MEM,
+ ULTRA_VOLT_L3_MEM,
+ ULTRA_VOLT_GPU_MEM,
+ ULTRA_VOLT_MAX
+};
+#endif
